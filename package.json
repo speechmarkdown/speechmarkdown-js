@@ -1,0 +1,36 @@
+{
+  "name": "speechmarkdown-js",
+  "version": "0.0.1",
+  "description": "Speech Markdown parser and formatters in TypeScript.",
+  "engines": {
+    "node": ">= 10.13 <11"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.0",
+    "@types/node": "^10.14.0",
+    "jest": "~24.8.0",
+    "prettier": "~1.17.0",
+    "rimraf": "^2.6.3",
+    "ts-dedent": "^1.0.0",
+    "ts-jest": "^24.0.0",
+    "tslint": "~5.16.0",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-microsoft-contrib": "~6.1.0",
+    "tsutils": "~3.10.0",
+    "typescript": "~3.4.0"
+  },
+  "scripts": {
+    "clean": "rimraf coverage build tmp",
+    "build": "tsc -p tsconfig.release.json",
+    "build:watch": "tsc -w -p tsconfig.release.json",
+    "lint": "tslint -t stylish --project \"tsconfig.json\"",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "author": "Mark Tucker <github@speechmarkdown.org>",
+  "license": "MIT",
+  "dependencies": {
+    "myna-parser": "^2.5.1",
+    "tslib": "~1.9.3"
+  }
+}
