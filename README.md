@@ -14,7 +14,7 @@ This project is a work-in-progress. All volunteers are appreciated!
 ### SSML - Amazon Alexa
 Convert Speech Markdown to SSML for Amazon Alexa
 
-```sh
+```ts
 import { SpeechMarkdown } from 'SpeechMarkdown';
 
 const markdown = `Sample [3s] speech [250ms] markdown`;
@@ -38,7 +38,7 @@ Sample <break time="3s"/> speech <break time="250ms"/> markdown
 ### SSML - Google Assistant
 Convert Speech Markdown to SSML for Google Assistant
 
-```sh
+```ts
 import { SpeechMarkdown } from 'SpeechMarkdown';
 
 const markdown = `Sample [3s] speech [250ms] markdown`;
@@ -62,7 +62,7 @@ Sample <break time="3s"/> speech <break time="250ms"/> markdown
 ### Plain Text
 Convert Speech Markdown to Plain Text
 
-```sh
+```ts
 import { SpeechMarkdown } from 'SpeechMarkdown';
 
 const markdown = `Sample [3s] speech [250ms] markdown`;
