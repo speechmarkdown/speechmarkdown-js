@@ -22,6 +22,7 @@ const options = {
     platform: 'amazon-alexa'
 };
 
+const speech = new SpeechMarkdown();
 const ssml = speech.toSSML(markdown, options);
 ```
 
@@ -45,6 +46,7 @@ const options = {
     platform: 'google-assistant'
 };
 
+const speech = new SpeechMarkdown();
 const ssml = speech.toSSML(markdown, options);
 ```
 
@@ -66,6 +68,7 @@ import { SpeechMarkdown } from 'SpeechMarkdown';
 const markdown = `Sample [3s] speech [250ms] markdown`;
 const options = {};
 
+const speech = new SpeechMarkdown();
 const text = speech.toString(markdown, options);
 ```
 
