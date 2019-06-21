@@ -3,6 +3,11 @@
     "tslint-microsoft-contrib/recommended",
     "tslint-config-prettier"
   ],
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**/*"
+    ]
+  },
   "rules": {
     "mocha-no-side-effect-code": false,
     "missing-jsdoc": false,
