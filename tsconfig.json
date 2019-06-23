@@ -14,6 +14,7 @@
     "strictNullChecks": false,
   },
   "include": [
+    "index.ts",
     "**/*.d.ts",
     "src/**/*",
     "test/**/*"

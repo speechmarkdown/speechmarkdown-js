@@ -14,15 +14,15 @@ This project is a work-in-progress. All volunteers are appreciated!
 ### SSML - Amazon Alexa
 Convert Speech Markdown to SSML for Amazon Alexa
 
-```ts
-import { SpeechMarkdown } from 'SpeechMarkdown';
+```js
+const smd = require('speechmarkdown-js');
 
 const markdown = `Sample [3s] speech [250ms] markdown`;
 const options = {
     platform: 'amazon-alexa'
 };
 
-const speech = new SpeechMarkdown();
+const speech = new smd.SpeechMarkdown();
 const ssml = speech.toSSML(markdown, options);
 ```
 
@@ -38,15 +38,15 @@ Sample <break time="3s"/> speech <break time="250ms"/> markdown
 ### SSML - Google Assistant
 Convert Speech Markdown to SSML for Google Assistant
 
-```ts
-import { SpeechMarkdown } from 'SpeechMarkdown';
+```js
+const smd = require('speechmarkdown-js');
 
 const markdown = `Sample [3s] speech [250ms] markdown`;
 const options = {
     platform: 'google-assistant'
 };
 
-const speech = new SpeechMarkdown();
+const speech = new smd.SpeechMarkdown();
 const ssml = speech.toSSML(markdown, options);
 ```
 
@@ -62,13 +62,13 @@ Sample <break time="3s"/> speech <break time="250ms"/> markdown
 ### Plain Text
 Convert Speech Markdown to Plain Text
 
-```ts
-import { SpeechMarkdown } from 'SpeechMarkdown';
+```js
+const smd = require('speechmarkdown-js');
 
 const markdown = `Sample [3s] speech [250ms] markdown`;
 const options = {};
 
-const speech = new SpeechMarkdown();
+const speech = new smd.SpeechMarkdown();
 const text = speech.toString(markdown, options);
 ```
 
