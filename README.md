@@ -8,6 +8,8 @@ Speech Markdown grammar, parser, and formatters for use with JavaScript.
 
 This project is a work-in-progress. All volunteers are appreciated!
 
+Find the architecture [here](./docs/architecture.md)
+
 
 ## Quick start
 
