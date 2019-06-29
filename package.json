@@ -1,11 +1,29 @@
 {
   "name": "speechmarkdown-js",
-  "version": "0.1.0-alpha.0",
+  "version": "0.2.0-alpha.0",
   "description": "Speech Markdown parser and formatters in TypeScript.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "engines": {
     "node": ">= 10.13 <11"
+  },
+  "author": "Mark Tucker <github@speechmarkdown.org>",
+  "license": "MIT",
+  "homepage": "https://github.com/speechmarkdown/speechmarkdown-js#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/speechmarkdown/speechmarkdown-js"
+  },
+  "bugs": {
+    "url": "https://github.com/speechmarkdown/speechmarkdown-js/issues"
+  },
+  "scripts": {
+    "clean": "rimraf coverage dist tmp",
+    "build": "tsc -p tsconfig.json",
+    "build:watch": "tsc -w -p tsconfig.json",
+    "lint": "tslint -t stylish --project \"tsconfig.json\"",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
   },
   "devDependencies": {
     "@types/jest": "^24.0.0",
@@ -21,16 +39,6 @@
     "tsutils": "~3.10.0",
     "typescript": "~3.4.0"
   },
-  "scripts": {
-    "clean": "rimraf coverage dist tmp",
-    "build": "tsc -p tsconfig.json",
-    "build:watch": "tsc -w -p tsconfig.json",
-    "lint": "tslint -t stylish --project \"tsconfig.json\"",
-    "test": "jest --coverage",
-    "test:watch": "jest --watch"
-  },
-  "author": "Mark Tucker <github@speechmarkdown.org>",
-  "license": "MIT",
   "dependencies": {
     "myna-parser": "^2.5.1",
     "tslib": "~1.9.3"
