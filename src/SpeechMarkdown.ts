@@ -30,7 +30,7 @@ export class SpeechMarkdown {
     return this.parser;
   }
 
-  public toString(speechmarkdown: string, options?: SpeechOptions): string {
+  public toText(speechmarkdown: string, options?: SpeechOptions): string {
     const methodOptions = {
       ... this.options,
       ... options
@@ -57,6 +57,11 @@ export class SpeechMarkdown {
 
   public toAST(speechmarkdown: string): any {
     return this.Parser.parse(speechmarkdown);
+  }
+
+  public toASTString(speechmarkdown: string): string {
+    const ast = this.Parser.parse(speechmarkdown);
+    return ast.toString();
   }
 }
 

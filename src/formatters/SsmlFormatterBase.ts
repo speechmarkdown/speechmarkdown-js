@@ -42,6 +42,15 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     return lines;
   }
 
+  protected addEmphasis(ast: any, lines: string[], level: string): string[] {
+    const child = ast.children[0];
+    lines.push(this.startTag('emphasis', { level: level }));
+    lines.push(child.allText);
+    lines.push(this.endTag('emphasis', false));
+
+    return lines;
+  }
+
   protected addComment(commentText: string, lines: string[]): string[] {
     lines.push(`<!-- ${commentText} -->\n`);
     return lines;

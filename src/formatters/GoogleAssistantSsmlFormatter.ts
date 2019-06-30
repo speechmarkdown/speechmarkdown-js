@@ -33,6 +33,18 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
       case 'shortBreak': {
         return this.addBreak(ast, lines);
       }
+      case 'shortEmphasisModerate': {
+        return this.addEmphasis(ast, lines, 'moderate');
+      }
+      case 'shortEmphasisStrong': {
+        return this.addEmphasis(ast, lines, 'strong');
+      }
+      case 'shortEmphasisNone': {
+        return this.addEmphasis(ast, lines, 'none');
+      }
+      case 'shortEmphasisReduced': {
+        return this.addEmphasis(ast, lines, 'reduced');
+      }
       case 'simpleLine': {
         this.processAst(ast.children, lines);
         return lines;
