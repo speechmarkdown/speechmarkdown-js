@@ -71,7 +71,7 @@ const markdown = `Sample [3s] speech [250ms] markdown`;
 const options = {};
 
 const speech = new smd.SpeechMarkdown();
-const text = speech.toString(markdown, options);
+const text = speech.toText(markdown, options);
 ```
 
 The resulting text is:
@@ -86,47 +86,46 @@ Sample speech markdown
 ## Working on this project?
 
 ### Grammar
-The biggest place we need help right now is with the completion of the grammar.
+The biggest place we need help right now is with the completion of the grammar and formatters.
 
-COMPLETED:
+#### Short Format
 
-- break (short)
+* [x] break
+* [x] emphasis - strong
+* [x] emphasis - moderate
+* [x] emphasis - none
+* [x] emphasis - reduced
+* [ ] ipa
+* [ ] sub
 
+#### Standard Format
 
-TO-DO:
-
-- address
-- audio
-- break (time)
-- break (strength)
-- cardinal
-- characters
-- date
-- digits
-- emphasis (short)
-- emphasis (standard)
-- expletive / bleep
-- fraction
-- interjection
-- ipa (short)
-- ipa (standard)
-- lang
-- lang (section)
-- number
-- ordinal
-- phone / telephone
-- pitch
-- rate
-- spell-out
-- sub (short)
-- sub (standard)
-- time
-- unit
-- verbatim
-- voice
-- voice (section)
-- volume / vol
-- whisper
+* [ ] address
+* [ ] audio
+* [ ] break (time)
+* [ ] break (strength)
+* [ ] cardinal
+* [ ] characters
+* [ ] date
+* [ ] emphasis
+* [ ] expletive / bleep
+* [ ] fraction
+* [ ] interjection
+* [ ] ipa
+* [ ] lang
+* [ ] lang (section)
+* [ ] number
+* [ ] ordinal
+* [ ] phone / telephone
+* [ ] pitch
+* [ ] rate
+* [ ] sub
+* [ ] time
+* [ ] unit
+* [ ] voice
+* [ ] voice (section)
+* [ ] volume / vol
+* [ ] whisper
 
 ### Available scripts
 

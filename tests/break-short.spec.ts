@@ -46,7 +46,7 @@ describe('break-short', () => {
 
     const options = {
     };
-    const text = speech.toString(markdown, options);
+    const text = speech.toText(markdown, options);
 
     const expected = dedent`
       Sample speech markdown

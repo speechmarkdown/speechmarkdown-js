@@ -17,7 +17,7 @@ export function SpeechMarkdownGrammar(myna: any): any {
 
 
     // Plain text
-    this.specialCharSet = '[]()*~`@#\\_!';
+    this.specialCharSet = '[]()*~`@#\\_!+-';
     this.ws = m.char(' \t').oneOrMore;
     this.optWs = this.ws.opt;
     this.wsOrNewLine = this.ws.or(m.newLine);
@@ -37,6 +37,13 @@ export function SpeechMarkdownGrammar(myna: any): any {
     // this.string = m.doubleQuoted(this.quoteChar.zeroOrMore).ast;
     // this.string = m.choice(m.doubleQuotedString(), m.singleQuotedString()).ast;
 
+    // Emphasis
+    this.shortEmphasisModerate = m.seq('+', this.plainText , '+').ast;
+    this.shortEmphasisStrong = m.seq('++', this.plainText , '++').ast;
+    this.shortEmphasisNone = m.seq('~', this.plainText , '~').ast;
+    this.shortEmphasisReduced = m.seq('-', this.plainText , '-').ast;
+    this.emphasis = m.choice(this.shortEmphasisModerate, this.shortEmphasisStrong, this.shortEmphasisNone, this.shortEmphasisReduced);
+
     // values
     this.valueNone = 'none';
     this.valueXWeak = 'x-weak';
@@ -50,7 +57,7 @@ export function SpeechMarkdownGrammar(myna: any): any {
     this.breakTime = m.seq('[', 'break', ':', m.choice(m.singleQuoted(this.time), m.doubleQuoted(this.time)), ']').ast;
 
     this.any = m.advance;
-    this.inline = m.choice(this.shortBreak, this.breakStrength, this.breakTime, this.plainText, this.any).unless(m.newLine);
+    this.inline = m.choice(this.emphasis, this.shortBreak, this.breakStrength, this.breakTime, this.plainText, this.any).unless(m.newLine);
     this.lineEnd = m.newLine.or(m.assert(m.end)).ast;
     this.emptyLine = m.char(' \t').zeroOrMore.then(m.newLine).ast;
     this.restOfLine = m.seq(this.inline.zeroOrMore).then(this.lineEnd);
