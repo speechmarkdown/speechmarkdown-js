@@ -107,7 +107,7 @@ The biggest place we need help right now is with the completion of the grammar a
 * [ ] cardinal
 * [ ] characters
 * [ ] date
-* [ ] emphasis
+* [x] emphasis
 * [ ] expletive / bleep
 * [ ] fraction
 * [ ] interjection
