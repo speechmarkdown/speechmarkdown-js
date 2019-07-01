@@ -3,7 +3,22 @@ All notable changes to the speechmarkdown-js project will be documented in this 
 
 ## 0.4.0-alpha.0 - (June 30, 2019)
 ### Added
-- Update grammar and formatters for emphasis standard format
+- Update grammar and formatters for standard:
+    - emphasis
+    - address
+    - characters / chars
+    - date (skipped tests)
+    - expletive / bleep
+    - fraction (skipped tests)
+    - interjection
+    - number
+    - ordinal
+    - phone / telephone (skipped tests)
+    - time
+    - unit
+    - whisper
+
+
 - Add tests to increase coverage
 
 ## 0.3.0-alpha.0 - (June 30, 2019)

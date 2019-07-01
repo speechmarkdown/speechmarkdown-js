@@ -49,6 +49,38 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     return lines;
   }
 
+  protected addSayAs(lines: string[], text: string, interpretAs: string): string[] {
+    lines.push(this.startTag('say-as', { 'interpret-as': interpretAs }));
+    lines.push(text);
+    lines.push(this.endTag('say-as', false));
+
+    return lines;
+  }
+
+  protected addSayAsTime(lines: string[], text: string, interpretAs: string, format: string): string[] {
+    lines.push(this.startTag('say-as', { 'interpret-as': interpretAs, format: format }));
+    lines.push(text);
+    lines.push(this.endTag('say-as', false));
+
+    return lines;
+  }
+
+  protected addSayAsDate(lines: string[], text: string, interpretAs: string, format: string): string[] {
+    lines.push(this.startTag('say-as', { 'interpret-as': interpretAs, format: format }));
+    lines.push(text);
+    lines.push(this.endTag('say-as', false));
+
+    return lines;
+  }
+
+  protected addProsody(lines: string[], text: string, attr: any): string[] {
+    lines.push(this.startTag('prosody', attr));
+    lines.push(text);
+    lines.push(this.endTag('prosody', false));
+
+    return lines;
+  }
+
   protected addComment(commentText: string, lines: string[]): string[] {
     lines.push(`<!-- ${commentText} -->\n`);
     return lines;

@@ -7,6 +7,7 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
     super(options);
   }
 
+  // tslint:disable-next-line: max-func-body-length
   protected formatFromAst(ast: any, lines: string[] = []): string[] {
 
     switch (ast.name) {
@@ -55,12 +56,58 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
         const key = ast.children[1].allText;
         const value = ast.children.length === 3 ? ast.children[2].allText : '';
 
-        if (key === 'emphasis') {
-          const level = value || 'moderate';
-          return this.addEmphasis(lines, text, level);
-        }
+        switch (key) {
+          case 'emphasis': {
+            const level = value || 'moderate';
+            return this.addEmphasis(lines, text, level);
+          }
 
-        return lines;
+          case 'address':
+          case 'characters':
+          case 'expletive':
+          case 'fraction':
+          case 'number':
+          case 'ordinal':
+          case 'telephone':
+          case 'unit': {
+            return this.addSayAs(lines, text, key);
+          }
+
+          case 'chars': {
+            return this.addSayAs(lines, text, 'characters');
+          }
+
+          case 'bleep': {
+            return this.addSayAs(lines, text, 'expletive');
+          }
+
+          case 'phone': {
+            return this.addSayAs(lines, text, 'telephone');
+          }
+
+          case 'date': {
+            const format = value || 'ymd';
+            return this.addSayAsDate(lines, text, key, format);
+          }
+
+          case 'time': {
+            const format = value || 'hms12';
+            return this.addSayAsTime(lines, text, key, format);
+          }
+
+          case 'interjection': {
+            lines.push(text);
+            return lines;
+          }
+
+          case 'whisper': {
+            return this.addProsody(lines, text, { volume: 'x-soft', rate: 'slow'});
+          }
+
+          default: {
+            return lines;
+          }
+        }
       }
       case 'simpleLine': {
         this.processAst(ast.children, lines);
