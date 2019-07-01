@@ -100,32 +100,31 @@ The biggest place we need help right now is with the completion of the grammar a
 
 #### Standard Format
 
-* [ ] address
+* [x] address
 * [ ] audio
 * [ ] break (time)
 * [ ] break (strength)
-* [ ] cardinal
-* [ ] characters
+* [x] characters / chars
 * [ ] date
 * [x] emphasis
-* [ ] expletive / bleep
+* [x] expletive / bleep
 * [ ] fraction
-* [ ] interjection
+* [x] interjection
 * [ ] ipa
 * [ ] lang
 * [ ] lang (section)
-* [ ] number
-* [ ] ordinal
+* [x] number
+* [x] ordinal
 * [ ] phone / telephone
 * [ ] pitch
 * [ ] rate
 * [ ] sub
-* [ ] time
-* [ ] unit
+* [x] time
+* [x] unit
 * [ ] voice
 * [ ] voice (section)
 * [ ] volume / vol
-* [ ] whisper
+* [x] whisper
 
 ### Available scripts
 
