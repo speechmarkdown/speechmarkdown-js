@@ -11,7 +11,7 @@ export abstract class SsmlFormatterBase extends FormatterBase {
   public format(ast: any): string {
     const lines = this.formatFromAst(ast, []);
 
-// tslint:disable-next-line: no-unnecessary-local-variable
+    // tslint:disable-next-line: no-unnecessary-local-variable
     const ssml = lines.join('');
     return ssml;
   }
@@ -31,21 +31,19 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     return lines;
   }
 
-  protected addBreak(ast: any, lines: string[]): string[] {
-    const child = ast.children[0];
-    if (child.name === 'time') {
-      lines.push(this.voidTag('break', { time: child.allText }));
-    } else if (child.name === 'strength') {
-      lines.push(this.voidTag('break', { strength: child.allText }));
-    }
-
+  protected addBreakTime(lines: string[], time: string): string[] {
+    lines.push(this.voidTag('break', { time: time }));
     return lines;
   }
 
-  protected addEmphasis(ast: any, lines: string[], level: string): string[] {
-    const child = ast.children[0];
+  protected addBreakStrength(lines: string[], strength: string): string[] {
+    lines.push(this.voidTag('break', { strength: strength }));
+    return lines;
+  }
+
+  protected addEmphasis(lines: string[], text: string, level: string): string[] {
     lines.push(this.startTag('emphasis', { level: level }));
-    lines.push(child.allText);
+    lines.push(text);
     lines.push(this.endTag('emphasis', false));
 
     return lines;
