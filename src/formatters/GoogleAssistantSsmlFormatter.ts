@@ -104,6 +104,11 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
             return this.addProsody(lines, text, { volume: 'x-soft', rate: 'slow'});
           }
 
+          case 'sub': {
+            const alias = value || '';
+            return this.addSub(lines, text, alias);
+          }
+
           default: {
             return lines;
           }

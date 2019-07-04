@@ -81,6 +81,14 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     return lines;
   }
 
+  protected addSub(lines: string[], text: string, alias: string): string[] {
+    lines.push(this.startTag('sub', { 'alias': alias }));
+    lines.push(text);
+    lines.push(this.endTag('sub', false));
+
+    return lines;
+  }
+
   protected addComment(commentText: string, lines: string[]): string[] {
     lines.push(`<!-- ${commentText} -->\n`);
     return lines;

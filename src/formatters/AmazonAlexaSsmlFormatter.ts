@@ -100,6 +100,16 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
             return this.addWhisper(lines, text);
           }
 
+          case 'ipa': {
+            const phoneme = value || '';
+            return this.addPhoneme(lines, text, 'ipa', phoneme);
+          }
+
+          case 'sub': {
+            const alias = value || '';
+            return this.addSub(lines, text, alias);
+          }
+
           default: {
             return lines;
           }
@@ -136,6 +146,14 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
     lines.push(this.startTag('amazon:effect', { 'name': 'whispered' }));
     lines.push(text);
     lines.push(this.endTag('amazon:effect', false));
+
+    return lines;
+  }
+
+  protected addPhoneme(lines: string[], text: string, alphabet: string, ph: string): string[] {
+    lines.push(this.startTag('phoneme', { 'alphabet': alphabet, 'ph': ph }));
+    lines.push(text);
+    lines.push(this.endTag('phoneme', false));
 
     return lines;
   }
