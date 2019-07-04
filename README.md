@@ -129,7 +129,9 @@ The biggest place we need help right now is with the completion of the grammar a
 ### Available scripts
 
 + `clean` - remove coverage data, Jest cache and transpiled files,
-+ `build` - transpile TypeScript to ES6,
++ `build` - transpile TypeScript to ES5,
++ `build:browser` - creates single file `./dist.browser/speechmarkdown.js` file for use in browser,
++ `build:minify` - creates single file `./dist.browser/speechmarkdown.min.js` file for use in browser,
 + `build:watch` - interactive watch mode to automatically transpile source files,
 + `lint` - lint source files and tests,
 + `test` - run tests,

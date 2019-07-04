@@ -23,7 +23,7 @@
   },
   "scripts": {
     "clean": "rimraf coverage dist tmp",
-    "build": "tsc -p tsconfig.json && browserify index.ts -p [tsify --noImplicityAny ] -s speechmarkdown -o ./dist.browser/speechmarkdown.js",
+    "build": "tsc -p tsconfig.json",
     "build:browser": "browserify index.ts -p [tsify --noImplicityAny ] -s speechmarkdown -o ./dist.browser/speechmarkdown.js",
     "build:minify": "browserify index.ts -p [tsify --noImplicityAny ] -s speechmarkdown | uglifyjs -cm -o ./dist.browser/speechmarkdown.min.js",
     "build:watch": "tsc -w -p tsconfig.json",
