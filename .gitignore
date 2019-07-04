@@ -11,6 +11,7 @@ coverage
 
 # Transpiled files
 dist/
+dist.browser/
 
 # VS Code
 .vscode

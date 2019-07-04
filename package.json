@@ -4,6 +4,10 @@
   "description": "Speech Markdown parser and formatters in TypeScript.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "dist.browser"
+  ],
   "engines": {
     "node": ">= 10.13 <11"
   },
@@ -19,7 +23,9 @@
   },
   "scripts": {
     "clean": "rimraf coverage dist tmp",
-    "build": "tsc -p tsconfig.json",
+    "build": "tsc -p tsconfig.json && browserify index.ts -p [tsify --noImplicityAny ] -s speechmarkdown -o ./dist.browser/speechmarkdown.js",
+    "build:browser": "browserify index.ts -p [tsify --noImplicityAny ] -s speechmarkdown -o ./dist.browser/speechmarkdown.js",
+    "build:minify": "browserify index.ts -p [tsify --noImplicityAny ] -s speechmarkdown | uglifyjs -cm -o ./dist.browser/speechmarkdown.min.js",
     "build:watch": "tsc -w -p tsconfig.json",
     "lint": "tslint -t stylish --project \"tsconfig.json\"",
     "test": "jest --coverage",
@@ -28,16 +34,19 @@
   "devDependencies": {
     "@types/jest": "^24.0.0",
     "@types/node": "^10.14.0",
+    "browserify": "^16.2.3",
     "jest": "~24.8.0",
     "prettier": "~1.17.0",
     "rimraf": "^2.6.3",
     "ts-dedent": "^1.0.0",
     "ts-jest": "^24.0.0",
+    "tsify": "^4.0.1",
     "tslint": "~5.16.0",
     "tslint-config-prettier": "1.18.0",
     "tslint-microsoft-contrib": "~6.1.0",
     "tsutils": "~3.10.0",
-    "typescript": "~3.4.0"
+    "typescript": "~3.4.0",
+    "uglify": "^0.1.5"
   },
   "dependencies": {
     "myna-parser": "^2.5.1",
