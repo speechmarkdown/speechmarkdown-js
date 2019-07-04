@@ -118,7 +118,7 @@ The biggest place we need help right now is with the completion of the grammar a
 * [ ] phone / telephone
 * [ ] pitch
 * [ ] rate
-* [ ] sub
+* [x] sub
 * [x] time
 * [x] unit
 * [ ] voice
