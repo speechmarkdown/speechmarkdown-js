@@ -3,10 +3,274 @@ import { SsmlFormatterBase } from './SsmlFormatterBase';
 
 export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
 
+  // private orderedKeyDefinitions: any[];
+  private modifierKeyMappings: any = {
+    'chars': 'characters',
+    'bleep': 'expletive',
+    'phone': 'telephone',
+    'vol': 'volume',
+  };
+
+  private ssmlTagSortOrder: string[] = ['emphasis', 'say-as', 'prosody', 'amazon:effect', 'sub', 'phoneme'];
+
+  private modifierKeyToSsmlTagMappings: any = {
+    'emphasis': 'emphasis',
+    'address': 'say-as',
+    'number': 'say-as',
+    'characters': 'say-as',
+    'expletive': 'say-as',
+    'fraction': 'say-as',
+    'interjection': 'say-as',
+    'ordinal': 'say-as',
+    'telephone': 'say-as',
+    'unit': 'say-as',
+    'time': 'say-as',
+    'date': 'say-as',
+    'whisper': 'amazon:effect',
+    'sub': 'sub',
+    'ipa': 'phoneme',
+    'rate': 'prosody',
+    'pitch': 'prosody',
+    'volume': 'prosody',
+  };
+
   constructor(public options: SpeechOptions) {
     super(options);
+
+    // this.orderedKeyDefinitions = [
+    //   {
+    //     id: 'emphasis',
+    //     sort: 0,
+    //     attrs: null,
+    //     ssmlTag: 'emphasis',
+    //   },
+    //   {
+    //     id: 'address',
+    //     sort: 1,
+    //     attrs: null,
+    //     ssmlTag: 'say-as',
+    //   },
+    //   {
+    //     id: 'number',
+    //     sort: 2,
+    //     attrs: null,
+    //     ssmlTag: 'say-as',
+    //   },
+    //   {
+    //     id: 'characters',
+    //     sort: 3,
+    //     attrs: null,
+    //     ssmlTag: 'say-as',
+    //   },
+    //   {
+    //     id: 'expletive',
+    //     sort: 4,
+    //     attrs: null,
+    //     ssmlTag: 'say-as',
+    //   },
+    //   {
+    //     id: 'fraction',
+    //     sort: 5,
+    //     attrs: null,
+    //     ssmlTag: 'say-as',
+    //   },
+    //   {
+    //     id: 'interjection',
+    //     sort: 5,
+    //     attrs: null,
+    //     ssmlTag: 'say-as',
+    //   },
+    //   {
+    //     id: 'ordinal',
+    //     sort: 6,
+    //     attrs: null,
+    //     ssmlTag: 'say-as',
+    //   },
+    //   {
+    //     id: 'telephone',
+    //     sort: 7,
+    //     attrs: null,
+    //     ssmlTag: 'say-as',
+    //   },
+    //   {
+    //     id: 'unit',
+    //     sort: 8,
+    //     attrs: null,
+    //     ssmlTag: 'say-as',
+    //   },
+    //   {
+    //     id: 'time',
+    //     sort: 9,
+    //     attrs: null,
+    //     ssmlTag: 'say-as',
+    //   },
+    //   {
+    //     id: 'date',
+    //     sort: 10,
+    //     attrs: null,
+    //     ssmlTag: 'say-as',
+    //   },
+    //   {
+    //     id: 'whisper',
+    //     sort: 11,
+    //     attrs: null,
+    //     ssmlTag: 'amazon:effect',
+    //   },
+    //   {
+    //     id: 'sub',
+    //     sort: 12,
+    //     attrs: null,
+    //     ssmlTag: 'sub',
+    //   },
+    //   {
+    //     id: 'ipa',
+    //     sort: 13,
+    //     attrs: null,
+    //     ssmlTag: 'phoneme',
+    //   },
+    // ];
   }
 
+// tslint:disable-next-line: max-func-body-length
+  private getTextModifierObject(ast: any): any {
+    let textModifierObject = {
+      tags: {}
+    };
+
+    for (let index = 0; index < ast.children.length; index++) {
+      const child = ast.children[index];
+
+      switch (child.name) {
+        case 'plainText': {
+          textModifierObject['text'] = child.allText;
+          break;
+        }
+        case 'textModifierKeyOptionalValue': {
+          let key = child.children[0].allText;
+          key = this.modifierKeyMappings[key] || key;
+
+          const value = child.children.length === 2 ? child.children[1].allText : '';
+
+          // const info = orderedKeyDefinitions.find( item => item.id === key);
+          const ssmlTag = this.modifierKeyToSsmlTagMappings[key];
+          const sortId = this.ssmlTagSortOrder.indexOf(ssmlTag);
+
+          switch (key) {
+            case 'emphasis': {
+              // const level = value || 'moderate';
+              textModifierObject.tags[ssmlTag].sortId = sortId;
+              textModifierObject.tags[ssmlTag].attrs = { level: value || 'moderate' };
+              break;
+            }
+
+            case 'address':
+            case 'characters':
+            case 'expletive':
+            case 'fraction':
+            case 'interjection':
+            case 'number':
+            case 'ordinal':
+            case 'telephone':
+            case 'unit': {
+              if (!textModifierObject.tags[ssmlTag]) {
+                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              }
+              textModifierObject.tags[ssmlTag].attrs = { 'interpret-as': key };
+              break;
+            }
+
+            case 'date': {
+              if (!textModifierObject.tags[ssmlTag]) {
+                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              }
+              textModifierObject.tags[ssmlTag].attrs = { 'interpret-as': key, format: value || 'ymd' };
+              break;
+            }
+
+            case 'time': {
+              if (!textModifierObject.tags[ssmlTag]) {
+                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              }
+              textModifierObject.tags[ssmlTag].attrs = { 'interpret-as': key, format: value || 'hms12' };
+              break;
+            }
+
+            case 'whisper': {
+              if (!textModifierObject.tags[ssmlTag]) {
+                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              }
+              textModifierObject.tags[ssmlTag].attrs = { name: 'whispered' };
+              break;
+            }
+
+            case 'ipa': {
+              if (!textModifierObject.tags[ssmlTag]) {
+                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              }
+              textModifierObject.tags[ssmlTag].attrs = { alphabet: key, ph: value };
+              break;
+            }
+
+            case 'sub': {
+              if (!textModifierObject.tags[ssmlTag]) {
+                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              }
+              textModifierObject.tags[ssmlTag].attrs = { alias: value };
+              break;
+            }
+
+            case 'volume':
+            case 'rate':
+            case 'pitch': {
+
+              if (!textModifierObject.tags[ssmlTag]) {
+                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              }
+
+              const attrs = {};
+              attrs[key] = value;
+              // if (!textModifierObject.tags[ssmlTag].attrs) {
+              textModifierObject.tags[ssmlTag].attrs = { ... textModifierObject.tags[ssmlTag].attrs, ... attrs};
+              // }
+
+              break;
+            }
+
+          }
+
+          // if (ssmlTag === 'prosody') {
+          //   // can add more than 1
+          //   if (!textModifierObject.tags[ssmlTag]) {
+          //     textModifierObject.tags[ssmlTag] = {
+          //       sort: this.ssmlTagSortOrder.indexOf(ssmlTag),
+          //       value: value
+          //     }
+
+          //   }
+          // }
+          // else {
+          //   if (!textModifierObject.tags[ssmlTag]) {
+          //     textModifierObject.tags[ssmlTag] = {
+          //       sort: this.ssmlTagSortOrder.indexOf(ssmlTag),
+          //       value: value
+          //     }
+          //   }
+          // }
+
+          break;
+        }
+      }
+
+    }
+    // const text = ast.children[0].allText;
+    // const keyValuePair = ast.children[1];
+
+    // const key = keyValuePair.children[0].allText;
+    // const value = keyValuePair.children.length === 2 ? keyValuePair.children[1].allText : '';
+
+
+    return textModifierObject;
+  }
   // tslint:disable-next-line: max-func-body-length
   protected formatFromAst(ast: any, lines: string[] = []): string[] {
 
@@ -52,68 +316,91 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
         return this.addEmphasis(lines, text, 'reduced');
       }
       case 'textModifier': {
-        const text = ast.children[0].allText;
-        const key = ast.children[1].allText;
-        const value = ast.children.length === 3 ? ast.children[2].allText : '';
+        const tmo = this.getTextModifierObject(ast);
 
-        switch (key) {
-          case 'emphasis': {
-            const level = value || 'moderate';
-            return this.addEmphasis(lines, text, level);
-          }
+        const tagsSorted = Object.keys(tmo.tags).sort((a: any, b: any) => { return a.sortId - b.sortId });
 
-          case 'address':
-          case 'characters':
-          case 'expletive':
-          case 'fraction':
-          case 'interjection':
-          case 'number':
-          case 'ordinal':
-          case 'telephone':
-          case 'unit': {
-            return this.addSayAs(lines, text, key);
-          }
+        for (let index = 0; index < tagsSorted.length; index++) {
+          const tag = tagsSorted[index];
+          const attrs = tmo.tags[tag].attrs;
 
-          case 'chars': {
-            return this.addSayAs(lines, text, 'characters');
-          }
+          this.addTagWithAttrs(lines, tmo.text, tag, attrs);
 
-          case 'bleep': {
-            return this.addSayAs(lines, text, 'expletive');
-          }
-
-          case 'phone': {
-            return this.addSayAs(lines, text, 'telephone');
-          }
-
-          case 'date': {
-            const format = value || 'ymd';
-            return this.addSayAsDate(lines, text, key, format);
-          }
-
-          case 'time': {
-            const format = value || 'hms12';
-            return this.addSayAsTime(lines, text, key, format);
-          }
-
-          case 'whisper': {
-            return this.addWhisper(lines, text);
-          }
-
-          case 'ipa': {
-            const phoneme = value || '';
-            return this.addPhoneme(lines, text, 'ipa', phoneme);
-          }
-
-          case 'sub': {
-            const alias = value || '';
-            return this.addSub(lines, text, alias);
-          }
-
-          default: {
-            return lines;
-          }
         }
+
+        return lines;
+        // for (const tag in tmo.tags) {
+        //   tags.push()
+        //   if (object.hasOwnProperty(key)) {
+        //     const element = object[key];
+
+        //   }
+        // }
+
+        // const text = ast.children[0].allText;
+        // const keyValuePair = ast.children[1];
+
+        // const key = keyValuePair.children[0].allText;
+        // const value = keyValuePair.children.length === 2 ? keyValuePair.children[1].allText : '';
+
+        // switch (key) {
+        //   case 'emphasis': {
+        //     const level = value || 'moderate';
+        //     return this.addEmphasis(lines, text, level);
+        //   }
+
+        //   case 'address':
+        //   case 'characters':
+        //   case 'expletive':
+        //   case 'fraction':
+        //   case 'interjection':
+        //   case 'number':
+        //   case 'ordinal':
+        //   case 'telephone':
+        //   case 'unit': {
+        //     return this.addSayAs(lines, text, key);
+        //   }
+
+        //   case 'chars': {
+        //     return this.addSayAs(lines, text, 'characters');
+        //   }
+
+        //   case 'bleep': {
+        //     return this.addSayAs(lines, text, 'expletive');
+        //   }
+
+        //   case 'phone': {
+        //     return this.addSayAs(lines, text, 'telephone');
+        //   }
+
+        //   case 'date': {
+        //     const format = value || 'ymd';
+        //     return this.addSayAsDate(lines, text, key, format);
+        //   }
+
+        //   case 'time': {
+        //     const format = value || 'hms12';
+        //     return this.addSayAsTime(lines, text, key, format);
+        //   }
+
+        //   case 'whisper': {
+        //     return this.addWhisper(lines, text);
+        //   }
+
+        //   case 'ipa': {
+        //     const phoneme = value || '';
+        //     return this.addPhoneme(lines, text, 'ipa', phoneme);
+        //   }
+
+        //   case 'sub': {
+        //     const alias = value || '';
+        //     return this.addSub(lines, text, alias);
+        //   }
+
+        //   default: {
+        //     return lines;
+        //   }
+        // }
       }
       case 'simpleLine': {
         this.processAst(ast.children, lines);
@@ -154,6 +441,14 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
     lines.push(this.startTag('phoneme', { 'alphabet': alphabet, 'ph': ph }));
     lines.push(text);
     lines.push(this.endTag('phoneme', false));
+
+    return lines;
+  }
+
+  protected addTagWithAttrs(lines: string[], text: string, tag: string, attrs: any): string[] {
+    lines.push(this.startTag(tag, attrs));
+    lines.push(text);
+    lines.push(this.endTag(tag, false));
 
     return lines;
   }

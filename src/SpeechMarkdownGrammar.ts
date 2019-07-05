@@ -54,7 +54,7 @@ export function SpeechMarkdownGrammar(myna: any): any {
     this.textModifierKey = m.keywords('emphasis', 'address', 'number', 'characters', 'chars', 'expletive', 'bleep', 'fraction', 'interjection', 'ordinal', 'telephone', 'phone', 'unit', 'time', 'date', 'whisper', 'ipa', 'sub').ast;
     this.textModifierText = m.choice(m.digit, m.letter, m.hyphen).oneOrMore.ast;
     this.textModifierValue = m.seq(this.colon, m.choice(m.singleQuoted(this.textModifierText), m.doubleQuoted(this.textModifierText)))
-    this.textModifierKeyOptionalValue = m.seq(this.textModifierKey, this.textModifierValue.opt)
+    this.textModifierKeyOptionalValue = m.seq(this.textModifierKey, this.textModifierValue.opt).ast;
     this.modifier = m.bracketed(m.delimited(this.textModifierKeyOptionalValue.ws, this.semicolon));
     this.textModifier = m.seq('(', this.plainText, ')', this.modifier).ast;
 

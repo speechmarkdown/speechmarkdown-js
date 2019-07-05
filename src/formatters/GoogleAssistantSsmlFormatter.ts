@@ -53,8 +53,10 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
       }
       case 'textModifier': {
         const text = ast.children[0].allText;
-        const key = ast.children[1].allText;
-        const value = ast.children.length === 3 ? ast.children[2].allText : '';
+        const keyValuePair = ast.children[1];
+
+        const key = keyValuePair.children[0].allText;
+        const value = keyValuePair.children.length === 2 ? keyValuePair.children[1].allText : '';
 
         switch (key) {
           case 'emphasis': {
