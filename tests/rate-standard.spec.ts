@@ -61,12 +61,12 @@ describe('rate-standard-medium', () => {
 
 });
 
-describe.skip('rate-standard-x-slow', () => {
+describe('rate-standard-x-slow', () => {
 
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
-    A (x-slow)[rate:"x-slow"] rate
+    A (xslow)[rate:"x-slow"] rate
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
@@ -78,7 +78,7 @@ describe.skip('rate-standard-x-slow', () => {
 
     const expected = dedent`
       <speak>
-      A <prosody rate="x-slow">x-slow</prosody> rate
+      A <prosody rate="x-slow">xslow</prosody> rate
       </speak>
     `;
 
@@ -94,7 +94,7 @@ describe.skip('rate-standard-x-slow', () => {
 
     const expected = dedent`
       <speak>
-      A <prosody rate="x-slow">x-slow</prosody> rate
+      A <prosody rate="x-slow">xslow</prosody> rate
       </speak>
     `;
 
@@ -108,7 +108,7 @@ describe.skip('rate-standard-x-slow', () => {
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
-      A x-slow rate
+      A xslow rate
     `;
 
     expect(text).toBe(expected);
@@ -171,12 +171,12 @@ describe('rate-standard-slow', () => {
 
 });
 
-describe.skip('rate-standard-x-fast', () => {
+describe('rate-standard-x-fast', () => {
 
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
-    A (x-fast)[rate:"x-fast"] rate
+    A (xfast)[rate:"x-fast"] rate
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
@@ -188,7 +188,7 @@ describe.skip('rate-standard-x-fast', () => {
 
     const expected = dedent`
       <speak>
-      A <prosody rate="x-fast">x-fast</prosody> rate
+      A <prosody rate="x-fast">xfast</prosody> rate
       </speak>
     `;
 
@@ -204,7 +204,7 @@ describe.skip('rate-standard-x-fast', () => {
 
     const expected = dedent`
       <speak>
-      A <prosody rate="x-fast">x-fast</prosody> rate
+      A <prosody rate="x-fast">xfast</prosody> rate
       </speak>
     `;
 
@@ -218,7 +218,7 @@ describe.skip('rate-standard-x-fast', () => {
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
-      A x-fast rate
+      A xfast rate
     `;
 
     expect(text).toBe(expected);

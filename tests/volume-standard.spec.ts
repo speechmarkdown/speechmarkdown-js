@@ -124,12 +124,12 @@ describe('volume-standard-silent', () => {
 
 });
 
-describe.skip('volume-standard-x-soft', () => {
+describe('volume-standard-x-soft', () => {
 
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
-    A (x-soft)[volume:"x-soft"] volume
+    A (xsoft)[volume:"x-soft"] volume
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
@@ -141,7 +141,7 @@ describe.skip('volume-standard-x-soft', () => {
 
     const expected = dedent`
       <speak>
-      A <prosody volume="x-soft">x-soft</prosody> volume
+      A <prosody volume="x-soft">xsoft</prosody> volume
       </speak>
     `;
 
@@ -157,7 +157,7 @@ describe.skip('volume-standard-x-soft', () => {
 
     const expected = dedent`
       <speak>
-      A <prosody volume="x-soft">x-soft</prosody> volume
+      A <prosody volume="x-soft">xsoft</prosody> volume
       </speak>
     `;
 
@@ -171,7 +171,7 @@ describe.skip('volume-standard-x-soft', () => {
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
-      A x-soft volume
+      A xsoft volume
     `;
 
     expect(text).toBe(expected);
@@ -234,12 +234,12 @@ describe('volume-standard-soft', () => {
 
 });
 
-describe.skip('volume-standard-x-loud', () => {
+describe('volume-standard-x-loud', () => {
 
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
-    A (x-loud)[volume:"x-loud"] volume
+    A (xloud)[volume:"x-loud"] volume
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
@@ -251,7 +251,7 @@ describe.skip('volume-standard-x-loud', () => {
 
     const expected = dedent`
       <speak>
-      A <prosody volume="x-loud">x-loud</prosody> volume
+      A <prosody volume="x-loud">xloud</prosody> volume
       </speak>
     `;
 
@@ -267,7 +267,7 @@ describe.skip('volume-standard-x-loud', () => {
 
     const expected = dedent`
       <speak>
-      A <prosody volume="x-loud">x-loud</prosody> volume
+      A <prosody volume="x-loud">xloud</prosody> volume
       </speak>
     `;
 
@@ -281,7 +281,7 @@ describe.skip('volume-standard-x-loud', () => {
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
-      A x-loud volume
+      A xloud volume
     `;
 
     expect(text).toBe(expected);

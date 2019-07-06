@@ -2,13 +2,12 @@
 import dedent from 'ts-dedent';
 import { SpeechMarkdown } from '../src/SpeechMarkdown';
 
-describe('pitch-standard-medium', () => {
+describe('prosody-multiple-modifiers rate + volume', () => {
 
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
-    A (medium)[pitch] pitch 1
-    A (medium)[pitch:"medium"] pitch 2
+    Multiple modifiers on same (text)[rate:"fast";volume:"loud"]
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
@@ -20,8 +19,7 @@ describe('pitch-standard-medium', () => {
 
     const expected = dedent`
       <speak>
-      A <prosody pitch="medium">medium</prosody> pitch 1
-      A <prosody pitch="medium">medium</prosody> pitch 2
+      Multiple modifiers on same <prosody rate="fast" volume="loud">text</prosody>
       </speak>
     `;
 
@@ -37,8 +35,7 @@ describe('pitch-standard-medium', () => {
 
     const expected = dedent`
       <speak>
-      A <prosody pitch="medium">medium</prosody> pitch 1
-      A <prosody pitch="medium">medium</prosody> pitch 2
+      Multiple modifiers on same <prosody rate="fast" volume="loud">text</prosody>
       </speak>
     `;
 
@@ -52,8 +49,7 @@ describe('pitch-standard-medium', () => {
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
-      A medium pitch 1
-      A medium pitch 2
+      Multiple modifiers on same text
     `;
 
     expect(text).toBe(expected);
@@ -61,12 +57,12 @@ describe('pitch-standard-medium', () => {
 
 });
 
-describe('pitch-standard-x-low', () => {
+describe('prosody-multiple-modifiers rate + pitch', () => {
 
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
-    A (xlow)[pitch:"x-low"] pitch
+    Multiple modifiers on same (text)[rate:"fast";pitch:"low"]
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
@@ -78,7 +74,7 @@ describe('pitch-standard-x-low', () => {
 
     const expected = dedent`
       <speak>
-      A <prosody pitch="x-low">xlow</prosody> pitch
+      Multiple modifiers on same <prosody rate="fast" pitch="low">text</prosody>
       </speak>
     `;
 
@@ -94,7 +90,7 @@ describe('pitch-standard-x-low', () => {
 
     const expected = dedent`
       <speak>
-      A <prosody pitch="x-low">xlow</prosody> pitch
+      Multiple modifiers on same <prosody rate="fast" pitch="low">text</prosody>
       </speak>
     `;
 
@@ -108,7 +104,7 @@ describe('pitch-standard-x-low', () => {
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
-      A xlow pitch
+      Multiple modifiers on same text
     `;
 
     expect(text).toBe(expected);
@@ -116,12 +112,12 @@ describe('pitch-standard-x-low', () => {
 
 });
 
-describe('pitch-standard-low', () => {
+describe('prosody-multiple-modifiers volume + pitch', () => {
 
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
-    A (low)[pitch:"low"] pitch
+    Multiple modifiers on same (text)[volume:"soft";pitch:"low"]
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
@@ -133,7 +129,7 @@ describe('pitch-standard-low', () => {
 
     const expected = dedent`
       <speak>
-      A <prosody pitch="low">low</prosody> pitch
+      Multiple modifiers on same <prosody volume="soft" pitch="low">text</prosody>
       </speak>
     `;
 
@@ -149,7 +145,7 @@ describe('pitch-standard-low', () => {
 
     const expected = dedent`
       <speak>
-      A <prosody pitch="low">low</prosody> pitch
+      Multiple modifiers on same <prosody volume="soft" pitch="low">text</prosody>
       </speak>
     `;
 
@@ -163,7 +159,7 @@ describe('pitch-standard-low', () => {
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
-      A low pitch
+      Multiple modifiers on same text
     `;
 
     expect(text).toBe(expected);
@@ -171,12 +167,12 @@ describe('pitch-standard-low', () => {
 
 });
 
-describe('pitch-standard-x-high', () => {
+describe('prosody-multiple-modifiers volume + pitch + rate', () => {
 
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
-    A (xhigh)[pitch:"x-high"] pitch
+    Multiple modifiers on same (text)[volume:"soft";pitch:"low";rate:"medium"]
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
@@ -188,7 +184,7 @@ describe('pitch-standard-x-high', () => {
 
     const expected = dedent`
       <speak>
-      A <prosody pitch="x-high">xhigh</prosody> pitch
+      Multiple modifiers on same <prosody volume="soft" pitch="low" rate="medium">text</prosody>
       </speak>
     `;
 
@@ -204,7 +200,7 @@ describe('pitch-standard-x-high', () => {
 
     const expected = dedent`
       <speak>
-      A <prosody pitch="x-high">xhigh</prosody> pitch
+      Multiple modifiers on same <prosody volume="soft" pitch="low" rate="medium">text</prosody>
       </speak>
     `;
 
@@ -218,7 +214,7 @@ describe('pitch-standard-x-high', () => {
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
-      A xhigh pitch
+      Multiple modifiers on same text
     `;
 
     expect(text).toBe(expected);
@@ -226,12 +222,12 @@ describe('pitch-standard-x-high', () => {
 
 });
 
-describe('pitch-standard-high', () => {
+describe('prosody-multiple-modifiers vol + pitch + rate defaults', () => {
 
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
-    A (high)[pitch:"high"] pitch
+    Multiple modifiers on same (text)[vol;pitch;rate]
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
@@ -243,7 +239,7 @@ describe('pitch-standard-high', () => {
 
     const expected = dedent`
       <speak>
-      A <prosody pitch="high">high</prosody> pitch
+      Multiple modifiers on same <prosody volume="medium" pitch="medium" rate="medium">text</prosody>
       </speak>
     `;
 
@@ -259,7 +255,7 @@ describe('pitch-standard-high', () => {
 
     const expected = dedent`
       <speak>
-      A <prosody pitch="high">high</prosody> pitch
+      Multiple modifiers on same <prosody volume="medium" pitch="medium" rate="medium">text</prosody>
       </speak>
     `;
 
@@ -273,7 +269,7 @@ describe('pitch-standard-high', () => {
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
-      A high pitch
+      Multiple modifiers on same text
     `;
 
     expect(text).toBe(expected);
