@@ -1,10 +1,9 @@
 import { SpeechOptions } from '../SpeechOptions';
 import { SsmlFormatterBase } from './SsmlFormatterBase';
-import { stringLiteral } from '@babel/types';
 
 export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
 
-  private validVoices = {
+  private validVoices: any = {
     'Ivy': 'en-US',
     'Joanna': 'en-US',
     'Joey': 'en-US',
@@ -239,6 +238,10 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
         lines.push(inner);
 
         return lines;
+      }
+      case 'audio': {
+        const url = ast.children[0].allText;
+        return this.addTagWithAttrs(lines, null, 'audio', { src: url });
       }
       case 'simpleLine': {
         this.processAst(ast.children, lines);

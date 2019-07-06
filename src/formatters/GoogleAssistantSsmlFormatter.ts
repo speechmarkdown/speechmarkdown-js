@@ -187,6 +187,10 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
 
         return lines;
       }
+      case 'audio': {
+        const url = ast.children[0].allText;
+        return this.addTagWithAttrs(lines, null, 'audio', { src: url });
+      }
       case 'simpleLine': {
         this.processAst(ast.children, lines);
         return lines;
