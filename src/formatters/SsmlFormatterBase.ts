@@ -19,6 +19,8 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     'say-as',
     'prosody',
     'amazon:effect',
+    'voice',
+    'lang',
     'sub',
     'phoneme',
   ];
@@ -42,6 +44,8 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     'rate': 'prosody',
     'pitch': 'prosody',
     'volume': 'prosody',
+    'lang': null,
+    'voice': null,
   };
 
   public format(ast: any): string {
@@ -126,6 +130,13 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     return lines.join('');
   }
 
+  protected sentenceCase(text: string) {
+    return text.replace(/[a-z]/i, (letter: string) => {
+
+      return letter.toUpperCase();
+
+    }).trim();
+  }
 
   protected abstract formatFromAst(ast: any, lines: string[]): string[];
 }

@@ -1,12 +1,45 @@
 import { SpeechOptions } from '../SpeechOptions';
 import { SsmlFormatterBase } from './SsmlFormatterBase';
+import { stringLiteral } from '@babel/types';
 
 export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
+
+  private validVoices = {
+    'Ivy': 'en-US',
+    'Joanna': 'en-US',
+    'Joey': 'en-US',
+    'Justin': 'en-US',
+    'Kendra': 'en-US',
+    'Kimberly': 'en-US',
+    'Matthew': 'en-US',
+    'Salli': 'en-US',
+    'Nicole': 'en-AU',
+    'Russell': 'en-AU',
+    'Amy': 'en-GB',
+    'Brian': 'en-GB',
+    'Emma': 'en-GB',
+    'Aditi': 'en-IN',
+    'Raveena': 'en-IN',
+    'Hans': 'de-DE',
+    'Marlene': 'de-DE',
+    'Vicki': 'de-DE',
+    'Conchita': 'es-ES',
+    'Enrique': 'es-ES',
+    'Carla': 'it-IT',
+    'Giorgio': 'it-IT',
+    'Mizuki': 'ja-JP',
+    'Takumi': 'ja-JP',
+    'Celine': 'fr-FR',
+    'Lea': 'fr-FR',
+    'Mathieu': 'fr-FR',
+  };
 
   constructor(public options: SpeechOptions) {
     super(options);
 
     this.modifierKeyToSsmlTagMappings.whisper = 'amazon:effect';
+    this.modifierKeyToSsmlTagMappings.lang = 'lang';
+    this.modifierKeyToSsmlTagMappings.voice = 'voice';
   }
 
   // tslint:disable-next-line: max-func-body-length
@@ -109,6 +142,28 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
 
               break;
             }
+
+            case 'lang': {
+              if (!textModifierObject.tags[ssmlTag]) {
+                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              }
+              textModifierObject.tags[ssmlTag].attrs = { 'xml:lang': value };
+              break;
+            }
+
+            case 'voice': {
+              const name = this.sentenceCase(value || 'device')
+
+              if (this.validVoices[name]) {
+                if (!textModifierObject.tags[ssmlTag]) {
+                  textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+                }
+
+                textModifierObject.tags[ssmlTag].attrs = { 'name': name };
+              }
+              break;
+            }
+
             default: {
 
             }
