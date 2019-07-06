@@ -147,12 +147,6 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
       }
 
     }
-    // const text = ast.children[0].allText;
-    // const keyValuePair = ast.children[1];
-
-    // const key = keyValuePair.children[0].allText;
-    // const value = keyValuePair.children.length === 2 ? keyValuePair.children[1].allText : '';
-
 
     return textModifierObject;
   }
@@ -220,70 +214,6 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
         }
 
         return lines;
-
-        // const text = ast.children[0].allText;
-        // const keyValuePair = ast.children[1];
-
-        // const key = keyValuePair.children[0].allText;
-        // const value = keyValuePair.children.length === 2 ? keyValuePair.children[1].allText : '';
-
-        // switch (key) {
-        //   case 'emphasis': {
-        //     const level = value || 'moderate';
-        //     return this.addEmphasis(lines, text, level);
-        //   }
-
-        //   case 'address':
-        //   case 'characters':
-        //   case 'expletive':
-        //   case 'fraction':
-        //   case 'number':
-        //   case 'ordinal':
-        //   case 'telephone':
-        //   case 'unit': {
-        //     return this.addSayAs(lines, text, key);
-        //   }
-
-        //   case 'chars': {
-        //     return this.addSayAs(lines, text, 'characters');
-        //   }
-
-        //   case 'bleep': {
-        //     return this.addSayAs(lines, text, 'expletive');
-        //   }
-
-        //   case 'phone': {
-        //     return this.addSayAs(lines, text, 'telephone');
-        //   }
-
-        //   case 'date': {
-        //     const format = value || 'ymd';
-        //     return this.addSayAsDate(lines, text, key, format);
-        //   }
-
-        //   case 'time': {
-        //     const format = value || 'hms12';
-        //     return this.addSayAsTime(lines, text, key, format);
-        //   }
-
-        //   case 'interjection': {
-        //     lines.push(text);
-        //     return lines;
-        //   }
-
-        //   case 'whisper': {
-        //     return this.addProsody(lines, text, { volume: 'x-soft', rate: 'slow'});
-        //   }
-
-        //   case 'sub': {
-        //     const alias = value || '';
-        //     return this.addSub(lines, text, alias);
-        //   }
-
-        //   default: {
-        //     return lines;
-        //   }
-        // }
       }
       case 'simpleLine': {
         this.processAst(ast.children, lines);

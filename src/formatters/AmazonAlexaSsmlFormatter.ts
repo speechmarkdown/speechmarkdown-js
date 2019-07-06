@@ -147,12 +147,6 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
       }
 
     }
-    // const text = ast.children[0].allText;
-    // const keyValuePair = ast.children[1];
-
-    // const key = keyValuePair.children[0].allText;
-    // const value = keyValuePair.children.length === 2 ? keyValuePair.children[1].allText : '';
-
 
     return textModifierObject;
   }
@@ -220,78 +214,6 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
         }
 
         return lines;
-        // for (const tag in tmo.tags) {
-        //   tags.push()
-        //   if (object.hasOwnProperty(key)) {
-        //     const element = object[key];
-
-        //   }
-        // }
-
-        // const text = ast.children[0].allText;
-        // const keyValuePair = ast.children[1];
-
-        // const key = keyValuePair.children[0].allText;
-        // const value = keyValuePair.children.length === 2 ? keyValuePair.children[1].allText : '';
-
-        // switch (key) {
-        //   case 'emphasis': {
-        //     const level = value || 'moderate';
-        //     return this.addEmphasis(lines, text, level);
-        //   }
-
-        //   case 'address':
-        //   case 'characters':
-        //   case 'expletive':
-        //   case 'fraction':
-        //   case 'interjection':
-        //   case 'number':
-        //   case 'ordinal':
-        //   case 'telephone':
-        //   case 'unit': {
-        //     return this.addSayAs(lines, text, key);
-        //   }
-
-        //   case 'chars': {
-        //     return this.addSayAs(lines, text, 'characters');
-        //   }
-
-        //   case 'bleep': {
-        //     return this.addSayAs(lines, text, 'expletive');
-        //   }
-
-        //   case 'phone': {
-        //     return this.addSayAs(lines, text, 'telephone');
-        //   }
-
-        //   case 'date': {
-        //     const format = value || 'ymd';
-        //     return this.addSayAsDate(lines, text, key, format);
-        //   }
-
-        //   case 'time': {
-        //     const format = value || 'hms12';
-        //     return this.addSayAsTime(lines, text, key, format);
-        //   }
-
-        //   case 'whisper': {
-        //     return this.addWhisper(lines, text);
-        //   }
-
-        //   case 'ipa': {
-        //     const phoneme = value || '';
-        //     return this.addPhoneme(lines, text, 'ipa', phoneme);
-        //   }
-
-        //   case 'sub': {
-        //     const alias = value || '';
-        //     return this.addSub(lines, text, alias);
-        //   }
-
-        //   default: {
-        //     return lines;
-        //   }
-        // }
       }
       case 'simpleLine': {
         this.processAst(ast.children, lines);
@@ -318,21 +240,5 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
         return lines;
       }
     }
-  }
-
-  protected addWhisper(lines: string[], text: string): string[] {
-    lines.push(this.startTag('amazon:effect', { 'name': 'whispered' }));
-    lines.push(text);
-    lines.push(this.endTag('amazon:effect', false));
-
-    return lines;
-  }
-
-  protected addPhoneme(lines: string[], text: string, alphabet: string, ph: string): string[] {
-    lines.push(this.startTag('phoneme', { 'alphabet': alphabet, 'ph': ph }));
-    lines.push(text);
-    lines.push(this.endTag('phoneme', false));
-
-    return lines;
   }
 }
