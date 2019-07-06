@@ -64,6 +64,14 @@ export function speechMarkdownGrammar(myna: any): any {
     this.url = m.choice(m.digit, m.letter, this.urlSpecialChar).oneOrMore.ast;
     this.audio = m.seq('![', m.choice(m.singleQuoted(this.url), m.doubleQuoted(this.url)), ']').ast;
 
+    // Section
+    this.sectionModifierKey = m.keywords('lang', 'voice').ast;
+    this.sectionModifierText = m.choice(m.digit, m.letter, m.hyphen).oneOrMore.ast;
+    this.sectionModifierValue = m.seq(this.colon, m.choice(m.singleQuoted(this.sectionModifierText), m.doubleQuoted(this.sectionModifierText)))
+    this.sectionModifierKeyOptionalValue = m.seq(this.sectionModifierKey, this.sectionModifierValue.opt).ast;
+    this.sectionModifier = m.bracketed(m.delimited(this.sectionModifierKeyOptionalValue.ws, this.semicolon));
+    this.section = m.seq('#', this.sectionModifier).ast;
+
     // values
     this.valueNone = 'none';
     this.valueXWeak = 'x-weak';
@@ -84,7 +92,7 @@ export function speechMarkdownGrammar(myna: any): any {
     this.simpleLine = m.seq(this.emptyLine.not, m.notEnd, this.restOfLine).ast;
     this.paragraph = this.simpleLine.oneOrMore.ast;
 
-    this.content = m.choice(this.paragraph, this.emptyLine);
+    this.content = m.choice(this.section, this.paragraph, this.emptyLine);
     this.document = this.content.zeroOrMore.ast;
   }
 
