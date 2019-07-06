@@ -2,12 +2,12 @@
 import dedent from 'ts-dedent';
 import { SpeechMarkdown } from '../src/SpeechMarkdown';
 
-describe.skip('multiple-modifiers-same-text', () => {
+describe('multiple-modifiers-same-text', () => {
 
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
-    Your balance is: (12345)[number;emphasis:"strong"].
+    Your balance is: (12345)[number;emphasis:"strong";whisper;pitch:"high"].
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
@@ -19,7 +19,7 @@ describe.skip('multiple-modifiers-same-text', () => {
 
     const expected = dedent`
       <speak>
-      Your balance is: <say-as interpret-as="number"><emphasis level="strong">12345</emphasis></say-as>.
+      Your balance is: <emphasis level="strong"><say-as interpret-as="number"><prosody pitch="high"><amazon:effect name="whispered">12345</amazon:effect></prosody></say-as></emphasis>.
       </speak>
     `;
 
@@ -35,7 +35,7 @@ describe.skip('multiple-modifiers-same-text', () => {
 
     const expected = dedent`
       <speak>
-      Your balance is: <say-as interpret-as="number"><emphasis level="strong">12345</emphasis></say-as>.
+      Your balance is: <emphasis level="strong"><say-as interpret-as="number"><prosody volume="x-soft" rate="slow" pitch="high">12345</prosody></say-as></emphasis>.
       </speak>
     `;
 
