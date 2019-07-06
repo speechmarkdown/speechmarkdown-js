@@ -31,56 +31,6 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     return lines;
   }
 
-  protected addBreakTime(lines: string[], time: string): string[] {
-    lines.push(this.voidTag('break', { time: time }));
-    return lines;
-  }
-
-  protected addBreakStrength(lines: string[], strength: string): string[] {
-    lines.push(this.voidTag('break', { strength: strength }));
-    return lines;
-  }
-
-  protected addEmphasis(lines: string[], text: string, level: string): string[] {
-    lines.push(this.startTag('emphasis', { level: level }));
-    lines.push(text);
-    lines.push(this.endTag('emphasis', false));
-
-    return lines;
-  }
-
-  protected addSayAs(lines: string[], text: string, interpretAs: string): string[] {
-    lines.push(this.startTag('say-as', { 'interpret-as': interpretAs }));
-    lines.push(text);
-    lines.push(this.endTag('say-as', false));
-
-    return lines;
-  }
-
-  protected addSayAsTime(lines: string[], text: string, interpretAs: string, format: string): string[] {
-    lines.push(this.startTag('say-as', { 'interpret-as': interpretAs, format: format }));
-    lines.push(text);
-    lines.push(this.endTag('say-as', false));
-
-    return lines;
-  }
-
-  protected addSayAsDate(lines: string[], text: string, interpretAs: string, format: string): string[] {
-    lines.push(this.startTag('say-as', { 'interpret-as': interpretAs, format: format }));
-    lines.push(text);
-    lines.push(this.endTag('say-as', false));
-
-    return lines;
-  }
-
-  protected addProsody(lines: string[], text: string, attr: any): string[] {
-    lines.push(this.startTag('prosody', attr));
-    lines.push(text);
-    lines.push(this.endTag('prosody', false));
-
-    return lines;
-  }
-
   protected addComment(commentText: string, lines: string[]): string[] {
     lines.push(`<!-- ${commentText} -->\n`);
     return lines;
@@ -112,6 +62,20 @@ export abstract class SsmlFormatterBase extends FormatterBase {
       }).join(' ');
     }
     return '<' + tag + attrStr + '/>';
+  }
+
+  protected addTagWithAttrs(lines: string[], text: string, tag: string, attrs: any): string[] {
+
+    if (text) {
+      lines.push(this.startTag(tag, attrs));
+      lines.push(text);
+      lines.push(this.endTag(tag, false));
+    }
+    else {
+      lines.push(this.voidTag(tag, attrs));
+    }
+
+    return lines;
   }
 
   protected abstract formatFromAst(ast: any, lines: string[]): string[];

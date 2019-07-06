@@ -3,8 +3,152 @@ import { SsmlFormatterBase } from './SsmlFormatterBase';
 
 export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
 
+  private modifierKeyMappings: any = {
+    'chars': 'characters',
+    'bleep': 'expletive',
+    'phone': 'telephone',
+    'vol': 'volume',
+  };
+
+  private ssmlTagSortOrder: string[] = ['emphasis', 'say-as', 'prosody', 'sub'];
+
+  private modifierKeyToSsmlTagMappings: any = {
+    'emphasis': 'emphasis',
+    'address': 'say-as',
+    'number': 'say-as',
+    'characters': 'say-as',
+    'expletive': 'say-as',
+    'fraction': 'say-as',
+    'interjection': null,
+    'ordinal': 'say-as',
+    'telephone': 'say-as',
+    'unit': 'say-as',
+    'time': 'say-as',
+    'date': 'say-as',
+    'whisper': 'prosody',
+    'sub': 'sub',
+    'ipa': 'phoneme',
+    'rate': 'prosody',
+    'pitch': 'prosody',
+    'volume': 'prosody',
+  };
+
   constructor(public options: SpeechOptions) {
     super(options);
+  }
+
+  // tslint:disable-next-line: max-func-body-length
+  private getTextModifierObject(ast: any): any {
+    let textModifierObject = {
+      tags: {}
+    };
+
+    for (let index = 0; index < ast.children.length; index++) {
+      const child = ast.children[index];
+
+      switch (child.name) {
+        case 'plainText': {
+          textModifierObject['text'] = child.allText;
+          break;
+        }
+        case 'textModifierKeyOptionalValue': {
+          let key = child.children[0].allText;
+          key = this.modifierKeyMappings[key] || key;
+          const value = child.children.length === 2 ? child.children[1].allText : '';
+          const ssmlTag = this.modifierKeyToSsmlTagMappings[key];
+          const sortId = this.ssmlTagSortOrder.indexOf(ssmlTag);
+
+          switch (key) {
+            case 'emphasis': {
+              if (!textModifierObject.tags[ssmlTag]) {
+                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              }
+              textModifierObject.tags[ssmlTag].attrs = { level: value || 'moderate' };
+              break;
+            }
+
+            case 'address':
+            case 'characters':
+            case 'expletive':
+            case 'fraction':
+            case 'number':
+            case 'ordinal':
+            case 'telephone':
+            case 'unit': {
+              if (!textModifierObject.tags[ssmlTag]) {
+                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              }
+              textModifierObject.tags[ssmlTag].attrs = { 'interpret-as': key };
+              break;
+            }
+
+            case 'date': {
+              if (!textModifierObject.tags[ssmlTag]) {
+                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              }
+              textModifierObject.tags[ssmlTag].attrs = { 'interpret-as': key, format: value || 'ymd' };
+              break;
+            }
+
+            case 'time': {
+              if (!textModifierObject.tags[ssmlTag]) {
+                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              }
+              textModifierObject.tags[ssmlTag].attrs = { 'interpret-as': key, format: value || 'hms12' };
+              break;
+            }
+
+            case 'whisper': {
+              if (!textModifierObject.tags[ssmlTag]) {
+                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              }
+              textModifierObject.tags[ssmlTag].attrs = { volume: 'x-soft', rate: 'slow' };
+              break;
+            }
+
+            case 'ipa': {
+              if (!textModifierObject.tags[ssmlTag]) {
+                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              }
+              textModifierObject.tags[ssmlTag].attrs = { alphabet: key, ph: value };
+              break;
+            }
+
+            case 'sub': {
+              if (!textModifierObject.tags[ssmlTag]) {
+                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              }
+              textModifierObject.tags[ssmlTag].attrs = { alias: value };
+              break;
+            }
+
+            case 'volume':
+            case 'rate':
+            case 'pitch': {
+
+              if (!textModifierObject.tags[ssmlTag]) {
+                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              }
+
+              const attrs = {};
+              attrs[key] = value || 'medium';
+              textModifierObject.tags[ssmlTag].attrs = { ...textModifierObject.tags[ssmlTag].attrs, ...attrs };
+
+              break;
+            }
+
+            default: {
+
+            }
+
+          }
+          break;
+        }
+      }
+
+    }
+
+    return textModifierObject;
   }
 
   // tslint:disable-next-line: max-func-body-length
@@ -33,81 +177,44 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
       }
       case 'shortBreak': {
         const time = ast.children[0].allText;
-        return this.addBreakTime(lines, time);
+        return this.addTagWithAttrs(lines, null, 'break', { time: time });
       }
       case 'shortEmphasisModerate': {
         const text = ast.children[0].allText;
-        return this.addEmphasis(lines, text, 'moderate');
+        return this.addTagWithAttrs(lines, text, 'emphasis', { level: 'moderate' });
       }
       case 'shortEmphasisStrong': {
         const text = ast.children[0].allText;
-        return this.addEmphasis(lines, text, 'strong');
+        return this.addTagWithAttrs(lines, text, 'emphasis', { level: 'strong' });
       }
       case 'shortEmphasisNone': {
         const text = ast.children[0].allText;
-        return this.addEmphasis(lines, text, 'none');
+        return this.addTagWithAttrs(lines, text, 'emphasis', { level: 'none' });
       }
       case 'shortEmphasisReduced': {
         const text = ast.children[0].allText;
-        return this.addEmphasis(lines, text, 'reduced');
+        return this.addTagWithAttrs(lines, text, 'emphasis', { level: 'reduced' });
       }
+
       case 'textModifier': {
-        const text = ast.children[0].allText;
-        const key = ast.children[1].allText;
-        const value = ast.children.length === 3 ? ast.children[2].allText : '';
+        const tmo = this.getTextModifierObject(ast);
 
-        switch (key) {
-          case 'emphasis': {
-            const level = value || 'moderate';
-            return this.addEmphasis(lines, text, level);
-          }
+        const tagsSorted = Object.keys(tmo.tags).sort((a: any, b: any) => { return a.sortId - b.sortId });
 
-          case 'address':
-          case 'characters':
-          case 'expletive':
-          case 'fraction':
-          case 'number':
-          case 'ordinal':
-          case 'telephone':
-          case 'unit': {
-            return this.addSayAs(lines, text, key);
-          }
+        for (let index = 0; index < tagsSorted.length; index++) {
+          const tag = tagsSorted[index];
+          const attrs = tmo.tags[tag].attrs;
 
-          case 'chars': {
-            return this.addSayAs(lines, text, 'characters');
-          }
+          this.addTagWithAttrs(lines, tmo.text, tag, attrs);
 
-          case 'bleep': {
-            return this.addSayAs(lines, text, 'expletive');
-          }
-
-          case 'phone': {
-            return this.addSayAs(lines, text, 'telephone');
-          }
-
-          case 'date': {
-            const format = value || 'ymd';
-            return this.addSayAsDate(lines, text, key, format);
-          }
-
-          case 'time': {
-            const format = value || 'hms12';
-            return this.addSayAsTime(lines, text, key, format);
-          }
-
-          case 'interjection': {
-            lines.push(text);
-            return lines;
-          }
-
-          case 'whisper': {
-            return this.addProsody(lines, text, { volume: 'x-soft', rate: 'slow'});
-          }
-
-          default: {
-            return lines;
-          }
         }
+
+        // if no tags, add text only
+        if (tagsSorted.length === 0) {
+          lines.push(tmo.text);
+        }
+
+        return lines;
       }
       case 'simpleLine': {
         this.processAst(ast.children, lines);
