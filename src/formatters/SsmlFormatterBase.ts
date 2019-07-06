@@ -122,5 +122,13 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     return '<' + tag + attrStr + '/>';
   }
 
+  protected addTagWithAttrs(lines: string[], text: string, tag: string, attrs: any): string[] {
+    lines.push(this.startTag(tag, attrs));
+    lines.push(text);
+    lines.push(this.endTag(tag, false));
+
+    return lines;
+  }
+
   protected abstract formatFromAst(ast: any, lines: string[]): string[];
 }

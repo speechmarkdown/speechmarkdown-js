@@ -3,7 +3,6 @@ import { SsmlFormatterBase } from './SsmlFormatterBase';
 
 export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
 
-  // private orderedKeyDefinitions: any[];
   private modifierKeyMappings: any = {
     'chars': 'characters',
     'bleep': 'expletive',
@@ -36,102 +35,9 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
 
   constructor(public options: SpeechOptions) {
     super(options);
-
-    // this.orderedKeyDefinitions = [
-    //   {
-    //     id: 'emphasis',
-    //     sort: 0,
-    //     attrs: null,
-    //     ssmlTag: 'emphasis',
-    //   },
-    //   {
-    //     id: 'address',
-    //     sort: 1,
-    //     attrs: null,
-    //     ssmlTag: 'say-as',
-    //   },
-    //   {
-    //     id: 'number',
-    //     sort: 2,
-    //     attrs: null,
-    //     ssmlTag: 'say-as',
-    //   },
-    //   {
-    //     id: 'characters',
-    //     sort: 3,
-    //     attrs: null,
-    //     ssmlTag: 'say-as',
-    //   },
-    //   {
-    //     id: 'expletive',
-    //     sort: 4,
-    //     attrs: null,
-    //     ssmlTag: 'say-as',
-    //   },
-    //   {
-    //     id: 'fraction',
-    //     sort: 5,
-    //     attrs: null,
-    //     ssmlTag: 'say-as',
-    //   },
-    //   {
-    //     id: 'interjection',
-    //     sort: 5,
-    //     attrs: null,
-    //     ssmlTag: 'say-as',
-    //   },
-    //   {
-    //     id: 'ordinal',
-    //     sort: 6,
-    //     attrs: null,
-    //     ssmlTag: 'say-as',
-    //   },
-    //   {
-    //     id: 'telephone',
-    //     sort: 7,
-    //     attrs: null,
-    //     ssmlTag: 'say-as',
-    //   },
-    //   {
-    //     id: 'unit',
-    //     sort: 8,
-    //     attrs: null,
-    //     ssmlTag: 'say-as',
-    //   },
-    //   {
-    //     id: 'time',
-    //     sort: 9,
-    //     attrs: null,
-    //     ssmlTag: 'say-as',
-    //   },
-    //   {
-    //     id: 'date',
-    //     sort: 10,
-    //     attrs: null,
-    //     ssmlTag: 'say-as',
-    //   },
-    //   {
-    //     id: 'whisper',
-    //     sort: 11,
-    //     attrs: null,
-    //     ssmlTag: 'amazon:effect',
-    //   },
-    //   {
-    //     id: 'sub',
-    //     sort: 12,
-    //     attrs: null,
-    //     ssmlTag: 'sub',
-    //   },
-    //   {
-    //     id: 'ipa',
-    //     sort: 13,
-    //     attrs: null,
-    //     ssmlTag: 'phoneme',
-    //   },
-    // ];
   }
 
-// tslint:disable-next-line: max-func-body-length
+  // tslint:disable-next-line: max-func-body-length
   private getTextModifierObject(ast: any): any {
     let textModifierObject = {
       tags: {}
@@ -148,17 +54,15 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
         case 'textModifierKeyOptionalValue': {
           let key = child.children[0].allText;
           key = this.modifierKeyMappings[key] || key;
-
           const value = child.children.length === 2 ? child.children[1].allText : '';
-
-          // const info = orderedKeyDefinitions.find( item => item.id === key);
           const ssmlTag = this.modifierKeyToSsmlTagMappings[key];
           const sortId = this.ssmlTagSortOrder.indexOf(ssmlTag);
 
           switch (key) {
             case 'emphasis': {
-              // const level = value || 'moderate';
-              textModifierObject.tags[ssmlTag].sortId = sortId;
+              if (!textModifierObject.tags[ssmlTag]) {
+                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              }
               textModifierObject.tags[ssmlTag].attrs = { level: value || 'moderate' };
               break;
             }
@@ -228,35 +132,16 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
               }
 
               const attrs = {};
-              attrs[key] = value;
-              // if (!textModifierObject.tags[ssmlTag].attrs) {
-              textModifierObject.tags[ssmlTag].attrs = { ... textModifierObject.tags[ssmlTag].attrs, ... attrs};
-              // }
+              attrs[key] = value || 'medium';
+              textModifierObject.tags[ssmlTag].attrs = { ...textModifierObject.tags[ssmlTag].attrs, ...attrs };
 
               break;
             }
+            default: {
+
+            }
 
           }
-
-          // if (ssmlTag === 'prosody') {
-          //   // can add more than 1
-          //   if (!textModifierObject.tags[ssmlTag]) {
-          //     textModifierObject.tags[ssmlTag] = {
-          //       sort: this.ssmlTagSortOrder.indexOf(ssmlTag),
-          //       value: value
-          //     }
-
-          //   }
-          // }
-          // else {
-          //   if (!textModifierObject.tags[ssmlTag]) {
-          //     textModifierObject.tags[ssmlTag] = {
-          //       sort: this.ssmlTagSortOrder.indexOf(ssmlTag),
-          //       value: value
-          //     }
-          //   }
-          // }
-
           break;
         }
       }
@@ -271,6 +156,7 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
 
     return textModifierObject;
   }
+
   // tslint:disable-next-line: max-func-body-length
   protected formatFromAst(ast: any, lines: string[] = []): string[] {
 
@@ -326,6 +212,11 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
 
           this.addTagWithAttrs(lines, tmo.text, tag, attrs);
 
+        }
+
+        // if no tags, add text only
+        if (tagsSorted.length === 0) {
+          lines.push(tmo.text);
         }
 
         return lines;
@@ -441,14 +332,6 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
     lines.push(this.startTag('phoneme', { 'alphabet': alphabet, 'ph': ph }));
     lines.push(text);
     lines.push(this.endTag('phoneme', false));
-
-    return lines;
-  }
-
-  protected addTagWithAttrs(lines: string[], text: string, tag: string, attrs: any): string[] {
-    lines.push(this.startTag(tag, attrs));
-    lines.push(text);
-    lines.push(this.endTag(tag, false));
 
     return lines;
   }
