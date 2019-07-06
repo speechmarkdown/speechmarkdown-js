@@ -31,24 +31,6 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     return lines;
   }
 
-  protected addBreakTime(lines: string[], time: string): string[] {
-    lines.push(this.voidTag('break', { time: time }));
-    return lines;
-  }
-
-  protected addBreakStrength(lines: string[], strength: string): string[] {
-    lines.push(this.voidTag('break', { strength: strength }));
-    return lines;
-  }
-
-  protected addEmphasis(lines: string[], text: string, level: string): string[] {
-    lines.push(this.startTag('emphasis', { level: level }));
-    lines.push(text);
-    lines.push(this.endTag('emphasis', false));
-
-    return lines;
-  }
-
   protected addComment(commentText: string, lines: string[]): string[] {
     lines.push(`<!-- ${commentText} -->\n`);
     return lines;
@@ -83,9 +65,15 @@ export abstract class SsmlFormatterBase extends FormatterBase {
   }
 
   protected addTagWithAttrs(lines: string[], text: string, tag: string, attrs: any): string[] {
-    lines.push(this.startTag(tag, attrs));
-    lines.push(text);
-    lines.push(this.endTag(tag, false));
+
+    if (text) {
+      lines.push(this.startTag(tag, attrs));
+      lines.push(text);
+      lines.push(this.endTag(tag, false));
+    }
+    else {
+      lines.push(this.voidTag(tag, attrs));
+    }
 
     return lines;
   }

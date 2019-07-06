@@ -177,23 +177,23 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
       }
       case 'shortBreak': {
         const time = ast.children[0].allText;
-        return this.addBreakTime(lines, time);
+        return this.addTagWithAttrs(lines, null, 'break', { time: time });
       }
       case 'shortEmphasisModerate': {
         const text = ast.children[0].allText;
-        return this.addEmphasis(lines, text, 'moderate');
+        return this.addTagWithAttrs(lines, text, 'emphasis', { level: 'moderate' });
       }
       case 'shortEmphasisStrong': {
         const text = ast.children[0].allText;
-        return this.addEmphasis(lines, text, 'strong');
+        return this.addTagWithAttrs(lines, text, 'emphasis', { level: 'strong' });
       }
       case 'shortEmphasisNone': {
         const text = ast.children[0].allText;
-        return this.addEmphasis(lines, text, 'none');
+        return this.addTagWithAttrs(lines, text, 'emphasis', { level: 'none' });
       }
       case 'shortEmphasisReduced': {
         const text = ast.children[0].allText;
-        return this.addEmphasis(lines, text, 'reduced');
+        return this.addTagWithAttrs(lines, text, 'emphasis', { level: 'reduced' });
       }
       case 'textModifier': {
         const tmo = this.getTextModifierObject(ast);
