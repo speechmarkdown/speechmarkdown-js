@@ -1,40 +1,45 @@
 import { SpeechOptions } from '../SpeechOptions';
 import { SsmlFormatterBase } from './SsmlFormatterBase';
+import { stringLiteral } from '@babel/types';
 
 export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
 
-  private modifierKeyMappings: any = {
-    'chars': 'characters',
-    'bleep': 'expletive',
-    'phone': 'telephone',
-    'vol': 'volume',
-  };
-
-  private ssmlTagSortOrder: string[] = ['emphasis', 'say-as', 'prosody', 'amazon:effect', 'sub', 'phoneme'];
-
-  private modifierKeyToSsmlTagMappings: any = {
-    'emphasis': 'emphasis',
-    'address': 'say-as',
-    'number': 'say-as',
-    'characters': 'say-as',
-    'expletive': 'say-as',
-    'fraction': 'say-as',
-    'interjection': 'say-as',
-    'ordinal': 'say-as',
-    'telephone': 'say-as',
-    'unit': 'say-as',
-    'time': 'say-as',
-    'date': 'say-as',
-    'whisper': 'amazon:effect',
-    'sub': 'sub',
-    'ipa': 'phoneme',
-    'rate': 'prosody',
-    'pitch': 'prosody',
-    'volume': 'prosody',
+  private validVoices = {
+    'Ivy': 'en-US',
+    'Joanna': 'en-US',
+    'Joey': 'en-US',
+    'Justin': 'en-US',
+    'Kendra': 'en-US',
+    'Kimberly': 'en-US',
+    'Matthew': 'en-US',
+    'Salli': 'en-US',
+    'Nicole': 'en-AU',
+    'Russell': 'en-AU',
+    'Amy': 'en-GB',
+    'Brian': 'en-GB',
+    'Emma': 'en-GB',
+    'Aditi': 'en-IN',
+    'Raveena': 'en-IN',
+    'Hans': 'de-DE',
+    'Marlene': 'de-DE',
+    'Vicki': 'de-DE',
+    'Conchita': 'es-ES',
+    'Enrique': 'es-ES',
+    'Carla': 'it-IT',
+    'Giorgio': 'it-IT',
+    'Mizuki': 'ja-JP',
+    'Takumi': 'ja-JP',
+    'Celine': 'fr-FR',
+    'Lea': 'fr-FR',
+    'Mathieu': 'fr-FR',
   };
 
   constructor(public options: SpeechOptions) {
     super(options);
+
+    this.modifierKeyToSsmlTagMappings.whisper = 'amazon:effect';
+    this.modifierKeyToSsmlTagMappings.lang = 'lang';
+    this.modifierKeyToSsmlTagMappings.voice = 'voice';
   }
 
   // tslint:disable-next-line: max-func-body-length
@@ -137,6 +142,28 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
 
               break;
             }
+
+            case 'lang': {
+              if (!textModifierObject.tags[ssmlTag]) {
+                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              }
+              textModifierObject.tags[ssmlTag].attrs = { 'xml:lang': value };
+              break;
+            }
+
+            case 'voice': {
+              const name = this.sentenceCase(value || 'device')
+
+              if (this.validVoices[name]) {
+                if (!textModifierObject.tags[ssmlTag]) {
+                  textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+                }
+
+                textModifierObject.tags[ssmlTag].attrs = { 'name': name };
+              }
+              break;
+            }
+
             default: {
 
             }

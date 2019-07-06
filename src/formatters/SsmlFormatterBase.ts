@@ -4,16 +4,53 @@ import { FormatterBase } from './FormatterBase';
 export abstract class SsmlFormatterBase extends FormatterBase {
 
   protected constructor(protected options: SpeechOptions) {
-    // this.options = options;
     super(options);
   }
 
+  protected modifierKeyMappings: any = {
+    'chars': 'characters',
+    'bleep': 'expletive',
+    'phone': 'telephone',
+    'vol': 'volume',
+  };
+
+  protected ssmlTagSortOrder: string[] = [
+    'emphasis',
+    'say-as',
+    'prosody',
+    'amazon:effect',
+    'voice',
+    'lang',
+    'sub',
+    'phoneme',
+  ];
+
+  protected modifierKeyToSsmlTagMappings: any = {
+    'emphasis': 'emphasis',
+    'address': 'say-as',
+    'number': 'say-as',
+    'characters': 'say-as',
+    'expletive': 'say-as',
+    'fraction': 'say-as',
+    'interjection': 'say-as',
+    'ordinal': 'say-as',
+    'telephone': 'say-as',
+    'unit': 'say-as',
+    'time': 'say-as',
+    'date': 'say-as',
+    'whisper': null,
+    'sub': 'sub',
+    'ipa': 'phoneme',
+    'rate': 'prosody',
+    'pitch': 'prosody',
+    'volume': 'prosody',
+    'lang': null,
+    'voice': null,
+  };
+
   public format(ast: any): string {
     const lines = this.formatFromAst(ast, []);
-
-    // tslint:disable-next-line: no-unnecessary-local-variable
-    const ssml = lines.join('');
-    return ssml;
+    return lines.join('');
   }
 
   // Adds tagged content
@@ -40,7 +77,7 @@ export abstract class SsmlFormatterBase extends FormatterBase {
   protected startTag(tag: string, attr: any, newLine: boolean = false): string {
     let attrStr = '';
     if (attr) {
-      attrStr = ' ' + Object.keys(attr).map((k) => {
+      attrStr = ' ' + Object.keys(attr).map((k: any) => {
         return k + '="' + attr[k] + '"';
       }).join(' ');
     }
@@ -57,7 +94,7 @@ export abstract class SsmlFormatterBase extends FormatterBase {
   protected voidTag(tag: string, attr: any): string {
     let attrStr = '';
     if (attr) {
-      attrStr = ' ' + Object.keys(attr).map((k) => {
+      attrStr = ' ' + Object.keys(attr).map((k: any) => {
         return k + '="' + attr[k] + '"';
       }).join(' ');
     }
@@ -93,6 +130,13 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     return lines.join('');
   }
 
+  protected sentenceCase(text: string) {
+    return text.replace(/[a-z]/i, (letter: string) => {
+
+      return letter.toUpperCase();
+
+    }).trim();
+  }
 
   protected abstract formatFromAst(ast: any, lines: string[]): string[];
 }

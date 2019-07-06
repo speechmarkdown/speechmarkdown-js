@@ -80,7 +80,46 @@ The resulting text is:
 Sample speech markdown
 ```
 
+## More
 
+### Options
+
+You can pass `options` into the constructor:
+```js
+const smd = require('speechmarkdown-js');
+
+const markdown = `Sample [3s] speech [250ms] markdown`;
+const options = {
+    platform: 'amazon-alexa'
+};
+
+const speech = new smd.SpeechMarkdown(options);
+const ssml = speech.toSSML(markdown);
+```
+
+
+Or in the methods `toSSML` and `toText`:
+```js
+const smd = require('speechmarkdown-js');
+
+const markdown = `Sample [3s] speech [250ms] markdown`;
+const options = {
+    platform: 'amazon-alexa'
+};
+
+const speech = new smd.SpeechMarkdown();
+const ssml = speech.toSSML(markdown, options);
+```
+
+Available options are:
+
+* `platform` (string) - Determines the formatter to use to render SSML. Valid values are: `amazon-alexa` and `google-assistant`.
+
+* `includeFormatterComment` (boolean) - Adds an XML comment to the SSML output indicating the formatter used. Default is `false`.
+
+* `includeSpeakTag` (boolean) - Determines if the `<speak>` tag will be rendered in the SSML output. Default is `true`.
+
+* `includeParagraphTag` (boolean) - Determines if the `<p>` tag will be rendered in the SSML output. Default is `false`.
 
 
 ## Working on this project?
@@ -111,7 +150,7 @@ The biggest place we need help right now is with the completion of the grammar a
 * [ ] fraction
 * [x] interjection
 * [ ] ipa
-* [ ] lang
+* [x] lang
 * [ ] lang (section)
 * [x] number
 * [x] ordinal
@@ -121,7 +160,7 @@ The biggest place we need help right now is with the completion of the grammar a
 * [x] sub
 * [x] time
 * [x] unit
-* [ ] voice
+* [x] voice
 * [ ] voice (section)
 * [x] volume / vol
 * [x] whisper

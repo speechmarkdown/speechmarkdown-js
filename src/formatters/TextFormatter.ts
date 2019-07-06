@@ -12,6 +12,7 @@ export class TextFormatter extends FormatterBase {
     let txt = lines.join('');
 
     // replace multiple whitespace with a single space
+    // tslint:disable-next-line: no-regex-spaces
     txt = txt.replace(/  +/g, ' ');
 
     return txt;
