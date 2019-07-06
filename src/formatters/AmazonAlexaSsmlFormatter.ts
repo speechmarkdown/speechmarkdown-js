@@ -198,20 +198,18 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
       case 'textModifier': {
         const tmo = this.getTextModifierObject(ast);
 
-        const tagsSorted = Object.keys(tmo.tags).sort((a: any, b: any) => { return a.sortId - b.sortId });
+        const tagsSortedDesc = Object.keys(tmo.tags).sort((a: any, b: any) => { return tmo.tags[b].sortId - tmo.tags[a].sortId });
 
-        for (let index = 0; index < tagsSorted.length; index++) {
-          const tag = tagsSorted[index];
+        let inner = tmo.text;
+
+        for (let index = 0; index < tagsSortedDesc.length; index++) {
+          const tag = tagsSortedDesc[index];
           const attrs = tmo.tags[tag].attrs;
 
-          this.addTagWithAttrs(lines, tmo.text, tag, attrs);
+          inner = this.getTagWithAttrs(inner, tag, attrs);
 
         }
-
-        // if no tags, add text only
-        if (tagsSorted.length === 0) {
-          lines.push(tmo.text);
-        }
+        lines.push(inner);
 
         return lines;
       }

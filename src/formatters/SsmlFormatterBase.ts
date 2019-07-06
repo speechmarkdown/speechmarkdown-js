@@ -78,5 +78,21 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     return lines;
   }
 
+  protected getTagWithAttrs(text: string, tag: string, attrs: any): string {
+    let lines: string[] = [];
+
+    if (text) {
+      lines.push(this.startTag(tag, attrs));
+      lines.push(text);
+      lines.push(this.endTag(tag, false));
+    }
+    else {
+      lines.push(this.voidTag(tag, attrs));
+    }
+
+    return lines.join('');
+  }
+
+
   protected abstract formatFromAst(ast: any, lines: string[]): string[];
 }

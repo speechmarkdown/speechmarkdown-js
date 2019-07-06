@@ -116,14 +116,14 @@ The biggest place we need help right now is with the completion of the grammar a
 * [x] number
 * [x] ordinal
 * [ ] phone / telephone
-* [ ] pitch
-* [ ] rate
+* [x] pitch
+* [x] rate
 * [x] sub
 * [x] time
 * [x] unit
 * [ ] voice
 * [ ] voice (section)
-* [ ] volume / vol
+* [x] volume / vol
 * [x] whisper
 
 ### Available scripts
