@@ -58,6 +58,12 @@ export function speechMarkdownGrammar(myna: any): any {
     this.modifier = m.bracketed(m.delimited(this.textModifierKeyOptionalValue.ws, this.semicolon));
     this.textModifier = m.seq('(', this.plainText, ')', this.modifier).ast;
 
+
+    // Audio
+    this.urlSpecialChar = m.char(':/.-');
+    this.url = m.choice(m.digit, m.letter, this.urlSpecialChar).oneOrMore.ast;
+    this.audio = m.seq('![', m.choice(m.singleQuoted(this.url), m.doubleQuoted(this.url)), ']').ast;
+
     // values
     this.valueNone = 'none';
     this.valueXWeak = 'x-weak';
@@ -71,7 +77,7 @@ export function speechMarkdownGrammar(myna: any): any {
     this.breakTime = m.seq('[', 'break', ':', m.choice(m.singleQuoted(this.time), m.doubleQuoted(this.time)), ']').ast;
 
     this.any = m.advance;
-    this.inline = m.choice(this.textModifier, this.emphasis, this.shortBreak, this.breakStrength, this.breakTime, this.plainText, this.any).unless(m.newLine);
+    this.inline = m.choice(this.textModifier, this.emphasis, this.shortBreak, this.breakStrength, this.breakTime, this.audio, this.plainText, this.any).unless(m.newLine);
     this.lineEnd = m.newLine.or(m.assert(m.end)).ast;
     this.emptyLine = m.char(' \t').zeroOrMore.then(m.newLine).ast;
     this.restOfLine = m.seq(this.inline.zeroOrMore).then(this.lineEnd);

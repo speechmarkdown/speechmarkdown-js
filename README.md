@@ -140,7 +140,7 @@ The biggest place we need help right now is with the completion of the grammar a
 #### Standard Format
 
 * [x] address
-* [ ] audio
+* [x] audio
 * [ ] break (time)
 * [ ] break (strength)
 * [x] characters / chars
