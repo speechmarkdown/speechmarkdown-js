@@ -13,10 +13,6 @@ coverage
 dist/
 dist.browser/
 
-# VS Code
-.vscode
-!.vscode/tasks.js
-
 # JetBrains IDEs
 .idea/
 

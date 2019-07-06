@@ -3,38 +3,10 @@ import { SsmlFormatterBase } from './SsmlFormatterBase';
 
 export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
 
-  private modifierKeyMappings: any = {
-    'chars': 'characters',
-    'bleep': 'expletive',
-    'phone': 'telephone',
-    'vol': 'volume',
-  };
-
-  private ssmlTagSortOrder: string[] = ['emphasis', 'say-as', 'prosody', 'amazon:effect', 'sub', 'phoneme'];
-
-  private modifierKeyToSsmlTagMappings: any = {
-    'emphasis': 'emphasis',
-    'address': 'say-as',
-    'number': 'say-as',
-    'characters': 'say-as',
-    'expletive': 'say-as',
-    'fraction': 'say-as',
-    'interjection': 'say-as',
-    'ordinal': 'say-as',
-    'telephone': 'say-as',
-    'unit': 'say-as',
-    'time': 'say-as',
-    'date': 'say-as',
-    'whisper': 'amazon:effect',
-    'sub': 'sub',
-    'ipa': 'phoneme',
-    'rate': 'prosody',
-    'pitch': 'prosody',
-    'volume': 'prosody',
-  };
-
   constructor(public options: SpeechOptions) {
     super(options);
+
+    this.modifierKeyToSsmlTagMappings.whisper = 'amazon:effect';
   }
 
   // tslint:disable-next-line: max-func-body-length

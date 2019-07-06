@@ -1,6 +1,6 @@
 "use strict";
 
-export function SpeechMarkdownGrammar(myna: any): any {
+export function speechMarkdownGrammar(myna: any): any {
   const m = myna;
 
   // tslint:disable-next-line: typedef

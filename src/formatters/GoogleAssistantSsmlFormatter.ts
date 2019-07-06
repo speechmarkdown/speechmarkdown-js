@@ -3,38 +3,11 @@ import { SsmlFormatterBase } from './SsmlFormatterBase';
 
 export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
 
-  private modifierKeyMappings: any = {
-    'chars': 'characters',
-    'bleep': 'expletive',
-    'phone': 'telephone',
-    'vol': 'volume',
-  };
-
-  private ssmlTagSortOrder: string[] = ['emphasis', 'say-as', 'prosody', 'sub'];
-
-  private modifierKeyToSsmlTagMappings: any = {
-    'emphasis': 'emphasis',
-    'address': 'say-as',
-    'number': 'say-as',
-    'characters': 'say-as',
-    'expletive': 'say-as',
-    'fraction': 'say-as',
-    'interjection': null,
-    'ordinal': 'say-as',
-    'telephone': 'say-as',
-    'unit': 'say-as',
-    'time': 'say-as',
-    'date': 'say-as',
-    'whisper': 'prosody',
-    'sub': 'sub',
-    'ipa': 'phoneme',
-    'rate': 'prosody',
-    'pitch': 'prosody',
-    'volume': 'prosody',
-  };
-
   constructor(public options: SpeechOptions) {
     super(options);
+
+    this.modifierKeyToSsmlTagMappings.interjection = null;
+    this.modifierKeyToSsmlTagMappings.whisper = 'prosody';
   }
 
   // tslint:disable-next-line: max-func-body-length

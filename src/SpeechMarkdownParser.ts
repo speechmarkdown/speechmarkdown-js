@@ -1,6 +1,6 @@
 import { Myna } from 'myna-parser';
 import { Parser } from './Interfaces';
-import { SpeechMarkdownGrammar } from './SpeechMarkdownGrammar';
+import { speechMarkdownGrammar } from './SpeechMarkdownGrammar';
 
 export class SpeechMarkdownParser implements Parser {
   private parser: any;
@@ -8,7 +8,7 @@ export class SpeechMarkdownParser implements Parser {
 
   constructor() {
     this.myna = Myna;
-    SpeechMarkdownGrammar(this.myna);
+    speechMarkdownGrammar(this.myna);
     this.parser = this.myna.parsers.speechmarkdown;
   }
 
