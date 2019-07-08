@@ -2,7 +2,7 @@
 import dedent from 'ts-dedent';
 import { SpeechMarkdown } from '../src/SpeechMarkdown';
 
-describe.skip('sections-standard', () => {
+describe('sections-standard', () => {
 
   const speech = new SpeechMarkdown();
 
@@ -27,23 +27,26 @@ describe.skip('sections-standard', () => {
     const ssml = speech.toSSML(markdown, options);
 
     const expected = dedent`
-      <speak>
-      My voice and language is based on the device.
+    <speak>
+    My voice and language is based on the device.
 
-      <voice name="Kendra">
-      <lang xml:lang="en-US">
-      Now I am speaking as Kendra from the US with a US accent.
-      </lang>
-      </voice>
 
-      <voice name="Brian">
-      <lang xml:lang="en-US">
-      Switching to Brian from the UK with a US accent.
-      </lang>
-      </voice>
+    <voice name="Kendra">
+    <lang xml:lang="en-US">
+    Now I am speaking as Kendra from the US with a US accent.
 
-      Now back to the device setting.
-      </speak>
+    </lang>
+    </voice>
+
+    <voice name="Brian">
+    <lang xml:lang="en-US">
+    Switching to Brian from the UK with a US accent.
+
+    </lang>
+    </voice>
+
+    Now back to the device setting.
+    </speak>
     `;
 
     expect(ssml).toBe(expected);
@@ -60,9 +63,12 @@ describe.skip('sections-standard', () => {
       <speak>
       My voice and language is based on the device.
 
+
       Now I am speaking as Kendra from the US with a US accent.
 
+
       Switching to Brian from the UK with a US accent.
+
 
       Now back to the device setting.
       </speak>
@@ -80,9 +86,12 @@ describe.skip('sections-standard', () => {
     const expected = dedent`
       My voice and language is based on the device.
 
+
       Now I am speaking as Kendra from the US with a US accent.
 
+
       Switching to Brian from the UK with a US accent.
+
 
       Now back to the device setting.
     `;

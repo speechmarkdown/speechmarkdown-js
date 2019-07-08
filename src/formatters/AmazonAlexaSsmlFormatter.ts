@@ -178,6 +178,58 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
   }
 
   // tslint:disable-next-line: max-func-body-length
+  private getSectionObject(ast: any): any {
+    let sectionObject = {
+      tags: {}
+    };
+
+    for (let index = 0; index < ast.children.length; index++) {
+      const child = ast.children[index];
+
+      if (child.name === 'sectionModifierKeyOptionalValue') {
+        let key = child.children[0].allText;
+        const value = child.children.length === 2 ? child.children[1].allText : '';
+        const ssmlTag = this.modifierKeyToSsmlTagMappings[key];
+        const sortId = this.ssmlTagSortOrder.indexOf(ssmlTag);
+
+        switch (key) {
+
+          case 'lang': {
+            if (!sectionObject.tags[ssmlTag]) {
+              sectionObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+            }
+            sectionObject.tags[ssmlTag].attrs = { 'xml:lang': value };
+            break;
+          }
+
+          case 'voice': {
+            const name = this.sentenceCase(value || 'device')
+
+            if (this.validVoices[name]) {
+              if (!sectionObject.tags[ssmlTag]) {
+                sectionObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              }
+
+              sectionObject.tags[ssmlTag].attrs = { 'name': name };
+            }
+            break;
+          }
+
+          default: {
+
+          }
+
+        }
+
+      }
+
+    }
+
+    return sectionObject;
+  }
+
+
+  // tslint:disable-next-line: max-func-body-length
   protected formatFromAst(ast: any, lines: string[] = []): string[] {
 
     switch (ast.name) {
@@ -236,6 +288,16 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
 
         }
         lines.push(inner);
+
+        return lines;
+      }
+      case 'section': {
+        const so = this.getSectionObject(ast);
+
+        const tagsSortedAsc = Object.keys(so.tags).sort((a: any, b: any) => { return so.tags[a].sortId - so.tags[b].sortId });
+
+        this.addSectionEndTag(lines);
+        this.addSectionStartTag(tagsSortedAsc, so, lines);
 
         return lines;
       }
