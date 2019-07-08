@@ -7,6 +7,8 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     super(options);
   }
 
+  protected sectionTags: string[] = [];
+
   protected modifierKeyMappings: any = {
     'chars': 'characters',
     'bleep': 'expletive',
@@ -50,7 +52,32 @@ export abstract class SsmlFormatterBase extends FormatterBase {
 
   public format(ast: any): string {
     const lines = this.formatFromAst(ast, []);
+
+    this.addSectionEndTag(lines);
+
     return lines.join('');
+  }
+
+  protected addSectionStartTag(tagsSortedAsc: string[], so: any, lines: string[]) {
+    this.sectionTags = [...tagsSortedAsc].reverse();
+
+    for (let index = 0; index < tagsSortedAsc.length; index++) {
+      const tag = tagsSortedAsc[index];
+      const attrs = so.tags[tag].attrs;
+      lines.push('\n');
+      lines.push(this.startTag(tag, attrs, false));
+    }
+  }
+
+  protected addSectionEndTag(lines: string[]) {
+    if (this.sectionTags.length > 0) {
+      // add previous end tag(s)
+      for (let index = 0; index < this.sectionTags.length; index++) {
+        const tag = this.sectionTags[index];
+        lines.push(this.endTag(tag, false));
+        lines.push('\n');
+      }
+    }
   }
 
   // Adds tagged content

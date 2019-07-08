@@ -151,17 +151,17 @@ The biggest place we need help right now is with the completion of the grammar a
 * [x] interjection
 * [ ] ipa
 * [x] lang
-* [ ] lang (section)
+* [x] lang (section)
 * [x] number
 * [x] ordinal
-* [ ] phone / telephone
+* [ ] telephone / phone
 * [x] pitch
 * [x] rate
 * [x] sub
 * [x] time
 * [x] unit
 * [x] voice
-* [ ] voice (section)
+* [x] voice (section)
 * [x] volume / vol
 * [x] whisper
 

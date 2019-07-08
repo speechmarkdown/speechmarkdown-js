@@ -24,3 +24,6 @@ dist.browser/
 
 # Misc
 .DS_Store
+
+# Sample
+.sample

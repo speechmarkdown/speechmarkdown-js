@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to the speechmarkdown-js project will be documented in this file.
 
+## 0.8.0-beta.0 - (July 7, 2019)
+### Added
+- Support for sections with the `voice` and `lang` tags
+
 ## 0.7.0-alpha.0 - (July 6, 2019)
 ### Added
 - Support for `audio` tag
