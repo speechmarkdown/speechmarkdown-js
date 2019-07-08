@@ -53,8 +53,6 @@ export abstract class SsmlFormatterBase extends FormatterBase {
   public format(ast: any): string {
     const lines = this.formatFromAst(ast, []);
 
-    this.addSectionEndTag(lines);
-
     return lines.join('');
   }
 
@@ -87,6 +85,22 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     this.processAst(ast, lines);
 
     lines.push(this.endTag(tag, newLine));
+
+    if (newLineAfterEnd) {
+      lines.push('\n');
+    }
+
+    return lines;
+  }
+
+  protected addSpeakTag(ast: any, newLine: boolean, newLineAfterEnd: boolean, attr: any, lines: string[]): string[] {
+    lines.push(this.startTag('speak', attr, newLine));
+
+    this.processAst(ast, lines);
+
+    this.addSectionEndTag(lines);
+
+    lines.push(this.endTag('speak', newLine));
 
     if (newLineAfterEnd) {
       lines.push('\n');

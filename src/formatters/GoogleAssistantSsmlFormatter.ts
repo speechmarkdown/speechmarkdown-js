@@ -134,7 +134,7 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
         }
 
         if (this.options.includeSpeakTag) {
-          return this.addTag('speak', ast.children, true, false, null, lines);
+          return this.addSpeakTag(ast.children, true, false, null, lines);
         } else {
           this.processAst(ast.children, lines);
           return lines;
