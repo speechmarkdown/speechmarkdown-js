@@ -1,6 +1,6 @@
 {
   "name": "speechmarkdown-js",
-  "version": "0.8.0-beta.0",
+  "version": "0.8.1-beta.0",
   "description": "Speech Markdown parser and formatters in TypeScript.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
