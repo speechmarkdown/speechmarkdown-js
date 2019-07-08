@@ -60,7 +60,7 @@ export function speechMarkdownGrammar(myna: any): any {
 
 
     // Audio
-    this.urlSpecialChar = m.char(':/.-');
+    this.urlSpecialChar = m.char(':/.-_~?#[]@!+,;%=()');
     this.url = m.choice(m.digit, m.letter, this.urlSpecialChar).oneOrMore.ast;
     this.audio = m.seq('![', m.choice(m.singleQuoted(this.url), m.doubleQuoted(this.url)), ']').ast;
 
