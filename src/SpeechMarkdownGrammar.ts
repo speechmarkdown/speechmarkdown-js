@@ -17,14 +17,17 @@ export function speechMarkdownGrammar(myna: any): any {
 
 
     // Plain text
-    this.specialCharSet = '[]()*~`@#\\_!+-';
-    this.ws = m.char(' \t').oneOrMore;
-    this.optWs = this.ws.opt;
-    this.wsOrNewLine = this.ws.or(m.newLine);
-    this.nonSpecialChar = m.notChar(this.specialCharSet).unless(m.newLine);
-    this.specialChar = m.char(this.specialCharSet).ast;
+    const specialCharSet = '[]()*~`@#\\_!+';
+    const specialCharSetHyphen = '[]()*~`@#\\_!+-';
+    const ws = m.char(' \t').oneOrMore;
+    const optWs = ws.opt;
+    const wsOrNewLine = ws.or(m.newLine);
+    const nonSpecialChar = m.notChar(specialCharSetHyphen).unless(m.newLine);
+    const nonSpecialCharNorHyphen = m.notChar(specialCharSet).unless(m.newLine);
+    
     this.quoteChar = m.notChar('"');
-    this.plainText = m.choice(m.digits, m.letters, this.ws, this.nonSpecialChar).oneOrMore.ast;
+    this.plainText = m.choice(m.digits, m.letters, ws, nonSpecialChar).oneOrMore.ast;
+    this.plainTextHyphen = m.choice(m.digits, m.letters, ws, nonSpecialCharNorHyphen).oneOrMore.ast;
 
     // Break
     this.timeUnit = m.choice('s','ms').ast;
@@ -56,7 +59,8 @@ export function speechMarkdownGrammar(myna: any): any {
     this.textModifierValue = m.seq(this.colon, m.choice(m.singleQuoted(this.textModifierText), m.doubleQuoted(this.textModifierText)))
     this.textModifierKeyOptionalValue = m.seq(this.textModifierKey, this.textModifierValue.opt).ast;
     this.modifier = m.bracketed(m.delimited(this.textModifierKeyOptionalValue.ws, this.semicolon));
-    this.textModifier = m.seq('(', this.plainText, ')', this.modifier).ast;
+    this.textText = m.parenthesized(this.plainTextHyphen);
+    this.textModifier = m.seq(this.textText, this.modifier).ast;
 
 
     // Audio

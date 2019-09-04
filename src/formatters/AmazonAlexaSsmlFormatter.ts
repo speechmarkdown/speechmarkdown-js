@@ -55,6 +55,10 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
           textModifierObject['text'] = child.allText;
           break;
         }
+        case 'plainTextHyphen': {
+          textModifierObject['text'] = child.allText;
+          break;
+        }
         case 'textModifierKeyOptionalValue': {
           let key = child.children[0].allText;
           key = this.modifierKeyMappings[key] || key;
