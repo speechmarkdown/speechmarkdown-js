@@ -144,7 +144,7 @@ The biggest place we need help right now is with the completion of the grammar a
 * [ ] break (time)
 * [ ] break (strength)
 * [x] characters / chars
-* [ ] date
+* [x] date
 * [x] emphasis
 * [x] expletive / bleep
 * [ ] fraction

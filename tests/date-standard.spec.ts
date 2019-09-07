@@ -2,7 +2,7 @@
 import dedent from 'ts-dedent';
 import { SpeechMarkdown } from '../src/SpeechMarkdown';
 
-describe.skip('time-standard', () => {
+describe('date-standard', () => {
 
   const speech = new SpeechMarkdown();
 

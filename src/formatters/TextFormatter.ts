@@ -48,6 +48,10 @@ export class TextFormatter extends FormatterBase {
         lines.push(ast.allText);
         return lines;
       }
+      case 'plainTextHyphen': {
+        lines.push(ast.allText);
+        return lines;
+      }
 
       default: {
         this.processAst(ast.children, lines);

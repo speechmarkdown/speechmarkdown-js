@@ -29,6 +29,7 @@
     "build:watch": "tsc -w -p tsconfig.json",
     "lint": "tslint -t stylish --project \"tsconfig.json\"",
     "test": "jest --coverage",
+    "test:single": "jest -t $1",
     "test:watch": "jest --watch"
   },
   "devDependencies": {
