@@ -44,11 +44,9 @@ export class TextFormatter extends FormatterBase {
 
         return lines;
       }
-      case 'plainText': {
-        lines.push(ast.allText);
-        return lines;
-      }
-      case 'plainTextHyphen': {
+      case 'plainText':
+      case 'plainTextEmphasis':
+      case 'plainTextModifier': {
         lines.push(ast.allText);
         return lines;
       }

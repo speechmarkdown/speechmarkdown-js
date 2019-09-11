@@ -57,7 +57,7 @@ describe('fraction-standard', () => {
 
 });
 
-describe.skip('fraction-standard includes a plus sign', () => {
+describe('fraction-standard includes a plus sign', () => {
 
   const speech = new SpeechMarkdown();
 
@@ -104,7 +104,7 @@ describe.skip('fraction-standard includes a plus sign', () => {
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
-      Add 1+1/2 cup of flour.
+      Add 1+1/2 cups of flour.
     `;
 
     expect(text).toBe(expected);
