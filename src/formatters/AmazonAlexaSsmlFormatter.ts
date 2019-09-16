@@ -53,6 +53,7 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
       switch (child.name) {
         case 'plainText':
         case 'plainTextEmphasis':
+        case 'plainTextPhone':
         case 'plainTextModifier': {
           textModifierObject['text'] = child.allText;
           break;

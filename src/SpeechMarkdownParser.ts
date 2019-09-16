@@ -14,7 +14,6 @@ export class SpeechMarkdownParser implements Parser {
 
   public parse(speechmarkdown: string): any {
 // tslint:disable-next-line: no-unnecessary-local-variable
-    const ast = this.parser(speechmarkdown);
-    return ast;
+    return this.parser(speechmarkdown);
   }
 }
