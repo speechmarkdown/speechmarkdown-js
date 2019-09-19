@@ -46,6 +46,7 @@ export class TextFormatter extends FormatterBase {
       }
       case 'plainText':
       case 'plainTextEmphasis':
+      case 'plainTextPhone':
       case 'plainTextModifier': {
         lines.push(ast.allText);
         return lines;
