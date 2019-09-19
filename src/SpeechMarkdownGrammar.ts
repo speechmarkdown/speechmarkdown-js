@@ -17,17 +17,18 @@ export function speechMarkdownGrammar(myna: any): any {
 
 
     // Plain text
-    const specialCharSet = '[]()*~`@#\\_!+';
-    const specialCharSetHyphen = '[]()*~`@#\\_!+-';
+    const specialCharSet = '[]()*`@#\\_!';
+    const specialCharSetEmphasis = '[]()*~`@#\\_!+-';
     const ws = m.char(' \t').oneOrMore;
     const optWs = ws.opt;
     const wsOrNewLine = ws.or(m.newLine);
-    const nonSpecialChar = m.notChar(specialCharSetHyphen).unless(m.newLine);
-    const nonSpecialCharNorHyphen = m.notChar(specialCharSet).unless(m.newLine);
+    const nonSpecialChar = m.notChar(specialCharSetEmphasis).unless(m.newLine);
+    const nonSpecialCharEmphasis = m.notChar(specialCharSet).unless(m.newLine);
     
     this.quoteChar = m.notChar('"');
     this.plainText = m.choice(m.digits, m.letters, ws, nonSpecialChar).oneOrMore.ast;
-    this.plainTextHyphen = m.choice(m.digits, m.letters, ws, nonSpecialCharNorHyphen).oneOrMore.ast;
+    this.plainTextEmphasis = m.choice(m.digits, m.letters, ws, nonSpecialChar).oneOrMore.ast;
+    this.plainTextModifier = m.choice(m.digits, m.letters, ws, nonSpecialCharEmphasis).oneOrMore.ast;
 
     // Break
     this.timeUnit = m.choice('s','ms').ast;
@@ -41,10 +42,10 @@ export function speechMarkdownGrammar(myna: any): any {
     // this.string = m.choice(m.doubleQuotedString(), m.singleQuotedString()).ast;
 
     // Emphasis
-    this.shortEmphasisModerate = m.seq('+', this.plainText , '+').ast;
-    this.shortEmphasisStrong = m.seq('++', this.plainText , '++').ast;
-    this.shortEmphasisNone = m.seq('~', this.plainText , '~').ast;
-    this.shortEmphasisReduced = m.seq('-', this.plainText , '-').ast;
+    this.shortEmphasisModerate = m.seq('+', this.plainTextEmphasis , '+').ast;
+    this.shortEmphasisStrong = m.seq('++', this.plainTextEmphasis , '++').ast;
+    this.shortEmphasisNone = m.seq('~', this.plainTextEmphasis , '~').ast;
+    this.shortEmphasisReduced = m.seq('-', this.plainTextEmphasis , '-').ast;
     this.emphasis = m.choice(this.shortEmphasisModerate, this.shortEmphasisStrong, this.shortEmphasisNone, this.shortEmphasisReduced);
 
     // Modifier
@@ -59,7 +60,7 @@ export function speechMarkdownGrammar(myna: any): any {
     this.textModifierValue = m.seq(this.colon, m.choice(m.singleQuoted(this.textModifierText), m.doubleQuoted(this.textModifierText)))
     this.textModifierKeyOptionalValue = m.seq(this.textModifierKey, this.textModifierValue.opt).ast;
     this.modifier = m.bracketed(m.delimited(this.textModifierKeyOptionalValue.ws, this.semicolon));
-    this.textText = m.parenthesized(this.plainTextHyphen);
+    this.textText = m.parenthesized(this.plainTextModifier);
     this.textModifier = m.seq(this.textText, this.modifier).ast;
 
 

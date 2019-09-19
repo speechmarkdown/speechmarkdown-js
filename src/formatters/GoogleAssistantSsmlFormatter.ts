@@ -20,11 +20,9 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
       const child = ast.children[index];
 
       switch (child.name) {
-        case 'plainText': {
-          textModifierObject['text'] = child.allText;
-          break;
-        }
-        case 'plainTextHyphen': {
+        case 'plainText':
+        case 'plainTextEmphasis':
+        case 'plainTextModifier': {
           textModifierObject['text'] = child.allText;
           break;
         }
