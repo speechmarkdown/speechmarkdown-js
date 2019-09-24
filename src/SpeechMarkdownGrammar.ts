@@ -1,10 +1,11 @@
 "use strict";
 
+// tslint:disable-next-line: max-func-body-length
 export function speechMarkdownGrammar(myna: any): any {
   const m = myna;
   // Override parenthesis function to not use `.guardedSeq`
   // This sequence is too assertive, and may cause exceptions rather than just returning null
-  m.parenthesized = (rule: any) => { 
+  m.parenthesized = (rule: any) => {
     return m.seq("(", m.ws, rule, m.ws, ")").setType("parenthesized");
   }
 
@@ -30,7 +31,7 @@ export function speechMarkdownGrammar(myna: any): any {
     const nonSpecialChar = m.notChar(specialCharSetEmphasis).unless(m.newLine);
     const nonSpecialCharEmphasis = m.notChar(specialCharSet).unless(m.newLine);
     const quoteChar = m.notChar('"');
-    
+
     this.plainText = m.choice(m.digits, m.letters, ws, nonSpecialChar).oneOrMore.ast;
     this.plainTextEmphasis = m.choice(m.digits, m.letters, ws, nonSpecialChar).oneOrMore.ast;
     const plainTextChoice = m.choice(m.digits, m.letters, ws, nonSpecialCharEmphasis)
