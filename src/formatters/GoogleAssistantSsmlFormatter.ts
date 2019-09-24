@@ -83,10 +83,11 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
             }
 
             case 'ipa': {
+              // Google Assistant does not support <phoneme> tag
               if (!textModifierObject.tags[ssmlTag]) {
                 textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
               }
-              textModifierObject.tags[ssmlTag].attrs = { alphabet: key, ph: value };
+              textModifierObject['textOnly'] = true;
               break;
             }
 
@@ -174,6 +175,12 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
 
       case 'textModifier': {
         const tmo = this.getTextModifierObject(ast);
+
+        if (tmo.textOnly) {
+          // Quick return if tag is not supported
+          lines.push(tmo.text)
+          return lines
+        }
 
         const tagsSortedDesc = Object.keys(tmo.tags).sort((a: any, b: any) => { return tmo.tags[b].sortId - tmo.tags[a].sortId });
 

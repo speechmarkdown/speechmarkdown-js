@@ -34,9 +34,9 @@ export function speechMarkdownGrammar(myna: any): any {
 
     this.plainText = m.choice(m.digits, m.letters, ws, nonSpecialChar).oneOrMore.ast;
     this.plainTextEmphasis = m.choice(m.digits, m.letters, ws, nonSpecialChar).oneOrMore.ast;
-    const plainTextChoice = m.choice(m.digits, m.letters, ws, nonSpecialCharEmphasis)
+    const plainTextChoice = m.choice(m.digits, m.letters, ws, nonSpecialCharEmphasis);
     this.plainTextModifier = plainTextChoice.oneOrMore.ast;
-    this.plainTextPhone = m.seq(m.parenthesized(m.digits), plainTextChoice.oneOrMore).ast
+    this.plainTextPhone = m.seq(m.parenthesized(m.digits), plainTextChoice.oneOrMore).ast;
 
     // Break
     this.timeUnit = m.choice('s','ms').ast;
@@ -64,7 +64,10 @@ export function speechMarkdownGrammar(myna: any): any {
     const colon = m.char(':').ws;
     const semicolon = m.char(';').ws;
     this.textModifierKey = m.keywords('emphasis', 'address', 'number', 'characters', 'chars', 'expletive', 'bleep', 'fraction', 'interjection', 'ordinal', 'telephone', 'phone', 'unit', 'time', 'date', 'whisper', 'ipa', 'sub', 'vol', 'volume', 'rate', 'pitch', 'lang', 'voice').ast;
-    this.textModifierText = m.choice(m.digit, m.letter, m.hyphen).oneOrMore.ast;
+    // Special characters for <phoneme alphabet="ipa" ph="..."> tag
+    const ipaChars = ['.', "'", 'æ', 'd͡ʒ', 'ð', 'ʃ', 't͡ʃ', 'θ', 'ʒ', 'ə', 'ɚ', 'aɪ', 'aʊ', 'ɑ',
+      'eɪ', 'ɝ', 'ɛ', 'ɪ', 'oʊ', 'ɔ', 'ɔɪ', 'ʊ', 'ʌ'];
+    this.textModifierText = m.choice(m.digit, m.letter, m.hyphen, ...ipaChars).oneOrMore.ast;
     this.textModifierValue = m.seq(colon, m.choice(m.singleQuoted(this.textModifierText), m.doubleQuoted(this.textModifierText)))
     this.textModifierKeyOptionalValue = m.seq(this.textModifierKey, this.textModifierValue.opt).ast;
     this.modifier = m.bracketed(m.delimited(this.textModifierKeyOptionalValue.ws, semicolon));

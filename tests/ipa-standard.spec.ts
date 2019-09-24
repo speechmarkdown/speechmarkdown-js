@@ -2,12 +2,12 @@
 import dedent from 'ts-dedent';
 import { SpeechMarkdown } from '../src/SpeechMarkdown';
 
-describe.skip('ipa-standard', () => {
+describe('ipa-standard', () => {
 
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
-    I say, (pecan)[ipa:"ˈpi.kæn"].
+    I say, (pecan)[ipa:"'pi.kæn"].
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
@@ -19,7 +19,7 @@ describe.skip('ipa-standard', () => {
 
     const expected = dedent`
       <speak>
-      I say, <phoneme alphabet="ipa" ph="ˈpi.kæn">pecan</phoneme>.
+      I say, <phoneme alphabet="ipa" ph="'pi.kæn">pecan</phoneme>.
       </speak>
     `;
 
