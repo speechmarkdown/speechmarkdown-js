@@ -2,7 +2,7 @@
 import dedent from 'ts-dedent';
 import { SpeechMarkdown } from '../src/SpeechMarkdown';
 
-describe.skip('modifier-text-allowed-chars minus sign', () => {
+describe('modifier-text-allowed-chars minus sign', () => {
 
   const speech = new SpeechMarkdown();
 
@@ -57,7 +57,7 @@ describe.skip('modifier-text-allowed-chars minus sign', () => {
 
 });
 
-describe.skip('modifier-text-allowed-chars special chars', () => {
+describe('modifier-text-allowed-chars special chars', () => {
 
   const speech = new SpeechMarkdown();
 

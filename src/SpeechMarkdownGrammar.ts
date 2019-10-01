@@ -32,7 +32,8 @@ export function speechMarkdownGrammar(myna: any): any {
     const nonSpecialCharEmphasis = m.notChar(specialCharSet).unless(m.newLine);
     const quoteChar = m.notChar('"');
 
-    this.plainText = m.choice(m.digits, m.letters, ws, nonSpecialChar).oneOrMore.ast;
+    this.plainText = m.choice(m.digits, m.letters, ws).oneOrMore.ast;
+    this.specialCharacters = m.char('`~!@#$%^&*()_|+-=?;:",.<>{}[]/\\\'').oneOrMore.ast;
     this.plainTextEmphasis = m.choice(m.digits, m.letters, ws, nonSpecialChar).oneOrMore.ast;
     const plainTextChoice = m.choice(m.digits, m.letters, ws, nonSpecialCharEmphasis);
     this.plainTextModifier = plainTextChoice.oneOrMore.ast;
@@ -102,7 +103,7 @@ export function speechMarkdownGrammar(myna: any): any {
     this.breakTime = m.seq('[', 'break', ':', m.choice(m.singleQuoted(this.time), m.doubleQuoted(this.time)), ']').ast;
 
     this.any = m.advance;
-    this.inline = m.choice(this.textModifier, this.emphasis, this.shortBreak, this.breakStrength, this.breakTime, this.audio, this.plainText, this.any).unless(m.newLine);
+    this.inline = m.choice(this.textModifier, this.emphasis, this.shortBreak, this.breakStrength, this.breakTime, this.audio, this.plainText, this.specialCharacters, this.any).unless(m.newLine);
     this.lineEnd = m.newLine.or(m.assert(m.end)).ast;
     this.emptyLine = m.char(' \t').zeroOrMore.then(m.newLine).ast;
     this.restOfLine = m.seq(this.inline.zeroOrMore).then(this.lineEnd);
