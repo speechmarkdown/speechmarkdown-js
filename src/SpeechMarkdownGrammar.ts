@@ -22,7 +22,7 @@ export function speechMarkdownGrammar(myna: any): any {
 
 
     // Plain text
-    const specialCharSet = '[]()*`@#\\_!';
+    const specialCharSet = '[]()';
     const specialCharSetEmphasis = '[]()*~`@#\\_!+-';
     const ws = m.char(' \t').oneOrMore;
     const optWs = ws.opt;
@@ -36,6 +36,11 @@ export function speechMarkdownGrammar(myna: any): any {
     const plainTextChoice = m.choice(m.digits, m.letters, ws, nonSpecialCharEmphasis);
     this.plainTextModifier = plainTextChoice.oneOrMore.ast;
     this.plainTextPhone = m.seq(m.parenthesized(m.digits), plainTextChoice.oneOrMore).ast;
+    this.plainTextSpecialChars = m.choice(
+      m.seq('(', plainTextChoice, ') '),
+      m.seq('[', plainTextChoice, '] '),
+      m.choice(...specialCharSetEmphasis.split('')).oneOrMore,
+    ).oneOrMore.ast;
 
     // Break
     this.timeUnit = m.choice('s','ms').ast;
@@ -96,12 +101,19 @@ export function speechMarkdownGrammar(myna: any): any {
     this.valueStrong = 'strong';
     this.valueXStrong = 'x-strong';
 
-    this.breakStrengthValue = m.choice(this.valueNone, this.valueXWeak, this.valueWeak, this.valueMedium, this.valueStrong, this.valueXStrong).ast;
-    this.breakStrength = m.seq('[', 'break', ':', m.choice(m.singleQuoted(this.breakStrengthValue), m.doubleQuoted(this.breakStrengthValue)), ']').ast;
-    this.breakTime = m.seq('[', 'break', ':', m.choice(m.singleQuoted(this.time), m.doubleQuoted(this.time)), ']').ast;
+    this.breakStrengthValue = m.choice(this.valueNone, this.valueXWeak, this.valueWeak, 
+      this.valueMedium, this.valueStrong, this.valueXStrong).ast;
+    this.breakStrength = m.seq('[', 'break', ':',
+        m.choice(m.singleQuoted(this.breakStrengthValue), m.doubleQuoted(this.breakStrengthValue)),
+      ']').ast;
+    this.breakTime = m.seq('[', 'break', ':', 
+        m.choice(m.singleQuoted(this.time), m.doubleQuoted(this.time)),
+      ']').ast;
 
     this.any = m.advance;
-    this.inline = m.choice(this.textModifier, this.emphasis, this.shortBreak, this.breakStrength, this.breakTime, this.audio, this.plainText, this.any).unless(m.newLine);
+    this.inline = m.choice(this.textModifier, this.emphasis, this.shortBreak, this.breakStrength,
+        this.breakTime, this.audio, this.plainTextSpecialChars, this.plainText, this.any)
+      .unless(m.newLine);
     this.lineEnd = m.newLine.or(m.assert(m.end)).ast;
     this.emptyLine = m.char(' \t').zeroOrMore.then(m.newLine).ast;
     this.restOfLine = m.seq(this.inline.zeroOrMore).then(this.lineEnd);

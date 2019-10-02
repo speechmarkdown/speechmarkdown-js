@@ -21,6 +21,7 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
 
       switch (child.name) {
         case 'plainText':
+        case 'plainTextSpecialChars':
         case 'plainTextEmphasis':
         case 'plainTextPhone':
         case 'plainTextModifier': {
@@ -216,7 +217,8 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
 
         return lines;
       }
-      case 'plainText': {
+      case 'plainText':
+      case 'plainTextSpecialChars': {
         lines.push(ast.allText);
         return lines;
       }
