@@ -52,7 +52,6 @@ describe('audio-standard', () => {
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
-
       Announcing Speech Markdown.
     `;
 
@@ -111,7 +110,6 @@ describe('audio-standard single quote', () => {
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
-
       Announcing Speech Markdown.
     `;
 
@@ -166,7 +164,7 @@ describe('audio-standard soundbank', () => {
     };
     const text = speech.toText(markdown, options);
 
-    const expected = ' Air horn';
+    const expected = 'Air horn';
 
     expect(text).toBe(expected);
   });
