@@ -45,6 +45,7 @@ export class TextFormatter extends FormatterBase {
         return lines;
       }
       case 'plainText':
+      case 'specialCharacters':
       case 'plainTextEmphasis':
       case 'plainTextPhone':
       case 'plainTextModifier': {
