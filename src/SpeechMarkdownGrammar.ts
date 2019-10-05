@@ -10,6 +10,7 @@ export function speechMarkdownGrammar(myna: any): any {
   }
 
   // tslint:disable-next-line: typedef
+  // tslint:disable-next-line: max-func-body-length
   const g: any = new function () {
     //         // Allows the "inline" to be referenced before it is defined.
     //         // This enables recursive definitions.
@@ -66,7 +67,7 @@ export function speechMarkdownGrammar(myna: any): any {
     this.textModifierKey = m.keywords('emphasis', 'address', 'number', 'characters', 'chars', 'expletive', 'bleep', 'fraction', 'interjection', 'ordinal', 'telephone', 'phone', 'unit', 'time', 'date', 'whisper', 'ipa', 'sub', 'vol', 'volume', 'rate', 'pitch', 'lang', 'voice').ast;
     // Special characters for <phoneme alphabet="ipa" ph="..."> tag
     const ipaChars = ['.', "'", 'æ', 'd͡ʒ', 'ð', 'ʃ', 't͡ʃ', 'θ', 'ʒ', 'ə', 'ɚ', 'aɪ', 'aʊ', 'ɑ',
-      'eɪ', 'ɝ', 'ɛ', 'ɪ', 'oʊ', 'ɔ', 'ɔɪ', 'ʊ', 'ʌ'];
+      'eɪ', 'ɝ', 'ɛ', 'ɪ', 'oʊ', 'ɔ', 'ɔɪ', 'ʊ', 'ʌ', 'ˈ', 'ˌ', 'ŋ', 'ɹ'];
     this.textModifierText = m.choice(m.digit, m.letter, m.hyphen, ...ipaChars).oneOrMore.ast;
     this.textModifierValue = m.seq(colon, m.choice(m.singleQuoted(this.textModifierText), m.doubleQuoted(this.textModifierText)))
     this.textModifierKeyOptionalValue = m.seq(this.textModifierKey, this.textModifierValue.opt).ast;
