@@ -221,3 +221,58 @@ describe('emphasis-short-reduced', () => {
   });
 
 });
+
+describe.skip('emphasis-short-reduced should not interfere with hyphenated words', () => {
+
+  const speech = new SpeechMarkdown();
+
+  const markdown = dedent`
+    I like to ride the loop-the-loop until I get sick.
+  `;
+
+  test('converts to SSML - Amazon Alexa', () => {
+
+    const options = {
+      platform: 'amazon-alexa'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      I like to ride the loop-the-loop until I get sick.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Google Assistant', () => {
+
+    const options = {
+      platform: 'google-assistant'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      I like to ride the loop-the-loop until I get sick.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to Plain Text', () => {
+
+    const options = {
+    };
+    const text = speech.toText(markdown, options);
+
+    const expected = dedent`
+      I like to ride the loop-the-loop until I get sick.
+    `;
+
+    expect(text).toBe(expected);
+  });
+
+});
