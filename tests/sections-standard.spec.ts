@@ -55,21 +55,16 @@ describe('sections-standard', () => {
   test('converts to SSML - Google Assistant', () => {
 
     const options = {
-      platform: 'google-assistant'
+      platform: 'google-assistant',
+      preserveEmptyLines: false
     };
     const ssml = speech.toSSML(markdown, options);
 
     const expected = dedent`
       <speak>
       My voice and language is based on the device.
-
-
       Now I am speaking as Kendra from the US with a US accent.
-
-
       Switching to Brian from the UK with a US accent.
-
-
       Now back to the device setting.
       </speak>
     `;
@@ -142,16 +137,14 @@ describe('sections-standard end speak tag at end', () => {
   test('converts to SSML - Google Assistant', () => {
 
     const options = {
-      platform: 'google-assistant'
+      platform: 'google-assistant',
+      preserveEmptyLines: false
     };
     const ssml = speech.toSSML(markdown, options);
 
     const expected = dedent`
       <speak>
-
       Section 1
-
-
       Section 2
       </speak>
     `;
@@ -166,13 +159,11 @@ describe('sections-standard end speak tag at end', () => {
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
-
       Section 1
 
 
       Section 2
     `;
-
     expect(text).toBe(expected);
   });
 
@@ -226,7 +217,7 @@ describe('sections-standard voice section on same line', () => {
     };
     const text = speech.toText(markdown, options);
 
-    const expected = ' Hey there, nice to meet you';
+    const expected = 'Hey there, nice to meet you';
 
     expect(text).toBe(expected);
   });

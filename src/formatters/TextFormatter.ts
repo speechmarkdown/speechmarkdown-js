@@ -9,7 +9,7 @@ export class TextFormatter extends FormatterBase {
 
   public format(ast: any): string {
     const lines = this.formatFromAst(ast, []);
-    let txt = lines.join('');
+    let txt = lines.join('').trim();
 
     // replace multiple whitespace with a single space
     // tslint:disable-next-line: no-regex-spaces
