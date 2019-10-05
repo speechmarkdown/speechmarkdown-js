@@ -52,7 +52,7 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
 
       switch (child.name) {
         case 'plainText':
-        case 'specialCharacters':
+        case 'plainTextSpecialChars':
         case 'plainTextEmphasis':
         case 'plainTextPhone':
         case 'plainTextModifier': {
@@ -324,9 +324,8 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
 
         return lines;
       }
-
       case 'plainText':
-      case 'specialCharacters': {
+      case 'plainTextSpecialChars': {
         lines.push(ast.allText);
         return lines;
       }

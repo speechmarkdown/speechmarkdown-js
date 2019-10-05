@@ -57,7 +57,62 @@ describe('modifier-text-allowed-chars minus sign', () => {
 
 });
 
-describe('modifier-text-allowed-chars special chars', () => {
+describe('modifier-text-allowed-chars non-bracket special chars', () => {
+
+  const speech = new SpeechMarkdown();
+
+  const markdown = dedent`
+    This is text with ~parens! but this and other special characters: *~@#\\_!+- are ignored
+  `;
+
+  test('converts to SSML - Amazon Alexa', () => {
+
+    const options = {
+      platform: 'amazon-alexa'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      This is text with ~parens! but this and other special characters: *~@#\\_!+- are ignored
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Google Assistant', () => {
+
+    const options = {
+      platform: 'google-assistant'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      This is text with ~parens! but this and other special characters: *~@#\\_!+- are ignored
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to Plain Text', () => {
+
+    const options = {
+    };
+    const text = speech.toText(markdown, options);
+
+    const expected = dedent`
+      This is text with ~parens! but this and other special characters: *~@#\\_!+- are ignored
+    `;
+
+    expect(text).toBe(expected);
+  });
+
+});
+
+describe('modifier-text-allowed-chars bracket special chars', () => {
 
   const speech = new SpeechMarkdown();
 
