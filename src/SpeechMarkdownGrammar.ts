@@ -33,8 +33,7 @@ export function speechMarkdownGrammar(myna: any): any {
     const nonSpecialCharEmphasis = m.notChar(specialCharSet).unless(m.newLine);
     const quoteChar = m.notChar('"');
 
-    this.plainText = m.choice(m.digits, m.letters, ws).oneOrMore.ast;
-    this.specialCharacters = m.char('`~!@#$%^&*()_|+-=?;:",.<>{}[]/\\\'').oneOrMore.ast;
+    this.plainText = m.choice(m.digits, m.letters, ws, nonSpecialChar).oneOrMore.ast;
     this.plainTextEmphasis = m.choice(m.digits, m.letters, ws, nonSpecialChar).oneOrMore.ast;
     const plainTextChoice = m.choice(m.digits, m.letters, ws, nonSpecialCharEmphasis);
     this.plainTextModifier = plainTextChoice.oneOrMore.ast;
@@ -104,12 +103,12 @@ export function speechMarkdownGrammar(myna: any): any {
     this.valueStrong = 'strong';
     this.valueXStrong = 'x-strong';
 
-    this.breakStrengthValue = m.choice(this.valueNone, this.valueXWeak, this.valueWeak, 
+    this.breakStrengthValue = m.choice(this.valueNone, this.valueXWeak, this.valueWeak,
       this.valueMedium, this.valueStrong, this.valueXStrong).ast;
     this.breakStrength = m.seq('[', 'break', ':',
         m.choice(m.singleQuoted(this.breakStrengthValue), m.doubleQuoted(this.breakStrengthValue)),
       ']').ast;
-    this.breakTime = m.seq('[', 'break', ':', 
+    this.breakTime = m.seq('[', 'break', ':',
         m.choice(m.singleQuoted(this.time), m.doubleQuoted(this.time)),
       ']').ast;
 
