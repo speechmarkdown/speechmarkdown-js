@@ -222,7 +222,7 @@ describe('emphasis-short-reduced', () => {
 
 });
 
-describe.skip('emphasis-short-reduced should not interfere with hyphenated words', () => {
+describe('emphasis-short-reduced should not interfere with hyphenated words', () => {
 
   const speech = new SpeechMarkdown();
 
