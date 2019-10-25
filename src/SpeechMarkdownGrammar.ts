@@ -56,10 +56,13 @@ export function speechMarkdownGrammar(myna: any): any {
     // this.string = m.choice(m.doubleQuotedString(), m.singleQuotedString()).ast;
 
     // Emphasis
-    this.shortEmphasisModerate = m.seq('+', this.plainTextEmphasis , '+').ast;
-    this.shortEmphasisStrong = m.seq('++', this.plainTextEmphasis , '++').ast;
-    this.shortEmphasisNone = m.seq('~', this.plainTextEmphasis , '~').ast;
-    this.shortEmphasisReduced = m.seq('-', this.plainTextEmphasis , '-').ast;
+    // The emphasis tag should be preluded and followed by a not-letter-character.
+    // Otherwise an example like above would be captured.
+    const notLetterChar = m.not(m.letters);
+    this.shortEmphasisModerate = m.seq(notLetterChar, '+', this.plainTextEmphasis , '+', notLetterChar).ast;
+    this.shortEmphasisStrong = m.seq(notLetterChar, '++', this.plainTextEmphasis , '++', notLetterChar).ast;
+    this.shortEmphasisNone = m.seq(notLetterChar, '~', this.plainTextEmphasis , '~', notLetterChar).ast;
+    this.shortEmphasisReduced = m.seq(notLetterChar, '-', this.plainTextEmphasis , '-', notLetterChar).ast;
     this.emphasis = m.choice(this.shortEmphasisModerate, this.shortEmphasisStrong, this.shortEmphasisNone, this.shortEmphasisReduced);
 
     // Modifier
