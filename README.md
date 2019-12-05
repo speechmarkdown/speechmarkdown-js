@@ -158,7 +158,7 @@ The biggest place we need help right now is with the completion of the grammar a
 * [x] ipa
 * [x] lang
 * [x] lang (section)
-* [ ] newscaster (section)
+* [x] newscaster (section)
 * [x] number
 * [x] ordinal
 * [x] telephone / phone

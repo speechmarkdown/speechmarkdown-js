@@ -91,7 +91,7 @@ export function speechMarkdownGrammar(myna: any): any {
     this.audio = m.seq('![', m.choice(m.singleQuoted(this.url), m.doubleQuoted(this.url)), ']').ast;
 
     // Section
-    this.sectionModifierKey = m.keywords('lang', 'voice', 'defaults', 'dj').ast;
+    this.sectionModifierKey = m.keywords('lang', 'voice', 'defaults', 'dj', 'newscaster').ast;
     this.sectionModifierText = m.choice(m.digit, m.letter, m.hyphen).oneOrMore.ast;
     this.sectionModifierValue = m.seq(colon, m.choice(m.singleQuoted(this.sectionModifierText), m.doubleQuoted(this.sectionModifierText)))
     this.sectionModifierKeyOptionalValue = m.seq(this.sectionModifierKey, this.sectionModifierValue.opt).ast;
