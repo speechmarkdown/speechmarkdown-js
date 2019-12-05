@@ -39,6 +39,7 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
     this.modifierKeyToSsmlTagMappings.whisper = 'amazon:effect';
     this.modifierKeyToSsmlTagMappings.lang = 'lang';
     this.modifierKeyToSsmlTagMappings.voice = 'voice';
+    this.modifierKeyToSsmlTagMappings.dj = 'amazon:domain';
   }
 
   // tslint:disable-next-line: max-func-body-length
@@ -218,6 +219,19 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
             }
             break;
           }
+
+          case 'dj': {
+            if (!sectionObject.tags[ssmlTag]) {
+              sectionObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+            }
+            sectionObject.tags[ssmlTag].attrs = { 'name': 'music' };
+            break;
+          }
+
+          case 'defaults': {
+            break;
+          }
+
 
           default: {
 

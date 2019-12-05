@@ -20,6 +20,7 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     'emphasis',
     'say-as',
     'prosody',
+    'amazon:domain',
     'amazon:effect',
     'voice',
     'lang',
@@ -48,6 +49,8 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     'volume': 'prosody',
     'lang': null,
     'voice': null,
+    'dj': null,
+    'defaults': null,
   };
 
   public format(ast: any): string {
