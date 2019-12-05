@@ -2,7 +2,7 @@
 import dedent from 'ts-dedent';
 import { SpeechMarkdown } from '../src/SpeechMarkdown';
 
-describe('sections-standard', () => {
+describe('dj-section normal to dj to normal', () => {
 
   const speech = new SpeechMarkdown();
 
@@ -80,130 +80,116 @@ describe('sections-standard', () => {
 
 });
 
-// describe('sections-standard end speak tag at end', () => {
+describe('dj-section end speak tag at end', () => {
 
-//   const speech = new SpeechMarkdown();
+  const speech = new SpeechMarkdown();
 
-//   const markdown = dedent`
-//     #[voice:"Kendra"]
-//     Section 1
+  const markdown = dedent`
+    #[dj]
+    Section 1
+  `;
 
-//     #[voice:"Brian";lang:"en-GB"]
-//     Section 2
-//   `;
+  test('converts to SSML - Amazon Alexa', () => {
 
-//   test('converts to SSML - Amazon Alexa', () => {
+    const options = {
+      platform: 'amazon-alexa'
+    };
+    const ssml = speech.toSSML(markdown, options);
 
-//     const options = {
-//       platform: 'amazon-alexa'
-//     };
-//     const ssml = speech.toSSML(markdown, options);
+    const expected = dedent`
+      <speak>
 
-//     const expected = dedent`
-//       <speak>
+      <amazon:domain name="music">
+      Section 1</amazon:domain>
 
-//       <voice name="Kendra">
-//       Section 1
+      </speak>
+    `;
 
-//       </voice>
+    expect(ssml).toBe(expected);
+  });
 
-//       <voice name="Brian">
-//       <lang xml:lang="en-GB">
-//       Section 2</lang>
-//       </voice>
+  test('converts to SSML - Google Assistant', () => {
 
-//       </speak>
-//     `;
+    const options = {
+      platform: 'google-assistant',
+      preserveEmptyLines: false
+    };
+    const ssml = speech.toSSML(markdown, options);
 
-//     expect(ssml).toBe(expected);
-//   });
+    const expected = dedent`
+      <speak>
+      Section 1
+      </speak>
+    `;
 
-//   test('converts to SSML - Google Assistant', () => {
+    expect(ssml).toBe(expected);
+  });
 
-//     const options = {
-//       platform: 'google-assistant',
-//       preserveEmptyLines: false
-//     };
-//     const ssml = speech.toSSML(markdown, options);
+  test('converts to Plain Text', () => {
 
-//     const expected = dedent`
-//       <speak>
-//       Section 1
-//       Section 2
-//       </speak>
-//     `;
+    const options = {
+    };
+    const text = speech.toText(markdown, options);
 
-//     expect(ssml).toBe(expected);
-//   });
+    const expected = dedent`
+      Section 1
+    `;
+    expect(text).toBe(expected);
+  });
 
-//   test('converts to Plain Text', () => {
+});
 
-//     const options = {
-//     };
-//     const text = speech.toText(markdown, options);
+describe('dj-section section on same line', () => {
 
-//     const expected = dedent`
-//       Section 1
+  const speech = new SpeechMarkdown();
 
+  const markdown = dedent`
+    #[dj] Hey there, nice to meet you
+  `;
 
-//       Section 2
-//     `;
-//     expect(text).toBe(expected);
-//   });
+  test('converts to SSML - Amazon Alexa', () => {
 
-// });
+    const options = {
+      platform: 'amazon-alexa'
+    };
+    const ssml = speech.toSSML(markdown, options);
 
-// describe('sections-standard voice section on same line', () => {
+    const expected = dedent`
+      <speak>
 
-//   const speech = new SpeechMarkdown();
+      <amazon:domain name="music"> Hey there, nice to meet you</amazon:domain>
 
-//   const markdown = dedent`
-//     #[voice:'Brian'] Hey there, nice to meet you
-//   `;
+      </speak>
+    `;
 
-//   test('converts to SSML - Amazon Alexa', () => {
+    expect(ssml).toBe(expected);
+  });
 
-//     const options = {
-//       platform: 'amazon-alexa'
-//     };
-//     const ssml = speech.toSSML(markdown, options);
+  test('converts to SSML - Google Assistant', () => {
 
-//     const expected = dedent`
-//       <speak>
+    const options = {
+      platform: 'google-assistant'
+    };
+    const ssml = speech.toSSML(markdown, options);
 
-//       <voice name="Brian"> Hey there, nice to meet you</voice>
+    const expected = dedent`
+      <speak>
+       Hey there, nice to meet you
+      </speak>
+    `;
 
-//       </speak>
-//     `;
+    expect(ssml).toBe(expected);
+  });
 
-//     expect(ssml).toBe(expected);
-//   });
+  test('converts to Plain Text', () => {
 
-//   test('converts to SSML - Google Assistant', () => {
+    const options = {
+    };
+    const text = speech.toText(markdown, options);
 
-//     const options = {
-//       platform: 'google-assistant'
-//     };
-//     const ssml = speech.toSSML(markdown, options);
+    const expected = 'Hey there, nice to meet you';
 
-//     const expected = dedent`
-//       <speak>
-//        Hey there, nice to meet you
-//       </speak>
-//     `;
+    expect(text).toBe(expected);
+  });
 
-//     expect(ssml).toBe(expected);
-//   });
-
-//   test('converts to Plain Text', () => {
-
-//     const options = {
-//     };
-//     const text = speech.toText(markdown, options);
-
-//     const expected = 'Hey there, nice to meet you';
-
-//     expect(text).toBe(expected);
-//   });
-
-// });
+});
