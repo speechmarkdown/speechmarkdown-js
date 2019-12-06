@@ -145,16 +145,23 @@ The biggest place we need help right now is with the completion of the grammar a
 * [ ] break (strength)
 * [x] characters / chars
 * [x] date
+* [x] defaults (section)
+* [x] disappointed
+* [x] disappointed (section)
+* [x] dj (section)
 * [x] emphasis
+* [x] excited
+* [x] excited (section)
 * [x] expletive / bleep
-* [ ] fraction
+* [x] fraction
 * [x] interjection
-* [ ] ipa
+* [x] ipa
 * [x] lang
 * [x] lang (section)
+* [x] newscaster (section)
 * [x] number
 * [x] ordinal
-* [ ] telephone / phone
+* [x] telephone / phone
 * [x] pitch
 * [x] rate
 * [x] sub

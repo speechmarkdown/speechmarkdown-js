@@ -33,12 +33,22 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
     'Mathieu': 'fr-FR',
   };
 
+  private validEmotionIntensity: string[] = [
+    'low',
+    'medium',
+    'high',
+  ];
+
   constructor(public options: SpeechOptions) {
     super(options);
 
     this.modifierKeyToSsmlTagMappings.whisper = 'amazon:effect';
     this.modifierKeyToSsmlTagMappings.lang = 'lang';
     this.modifierKeyToSsmlTagMappings.voice = 'voice';
+    this.modifierKeyToSsmlTagMappings.dj = 'amazon:domain';
+    this.modifierKeyToSsmlTagMappings.newscaster = 'amazon:domain';
+    this.modifierKeyToSsmlTagMappings.excited = 'amazon:emotion';
+    this.modifierKeyToSsmlTagMappings.disappointed = 'amazon:emotion';
   }
 
   // tslint:disable-next-line: max-func-body-length
@@ -167,6 +177,20 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
               break;
             }
 
+            case 'excited':
+            case 'disappointed': {
+              const intensity = (value || 'medium').toLowerCase();
+
+              if (this.validEmotionIntensity.includes(intensity)) {
+                if (!textModifierObject.tags[ssmlTag]) {
+                  textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+                }
+
+                textModifierObject.tags[ssmlTag].attrs = { 'name': key, 'intensity': intensity };
+              }
+              break;
+            }
+
             default: {
 
             }
@@ -215,6 +239,40 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
               }
 
               sectionObject.tags[ssmlTag].attrs = { 'name': name };
+            }
+            break;
+          }
+
+          case 'dj': {
+            if (!sectionObject.tags[ssmlTag]) {
+              sectionObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+            }
+            sectionObject.tags[ssmlTag].attrs = { 'name': 'music' };
+            break;
+          }
+
+          case 'newscaster': {
+            if (!sectionObject.tags[ssmlTag]) {
+              sectionObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+            }
+            sectionObject.tags[ssmlTag].attrs = { 'name': 'news' };
+            break;
+          }
+
+          case 'defaults': {
+            break;
+          }
+
+          case 'excited':
+          case 'disappointed': {
+            const intensity = (value || 'medium').toLowerCase();
+
+            if (this.validEmotionIntensity.includes(intensity)) {
+              if (!sectionObject.tags[ssmlTag]) {
+                sectionObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              }
+
+              sectionObject.tags[ssmlTag].attrs = { 'name': key, 'intensity': intensity };
             }
             break;
           }
