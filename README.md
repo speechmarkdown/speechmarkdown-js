@@ -150,7 +150,7 @@ The biggest place we need help right now is with the completion of the grammar a
 * [x] disappointed (section)
 * [x] dj (section)
 * [x] emphasis
-* [ ] excited
+* [x] excited
 * [x] excited (section)
 * [x] expletive / bleep
 * [x] fraction

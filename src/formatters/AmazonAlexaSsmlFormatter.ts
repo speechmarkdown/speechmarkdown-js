@@ -177,6 +177,20 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
               break;
             }
 
+            case 'excited':
+            case 'disappointed': {
+              const intensity = (value || 'medium').toLowerCase();
+
+              if (this.validEmotionIntensity.includes(intensity)) {
+                if (!textModifierObject.tags[ssmlTag]) {
+                  textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+                }
+
+                textModifierObject.tags[ssmlTag].attrs = { 'name': key, 'intensity': intensity };
+              }
+              break;
+            }
+
             default: {
 
             }

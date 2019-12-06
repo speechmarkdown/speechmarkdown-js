@@ -72,7 +72,7 @@ export function speechMarkdownGrammar(myna: any): any {
     // (text)[key:'value';key;key:"value"]
     const colon = m.char(':').ws;
     const semicolon = m.char(';').ws;
-    this.textModifierKey = m.keywords('emphasis', 'address', 'number', 'characters', 'chars', 'expletive', 'bleep', 'fraction', 'interjection', 'ordinal', 'telephone', 'phone', 'unit', 'time', 'date', 'whisper', 'ipa', 'sub', 'vol', 'volume', 'rate', 'pitch', 'lang', 'voice').ast;
+    this.textModifierKey = m.keywords('emphasis', 'address', 'number', 'characters', 'chars', 'expletive', 'bleep', 'fraction', 'interjection', 'ordinal', 'telephone', 'phone', 'unit', 'time', 'date', 'whisper', 'ipa', 'sub', 'vol', 'volume', 'rate', 'pitch', 'lang', 'voice', 'excited').ast;
     // Special characters for <phoneme alphabet="ipa" ph="..."> tag
     const ipaChars = ['.', "'", 'æ', 'd͡ʒ', 'ð', 'ʃ', 't͡ʃ', 'θ', 'ʒ', 'ə', 'ɚ', 'aɪ', 'aʊ', 'ɑ',
       'eɪ', 'ɝ', 'ɛ', 'ɪ', 'oʊ', 'ɔ', 'ɔɪ', 'ʊ', 'ʌ', 'ˈ', 'ˌ', 'ŋ', 'ɹ'];
