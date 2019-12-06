@@ -48,6 +48,7 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
     this.modifierKeyToSsmlTagMappings.dj = 'amazon:domain';
     this.modifierKeyToSsmlTagMappings.newscaster = 'amazon:domain';
     this.modifierKeyToSsmlTagMappings.excited = 'amazon:emotion';
+    this.modifierKeyToSsmlTagMappings.disappointed = 'amazon:emotion';
   }
 
   // tslint:disable-next-line: max-func-body-length
@@ -248,7 +249,8 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
             break;
           }
 
-          case 'excited': {
+          case 'excited':
+          case 'disappointed': {
             const intensity = (value || 'medium').toLowerCase();
 
             if (this.validEmotionIntensity.includes(intensity)) {

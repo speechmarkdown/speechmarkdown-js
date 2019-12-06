@@ -147,11 +147,11 @@ The biggest place we need help right now is with the completion of the grammar a
 * [x] date
 * [x] defaults (section)
 * [ ] disappointed
-* [ ] disappointed (section)
+* [x] disappointed (section)
 * [x] dj (section)
 * [x] emphasis
 * [ ] excited
-* [ ] excited (section)
+* [x] excited (section)
 * [x] expletive / bleep
 * [x] fraction
 * [x] interjection

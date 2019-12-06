@@ -54,6 +54,7 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     'defaults': null,
     'newscaster': null,
     'excited': null,
+    'disappointed': null,
   };
 
   public format(ast: any): string {
