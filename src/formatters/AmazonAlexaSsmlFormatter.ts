@@ -33,6 +33,12 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
     'Mathieu': 'fr-FR',
   };
 
+  private validEmotionIntensity: string[] = [
+    'low',
+    'medium',
+    'high',
+  ];
+
   constructor(public options: SpeechOptions) {
     super(options);
 
@@ -41,6 +47,7 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
     this.modifierKeyToSsmlTagMappings.voice = 'voice';
     this.modifierKeyToSsmlTagMappings.dj = 'amazon:domain';
     this.modifierKeyToSsmlTagMappings.newscaster = 'amazon:domain';
+    this.modifierKeyToSsmlTagMappings.excited = 'amazon:emotion';
   }
 
   // tslint:disable-next-line: max-func-body-length
@@ -241,6 +248,18 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
             break;
           }
 
+          case 'excited': {
+            const intensity = (value || 'medium').toLowerCase();
+
+            if (this.validEmotionIntensity.includes(intensity)) {
+              if (!sectionObject.tags[ssmlTag]) {
+                sectionObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              }
+
+              sectionObject.tags[ssmlTag].attrs = { 'name': key, 'intensity': intensity };
+            }
+            break;
+          }
 
           default: {
 

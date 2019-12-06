@@ -22,6 +22,7 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     'prosody',
     'amazon:domain',
     'amazon:effect',
+    'amazon:emotion',
     'voice',
     'lang',
     'sub',
@@ -51,6 +52,8 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     'voice': null,
     'dj': null,
     'defaults': null,
+    'newscaster': null,
+    'excited': null,
   };
 
   public format(ast: any): string {
