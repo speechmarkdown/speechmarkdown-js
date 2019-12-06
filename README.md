@@ -146,7 +146,7 @@ The biggest place we need help right now is with the completion of the grammar a
 * [x] characters / chars
 * [x] date
 * [x] defaults (section)
-* [ ] disappointed
+* [x] disappointed
 * [x] disappointed (section)
 * [x] dj (section)
 * [x] emphasis
