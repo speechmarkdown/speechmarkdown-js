@@ -6,10 +6,8 @@ describe('ipa-standard-alphabet-us', () => {
 
   const speech = new SpeechMarkdown();
 
-  // TODO: tests fail when the following are included: d͡ʒ or t͡ʃ
-
   const markdown = dedent`
-    I say, (ipa)[ipa:"ˈˌb.d.f.g.h.j.k.l.m.n.p.s.t.v.w.z.i.u.æ.ð.ʃ.θ.ʒ.ə.ɚ.aɪ.aʊ.ɑ.eɪ.ɝ.ɛ.ɪ.oʊ.ɔ.ɔɪ.ʊ.ʌ.ŋ.ɹ"].
+    I say, (ipa)[ipa:"ˈˌb.d.f.g.h.j.k.l.m.n.p.s.t.v.w.z.i.u.æ.ð.ʃ.θ.ʒ.ə.ɚ.aɪ.aʊ.ɑ.eɪ.ɝ.ɛ.ɪ.oʊ.ɔ.ɔɪ.ʊ.ʌ.ŋ.ɹ.d͡ʒ.t͡ʃ"].
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
@@ -21,7 +19,7 @@ describe('ipa-standard-alphabet-us', () => {
 
     const expected = dedent`
       <speak>
-      I say, <phoneme alphabet="ipa" ph="ˈˌb.d.f.g.h.j.k.l.m.n.p.s.t.v.w.z.i.u.æ.ð.ʃ.θ.ʒ.ə.ɚ.aɪ.aʊ.ɑ.eɪ.ɝ.ɛ.ɪ.oʊ.ɔ.ɔɪ.ʊ.ʌ.ŋ.ɹ">ipa</phoneme>.
+      I say, <phoneme alphabet="ipa" ph="ˈˌb.d.f.g.h.j.k.l.m.n.p.s.t.v.w.z.i.u.æ.ð.ʃ.θ.ʒ.ə.ɚ.aɪ.aʊ.ɑ.eɪ.ɝ.ɛ.ɪ.oʊ.ɔ.ɔɪ.ʊ.ʌ.ŋ.ɹ.d͡ʒ.t͡ʃ">ipa</phoneme>.
       </speak>
     `;
 
