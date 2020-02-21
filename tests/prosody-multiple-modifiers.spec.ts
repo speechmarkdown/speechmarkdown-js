@@ -42,6 +42,22 @@ describe('prosody-multiple-modifiers rate + volume', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Multiple modifiers on same text
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {
@@ -97,6 +113,23 @@ describe('prosody-multiple-modifiers rate + pitch', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Multiple modifiers on same text
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+
   test('converts to Plain Text', () => {
 
     const options = {
@@ -146,6 +179,22 @@ describe('prosody-multiple-modifiers volume + pitch', () => {
     const expected = dedent`
       <speak>
       Multiple modifiers on same <prosody volume="soft" pitch="low">text</prosody>
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Multiple modifiers on same text
       </speak>
     `;
 
@@ -207,6 +256,22 @@ describe('prosody-multiple-modifiers volume + pitch + rate', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Multiple modifiers on same text
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {
@@ -256,6 +321,22 @@ describe('prosody-multiple-modifiers vol + pitch + rate defaults', () => {
     const expected = dedent`
       <speak>
       Multiple modifiers on same <prosody volume="medium" pitch="medium" rate="medium">text</prosody>
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Multiple modifiers on same text
       </speak>
     `;
 

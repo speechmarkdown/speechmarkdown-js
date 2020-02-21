@@ -45,6 +45,23 @@ describe('audio-standard', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      <audio src="https://www.speechmarkdown.org/test.mp3"/>
+      Announcing Speech Markdown.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {
@@ -103,6 +120,24 @@ describe('audio-standard single quote', () => {
     expect(ssml).toBe(expected);
   });
 
+
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      <audio src="https://www.speechmarkdown.org/test.mp3"/>
+      Announcing Speech Markdown.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {
@@ -146,6 +181,22 @@ describe('audio-standard soundbank', () => {
 
     const options = {
       platform: 'google-assistant'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      <audio src="soundbank://soundlibrary/alarms/air_horns/air_horn_01"/> Air horn
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby'
     };
     const ssml = speech.toSSML(markdown, options);
 

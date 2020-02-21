@@ -1,8 +1,9 @@
 import { Formatter } from '../Interfaces';
 import { SpeechOptions } from '../SpeechOptions';
+import { TextFormatter } from "./TextFormatter";
 import { AmazonAlexaSsmlFormatter } from "./AmazonAlexaSsmlFormatter";
 import { GoogleAssistantSsmlFormatter } from "./GoogleAssistantSsmlFormatter";
-import { TextFormatter } from "./TextFormatter";
+import { SamsungBixbySsmlFormatter } from './SamsungBixbySsmlFormatter';
 
 export function createFormatter(options: SpeechOptions): Formatter {
   switch(options.platform) {
@@ -10,6 +11,8 @@ export function createFormatter(options: SpeechOptions): Formatter {
         return new AmazonAlexaSsmlFormatter(options);
       case 'google-assistant':
         return new GoogleAssistantSsmlFormatter(options);
+      case 'samsung-bixby':
+        return new SamsungBixbySsmlFormatter(options);
       default:
         return new TextFormatter(options);
   }

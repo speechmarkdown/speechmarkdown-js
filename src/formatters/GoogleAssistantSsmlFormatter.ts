@@ -135,7 +135,7 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
     switch (ast.name) {
       case 'document': {
         if (this.options.includeFormatterComment) {
-          this.addComment('Speech Markdown for Google Assistant', lines);
+          this.addComment('Converted from Speech Markdown to SSML for Google Assistant', lines);
         }
 
         if (this.options.includeSpeakTag) {
