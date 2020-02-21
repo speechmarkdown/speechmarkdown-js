@@ -42,6 +42,22 @@ describe('ipa-standard-alphabet-us', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      I say, ipa.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {

@@ -42,6 +42,22 @@ describe('date-standard', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      The date is 10-19-2016.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {

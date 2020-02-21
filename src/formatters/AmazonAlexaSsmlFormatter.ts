@@ -297,7 +297,7 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
     switch (ast.name) {
       case 'document': {
         if (this.options.includeFormatterComment) {
-          this.addComment('Speech Markdown for Amazon Alexa', lines);
+          this.addComment('Converted from Speech Markdown to SSML for Amazon Alexa', lines);
         }
 
         if (this.options.includeSpeakTag) {

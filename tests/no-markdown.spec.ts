@@ -48,6 +48,24 @@ describe('no-markdown', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Text line 1
+
+      Text line 2
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {

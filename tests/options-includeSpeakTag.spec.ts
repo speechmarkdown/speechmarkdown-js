@@ -42,6 +42,22 @@ describe('options-includeSpeakTag default to true', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Text line
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
 });
 
 describe('options-includeSpeakTag set to true', () => {
@@ -86,6 +102,23 @@ describe('options-includeSpeakTag set to true', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby',
+      includeSpeakTag: true,
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Text line
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
 });
 
 
@@ -116,6 +149,21 @@ describe('options-includeSpeakTag set to false', () => {
 
     const options = {
       platform: 'google-assistant',
+      includeSpeakTag: false,
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      Text line
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby',
       includeSpeakTag: false,
     };
     const ssml = speech.toSSML(markdown, options);

@@ -152,6 +152,24 @@ describe('sections-standard end speak tag at end', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby',
+      preserveEmptyLines: false
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Section 1
+      Section 2
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {
@@ -199,6 +217,23 @@ describe('sections-standard voice section on same line', () => {
 
     const options = {
       platform: 'google-assistant'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+       Hey there, nice to meet you
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby',
+      preserveEmptyLines: false
     };
     const ssml = speech.toSSML(markdown, options);
 

@@ -42,6 +42,22 @@ describe('excited-standard', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      We can switch from excited to really excited.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {
@@ -97,6 +113,22 @@ describe('excited-standard non-lowercase intensity', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      We can switch from excited to really excited.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {
@@ -140,6 +172,22 @@ describe('excited-standard invalid intensity', () => {
 
     const options = {
       platform: 'google-assistant'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      We can switch from excited to really excited.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby'
     };
     const ssml = speech.toSSML(markdown, options);
 

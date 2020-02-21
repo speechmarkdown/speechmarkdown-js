@@ -51,6 +51,25 @@ describe('volume-standard-medium', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      A medium volume 1
+      A medium volume 2
+      A medium volume 3
+      A medium volume 4
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {
@@ -103,6 +122,22 @@ describe('volume-standard-silent', () => {
     const expected = dedent`
       <speak>
       A <prosody volume="silent">silent</prosody> volume
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      A silent volume
       </speak>
     `;
 
@@ -164,6 +199,22 @@ describe('volume-standard-x-soft', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      A xsoft volume
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {
@@ -213,6 +264,22 @@ describe('volume-standard-soft', () => {
     const expected = dedent`
       <speak>
       A <prosody volume="soft">soft</prosody> volume
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      A soft volume
       </speak>
     `;
 
@@ -274,6 +341,22 @@ describe('volume-standard-x-loud', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      A xloud volume
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {
@@ -323,6 +406,22 @@ describe('volume-standard-loud', () => {
     const expected = dedent`
       <speak>
       A <prosody volume="loud">loud</prosody> volume
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      A loud volume
       </speak>
     `;
 

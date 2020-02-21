@@ -42,6 +42,22 @@ describe('options-includeFormatterComment default to false', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Text line
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
 });
 
 describe('options-includeFormatterComment set to false', () => {
@@ -86,6 +102,23 @@ describe('options-includeFormatterComment set to false', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby',
+      includeFormatterComment: false,
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Text line
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
 });
 
 describe('options-includeFormatterComment set to true', () => {
@@ -105,7 +138,7 @@ describe('options-includeFormatterComment set to true', () => {
     const ssml = speech.toSSML(markdown, options);
 
     const expected = dedent`
-      <!-- Speech Markdown for Amazon Alexa -->
+      <!-- Converted from Speech Markdown to SSML for Amazon Alexa -->
       <speak>
       Text line
       </speak>
@@ -123,7 +156,25 @@ describe('options-includeFormatterComment set to true', () => {
     const ssml = speech.toSSML(markdown, options);
 
     const expected = dedent`
-      <!-- Speech Markdown for Google Assistant -->
+      <!-- Converted from Speech Markdown to SSML for Google Assistant -->
+      <speak>
+      Text line
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby',
+      includeFormatterComment: true,
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <!-- Converted from Speech Markdown to SSML for Samsung Bixby -->
       <speak>
       Text line
       </speak>
