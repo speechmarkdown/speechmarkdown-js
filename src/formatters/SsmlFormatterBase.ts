@@ -149,11 +149,15 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     return '<' + tag + attrStr + '/>';
   }
 
-  protected addTagWithAttrs(lines: string[], text: string, tag: string, attrs: any): string[] {
+  protected addTagWithAttrs(lines: string[], text: string, tag: string, attrs: any, forceEndTag:boolean = false): string[] {
 
-    if (text) {
+    if (text || forceEndTag) {
       lines.push(this.startTag(tag, attrs));
-      lines.push(text);
+
+      if (text) {
+        lines.push(text);
+      }
+
       lines.push(this.endTag(tag, false));
     }
     else {

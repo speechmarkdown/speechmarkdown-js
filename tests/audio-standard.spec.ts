@@ -54,7 +54,7 @@ describe('audio-standard', () => {
 
     const expected = dedent`
       <speak>
-      <audio src="https://www.speechmarkdown.org/test.mp3"/>
+      <audio src="https://www.speechmarkdown.org/test.mp3"></audio>
       Announcing Speech Markdown.
       </speak>
     `;
@@ -130,7 +130,7 @@ describe('audio-standard single quote', () => {
 
     const expected = dedent`
       <speak>
-      <audio src="https://www.speechmarkdown.org/test.mp3"/>
+      <audio src="https://www.speechmarkdown.org/test.mp3"></audio>
       Announcing Speech Markdown.
       </speak>
     `;
@@ -202,7 +202,7 @@ describe('audio-standard soundbank', () => {
 
     const expected = dedent`
       <speak>
-      <audio src="soundbank://soundlibrary/alarms/air_horns/air_horn_01"/> Air horn
+      <audio src="soundbank://soundlibrary/alarms/air_horns/air_horn_01"></audio> Air horn
       </speak>
     `;
 

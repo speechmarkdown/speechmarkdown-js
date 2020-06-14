@@ -215,7 +215,7 @@ export class SamsungBixbySsmlFormatter extends SsmlFormatterBase {
       // }
       case 'audio': {
         const url = ast.children[0].allText;
-        return this.addTagWithAttrs(lines, null, 'audio', { src: url });
+        return this.addTagWithAttrs(lines, null, 'audio', { src: url }, true);
       }
       case 'simpleLine': {
         this.processAst(ast.children, lines);
