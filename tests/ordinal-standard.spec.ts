@@ -51,7 +51,7 @@ describe('ordinal-standard', () => {
 
     const expected = dedent`
       <speak>
-      The others came in 2nd and 3.
+      The others came in 2nd and <say-as interpret-as="ordinal">3</say-as>.
       </speak>
     `;
 

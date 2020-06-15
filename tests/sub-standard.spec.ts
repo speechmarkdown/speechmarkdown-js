@@ -51,7 +51,7 @@ describe('sub-standard', () => {
 
     const expected = dedent`
       <speak>
-      The element is Al.
+      The element is <sub alias="aluminum">Al</sub>.
       </speak>
     `;
 

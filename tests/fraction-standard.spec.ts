@@ -51,7 +51,7 @@ describe('fraction-standard', () => {
 
     const expected = dedent`
       <speak>
-      Add 2/3 cup of milk.
+      Add <say-as interpret-as="fraction">2/3</say-as> cup of milk.
       </speak>
     `;
 
@@ -122,7 +122,7 @@ describe('fraction-standard includes a plus sign', () => {
 
     const expected = dedent`
       <speak>
-      Add 1+1/2 cups of flour.
+      Add <say-as interpret-as="fraction">1+1/2</say-as> cups of flour.
       </speak>
     `;
 

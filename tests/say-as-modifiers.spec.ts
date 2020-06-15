@@ -51,7 +51,7 @@ describe('say-as-modifiers last modifier wins', () => {
 
     const expected = dedent`
       <speak>
-      Some text
+      Some <say-as interpret-as="spell-out">text</say-as>
       </speak>
     `;
 

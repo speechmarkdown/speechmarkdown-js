@@ -51,7 +51,7 @@ describe('number-standard', () => {
 
     const expected = dedent`
       <speak>
-      Your balance is: 12345.
+      Your balance is: <say-as interpret-as="cardinal">12345</say-as>.
       </speak>
     `;
 

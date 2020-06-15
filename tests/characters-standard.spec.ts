@@ -54,8 +54,8 @@ describe('characters-standard', () => {
 
     const expected = dedent`
       <speak>
-      Countdown: 321
-      The word is spelled: park
+      Countdown: <say-as interpret-as="digits">321</say-as>
+      The word is spelled: <say-as interpret-as="spell-out">park</say-as>
       </speak>
     `;
 
