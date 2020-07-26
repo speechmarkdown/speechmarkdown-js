@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 // tslint:disable-next-line: max-func-body-length
 export function speechMarkdownGrammar(myna: any): any {
@@ -6,12 +6,12 @@ export function speechMarkdownGrammar(myna: any): any {
   // Override parenthesis function to not use `.guardedSeq`
   // This sequence is too assertive, and may cause exceptions rather than just returning null
   m.parenthesized = (rule: any) => {
-    return m.seq("(", m.ws, rule, m.ws, ")").setType("parenthesized");
-  }
+    return m.seq('(', m.ws, rule, m.ws, ')').setType('parenthesized');
+  };
 
   // tslint:disable-next-line: typedef
   // tslint:disable-next-line: max-func-body-length
-  const g: any = new function () {
+  const g: any = new (function() {
     //         // Allows the "inline" to be referenced before it is defined.
     //         // This enables recursive definitions.
     //         this.inlineDelayed = m.delay(() => this.inline);
@@ -21,7 +21,6 @@ export function speechMarkdownGrammar(myna: any): any {
     //             if (end === undefined) { end = begin; }
     //             return m.seq(begin, this.inlineDelayed.unless(end).zeroOrMore, end);
     //         }
-
 
     // Plain text
     const specialCharSet = '[]()';
@@ -33,11 +32,29 @@ export function speechMarkdownGrammar(myna: any): any {
     const nonSpecialCharEmphasis = m.notChar(specialCharSet).unless(m.newLine);
     const quoteChar = m.notChar('"');
 
-    this.plainText = m.choice(m.digits, m.letters, ws, nonSpecialChar).oneOrMore.ast;
-    this.plainTextEmphasis = m.choice(m.digits, m.letters, ws, nonSpecialChar).oneOrMore.ast;
-    const plainTextChoice = m.choice(m.digits, m.letters, ws, nonSpecialCharEmphasis);
+    this.plainText = m.choice(
+      m.digits,
+      m.letters,
+      ws,
+      nonSpecialChar,
+    ).oneOrMore.ast;
+    this.plainTextEmphasis = m.choice(
+      m.digits,
+      m.letters,
+      ws,
+      nonSpecialChar,
+    ).oneOrMore.ast;
+    const plainTextChoice = m.choice(
+      m.digits,
+      m.letters,
+      ws,
+      nonSpecialCharEmphasis,
+    );
     this.plainTextModifier = plainTextChoice.oneOrMore.ast;
-    this.plainTextPhone = m.seq(m.parenthesized(m.digits), plainTextChoice.oneOrMore).ast;
+    this.plainTextPhone = m.seq(
+      m.parenthesized(m.digits),
+      plainTextChoice.oneOrMore,
+    ).ast;
     this.plainTextSpecialChars = m.choice(
       m.seq('(', plainTextChoice, ') '),
       m.seq('[', plainTextChoice, '] '),
@@ -45,11 +62,11 @@ export function speechMarkdownGrammar(myna: any): any {
     ).oneOrMore.ast;
 
     // Break
-    this.timeUnit = m.choice('s','ms').ast;
+    this.timeUnit = m.choice('s', 'ms').ast;
     this.fraction = m.seq('.', m.digit.zeroOrMore);
     this.number = m.seq(m.integer, this.fraction.opt).ast;
     this.time = m.seq(this.number, this.timeUnit).ast;
-    this.shortBreak = m.seq('[', this.time , ']').ast;
+    this.shortBreak = m.seq('[', this.time, ']').ast;
     // this.break = m.seq('[break:', this.time , ']').ast;
 
     // this.string = m.doubleQuoted(this.quoteChar.zeroOrMore).ast;
@@ -59,11 +76,40 @@ export function speechMarkdownGrammar(myna: any): any {
     // The emphasis tag should be preluded and followed by a not-letter-character.
     // Otherwise an example like above would be captured.
     const notLetterChar = m.not(m.letters);
-    this.shortEmphasisModerate = m.seq(notLetterChar, '+', this.plainTextEmphasis , '+', notLetterChar).ast;
-    this.shortEmphasisStrong = m.seq(notLetterChar, '++', this.plainTextEmphasis , '++', notLetterChar).ast;
-    this.shortEmphasisNone = m.seq(notLetterChar, '~', this.plainTextEmphasis , '~', notLetterChar).ast;
-    this.shortEmphasisReduced = m.seq(notLetterChar, '-', this.plainTextEmphasis , '-', notLetterChar).ast;
-    this.emphasis = m.choice(this.shortEmphasisModerate, this.shortEmphasisStrong, this.shortEmphasisNone, this.shortEmphasisReduced);
+    this.shortEmphasisModerate = m.seq(
+      notLetterChar,
+      '+',
+      this.plainTextEmphasis,
+      '+',
+      notLetterChar,
+    ).ast;
+    this.shortEmphasisStrong = m.seq(
+      notLetterChar,
+      '++',
+      this.plainTextEmphasis,
+      '++',
+      notLetterChar,
+    ).ast;
+    this.shortEmphasisNone = m.seq(
+      notLetterChar,
+      '~',
+      this.plainTextEmphasis,
+      '~',
+      notLetterChar,
+    ).ast;
+    this.shortEmphasisReduced = m.seq(
+      notLetterChar,
+      '-',
+      this.plainTextEmphasis,
+      '-',
+      notLetterChar,
+    ).ast;
+    this.emphasis = m.choice(
+      this.shortEmphasisModerate,
+      this.shortEmphasisStrong,
+      this.shortEmphasisNone,
+      this.shortEmphasisReduced,
+    );
 
     // Modifier
     // (text)[key] or (text)[key;]
@@ -72,30 +118,146 @@ export function speechMarkdownGrammar(myna: any): any {
     // (text)[key:'value';key;key:"value"]
     const colon = m.char(':').ws;
     const semicolon = m.char(';').ws;
-    this.textModifierKey = m.keywords('emphasis', 'address', 'number', 'characters', 'chars', 'expletive', 'bleep', 'fraction', 'interjection', 'ordinal', 'telephone', 'phone', 'unit', 'time', 'date', 'whisper', 'ipa', 'sub', 'vol', 'volume', 'rate', 'pitch', 'lang', 'voice', 'excited', 'disappointed').ast;
+    this.textModifierKey = m.keywords(
+      'emphasis',
+      'address',
+      'number',
+      'characters',
+      'chars',
+      'expletive',
+      'bleep',
+      'fraction',
+      'interjection',
+      'ordinal',
+      'telephone',
+      'phone',
+      'unit',
+      'time',
+      'date',
+      'whisper',
+      'ipa',
+      'sub',
+      'vol',
+      'volume',
+      'rate',
+      'pitch',
+      'lang',
+      'voice',
+      'excited',
+      'disappointed',
+    ).ast;
     // Special characters for <phoneme alphabet="ipa" ph="..."> tag
-    const ipaChars = ['.', "'", 'æ', '͡ʒ', 'ð', 'ʃ', '͡ʃ', 'θ', 'ʒ', 'ə', 'ɚ', 'aɪ', 'aʊ', 'ɑ',
-      'eɪ', 'ɝ', 'ɛ', 'ɪ', 'oʊ', 'ɔ', 'ɔɪ', 'ʊ', 'ʌ', 'ɒ', 'ɛə', 'ɪə', 'ʊə', 'ˈ', 'ˌ', 'ŋ', 'ɹ'];
-    this.textModifierText = m.choice(m.digit, m.letter, m.hyphen, ...ipaChars).oneOrMore.ast;
-    this.textModifierValue = m.seq(colon, m.choice(m.singleQuoted(this.textModifierText), m.doubleQuoted(this.textModifierText)))
-    this.textModifierKeyOptionalValue = m.seq(this.textModifierKey, this.textModifierValue.opt).ast;
-    this.modifier = m.bracketed(m.delimited(this.textModifierKeyOptionalValue.ws, semicolon));
+    // const ipaChars = ['.', "'", 'æ', '͡ʒ', 'ð', 'ʃ', '͡ʃ', 'θ', 'ʒ', 'ə', 'ɚ', 'aɪ', 'aʊ', 'ɑ',
+    //  'eɪ', 'ɝ', 'ɛ', 'ɪ', 'oʊ', 'ɔ', 'ɔɪ', 'ʊ', 'ʌ', 'ɒ', 'ɛə', 'ɪə', 'ʊə', 'ˈ', 'ˌ', 'ŋ', 'ɹ'];
+
+    const ipaChars = [
+      '.',
+      'æ',
+      '͡ʒ',
+      'ð',
+      'ʃ',
+      '͡ʃ',
+      'θ',
+      'ʒ',
+      'ə',
+      'ɚ',
+      'aɪ',
+      'aʊ',
+      'ɑ',
+      'eɪ',
+      'ɝ',
+      'ɛ',
+      'ɪ',
+      'oʊ',
+      'ɔ',
+      'ɔɪ',
+      'ʊ',
+      'ʌ',
+      'ɒ',
+      'ɛə',
+      'ɪə',
+      'ʊə',
+      'ˈ',
+      'ˌ',
+      'ŋ',
+      'ɹ',
+    ];
+
+    this.textModifierText = m.choice(
+      m.digit,
+      m.letter,
+      m.hyphen,
+      ...ipaChars,
+    ).oneOrMore.ast;
+
+    this.textModifierTextDoubleQuote = m.choice(
+      m.digit,
+      m.letter,
+      m.hyphen,
+      ...ipaChars,
+      "'",
+    ).oneOrMore.ast;
+
+    this.textModifierValue = m.seq(
+      colon,
+      m.choice(
+        m.singleQuoted(this.textModifierText),
+        m.doubleQuoted(this.textModifierTextDoubleQuote),
+      ),
+    );
+    this.textModifierKeyOptionalValue = m.seq(
+      this.textModifierKey,
+      this.textModifierValue.opt,
+    ).ast;
+    this.modifier = m.bracketed(
+      m.delimited(this.textModifierKeyOptionalValue.ws, semicolon),
+    );
 
     const textText = m.parenthesized(this.plainTextModifier);
-    const textTextPhone = m.parenthesized(this.plainTextPhone)
-    this.textModifier = m.seq(m.choice(textText, textTextPhone), this.modifier).ast
+    const textTextPhone = m.parenthesized(this.plainTextPhone);
+    this.textModifier = m.seq(
+      m.choice(textText, textTextPhone),
+      this.modifier,
+    ).ast;
 
     // Audio
     this.urlSpecialChar = m.char(':/.-_~?#[]@!+,;%=()');
     this.url = m.choice(m.digit, m.letter, this.urlSpecialChar).oneOrMore.ast;
-    this.audio = m.seq('![', m.choice(m.singleQuoted(this.url), m.doubleQuoted(this.url)), ']').ast;
+    this.audio = m.seq(
+      '![',
+      m.choice(m.singleQuoted(this.url), m.doubleQuoted(this.url)),
+      ']',
+    ).ast;
 
     // Section
-    this.sectionModifierKey = m.keywords('lang', 'voice', 'defaults', 'dj', 'newscaster', 'excited', 'disappointed').ast;
-    this.sectionModifierText = m.choice(m.digit, m.letter, m.hyphen).oneOrMore.ast;
-    this.sectionModifierValue = m.seq(colon, m.choice(m.singleQuoted(this.sectionModifierText), m.doubleQuoted(this.sectionModifierText)))
-    this.sectionModifierKeyOptionalValue = m.seq(this.sectionModifierKey, this.sectionModifierValue.opt).ast;
-    this.sectionModifier = m.bracketed(m.delimited(this.sectionModifierKeyOptionalValue.ws, semicolon));
+    this.sectionModifierKey = m.keywords(
+      'lang',
+      'voice',
+      'defaults',
+      'dj',
+      'newscaster',
+      'excited',
+      'disappointed',
+    ).ast;
+    this.sectionModifierText = m.choice(
+      m.digit,
+      m.letter,
+      m.hyphen,
+    ).oneOrMore.ast;
+    this.sectionModifierValue = m.seq(
+      colon,
+      m.choice(
+        m.singleQuoted(this.sectionModifierText),
+        m.doubleQuoted(this.sectionModifierText),
+      ),
+    );
+    this.sectionModifierKeyOptionalValue = m.seq(
+      this.sectionModifierKey,
+      this.sectionModifierValue.opt,
+    ).ast;
+    this.sectionModifier = m.bracketed(
+      m.delimited(this.sectionModifierKeyOptionalValue.ws, semicolon),
+    );
     this.section = m.seq('#', this.sectionModifier).ast;
 
     // values
@@ -106,18 +268,45 @@ export function speechMarkdownGrammar(myna: any): any {
     this.valueStrong = 'strong';
     this.valueXStrong = 'x-strong';
 
-    this.breakStrengthValue = m.choice(this.valueNone, this.valueXWeak, this.valueWeak,
-      this.valueMedium, this.valueStrong, this.valueXStrong).ast;
-    this.breakStrength = m.seq('[', 'break', ':',
-        m.choice(m.singleQuoted(this.breakStrengthValue), m.doubleQuoted(this.breakStrengthValue)),
-      ']').ast;
-    this.breakTime = m.seq('[', 'break', ':',
-        m.choice(m.singleQuoted(this.time), m.doubleQuoted(this.time)),
-      ']').ast;
+    this.breakStrengthValue = m.choice(
+      this.valueNone,
+      this.valueXWeak,
+      this.valueWeak,
+      this.valueMedium,
+      this.valueStrong,
+      this.valueXStrong,
+    ).ast;
+    this.breakStrength = m.seq(
+      '[',
+      'break',
+      ':',
+      m.choice(
+        m.singleQuoted(this.breakStrengthValue),
+        m.doubleQuoted(this.breakStrengthValue),
+      ),
+      ']',
+    ).ast;
+    this.breakTime = m.seq(
+      '[',
+      'break',
+      ':',
+      m.choice(m.singleQuoted(this.time), m.doubleQuoted(this.time)),
+      ']',
+    ).ast;
 
     this.any = m.advance;
-    this.inline = m.choice(this.textModifier, this.emphasis, this.shortBreak, this.breakStrength,
-        this.breakTime, this.audio, this.plainTextSpecialChars, this.plainText, this.any)
+    this.inline = m
+      .choice(
+        this.textModifier,
+        this.emphasis,
+        this.shortBreak,
+        this.breakStrength,
+        this.breakTime,
+        this.audio,
+        this.plainTextSpecialChars,
+        this.plainText,
+        this.any,
+      )
       .unless(m.newLine);
     this.lineEnd = m.newLine.or(m.assert(m.end)).ast;
     this.emptyLine = m.char(' \t').zeroOrMore.then(m.newLine).ast;
@@ -127,8 +316,8 @@ export function speechMarkdownGrammar(myna: any): any {
 
     this.content = m.choice(this.section, this.paragraph, this.emptyLine);
     this.document = this.content.zeroOrMore.ast;
-  }
+  })();
 
   // Register the grammar, providing a name and the default parse rule
-  return m.registerGrammar("speechmarkdown", g, g.document);
+  return m.registerGrammar('speechmarkdown', g, g.document);
 }

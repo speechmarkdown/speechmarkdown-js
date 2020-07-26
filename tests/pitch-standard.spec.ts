@@ -3,18 +3,17 @@ import dedent from 'ts-dedent';
 import { SpeechMarkdown } from '../src/SpeechMarkdown';
 
 describe('pitch-standard-medium', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
     A (medium)[pitch] pitch 1
     A (medium)[pitch:"medium"] pitch 2
+    A (medium)[pitch:'medium'] pitch 3
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
-      platform: 'amazon-alexa'
+      platform: 'amazon-alexa',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -22,6 +21,7 @@ describe('pitch-standard-medium', () => {
       <speak>
       A <prosody pitch="medium">medium</prosody> pitch 1
       A <prosody pitch="medium">medium</prosody> pitch 2
+      A <prosody pitch="medium">medium</prosody> pitch 3
       </speak>
     `;
 
@@ -29,9 +29,8 @@ describe('pitch-standard-medium', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
-      platform: 'google-assistant'
+      platform: 'google-assistant',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -39,6 +38,7 @@ describe('pitch-standard-medium', () => {
       <speak>
       A <prosody pitch="medium">medium</prosody> pitch 1
       A <prosody pitch="medium">medium</prosody> pitch 2
+      A <prosody pitch="medium">medium</prosody> pitch 3
       </speak>
     `;
 
@@ -46,9 +46,8 @@ describe('pitch-standard-medium', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
-      platform: 'samsung-bixby'
+      platform: 'samsung-bixby',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -56,6 +55,7 @@ describe('pitch-standard-medium', () => {
       <speak>
       A medium pitch 1
       A medium pitch 2
+      A medium pitch 3
       </speak>
     `;
 
@@ -63,23 +63,20 @@ describe('pitch-standard-medium', () => {
   });
 
   test('converts to Plain Text', () => {
-
-    const options = {
-    };
+    const options = {};
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
       A medium pitch 1
       A medium pitch 2
+      A medium pitch 3
     `;
 
     expect(text).toBe(expected);
   });
-
 });
 
 describe('pitch-standard-x-low', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -87,9 +84,8 @@ describe('pitch-standard-x-low', () => {
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
-      platform: 'amazon-alexa'
+      platform: 'amazon-alexa',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -103,9 +99,8 @@ describe('pitch-standard-x-low', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
-      platform: 'google-assistant'
+      platform: 'google-assistant',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -119,9 +114,8 @@ describe('pitch-standard-x-low', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
-      platform: 'samsung-bixby'
+      platform: 'samsung-bixby',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -135,9 +129,7 @@ describe('pitch-standard-x-low', () => {
   });
 
   test('converts to Plain Text', () => {
-
-    const options = {
-    };
+    const options = {};
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
@@ -146,11 +138,9 @@ describe('pitch-standard-x-low', () => {
 
     expect(text).toBe(expected);
   });
-
 });
 
 describe('pitch-standard-low', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -158,9 +148,8 @@ describe('pitch-standard-low', () => {
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
-      platform: 'amazon-alexa'
+      platform: 'amazon-alexa',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -174,9 +163,8 @@ describe('pitch-standard-low', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
-      platform: 'google-assistant'
+      platform: 'google-assistant',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -190,9 +178,8 @@ describe('pitch-standard-low', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
-      platform: 'samsung-bixby'
+      platform: 'samsung-bixby',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -206,9 +193,7 @@ describe('pitch-standard-low', () => {
   });
 
   test('converts to Plain Text', () => {
-
-    const options = {
-    };
+    const options = {};
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
@@ -217,11 +202,9 @@ describe('pitch-standard-low', () => {
 
     expect(text).toBe(expected);
   });
-
 });
 
 describe('pitch-standard-x-high', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -229,9 +212,8 @@ describe('pitch-standard-x-high', () => {
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
-      platform: 'amazon-alexa'
+      platform: 'amazon-alexa',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -245,9 +227,8 @@ describe('pitch-standard-x-high', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
-      platform: 'google-assistant'
+      platform: 'google-assistant',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -261,9 +242,8 @@ describe('pitch-standard-x-high', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
-      platform: 'samsung-bixby'
+      platform: 'samsung-bixby',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -277,9 +257,7 @@ describe('pitch-standard-x-high', () => {
   });
 
   test('converts to Plain Text', () => {
-
-    const options = {
-    };
+    const options = {};
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
@@ -288,11 +266,9 @@ describe('pitch-standard-x-high', () => {
 
     expect(text).toBe(expected);
   });
-
 });
 
 describe('pitch-standard-high', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -300,9 +276,8 @@ describe('pitch-standard-high', () => {
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
-      platform: 'amazon-alexa'
+      platform: 'amazon-alexa',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -316,9 +291,8 @@ describe('pitch-standard-high', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
-      platform: 'google-assistant'
+      platform: 'google-assistant',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -332,9 +306,8 @@ describe('pitch-standard-high', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
-      platform: 'samsung-bixby'
+      platform: 'samsung-bixby',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -348,9 +321,7 @@ describe('pitch-standard-high', () => {
   });
 
   test('converts to Plain Text', () => {
-
-    const options = {
-    };
+    const options = {};
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
@@ -359,5 +330,4 @@ describe('pitch-standard-high', () => {
 
     expect(text).toBe(expected);
   });
-
 });

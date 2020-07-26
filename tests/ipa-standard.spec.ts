@@ -3,7 +3,6 @@ import dedent from 'ts-dedent';
 import { SpeechMarkdown } from '../src/SpeechMarkdown';
 
 describe('ipa-standard', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -11,9 +10,8 @@ describe('ipa-standard', () => {
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
-      platform: 'amazon-alexa'
+      platform: 'amazon-alexa',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -27,9 +25,8 @@ describe('ipa-standard', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
-      platform: 'google-assistant'
+      platform: 'google-assistant',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -43,9 +40,8 @@ describe('ipa-standard', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
-      platform: 'samsung-bixby'
+      platform: 'samsung-bixby',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -59,9 +55,7 @@ describe('ipa-standard', () => {
   });
 
   test('converts to Plain Text', () => {
-
-    const options = {
-    };
+    const options = {};
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
@@ -70,5 +64,4 @@ describe('ipa-standard', () => {
 
     expect(text).toBe(expected);
   });
-
 });
