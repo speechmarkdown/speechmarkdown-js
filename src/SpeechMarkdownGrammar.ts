@@ -117,6 +117,7 @@ export function speechMarkdownGrammar(myna: any): any {
     // (text)[key: "value"] or (text)[key: "value";]
     // (text)[key:'value';key;key:"value"]
     const colon = m.char(':').ws;
+
     const semicolon = m.char(';').ws;
     this.textModifierKey = m.keywords(
       'emphasis',
@@ -187,6 +188,7 @@ export function speechMarkdownGrammar(myna: any): any {
       m.digit,
       m.letter,
       m.hyphen,
+      m.space,
       ...ipaChars,
     ).oneOrMore.ast;
 
@@ -194,6 +196,7 @@ export function speechMarkdownGrammar(myna: any): any {
       m.digit,
       m.letter,
       m.hyphen,
+      m.space,
       ...ipaChars,
       "'",
     ).oneOrMore.ast;
