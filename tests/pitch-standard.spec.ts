@@ -81,6 +81,7 @@ describe('pitch-standard-x-low', () => {
 
   const markdown = dedent`
     A (xlow)[pitch:"x-low"] pitch
+    A (xlow)[pitch:'x-low'] pitch
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
@@ -91,6 +92,7 @@ describe('pitch-standard-x-low', () => {
 
     const expected = dedent`
       <speak>
+      A <prosody pitch="x-low">xlow</prosody> pitch
       A <prosody pitch="x-low">xlow</prosody> pitch
       </speak>
     `;
@@ -107,6 +109,7 @@ describe('pitch-standard-x-low', () => {
     const expected = dedent`
       <speak>
       A <prosody pitch="x-low">xlow</prosody> pitch
+      A <prosody pitch="x-low">xlow</prosody> pitch
       </speak>
     `;
 
@@ -122,6 +125,7 @@ describe('pitch-standard-x-low', () => {
     const expected = dedent`
       <speak>
       A xlow pitch
+      A xlow pitch
       </speak>
     `;
 
@@ -133,6 +137,7 @@ describe('pitch-standard-x-low', () => {
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
+      A xlow pitch
       A xlow pitch
     `;
 
@@ -145,6 +150,7 @@ describe('pitch-standard-low', () => {
 
   const markdown = dedent`
     A (low)[pitch:"low"] pitch
+    A (low)[pitch:'low'] pitch
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
@@ -155,6 +161,7 @@ describe('pitch-standard-low', () => {
 
     const expected = dedent`
       <speak>
+      A <prosody pitch="low">low</prosody> pitch
       A <prosody pitch="low">low</prosody> pitch
       </speak>
     `;
@@ -171,6 +178,7 @@ describe('pitch-standard-low', () => {
     const expected = dedent`
       <speak>
       A <prosody pitch="low">low</prosody> pitch
+      A <prosody pitch="low">low</prosody> pitch
       </speak>
     `;
 
@@ -186,6 +194,7 @@ describe('pitch-standard-low', () => {
     const expected = dedent`
       <speak>
       A low pitch
+      A low pitch
       </speak>
     `;
 
@@ -197,6 +206,7 @@ describe('pitch-standard-low', () => {
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
+      A low pitch
       A low pitch
     `;
 
@@ -209,6 +219,7 @@ describe('pitch-standard-x-high', () => {
 
   const markdown = dedent`
     A (xhigh)[pitch:"x-high"] pitch
+    A (xhigh)[pitch:'x-high'] pitch
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
@@ -219,6 +230,7 @@ describe('pitch-standard-x-high', () => {
 
     const expected = dedent`
       <speak>
+      A <prosody pitch="x-high">xhigh</prosody> pitch
       A <prosody pitch="x-high">xhigh</prosody> pitch
       </speak>
     `;
@@ -235,6 +247,7 @@ describe('pitch-standard-x-high', () => {
     const expected = dedent`
       <speak>
       A <prosody pitch="x-high">xhigh</prosody> pitch
+      A <prosody pitch="x-high">xhigh</prosody> pitch
       </speak>
     `;
 
@@ -250,6 +263,7 @@ describe('pitch-standard-x-high', () => {
     const expected = dedent`
       <speak>
       A xhigh pitch
+      A xhigh pitch
       </speak>
     `;
 
@@ -262,6 +276,7 @@ describe('pitch-standard-x-high', () => {
 
     const expected = dedent`
       A xhigh pitch
+      A xhigh pitch
     `;
 
     expect(text).toBe(expected);
@@ -273,6 +288,7 @@ describe('pitch-standard-high', () => {
 
   const markdown = dedent`
     A (high)[pitch:"high"] pitch
+    A (high)[pitch:'high'] pitch
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
@@ -283,6 +299,7 @@ describe('pitch-standard-high', () => {
 
     const expected = dedent`
       <speak>
+      A <prosody pitch="high">high</prosody> pitch
       A <prosody pitch="high">high</prosody> pitch
       </speak>
     `;
@@ -298,6 +315,7 @@ describe('pitch-standard-high', () => {
 
     const expected = dedent`
       <speak>
+      A <prosody pitch="high">high</prosody> pitch
       A <prosody pitch="high">high</prosody> pitch
       </speak>
     `;
@@ -314,6 +332,7 @@ describe('pitch-standard-high', () => {
     const expected = dedent`
       <speak>
       A high pitch
+      A high pitch
       </speak>
     `;
 
@@ -325,6 +344,7 @@ describe('pitch-standard-high', () => {
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
+      A high pitch
       A high pitch
     `;
 
