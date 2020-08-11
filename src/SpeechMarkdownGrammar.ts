@@ -224,7 +224,7 @@ export function speechMarkdownGrammar(myna: any): any {
     ).ast;
 
     // Audio
-    this.urlSpecialChar = m.char(':/.-_~?#[]@!+,;%=()');
+    this.urlSpecialChar = m.char(':/.-_~?#[]@!+,;%=()&');
     this.url = m.choice(m.digit, m.letter, this.urlSpecialChar).oneOrMore.ast;
     this.audio = m.seq(
       '![',
