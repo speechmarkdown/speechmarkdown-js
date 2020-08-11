@@ -199,7 +199,7 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
         return lines;
       }
       case 'audio': {
-        const url = ast.children[0].allText;
+        const url = ast.children[0].allText.replace(/&/g,'&amp;');
         return this.addTagWithAttrs(lines, null, 'audio', { src: url });
       }
       case 'simpleLine': {
