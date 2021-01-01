@@ -141,8 +141,8 @@ The biggest place we need help right now is with the completion of the grammar a
 
 * [x] address
 * [x] audio
-* [ ] break (time)
-* [ ] break (strength)
+* [x] break (time)
+* [x] break (strength)
 * [x] characters / chars
 * [x] date
 * [x] defaults (section)
