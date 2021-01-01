@@ -157,6 +157,14 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
         const time = ast.children[0].allText;
         return this.addTagWithAttrs(lines, null, 'break', { time: time });
       }
+      case 'breakTime': {
+        const time = ast.children[0].allText;
+        return this.addTagWithAttrs(lines, null, 'break', { time: time });
+      }
+      case 'breakStrength': {
+        const strength = ast.children[0].allText;
+        return this.addTagWithAttrs(lines, null, 'break', { strength: strength });
+      }
       case 'shortEmphasisModerate': {
         const text = ast.children[0].allText;
         return this.addTagWithAttrs(lines, text, 'emphasis', { level: 'moderate' });

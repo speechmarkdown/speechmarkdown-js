@@ -271,7 +271,7 @@ export function speechMarkdownGrammar(myna: any): any {
     this.valueStrong = 'strong';
     this.valueXStrong = 'x-strong';
 
-    this.breakStrengthValue = m.choice(
+    this.breakStrengthValue = m.keywords(
       this.valueNone,
       this.valueXWeak,
       this.valueWeak,
