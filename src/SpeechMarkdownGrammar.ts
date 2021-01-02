@@ -271,7 +271,7 @@ export function speechMarkdownGrammar(myna: any): any {
     this.valueStrong = 'strong';
     this.valueXStrong = 'x-strong';
 
-    this.breakStrengthValue = m.choice(
+    this.breakStrengthValue = m.keywords(
       this.valueNone,
       this.valueXWeak,
       this.valueWeak,
@@ -279,21 +279,18 @@ export function speechMarkdownGrammar(myna: any): any {
       this.valueStrong,
       this.valueXStrong,
     ).ast;
-    this.breakStrength = m.seq(
+    this.breakValue = m.choice(
+      this.breakStrengthValue,
+      this.time
+    ).ast;
+    this.break = m.seq(
       '[',
       'break',
       ':',
       m.choice(
-        m.singleQuoted(this.breakStrengthValue),
-        m.doubleQuoted(this.breakStrengthValue),
+        m.singleQuoted(this.breakValue),
+        m.doubleQuoted(this.breakValue),
       ),
-      ']',
-    ).ast;
-    this.breakTime = m.seq(
-      '[',
-      'break',
-      ':',
-      m.choice(m.singleQuoted(this.time), m.doubleQuoted(this.time)),
       ']',
     ).ast;
 
@@ -303,8 +300,7 @@ export function speechMarkdownGrammar(myna: any): any {
         this.textModifier,
         this.emphasis,
         this.shortBreak,
-        this.breakStrength,
-        this.breakTime,
+        this.break,
         this.audio,
         this.plainTextSpecialChars,
         this.plainText,

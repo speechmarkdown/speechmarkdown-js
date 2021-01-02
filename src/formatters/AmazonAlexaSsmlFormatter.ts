@@ -319,6 +319,15 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
         const time = ast.children[0].allText;
         return this.addTagWithAttrs(lines, null, 'break', { time: time });
       }
+      case 'break': {
+        const val = ast.children[0].allText;
+        let attrs = {};
+        switch( ast.children[0].children[0].name ){
+          case 'breakStrengthValue': attrs = {strength: val}; break;
+          case 'time': attrs = {time: val}; break;
+        }
+        return this.addTagWithAttrs(lines, null, 'break', attrs);
+      }
       case 'shortEmphasisModerate': {
         const text = ast.children[0].allText;
         return this.addTagWithAttrs(lines, text, 'emphasis', { level: 'moderate' });
