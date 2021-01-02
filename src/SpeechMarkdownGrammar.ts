@@ -32,6 +32,25 @@ export function speechMarkdownGrammar(myna: any): any {
     const nonSpecialCharEmphasis = m.notChar(specialCharSet).unless(m.newLine);
     const quoteChar = m.notChar('"');
 
+    /*
+     xsd:token - XML Schema2 section 3.3.2
+     token represents tokenized strings.
+     The ·value space· of token is the set of strings that do not contain the
+     carriage return (#xD), line feed (#xA) nor tab (#x9) characters, that have
+     no leading or trailing spaces (#x20) and that have no internal sequences
+     of two or more spaces. The ·lexical space· of token is the set of strings
+     that do not contain the carriage return (#xD), line feed (#xA) nor
+     tab (#x9) characters, that have no leading or trailing spaces (#x20) and
+     that have no internal sequences of two or more spaces.
+
+     This implementation plays very loose with the definition.
+     */
+    this.xsdToken = m.choice(
+      m.digits,
+      m.letters,
+      m.char(specialCharSetEmphasis)
+    ).oneOrMore.ast;
+
     this.plainText = m.choice(
       m.digits,
       m.letters,
@@ -294,6 +313,17 @@ export function speechMarkdownGrammar(myna: any): any {
       ']',
     ).ast;
 
+    this.markTag = m.seq(
+      '[',
+      'mark',
+      ':',
+      m.choice(
+        m.singleQuoted(this.xsdToken),
+        m.doubleQuoted(this.xsdToken)
+      ),
+      ']'
+    ).ast;
+
     this.any = m.advance;
     this.inline = m
       .choice(
@@ -302,6 +332,7 @@ export function speechMarkdownGrammar(myna: any): any {
         this.shortBreak,
         this.break,
         this.audio,
+        this.markTag,
         this.plainTextSpecialChars,
         this.plainText,
         this.any,

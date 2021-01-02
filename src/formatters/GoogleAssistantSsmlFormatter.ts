@@ -166,6 +166,10 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
         }
         return this.addTagWithAttrs(lines, null, 'break', attrs);
       }
+      case 'markTag': {
+        const name = ast.children[0].allText;
+        return this.addTagWithAttrs(lines, null, 'mark', { name: name });
+      }
       case 'shortEmphasisModerate': {
         const text = ast.children[0].allText;
         return this.addTagWithAttrs(lines, text, 'emphasis', { level: 'moderate' });
