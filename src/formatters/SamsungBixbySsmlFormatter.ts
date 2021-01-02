@@ -20,9 +20,10 @@ export class SamsungBixbySsmlFormatter extends SsmlFormatterBase {
     this.modifierKeyToSsmlTagMappings.date = null;
     this.modifierKeyToSsmlTagMappings.sub = 'sub';
     this.modifierKeyToSsmlTagMappings.ipa = null;
-    this.modifierKeyToSsmlTagMappings.rate = null;
-    this.modifierKeyToSsmlTagMappings.pitch = null;
-    this.modifierKeyToSsmlTagMappings.volume = null;
+    this.modifierKeyToSsmlTagMappings.rate = 'prosody';
+    this.modifierKeyToSsmlTagMappings.pitch = 'prosody';
+    this.modifierKeyToSsmlTagMappings.volume = 'prosody';
+    this.modifierKeyToSsmlTagMappings.whisper = 'prosody';
   }
 
   // tslint:disable-next-line: max-func-body-length
@@ -66,13 +67,13 @@ export class SamsungBixbySsmlFormatter extends SsmlFormatterBase {
             // case 'unit':
             case 'fraction':
             case 'ordinal':
-            {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              {
+                if (!textModifierObject.tags[ssmlTag]) {
+                  textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+                }
+                textModifierObject.tags[ssmlTag].attrs = { 'interpret-as': key };
+                break;
               }
-              textModifierObject.tags[ssmlTag].attrs = { 'interpret-as': key };
-              break;
-            }
 
             case "number": {
               if (!textModifierObject.tags[ssmlTag]) {
@@ -112,13 +113,13 @@ export class SamsungBixbySsmlFormatter extends SsmlFormatterBase {
             //   break;
             // }
 
-            // case 'whisper': {
-            //   if (!textModifierObject.tags[ssmlTag]) {
-            //     textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-            //   }
-            //   textModifierObject.tags[ssmlTag].attrs = { volume: 'x-soft', rate: 'slow' };
-            //   break;
-            // }
+            case 'whisper': {
+              if (!textModifierObject.tags[ssmlTag]) {
+                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              }
+              textModifierObject.tags[ssmlTag].attrs = { volume: 'x-soft', rate: 'slow' };
+              break;
+            }
 
             // case 'ipa': {
             //   // Google Assistant does not support <phoneme> tag
@@ -137,20 +138,20 @@ export class SamsungBixbySsmlFormatter extends SsmlFormatterBase {
               break;
             }
 
-            // case 'volume':
-            // case 'rate':
-            // case 'pitch': {
+            case 'volume':
+            case 'rate':
+            case 'pitch': {
 
-            //   if (!textModifierObject.tags[ssmlTag]) {
-            //     textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-            //   }
+              if (!textModifierObject.tags[ssmlTag]) {
+                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              }
 
-            //   const attrs = {};
-            //   attrs[key] = value || 'medium';
-            //   textModifierObject.tags[ssmlTag].attrs = { ...textModifierObject.tags[ssmlTag].attrs, ...attrs };
+              const attrs = {};
+              attrs[key] = value || 'medium';
+              textModifierObject.tags[ssmlTag].attrs = { ...textModifierObject.tags[ssmlTag].attrs, ...attrs };
 
-            //   break;
-            // }
+              break;
+            }
 
             default: {
 
@@ -192,21 +193,29 @@ export class SamsungBixbySsmlFormatter extends SsmlFormatterBase {
         }
       }
       case 'shortBreak': {
-        return lines;
-        // const time = ast.children[0].allText;
-        // return this.addTagWithAttrs(lines, null, 'break', { time: time });
+        const time = ast.children[0].allText;
+        return this.addTagWithAttrs(lines, null, 'break', { time: time });
+      }
+      case 'break': {
+        const val = ast.children[0].allText;
+        let attrs = {};
+        switch (ast.children[0].children[0].name) {
+          case 'breakStrengthValue': attrs = { strength: val }; break;
+          case 'time': attrs = { time: val }; break;
+        }
+        return this.addTagWithAttrs(lines, null, 'break', attrs);
       }
       case 'shortEmphasisModerate':
       case 'shortEmphasisStrong':
       case 'shortEmphasisNone':
       case 'shortEmphasisReduced':
-      {
-        const text = ast.children[0].allText;
-        if (text) {
-          lines.push(text);
+        {
+          const text = ast.children[0].allText;
+          if (text) {
+            lines.push(text);
+          }
+          return lines;
         }
-        return lines;
-      }
       // case 'shortEmphasisStrong': {
       //   const text = ast.children[0].allText;
       //   return this.addTagWithAttrs(lines, text, 'emphasis', { level: 'strong' });
@@ -271,7 +280,7 @@ export class SamsungBixbySsmlFormatter extends SsmlFormatterBase {
       }
 
       case 'audio': {
-        const url = ast.children[0].allText.replace(/&/g,'&amp;');
+        const url = ast.children[0].allText.replace(/&/g, '&amp;');
         return this.addTagWithAttrs(lines, null, 'audio', { src: url }, true);
       }
       case 'simpleLine': {
@@ -289,6 +298,7 @@ export class SamsungBixbySsmlFormatter extends SsmlFormatterBase {
 
         return lines;
       }
+
       case 'plainText':
       case 'plainTextSpecialChars':
       case 'plainTextEmphasis':

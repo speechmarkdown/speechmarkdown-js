@@ -51,7 +51,7 @@ describe('whisper-standard', () => {
 
     const expected = dedent`
       <speak>
-      I am not a real human.
+      <prosody volume="x-soft" rate="slow">I am not a real human.</prosody>
       </speak>
     `;
 

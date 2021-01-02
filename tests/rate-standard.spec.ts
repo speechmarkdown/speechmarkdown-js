@@ -53,9 +53,9 @@ describe('rate-standard-medium', () => {
 
     const expected = dedent`
       <speak>
-      A medium rate 1
-      A medium rate 2
-      A medium rate 3
+      A <prosody rate="medium">medium</prosody> rate 1
+      A <prosody rate="medium">medium</prosody> rate 2
+      A <prosody rate="medium">medium</prosody> rate 3
       </speak>
     `;
 
@@ -124,8 +124,8 @@ describe('rate-standard-x-slow', () => {
 
     const expected = dedent`
       <speak>
-      A xslow rate
-      A xslow rate
+      A <prosody rate="x-slow">xslow</prosody> rate
+      A <prosody rate="x-slow">xslow</prosody> rate
       </speak>
     `;
 
@@ -193,8 +193,8 @@ describe('rate-standard-slow', () => {
 
     const expected = dedent`
       <speak>
-      A slow rate
-      A slow rate
+      A <prosody rate="slow">slow</prosody> rate
+      A <prosody rate="slow">slow</prosody> rate
       </speak>
     `;
 
@@ -262,8 +262,8 @@ describe('rate-standard-x-fast', () => {
 
     const expected = dedent`
       <speak>
-      A xfast rate
-      A xfast rate
+      A <prosody rate="x-fast">xfast</prosody> rate
+      A <prosody rate="x-fast">xfast</prosody> rate
       </speak>
     `;
 
@@ -331,8 +331,8 @@ describe('rate-standard-fast', () => {
 
     const expected = dedent`
       <speak>
-      A fast rate
-      A fast rate
+      A <prosody rate="fast">fast</prosody> rate
+      A <prosody rate="fast">fast</prosody> rate
       </speak>
     `;
 

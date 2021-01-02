@@ -53,9 +53,9 @@ describe('pitch-standard-medium', () => {
 
     const expected = dedent`
       <speak>
-      A medium pitch 1
-      A medium pitch 2
-      A medium pitch 3
+      A <prosody pitch="medium">medium</prosody> pitch 1
+      A <prosody pitch="medium">medium</prosody> pitch 2
+      A <prosody pitch="medium">medium</prosody> pitch 3
       </speak>
     `;
 
@@ -124,8 +124,8 @@ describe('pitch-standard-x-low', () => {
 
     const expected = dedent`
       <speak>
-      A xlow pitch
-      A xlow pitch
+      A <prosody pitch="x-low">xlow</prosody> pitch
+      A <prosody pitch="x-low">xlow</prosody> pitch
       </speak>
     `;
 
@@ -193,8 +193,8 @@ describe('pitch-standard-low', () => {
 
     const expected = dedent`
       <speak>
-      A low pitch
-      A low pitch
+      A <prosody pitch="low">low</prosody> pitch
+      A <prosody pitch="low">low</prosody> pitch
       </speak>
     `;
 
@@ -262,8 +262,8 @@ describe('pitch-standard-x-high', () => {
 
     const expected = dedent`
       <speak>
-      A xhigh pitch
-      A xhigh pitch
+      A <prosody pitch="x-high">xhigh</prosody> pitch
+      A <prosody pitch="x-high">xhigh</prosody> pitch
       </speak>
     `;
 
@@ -331,8 +331,8 @@ describe('pitch-standard-high', () => {
 
     const expected = dedent`
       <speak>
-      A high pitch
-      A high pitch
+      A <prosody pitch="high">high</prosody> pitch
+      A <prosody pitch="high">high</prosody> pitch
       </speak>
     `;
 

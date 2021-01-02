@@ -51,7 +51,7 @@ describe('break-strength', () => {
 
     const expected = dedent`
       <speak>
-      Sample  speech  markdown
+      Sample <break strength="weak"/> speech <break strength="strong"/> markdown
       </speak>
     `;
 

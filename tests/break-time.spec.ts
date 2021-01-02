@@ -51,7 +51,7 @@ describe('break-time', () => {
 
     const expected = dedent`
       <speak>
-      Sample  speech  markdown
+      Sample <break time="3s"/> speech <break time="250ms"/> markdown
       </speak>
     `;
 

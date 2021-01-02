@@ -51,7 +51,7 @@ describe('prosody-multiple-modifiers rate + volume', () => {
 
     const expected = dedent`
       <speak>
-      Multiple modifiers on same text
+      Multiple modifiers on same <prosody rate="fast" volume="loud">text</prosody>
       </speak>
     `;
 
@@ -122,7 +122,7 @@ describe('prosody-multiple-modifiers rate + pitch', () => {
 
     const expected = dedent`
       <speak>
-      Multiple modifiers on same text
+      Multiple modifiers on same <prosody rate="fast" pitch="low">text</prosody>
       </speak>
     `;
 
@@ -194,7 +194,7 @@ describe('prosody-multiple-modifiers volume + pitch', () => {
 
     const expected = dedent`
       <speak>
-      Multiple modifiers on same text
+      Multiple modifiers on same <prosody volume="soft" pitch="low">text</prosody>
       </speak>
     `;
 
@@ -265,7 +265,7 @@ describe('prosody-multiple-modifiers volume + pitch + rate', () => {
 
     const expected = dedent`
       <speak>
-      Multiple modifiers on same text
+      Multiple modifiers on same <prosody volume="soft" pitch="low" rate="medium">text</prosody>
       </speak>
     `;
 
@@ -336,7 +336,7 @@ describe('prosody-multiple-modifiers vol + pitch + rate defaults', () => {
 
     const expected = dedent`
       <speak>
-      Multiple modifiers on same text
+      Multiple modifiers on same <prosody volume="medium" pitch="medium" rate="medium">text</prosody>
       </speak>
     `;
 

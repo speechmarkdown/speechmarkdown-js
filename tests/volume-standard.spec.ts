@@ -60,10 +60,10 @@ describe('volume-standard-medium', () => {
 
     const expected = dedent`
       <speak>
-      A medium volume 1
-      A medium volume 2
-      A medium volume 3
-      A medium volume 4
+      A <prosody volume="medium">medium</prosody> volume 1
+      A <prosody volume="medium">medium</prosody> volume 2
+      A <prosody volume="medium">medium</prosody> volume 3
+      A <prosody volume="medium">medium</prosody> volume 4
       </speak>
     `;
 
@@ -137,7 +137,7 @@ describe('volume-standard-silent', () => {
 
     const expected = dedent`
       <speak>
-      A silent volume
+      A <prosody volume="silent">silent</prosody> volume
       </speak>
     `;
 
@@ -208,7 +208,7 @@ describe('volume-standard-x-soft', () => {
 
     const expected = dedent`
       <speak>
-      A xsoft volume
+      A <prosody volume="x-soft">xsoft</prosody> volume
       </speak>
     `;
 
@@ -279,7 +279,7 @@ describe('volume-standard-soft', () => {
 
     const expected = dedent`
       <speak>
-      A soft volume
+      A <prosody volume="soft">soft</prosody> volume
       </speak>
     `;
 
@@ -350,7 +350,7 @@ describe('volume-standard-x-loud', () => {
 
     const expected = dedent`
       <speak>
-      A xloud volume
+      A <prosody volume="x-loud">xloud</prosody> volume
       </speak>
     `;
 
@@ -421,7 +421,7 @@ describe('volume-standard-loud', () => {
 
     const expected = dedent`
       <speak>
-      A loud volume
+      A <prosody volume="loud">loud</prosody> volume
       </speak>
     `;
 

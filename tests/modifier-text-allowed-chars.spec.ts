@@ -51,7 +51,7 @@ describe('modifier-text-allowed-chars minus sign', () => {
 
     const expected = dedent`
       <speak>
-      Some ex-text
+      Some <prosody volume="medium">ex-text</prosody>
       </speak>
     `;
 
