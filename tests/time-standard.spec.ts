@@ -58,6 +58,21 @@ describe('time-standard', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      The time is <say-as interpret-as="time" format="hms12">2:30pm</say-as>.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
   test('converts to Plain Text', () => {
 
     const options = {
