@@ -90,7 +90,7 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
 
               let attrValue = 'digits';
               if (isNaN(textModifierObject.text as any)) {
-                attrValue = 'spell-out';
+                attrValue = 'characters';
               }
 
               textModifierObject.tags[ssmlTag].attrs = { 'interpret-as': attrValue };
