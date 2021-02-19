@@ -25,6 +25,7 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
     this.modifierKeyToSsmlTagMappings.volume = 'prosody';
     this.modifierKeyToSsmlTagMappings.whisper = 'prosody';
     this.modifierKeyToSsmlTagMappings.voice = 'voice';
+    this.modifierKeyToSsmlTagMappings.newscaster = 'mstts:express-as';
   }
 
   // tslint:disable-next-line: max-func-body-length
@@ -202,6 +203,14 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
           }
 
           case 'defaults': {
+            break;
+          }
+
+          case 'newscaster': {
+            if (!sectionObject.tags[ssmlTag]) {
+              sectionObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+            }
+            sectionObject.tags[ssmlTag].attrs = { 'style': 'newscast' };
             break;
           }
 
