@@ -222,60 +222,16 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
       case 'shortEmphasisModerate':
       case 'shortEmphasisStrong':
       case 'shortEmphasisNone':
-      case 'shortEmphasisReduced':
-        {
-          const text = ast.children[0].allText;
-          if (text) {
-            lines.push(text);
-          }
-          return lines;
+      case 'shortEmphasisReduced': {
+        const text = ast.children[0].allText;
+        if (text) {
+          lines.push(text);
         }
-      // case 'shortEmphasisStrong': {
-      //   const text = ast.children[0].allText;
-      //   return this.addTagWithAttrs(lines, text, 'emphasis', { level: 'strong' });
-      // }
-      // case 'shortEmphasisNone': {
-      //   const text = ast.children[0].allText;
-      //   return this.addTagWithAttrs(lines, text, 'emphasis', { level: 'none' });
-      // }
-      // case 'shortEmphasisReduced': {
-      //   const text = ast.children[0].allText;
-      //   return this.addTagWithAttrs(lines, text, 'emphasis', { level: 'reduced' });
-      // }
-
-      // case 'textModifier': {
-      //   const tmo = this.getTextModifierObject(ast);
-
-      //   if (tmo.textOnly) {
-      //     // Quick return if tag is not supported
-      //     lines.push(tmo.text)
-      //     return lines
-      //   }
-
-      //   const tagsSortedDesc = Object.keys(tmo.tags).sort((a: any, b: any) => { return tmo.tags[b].sortId - tmo.tags[a].sortId });
-
-      //   let inner = tmo.text;
-
-      //   for (let index = 0; index < tagsSortedDesc.length; index++) {
-      //     const tag = tagsSortedDesc[index];
-      //     const attrs = tmo.tags[tag].attrs;
-
-      //     inner = this.getTagWithAttrs(inner, tag, attrs);
-
-      //   }
-      //   lines.push(inner);
-
-      //   return lines;
-      // }
+        return lines;
+      }
 
       case 'textModifier': {
         const tmo = this.getTextModifierObject(ast);
-
-        if (tmo.textOnly) {
-          // Quick return if tag is not supported
-          lines.push(tmo.text)
-          return lines
-        }
 
         const tagsSortedDesc = Object.keys(tmo.tags).sort((a: any, b: any) => { return tmo.tags[b].sortId - tmo.tags[a].sortId });
 
