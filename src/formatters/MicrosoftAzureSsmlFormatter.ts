@@ -54,16 +54,6 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
           const sortId = this.ssmlTagSortOrder.indexOf(ssmlTag);
 
           switch (key) {
-            // case 'emphasis': {
-            //   if (!textModifierObject.tags[ssmlTag]) {
-            //     textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-            //   }
-            //   textModifierObject.tags[ssmlTag].attrs = { level: value || 'moderate' };
-            //   break;
-            // }
-
-            // case 'expletive':
-            // case 'unit':
             case 'address':
             case 'fraction':
             case 'ordinal':
@@ -181,6 +171,49 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
     return textModifierObject;
   }
 
+  // tslint:disable-next-line: max-func-body-length
+  private getSectionObject(ast: any): any {
+    let sectionObject = {
+      tags: {}
+    };
+
+    for (let index = 0; index < ast.children.length; index++) {
+      const child = ast.children[index];
+
+      if (child.name === 'sectionModifierKeyOptionalValue') {
+        let key = child.children[0].allText;
+        const value = child.children.length === 2 ? child.children[1].allText : '';
+        const ssmlTag = this.modifierKeyToSsmlTagMappings[key];
+        const sortId = this.ssmlTagSortOrder.indexOf(ssmlTag);
+
+        switch (key) {
+
+          case 'voice': {
+            const name = this.sentenceCase(value || 'device')
+
+            if (name != 'Device') {
+              if (!sectionObject.tags[ssmlTag]) {
+                sectionObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              }
+
+              sectionObject.tags[ssmlTag].attrs = { 'name': name };
+            }
+            break;
+          }
+
+          case 'defaults': {
+            break;
+          }
+
+          default: {
+
+          }
+        }
+      }
+    }
+
+    return sectionObject;
+  }
 
   // tslint:disable-next-line: max-func-body-length
   protected formatFromAst(ast: any, lines: string[] = []): string[] {
@@ -275,6 +308,17 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
       case 'plainTextPhone':
       case 'plainTextModifier': {
         lines.push(ast.allText);
+        return lines;
+      }
+
+      case 'section': {
+        const so = this.getSectionObject(ast);
+
+        const tagsSortedAsc = Object.keys(so.tags).sort((a: any, b: any) => { return so.tags[a].sortId - so.tags[b].sortId });
+
+        this.addSectionEndTag(lines);
+        this.addSectionStartTag(tagsSortedAsc, so, lines);
+
         return lines;
       }
 
