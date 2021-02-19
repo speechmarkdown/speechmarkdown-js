@@ -24,6 +24,7 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
     this.modifierKeyToSsmlTagMappings.pitch = 'prosody';
     this.modifierKeyToSsmlTagMappings.volume = 'prosody';
     this.modifierKeyToSsmlTagMappings.whisper = 'prosody';
+    this.modifierKeyToSsmlTagMappings.voice = 'voice';
   }
 
   // tslint:disable-next-line: max-func-body-length
@@ -149,6 +150,20 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
               attrs[key] = value || 'medium';
               textModifierObject.tags[ssmlTag].attrs = { ...textModifierObject.tags[ssmlTag].attrs, ...attrs };
 
+              break;
+            }
+
+            case 'voice': {
+              const name = this.sentenceCase(value || 'device')
+
+              // TODO: valid voices list may not be useful when there're custom voices.
+              if (name != 'Device') {
+                if (!textModifierObject.tags[ssmlTag]) {
+                  textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+                }
+
+                textModifierObject.tags[ssmlTag].attrs = { 'name': name };
+              }
               break;
             }
 
