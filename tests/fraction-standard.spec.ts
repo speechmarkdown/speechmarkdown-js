@@ -58,6 +58,22 @@ describe('fraction-standard', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Add <say-as interpret-as="fraction">2/3</say-as> cup of milk.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {
@@ -117,6 +133,22 @@ describe('fraction-standard includes a plus sign', () => {
 
     const options = {
       platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Add <say-as interpret-as="fraction">1+1/2</say-as> cups of flour.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
     };
     const ssml = speech.toSSML(markdown, options);
 
