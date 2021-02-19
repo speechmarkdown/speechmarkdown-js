@@ -58,6 +58,22 @@ describe('modifier-text-allowed-chars minus sign', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Some <prosody volume="medium">ex-text</prosody>
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {
@@ -129,6 +145,22 @@ describe('modifier-text-allowed-chars non-bracket special chars', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      This is text with ~parens! but this and other special characters: *~@#\\_!+- are ignored
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {
@@ -187,6 +219,22 @@ describe('modifier-text-allowed-chars bracket special chars', () => {
 
     const options = {
       platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      This is text with ~parens! but this and other special characters: *~@#\\_!+- are ignored
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -258,6 +306,22 @@ describe('modifier-text-allowed-chars bracket special chars', () => {
 
     const options = {
       platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      This is text with (parens) but this and other special characters: []()*~@#\\_!+- are ignored
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
     };
     const ssml = speech.toSSML(markdown, options);
 
