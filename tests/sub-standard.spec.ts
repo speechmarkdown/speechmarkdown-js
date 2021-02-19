@@ -58,6 +58,22 @@ describe('sub-standard', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+    const options = {
+      platform: 'microsoft-azure',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      The element is <sub alias="aluminum">Al</sub>.
+      Visit our website at <sub alias="speech mark down dot org">www.speechmarkdown.org</sub>.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
     const options = {};
     const text = speech.toText(markdown, options);
