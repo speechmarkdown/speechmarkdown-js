@@ -280,7 +280,7 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
 
       case 'audio': {
         const url = ast.children[0].allText.replace(/&/g, '&amp;');
-        return this.addTagWithAttrs(lines, null, 'audio', { src: url }, true);
+        return this.addTagWithAttrs(lines, null, 'audio', { src: url }, false);
       }
       case 'simpleLine': {
         this.processAst(ast.children, lines);

@@ -62,7 +62,24 @@ describe('audio-standard', () => {
     expect(ssml).toBe(expected);
   });
 
-  test('converts to Plain Text', () => {
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      <audio src="https://www.speechmarkdown.org/test.mp3"/>
+      Announcing Speech Markdown.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+test('converts to Plain Text', () => {
 
     const options = {
     };
