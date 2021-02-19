@@ -62,6 +62,23 @@ describe('rate-standard-medium', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+    const options = {
+      platform: 'microsoft-azure',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      A <prosody rate="medium">medium</prosody> rate 1
+      A <prosody rate="medium">medium</prosody> rate 2
+      A <prosody rate="medium">medium</prosody> rate 3
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
     const options = {};
     const text = speech.toText(markdown, options);
@@ -119,6 +136,22 @@ describe('rate-standard-x-slow', () => {
   test('converts to SSML - Samsung Bixby', () => {
     const options = {
       platform: 'samsung-bixby',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      A <prosody rate="x-slow">xslow</prosody> rate
+      A <prosody rate="x-slow">xslow</prosody> rate
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Microsoft Azure', () => {
+    const options = {
+      platform: 'microsoft-azure',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -201,6 +234,22 @@ describe('rate-standard-slow', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+    const options = {
+      platform: 'microsoft-azure',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      A <prosody rate="slow">slow</prosody> rate
+      A <prosody rate="slow">slow</prosody> rate
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
     const options = {};
     const text = speech.toText(markdown, options);
@@ -270,6 +319,22 @@ describe('rate-standard-x-fast', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+    const options = {
+      platform: 'microsoft-azure',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      A <prosody rate="x-fast">xfast</prosody> rate
+      A <prosody rate="x-fast">xfast</prosody> rate
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
     const options = {};
     const text = speech.toText(markdown, options);
@@ -326,6 +391,22 @@ describe('rate-standard-fast', () => {
   test('converts to SSML - Samsung Bixby', () => {
     const options = {
       platform: 'samsung-bixby',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      A <prosody rate="fast">fast</prosody> rate
+      A <prosody rate="fast">fast</prosody> rate
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Microsoft Azure', () => {
+    const options = {
+      platform: 'microsoft-azure',
     };
     const ssml = speech.toSSML(markdown, options);
 

@@ -62,6 +62,23 @@ describe('pitch-standard-medium', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+    const options = {
+      platform: 'microsoft-azure',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      A <prosody pitch="medium">medium</prosody> pitch 1
+      A <prosody pitch="medium">medium</prosody> pitch 2
+      A <prosody pitch="medium">medium</prosody> pitch 3
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
     const options = {};
     const text = speech.toText(markdown, options);
@@ -119,6 +136,22 @@ describe('pitch-standard-x-low', () => {
   test('converts to SSML - Samsung Bixby', () => {
     const options = {
       platform: 'samsung-bixby',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      A <prosody pitch="x-low">xlow</prosody> pitch
+      A <prosody pitch="x-low">xlow</prosody> pitch
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Microsoft Azure', () => {
+    const options = {
+      platform: 'microsoft-azure',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -201,6 +234,22 @@ describe('pitch-standard-low', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+    const options = {
+      platform: 'microsoft-azure',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      A <prosody pitch="low">low</prosody> pitch
+      A <prosody pitch="low">low</prosody> pitch
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
     const options = {};
     const text = speech.toText(markdown, options);
@@ -270,6 +319,22 @@ describe('pitch-standard-x-high', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+    const options = {
+      platform: 'microsoft-azure',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      A <prosody pitch="x-high">xhigh</prosody> pitch
+      A <prosody pitch="x-high">xhigh</prosody> pitch
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
     const options = {};
     const text = speech.toText(markdown, options);
@@ -326,6 +391,22 @@ describe('pitch-standard-high', () => {
   test('converts to SSML - Samsung Bixby', () => {
     const options = {
       platform: 'samsung-bixby',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      A <prosody pitch="high">high</prosody> pitch
+      A <prosody pitch="high">high</prosody> pitch
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Microsoft Azure', () => {
+    const options = {
+      platform: 'microsoft-azure',
     };
     const ssml = speech.toSSML(markdown, options);
 

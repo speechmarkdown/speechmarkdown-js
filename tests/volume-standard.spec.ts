@@ -70,6 +70,25 @@ describe('volume-standard-medium', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      A <prosody volume="medium">medium</prosody> volume 1
+      A <prosody volume="medium">medium</prosody> volume 2
+      A <prosody volume="medium">medium</prosody> volume 3
+      A <prosody volume="medium">medium</prosody> volume 4
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {
@@ -132,6 +151,22 @@ describe('volume-standard-silent', () => {
 
     const options = {
       platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      A <prosody volume="silent">silent</prosody> volume
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -215,6 +250,22 @@ describe('volume-standard-x-soft', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      A <prosody volume="x-soft">xsoft</prosody> volume
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {
@@ -274,6 +325,22 @@ describe('volume-standard-soft', () => {
 
     const options = {
       platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      A <prosody volume="soft">soft</prosody> volume
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -357,6 +424,22 @@ describe('volume-standard-x-loud', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      A <prosody volume="x-loud">xloud</prosody> volume
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {
@@ -416,6 +499,22 @@ describe('volume-standard-loud', () => {
 
     const options = {
       platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      A <prosody volume="loud">loud</prosody> volume
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
     };
     const ssml = speech.toSSML(markdown, options);
 
