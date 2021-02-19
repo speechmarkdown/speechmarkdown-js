@@ -58,6 +58,22 @@ describe('number-standard', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Your balance is: <say-as interpret-as="cardinal">12345</say-as>.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {
