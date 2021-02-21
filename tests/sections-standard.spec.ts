@@ -72,6 +72,55 @@ describe('sections-standard', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby',
+      preserveEmptyLines: false
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      My voice and language is based on the device.
+      Now I am speaking as Kendra from the US with a US accent.
+      Switching to Brian from the UK with a US accent.
+      Now back to the device setting.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+    <speak>
+    My voice and language is based on the device.
+
+
+    <voice name="Kendra">
+    Now I am speaking as Kendra from the US with a US accent.
+
+    </voice>
+
+    <voice name="Brian">
+    Switching to Brian from the UK with a US accent.
+
+    </voice>
+
+    Now back to the device setting.
+    </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {
@@ -170,6 +219,30 @@ describe('sections-standard end speak tag at end', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+
+      <voice name="Kendra">
+      Section 1
+
+      </voice>
+
+      <voice name="Brian">
+      Section 2</voice>
+
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {
@@ -240,6 +313,24 @@ describe('sections-standard voice section on same line', () => {
     const expected = dedent`
       <speak>
        Hey there, nice to meet you
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+
+      <voice name="Brian"> Hey there, nice to meet you</voice>
+
       </speak>
     `;
 

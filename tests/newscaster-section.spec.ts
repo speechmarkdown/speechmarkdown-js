@@ -78,6 +78,30 @@ describe('newscaster-section normal to dj to normal', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+    <speak>
+    Normal speech.
+
+
+    <mstts:express-as style="newscast">
+    Switching to a newscaster.
+
+    </mstts:express-as>
+
+    Now back to normal speech.
+    </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {
@@ -161,6 +185,25 @@ describe('newscaster-section end speak tag at end', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+
+      <mstts:express-as style="newscast">
+      Section 1</mstts:express-as>
+
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {
@@ -227,6 +270,24 @@ describe('newscaster-section section on same line', () => {
     const expected = dedent`
       <speak>
        Hey there, nice to meet you
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+
+      <mstts:express-as style="newscast"> Hey there, nice to meet you</mstts:express-as>
+
       </speak>
     `;
 

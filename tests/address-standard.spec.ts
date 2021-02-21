@@ -58,6 +58,22 @@ describe('address-standard', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      I'm at <say-as interpret-as="address">150th CT NE, Redmond, WA</say-as>.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {

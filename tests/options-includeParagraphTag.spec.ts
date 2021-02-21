@@ -58,6 +58,22 @@ describe('options-includeParagraphTag default to false', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Text line
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
 });
 
 describe('options-includeParagraphTag set to false', () => {
@@ -119,6 +135,22 @@ describe('options-includeParagraphTag set to false', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure',
+      includeParagraphTag: false,
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Text line
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
 
 });
 
@@ -172,6 +204,25 @@ describe('options-includeFormatterComment set to true', () => {
 
     const options = {
       platform: 'samsung-bixby',
+      includeParagraphTag: true,
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      <p>
+      Text line
+      </p>
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure',
       includeParagraphTag: true,
     };
     const ssml = speech.toSSML(markdown, options);

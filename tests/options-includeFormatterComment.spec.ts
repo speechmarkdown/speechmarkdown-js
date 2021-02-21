@@ -58,6 +58,22 @@ describe('options-includeFormatterComment default to false', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Text line
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
 });
 
 describe('options-includeFormatterComment set to false', () => {
@@ -106,6 +122,23 @@ describe('options-includeFormatterComment set to false', () => {
 
     const options = {
       platform: 'samsung-bixby',
+      includeFormatterComment: false,
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Text line
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure',
       includeFormatterComment: false,
     };
     const ssml = speech.toSSML(markdown, options);
@@ -175,6 +208,24 @@ describe('options-includeFormatterComment set to true', () => {
 
     const expected = dedent`
       <!-- Converted from Speech Markdown to SSML for Samsung Bixby -->
+      <speak>
+      Text line
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure',
+      includeFormatterComment: true,
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <!-- Converted from Speech Markdown to SSML for Microsoft Azure -->
       <speak>
       Text line
       </speak>

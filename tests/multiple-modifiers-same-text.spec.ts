@@ -58,6 +58,22 @@ describe('multiple-modifiers-same-text', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Your balance is: <say-as interpret-as="cardinal"><prosody volume="x-soft" rate="slow" pitch="high">12345</prosody></say-as>.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
 
     const options = {

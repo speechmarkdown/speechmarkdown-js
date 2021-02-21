@@ -62,6 +62,22 @@ describe('telephone-standard', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
+    };
+    const ssml = speech.toSSML(markdownNumber, options);
+
+    const expected = dedent`
+      <speak>
+      The number is <say-as interpret-as="telephone">5558675309</say-as>.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text - Number', () => {
 
     const options = {
@@ -120,6 +136,22 @@ describe('telephone-standard', () => {
     const expected = dedent`
       <speak>
       The number is (888) 555-1212.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
+    };
+    const ssml = speech.toSSML(markdownParenthesis, options);
+
+    const expected = dedent`
+      <speak>
+      The number is <say-as interpret-as="telephone">(888) 555-1212</say-as>.
       </speak>
     `;
 

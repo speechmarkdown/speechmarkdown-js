@@ -58,6 +58,22 @@ describe('voice-standard', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+    const options = {
+      platform: 'microsoft-azure',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Why do you keep switching voices <voice name="Brian">from one</voice> to <voice name="Kendra">the other</voice>?
+      Why do you keep switching voices <voice name="Brian">from one</voice> to <voice name="Kendra">the other</voice>?
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
     const options = {};
     const text = speech.toText(markdown, options);
@@ -121,6 +137,22 @@ describe('voice-standard lowercase name', () => {
       <speak>
       Why do you keep switching voices from one to the other?
       Why do you keep switching voices from one to the other?
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Microsoft Azure', () => {
+    const options = {
+      platform: 'microsoft-azure',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Why do you keep switching voices <voice name="Brian">from one</voice> to <voice name="Kendra">the other</voice>?
+      Why do you keep switching voices <voice name="Brian">from one</voice> to <voice name="Kendra">the other</voice>?
       </speak>
     `;
 
@@ -196,6 +228,22 @@ describe('voice-standard invalid name', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+    const options = {
+      platform: 'microsoft-azure',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Why do you keep switching voices <voice name="Brianzzzz">from one</voice> to <voice name="Kendra">the other</voice>?
+      Why do you keep switching voices <voice name="Brianzzzz">from one</voice> to <voice name="Kendra">the other</voice>?
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
     const options = {};
     const text = speech.toText(markdown, options);
@@ -259,6 +307,22 @@ describe('voice-standard device name', () => {
       <speak>
       Why do you keep switching voices from one to the other?
       Why do you keep switching voices from one to the other?
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Microsoft Azure', () => {
+    const options = {
+      platform: 'microsoft-azure',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Why do you keep switching voices from one to <voice name="Kendra">the other</voice>?
+      Why do you keep switching voices from one to <voice name="Kendra">the other</voice>?
       </speak>
     `;
 

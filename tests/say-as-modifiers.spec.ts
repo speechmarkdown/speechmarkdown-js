@@ -58,6 +58,22 @@ describe('say-as-modifiers last modifier wins', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+    const options = {
+      platform: 'microsoft-azure',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Some <say-as interpret-as="characters">text</say-as>
+      Some <say-as interpret-as="characters">text</say-as>
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
     const options = {};
     const text = speech.toText(markdown, options);

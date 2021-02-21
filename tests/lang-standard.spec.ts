@@ -58,6 +58,22 @@ describe('lang-standard', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+    const options = {
+      platform: 'microsoft-azure',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      In Paris, they pronounce it Paris.
+      In Paris, they pronounce it Paris.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
     const options = {};
     const text = speech.toText(markdown, options);
