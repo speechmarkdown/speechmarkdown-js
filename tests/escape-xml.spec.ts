@@ -1,6 +1,4 @@
 import dedent from "ts-dedent";
-import { AmazonAlexaSsmlFormatter } from "../src/formatters/AmazonAlexaSsmlFormatter";
-import { SsmlFormatterBase } from "../src/formatters/SsmlFormatterBase";
 import { SpeechMarkdown } from "../src/SpeechMarkdown";
 
 const speech = new SpeechMarkdown();
@@ -121,5 +119,56 @@ describe('escape-xml', () => {
     `;
 
     expect(ssml).toBe(expected);
+  });
+});
+
+describe('escape-xml: non-regression with SpeechMarkdown elements', () => {
+
+  test('break short syntax', () => {
+    const options = {
+      platform        : 'amazon-alexa',
+      escapeXmlSymbols: true
+    };
+    const text = `Procter [250ms] and Gamble`;
+    const ssml = speech.toSSML(text, options);
+
+    const exp  = dedent`
+    <speak>
+    Procter <break time="250ms"/> and Gamble
+    </speak>`;
+
+    expect(ssml).toEqual(exp);
+  });
+
+  test('break long syntax', () => {
+    const options = {
+      platform        : 'amazon-alexa',
+      escapeXmlSymbols: true
+    };
+    const text = `Procter [break:"500ms"] and [break:"weak"] Gamble`;
+    const ssml = speech.toSSML(text, options);
+
+    const exp  = dedent`
+    <speak>
+    Procter <break time="500ms"/> and <break strength="weak"/> Gamble
+    </speak>`;
+
+    expect(ssml).toEqual(exp);
+  });
+
+  test('lang', () => {
+    const options = {
+      platform        : 'amazon-alexa',
+      escapeXmlSymbols: true
+    };
+    const text = `In Paris, they pronounce it (Paris)[lang:"fr-FR"]`;
+    const ssml = speech.toSSML(text, options);
+
+    const exp  = dedent`
+    <speak>
+    In Paris, they pronounce it <lang xml:lang="fr-FR">Paris</lang>
+    </speak>`;
+
+    expect(ssml).toEqual(exp);
   });
 });
