@@ -218,7 +218,7 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     let pattern = `[${ Object.keys(SsmlFormatterBase.XML_ESCAPE_MAPPING).join('') }]`;
     let escaped = reversed.replace(new RegExp(pattern, 'g'), (s) => SsmlFormatterBase.XML_ESCAPE_MAPPING[s]);
 
-    console.log([unescaped, reversed, escaped].join('\n'));
+    // console.log([unescaped, reversed, escaped].join('\n'));
 
     return escaped;
   }
