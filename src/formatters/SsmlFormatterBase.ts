@@ -1,7 +1,26 @@
 import { SpeechOptions } from '../SpeechOptions';
 import { FormatterBase } from './FormatterBase';
 
+type Dictionary<T> = { [key: string]: T };
+
 export abstract class SsmlFormatterBase extends FormatterBase {
+
+  public static readonly XML_ESCAPE_MAPPING: Dictionary<string> = {
+    '<' : '&lt;',
+    '>' : '&gt;',
+    '&' : '&amp;',
+    '"' : '&quot;',
+    "'" : '&apos;',
+  };
+
+  public static readonly XML_UNESCAPE_MAPPING: Dictionary<string> = (function swapJSON(dictionary: Dictionary<string>) {
+    return Object.keys(dictionary)
+                 .reduce((acc: any, key: string) => {
+                   acc[dictionary[key]] = key;
+                   return acc;
+                 }, {});
+  })(SsmlFormatterBase.XML_ESCAPE_MAPPING);
+
 
   protected constructor(protected options: SpeechOptions) {
     super(options);
@@ -188,6 +207,20 @@ export abstract class SsmlFormatterBase extends FormatterBase {
       return letter.toUpperCase();
 
     }).trim();
+  }
+
+  public escapeXmlCharacters(unescaped: string): string {
+    // Only process once (by unescaping)
+    let revPattern = `${ Object.keys(SsmlFormatterBase.XML_UNESCAPE_MAPPING).join('|')}]`;
+    let reversed   = unescaped.replace(new RegExp(revPattern, 'g'), (s) => SsmlFormatterBase.XML_UNESCAPE_MAPPING[s]);
+
+    // Escape XML characters
+    let pattern = `[${ Object.keys(SsmlFormatterBase.XML_ESCAPE_MAPPING).join('') }]`;
+    let escaped = reversed.replace(new RegExp(pattern, 'g'), (s) => SsmlFormatterBase.XML_ESCAPE_MAPPING[s]);
+
+    // console.log([unescaped, reversed, escaped].join('\n'));
+
+    return escaped;
   }
 
   protected abstract formatFromAst(ast: any, lines: string[]): string[];
