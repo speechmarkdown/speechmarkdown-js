@@ -4,4 +4,5 @@ export interface SpeechOptions {
   includeParagraphTag?: boolean,
   includeSpeakTag?: boolean,
   preserveEmptyLines?: boolean,
+  escapeXmlSymbols?: boolean,
 }
