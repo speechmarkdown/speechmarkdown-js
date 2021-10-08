@@ -11,7 +11,6 @@ export class AmazonPollyNeuralSsmlFormatter extends SsmlFormatterBase {
     this.modifierKeyToSsmlTagMappings.drc = 'amazon:effect'
     this.modifierKeyToSsmlTagMappings.lang = 'lang';
     this.modifierKeyToSsmlTagMappings.newscaster = 'amazon:domain';
-    this.modifierKeyToSsmlTagMappings['x-sampa'] = 'phoneme';
 
     this.modifierKeyMappings.digits = 'digits';
     this.modifierKeyMappings.cardinal = 'cardinal';
@@ -75,7 +74,6 @@ export class AmazonPollyNeuralSsmlFormatter extends SsmlFormatterBase {
               break;
             }
 
-            case 'x-sampa': 
             case 'ipa': {
               if (!textModifierObject.tags[ssmlTag]) {
                 textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };

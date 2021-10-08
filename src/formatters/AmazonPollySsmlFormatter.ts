@@ -8,12 +8,10 @@ export class AmazonPollySsmlFormatter extends SsmlFormatterBase {
 
     this.modifierKeyToSsmlTagMappings.whisper = 'amazon:effect';
     this.modifierKeyToSsmlTagMappings.timbre= 'amazon:effect';
-    this.modifierKeyToSsmlTagMappings.soft = 'amazon:effect';
     this.modifierKeyToSsmlTagMappings.cardinal = 'say-as';
     this.modifierKeyToSsmlTagMappings.digits = 'say-as';
     this.modifierKeyToSsmlTagMappings.drc = 'amazon:effect'
     this.modifierKeyToSsmlTagMappings.lang = 'lang';
-    this.modifierKeyToSsmlTagMappings['x-sampa'] = 'phoneme';
 
     this.modifierKeyMappings.digits = 'digits';
     this.modifierKeyMappings.cardinal = 'cardinal';
@@ -94,15 +92,6 @@ export class AmazonPollySsmlFormatter extends SsmlFormatterBase {
               break;
             }
 
-            case 'soft': {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-              textModifierObject.tags[ssmlTag].attrs = { phonation: key };
-              break;
-            }
-
-            case 'x-sampa':
             case 'ipa': {
               if (!textModifierObject.tags[ssmlTag]) {
                 textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
