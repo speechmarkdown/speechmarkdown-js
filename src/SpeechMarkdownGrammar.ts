@@ -146,6 +146,7 @@ export function speechMarkdownGrammar(myna: any): any {
       'characters',
       'chars',
       'digits',
+      'drc',
       'expletive',
       'bleep',
       'fraction',

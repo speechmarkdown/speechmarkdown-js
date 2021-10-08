@@ -50,6 +50,7 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     'rate': 'prosody',
     'pitch': 'prosody',
     'volume': 'prosody',
+    'drc': null,
     'timbre': null,
     'lang': null,
     'voice': null,
