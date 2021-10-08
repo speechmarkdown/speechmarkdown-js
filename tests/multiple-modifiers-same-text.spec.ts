@@ -26,6 +26,22 @@ describe('multiple-modifiers-same-text', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Amazon Polly', () => {
+
+    const options = {
+      platform: 'amazon-polly'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Your balance is: <emphasis level="strong"><say-as interpret-as="number"><prosody pitch="high"><amazon:effect name="whispered">12345</amazon:effect></prosody></say-as></emphasis>.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to SSML - Amazon Polly (Neural)', () => {
 
     const options = {

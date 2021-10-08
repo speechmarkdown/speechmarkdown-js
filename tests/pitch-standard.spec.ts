@@ -28,6 +28,23 @@ describe('pitch-standard-medium', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Amazon Polly', () => {
+    const options = {
+      platform: 'amazon-polly',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      A <prosody pitch="medium">medium</prosody> pitch 1
+      A <prosody pitch="medium">medium</prosody> pitch 2
+      A <prosody pitch="medium">medium</prosody> pitch 3
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to SSML - Amazon Polly (Neural)', () => {
     const options = {
       platform: 'amazon-polly-neural',

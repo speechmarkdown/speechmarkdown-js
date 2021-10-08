@@ -26,6 +26,22 @@ describe('number-standard', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Amazon Polly', () => {
+
+    const options = {
+      platform: 'amazon-polly'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Your balance is: <say-as interpret-as="number">12345</say-as>.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to SSML - Amazon Polly (Neural)', () => {
 
     const options = {

@@ -52,6 +52,35 @@ describe('sections-standard', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Amazon Polly', () => {
+
+    const options = {
+      platform: 'amazon-polly'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+    <speak>
+    My voice and language is based on the device.
+
+
+    <lang xml:lang="en-US">
+    Now I am speaking as Kendra from the US with a US accent.
+
+    </lang>
+
+    <lang xml:lang="en-US">
+    Switching to Brian from the UK with a US accent.
+
+    </lang>
+
+    Now back to the device setting.
+    </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to SSML - Amazon Polly (Neural)', () => {
 
     const options = {

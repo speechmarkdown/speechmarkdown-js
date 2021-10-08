@@ -28,6 +28,22 @@ describe('audio-standard', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Amazon Polly', () => {
+
+    const options = {
+      platform: 'amazon-polly'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+
+      Announcing Speech Markdown.
+      </speak>
+    `;
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to SSML - Amazon Polly (Neural)', () => {
 
     const options = {

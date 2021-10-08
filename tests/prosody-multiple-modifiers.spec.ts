@@ -26,6 +26,22 @@ describe('prosody-multiple-modifiers rate + volume', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Amazon Polly', () => {
+
+    const options = {
+      platform: 'amazon-polly'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Multiple modifiers on same <prosody rate="fast" volume="loud">text</prosody>
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to SSML - Amazon Polly (Neural)', () => {
 
     const options = {

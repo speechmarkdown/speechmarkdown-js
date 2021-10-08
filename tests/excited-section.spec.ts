@@ -64,6 +64,37 @@ describe('excited-section normal to excited intensities to normal', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Amazon Polly', () => {
+
+    const options = {
+      platform: 'amazon-polly'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+    <speak>
+    Normal speech.
+
+
+    I am excited - medium.
+
+
+    I am excited - medium.
+
+
+    I am excited - low.
+
+
+    I am excited - high.
+
+
+    Now back to normal speech.
+    </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to SSML - Amazon Polly (Neural)', () => {
 
     const options = {

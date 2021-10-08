@@ -40,6 +40,28 @@ describe('dj-section normal to dj to normal', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Amazon Polly', () => {
+
+    const options = {
+      platform: 'amazon-polly'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+    <speak>
+    Normal speech.
+
+
+    Switching to a music/media announcer.
+
+
+    Now back to normal speech.
+    </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to SSML - Amazon Polly (Neural)', () => {
 
     const options = {
