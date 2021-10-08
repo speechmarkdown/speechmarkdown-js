@@ -142,6 +142,7 @@ export function speechMarkdownGrammar(myna: any): any {
       'emphasis',
       'address',
       'number',
+      'cardinal',
       'characters',
       'chars',
       'digits',

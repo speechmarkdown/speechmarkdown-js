@@ -13,7 +13,8 @@ export class AmazonPollyNeuralSsmlFormatter extends SsmlFormatterBase {
     this.modifierKeyToSsmlTagMappings.newscaster = 'amazon:domain';
     this.modifierKeyToSsmlTagMappings['x-sampa'] = 'phoneme';
 
-    this.modifierKeyMappings.digits = 'digits'
+    this.modifierKeyMappings.digits = 'digits';
+    this.modifierKeyMappings.cardinal = 'cardinal';
   }
 
   // tslint:disable-next-line: max-func-body-length
