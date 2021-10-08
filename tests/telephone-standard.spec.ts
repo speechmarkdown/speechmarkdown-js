@@ -30,6 +30,22 @@ describe('telephone-standard', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Number - Amazon Polly (Neural)', () => {
+
+    const options = {
+      platform: 'amazon-polly-neural'
+    };
+    const ssml = speech.toSSML(markdownNumber, options);
+
+    const expected = dedent`
+      <speak>
+      The number is <say-as interpret-as="telephone">5558675309</say-as>.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to SSML - Number - Google Assistant', () => {
 
     const options = {

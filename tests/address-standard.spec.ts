@@ -26,6 +26,21 @@ describe('address-standard', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Amazon Polly (Neural)', () => {
+    
+    const options = {
+      platform: 'amazon-polly-neural'
+    };
+    const ssml = speech.toSSML(markdown, options);
+    const expected = dedent`
+      <speak>
+      I'm at <say-as interpret-as="address">150th CT NE, Redmond, WA</say-as>.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+  
   test('converts to SSML - Google Assistant', () => {
 
     const options = {

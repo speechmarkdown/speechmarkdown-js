@@ -26,6 +26,22 @@ describe('lang-standard', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Amazon Polly (Neural)', () => {
+    const options = {
+      platform: 'amazon-polly-neural',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      In Paris, they pronounce it <lang xml:lang="fr-FR">Paris</lang>.
+      In Paris, they pronounce it <lang xml:lang="fr-FR">Paris</lang>.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to SSML - Google Assistant', () => {
     const options = {
       platform: 'google-assistant',

@@ -26,6 +26,22 @@ describe('sub-standard', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Amazon Polly (Neural)', () => {
+    const options = {
+      platform: 'amazon-polly-neural',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      The element is <sub alias="aluminum">Al</sub>.
+      Visit our website at <sub alias="speech mark down dot org">www.speechmarkdown.org</sub>.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to SSML - Google Assistant', () => {
     const options = {
       platform: 'google-assistant',

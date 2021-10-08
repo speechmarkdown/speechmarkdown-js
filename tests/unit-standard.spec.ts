@@ -26,6 +26,23 @@ describe('unit-standard', () => {
     expect(ssml).toBe(expected);
   });
 
+
+  test('converts to SSML - Amazon Polly (Neural)', () => {
+
+    const options = {
+      platform: 'amazon-polly-neural'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      I would walk <say-as interpret-as="unit">500 mi</say-as>
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to SSML - Google Assistant', () => {
 
     const options = {
