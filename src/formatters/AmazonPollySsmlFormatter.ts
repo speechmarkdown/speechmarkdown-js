@@ -14,6 +14,8 @@ export class AmazonPollySsmlFormatter extends SsmlFormatterBase {
     this.modifierKeyToSsmlTagMappings.drc = 'amazon:effect'
     this.modifierKeyToSsmlTagMappings.lang = 'lang';
     this.modifierKeyToSsmlTagMappings['x-sampa'] = 'phoneme';
+
+    this.modifierKeyMappings.digits = 'digits'
   }
 
   // tslint:disable-next-line: max-func-body-length

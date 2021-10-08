@@ -11,6 +11,7 @@ export abstract class SsmlFormatterBase extends FormatterBase {
 
   protected modifierKeyMappings: any = {
     'chars': 'characters',
+    'digits': 'characters',
     'bleep': 'expletive',
     'phone': 'telephone',
     'vol': 'volume',

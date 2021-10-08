@@ -12,6 +12,8 @@ export class AmazonPollyNeuralSsmlFormatter extends SsmlFormatterBase {
     this.modifierKeyToSsmlTagMappings.lang = 'lang';
     this.modifierKeyToSsmlTagMappings.newscaster = 'amazon:domain';
     this.modifierKeyToSsmlTagMappings['x-sampa'] = 'phoneme';
+
+    this.modifierKeyMappings.digits = 'digits'
   }
 
   // tslint:disable-next-line: max-func-body-length
