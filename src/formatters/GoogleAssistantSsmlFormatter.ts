@@ -8,6 +8,7 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
 
     this.modifierKeyToSsmlTagMappings.interjection = null;
     this.modifierKeyToSsmlTagMappings.whisper = 'prosody';
+    this.modifierKeyToSsmlTagMappings.lang = 'lang';
   }
 
   // tslint:disable-next-line: max-func-body-length
@@ -84,11 +85,10 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
             }
 
             case 'ipa': {
-              // Google Assistant does not support <phoneme> tag
               if (!textModifierObject.tags[ssmlTag]) {
                 textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
               }
-              textModifierObject['textOnly'] = true;
+              textModifierObject.tags[ssmlTag].attrs = { alphabet: key, ph: value };
               break;
             }
 
@@ -112,6 +112,14 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
               attrs[key] = value || 'medium';
               textModifierObject.tags[ssmlTag].attrs = { ...textModifierObject.tags[ssmlTag].attrs, ...attrs };
 
+              break;
+            }
+
+            case 'lang': {
+              if (!textModifierObject.tags[ssmlTag]) {
+                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
+              }
+              textModifierObject.tags[ssmlTag].attrs = { 'xml:lang': value };
               break;
             }
 

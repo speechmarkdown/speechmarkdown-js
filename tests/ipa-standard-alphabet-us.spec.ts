@@ -35,7 +35,7 @@ describe('ipa-standard-alphabet-us', () => {
 
     const expected = dedent`
       <speak>
-      I say, ipa.
+      I say, <phoneme alphabet="ipa" ph="ˈˌb.d.f.g.h.j.k.l.m.n.p.s.t.v.w.z.i.u.æ.ð.ʃ.θ.ʒ.ə.ɚ.aɪ.aʊ.ɑ.eɪ.ɝ.ɛ.ɪ.oʊ.ɔ.ɔɪ.ʊ.ʌ.ŋ.ɹ.d͡ʒ.t͡ʃ">ipa</phoneme>.
       </speak>
     `;
 
