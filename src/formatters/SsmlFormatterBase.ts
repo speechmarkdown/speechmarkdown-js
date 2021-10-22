@@ -1,6 +1,27 @@
 import { SpeechOptions } from '../SpeechOptions';
 import { FormatterBase } from './FormatterBase';
 
+export class TagsObject {
+
+  public tags;
+
+  public constructor(){
+    this.tags = {};
+  }
+
+  public tag( sortId: number, tag: string, attrs: object, augment:boolean = false ){
+    if (!this.tags[tag]) {
+      this.tags[tag] = { sortId: sortId, attrs: null };
+    }
+    if( augment ){
+      this.tags[tag].attrs = { ...this.tags[tag].attrs, ...attrs };
+    } else {
+      this.tags[tag].attrs = attrs;
+    }
+
+  }
+}
+
 export abstract class SsmlFormatterBase extends FormatterBase {
 
   protected constructor(protected options: SpeechOptions) {
