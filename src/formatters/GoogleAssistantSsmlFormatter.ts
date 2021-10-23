@@ -13,7 +13,7 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
 
   // tslint:disable-next-line: max-func-body-length
   private getTextModifierObject(ast: any): any {
-    let textModifierObject = new TagsObject();
+    let textModifierObject = new TagsObject( this );
 
     for (let index = 0; index < ast.children.length; index++) {
       const child = ast.children[index];
@@ -32,11 +32,10 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
           key = this.modifierKeyMappings[key] || key;
           const value = child.children.length === 2 ? child.children[1].allText : '';
           const ssmlTag = this.modifierKeyToSsmlTagMappings[key];
-          const sortId = this.ssmlTagSortOrder.indexOf(ssmlTag);
 
           switch (key) {
             case 'emphasis':
-              textModifierObject.tag( sortId, ssmlTag, { level: value || 'moderate' } );  break;
+              textModifierObject.tag( ssmlTag, { level: value || 'moderate' } );  break;
 
             case 'address':
             case 'characters':
@@ -46,34 +45,34 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
             case 'ordinal':
             case 'telephone':
             case 'unit':
-              textModifierObject.tag( sortId, ssmlTag,{ 'interpret-as': key } );  break;
+              textModifierObject.tag( ssmlTag,{ 'interpret-as': key } );  break;
 
             case 'date':
-              textModifierObject.tag( sortId, ssmlTag, { 'interpret-as': key, format: value || 'ymd' } );  break;
+              textModifierObject.tag( ssmlTag, { 'interpret-as': key, format: value || 'ymd' } );  break;
 
             case 'time':
-              textModifierObject.tag( sortId, ssmlTag, { 'interpret-as': key, format: value || 'hms12' } );  break;
+              textModifierObject.tag( ssmlTag, { 'interpret-as': key, format: value || 'hms12' } );  break;
 
             case 'whisper':
-              textModifierObject.tag( sortId, ssmlTag, { volume: 'x-soft', rate: 'slow' } );  break;
+              textModifierObject.tag( ssmlTag, { volume: 'x-soft', rate: 'slow' } );  break;
 
             case 'ipa':
-              textModifierObject.tag( sortId, ssmlTag, { alphabet: key, ph: value } );  break;
+              textModifierObject.tag( ssmlTag, { alphabet: key, ph: value } );  break;
 
             case 'sub':
-              textModifierObject.tag( sortId, ssmlTag, { alias: value } );  break;
+              textModifierObject.tag( ssmlTag, { alias: value } );  break;
 
             case 'volume':
             case 'rate':
             case 'pitch': {
               const attrs = {};
               attrs[key] = value || 'medium';
-              textModifierObject.tag( sortId, ssmlTag, attrs, true );
+              textModifierObject.tag( ssmlTag, attrs, true );
               break;
             }
 
             case 'lang':
-              textModifierObject.tag( sortId, ssmlTag, { 'xml:lang': value } );  break;
+              textModifierObject.tag( ssmlTag, { 'xml:lang': value } );  break;
 
             default: {
 

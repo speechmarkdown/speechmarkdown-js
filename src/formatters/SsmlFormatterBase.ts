@@ -3,13 +3,17 @@ import { FormatterBase } from './FormatterBase';
 
 export class TagsObject {
 
+  private base;
   public tags;
 
-  public constructor(){
+  public constructor( base:SsmlFormatterBase ){
+    this.base = base;
     this.tags = {};
   }
 
-  public tag( sortId: number, tag: string, attrs: object, augment:boolean = false ){
+  public tag( tag: string, attrs: object, augment:boolean = false ){
+    const sortId = this.base.ssmlTagSortOrder.indexOf( tag );
+
     if (!this.tags[tag]) {
       this.tags[tag] = { sortId: sortId, attrs: null };
     }
