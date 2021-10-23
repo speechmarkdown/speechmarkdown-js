@@ -27,10 +27,10 @@ export class TagsObject {
   protected voiceTagNamed( voices: null | object, name: string ){
     let info = voices && voices[name];
     if( info ){
-      if( typeof info === 'string' ){
+      if( typeof info !== 'object' ){
         info  = {
           voice: { "name": name },
-          lang:  { 'xml:lang': info }
+          //lang:  { 'xml:lang': info }
         }
       }
 
