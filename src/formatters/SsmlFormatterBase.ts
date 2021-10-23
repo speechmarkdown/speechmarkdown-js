@@ -5,10 +5,12 @@ export class TagsObject {
 
   private base;
   public tags;
+  public text;
 
   public constructor( base:SsmlFormatterBase ){
     this.base = base;
     this.tags = {};
+    this.text = '';
   }
 
   public tag( tag: string, attrs: object, augment:boolean = false ){
