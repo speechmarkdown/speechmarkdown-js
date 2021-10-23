@@ -4,4 +4,5 @@ export interface SpeechOptions {
   includeParagraphTag?: boolean,
   includeSpeakTag?: boolean,
   preserveEmptyLines?: boolean,
+  voices?: object,   // voiceName -> {tag -> {attribute -> value}}
 }

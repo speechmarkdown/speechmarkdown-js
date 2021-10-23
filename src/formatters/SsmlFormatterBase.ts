@@ -22,8 +22,35 @@ export class TagsObject {
     } else {
       this.tags[tag].attrs = attrs;
     }
-
   }
+
+  protected voiceTagNamed( voices: null | object, name: string ){
+    let info = voices && voices[name];
+    if( info ){
+      if( typeof info === 'string' ){
+        info  = {
+          voice: { "name": name },
+          lang:  { 'xml:lang': info }
+        }
+      }
+
+      Object.keys( info ).forEach( tag => {
+        const attributes = info[tag];
+        this.tag( tag, attributes );
+      })
+      return true;
+    }
+    return false;
+  }
+
+  public voiceTag( tag: string, value: string ){
+    const name = this.base.sentenceCase(value || 'device');
+
+    const handled =
+      this.voiceTagNamed( this.base.options && this.base.options.voices, name ) ||
+      this.voiceTagNamed( this.base.validVoices, name );
+  }
+
 }
 
 export abstract class SsmlFormatterBase extends FormatterBase {
