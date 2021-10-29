@@ -5,4 +5,5 @@ export interface SpeechOptions {
   includeSpeakTag?: boolean,
   preserveEmptyLines?: boolean,
   escapeXmlSymbols?: boolean,
+  voices?: object,   // voiceName -> {tag -> {attribute -> value}}
 }

@@ -1,5 +1,5 @@
 import { SpeechOptions } from '../SpeechOptions';
-import { SsmlFormatterBase } from './SsmlFormatterBase';
+import {SsmlFormatterBase, TagsObject} from './SsmlFormatterBase';
 
 export class SamsungBixbySsmlFormatter extends SsmlFormatterBase {
 
@@ -28,10 +28,7 @@ export class SamsungBixbySsmlFormatter extends SsmlFormatterBase {
 
   // tslint:disable-next-line: max-func-body-length
   private getTextModifierObject(ast: any): any {
-    let textModifierObject = {
-      tags: {},
-      text: ''
-    };
+    let textModifierObject = new TagsObject( this );
 
     for (let index = 0; index < ast.children.length; index++) {
       const child = ast.children[index];
@@ -50,7 +47,6 @@ export class SamsungBixbySsmlFormatter extends SsmlFormatterBase {
           key = this.modifierKeyMappings[key] || key;
           const value = child.children.length === 2 ? child.children[1].allText : '';
           const ssmlTag = this.modifierKeyToSsmlTagMappings[key];
-          const sortId = this.ssmlTagSortOrder.indexOf(ssmlTag);
 
           switch (key) {
             // case 'emphasis': {
@@ -67,33 +63,18 @@ export class SamsungBixbySsmlFormatter extends SsmlFormatterBase {
             // case 'unit':
             case 'fraction':
             case 'ordinal':
-              {
-                if (!textModifierObject.tags[ssmlTag]) {
-                  textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-                }
-                textModifierObject.tags[ssmlTag].attrs = { 'interpret-as': key };
-                break;
-              }
+              textModifierObject.tag( ssmlTag, { 'interpret-as': key } );  break;
 
-            case "number": {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-              textModifierObject.tags[ssmlTag].attrs = { 'interpret-as': 'cardinal' };
-              break;
-            }
+            case "number":
+              textModifierObject.tag( ssmlTag, { 'interpret-as': 'cardinal' } );  break;
 
             case "characters": {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-
               let attrValue = 'digits';
               if (isNaN(textModifierObject.text as any)) {
                 attrValue = 'spell-out';
               }
 
-              textModifierObject.tags[ssmlTag].attrs = { 'interpret-as': attrValue };
+              textModifierObject.tag( ssmlTag, { 'interpret-as': attrValue } );
               break;
             }
 
@@ -113,13 +94,8 @@ export class SamsungBixbySsmlFormatter extends SsmlFormatterBase {
             //   break;
             // }
 
-            case 'whisper': {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-              textModifierObject.tags[ssmlTag].attrs = { volume: 'x-soft', rate: 'slow' };
-              break;
-            }
+            case 'whisper':
+              textModifierObject.tag( ssmlTag, { volume: 'x-soft', rate: 'slow' } );  break;
 
             // case 'ipa': {
             //   // Google Assistant does not support <phoneme> tag
@@ -130,26 +106,15 @@ export class SamsungBixbySsmlFormatter extends SsmlFormatterBase {
             //   break;
             // }
 
-            case 'sub': {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-              textModifierObject.tags[ssmlTag].attrs = { alias: value };
-              break;
-            }
+            case 'sub':
+              textModifierObject.tag( ssmlTag, { alias: value } );  break;
 
             case 'volume':
             case 'rate':
             case 'pitch': {
-
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-
               const attrs = {};
               attrs[key] = value || 'medium';
-              textModifierObject.tags[ssmlTag].attrs = { ...textModifierObject.tags[ssmlTag].attrs, ...attrs };
-
+              textModifierObject.tag( ssmlTag, attrs, true );
               break;
             }
 

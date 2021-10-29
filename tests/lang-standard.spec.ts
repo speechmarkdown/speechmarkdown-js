@@ -66,8 +66,8 @@ describe('lang-standard', () => {
 
     const expected = dedent`
       <speak>
-      In Paris, they pronounce it Paris.
-      In Paris, they pronounce it Paris.
+      In Paris, they pronounce it <lang xml:lang="fr-FR">Paris</lang>.
+      In Paris, they pronounce it <lang xml:lang="fr-FR">Paris</lang>.
       </speak>
     `;
 
