@@ -6,7 +6,14 @@
 
 Speech Markdown grammar, parser, and formatters for use with JavaScript.
 
-This project is a work-in-progress. All volunteers are appreciated!
+Supported platforms:
+* amazon-alexa
+* amazon-polly
+* amazon-polly-neural
+* google-assistant
+* microsoft-azure
+* samsung-bixby
+
 
 Find the architecture [here](./docs/architecture.md)
 
@@ -113,13 +120,45 @@ const ssml = speech.toSSML(markdown, options);
 
 Available options are:
 
-* `platform` (string) - Determines the formatter to use to render SSML. Valid values are: `amazon-alexa` and `google-assistant`.
+* `platform` (string) - Determines the formatter to use to render SSML. Valid values are:
+    * "amazon-alexa"
+    * "amazon-polly"
+    * "amazon-polly-neural"
+    * "google-assistant"
+    * "microsoft-azure"
+    * "samsung-bixby"
 
 * `includeFormatterComment` (boolean) - Adds an XML comment to the SSML output indicating the formatter used. Default is `false`.
 
 * `includeSpeakTag` (boolean) - Determines if the `<speak>` tag will be rendered in the SSML output. Default is `true`.
 
 * `includeParagraphTag` (boolean) - Determines if the `<p>` tag will be rendered in the SSML output. Default is `false`.
+
+* `preserveEmptyLines` (boolean) - keep empty lines in markdown in SSML. Default is `true`.
+
+* `escapeXmlSymbols` (boolean) - Currently only for `amazon-alexa`. Escape XML text. Default is `false`.
+
+* `voices` (object) - give custom names to voices and use that in your markdown:
+
+    ```json
+    {
+      "platform": "amazon-alexa",
+      "voices": {
+        "Scott": {"voice": {"name": "Brian"}},
+        "Sarah": {"voice": {"name": "Kendra"}}
+      }
+    }
+    ```
+
+    ```json
+    {
+      "platform": "google-assistant",
+      "voices": {
+            "Brian": {"voice": {"gender": "male", "variant": 1, "language": "en-US"}},
+            "Sarah": {"voice": {"gender": "female", "variant": 3, "language": "en-US"}},
+          }
+    }
+    ```
 
 
 ## Working on this project?

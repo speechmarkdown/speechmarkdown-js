@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to the speechmarkdown-js project will be documented in this file.
 
+## 2.0.0 - (October 28, 2021)
+### Added
+- Support for `voice` and `language` for `google-assistant`
+- Formatters for `amazon-polly`, `amazon-polly-neural`, and `microsoft-azure`
+
 ## 0.8.0-beta.0 - (July 7, 2019)
 ### Added
 - Support for sections with the `voice` and `lang` tags
