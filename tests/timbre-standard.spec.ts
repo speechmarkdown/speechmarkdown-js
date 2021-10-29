@@ -2,12 +2,14 @@
 import dedent from 'ts-dedent';
 import { SpeechMarkdown } from '../src/SpeechMarkdown';
 
-describe('ordinal-standard', () => {
+describe('timbre-standard', () => {
 
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
-    The others came in 2nd and (3)[ordinal].
+    This is my original voice, without any modifications.
+    (Now, imagine that I am much bigger.)[timbre:"+15%"]
+    (Or, perhaps you prefer my voice when I'm very small.)[timbre:"-15%"]
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
@@ -18,9 +20,11 @@ describe('ordinal-standard', () => {
     const ssml = speech.toSSML(markdown, options);
 
     const expected = dedent`
-      <speak>
-      The others came in 2nd and <say-as interpret-as="ordinal">3</say-as>.
-      </speak>
+    <speak>
+    This is my original voice, without any modifications.
+    Now, imagine that I am much bigger.
+    Or, perhaps you prefer my voice when I'm very small.
+    </speak>
     `;
 
     expect(ssml).toBe(expected);
@@ -34,9 +38,11 @@ describe('ordinal-standard', () => {
     const ssml = speech.toSSML(markdown, options);
 
     const expected = dedent`
-      <speak>
-      The others came in 2nd and <say-as interpret-as="ordinal">3</say-as>.
-      </speak>
+    <speak>
+    This is my original voice, without any modifications.
+    <amazon:effect vocal-tract-length="+15%">Now, imagine that I am much bigger.</amazon:effect>
+    <amazon:effect vocal-tract-length="-15%">Or, perhaps you prefer my voice when I'm very small.</amazon:effect>
+    </speak>
     `;
 
     expect(ssml).toBe(expected);
@@ -50,9 +56,11 @@ describe('ordinal-standard', () => {
     const ssml = speech.toSSML(markdown, options);
 
     const expected = dedent`
-      <speak>
-      The others came in 2nd and <say-as interpret-as="ordinal">3</say-as>.
-      </speak>
+    <speak>
+    This is my original voice, without any modifications.
+    Now, imagine that I am much bigger.
+    Or, perhaps you prefer my voice when I'm very small.
+    </speak>
     `;
 
     expect(ssml).toBe(expected);
@@ -66,9 +74,11 @@ describe('ordinal-standard', () => {
     const ssml = speech.toSSML(markdown, options);
 
     const expected = dedent`
-      <speak>
-      The others came in 2nd and <say-as interpret-as="ordinal">3</say-as>.
-      </speak>
+    <speak>
+    This is my original voice, without any modifications.
+    Now, imagine that I am much bigger.
+    Or, perhaps you prefer my voice when I'm very small.
+    </speak>
     `;
 
     expect(ssml).toBe(expected);
@@ -82,9 +92,11 @@ describe('ordinal-standard', () => {
     const ssml = speech.toSSML(markdown, options);
 
     const expected = dedent`
-      <speak>
-      The others came in 2nd and <say-as interpret-as="ordinal">3</say-as>.
-      </speak>
+    <speak>
+    This is my original voice, without any modifications.
+    Now, imagine that I am much bigger.
+    Or, perhaps you prefer my voice when I'm very small.
+    </speak>
     `;
 
     expect(ssml).toBe(expected);
@@ -98,9 +110,11 @@ describe('ordinal-standard', () => {
     const ssml = speech.toSSML(markdown, options);
 
     const expected = dedent`
-      <speak>
-      The others came in 2nd and <say-as interpret-as="ordinal">3</say-as>.
-      </speak>
+    <speak>
+    This is my original voice, without any modifications.
+    Now, imagine that I am much bigger.
+    Or, perhaps you prefer my voice when I'm very small.
+    </speak>
     `;
 
     expect(ssml).toBe(expected);
@@ -113,7 +127,9 @@ describe('ordinal-standard', () => {
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
-      The others came in 2nd and 3.
+    This is my original voice, without any modifications.
+    Now, imagine that I am much bigger.
+    Or, perhaps you prefer my voice when I'm very small.
     `;
 
     expect(text).toBe(expected);

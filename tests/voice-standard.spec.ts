@@ -26,6 +26,38 @@ describe('voice-standard', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Amazon Polly', () => {
+    const options = {
+      platform: 'amazon-polly',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Why do you keep switching voices from one to the other?
+      Why do you keep switching voices from one to the other?
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Amazon Polly (Neural)', () => {
+    const options = {
+      platform: 'amazon-polly-neural',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Why do you keep switching voices from one to the other?
+      Why do you keep switching voices from one to the other?
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to SSML - Google Assistant', () => {
     const options = {
       platform: 'google-assistant',

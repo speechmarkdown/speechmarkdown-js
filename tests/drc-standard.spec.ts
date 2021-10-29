@@ -2,12 +2,12 @@
 import dedent from 'ts-dedent';
 import { SpeechMarkdown } from '../src/SpeechMarkdown';
 
-describe('ordinal-standard', () => {
+describe('drc-standard', () => {
 
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
-    The others came in 2nd and (3)[ordinal].
+    Some audio is difficult to hear in a moving vehicle, but (this audio is less difficult to hear in a moving vehicle.)[drc]
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
@@ -18,9 +18,9 @@ describe('ordinal-standard', () => {
     const ssml = speech.toSSML(markdown, options);
 
     const expected = dedent`
-      <speak>
-      The others came in 2nd and <say-as interpret-as="ordinal">3</say-as>.
-      </speak>
+    <speak>
+    Some audio is difficult to hear in a moving vehicle, but this audio is less difficult to hear in a moving vehicle.
+    </speak>
     `;
 
     expect(ssml).toBe(expected);
@@ -34,9 +34,9 @@ describe('ordinal-standard', () => {
     const ssml = speech.toSSML(markdown, options);
 
     const expected = dedent`
-      <speak>
-      The others came in 2nd and <say-as interpret-as="ordinal">3</say-as>.
-      </speak>
+    <speak>
+    Some audio is difficult to hear in a moving vehicle, but <amazon:effect name="drc">this audio is less difficult to hear in a moving vehicle.</amazon:effect>
+    </speak>
     `;
 
     expect(ssml).toBe(expected);
@@ -50,9 +50,9 @@ describe('ordinal-standard', () => {
     const ssml = speech.toSSML(markdown, options);
 
     const expected = dedent`
-      <speak>
-      The others came in 2nd and <say-as interpret-as="ordinal">3</say-as>.
-      </speak>
+    <speak>
+    Some audio is difficult to hear in a moving vehicle, but <amazon:effect name="drc">this audio is less difficult to hear in a moving vehicle.</amazon:effect>
+    </speak>
     `;
 
     expect(ssml).toBe(expected);
@@ -66,9 +66,9 @@ describe('ordinal-standard', () => {
     const ssml = speech.toSSML(markdown, options);
 
     const expected = dedent`
-      <speak>
-      The others came in 2nd and <say-as interpret-as="ordinal">3</say-as>.
-      </speak>
+    <speak>
+    Some audio is difficult to hear in a moving vehicle, but this audio is less difficult to hear in a moving vehicle.
+    </speak>
     `;
 
     expect(ssml).toBe(expected);
@@ -82,9 +82,9 @@ describe('ordinal-standard', () => {
     const ssml = speech.toSSML(markdown, options);
 
     const expected = dedent`
-      <speak>
-      The others came in 2nd and <say-as interpret-as="ordinal">3</say-as>.
-      </speak>
+    <speak>
+    Some audio is difficult to hear in a moving vehicle, but this audio is less difficult to hear in a moving vehicle.
+    </speak>
     `;
 
     expect(ssml).toBe(expected);
@@ -98,9 +98,9 @@ describe('ordinal-standard', () => {
     const ssml = speech.toSSML(markdown, options);
 
     const expected = dedent`
-      <speak>
-      The others came in 2nd and <say-as interpret-as="ordinal">3</say-as>.
-      </speak>
+    <speak>
+    Some audio is difficult to hear in a moving vehicle, but this audio is less difficult to hear in a moving vehicle.
+    </speak>
     `;
 
     expect(ssml).toBe(expected);
@@ -113,7 +113,7 @@ describe('ordinal-standard', () => {
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
-      The others came in 2nd and 3.
+    Some audio is difficult to hear in a moving vehicle, but this audio is less difficult to hear in a moving vehicle.
     `;
 
     expect(text).toBe(expected);

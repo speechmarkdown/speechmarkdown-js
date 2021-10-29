@@ -2,12 +2,12 @@
 import dedent from 'ts-dedent';
 import { SpeechMarkdown } from '../src/SpeechMarkdown';
 
-describe('ordinal-standard', () => {
+describe('digits-standard', () => {
 
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
-    The others came in 2nd and (3)[ordinal].
+    Countdown: (321)[digits]
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
@@ -19,7 +19,7 @@ describe('ordinal-standard', () => {
 
     const expected = dedent`
       <speak>
-      The others came in 2nd and <say-as interpret-as="ordinal">3</say-as>.
+      Countdown: <say-as interpret-as="characters">321</say-as>
       </speak>
     `;
 
@@ -35,7 +35,7 @@ describe('ordinal-standard', () => {
 
     const expected = dedent`
       <speak>
-      The others came in 2nd and <say-as interpret-as="ordinal">3</say-as>.
+      Countdown: <say-as interpret-as="digits">321</say-as>
       </speak>
     `;
 
@@ -51,7 +51,7 @@ describe('ordinal-standard', () => {
 
     const expected = dedent`
       <speak>
-      The others came in 2nd and <say-as interpret-as="ordinal">3</say-as>.
+      Countdown: <say-as interpret-as="digits">321</say-as>
       </speak>
     `;
 
@@ -67,7 +67,7 @@ describe('ordinal-standard', () => {
 
     const expected = dedent`
       <speak>
-      The others came in 2nd and <say-as interpret-as="ordinal">3</say-as>.
+      Countdown: <say-as interpret-as="characters">321</say-as>
       </speak>
     `;
 
@@ -83,7 +83,7 @@ describe('ordinal-standard', () => {
 
     const expected = dedent`
       <speak>
-      The others came in 2nd and <say-as interpret-as="ordinal">3</say-as>.
+      Countdown: <say-as interpret-as="digits">321</say-as>
       </speak>
     `;
 
@@ -99,7 +99,7 @@ describe('ordinal-standard', () => {
 
     const expected = dedent`
       <speak>
-      The others came in 2nd and <say-as interpret-as="ordinal">3</say-as>.
+      Countdown: <say-as interpret-as="digits">321</say-as>
       </speak>
     `;
 
@@ -113,7 +113,7 @@ describe('ordinal-standard', () => {
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
-      The others came in 2nd and 3.
+      Countdown: 321
     `;
 
     expect(text).toBe(expected);

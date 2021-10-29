@@ -2,12 +2,12 @@
 import dedent from 'ts-dedent';
 import { SpeechMarkdown } from '../src/SpeechMarkdown';
 
-describe('ordinal-standard', () => {
+describe('cardinal-standard', () => {
 
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
-    The others came in 2nd and (3)[ordinal].
+    Your balance is: (12345)[cardinal].
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
@@ -19,7 +19,7 @@ describe('ordinal-standard', () => {
 
     const expected = dedent`
       <speak>
-      The others came in 2nd and <say-as interpret-as="ordinal">3</say-as>.
+      Your balance is: <say-as interpret-as="number">12345</say-as>.
       </speak>
     `;
 
@@ -35,7 +35,7 @@ describe('ordinal-standard', () => {
 
     const expected = dedent`
       <speak>
-      The others came in 2nd and <say-as interpret-as="ordinal">3</say-as>.
+      Your balance is: <say-as interpret-as="cardinal">12345</say-as>.
       </speak>
     `;
 
@@ -51,7 +51,7 @@ describe('ordinal-standard', () => {
 
     const expected = dedent`
       <speak>
-      The others came in 2nd and <say-as interpret-as="ordinal">3</say-as>.
+      Your balance is: <say-as interpret-as="cardinal">12345</say-as>.
       </speak>
     `;
 
@@ -67,7 +67,7 @@ describe('ordinal-standard', () => {
 
     const expected = dedent`
       <speak>
-      The others came in 2nd and <say-as interpret-as="ordinal">3</say-as>.
+      Your balance is: <say-as interpret-as="number">12345</say-as>.
       </speak>
     `;
 
@@ -83,7 +83,7 @@ describe('ordinal-standard', () => {
 
     const expected = dedent`
       <speak>
-      The others came in 2nd and <say-as interpret-as="ordinal">3</say-as>.
+      Your balance is: <say-as interpret-as="cardinal">12345</say-as>.
       </speak>
     `;
 
@@ -99,7 +99,7 @@ describe('ordinal-standard', () => {
 
     const expected = dedent`
       <speak>
-      The others came in 2nd and <say-as interpret-as="ordinal">3</say-as>.
+      Your balance is: <say-as interpret-as="cardinal">12345</say-as>.
       </speak>
     `;
 
@@ -113,7 +113,7 @@ describe('ordinal-standard', () => {
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
-      The others came in 2nd and 3.
+      Your balance is: 12345.
     `;
 
     expect(text).toBe(expected);

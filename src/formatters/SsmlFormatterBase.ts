@@ -30,6 +30,8 @@ export abstract class SsmlFormatterBase extends FormatterBase {
 
   protected modifierKeyMappings: any = {
     'chars': 'characters',
+    'cardinal': 'number',
+    'digits': 'characters',
     'bleep': 'expletive',
     'phone': 'telephone',
     'vol': 'volume',
@@ -67,6 +69,8 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     'rate': 'prosody',
     'pitch': 'prosody',
     'volume': 'prosody',
+    'drc': null,
+    'timbre': null,
     'lang': null,
     'voice': null,
     'dj': null,

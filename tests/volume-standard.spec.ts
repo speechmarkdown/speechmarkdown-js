@@ -32,6 +32,44 @@ describe('volume-standard-medium', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Amazon Polly', () => {
+
+    const options = {
+      platform: 'amazon-polly'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      A <prosody volume="medium">medium</prosody> volume 1
+      A <prosody volume="medium">medium</prosody> volume 2
+      A <prosody volume="medium">medium</prosody> volume 3
+      A <prosody volume="medium">medium</prosody> volume 4
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Amazon Polly (Neural)', () => {
+
+    const options = {
+      platform: 'amazon-polly-neural'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      A <prosody volume="medium">medium</prosody> volume 1
+      A <prosody volume="medium">medium</prosody> volume 2
+      A <prosody volume="medium">medium</prosody> volume 3
+      A <prosody volume="medium">medium</prosody> volume 4
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to SSML - Google Assistant', () => {
 
     const options = {

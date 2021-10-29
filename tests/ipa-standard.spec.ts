@@ -24,6 +24,36 @@ describe('ipa-standard', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Amazon Polly', () => {
+    const options = {
+      platform: 'amazon-polly',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      I say, <phoneme alphabet="ipa" ph="'pi.kæn">pecan</phoneme>.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Amazon Polly (Neural)', () => {
+    const options = {
+      platform: 'amazon-polly-neural',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      I say, <phoneme alphabet="ipa" ph="'pi.kæn">pecan</phoneme>.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to SSML - Google Assistant', () => {
     const options = {
       platform: 'google-assistant',

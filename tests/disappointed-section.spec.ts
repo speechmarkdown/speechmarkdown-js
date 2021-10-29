@@ -64,6 +64,68 @@ describe('disappointed-section normal to disappointed intensities to normal', ()
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Amazon Polly', () => {
+
+    const options = {
+      platform: 'amazon-polly'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+    <speak>
+    Normal speech.
+
+
+    I am disappointed - medium.
+
+
+    I am disappointed - medium.
+
+
+    I am disappointed - low.
+
+
+    I am disappointed - high.
+
+
+    Now back to normal speech.
+    </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Amazon Polly (Neural)', () => {
+
+    const options = {
+      platform: 'amazon-polly-neural'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+    <speak>
+    Normal speech.
+
+
+    I am disappointed - medium.
+
+
+    I am disappointed - medium.
+
+
+    I am disappointed - low.
+
+
+    I am disappointed - high.
+
+
+    Now back to normal speech.
+    </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to SSML - Google Assistant', () => {
 
     const options = {

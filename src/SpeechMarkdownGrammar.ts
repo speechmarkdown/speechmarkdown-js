@@ -142,8 +142,11 @@ export function speechMarkdownGrammar(myna: any): any {
       'emphasis',
       'address',
       'number',
+      'cardinal',
       'characters',
       'chars',
+      'digits',
+      'drc',
       'expletive',
       'bleep',
       'fraction',
@@ -161,6 +164,7 @@ export function speechMarkdownGrammar(myna: any): any {
       'volume',
       'rate',
       'pitch',
+      'timbre',
       'lang',
       'voice',
       'excited',
@@ -203,12 +207,20 @@ export function speechMarkdownGrammar(myna: any): any {
       'ɹ',
     ];
 
+    const percentChange = [
+      '+',
+      m.hyphen,
+      m.digit,
+      '%',
+    ]
+    
     this.textModifierText = m.choice(
       m.digit,
       m.letter,
       m.hyphen,
       m.space,
       ...ipaChars,
+      ...percentChange
     ).oneOrMore.ast;
 
     this.textModifierTextDoubleQuote = m.choice(
@@ -217,6 +229,7 @@ export function speechMarkdownGrammar(myna: any): any {
       m.hyphen,
       m.space,
       ...ipaChars,
+      ...percentChange,
       "'",
     ).oneOrMore.ast;
 
