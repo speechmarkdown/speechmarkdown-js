@@ -62,7 +62,7 @@ describe('ipa-standard', () => {
 
     const expected = dedent`
       <speak>
-      I say, pecan.
+      I say, <phoneme alphabet="ipa" ph="'pi.kæn">pecan</phoneme>.
       </speak>
     `;
 

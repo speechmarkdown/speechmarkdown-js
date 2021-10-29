@@ -1,5 +1,5 @@
 import { SpeechOptions } from '../SpeechOptions';
-import { SsmlFormatterBase } from './SsmlFormatterBase';
+import {SsmlFormatterBase, TagsObject} from './SsmlFormatterBase';
 
 export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
 
@@ -30,10 +30,7 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
 
   // tslint:disable-next-line: max-func-body-length
   private getTextModifierObject(ast: any): any {
-    let textModifierObject = {
-      tags: {},
-      text: ''
-    };
+    let textModifierObject = new TagsObject( this );
 
     for (let index = 0; index < ast.children.length; index++) {
       const child = ast.children[index];
@@ -52,95 +49,48 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
           key = this.modifierKeyMappings[key] || key;
           const value = child.children.length === 2 ? child.children[1].allText : '';
           const ssmlTag = this.modifierKeyToSsmlTagMappings[key];
-          const sortId = this.ssmlTagSortOrder.indexOf(ssmlTag);
 
           switch (key) {
             case 'address':
             case 'fraction':
             case 'ordinal':
             case 'telephone':
-            {
-                if (!textModifierObject.tags[ssmlTag]) {
-                  textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-                }
-                textModifierObject.tags[ssmlTag].attrs = { 'interpret-as': key };
-                break;
-              }
+              textModifierObject.tag( ssmlTag, { 'interpret-as': key } );  break;
 
-            case "number": {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-              textModifierObject.tags[ssmlTag].attrs = { 'interpret-as': 'cardinal' };
-              break;
-            }
+            case "number":
+              textModifierObject.tag( ssmlTag, { 'interpret-as': 'cardinal' } );  break;
 
             case "characters": {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-
               let attrValue = 'digits';
               if (isNaN(textModifierObject.text as any)) {
                 attrValue = 'characters';
               }
 
-              textModifierObject.tags[ssmlTag].attrs = { 'interpret-as': attrValue };
+              textModifierObject.tag( ssmlTag, { 'interpret-as': attrValue } );
               break;
             }
 
-            case 'date': {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-              textModifierObject.tags[ssmlTag].attrs = { 'interpret-as': key, format: value || 'ymd' };
-              break;
-            }
+            case 'date':
+              textModifierObject.tag( ssmlTag, { 'interpret-as': key, format: value || 'ymd' } );  break;
 
-            case 'time': {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-              textModifierObject.tags[ssmlTag].attrs = { 'interpret-as': key, format: value || 'hms12' };
-              break;
-            }
+            case 'time':
+              textModifierObject.tag( ssmlTag, { 'interpret-as': key, format: value || 'hms12' } );  break;
 
-            case 'whisper': {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-              textModifierObject.tags[ssmlTag].attrs = { volume: 'x-soft', rate: 'slow' };
-              break;
-            }
+            case 'whisper':
+              textModifierObject.tag( ssmlTag, { volume: 'x-soft', rate: 'slow' } );  break;
 
-            case 'ipa': {
-              if (!textModifierObject.tags[ssmlTag]) {
-                  textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-              textModifierObject.tags[ssmlTag].attrs = { alphabet: key, ph: value };
-              break;
-            }
-  
-            case 'sub': {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-              textModifierObject.tags[ssmlTag].attrs = { alias: value };
-              break;
-            }
+            case 'ipa':
+              textModifierObject.tag( ssmlTag, { alphabet: key, ph: value } );  break;
+
+            case 'sub':
+              textModifierObject.tag( ssmlTag, { alias: value } );  break;
 
             case 'volume':
             case 'rate':
             case 'pitch': {
-
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-
               const attrs = {};
               attrs[key] = value || 'medium';
-              textModifierObject.tags[ssmlTag].attrs = { ...textModifierObject.tags[ssmlTag].attrs, ...attrs };
-
+              textModifierObject.tag( ssmlTag, attrs, true );
               break;
             }
 
@@ -148,12 +98,9 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
               const name = this.sentenceCase(value || 'device')
 
               // TODO: valid voices list may not be useful when there're custom voices.
+              // TODO: convert to use the TagsObject.voiceTagNamed()
               if (name != 'Device') {
-                if (!textModifierObject.tags[ssmlTag]) {
-                  textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-                }
-
-                textModifierObject.tags[ssmlTag].attrs = { 'name': name };
+                textModifierObject.tag( ssmlTag, { 'name': name } );
               }
               break;
             }
@@ -174,9 +121,7 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
 
   // tslint:disable-next-line: max-func-body-length
   private getSectionObject(ast: any): any {
-    let sectionObject = {
-      tags: {}
-    };
+    let sectionObject = new TagsObject( this );
 
     for (let index = 0; index < ast.children.length; index++) {
       const child = ast.children[index];
@@ -185,19 +130,16 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
         let key = child.children[0].allText;
         const value = child.children.length === 2 ? child.children[1].allText : '';
         const ssmlTag = this.modifierKeyToSsmlTagMappings[key];
-        const sortId = this.ssmlTagSortOrder.indexOf(ssmlTag);
 
         switch (key) {
 
+          // TODO: valid voices list may not be useful when there're custom voices.
+          // TODO: convert to use the TagsObject.voiceTagNamed()
           case 'voice': {
             const name = this.sentenceCase(value || 'device')
 
             if (name != 'Device') {
-              if (!sectionObject.tags[ssmlTag]) {
-                sectionObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-
-              sectionObject.tags[ssmlTag].attrs = { 'name': name };
+              sectionObject.tag( ssmlTag, { 'name': name } );
             }
             break;
           }
@@ -206,13 +148,8 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
             break;
           }
 
-          case 'newscaster': {
-            if (!sectionObject.tags[ssmlTag]) {
-              sectionObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-            }
-            sectionObject.tags[ssmlTag].attrs = { 'style': 'newscast' };
-            break;
-          }
+          case 'newscaster':
+            sectionObject.tag( ssmlTag, { 'style': 'newscast' } );  break;
 
           default: {
 

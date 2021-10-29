@@ -119,12 +119,20 @@ describe('sections-standard', () => {
     const ssml = speech.toSSML(markdown, options);
 
     const expected = dedent`
-      <speak>
-      My voice and language is based on the device.
-      Now I am speaking as Kendra from the US with a US accent.
-      Switching to Brian from the UK with a US accent.
-      Now back to the device setting.
-      </speak>
+    <speak>
+    My voice and language is based on the device.
+
+    <voice gender="female" variant="3" language="en-US">
+    <lang xml:lang="en-US">Now I am speaking as Kendra from the US with a US accent.
+    </lang>
+    </voice>
+
+    <voice gender="male" variant="1" language="en-GB">
+    <lang xml:lang="en-US">Switching to Brian from the UK with a US accent.
+    </lang>
+    </voice>
+    Now back to the device setting.
+    </speak>
     `;
 
     expect(ssml).toBe(expected);
@@ -251,8 +259,14 @@ describe('sections-standard end speak tag at end', () => {
 
     const expected = dedent`
       <speak>
-      Section 1
-      Section 2
+
+      <voice gender="female" variant="3" language="en-US">Section 1
+      </voice>
+
+      <voice gender="male" variant="1" language="en-GB">
+      <lang xml:lang="en-GB">Section 2</lang>
+      </voice>
+
       </speak>
     `;
 
@@ -353,7 +367,9 @@ describe('sections-standard voice section on same line', () => {
 
     const expected = dedent`
       <speak>
-       Hey there, nice to meet you
+
+      <voice gender="male" variant="1" language="en-GB"> Hey there, nice to meet you</voice>
+
       </speak>
     `;
 
