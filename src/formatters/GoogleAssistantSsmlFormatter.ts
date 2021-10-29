@@ -1,20 +1,50 @@
 import { SpeechOptions } from '../SpeechOptions';
-import { SsmlFormatterBase } from './SsmlFormatterBase';
+import { SsmlFormatterBase, TagsObject } from './SsmlFormatterBase';
 
 export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
+
+  private validVoices : any = {
+    'Ivy':      {voice: {gender:'female', variant:1, language:'en-US'}},
+    'Joanna':   {voice: {gender:'female', variant:2, language:'en-US'}},
+    'Joey':     {voice: {gender:'male',   variant:1, language:'en-US'}},
+    'Justin':   {voice: {gender:'male',   variant:2, language:'en-US'}},
+    'Kendra':   {voice: {gender:'female', variant:3, language:'en-US'}},
+    'Kimberly': {voice: {gender:'female', variant:4, language:'en-US'}},
+    'Matthew':  {voice: {gender:'male',   variant:3, language:'en-US'}},
+    'Salli':    {voice: {gender:'male',   variant:4, language:'en-US'}},
+    'Nicole':   {voice: {gender:'female', variant:1, language:'en-AU'}},
+    'Russell':  {voice: {gender:'male',   variant:1, language:'en-AU'}},
+    'Amy':      {voice: {gender:'female', variant:1, language:'en-GB'}},
+    'Brian':    {voice: {gender:'male',   variant:1, language:'en-GB'}},
+    'Emma':     {voice: {gender:'female', variant:2, language:'en-GB'}},
+    'Aditi':    {voice: {gender:'female', variant:1, language:'en-IN'}},
+    'Raveena':  {voice: {gender:'female', variant:2, language:'en-IN'}},
+    'Hans':     {voice: {gender:'male',   variant:1, language:'de-DE'}},
+    'Marlene':  {voice: {gender:'female', variant:1, language:'de-DE'}},
+    'Vicki':    {voice: {gender:'female', variant:2, language:'de-DE'}},
+    'Conchita': {voice: {gender:'female', variant:1, language:'es-ES'}},
+    'Enrique':  {voice: {gender:'male',   variant:1, language:'es-ES'}},
+    'Carla':    {voice: {gender:'female', variant:1, language:'it-IT'}},
+    'Giorgio':  {voice: {gender:'male',   variant:1, language:'it-IT'}},
+    'Mizuki':   {voice: {gender:'female', variant:1, language:'ja-JP'}},
+    'Takumi':   {voice: {gender:'male',   variant:1, language:'ja-JP'}},
+    'Celine':   {voice: {gender:'female', variant:1, language:'fr-FR'}},
+    'Lea':      {voice: {gender:'female', variant:2, language:'fr-FR'}},
+    'Mathieu':  {voice: {gender:'male',   variant:1, language:'fr-FR'}},
+
+  }
 
   constructor(public options: SpeechOptions) {
     super(options);
 
     this.modifierKeyToSsmlTagMappings.interjection = null;
     this.modifierKeyToSsmlTagMappings.whisper = 'prosody';
+    this.modifierKeyToSsmlTagMappings.lang = 'lang';
   }
 
   // tslint:disable-next-line: max-func-body-length
   private getTextModifierObject(ast: any): any {
-    let textModifierObject = {
-      tags: {}
-    };
+    let textModifierObject = new TagsObject( this );
 
     for (let index = 0; index < ast.children.length; index++) {
       const child = ast.children[index];
@@ -33,16 +63,10 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
           key = this.modifierKeyMappings[key] || key;
           const value = child.children.length === 2 ? child.children[1].allText : '';
           const ssmlTag = this.modifierKeyToSsmlTagMappings[key];
-          const sortId = this.ssmlTagSortOrder.indexOf(ssmlTag);
 
           switch (key) {
-            case 'emphasis': {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-              textModifierObject.tags[ssmlTag].attrs = { level: value || 'moderate' };
-              break;
-            }
+            case 'emphasis':
+              textModifierObject.tag( ssmlTag, { level: value || 'moderate' } );  break;
 
             case 'address':
             case 'characters':
@@ -51,69 +75,38 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
             case 'number':
             case 'ordinal':
             case 'telephone':
-            case 'unit': {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-              textModifierObject.tags[ssmlTag].attrs = { 'interpret-as': key };
-              break;
-            }
+            case 'unit':
+              textModifierObject.tag( ssmlTag,{ 'interpret-as': key } );  break;
 
-            case 'date': {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-              textModifierObject.tags[ssmlTag].attrs = { 'interpret-as': key, format: value || 'ymd' };
-              break;
-            }
+            case 'date':
+              textModifierObject.tag( ssmlTag, { 'interpret-as': key, format: value || 'ymd' } );  break;
 
-            case 'time': {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-              textModifierObject.tags[ssmlTag].attrs = { 'interpret-as': key, format: value || 'hms12' };
-              break;
-            }
+            case 'time':
+              textModifierObject.tag( ssmlTag, { 'interpret-as': key, format: value || 'hms12' } );  break;
 
-            case 'whisper': {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-              textModifierObject.tags[ssmlTag].attrs = { volume: 'x-soft', rate: 'slow' };
-              break;
-            }
+            case 'whisper':
+              textModifierObject.tag( ssmlTag, { volume: 'x-soft', rate: 'slow' } );  break;
 
-            case 'ipa': {
-              // Google Assistant does not support <phoneme> tag
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-              textModifierObject['textOnly'] = true;
-              break;
-            }
+            case 'ipa':
+              textModifierObject.tag( ssmlTag, { alphabet: key, ph: value } );  break;
 
-            case 'sub': {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-              textModifierObject.tags[ssmlTag].attrs = { alias: value };
-              break;
-            }
+            case 'sub':
+              textModifierObject.tag( ssmlTag, { alias: value } );  break;
 
             case 'volume':
             case 'rate':
             case 'pitch': {
-
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-
               const attrs = {};
               attrs[key] = value || 'medium';
-              textModifierObject.tags[ssmlTag].attrs = { ...textModifierObject.tags[ssmlTag].attrs, ...attrs };
-
+              textModifierObject.tag( ssmlTag, attrs, true );
               break;
             }
+
+            case 'lang':
+              textModifierObject.tag( ssmlTag, { 'xml:lang': value } );  break;
+
+            case 'voice':
+              textModifierObject.voiceTag( key, value );  break;
 
             default: {
 
@@ -128,6 +121,44 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
 
     return textModifierObject;
   }
+
+  // tslint:disable-next-line: max-func-body-length
+  private getSectionObject(ast: any): any {
+    let sectionObject = new TagsObject( this );
+
+    for (let index = 0; index < ast.children.length; index++) {
+      const child = ast.children[index];
+
+      if (child.name === 'sectionModifierKeyOptionalValue') {
+        let key = child.children[0].allText;
+        const value = child.children.length === 2 ? child.children[1].allText : '';
+        const ssmlTag = this.modifierKeyToSsmlTagMappings[key];
+
+        switch (key) {
+
+          case 'lang':
+            sectionObject.tag( ssmlTag, { 'xml:lang': value } );  break;
+
+          case 'voice':
+            sectionObject.voiceTag( key, value );  break;
+
+          case 'defaults': {
+            break;
+          }
+
+          default: {
+
+          }
+
+        }
+
+      }
+
+    }
+
+    return sectionObject;
+  }
+
 
   // tslint:disable-next-line: max-func-body-length
   protected formatFromAst(ast: any, lines: string[] = []): string[] {
@@ -208,6 +239,16 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
 
         }
         lines.push(inner);
+
+        return lines;
+      }
+      case 'section': {
+        const so = this.getSectionObject(ast);
+
+        const tagsSortedAsc = Object.keys(so.tags).sort((a: any, b: any) => { return so.tags[a].sortId - so.tags[b].sortId });
+
+        this.addSectionEndTag(lines);
+        this.addSectionStartTag(tagsSortedAsc, so, lines);
 
         return lines;
       }

@@ -1,6 +1,60 @@
 import { SpeechOptions } from '../SpeechOptions';
 import { FormatterBase } from './FormatterBase';
 
+export class TagsObject {
+
+  private base;
+  public tags;
+  public text;
+
+  public constructor( base:SsmlFormatterBase ){
+    this.base = base;
+    this.tags = {};
+    this.text = '';
+  }
+
+  public tag( tag: string, attrs: object, augment:boolean = false ){
+    const sortId = this.base.ssmlTagSortOrder.indexOf( tag );
+
+    if (!this.tags[tag]) {
+      this.tags[tag] = { sortId: sortId, attrs: null };
+    }
+    if( augment ){
+      this.tags[tag].attrs = { ...this.tags[tag].attrs, ...attrs };
+    } else {
+      this.tags[tag].attrs = attrs;
+    }
+  }
+
+  protected voiceTagNamed( voices: null | object, name: string ){
+    let info = voices && voices[name];
+    if( info ){
+      if( typeof info !== 'object' ){
+        info  = {
+          voice: { "name": name },
+          //lang:  { 'xml:lang': info }
+        }
+      }
+
+      Object.keys( info ).forEach( tag => {
+        const attributes = info[tag];
+        this.tag( tag, attributes );
+      })
+      return true;
+    }
+    return false;
+  }
+
+  public voiceTag( tag: string, value: string ){
+    const name = this.base.sentenceCase(value || 'device');
+
+    const handled =
+      this.voiceTagNamed( this.base.options && this.base.options.voices, name ) ||
+      this.voiceTagNamed( this.base.validVoices, name );
+  }
+
+}
+
 type Dictionary<T> = { [key: string]: T };
 
 export abstract class SsmlFormatterBase extends FormatterBase {

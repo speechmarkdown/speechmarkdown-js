@@ -1,5 +1,5 @@
 import { SpeechOptions } from '../SpeechOptions';
-import { SsmlFormatterBase } from './SsmlFormatterBase';
+import { SsmlFormatterBase, TagsObject } from './SsmlFormatterBase';
 
 export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
 
@@ -53,9 +53,7 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
 
   // tslint:disable-next-line: max-func-body-length
   private getTextModifierObject(ast: any): any {
-    let textModifierObject = {
-      tags: {}
-    };
+    let textModifierObject = new TagsObject( this );
 
     for (let index = 0; index < ast.children.length; index++) {
       const child = ast.children[index];
@@ -74,16 +72,10 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
           key = this.modifierKeyMappings[key] || key;
           const value = child.children.length === 2 ? child.children[1].allText : '';
           const ssmlTag = this.modifierKeyToSsmlTagMappings[key];
-          const sortId = this.ssmlTagSortOrder.indexOf(ssmlTag);
 
           switch (key) {
-            case 'emphasis': {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-              textModifierObject.tags[ssmlTag].attrs = { level: value || 'moderate' };
-              break;
-            }
+            case 'emphasis':
+              textModifierObject.tag( ssmlTag, { level: value || 'moderate' } );  break;
 
             case 'address':
             case 'characters':
@@ -93,100 +85,45 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
             case 'number':
             case 'ordinal':
             case 'telephone':
-            case 'unit': {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-              textModifierObject.tags[ssmlTag].attrs = { 'interpret-as': key };
-              break;
-            }
+            case 'unit':
+              textModifierObject.tag( ssmlTag,{ 'interpret-as': key } );  break;
 
-            case 'date': {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-              textModifierObject.tags[ssmlTag].attrs = { 'interpret-as': key, format: value || 'ymd' };
-              break;
-            }
+            case 'date':
+              textModifierObject.tag( ssmlTag, { 'interpret-as': key, format: value || 'ymd' } );  break;
 
-            case 'time': {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-              textModifierObject.tags[ssmlTag].attrs = { 'interpret-as': key, format: value || 'hms12' };
-              break;
-            }
+            case 'time':
+              textModifierObject.tag( ssmlTag, { 'interpret-as': key, format: value || 'hms12' } );  break;
 
-            case 'whisper': {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-              textModifierObject.tags[ssmlTag].attrs = { name: 'whispered' };
-              break;
-            }
+            case 'whisper':
+              textModifierObject.tag( ssmlTag, { name: 'whispered' } );  break;
 
-            case 'ipa': {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-              textModifierObject.tags[ssmlTag].attrs = { alphabet: key, ph: value };
-              break;
-            }
+            case 'ipa':
+              textModifierObject.tag( ssmlTag, { alphabet: key, ph: value } );  break;
 
-            case 'sub': {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-              textModifierObject.tags[ssmlTag].attrs = { alias: value };
-              break;
-            }
+            case 'sub':
+              textModifierObject.tag( ssmlTag, { alias: value } );  break;
 
             case 'volume':
             case 'rate':
             case 'pitch': {
-
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-
               const attrs = {};
               attrs[key] = value || 'medium';
-              textModifierObject.tags[ssmlTag].attrs = { ...textModifierObject.tags[ssmlTag].attrs, ...attrs };
-
+              textModifierObject.tag( ssmlTag, attrs, true );
               break;
             }
 
-            case 'lang': {
-              if (!textModifierObject.tags[ssmlTag]) {
-                textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-              textModifierObject.tags[ssmlTag].attrs = { 'xml:lang': value };
-              break;
-            }
+            case 'lang':
+              textModifierObject.tag( ssmlTag, { 'xml:lang': value } );  break;
 
-            case 'voice': {
-              const name = this.sentenceCase(value || 'device')
-
-              if (this.validVoices[name]) {
-                if (!textModifierObject.tags[ssmlTag]) {
-                  textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-                }
-
-                textModifierObject.tags[ssmlTag].attrs = { 'name': name };
-              }
-              break;
-            }
+            case 'voice':
+              textModifierObject.voiceTag( key, value );  break;
 
             case 'excited':
             case 'disappointed': {
               const intensity = (value || 'medium').toLowerCase();
 
               if (this.validEmotionIntensity.includes(intensity)) {
-                if (!textModifierObject.tags[ssmlTag]) {
-                  textModifierObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-                }
-
-                textModifierObject.tags[ssmlTag].attrs = { 'name': key, 'intensity': intensity };
+                textModifierObject.tag( ssmlTag, { 'name': key, 'intensity': intensity } );  break;
               }
               break;
             }
@@ -207,9 +144,7 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
 
   // tslint:disable-next-line: max-func-body-length
   private getSectionObject(ast: any): any {
-    let sectionObject = {
-      tags: {}
-    };
+    let sectionObject = new TagsObject( this );
 
     for (let index = 0; index < ast.children.length; index++) {
       const child = ast.children[index];
@@ -218,46 +153,20 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
         let key = child.children[0].allText;
         const value = child.children.length === 2 ? child.children[1].allText : '';
         const ssmlTag = this.modifierKeyToSsmlTagMappings[key];
-        const sortId = this.ssmlTagSortOrder.indexOf(ssmlTag);
 
         switch (key) {
 
-          case 'lang': {
-            if (!sectionObject.tags[ssmlTag]) {
-              sectionObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-            }
-            sectionObject.tags[ssmlTag].attrs = { 'xml:lang': value };
-            break;
-          }
+          case 'lang':
+            sectionObject.tag( ssmlTag, { 'xml:lang': value } );  break;
 
-          case 'voice': {
-            const name = this.sentenceCase(value || 'device')
+          case 'voice':
+            sectionObject.voiceTag( key, value );  break;
 
-            if (this.validVoices[name]) {
-              if (!sectionObject.tags[ssmlTag]) {
-                sectionObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
+          case 'dj':
+            sectionObject.tag( ssmlTag, { 'name': 'music' } );  break;
 
-              sectionObject.tags[ssmlTag].attrs = { 'name': name };
-            }
-            break;
-          }
-
-          case 'dj': {
-            if (!sectionObject.tags[ssmlTag]) {
-              sectionObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-            }
-            sectionObject.tags[ssmlTag].attrs = { 'name': 'music' };
-            break;
-          }
-
-          case 'newscaster': {
-            if (!sectionObject.tags[ssmlTag]) {
-              sectionObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-            }
-            sectionObject.tags[ssmlTag].attrs = { 'name': 'news' };
-            break;
-          }
+          case 'newscaster':
+            sectionObject.tag( ssmlTag, { 'name': 'news' } );  break;
 
           case 'defaults': {
             break;
@@ -268,11 +177,7 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
             const intensity = (value || 'medium').toLowerCase();
 
             if (this.validEmotionIntensity.includes(intensity)) {
-              if (!sectionObject.tags[ssmlTag]) {
-                sectionObject.tags[ssmlTag] = { sortId: sortId, attrs: null };
-              }
-
-              sectionObject.tags[ssmlTag].attrs = { 'name': key, 'intensity': intensity };
+              sectionObject.tag( ssmlTag, { 'name': key, 'intensity': intensity } );  break;
             }
             break;
           }

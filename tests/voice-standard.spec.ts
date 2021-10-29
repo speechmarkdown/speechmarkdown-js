@@ -66,8 +66,8 @@ describe('voice-standard', () => {
 
     const expected = dedent`
       <speak>
-      Why do you keep switching voices from one to the other?
-      Why do you keep switching voices from one to the other?
+      Why do you keep switching voices <voice gender="male" variant="1" language="en-GB">from one</voice> to <voice gender="female" variant="3" language="en-US">the other</voice>?
+      Why do you keep switching voices <voice gender="male" variant="1" language="en-GB">from one</voice> to <voice gender="female" variant="3" language="en-US">the other</voice>?
       </speak>
     `;
 
@@ -151,8 +151,8 @@ describe('voice-standard lowercase name', () => {
 
     const expected = dedent`
       <speak>
-      Why do you keep switching voices from one to the other?
-      Why do you keep switching voices from one to the other?
+      Why do you keep switching voices <voice gender="male" variant="1" language="en-GB">from one</voice> to <voice gender="female" variant="3" language="en-US">the other</voice>?
+      Why do you keep switching voices <voice gender="male" variant="1" language="en-GB">from one</voice> to <voice gender="female" variant="3" language="en-US">the other</voice>?
       </speak>
     `;
 
@@ -236,8 +236,8 @@ describe('voice-standard invalid name', () => {
 
     const expected = dedent`
       <speak>
-      Why do you keep switching voices from one to the other?
-      Why do you keep switching voices from one to the other?
+      Why do you keep switching voices from one to <voice gender="female" variant="3" language="en-US">the other</voice>?
+      Why do you keep switching voices from one to <voice gender="female" variant="3" language="en-US">the other</voice>?
       </speak>
     `;
 
@@ -321,8 +321,8 @@ describe('voice-standard device name', () => {
 
     const expected = dedent`
       <speak>
-      Why do you keep switching voices from one to the other?
-      Why do you keep switching voices from one to the other?
+      Why do you keep switching voices from one to <voice gender="female" variant="3" language="en-US">the other</voice>?
+      Why do you keep switching voices from one to <voice gender="female" variant="3" language="en-US">the other</voice>?
       </speak>
     `;
 
