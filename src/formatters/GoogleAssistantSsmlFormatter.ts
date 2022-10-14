@@ -253,8 +253,21 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
         return lines;
       }
       case 'audio': {
-        const url = ast.children[0].allText.replace(/&/g,'&amp;');
-        return this.addTagWithAttrs(lines, null, 'audio', { src: url });
+        if (ast.children.length === 2) {
+          const caption = ast.children[0].allText
+          const url = ast.children[1].allText.replace(/&/g,'&amp;');
+          lines.push(this.startTag('audio', { src: url }));
+          lines.push('\n');
+          lines.push(this.startTag('desc', null));
+          lines.push(caption);
+          lines.push(this.endTag('desc'));
+          lines.push('\n');
+          lines.push(this.endTag('audio', false));
+          return lines;
+        } else {
+          const url = ast.children[0].allText.replace(/&/g,'&amp;');
+          return this.addTagWithAttrs(lines, null, 'audio', { src: url });
+        }
       }
       case 'simpleLine': {
         this.processAst(ast.children, lines);

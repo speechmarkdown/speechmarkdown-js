@@ -229,7 +229,9 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
       }
 
       case 'audio': {
-        const url = ast.children[0].allText.replace(/&/g, '&amp;');
+        // Ignore the caption.
+        const index = ast.children.length === 2 ? 1 : 0;
+        const url = ast.children[index].allText.replace(/&/g, '&amp;');
         return this.addTagWithAttrs(lines, null, 'audio', { src: url }, false);
       }
       case 'simpleLine': {

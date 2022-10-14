@@ -111,7 +111,7 @@ describe('audio-standard', () => {
     expect(ssml).toBe(expected);
   });
 
-test('converts to Plain Text', () => {
+  test('converts to Plain Text', () => {
 
     const options = {
     };
@@ -346,3 +346,252 @@ describe('audio-standard with Amazon signed URL', () => {
 
 });
 
+describe('audio with caption', () => {
+
+  const speech = new SpeechMarkdown();
+
+  const markdown = dedent`
+    !(a cat purring)["https://www.speechmarkdown.org/test.mp3"]
+    Announcing Speech Markdown.
+  `;
+
+  test('converts to SSML - Amazon Alexa', () => {
+
+    const options = {
+      platform: 'amazon-alexa'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      <audio src="https://www.speechmarkdown.org/test.mp3"/>
+      Announcing Speech Markdown.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Amazon Polly', () => {
+
+    const options = {
+      platform: 'amazon-polly'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+
+      Announcing Speech Markdown.
+      </speak>
+    `;
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Amazon Polly (Neural)', () => {
+
+    const options = {
+      platform: 'amazon-polly-neural'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+
+      Announcing Speech Markdown.
+      </speak>
+    `;
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Google Assistant', () => {
+
+    const options = {
+      platform: 'google-assistant'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      <audio src="https://www.speechmarkdown.org/test.mp3">
+      <desc>a cat purring</desc>
+      </audio>
+      Announcing Speech Markdown.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      <audio src="https://www.speechmarkdown.org/test.mp3"></audio>
+      Announcing Speech Markdown.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      <audio src="https://www.speechmarkdown.org/test.mp3"/>
+      Announcing Speech Markdown.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to Plain Text', () => {
+
+    const options = {
+    };
+    const text = speech.toText(markdown, options);
+
+    const expected = dedent`
+      Announcing Speech Markdown.
+    `;
+
+    expect(text).toBe(expected);
+  });
+
+});
+
+describe('audio with empty caption', () => {
+
+  const speech = new SpeechMarkdown();
+
+  const markdown = dedent`
+    !()["https://www.speechmarkdown.org/test.mp3"]
+    Announcing Speech Markdown.
+  `;
+
+  test('converts to SSML - Amazon Alexa', () => {
+
+    const options = {
+      platform: 'amazon-alexa'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      <audio src="https://www.speechmarkdown.org/test.mp3"/>
+      Announcing Speech Markdown.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Amazon Polly', () => {
+
+    const options = {
+      platform: 'amazon-polly'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+
+      Announcing Speech Markdown.
+      </speak>
+    `;
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Amazon Polly (Neural)', () => {
+
+    const options = {
+      platform: 'amazon-polly-neural'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+
+      Announcing Speech Markdown.
+      </speak>
+    `;
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Google Assistant', () => {
+
+    const options = {
+      platform: 'google-assistant'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      <audio src="https://www.speechmarkdown.org/test.mp3"/>
+      Announcing Speech Markdown.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Samsung Bixby', () => {
+
+    const options = {
+      platform: 'samsung-bixby'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      <audio src="https://www.speechmarkdown.org/test.mp3"></audio>
+      Announcing Speech Markdown.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Microsoft Azure', () => {
+
+    const options = {
+      platform: 'microsoft-azure'
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      <audio src="https://www.speechmarkdown.org/test.mp3"/>
+      Announcing Speech Markdown.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to Plain Text', () => {
+
+    const options = {
+    };
+    const text = speech.toText(markdown, options);
+
+    const expected = dedent`
+      Announcing Speech Markdown.
+    `;
+
+    expect(text).toBe(expected);
+  });
+
+});
