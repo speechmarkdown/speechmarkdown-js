@@ -14,9 +14,9 @@ describe('voice-customize custom name', () => {
     const options = {
       platform: 'amazon-alexa',
       voices: {
-        "Scott": {voice: {name: "Brian"}},
-        "Sarah": {voice: {name: "Kendra"}}
-      }
+        Scott: { voice: { name: 'Brian' } },
+        Sarah: { voice: { name: 'Kendra' } },
+      },
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -34,9 +34,9 @@ describe('voice-customize custom name', () => {
     const options = {
       platform: 'google-assistant',
       voices: {
-        "Scott": {voice: {gender: "male"}},
-        "Sarah": {voice: {gender: "female"}}
-      }
+        Scott: { voice: { gender: 'male' } },
+        Sarah: { voice: { gender: 'female' } },
+      },
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -49,7 +49,6 @@ describe('voice-customize custom name', () => {
 
     expect(ssml).toBe(expected);
   });
-
 });
 
 describe('voice-customize lowercase name', () => {
@@ -64,9 +63,9 @@ describe('voice-customize lowercase name', () => {
     const options = {
       platform: 'amazon-alexa',
       voices: {
-        "Scott": {voice: {name: "Brian"}},
-        "Sarah": {voice: {name: "Kendra"}}
-      }
+        Scott: { voice: { name: 'Brian' } },
+        Sarah: { voice: { name: 'Kendra' } },
+      },
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -84,9 +83,9 @@ describe('voice-customize lowercase name', () => {
     const options = {
       platform: 'google-assistant',
       voices: {
-        "Scott": {voice: {gender: "male"}},
-        "Sarah": {voice: {gender: "female"}}
-      }
+        Scott: { voice: { gender: 'male' } },
+        Sarah: { voice: { gender: 'female' } },
+      },
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -99,7 +98,6 @@ describe('voice-customize lowercase name', () => {
 
     expect(ssml).toBe(expected);
   });
-
 });
 
 describe('voice-customize override default', () => {
@@ -114,9 +112,9 @@ describe('voice-customize override default', () => {
     const options = {
       platform: 'amazon-alexa',
       voices: {
-        "Brian": {voice: {name: "Joey"}},
-        "Sarah": {voice: {name: "Kendra"}}
-      }
+        Brian: { voice: { name: 'Joey' } },
+        Sarah: { voice: { name: 'Kendra' } },
+      },
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -134,9 +132,9 @@ describe('voice-customize override default', () => {
     const options = {
       platform: 'google-assistant',
       voices: {
-        "Brian": {voice: {gender: "male"}},
-        "Sarah": {voice: {gender: "female"}}
-      }
+        Brian: { voice: { gender: 'male' } },
+        Sarah: { voice: { gender: 'female' } },
+      },
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -149,7 +147,6 @@ describe('voice-customize override default', () => {
 
     expect(ssml).toBe(expected);
   });
-
 });
 
 describe('voice-customize custom tags', () => {
@@ -164,9 +161,12 @@ describe('voice-customize custom tags', () => {
     const options = {
       platform: 'amazon-alexa',
       voices: {
-        "Scott": {voice: {name: "Brian"}},
-        "Sarah": {voice: {name: "Brian"}, prosody: {pitch: "high", volume: "soft"}}
-      }
+        Scott: { voice: { name: 'Brian' } },
+        Sarah: {
+          voice: { name: 'Brian' },
+          prosody: { pitch: 'high', volume: 'soft' },
+        },
+      },
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -184,9 +184,12 @@ describe('voice-customize custom tags', () => {
     const options = {
       platform: 'google-assistant',
       voices: {
-        "Scott": {voice: {gender: "male"}},
-        "Sarah": {voice: {gender: "male"}, prosody: {pitch: "high", volume: "soft"}}
-      }
+        Scott: { voice: { gender: 'male' } },
+        Sarah: {
+          voice: { gender: 'male' },
+          prosody: { pitch: 'high', volume: 'soft' },
+        },
+      },
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -199,6 +202,4 @@ describe('voice-customize custom tags', () => {
 
     expect(ssml).toBe(expected);
   });
-
 });
-

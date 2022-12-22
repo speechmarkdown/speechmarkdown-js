@@ -2,79 +2,76 @@ import { SpeechOptions } from '../SpeechOptions';
 import { FormatterBase } from './FormatterBase';
 
 export class TagsObject {
+  private base: SsmlFormatterBase;
+  public tags: Record<string, { sortId: number; attrs: object }>;
+  public text: string;
 
-  private base;
-  public tags;
-  public text;
-
-  public constructor( base:SsmlFormatterBase ){
+  public constructor(base: SsmlFormatterBase) {
     this.base = base;
     this.tags = {};
     this.text = '';
   }
 
-  public tag( tag: string, attrs: object, augment:boolean = false ){
-    const sortId = this.base.ssmlTagSortOrder.indexOf( tag );
+  public tag(tag: string, attrs: object, augment: boolean = false) {
+    const sortId = this.base.ssmlTagSortOrder.indexOf(tag);
 
     if (!this.tags[tag]) {
       this.tags[tag] = { sortId: sortId, attrs: null };
     }
-    if( augment ){
+    if (augment) {
       this.tags[tag].attrs = { ...this.tags[tag].attrs, ...attrs };
     } else {
       this.tags[tag].attrs = attrs;
     }
   }
 
-  protected voiceTagNamed( voices: null | object, name: string ){
+  protected voiceTagNamed(voices: null | object, name: string) {
     let info = voices && voices[name];
-    if( info ){
-      if( typeof info !== 'object' ){
-        info  = {
-          voice: { "name": name },
+    if (info) {
+      if (typeof info !== 'object') {
+        info = {
+          voice: { name: name },
           //lang:  { 'xml:lang': info }
-        }
+        };
       }
 
-      Object.keys( info ).forEach( tag => {
+      Object.keys(info).forEach((tag: string) => {
         const attributes = info[tag];
-        this.tag( tag, attributes );
-      })
+        this.tag(tag, attributes);
+      });
       return true;
     }
     return false;
   }
 
-  public voiceTag( tag: string, value: string ){
+  public voiceTag(tag: string, value: string) {
     const name = this.base.sentenceCase(value || 'device');
 
     const handled =
-      this.voiceTagNamed( this.base.options && this.base.options.voices, name ) ||
-      this.voiceTagNamed( this.base.validVoices, name );
+      this.voiceTagNamed(this.base.options && this.base.options.voices, name) ||
+      this.voiceTagNamed(this.base.validVoices, name);
   }
-
 }
 
 type Dictionary<T> = { [key: string]: T };
 
 export abstract class SsmlFormatterBase extends FormatterBase {
-
   public static readonly XML_ESCAPE_MAPPING: Dictionary<string> = {
-    '<' : '&lt;',
-    '>' : '&gt;',
-    '&' : '&amp;',
-    '"' : '&quot;',
-    "'" : '&apos;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '&': '&amp;',
+    '"': '&quot;',
+    "'": '&apos;',
   };
 
-  public static readonly XML_UNESCAPE_MAPPING: Dictionary<string> = (function swapJSON(dictionary: Dictionary<string>) {
-    return Object.keys(dictionary)
-                 .reduce((acc: any, key: string) => {
-                   acc[dictionary[key]] = key;
-                   return acc;
-                 }, {});
+  public static readonly XML_UNESCAPE_MAPPING: Dictionary<
+    string
+  > = (function swapJSON(dictionary: Dictionary<string>) {
+    return Object.keys(dictionary).reduce((acc: any, key: string) => {
+      acc[dictionary[key]] = key;
+      return acc;
+    }, {});
   })(SsmlFormatterBase.XML_ESCAPE_MAPPING);
-
 
   protected constructor(protected options: SpeechOptions) {
     super(options);
@@ -83,12 +80,12 @@ export abstract class SsmlFormatterBase extends FormatterBase {
   protected sectionTags: string[] = [];
 
   protected modifierKeyMappings: any = {
-    'chars': 'characters',
-    'cardinal': 'number',
-    'digits': 'characters',
-    'bleep': 'expletive',
-    'phone': 'telephone',
-    'vol': 'volume',
+    chars: 'characters',
+    cardinal: 'number',
+    digits: 'characters',
+    bleep: 'expletive',
+    phone: 'telephone',
+    vol: 'volume',
   };
 
   protected ssmlTagSortOrder: string[] = [
@@ -105,33 +102,33 @@ export abstract class SsmlFormatterBase extends FormatterBase {
   ];
 
   protected modifierKeyToSsmlTagMappings: any = {
-    'emphasis': 'emphasis',
-    'address': 'say-as',
-    'number': 'say-as',
-    'characters': 'say-as',
-    'expletive': 'say-as',
-    'fraction': 'say-as',
-    'interjection': 'say-as',
-    'ordinal': 'say-as',
-    'telephone': 'say-as',
-    'unit': 'say-as',
-    'time': 'say-as',
-    'date': 'say-as',
-    'whisper': null,
-    'sub': 'sub',
-    'ipa': 'phoneme',
-    'rate': 'prosody',
-    'pitch': 'prosody',
-    'volume': 'prosody',
-    'drc': null,
-    'timbre': null,
-    'lang': null,
-    'voice': null,
-    'dj': null,
-    'defaults': null,
-    'newscaster': null,
-    'excited': null,
-    'disappointed': null,
+    emphasis: 'emphasis',
+    address: 'say-as',
+    number: 'say-as',
+    characters: 'say-as',
+    expletive: 'say-as',
+    fraction: 'say-as',
+    interjection: 'say-as',
+    ordinal: 'say-as',
+    telephone: 'say-as',
+    unit: 'say-as',
+    time: 'say-as',
+    date: 'say-as',
+    whisper: null,
+    sub: 'sub',
+    ipa: 'phoneme',
+    rate: 'prosody',
+    pitch: 'prosody',
+    volume: 'prosody',
+    drc: null,
+    timbre: null,
+    lang: null,
+    voice: null,
+    dj: null,
+    defaults: null,
+    newscaster: null,
+    excited: null,
+    disappointed: null,
   };
 
   public format(ast: any): string {
@@ -140,7 +137,11 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     return lines.join('');
   }
 
-  protected addSectionStartTag(tagsSortedAsc: string[], so: any, lines: string[]) {
+  protected addSectionStartTag(
+    tagsSortedAsc: string[],
+    so: any,
+    lines: string[],
+  ) {
     this.sectionTags = [...tagsSortedAsc].reverse();
 
     for (let index = 0; index < tagsSortedAsc.length; index++) {
@@ -163,7 +164,14 @@ export abstract class SsmlFormatterBase extends FormatterBase {
   }
 
   // Adds tagged content
-  protected addTag(tag: string, ast: any, newLine: boolean, newLineAfterEnd: boolean, attr: any, lines: string[]): string[] {
+  protected addTag(
+    tag: string,
+    ast: any,
+    newLine: boolean,
+    newLineAfterEnd: boolean,
+    attr: any,
+    lines: string[],
+  ): string[] {
     lines.push(this.startTag(tag, attr, newLine));
 
     this.processAst(ast, lines);
@@ -177,7 +185,13 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     return lines;
   }
 
-  protected addSpeakTag(ast: any, newLine: boolean, newLineAfterEnd: boolean, attr: any, lines: string[]): string[] {
+  protected addSpeakTag(
+    ast: any,
+    newLine: boolean,
+    newLineAfterEnd: boolean,
+    attr: any,
+    lines: string[],
+  ): string[] {
     lines.push(this.startTag('speak', attr, newLine));
 
     this.processAst(ast, lines);
@@ -202,9 +216,13 @@ export abstract class SsmlFormatterBase extends FormatterBase {
   protected startTag(tag: string, attr: any, newLine: boolean = false): string {
     let attrStr = '';
     if (attr) {
-      attrStr = ' ' + Object.keys(attr).map((k: any) => {
-        return k + '="' + attr[k] + '"';
-      }).join(' ');
+      attrStr =
+        ' ' +
+        Object.keys(attr)
+          .map((k: any) => {
+            return k + '="' + attr[k] + '"';
+          })
+          .join(' ');
     }
 
     return '<' + tag + attrStr + '>' + (newLine ? '\n' : '');
@@ -219,15 +237,24 @@ export abstract class SsmlFormatterBase extends FormatterBase {
   protected voidTag(tag: string, attr: any): string {
     let attrStr = '';
     if (attr) {
-      attrStr = ' ' + Object.keys(attr).map((k: any) => {
-        return k + '="' + attr[k] + '"';
-      }).join(' ');
+      attrStr =
+        ' ' +
+        Object.keys(attr)
+          .map((k: any) => {
+            return k + '="' + attr[k] + '"';
+          })
+          .join(' ');
     }
     return '<' + tag + attrStr + '/>';
   }
 
-  protected addTagWithAttrs(lines: string[], text: string, tag: string, attrs: any, forceEndTag:boolean = false): string[] {
-
+  protected addTagWithAttrs(
+    lines: string[],
+    text: string,
+    tag: string,
+    attrs: any,
+    forceEndTag: boolean = false,
+  ): string[] {
     if (text || forceEndTag) {
       lines.push(this.startTag(tag, attrs));
 
@@ -236,8 +263,7 @@ export abstract class SsmlFormatterBase extends FormatterBase {
       }
 
       lines.push(this.endTag(tag, false));
-    }
-    else {
+    } else {
       lines.push(this.voidTag(tag, attrs));
     }
 
@@ -251,8 +277,7 @@ export abstract class SsmlFormatterBase extends FormatterBase {
       lines.push(this.startTag(tag, attrs));
       lines.push(text);
       lines.push(this.endTag(tag, false));
-    }
-    else {
+    } else {
       lines.push(this.voidTag(tag, attrs));
     }
 
@@ -260,21 +285,31 @@ export abstract class SsmlFormatterBase extends FormatterBase {
   }
 
   protected sentenceCase(text: string) {
-    return text.replace(/[a-z]/i, (letter: string) => {
-
-      return letter.toUpperCase();
-
-    }).trim();
+    return text
+      .replace(/[a-z]/i, (letter: string) => {
+        return letter.toUpperCase();
+      })
+      .trim();
   }
 
   public escapeXmlCharacters(unescaped: string): string {
     // Only process once (by unescaping)
-    let revPattern = `${ Object.keys(SsmlFormatterBase.XML_UNESCAPE_MAPPING).join('|')}]`;
-    let reversed   = unescaped.replace(new RegExp(revPattern, 'g'), (s) => SsmlFormatterBase.XML_UNESCAPE_MAPPING[s]);
+    let revPattern = `${Object.keys(
+      SsmlFormatterBase.XML_UNESCAPE_MAPPING,
+    ).join('|')}]`;
+    let reversed = unescaped.replace(
+      new RegExp(revPattern, 'g'),
+      (s: string) => SsmlFormatterBase.XML_UNESCAPE_MAPPING[s],
+    );
 
     // Escape XML characters
-    let pattern = `[${ Object.keys(SsmlFormatterBase.XML_ESCAPE_MAPPING).join('') }]`;
-    let escaped = reversed.replace(new RegExp(pattern, 'g'), (s) => SsmlFormatterBase.XML_ESCAPE_MAPPING[s]);
+    let pattern = `[${Object.keys(SsmlFormatterBase.XML_ESCAPE_MAPPING).join(
+      '',
+    )}]`;
+    let escaped = reversed.replace(
+      new RegExp(pattern, 'g'),
+      (s: string) => SsmlFormatterBase.XML_ESCAPE_MAPPING[s],
+    );
 
     // console.log([unescaped, reversed, escaped].join('\n'));
 

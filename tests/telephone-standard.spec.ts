@@ -3,7 +3,6 @@ import dedent from 'ts-dedent';
 import { SpeechMarkdown } from '../src/SpeechMarkdown';
 
 describe('telephone-standard', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdownNumber = dedent`
@@ -15,9 +14,8 @@ describe('telephone-standard', () => {
   `;
 
   test('converts to SSML - Number - Amazon Alexa', () => {
-
     const options = {
-      platform: 'amazon-alexa'
+      platform: 'amazon-alexa',
     };
     const ssml = speech.toSSML(markdownNumber, options);
 
@@ -31,9 +29,8 @@ describe('telephone-standard', () => {
   });
 
   test('converts to SSML - Number - Amazon Polly', () => {
-
     const options = {
-      platform: 'amazon-polly'
+      platform: 'amazon-polly',
     };
     const ssml = speech.toSSML(markdownNumber, options);
 
@@ -47,9 +44,8 @@ describe('telephone-standard', () => {
   });
 
   test('converts to SSML - Number - Amazon Polly (Neural)', () => {
-
     const options = {
-      platform: 'amazon-polly-neural'
+      platform: 'amazon-polly-neural',
     };
     const ssml = speech.toSSML(markdownNumber, options);
 
@@ -63,9 +59,8 @@ describe('telephone-standard', () => {
   });
 
   test('converts to SSML - Number - Google Assistant', () => {
-
     const options = {
-      platform: 'google-assistant'
+      platform: 'google-assistant',
     };
     const ssml = speech.toSSML(markdownNumber, options);
 
@@ -79,9 +74,8 @@ describe('telephone-standard', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
-      platform: 'samsung-bixby'
+      platform: 'samsung-bixby',
     };
     const ssml = speech.toSSML(markdownNumber, options);
 
@@ -95,9 +89,8 @@ describe('telephone-standard', () => {
   });
 
   test('converts to SSML - Microsoft Azure', () => {
-
     const options = {
-      platform: 'microsoft-azure'
+      platform: 'microsoft-azure',
     };
     const ssml = speech.toSSML(markdownNumber, options);
 
@@ -111,9 +104,7 @@ describe('telephone-standard', () => {
   });
 
   test('converts to Plain Text - Number', () => {
-
-    const options = {
-    };
+    const options = {};
     const text = speech.toText(markdownNumber, options);
 
     const expected = dedent`
@@ -124,9 +115,8 @@ describe('telephone-standard', () => {
   });
 
   test('converts to SSML - Parenthesis - Amazon Alexa', () => {
-
     const options = {
-      platform: 'amazon-alexa'
+      platform: 'amazon-alexa',
     };
 
     const ssml = speech.toSSML(markdownParenthesis, options);
@@ -137,14 +127,12 @@ describe('telephone-standard', () => {
       </speak>
     `;
 
-
     expect(ssml).toBe(expected);
   });
 
   test('converts to SSML - Parenthesis - Google Assistant', () => {
-
     const options = {
-      platform: 'google-assistant'
+      platform: 'google-assistant',
     };
 
     const ssml = speech.toSSML(markdownParenthesis, options);
@@ -159,9 +147,8 @@ describe('telephone-standard', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
-      platform: 'samsung-bixby'
+      platform: 'samsung-bixby',
     };
     const ssml = speech.toSSML(markdownParenthesis, options);
 
@@ -175,9 +162,8 @@ describe('telephone-standard', () => {
   });
 
   test('converts to SSML - Microsoft Azure', () => {
-
     const options = {
-      platform: 'microsoft-azure'
+      platform: 'microsoft-azure',
     };
     const ssml = speech.toSSML(markdownParenthesis, options);
 
@@ -191,9 +177,7 @@ describe('telephone-standard', () => {
   });
 
   test('converts to Plain Text - Parenthesis', () => {
-
-    const options = {
-    };
+    const options = {};
 
     const text = speech.toText(markdownParenthesis, options);
 
@@ -203,5 +187,4 @@ describe('telephone-standard', () => {
 
     expect(text).toBe(expected);
   });
-
 });

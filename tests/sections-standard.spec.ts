@@ -3,7 +3,6 @@ import dedent from 'ts-dedent';
 import { SpeechMarkdown } from '../src/SpeechMarkdown';
 
 describe('sections-standard', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -20,9 +19,8 @@ describe('sections-standard', () => {
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
-      platform: 'amazon-alexa'
+      platform: 'amazon-alexa',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -53,9 +51,8 @@ describe('sections-standard', () => {
   });
 
   test('converts to SSML - Amazon Polly', () => {
-
     const options = {
-      platform: 'amazon-polly'
+      platform: 'amazon-polly',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -82,9 +79,8 @@ describe('sections-standard', () => {
   });
 
   test('converts to SSML - Amazon Polly (Neural)', () => {
-
     const options = {
-      platform: 'amazon-polly-neural'
+      platform: 'amazon-polly-neural',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -111,10 +107,9 @@ describe('sections-standard', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
       platform: 'google-assistant',
-      preserveEmptyLines: false
+      preserveEmptyLines: false,
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -139,10 +134,9 @@ describe('sections-standard', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
       platform: 'samsung-bixby',
-      preserveEmptyLines: false
+      preserveEmptyLines: false,
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -159,9 +153,8 @@ describe('sections-standard', () => {
   });
 
   test('converts to SSML - Microsoft Azure', () => {
-
     const options = {
-      platform: 'microsoft-azure'
+      platform: 'microsoft-azure',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -188,9 +181,7 @@ describe('sections-standard', () => {
   });
 
   test('converts to Plain Text', () => {
-
-    const options = {
-    };
+    const options = {};
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
@@ -208,11 +199,9 @@ describe('sections-standard', () => {
 
     expect(text).toBe(expected);
   });
-
 });
 
 describe('sections-standard end speak tag at end', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -224,9 +213,8 @@ describe('sections-standard end speak tag at end', () => {
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
-      platform: 'amazon-alexa'
+      platform: 'amazon-alexa',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -250,10 +238,9 @@ describe('sections-standard end speak tag at end', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
       platform: 'google-assistant',
-      preserveEmptyLines: false
+      preserveEmptyLines: false,
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -274,10 +261,9 @@ describe('sections-standard end speak tag at end', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
       platform: 'samsung-bixby',
-      preserveEmptyLines: false
+      preserveEmptyLines: false,
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -292,9 +278,8 @@ describe('sections-standard end speak tag at end', () => {
   });
 
   test('converts to SSML - Microsoft Azure', () => {
-
     const options = {
-      platform: 'microsoft-azure'
+      platform: 'microsoft-azure',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -316,9 +301,7 @@ describe('sections-standard end speak tag at end', () => {
   });
 
   test('converts to Plain Text', () => {
-
-    const options = {
-    };
+    const options = {};
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
@@ -329,11 +312,9 @@ describe('sections-standard end speak tag at end', () => {
     `;
     expect(text).toBe(expected);
   });
-
 });
 
 describe('sections-standard voice section on same line', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -341,9 +322,8 @@ describe('sections-standard voice section on same line', () => {
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
-      platform: 'amazon-alexa'
+      platform: 'amazon-alexa',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -359,9 +339,8 @@ describe('sections-standard voice section on same line', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
-      platform: 'google-assistant'
+      platform: 'google-assistant',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -377,10 +356,9 @@ describe('sections-standard voice section on same line', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
       platform: 'samsung-bixby',
-      preserveEmptyLines: false
+      preserveEmptyLines: false,
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -394,9 +372,8 @@ describe('sections-standard voice section on same line', () => {
   });
 
   test('converts to SSML - Microsoft Azure', () => {
-
     const options = {
-      platform: 'microsoft-azure'
+      platform: 'microsoft-azure',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -412,14 +389,11 @@ describe('sections-standard voice section on same line', () => {
   });
 
   test('converts to Plain Text', () => {
-
-    const options = {
-    };
+    const options = {};
     const text = speech.toText(markdown, options);
 
     const expected = 'Hey there, nice to meet you';
 
     expect(text).toBe(expected);
   });
-
 });

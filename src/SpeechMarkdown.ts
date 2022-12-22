@@ -1,10 +1,9 @@
-import  * as factory from './formatters/FormatterFactory';
+import * as factory from './formatters/FormatterFactory';
 import { Parser } from './Interfaces';
-import { SpeechMarkdownParser } from "./SpeechMarkdownParser";
-import { SpeechOptions } from "./SpeechOptions";
+import { SpeechMarkdownParser } from './SpeechMarkdownParser';
+import { SpeechOptions } from './SpeechOptions';
 
 export class SpeechMarkdown {
-
   private parser: Parser;
 
   private readonly defaults: SpeechOptions = {
@@ -16,10 +15,10 @@ export class SpeechMarkdown {
   };
 
   constructor(private options?: SpeechOptions) {
-      this.options = {
-        ... this.defaults,
-        ... options
-      };
+    this.options = {
+      ...this.defaults,
+      ...options,
+    };
   }
 
   get Parser(): Parser {
@@ -32,8 +31,8 @@ export class SpeechMarkdown {
 
   public toText(speechmarkdown: string, options?: SpeechOptions): string {
     const methodOptions = {
-      ... this.options,
-      ... options
+      ...this.options,
+      ...options,
     };
 
     const ast = this.Parser.parse(speechmarkdown);
@@ -44,8 +43,8 @@ export class SpeechMarkdown {
 
   public toSSML(speechmarkdown: string, options?: SpeechOptions): string {
     const methodOptions = {
-      ... this.options,
-      ... options
+      ...this.options,
+      ...options,
     };
 
     const ast = this.Parser.parse(speechmarkdown);
@@ -64,7 +63,3 @@ export class SpeechMarkdown {
     return ast.toString();
   }
 }
-
-
-
-

@@ -1,5 +1,5 @@
-import dedent from "ts-dedent";
-import { SpeechMarkdown } from "../src/SpeechMarkdown";
+import dedent from 'ts-dedent';
+import { SpeechMarkdown } from '../src/SpeechMarkdown';
 
 const speech = new SpeechMarkdown();
 
@@ -8,16 +8,15 @@ const markdown = dedent`
 `;
 
 describe('escape-xml', () => {
-
   test('No special symbol', () => {
     const options = {
-      platform        : 'amazon-alexa',
-      escapeXmlSymbols: true
+      platform: 'amazon-alexa',
+      escapeXmlSymbols: true,
     };
     const text = `Procter and Gamble`;
     const ssml = speech.toSSML(text, options);
 
-    const exp  = dedent`
+    const exp = dedent`
     <speak>
     Procter and Gamble
     </speak>`;
@@ -27,13 +26,13 @@ describe('escape-xml', () => {
 
   test('Symbol &', () => {
     const options = {
-      platform        : 'amazon-alexa',
-      escapeXmlSymbols: true
+      platform: 'amazon-alexa',
+      escapeXmlSymbols: true,
     };
     const text = `Procter & Gamble`;
     const ssml = speech.toSSML(text, options);
 
-    const exp  = dedent`
+    const exp = dedent`
     <speak>
     Procter &amp; Gamble
     </speak>`;
@@ -43,13 +42,13 @@ describe('escape-xml', () => {
 
   test('Already escaped symbol &', () => {
     const options = {
-      platform        : 'amazon-alexa',
-      escapeXmlSymbols: true
+      platform: 'amazon-alexa',
+      escapeXmlSymbols: true,
     };
     const text = `Procter &amp; Gamble`;
     const ssml = speech.toSSML(text, options);
 
-    const exp  = dedent`
+    const exp = dedent`
     <speak>
     Procter &amp; Gamble
     </speak>`;
@@ -57,15 +56,15 @@ describe('escape-xml', () => {
     expect(ssml).toEqual(exp);
   });
 
-  test('Symbol \'', () => {
+  test("Symbol '", () => {
     const options = {
-      platform        : 'amazon-alexa',
-      escapeXmlSymbols: true
+      platform: 'amazon-alexa',
+      escapeXmlSymbols: true,
     };
     const text = `Levi's`;
     const ssml = speech.toSSML(text, options);
 
-    const exp  = dedent`
+    const exp = dedent`
     <speak>
     Levi&apos;s
     </speak>`;
@@ -75,8 +74,8 @@ describe('escape-xml', () => {
 
   test('German with both symbols', () => {
     const options = {
-      platform        : 'amazon-alexa',
-      escapeXmlSymbols: true
+      platform: 'amazon-alexa',
+      escapeXmlSymbols: true,
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -91,14 +90,14 @@ describe('escape-xml', () => {
 
   test('No escaping', () => {
     const options = {
-      platform        : 'amazon-alexa',
-      escapeXmlSymbols: false
+      platform: 'amazon-alexa',
+      escapeXmlSymbols: false,
     };
     const ssml = speech.toSSML(markdown, options);
 
     const expected = dedent`
     <speak>
-    ${ markdown }
+    ${markdown}
     </speak>
     `;
 
@@ -107,14 +106,14 @@ describe('escape-xml', () => {
 
   test('Google with no support of escapeXmlSymbols', () => {
     const options = {
-      platform        : 'google-assistant',
-      escapeXmlSymbols: true
+      platform: 'google-assistant',
+      escapeXmlSymbols: true,
     };
     const ssml = speech.toSSML(markdown, options);
 
     const expected = dedent`
     <speak>
-    ${ markdown }
+    ${markdown}
     </speak>
     `;
 
@@ -123,16 +122,15 @@ describe('escape-xml', () => {
 });
 
 describe('escape-xml: non-regression with SpeechMarkdown elements', () => {
-
   test('break short syntax', () => {
     const options = {
-      platform        : 'amazon-alexa',
-      escapeXmlSymbols: true
+      platform: 'amazon-alexa',
+      escapeXmlSymbols: true,
     };
     const text = `Procter [250ms] and Gamble`;
     const ssml = speech.toSSML(text, options);
 
-    const exp  = dedent`
+    const exp = dedent`
     <speak>
     Procter <break time="250ms"/> and Gamble
     </speak>`;
@@ -142,13 +140,13 @@ describe('escape-xml: non-regression with SpeechMarkdown elements', () => {
 
   test('break long syntax', () => {
     const options = {
-      platform        : 'amazon-alexa',
-      escapeXmlSymbols: true
+      platform: 'amazon-alexa',
+      escapeXmlSymbols: true,
     };
     const text = `Procter [break:"500ms"] and [break:"weak"] Gamble`;
     const ssml = speech.toSSML(text, options);
 
-    const exp  = dedent`
+    const exp = dedent`
     <speak>
     Procter <break time="500ms"/> and <break strength="weak"/> Gamble
     </speak>`;
@@ -158,13 +156,13 @@ describe('escape-xml: non-regression with SpeechMarkdown elements', () => {
 
   test('lang', () => {
     const options = {
-      platform        : 'amazon-alexa',
-      escapeXmlSymbols: true
+      platform: 'amazon-alexa',
+      escapeXmlSymbols: true,
     };
     const text = `In Paris, they pronounce it (Paris)[lang:"fr-FR"]`;
     const ssml = speech.toSSML(text, options);
 
-    const exp  = dedent`
+    const exp = dedent`
     <speak>
     In Paris, they pronounce it <lang xml:lang="fr-FR">Paris</lang>
     </speak>`;

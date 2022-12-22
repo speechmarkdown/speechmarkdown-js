@@ -3,7 +3,6 @@ import dedent from 'ts-dedent';
 import { SpeechMarkdown } from '../src/SpeechMarkdown';
 
 describe('emphasis-short-moderate', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -11,9 +10,8 @@ describe('emphasis-short-moderate', () => {
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
-      platform: 'amazon-alexa'
+      platform: 'amazon-alexa',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -27,9 +25,8 @@ describe('emphasis-short-moderate', () => {
   });
 
   test('converts to SSML - Amazon Polly', () => {
-
     const options = {
-      platform: 'amazon-polly'
+      platform: 'amazon-polly',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -43,9 +40,8 @@ describe('emphasis-short-moderate', () => {
   });
 
   test('converts to SSML - Amazon Polly (Neural)', () => {
-
     const options = {
-      platform: 'amazon-polly-neural'
+      platform: 'amazon-polly-neural',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -59,9 +55,8 @@ describe('emphasis-short-moderate', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
-      platform: 'google-assistant'
+      platform: 'google-assistant',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -75,9 +70,8 @@ describe('emphasis-short-moderate', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
-      platform: 'samsung-bixby'
+      platform: 'samsung-bixby',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -91,9 +85,8 @@ describe('emphasis-short-moderate', () => {
   });
 
   test('converts to SSML - Microsoft Azure', () => {
-
     const options = {
-      platform: 'microsoft-azure'
+      platform: 'microsoft-azure',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -107,9 +100,7 @@ describe('emphasis-short-moderate', () => {
   });
 
   test('converts to Plain Text', () => {
-
-    const options = {
-    };
+    const options = {};
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
@@ -118,11 +109,9 @@ describe('emphasis-short-moderate', () => {
 
     expect(text).toBe(expected);
   });
-
 });
 
 describe('emphasis-short-strong', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -130,9 +119,8 @@ describe('emphasis-short-strong', () => {
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
-      platform: 'amazon-alexa'
+      platform: 'amazon-alexa',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -146,9 +134,8 @@ describe('emphasis-short-strong', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
-      platform: 'google-assistant'
+      platform: 'google-assistant',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -162,9 +149,8 @@ describe('emphasis-short-strong', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
-      platform: 'samsung-bixby'
+      platform: 'samsung-bixby',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -178,9 +164,8 @@ describe('emphasis-short-strong', () => {
   });
 
   test('converts to SSML - Microsoft Azure', () => {
-
     const options = {
-      platform: 'microsoft-azure'
+      platform: 'microsoft-azure',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -194,9 +179,7 @@ describe('emphasis-short-strong', () => {
   });
 
   test('converts to Plain Text', () => {
-
-    const options = {
-    };
+    const options = {};
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
@@ -205,11 +188,9 @@ describe('emphasis-short-strong', () => {
 
     expect(text).toBe(expected);
   });
-
 });
 
 describe('emphasis-short-none', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -217,9 +198,8 @@ describe('emphasis-short-none', () => {
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
-      platform: 'amazon-alexa'
+      platform: 'amazon-alexa',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -233,9 +213,8 @@ describe('emphasis-short-none', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
-      platform: 'google-assistant'
+      platform: 'google-assistant',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -249,9 +228,8 @@ describe('emphasis-short-none', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
-      platform: 'samsung-bixby'
+      platform: 'samsung-bixby',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -265,9 +243,8 @@ describe('emphasis-short-none', () => {
   });
 
   test('converts to SSML - Microsoft Azure', () => {
-
     const options = {
-      platform: 'microsoft-azure'
+      platform: 'microsoft-azure',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -281,9 +258,7 @@ describe('emphasis-short-none', () => {
   });
 
   test('converts to Plain Text', () => {
-
-    const options = {
-    };
+    const options = {};
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
@@ -292,11 +267,9 @@ describe('emphasis-short-none', () => {
 
     expect(text).toBe(expected);
   });
-
 });
 
 describe('emphasis-short-reduced', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -304,9 +277,8 @@ describe('emphasis-short-reduced', () => {
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
-      platform: 'amazon-alexa'
+      platform: 'amazon-alexa',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -320,9 +292,8 @@ describe('emphasis-short-reduced', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
-      platform: 'google-assistant'
+      platform: 'google-assistant',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -336,9 +307,8 @@ describe('emphasis-short-reduced', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
-      platform: 'samsung-bixby'
+      platform: 'samsung-bixby',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -352,9 +322,8 @@ describe('emphasis-short-reduced', () => {
   });
 
   test('converts to SSML - Microsoft Azure', () => {
-
     const options = {
-      platform: 'microsoft-azure'
+      platform: 'microsoft-azure',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -368,9 +337,7 @@ describe('emphasis-short-reduced', () => {
   });
 
   test('converts to Plain Text', () => {
-
-    const options = {
-    };
+    const options = {};
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
@@ -379,11 +346,9 @@ describe('emphasis-short-reduced', () => {
 
     expect(text).toBe(expected);
   });
-
 });
 
 describe('emphasis-short-reduced should not interfere with hyphenated words', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -391,9 +356,8 @@ describe('emphasis-short-reduced should not interfere with hyphenated words', ()
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
-      platform: 'amazon-alexa'
+      platform: 'amazon-alexa',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -407,9 +371,8 @@ describe('emphasis-short-reduced should not interfere with hyphenated words', ()
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
-      platform: 'google-assistant'
+      platform: 'google-assistant',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -423,9 +386,8 @@ describe('emphasis-short-reduced should not interfere with hyphenated words', ()
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
-      platform: 'samsung-bixby'
+      platform: 'samsung-bixby',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -439,9 +401,8 @@ describe('emphasis-short-reduced should not interfere with hyphenated words', ()
   });
 
   test('converts to SSML - Microsoft Azure', () => {
-
     const options = {
-      platform: 'microsoft-azure'
+      platform: 'microsoft-azure',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -455,9 +416,7 @@ describe('emphasis-short-reduced should not interfere with hyphenated words', ()
   });
 
   test('converts to Plain Text', () => {
-
-    const options = {
-    };
+    const options = {};
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
@@ -466,5 +425,4 @@ describe('emphasis-short-reduced should not interfere with hyphenated words', ()
 
     expect(text).toBe(expected);
   });
-
 });

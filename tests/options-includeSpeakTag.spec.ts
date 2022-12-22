@@ -3,7 +3,6 @@ import dedent from 'ts-dedent';
 import { SpeechMarkdown } from '../src/SpeechMarkdown';
 
 describe('options-includeSpeakTag default to true', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -11,9 +10,8 @@ describe('options-includeSpeakTag default to true', () => {
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
-      platform: 'amazon-alexa'
+      platform: 'amazon-alexa',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -27,9 +25,8 @@ describe('options-includeSpeakTag default to true', () => {
   });
 
   test('converts to SSML - Amazon Polly', () => {
-
     const options = {
-      platform: 'amazon-polly'
+      platform: 'amazon-polly',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -43,9 +40,8 @@ describe('options-includeSpeakTag default to true', () => {
   });
 
   test('converts to SSML - Amazon Polly (Neural)', () => {
-
     const options = {
-      platform: 'amazon-polly-neural'
+      platform: 'amazon-polly-neural',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -59,9 +55,8 @@ describe('options-includeSpeakTag default to true', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
-      platform: 'google-assistant'
+      platform: 'google-assistant',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -75,9 +70,8 @@ describe('options-includeSpeakTag default to true', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
-      platform: 'samsung-bixby'
+      platform: 'samsung-bixby',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -91,9 +85,8 @@ describe('options-includeSpeakTag default to true', () => {
   });
 
   test('converts to SSML - Microsoft Azure', () => {
-
     const options = {
-      platform: 'microsoft-azure'
+      platform: 'microsoft-azure',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -105,11 +98,9 @@ describe('options-includeSpeakTag default to true', () => {
 
     expect(ssml).toBe(expected);
   });
-
 });
 
 describe('options-includeSpeakTag set to true', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -117,7 +108,6 @@ describe('options-includeSpeakTag set to true', () => {
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
       platform: 'amazon-alexa',
       includeSpeakTag: true,
@@ -134,7 +124,6 @@ describe('options-includeSpeakTag set to true', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
       platform: 'google-assistant',
       includeSpeakTag: true,
@@ -151,7 +140,6 @@ describe('options-includeSpeakTag set to true', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
       platform: 'samsung-bixby',
       includeSpeakTag: true,
@@ -168,7 +156,6 @@ describe('options-includeSpeakTag set to true', () => {
   });
 
   test('converts to SSML - Microsoft Azure', () => {
-
     const options = {
       platform: 'microsoft-azure',
       includeSpeakTag: true,
@@ -183,12 +170,9 @@ describe('options-includeSpeakTag set to true', () => {
 
     expect(ssml).toBe(expected);
   });
-
 });
 
-
 describe('options-includeSpeakTag set to false', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -196,7 +180,6 @@ describe('options-includeSpeakTag set to false', () => {
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
       platform: 'amazon-alexa',
       includeSpeakTag: false,
@@ -211,7 +194,6 @@ describe('options-includeSpeakTag set to false', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
       platform: 'google-assistant',
       includeSpeakTag: false,
@@ -226,7 +208,6 @@ describe('options-includeSpeakTag set to false', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
       platform: 'samsung-bixby',
       includeSpeakTag: false,
@@ -241,7 +222,6 @@ describe('options-includeSpeakTag set to false', () => {
   });
 
   test('converts to SSML - Microsoft Azure', () => {
-
     const options = {
       platform: 'microsoft-azure',
       includeSpeakTag: false,
@@ -254,5 +234,4 @@ describe('options-includeSpeakTag set to false', () => {
 
     expect(ssml).toBe(expected);
   });
-
 });

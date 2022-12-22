@@ -2,9 +2,9 @@ name: NPM test
 
 on:
   push:
-    branches: [ "master" ]
+    branches: ['master']
   pull_request:
-    branches: [ "master" ]
+    branches: ['master']
 
 jobs:
   build:
@@ -15,17 +15,21 @@ jobs:
         node-version: [14.x, 16.x, 18.x]
 
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
 
-    - name: Build
-      run: |
-        npm install
+      - name: Install
+        run: npm install
 
-    - name: Test
-      run: |
-        npm test
+      - name: Check formatting
+        run: node_modules/.bin/prettier --check  $(find src -type f)
+
+      - name: Check lint
+        run: npm run lint
+
+      - name: Test
+        run: npm test

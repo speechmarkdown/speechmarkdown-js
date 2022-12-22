@@ -1,8 +1,7 @@
 import { SpeechOptions } from '../SpeechOptions';
-import {SsmlFormatterBase, TagsObject} from './SsmlFormatterBase';
+import { SsmlFormatterBase, TagsObject } from './SsmlFormatterBase';
 
 export class SamsungBixbySsmlFormatter extends SsmlFormatterBase {
-
   constructor(public options: SpeechOptions) {
     super(options);
 
@@ -28,7 +27,7 @@ export class SamsungBixbySsmlFormatter extends SsmlFormatterBase {
 
   // tslint:disable-next-line: max-func-body-length
   private getTextModifierObject(ast: any): any {
-    let textModifierObject = new TagsObject( this );
+    let textModifierObject = new TagsObject(this);
 
     for (let index = 0; index < ast.children.length; index++) {
       const child = ast.children[index];
@@ -45,7 +44,8 @@ export class SamsungBixbySsmlFormatter extends SsmlFormatterBase {
         case 'textModifierKeyOptionalValue': {
           let key = child.children[0].allText;
           key = this.modifierKeyMappings[key] || key;
-          const value = child.children.length === 2 ? child.children[1].allText : '';
+          const value =
+            child.children.length === 2 ? child.children[1].allText : '';
           const ssmlTag = this.modifierKeyToSsmlTagMappings[key];
 
           switch (key) {
@@ -63,18 +63,20 @@ export class SamsungBixbySsmlFormatter extends SsmlFormatterBase {
             // case 'unit':
             case 'fraction':
             case 'ordinal':
-              textModifierObject.tag( ssmlTag, { 'interpret-as': key } );  break;
+              textModifierObject.tag(ssmlTag, { 'interpret-as': key });
+              break;
 
-            case "number":
-              textModifierObject.tag( ssmlTag, { 'interpret-as': 'cardinal' } );  break;
+            case 'number':
+              textModifierObject.tag(ssmlTag, { 'interpret-as': 'cardinal' });
+              break;
 
-            case "characters": {
+            case 'characters': {
               let attrValue = 'digits';
               if (isNaN(textModifierObject.text as any)) {
                 attrValue = 'spell-out';
               }
 
-              textModifierObject.tag( ssmlTag, { 'interpret-as': attrValue } );
+              textModifierObject.tag(ssmlTag, { 'interpret-as': attrValue });
               break;
             }
 
@@ -95,7 +97,11 @@ export class SamsungBixbySsmlFormatter extends SsmlFormatterBase {
             // }
 
             case 'whisper':
-              textModifierObject.tag( ssmlTag, { volume: 'x-soft', rate: 'slow' } );  break;
+              textModifierObject.tag(ssmlTag, {
+                volume: 'x-soft',
+                rate: 'slow',
+              });
+              break;
 
             // case 'ipa': {
             //   // Google Assistant does not support <phoneme> tag
@@ -107,39 +113,38 @@ export class SamsungBixbySsmlFormatter extends SsmlFormatterBase {
             // }
 
             case 'sub':
-              textModifierObject.tag( ssmlTag, { alias: value } );  break;
+              textModifierObject.tag(ssmlTag, { alias: value });
+              break;
 
             case 'volume':
             case 'rate':
             case 'pitch': {
               const attrs = {};
               attrs[key] = value || 'medium';
-              textModifierObject.tag( ssmlTag, attrs, true );
+              textModifierObject.tag(ssmlTag, attrs, true);
               break;
             }
 
             default: {
-
             }
-
           }
           break;
         }
       }
-
     }
 
     return textModifierObject;
   }
 
-
   // tslint:disable-next-line: max-func-body-length
   protected formatFromAst(ast: any, lines: string[] = []): string[] {
-
     switch (ast.name) {
       case 'document': {
         if (this.options.includeFormatterComment) {
-          this.addComment('Converted from Speech Markdown to SSML for Samsung Bixby', lines);
+          this.addComment(
+            'Converted from Speech Markdown to SSML for Samsung Bixby',
+            lines,
+          );
         }
 
         if (this.options.includeSpeakTag) {
@@ -165,22 +170,25 @@ export class SamsungBixbySsmlFormatter extends SsmlFormatterBase {
         const val = ast.children[0].allText;
         let attrs = {};
         switch (ast.children[0].children[0].name) {
-          case 'breakStrengthValue': attrs = { strength: val }; break;
-          case 'time': attrs = { time: val }; break;
+          case 'breakStrengthValue':
+            attrs = { strength: val };
+            break;
+          case 'time':
+            attrs = { time: val };
+            break;
         }
         return this.addTagWithAttrs(lines, null, 'break', attrs);
       }
       case 'shortEmphasisModerate':
       case 'shortEmphasisStrong':
       case 'shortEmphasisNone':
-      case 'shortEmphasisReduced':
-        {
-          const text = ast.children[0].allText;
-          if (text) {
-            lines.push(text);
-          }
-          return lines;
+      case 'shortEmphasisReduced': {
+        const text = ast.children[0].allText;
+        if (text) {
+          lines.push(text);
         }
+        return lines;
+      }
       // case 'shortEmphasisStrong': {
       //   const text = ast.children[0].allText;
       //   return this.addTagWithAttrs(lines, text, 'emphasis', { level: 'strong' });
@@ -224,11 +232,13 @@ export class SamsungBixbySsmlFormatter extends SsmlFormatterBase {
 
         if (tmo.textOnly) {
           // Quick return if tag is not supported
-          lines.push(tmo.text)
-          return lines
+          lines.push(tmo.text);
+          return lines;
         }
 
-        const tagsSortedDesc = Object.keys(tmo.tags).sort((a: any, b: any) => { return tmo.tags[b].sortId - tmo.tags[a].sortId });
+        const tagsSortedDesc = Object.keys(tmo.tags).sort((a: any, b: any) => {
+          return tmo.tags[b].sortId - tmo.tags[a].sortId;
+        });
 
         let inner = tmo.text;
 
@@ -237,7 +247,6 @@ export class SamsungBixbySsmlFormatter extends SsmlFormatterBase {
           const attrs = tmo.tags[tag].attrs;
 
           inner = this.getTagWithAttrs(inner, tag, attrs);
-
         }
         lines.push(inner);
 
@@ -247,7 +256,7 @@ export class SamsungBixbySsmlFormatter extends SsmlFormatterBase {
       case 'audio': {
         // Ignore the caption.
         const index = ast.children.length === 2 ? 1 : 0;
-        const url = ast.children[index].allText.replace(/&/g,'&amp;');
+        const url = ast.children[index].allText.replace(/&/g, '&amp;');
         return this.addTagWithAttrs(lines, null, 'audio', { src: url }, true);
       }
       case 'simpleLine': {

@@ -2,7 +2,6 @@ import { SpeechOptions } from '../SpeechOptions';
 import { FormatterBase } from './FormatterBase';
 
 export class TextFormatter extends FormatterBase {
-
   constructor(protected options: SpeechOptions) {
     super(options);
   }
@@ -19,7 +18,6 @@ export class TextFormatter extends FormatterBase {
   }
 
   protected formatFromAst(ast: any, lines: string[] = []): string[] {
-
     switch (ast.name) {
       case 'document': {
         this.processAst(ast.children, lines);
@@ -53,7 +51,8 @@ export class TextFormatter extends FormatterBase {
         return lines;
       }
 
-      case 'audio': return lines;
+      case 'audio':
+        return lines;
 
       default: {
         this.processAst(ast.children, lines);

@@ -13,7 +13,7 @@ export class SpeechMarkdownParser implements Parser {
   }
 
   public parse(speechmarkdown: string): any {
-// tslint:disable-next-line: no-unnecessary-local-variable
+    // tslint:disable-next-line: no-unnecessary-local-variable
     return this.parser(speechmarkdown);
   }
 }

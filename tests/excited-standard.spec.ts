@@ -3,7 +3,6 @@ import dedent from 'ts-dedent';
 import { SpeechMarkdown } from '../src/SpeechMarkdown';
 
 describe('excited-standard', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -11,9 +10,8 @@ describe('excited-standard', () => {
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
-      platform: 'amazon-alexa'
+      platform: 'amazon-alexa',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -27,9 +25,8 @@ describe('excited-standard', () => {
   });
 
   test('converts to SSML - Amazon Polly', () => {
-
     const options = {
-      platform: 'amazon-polly'
+      platform: 'amazon-polly',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -43,9 +40,8 @@ describe('excited-standard', () => {
   });
 
   test('converts to SSML - Amazon Polly (Neural)', () => {
-
     const options = {
-      platform: 'amazon-polly-neural'
+      platform: 'amazon-polly-neural',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -59,9 +55,8 @@ describe('excited-standard', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
-      platform: 'google-assistant'
+      platform: 'google-assistant',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -75,9 +70,8 @@ describe('excited-standard', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
-      platform: 'samsung-bixby'
+      platform: 'samsung-bixby',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -91,9 +85,7 @@ describe('excited-standard', () => {
   });
 
   test('converts to Plain Text', () => {
-
-    const options = {
-    };
+    const options = {};
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
@@ -102,11 +94,9 @@ describe('excited-standard', () => {
 
     expect(text).toBe(expected);
   });
-
 });
 
 describe('excited-standard non-lowercase intensity', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -114,9 +104,8 @@ describe('excited-standard non-lowercase intensity', () => {
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
-      platform: 'amazon-alexa'
+      platform: 'amazon-alexa',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -130,9 +119,8 @@ describe('excited-standard non-lowercase intensity', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
-      platform: 'google-assistant'
+      platform: 'google-assistant',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -146,9 +134,8 @@ describe('excited-standard non-lowercase intensity', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
-      platform: 'samsung-bixby'
+      platform: 'samsung-bixby',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -162,9 +149,7 @@ describe('excited-standard non-lowercase intensity', () => {
   });
 
   test('converts to Plain Text', () => {
-
-    const options = {
-    };
+    const options = {};
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
@@ -173,11 +158,9 @@ describe('excited-standard non-lowercase intensity', () => {
 
     expect(text).toBe(expected);
   });
-
 });
 
 describe('excited-standard invalid intensity', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -185,9 +168,8 @@ describe('excited-standard invalid intensity', () => {
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
-      platform: 'amazon-alexa'
+      platform: 'amazon-alexa',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -201,9 +183,8 @@ describe('excited-standard invalid intensity', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
-      platform: 'google-assistant'
+      platform: 'google-assistant',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -217,9 +198,8 @@ describe('excited-standard invalid intensity', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
-      platform: 'samsung-bixby'
+      platform: 'samsung-bixby',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -233,9 +213,7 @@ describe('excited-standard invalid intensity', () => {
   });
 
   test('converts to Plain Text', () => {
-
-    const options = {
-    };
+    const options = {};
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
@@ -244,5 +222,4 @@ describe('excited-standard invalid intensity', () => {
 
     expect(text).toBe(expected);
   });
-
 });

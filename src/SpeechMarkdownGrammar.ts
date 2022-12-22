@@ -207,12 +207,7 @@ export function speechMarkdownGrammar(myna: any): any {
       'ɹ',
     ];
 
-    const percentChange = [
-      '+',
-      m.hyphen,
-      m.digit,
-      '%',
-    ]
+    const percentChange = ['+', m.hyphen, m.digit, '%'];
 
     this.textModifierText = m.choice(
       m.digit,

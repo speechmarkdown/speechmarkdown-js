@@ -2,7 +2,6 @@ import { Formatter } from '../Interfaces';
 import { SpeechOptions } from '../SpeechOptions';
 
 export abstract class FormatterBase implements Formatter {
-
   protected constructor(protected options: SpeechOptions) {
     this.options = options;
   }

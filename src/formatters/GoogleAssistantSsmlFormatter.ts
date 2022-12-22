@@ -2,37 +2,35 @@ import { SpeechOptions } from '../SpeechOptions';
 import { SsmlFormatterBase, TagsObject } from './SsmlFormatterBase';
 
 export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
-
-  private validVoices : any = {
-    'Ivy':      {voice: {gender:'female', variant:1, language:'en-US'}},
-    'Joanna':   {voice: {gender:'female', variant:2, language:'en-US'}},
-    'Joey':     {voice: {gender:'male',   variant:1, language:'en-US'}},
-    'Justin':   {voice: {gender:'male',   variant:2, language:'en-US'}},
-    'Kendra':   {voice: {gender:'female', variant:3, language:'en-US'}},
-    'Kimberly': {voice: {gender:'female', variant:4, language:'en-US'}},
-    'Matthew':  {voice: {gender:'male',   variant:3, language:'en-US'}},
-    'Salli':    {voice: {gender:'male',   variant:4, language:'en-US'}},
-    'Nicole':   {voice: {gender:'female', variant:1, language:'en-AU'}},
-    'Russell':  {voice: {gender:'male',   variant:1, language:'en-AU'}},
-    'Amy':      {voice: {gender:'female', variant:1, language:'en-GB'}},
-    'Brian':    {voice: {gender:'male',   variant:1, language:'en-GB'}},
-    'Emma':     {voice: {gender:'female', variant:2, language:'en-GB'}},
-    'Aditi':    {voice: {gender:'female', variant:1, language:'en-IN'}},
-    'Raveena':  {voice: {gender:'female', variant:2, language:'en-IN'}},
-    'Hans':     {voice: {gender:'male',   variant:1, language:'de-DE'}},
-    'Marlene':  {voice: {gender:'female', variant:1, language:'de-DE'}},
-    'Vicki':    {voice: {gender:'female', variant:2, language:'de-DE'}},
-    'Conchita': {voice: {gender:'female', variant:1, language:'es-ES'}},
-    'Enrique':  {voice: {gender:'male',   variant:1, language:'es-ES'}},
-    'Carla':    {voice: {gender:'female', variant:1, language:'it-IT'}},
-    'Giorgio':  {voice: {gender:'male',   variant:1, language:'it-IT'}},
-    'Mizuki':   {voice: {gender:'female', variant:1, language:'ja-JP'}},
-    'Takumi':   {voice: {gender:'male',   variant:1, language:'ja-JP'}},
-    'Celine':   {voice: {gender:'female', variant:1, language:'fr-FR'}},
-    'Lea':      {voice: {gender:'female', variant:2, language:'fr-FR'}},
-    'Mathieu':  {voice: {gender:'male',   variant:1, language:'fr-FR'}},
-
-  }
+  private validVoices: any = {
+    Ivy: { voice: { gender: 'female', variant: 1, language: 'en-US' } },
+    Joanna: { voice: { gender: 'female', variant: 2, language: 'en-US' } },
+    Joey: { voice: { gender: 'male', variant: 1, language: 'en-US' } },
+    Justin: { voice: { gender: 'male', variant: 2, language: 'en-US' } },
+    Kendra: { voice: { gender: 'female', variant: 3, language: 'en-US' } },
+    Kimberly: { voice: { gender: 'female', variant: 4, language: 'en-US' } },
+    Matthew: { voice: { gender: 'male', variant: 3, language: 'en-US' } },
+    Salli: { voice: { gender: 'male', variant: 4, language: 'en-US' } },
+    Nicole: { voice: { gender: 'female', variant: 1, language: 'en-AU' } },
+    Russell: { voice: { gender: 'male', variant: 1, language: 'en-AU' } },
+    Amy: { voice: { gender: 'female', variant: 1, language: 'en-GB' } },
+    Brian: { voice: { gender: 'male', variant: 1, language: 'en-GB' } },
+    Emma: { voice: { gender: 'female', variant: 2, language: 'en-GB' } },
+    Aditi: { voice: { gender: 'female', variant: 1, language: 'en-IN' } },
+    Raveena: { voice: { gender: 'female', variant: 2, language: 'en-IN' } },
+    Hans: { voice: { gender: 'male', variant: 1, language: 'de-DE' } },
+    Marlene: { voice: { gender: 'female', variant: 1, language: 'de-DE' } },
+    Vicki: { voice: { gender: 'female', variant: 2, language: 'de-DE' } },
+    Conchita: { voice: { gender: 'female', variant: 1, language: 'es-ES' } },
+    Enrique: { voice: { gender: 'male', variant: 1, language: 'es-ES' } },
+    Carla: { voice: { gender: 'female', variant: 1, language: 'it-IT' } },
+    Giorgio: { voice: { gender: 'male', variant: 1, language: 'it-IT' } },
+    Mizuki: { voice: { gender: 'female', variant: 1, language: 'ja-JP' } },
+    Takumi: { voice: { gender: 'male', variant: 1, language: 'ja-JP' } },
+    Celine: { voice: { gender: 'female', variant: 1, language: 'fr-FR' } },
+    Lea: { voice: { gender: 'female', variant: 2, language: 'fr-FR' } },
+    Mathieu: { voice: { gender: 'male', variant: 1, language: 'fr-FR' } },
+  };
 
   constructor(public options: SpeechOptions) {
     super(options);
@@ -44,7 +42,7 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
 
   // tslint:disable-next-line: max-func-body-length
   private getTextModifierObject(ast: any): any {
-    let textModifierObject = new TagsObject( this );
+    let textModifierObject = new TagsObject(this);
 
     for (let index = 0; index < ast.children.length; index++) {
       const child = ast.children[index];
@@ -61,12 +59,14 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
         case 'textModifierKeyOptionalValue': {
           let key = child.children[0].allText;
           key = this.modifierKeyMappings[key] || key;
-          const value = child.children.length === 2 ? child.children[1].allText : '';
+          const value =
+            child.children.length === 2 ? child.children[1].allText : '';
           const ssmlTag = this.modifierKeyToSsmlTagMappings[key];
 
           switch (key) {
             case 'emphasis':
-              textModifierObject.tag( ssmlTag, { level: value || 'moderate' } );  break;
+              textModifierObject.tag(ssmlTag, { level: value || 'moderate' });
+              break;
 
             case 'address':
             case 'characters':
@@ -76,47 +76,61 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
             case 'ordinal':
             case 'telephone':
             case 'unit':
-              textModifierObject.tag( ssmlTag,{ 'interpret-as': key } );  break;
+              textModifierObject.tag(ssmlTag, { 'interpret-as': key });
+              break;
 
             case 'date':
-              textModifierObject.tag( ssmlTag, { 'interpret-as': key, format: value || 'ymd' } );  break;
+              textModifierObject.tag(ssmlTag, {
+                'interpret-as': key,
+                format: value || 'ymd',
+              });
+              break;
 
             case 'time':
-              textModifierObject.tag( ssmlTag, { 'interpret-as': key, format: value || 'hms12' } );  break;
+              textModifierObject.tag(ssmlTag, {
+                'interpret-as': key,
+                format: value || 'hms12',
+              });
+              break;
 
             case 'whisper':
-              textModifierObject.tag( ssmlTag, { volume: 'x-soft', rate: 'slow' } );  break;
+              textModifierObject.tag(ssmlTag, {
+                volume: 'x-soft',
+                rate: 'slow',
+              });
+              break;
 
             case 'ipa':
-              textModifierObject.tag( ssmlTag, { alphabet: key, ph: value } );  break;
+              textModifierObject.tag(ssmlTag, { alphabet: key, ph: value });
+              break;
 
             case 'sub':
-              textModifierObject.tag( ssmlTag, { alias: value } );  break;
+              textModifierObject.tag(ssmlTag, { alias: value });
+              break;
 
             case 'volume':
             case 'rate':
             case 'pitch': {
               const attrs = {};
               attrs[key] = value || 'medium';
-              textModifierObject.tag( ssmlTag, attrs, true );
+              textModifierObject.tag(ssmlTag, attrs, true);
               break;
             }
 
             case 'lang':
-              textModifierObject.tag( ssmlTag, { 'xml:lang': value } );  break;
+              textModifierObject.tag(ssmlTag, { 'xml:lang': value });
+              break;
 
             case 'voice':
-              textModifierObject.voiceTag( key, value );  break;
+              textModifierObject.voiceTag(key, value);
+              break;
 
             default: {
-
             }
-
           }
           break;
         }
       }
-
     }
 
     return textModifierObject;
@@ -124,49 +138,48 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
 
   // tslint:disable-next-line: max-func-body-length
   private getSectionObject(ast: any): any {
-    let sectionObject = new TagsObject( this );
+    let sectionObject = new TagsObject(this);
 
     for (let index = 0; index < ast.children.length; index++) {
       const child = ast.children[index];
 
       if (child.name === 'sectionModifierKeyOptionalValue') {
         let key = child.children[0].allText;
-        const value = child.children.length === 2 ? child.children[1].allText : '';
+        const value =
+          child.children.length === 2 ? child.children[1].allText : '';
         const ssmlTag = this.modifierKeyToSsmlTagMappings[key];
 
         switch (key) {
-
           case 'lang':
-            sectionObject.tag( ssmlTag, { 'xml:lang': value } );  break;
+            sectionObject.tag(ssmlTag, { 'xml:lang': value });
+            break;
 
           case 'voice':
-            sectionObject.voiceTag( key, value );  break;
+            sectionObject.voiceTag(key, value);
+            break;
 
           case 'defaults': {
             break;
           }
 
           default: {
-
           }
-
         }
-
       }
-
     }
 
     return sectionObject;
   }
 
-
   // tslint:disable-next-line: max-func-body-length
   protected formatFromAst(ast: any, lines: string[] = []): string[] {
-
     switch (ast.name) {
       case 'document': {
         if (this.options.includeFormatterComment) {
-          this.addComment('Converted from Speech Markdown to SSML for Google Assistant', lines);
+          this.addComment(
+            'Converted from Speech Markdown to SSML for Google Assistant',
+            lines,
+          );
         }
 
         if (this.options.includeSpeakTag) {
@@ -191,9 +204,13 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
       case 'break': {
         const val = ast.children[0].allText;
         let attrs = {};
-        switch( ast.children[0].children[0].name ){
-          case 'breakStrengthValue': attrs = {strength: val}; break;
-          case 'time': attrs = {time: val}; break;
+        switch (ast.children[0].children[0].name) {
+          case 'breakStrengthValue':
+            attrs = { strength: val };
+            break;
+          case 'time':
+            attrs = { time: val };
+            break;
         }
         return this.addTagWithAttrs(lines, null, 'break', attrs);
       }
@@ -203,11 +220,15 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
       }
       case 'shortEmphasisModerate': {
         const text = ast.children[0].allText;
-        return this.addTagWithAttrs(lines, text, 'emphasis', { level: 'moderate' });
+        return this.addTagWithAttrs(lines, text, 'emphasis', {
+          level: 'moderate',
+        });
       }
       case 'shortEmphasisStrong': {
         const text = ast.children[0].allText;
-        return this.addTagWithAttrs(lines, text, 'emphasis', { level: 'strong' });
+        return this.addTagWithAttrs(lines, text, 'emphasis', {
+          level: 'strong',
+        });
       }
       case 'shortEmphasisNone': {
         const text = ast.children[0].allText;
@@ -215,7 +236,9 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
       }
       case 'shortEmphasisReduced': {
         const text = ast.children[0].allText;
-        return this.addTagWithAttrs(lines, text, 'emphasis', { level: 'reduced' });
+        return this.addTagWithAttrs(lines, text, 'emphasis', {
+          level: 'reduced',
+        });
       }
 
       case 'textModifier': {
@@ -223,11 +246,13 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
 
         if (tmo.textOnly) {
           // Quick return if tag is not supported
-          lines.push(tmo.text)
-          return lines
+          lines.push(tmo.text);
+          return lines;
         }
 
-        const tagsSortedDesc = Object.keys(tmo.tags).sort((a: any, b: any) => { return tmo.tags[b].sortId - tmo.tags[a].sortId });
+        const tagsSortedDesc = Object.keys(tmo.tags).sort((a: any, b: any) => {
+          return tmo.tags[b].sortId - tmo.tags[a].sortId;
+        });
 
         let inner = tmo.text;
 
@@ -236,7 +261,6 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
           const attrs = tmo.tags[tag].attrs;
 
           inner = this.getTagWithAttrs(inner, tag, attrs);
-
         }
         lines.push(inner);
 
@@ -245,7 +269,9 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
       case 'section': {
         const so = this.getSectionObject(ast);
 
-        const tagsSortedAsc = Object.keys(so.tags).sort((a: any, b: any) => { return so.tags[a].sortId - so.tags[b].sortId });
+        const tagsSortedAsc = Object.keys(so.tags).sort((a: any, b: any) => {
+          return so.tags[a].sortId - so.tags[b].sortId;
+        });
 
         this.addSectionEndTag(lines);
         this.addSectionStartTag(tagsSortedAsc, so, lines);
@@ -254,8 +280,8 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
       }
       case 'audio': {
         if (ast.children.length === 2) {
-          const caption = ast.children[0].allText
-          const url = ast.children[1].allText.replace(/&/g,'&amp;');
+          const caption = ast.children[0].allText;
+          const url = ast.children[1].allText.replace(/&/g, '&amp;');
           lines.push(this.startTag('audio', { src: url }));
           lines.push('\n');
           lines.push(this.startTag('desc', null));
@@ -265,7 +291,7 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
           lines.push(this.endTag('audio', false));
           return lines;
         } else {
-          const url = ast.children[0].allText.replace(/&/g,'&amp;');
+          const url = ast.children[0].allText.replace(/&/g, '&amp;');
           return this.addTagWithAttrs(lines, null, 'audio', { src: url });
         }
       }

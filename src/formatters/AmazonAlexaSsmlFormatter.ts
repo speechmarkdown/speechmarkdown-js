@@ -2,42 +2,37 @@ import { SpeechOptions } from '../SpeechOptions';
 import { SsmlFormatterBase, TagsObject } from './SsmlFormatterBase';
 
 export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
-
   private validVoices: any = {
-    'Ivy': 'en-US',
-    'Joanna': 'en-US',
-    'Joey': 'en-US',
-    'Justin': 'en-US',
-    'Kendra': 'en-US',
-    'Kimberly': 'en-US',
-    'Matthew': 'en-US',
-    'Salli': 'en-US',
-    'Nicole': 'en-AU',
-    'Russell': 'en-AU',
-    'Amy': 'en-GB',
-    'Brian': 'en-GB',
-    'Emma': 'en-GB',
-    'Aditi': 'en-IN',
-    'Raveena': 'en-IN',
-    'Hans': 'de-DE',
-    'Marlene': 'de-DE',
-    'Vicki': 'de-DE',
-    'Conchita': 'es-ES',
-    'Enrique': 'es-ES',
-    'Carla': 'it-IT',
-    'Giorgio': 'it-IT',
-    'Mizuki': 'ja-JP',
-    'Takumi': 'ja-JP',
-    'Celine': 'fr-FR',
-    'Lea': 'fr-FR',
-    'Mathieu': 'fr-FR',
+    Ivy: 'en-US',
+    Joanna: 'en-US',
+    Joey: 'en-US',
+    Justin: 'en-US',
+    Kendra: 'en-US',
+    Kimberly: 'en-US',
+    Matthew: 'en-US',
+    Salli: 'en-US',
+    Nicole: 'en-AU',
+    Russell: 'en-AU',
+    Amy: 'en-GB',
+    Brian: 'en-GB',
+    Emma: 'en-GB',
+    Aditi: 'en-IN',
+    Raveena: 'en-IN',
+    Hans: 'de-DE',
+    Marlene: 'de-DE',
+    Vicki: 'de-DE',
+    Conchita: 'es-ES',
+    Enrique: 'es-ES',
+    Carla: 'it-IT',
+    Giorgio: 'it-IT',
+    Mizuki: 'ja-JP',
+    Takumi: 'ja-JP',
+    Celine: 'fr-FR',
+    Lea: 'fr-FR',
+    Mathieu: 'fr-FR',
   };
 
-  private validEmotionIntensity: string[] = [
-    'low',
-    'medium',
-    'high',
-  ];
+  private validEmotionIntensity: string[] = ['low', 'medium', 'high'];
 
   constructor(public options: SpeechOptions) {
     super(options);
@@ -53,7 +48,7 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
 
   // tslint:disable-next-line: max-func-body-length
   private getTextModifierObject(ast: any): any {
-    let textModifierObject = new TagsObject( this );
+    let textModifierObject = new TagsObject(this);
 
     for (let index = 0; index < ast.children.length; index++) {
       const child = ast.children[index];
@@ -70,12 +65,14 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
         case 'textModifierKeyOptionalValue': {
           let key = child.children[0].allText;
           key = this.modifierKeyMappings[key] || key;
-          const value = child.children.length === 2 ? child.children[1].allText : '';
+          const value =
+            child.children.length === 2 ? child.children[1].allText : '';
           const ssmlTag = this.modifierKeyToSsmlTagMappings[key];
 
           switch (key) {
             case 'emphasis':
-              textModifierObject.tag( ssmlTag, { level: value || 'moderate' } );  break;
+              textModifierObject.tag(ssmlTag, { level: value || 'moderate' });
+              break;
 
             case 'address':
             case 'characters':
@@ -86,57 +83,72 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
             case 'ordinal':
             case 'telephone':
             case 'unit':
-              textModifierObject.tag( ssmlTag,{ 'interpret-as': key } );  break;
+              textModifierObject.tag(ssmlTag, { 'interpret-as': key });
+              break;
 
             case 'date':
-              textModifierObject.tag( ssmlTag, { 'interpret-as': key, format: value || 'ymd' } );  break;
+              textModifierObject.tag(ssmlTag, {
+                'interpret-as': key,
+                format: value || 'ymd',
+              });
+              break;
 
             case 'time':
-              textModifierObject.tag( ssmlTag, { 'interpret-as': key, format: value || 'hms12' } );  break;
+              textModifierObject.tag(ssmlTag, {
+                'interpret-as': key,
+                format: value || 'hms12',
+              });
+              break;
 
             case 'whisper':
-              textModifierObject.tag( ssmlTag, { name: 'whispered' } );  break;
+              textModifierObject.tag(ssmlTag, { name: 'whispered' });
+              break;
 
             case 'ipa':
-              textModifierObject.tag( ssmlTag, { alphabet: key, ph: value } );  break;
+              textModifierObject.tag(ssmlTag, { alphabet: key, ph: value });
+              break;
 
             case 'sub':
-              textModifierObject.tag( ssmlTag, { alias: value } );  break;
+              textModifierObject.tag(ssmlTag, { alias: value });
+              break;
 
             case 'volume':
             case 'rate':
             case 'pitch': {
               const attrs = {};
               attrs[key] = value || 'medium';
-              textModifierObject.tag( ssmlTag, attrs, true );
+              textModifierObject.tag(ssmlTag, attrs, true);
               break;
             }
 
             case 'lang':
-              textModifierObject.tag( ssmlTag, { 'xml:lang': value } );  break;
+              textModifierObject.tag(ssmlTag, { 'xml:lang': value });
+              break;
 
             case 'voice':
-              textModifierObject.voiceTag( key, value );  break;
+              textModifierObject.voiceTag(key, value);
+              break;
 
             case 'excited':
             case 'disappointed': {
               const intensity = (value || 'medium').toLowerCase();
 
               if (this.validEmotionIntensity.includes(intensity)) {
-                textModifierObject.tag( ssmlTag, { 'name': key, 'intensity': intensity } );  break;
+                textModifierObject.tag(ssmlTag, {
+                  name: key,
+                  intensity: intensity,
+                });
+                break;
               }
               break;
             }
 
             default: {
-
             }
-
           }
           break;
         }
       }
-
     }
 
     return textModifierObject;
@@ -144,29 +156,33 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
 
   // tslint:disable-next-line: max-func-body-length
   private getSectionObject(ast: any): any {
-    let sectionObject = new TagsObject( this );
+    let sectionObject = new TagsObject(this);
 
     for (let index = 0; index < ast.children.length; index++) {
       const child = ast.children[index];
 
       if (child.name === 'sectionModifierKeyOptionalValue') {
         let key = child.children[0].allText;
-        const value = child.children.length === 2 ? child.children[1].allText : '';
+        const value =
+          child.children.length === 2 ? child.children[1].allText : '';
         const ssmlTag = this.modifierKeyToSsmlTagMappings[key];
 
         switch (key) {
-
           case 'lang':
-            sectionObject.tag( ssmlTag, { 'xml:lang': value } );  break;
+            sectionObject.tag(ssmlTag, { 'xml:lang': value });
+            break;
 
           case 'voice':
-            sectionObject.voiceTag( key, value );  break;
+            sectionObject.voiceTag(key, value);
+            break;
 
           case 'dj':
-            sectionObject.tag( ssmlTag, { 'name': 'music' } );  break;
+            sectionObject.tag(ssmlTag, { name: 'music' });
+            break;
 
           case 'newscaster':
-            sectionObject.tag( ssmlTag, { 'name': 'news' } );  break;
+            sectionObject.tag(ssmlTag, { name: 'news' });
+            break;
 
           case 'defaults': {
             break;
@@ -177,32 +193,30 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
             const intensity = (value || 'medium').toLowerCase();
 
             if (this.validEmotionIntensity.includes(intensity)) {
-              sectionObject.tag( ssmlTag, { 'name': key, 'intensity': intensity } );  break;
+              sectionObject.tag(ssmlTag, { name: key, intensity: intensity });
+              break;
             }
             break;
           }
 
           default: {
-
           }
-
         }
-
       }
-
     }
 
     return sectionObject;
   }
 
-
   // tslint:disable-next-line: max-func-body-length
   protected formatFromAst(ast: any, lines: string[] = []): string[] {
-
     switch (ast.name) {
       case 'document': {
         if (this.options.includeFormatterComment) {
-          this.addComment('Converted from Speech Markdown to SSML for Amazon Alexa', lines);
+          this.addComment(
+            'Converted from Speech Markdown to SSML for Amazon Alexa',
+            lines,
+          );
         }
 
         if (this.options.includeSpeakTag) {
@@ -227,19 +241,27 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
       case 'break': {
         const val = ast.children[0].allText;
         let attrs = {};
-        switch( ast.children[0].children[0].name ){
-          case 'breakStrengthValue': attrs = {strength: val}; break;
-          case 'time': attrs = {time: val}; break;
+        switch (ast.children[0].children[0].name) {
+          case 'breakStrengthValue':
+            attrs = { strength: val };
+            break;
+          case 'time':
+            attrs = { time: val };
+            break;
         }
         return this.addTagWithAttrs(lines, null, 'break', attrs);
       }
       case 'shortEmphasisModerate': {
         const text = ast.children[0].allText;
-        return this.addTagWithAttrs(lines, text, 'emphasis', { level: 'moderate' });
+        return this.addTagWithAttrs(lines, text, 'emphasis', {
+          level: 'moderate',
+        });
       }
       case 'shortEmphasisStrong': {
         const text = ast.children[0].allText;
-        return this.addTagWithAttrs(lines, text, 'emphasis', { level: 'strong' });
+        return this.addTagWithAttrs(lines, text, 'emphasis', {
+          level: 'strong',
+        });
       }
       case 'shortEmphasisNone': {
         const text = ast.children[0].allText;
@@ -247,12 +269,16 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
       }
       case 'shortEmphasisReduced': {
         const text = ast.children[0].allText;
-        return this.addTagWithAttrs(lines, text, 'emphasis', { level: 'reduced' });
+        return this.addTagWithAttrs(lines, text, 'emphasis', {
+          level: 'reduced',
+        });
       }
       case 'textModifier': {
         const tmo = this.getTextModifierObject(ast);
 
-        const tagsSortedDesc = Object.keys(tmo.tags).sort((a: any, b: any) => { return tmo.tags[b].sortId - tmo.tags[a].sortId });
+        const tagsSortedDesc = Object.keys(tmo.tags).sort((a: any, b: any) => {
+          return tmo.tags[b].sortId - tmo.tags[a].sortId;
+        });
 
         let inner = tmo.text;
 
@@ -261,7 +287,6 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
           const attrs = tmo.tags[tag].attrs;
 
           inner = this.getTagWithAttrs(inner, tag, attrs);
-
         }
         lines.push(inner);
 
@@ -270,7 +295,9 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
       case 'section': {
         const so = this.getSectionObject(ast);
 
-        const tagsSortedAsc = Object.keys(so.tags).sort((a: any, b: any) => { return so.tags[a].sortId - so.tags[b].sortId });
+        const tagsSortedAsc = Object.keys(so.tags).sort((a: any, b: any) => {
+          return so.tags[a].sortId - so.tags[b].sortId;
+        });
 
         this.addSectionEndTag(lines);
         this.addSectionStartTag(tagsSortedAsc, so, lines);
@@ -280,7 +307,7 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
       case 'audio': {
         // Ignore the caption.
         const index = ast.children.length === 2 ? 1 : 0;
-        const url = ast.children[index].allText.replace(/&/g,'&amp;');
+        const url = ast.children[index].allText.replace(/&/g, '&amp;');
         return this.addTagWithAttrs(lines, null, 'audio', { src: url });
       }
       case 'simpleLine': {
@@ -300,8 +327,9 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
       }
       case 'plainText':
       case 'plainTextSpecialChars': {
-        let text = (this.options.escapeXmlSymbols) ? this.escapeXmlCharacters(ast.allText)
-                                                   : ast.allText;
+        let text = this.options.escapeXmlSymbols
+          ? this.escapeXmlCharacters(ast.allText)
+          : ast.allText;
         lines.push(text);
         return lines;
       }

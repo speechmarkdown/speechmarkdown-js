@@ -1,12 +1,7 @@
 {
-  "extends": [
-    "tslint-microsoft-contrib/recommended",
-    "tslint-config-prettier"
-  ],
+  "extends": ["tslint-config-prettier"],
   "linterOptions": {
-    "exclude": [
-      "node_modules/**/*"
-    ]
+    "exclude": ["node_modules/**/*"]
   },
   "rules": {
     "mocha-no-side-effect-code": false,

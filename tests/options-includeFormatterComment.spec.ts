@@ -3,7 +3,6 @@ import dedent from 'ts-dedent';
 import { SpeechMarkdown } from '../src/SpeechMarkdown';
 
 describe('options-includeFormatterComment default to false', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -11,9 +10,8 @@ describe('options-includeFormatterComment default to false', () => {
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
-      platform: 'amazon-alexa'
+      platform: 'amazon-alexa',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -27,9 +25,8 @@ describe('options-includeFormatterComment default to false', () => {
   });
 
   test('converts to SSML - Amazon Polly', () => {
-
     const options = {
-      platform: 'amazon-polly'
+      platform: 'amazon-polly',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -43,9 +40,8 @@ describe('options-includeFormatterComment default to false', () => {
   });
 
   test('converts to SSML - Amazon Polly (Neural)', () => {
-
     const options = {
-      platform: 'amazon-polly-neural'
+      platform: 'amazon-polly-neural',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -59,9 +55,8 @@ describe('options-includeFormatterComment default to false', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
-      platform: 'google-assistant'
+      platform: 'google-assistant',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -75,7 +70,6 @@ describe('options-includeFormatterComment default to false', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
       platform: 'samsung-bixby',
     };
@@ -91,7 +85,6 @@ describe('options-includeFormatterComment default to false', () => {
   });
 
   test('converts to SSML - Microsoft Azure', () => {
-
     const options = {
       platform: 'microsoft-azure',
     };
@@ -105,11 +98,9 @@ describe('options-includeFormatterComment default to false', () => {
 
     expect(ssml).toBe(expected);
   });
-
 });
 
 describe('options-includeFormatterComment set to false', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -117,7 +108,6 @@ describe('options-includeFormatterComment set to false', () => {
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
       platform: 'amazon-alexa',
       includeFormatterComment: false,
@@ -134,7 +124,6 @@ describe('options-includeFormatterComment set to false', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
       platform: 'google-assistant',
       includeFormatterComment: false,
@@ -151,7 +140,6 @@ describe('options-includeFormatterComment set to false', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
       platform: 'samsung-bixby',
       includeFormatterComment: false,
@@ -168,7 +156,6 @@ describe('options-includeFormatterComment set to false', () => {
   });
 
   test('converts to SSML - Microsoft Azure', () => {
-
     const options = {
       platform: 'microsoft-azure',
       includeFormatterComment: false,
@@ -183,11 +170,9 @@ describe('options-includeFormatterComment set to false', () => {
 
     expect(ssml).toBe(expected);
   });
-
 });
 
 describe('options-includeFormatterComment set to true', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -195,7 +180,6 @@ describe('options-includeFormatterComment set to true', () => {
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
       platform: 'amazon-alexa',
       includeFormatterComment: true,
@@ -213,7 +197,6 @@ describe('options-includeFormatterComment set to true', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
       platform: 'google-assistant',
       includeFormatterComment: true,
@@ -231,7 +214,6 @@ describe('options-includeFormatterComment set to true', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
       platform: 'samsung-bixby',
       includeFormatterComment: true,
@@ -249,7 +231,6 @@ describe('options-includeFormatterComment set to true', () => {
   });
 
   test('converts to SSML - Microsoft Azure', () => {
-
     const options = {
       platform: 'microsoft-azure',
       includeFormatterComment: true,
@@ -265,6 +246,4 @@ describe('options-includeFormatterComment set to true', () => {
 
     expect(ssml).toBe(expected);
   });
-
 });
-

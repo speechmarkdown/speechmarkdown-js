@@ -3,7 +3,6 @@ import dedent from 'ts-dedent';
 import { SpeechMarkdown } from '../src/SpeechMarkdown';
 
 describe('modifier-text-allowed-chars minus sign', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -11,9 +10,8 @@ describe('modifier-text-allowed-chars minus sign', () => {
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
-      platform: 'amazon-alexa'
+      platform: 'amazon-alexa',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -27,9 +25,8 @@ describe('modifier-text-allowed-chars minus sign', () => {
   });
 
   test('converts to SSML - Amazon Polly', () => {
-
     const options = {
-      platform: 'amazon-polly'
+      platform: 'amazon-polly',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -43,9 +40,8 @@ describe('modifier-text-allowed-chars minus sign', () => {
   });
 
   test('converts to SSML - Amazon Polly (Neural)', () => {
-
     const options = {
-      platform: 'amazon-polly-neural'
+      platform: 'amazon-polly-neural',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -59,9 +55,8 @@ describe('modifier-text-allowed-chars minus sign', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
-      platform: 'google-assistant'
+      platform: 'google-assistant',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -75,9 +70,8 @@ describe('modifier-text-allowed-chars minus sign', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
-      platform: 'samsung-bixby'
+      platform: 'samsung-bixby',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -91,9 +85,8 @@ describe('modifier-text-allowed-chars minus sign', () => {
   });
 
   test('converts to SSML - Microsoft Azure', () => {
-
     const options = {
-      platform: 'microsoft-azure'
+      platform: 'microsoft-azure',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -107,9 +100,7 @@ describe('modifier-text-allowed-chars minus sign', () => {
   });
 
   test('converts to Plain Text', () => {
-
-    const options = {
-    };
+    const options = {};
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
@@ -118,11 +109,9 @@ describe('modifier-text-allowed-chars minus sign', () => {
 
     expect(text).toBe(expected);
   });
-
 });
 
 describe('modifier-text-allowed-chars non-bracket special chars', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -130,9 +119,8 @@ describe('modifier-text-allowed-chars non-bracket special chars', () => {
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
-      platform: 'amazon-alexa'
+      platform: 'amazon-alexa',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -146,9 +134,8 @@ describe('modifier-text-allowed-chars non-bracket special chars', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
-      platform: 'google-assistant'
+      platform: 'google-assistant',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -162,9 +149,8 @@ describe('modifier-text-allowed-chars non-bracket special chars', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
-      platform: 'samsung-bixby'
+      platform: 'samsung-bixby',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -178,9 +164,8 @@ describe('modifier-text-allowed-chars non-bracket special chars', () => {
   });
 
   test('converts to SSML - Microsoft Azure', () => {
-
     const options = {
-      platform: 'microsoft-azure'
+      platform: 'microsoft-azure',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -194,9 +179,7 @@ describe('modifier-text-allowed-chars non-bracket special chars', () => {
   });
 
   test('converts to Plain Text', () => {
-
-    const options = {
-    };
+    const options = {};
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
@@ -205,7 +188,6 @@ describe('modifier-text-allowed-chars non-bracket special chars', () => {
 
     expect(text).toBe(expected);
   });
-
 });
 
 describe('modifier-text-allowed-chars bracket special chars', () => {
@@ -216,9 +198,8 @@ describe('modifier-text-allowed-chars bracket special chars', () => {
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
-      platform: 'amazon-alexa'
+      platform: 'amazon-alexa',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -232,9 +213,8 @@ describe('modifier-text-allowed-chars bracket special chars', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
-      platform: 'google-assistant'
+      platform: 'google-assistant',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -248,9 +228,8 @@ describe('modifier-text-allowed-chars bracket special chars', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
-      platform: 'samsung-bixby'
+      platform: 'samsung-bixby',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -264,9 +243,8 @@ describe('modifier-text-allowed-chars bracket special chars', () => {
   });
 
   test('converts to SSML - Microsoft Azure', () => {
-
     const options = {
-      platform: 'microsoft-azure'
+      platform: 'microsoft-azure',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -280,9 +258,7 @@ describe('modifier-text-allowed-chars bracket special chars', () => {
   });
 
   test('converts to Plain Text', () => {
-
-    const options = {
-    };
+    const options = {};
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
@@ -291,11 +267,9 @@ describe('modifier-text-allowed-chars bracket special chars', () => {
 
     expect(text).toBe(expected);
   });
-
 });
 
 describe('modifier-text-allowed-chars bracket special chars', () => {
-
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -303,9 +277,8 @@ describe('modifier-text-allowed-chars bracket special chars', () => {
   `;
 
   test('converts to SSML - Amazon Alexa', () => {
-
     const options = {
-      platform: 'amazon-alexa'
+      platform: 'amazon-alexa',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -319,9 +292,8 @@ describe('modifier-text-allowed-chars bracket special chars', () => {
   });
 
   test('converts to SSML - Google Assistant', () => {
-
     const options = {
-      platform: 'google-assistant'
+      platform: 'google-assistant',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -335,9 +307,8 @@ describe('modifier-text-allowed-chars bracket special chars', () => {
   });
 
   test('converts to SSML - Samsung Bixby', () => {
-
     const options = {
-      platform: 'samsung-bixby'
+      platform: 'samsung-bixby',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -351,9 +322,8 @@ describe('modifier-text-allowed-chars bracket special chars', () => {
   });
 
   test('converts to SSML - Microsoft Azure', () => {
-
     const options = {
-      platform: 'microsoft-azure'
+      platform: 'microsoft-azure',
     };
     const ssml = speech.toSSML(markdown, options);
 
@@ -367,9 +337,7 @@ describe('modifier-text-allowed-chars bracket special chars', () => {
   });
 
   test('converts to Plain Text', () => {
-
-    const options = {
-    };
+    const options = {};
     const text = speech.toText(markdown, options);
 
     const expected = dedent`
@@ -378,5 +346,4 @@ describe('modifier-text-allowed-chars bracket special chars', () => {
 
     expect(text).toBe(expected);
   });
-
 });

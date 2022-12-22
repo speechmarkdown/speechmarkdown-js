@@ -1,7 +1,7 @@
 export interface Parser {
-  parse(markdown:string): any;
+  parse(markdown: string): any;
 }
 
 export interface Formatter {
-  format(syntaxTree:any): string;
+  format(syntaxTree: any): string;
 }
