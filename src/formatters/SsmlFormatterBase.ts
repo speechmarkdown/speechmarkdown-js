@@ -56,6 +56,8 @@ export class TagsObject {
 type Dictionary<T> = { [key: string]: T };
 
 export abstract class SsmlFormatterBase extends FormatterBase {
+  public validVoices: Record<string, any> = {};
+
   public static readonly XML_ESCAPE_MAPPING: Dictionary<string> = {
     '<': '&lt;',
     '>': '&gt;',
@@ -73,7 +75,7 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     }, {});
   })(SsmlFormatterBase.XML_ESCAPE_MAPPING);
 
-  protected constructor(protected options: SpeechOptions) {
+  protected constructor(public options: SpeechOptions) {
     super(options);
   }
 
@@ -88,7 +90,7 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     vol: 'volume',
   };
 
-  protected ssmlTagSortOrder: string[] = [
+  public ssmlTagSortOrder: string[] = [
     'emphasis',
     'say-as',
     'prosody',
@@ -284,7 +286,7 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     return lines.join('');
   }
 
-  protected sentenceCase(text: string) {
+  public sentenceCase(text: string) {
     return text
       .replace(/[a-z]/i, (letter: string) => {
         return letter.toUpperCase();

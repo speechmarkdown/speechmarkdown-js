@@ -2,7 +2,7 @@ import { SpeechOptions } from '../SpeechOptions';
 import { SsmlFormatterBase, TagsObject } from './SsmlFormatterBase';
 
 export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
-  private validVoices: any = {
+  public validVoices: Record<string, any> = {
     Ivy: { voice: { gender: 'female', variant: 1, language: 'en-US' } },
     Joanna: { voice: { gender: 'female', variant: 2, language: 'en-US' } },
     Joey: { voice: { gender: 'male', variant: 1, language: 'en-US' } },

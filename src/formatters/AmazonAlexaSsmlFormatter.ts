@@ -2,7 +2,7 @@ import { SpeechOptions } from '../SpeechOptions';
 import { SsmlFormatterBase, TagsObject } from './SsmlFormatterBase';
 
 export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
-  private validVoices: any = {
+  public validVoices: Record<string, any> = {
     Ivy: 'en-US',
     Joanna: 'en-US',
     Joey: 'en-US',

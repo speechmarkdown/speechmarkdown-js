@@ -2,7 +2,7 @@ import { SpeechOptions } from '../SpeechOptions';
 import { FormatterBase } from './FormatterBase';
 
 export class TextFormatter extends FormatterBase {
-  constructor(protected options: SpeechOptions) {
+  constructor(public options: SpeechOptions) {
     super(options);
   }
 
