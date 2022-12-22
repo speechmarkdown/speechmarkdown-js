@@ -53,6 +53,8 @@ export class TextFormatter extends FormatterBase {
         return lines;
       }
 
+      case 'audio': return lines;
+
       default: {
         this.processAst(ast.children, lines);
         return lines;

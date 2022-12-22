@@ -207,7 +207,12 @@ export function speechMarkdownGrammar(myna: any): any {
       'ɹ',
     ];
 
-    const percentChange = ['+', m.hyphen, m.digit, '%'];
+    const percentChange = [
+      '+',
+      m.hyphen,
+      m.digit,
+      '%',
+    ]
 
     this.textModifierText = m.choice(
       m.digit,
@@ -254,7 +259,10 @@ export function speechMarkdownGrammar(myna: any): any {
     this.urlSpecialChar = m.char(':/.-_~?#[]@!+,;%=()&');
     this.url = m.choice(m.digit, m.letter, this.urlSpecialChar).oneOrMore.ast;
     this.audio = m.seq(
-      '![',
+      '!',
+      // Maybe empty caption
+      m.opt(m.parenthesized(m.opt(this.plainTextModifier))),
+      '[',
       m.choice(m.singleQuoted(this.url), m.doubleQuoted(this.url)),
       ']',
     ).ast;
