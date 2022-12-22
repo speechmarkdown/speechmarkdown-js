@@ -48,7 +48,7 @@ export function speechMarkdownGrammar(myna: any): any {
     this.xsdToken = m.choice(
       m.digits,
       m.letters,
-      m.char(specialCharSetEmphasis)
+      m.char(specialCharSetEmphasis),
     ).oneOrMore.ast;
 
     this.plainText = m.choice(
@@ -92,9 +92,9 @@ export function speechMarkdownGrammar(myna: any): any {
     // this.string = m.choice(m.doubleQuotedString(), m.singleQuotedString()).ast;
 
     // Emphasis
-    // The emphasis tag should be preluded and followed by a not-letter-character.
-    // Otherwise an example like above would be captured.
-    const notLetterChar = m.not(m.letters);
+    // The emphasis tag should be preluded and followed by a not-letter- or non-numeric-character.
+    // Otherwise an example like above, or dates would be captured.
+    const notLetterChar = m.not(m.choice(m.letters, m.digits));
     this.shortEmphasisModerate = m.seq(
       notLetterChar,
       '+',
@@ -220,7 +220,7 @@ export function speechMarkdownGrammar(myna: any): any {
       m.hyphen,
       m.space,
       ...ipaChars,
-      ...percentChange
+      ...percentChange,
     ).oneOrMore.ast;
 
     this.textModifierTextDoubleQuote = m.choice(
@@ -314,10 +314,7 @@ export function speechMarkdownGrammar(myna: any): any {
       this.valueStrong,
       this.valueXStrong,
     ).ast;
-    this.breakValue = m.choice(
-      this.breakStrengthValue,
-      this.time
-    ).ast;
+    this.breakValue = m.choice(this.breakStrengthValue, this.time).ast;
     this.break = m.seq(
       '[',
       'break',
@@ -333,11 +330,8 @@ export function speechMarkdownGrammar(myna: any): any {
       '[',
       'mark',
       ':',
-      m.choice(
-        m.singleQuoted(this.xsdToken),
-        m.doubleQuoted(this.xsdToken)
-      ),
-      ']'
+      m.choice(m.singleQuoted(this.xsdToken), m.doubleQuoted(this.xsdToken)),
+      ']',
     ).ast;
 
     this.any = m.advance;
