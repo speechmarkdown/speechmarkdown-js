@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to the speechmarkdown-js project will be documented in this file.
 
+## 2.1.0 - (December 22, 2022)
+### Added
+- Support for audio captions
+
 ## 2.0.0 - (October 28, 2021)
 ### Added
 - Support for `voice` and `language` for `google-assistant`
