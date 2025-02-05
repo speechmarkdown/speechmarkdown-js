@@ -275,7 +275,10 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
       case 'plainTextEmphasis':
       case 'plainTextPhone':
       case 'plainTextModifier': {
-        lines.push(ast.allText);
+        let text = this.options.escapeXmlSymbols
+          ? this.escapeXmlCharacters(ast.allText)
+          : ast.allText;
+        lines.push(text);
         return lines;
       }
 

@@ -138,7 +138,7 @@ Available options are:
 
 - `preserveEmptyLines` (boolean) - keep empty lines in markdown in SSML. Default is `true`.
 
-- `escapeXmlSymbols` (boolean) - Currently only for `amazon-alexa`. Escape XML text. Default is `false`.
+- `escapeXmlSymbols` (boolean) - Currently only for `amazon-alexa` and `microsoft-azure`. Escape XML text. Default is `false`.
 
 - `voices` (object) - give custom names to voices and use that in your markdown:
 
