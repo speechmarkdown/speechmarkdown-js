@@ -19,9 +19,9 @@ describe('escape-xml', () => {
         const ssml = speech.toSSML(text, options);
 
         const exp = dedent`
-    <speak>
-    Procter and Gamble
-    </speak>`;
+        <speak>
+        Procter and Gamble
+        </speak>`;
 
         expect(ssml).toEqual(exp);
       });
@@ -35,9 +35,9 @@ describe('escape-xml', () => {
         const ssml = speech.toSSML(text, options);
 
         const exp = dedent`
-    <speak>
-    Procter &amp; Gamble
-    </speak>`;
+        <speak>
+        Procter &amp; Gamble
+        </speak>`;
 
         expect(ssml).toEqual(exp);
       });
@@ -51,9 +51,9 @@ describe('escape-xml', () => {
         const ssml = speech.toSSML(text, options);
 
         const exp = dedent`
-    <speak>
-    Procter &amp; Gamble
-    </speak>`;
+        <speak>
+        Procter &amp; Gamble
+        </speak>`;
 
         expect(ssml).toEqual(exp);
       });
@@ -67,9 +67,9 @@ describe('escape-xml', () => {
         const ssml = speech.toSSML(text, options);
 
         const exp = dedent`
-    <speak>
-    Levi&apos;s
-    </speak>`;
+        <speak>
+        Levi&apos;s
+        </speak>`;
 
         expect(ssml).toEqual(exp);
       });
@@ -82,10 +82,10 @@ describe('escape-xml', () => {
         const ssml = speech.toSSML(markdown, options);
 
         const expected = dedent`
-    <speak>
-    Hallo Wie geht&apos;s? &amp; Was machst Du hier?
-    </speak>
-    `;
+        <speak>
+        Hallo Wie geht&apos;s? &amp; Was machst Du hier?
+        </speak>
+        `;
 
         expect(ssml).toBe(expected);
       });
@@ -98,10 +98,10 @@ describe('escape-xml', () => {
         const ssml = speech.toSSML(markdown, options);
 
         const expected = dedent`
-    <speak>
-    ${markdown}
-    </speak>
-    `;
+        <speak>
+        ${markdown}
+        </speak>
+        `;
 
         expect(ssml).toBe(expected);
       });
@@ -114,10 +114,10 @@ describe('escape-xml', () => {
         const ssml = speech.toSSML(markdown, options);
 
         const expected = dedent`
-    <speak>
-    ${markdown}
-    </speak>
-    `;
+        <speak>
+        ${markdown}
+        </speak>
+        `;
 
         expect(ssml).toBe(expected);
       });
@@ -132,9 +132,9 @@ describe('escape-xml', () => {
           const ssml = speech.toSSML(text, options);
 
           const exp = dedent`
-    <speak>
-    Procter <break time="250ms"/> and Gamble
-    </speak>`;
+          <speak>
+          Procter <break time="250ms"/> and Gamble
+          </speak>`;
 
           expect(ssml).toEqual(exp);
         });
@@ -148,9 +148,9 @@ describe('escape-xml', () => {
           const ssml = speech.toSSML(text, options);
 
           const exp = dedent`
-    <speak>
-    Procter <break time="500ms"/> and <break strength="weak"/> Gamble
-    </speak>`;
+          <speak>
+          Procter <break time="500ms"/> and <break strength="weak"/> Gamble
+          </speak>`;
 
           expect(ssml).toEqual(exp);
         });
@@ -165,9 +165,9 @@ describe('escape-xml', () => {
             const ssml = speech.toSSML(text, options);
 
             const exp = dedent`
-    <speak>
-    In Paris, they pronounce it <lang xml:lang="fr-FR">Paris</lang>
-    </speak>`;
+            <speak>
+            In Paris, they pronounce it <lang xml:lang="fr-FR">Paris</lang>
+            </speak>`;
 
             expect(ssml).toEqual(exp);
           });
