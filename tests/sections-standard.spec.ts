@@ -61,15 +61,19 @@ describe('sections-standard', () => {
     My voice and language is based on the device.
 
 
+    <voice name="Kendra">
     <lang xml:lang="en-US">
     Now I am speaking as Kendra from the US with a US accent.
 
     </lang>
+    </voice>
 
+    <voice name="Brian">
     <lang xml:lang="en-US">
     Switching to Brian from the UK with a US accent.
 
     </lang>
+    </voice>
 
     Now back to the device setting.
     </speak>
@@ -89,15 +93,19 @@ describe('sections-standard', () => {
     My voice and language is based on the device.
 
 
+    <voice name="Kendra">
     <lang xml:lang="en-US">
     Now I am speaking as Kendra from the US with a US accent.
 
     </lang>
+    </voice>
 
+    <voice name="Brian">
     <lang xml:lang="en-US">
     Switching to Brian from the UK with a US accent.
 
     </lang>
+    </voice>
 
     Now back to the device setting.
     </speak>
@@ -111,19 +119,31 @@ describe('sections-standard', () => {
       platform: 'google-assistant',
       preserveEmptyLines: false,
     };
-    const ssml = speech.toSSML(markdown, options);
+    const googleMarkdown = dedent`
+      My voice and language is based on the device.
+
+      #[voice:"en-US-Neural2-F";lang:"en-US"]
+      Now I am speaking with en-US-Neural2-F from the US with a US accent.
+
+      #[voice:"en-GB-Standard-A";lang:"en-GB"]
+      Switching to en-GB-Standard-A from the UK with a UK accent.
+
+      #[voice:"device"]
+      Now back to the device setting.
+    `;
+    const ssml = speech.toSSML(googleMarkdown, options);
 
     const expected = dedent`
     <speak>
     My voice and language is based on the device.
 
-    <voice gender="female" variant="3" language="en-US">
-    <lang xml:lang="en-US">Now I am speaking as Kendra from the US with a US accent.
+    <voice name="en-US-Neural2-F">
+    <lang xml:lang="en-US">Now I am speaking with en-US-Neural2-F from the US with a US accent.
     </lang>
     </voice>
 
-    <voice gender="male" variant="1" language="en-GB">
-    <lang xml:lang="en-US">Switching to Brian from the UK with a US accent.
+    <voice name="en-GB-Standard-A">
+    <lang xml:lang="en-GB">Switching to en-GB-Standard-A from the UK with a UK accent.
     </lang>
     </voice>
     Now back to the device setting.
@@ -242,15 +262,22 @@ describe('sections-standard end speak tag at end', () => {
       platform: 'google-assistant',
       preserveEmptyLines: false,
     };
-    const ssml = speech.toSSML(markdown, options);
+    const googleMarkdown = dedent`
+      #[voice:"en-US-Neural2-F"]
+      Section 1
+
+      #[voice:"en-GB-Standard-A";lang:"en-GB"]
+      Section 2
+    `;
+    const ssml = speech.toSSML(googleMarkdown, options);
 
     const expected = dedent`
       <speak>
 
-      <voice gender="female" variant="3" language="en-US">Section 1
+      <voice name="en-US-Neural2-F">Section 1
       </voice>
 
-      <voice gender="male" variant="1" language="en-GB">
+      <voice name="en-GB-Standard-A">
       <lang xml:lang="en-GB">Section 2</lang>
       </voice>
 
@@ -342,12 +369,15 @@ describe('sections-standard voice section on same line', () => {
     const options = {
       platform: 'google-assistant',
     };
-    const ssml = speech.toSSML(markdown, options);
+    const googleMarkdown = dedent`
+      #[voice:'en-GB-Standard-A'] Hey there, nice to meet you
+    `;
+    const ssml = speech.toSSML(googleMarkdown, options);
 
     const expected = dedent`
       <speak>
 
-      <voice gender="male" variant="1" language="en-GB"> Hey there, nice to meet you</voice>
+      <voice name="en-GB-Standard-A"> Hey there, nice to meet you</voice>
 
       </speak>
     `;

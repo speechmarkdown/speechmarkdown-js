@@ -1,36 +1,9 @@
 import { SpeechOptions } from '../SpeechOptions';
 import { SsmlFormatterBase, TagsObject } from './SsmlFormatterBase';
+import { AMAZON_POLLY_ALL_VOICES } from './data/amazonPollyVoices';
 
 export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
-  public validVoices: Record<string, any> = {
-    Ivy: 'en-US',
-    Joanna: 'en-US',
-    Joey: 'en-US',
-    Justin: 'en-US',
-    Kendra: 'en-US',
-    Kimberly: 'en-US',
-    Matthew: 'en-US',
-    Salli: 'en-US',
-    Nicole: 'en-AU',
-    Russell: 'en-AU',
-    Amy: 'en-GB',
-    Brian: 'en-GB',
-    Emma: 'en-GB',
-    Aditi: 'en-IN',
-    Raveena: 'en-IN',
-    Hans: 'de-DE',
-    Marlene: 'de-DE',
-    Vicki: 'de-DE',
-    Conchita: 'es-ES',
-    Enrique: 'es-ES',
-    Carla: 'it-IT',
-    Giorgio: 'it-IT',
-    Mizuki: 'ja-JP',
-    Takumi: 'ja-JP',
-    Celine: 'fr-FR',
-    Lea: 'fr-FR',
-    Mathieu: 'fr-FR',
-  };
+  public validVoices: Record<string, any> = AMAZON_POLLY_ALL_VOICES;
 
   private validEmotionIntensity: string[] = ['low', 'medium', 'high'];
 
@@ -44,6 +17,14 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
     this.modifierKeyToSsmlTagMappings.newscaster = 'amazon:domain';
     this.modifierKeyToSsmlTagMappings.excited = 'amazon:emotion';
     this.modifierKeyToSsmlTagMappings.disappointed = 'amazon:emotion';
+  }
+
+  public getVoiceTagFallback(name: string): Record<string, string> | null {
+    if (name.toLowerCase() === 'device') {
+      return null;
+    }
+
+    return { name };
   }
 
   // tslint:disable-next-line: max-func-body-length

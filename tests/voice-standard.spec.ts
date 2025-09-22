@@ -34,8 +34,8 @@ describe('voice-standard', () => {
 
     const expected = dedent`
       <speak>
-      Why do you keep switching voices from one to the other?
-      Why do you keep switching voices from one to the other?
+      Why do you keep switching voices <voice name="Brian">from one</voice> to <voice name="Kendra">the other</voice>?
+      Why do you keep switching voices <voice name="Brian">from one</voice> to <voice name="Kendra">the other</voice>?
       </speak>
     `;
 
@@ -50,8 +50,8 @@ describe('voice-standard', () => {
 
     const expected = dedent`
       <speak>
-      Why do you keep switching voices from one to the other?
-      Why do you keep switching voices from one to the other?
+      Why do you keep switching voices <voice name="Brian">from one</voice> to <voice name="Kendra">the other</voice>?
+      Why do you keep switching voices <voice name="Brian">from one</voice> to <voice name="Kendra">the other</voice>?
       </speak>
     `;
 
@@ -62,12 +62,16 @@ describe('voice-standard', () => {
     const options = {
       platform: 'google-assistant',
     };
-    const ssml = speech.toSSML(markdown, options);
+    const googleMarkdown = dedent`
+      Why do you keep switching voices (from one)[voice:"en-GB-Standard-A"] to (the other)[voice:"en-US-Neural2-F"]?
+      Why do you keep switching voices (from one)[voice:'en-GB-Standard-A'] to (the other)[voice:'en-US-Neural2-F']?
+    `;
+    const ssml = speech.toSSML(googleMarkdown, options);
 
     const expected = dedent`
       <speak>
-      Why do you keep switching voices <voice gender="male" variant="1" language="en-GB">from one</voice> to <voice gender="female" variant="3" language="en-US">the other</voice>?
-      Why do you keep switching voices <voice gender="male" variant="1" language="en-GB">from one</voice> to <voice gender="female" variant="3" language="en-US">the other</voice>?
+      Why do you keep switching voices <voice name="en-GB-Standard-A">from one</voice> to <voice name="en-US-Neural2-F">the other</voice>?
+      Why do you keep switching voices <voice name="en-GB-Standard-A">from one</voice> to <voice name="en-US-Neural2-F">the other</voice>?
       </speak>
     `;
 
@@ -147,12 +151,16 @@ describe('voice-standard lowercase name', () => {
     const options = {
       platform: 'google-assistant',
     };
-    const ssml = speech.toSSML(markdown, options);
+    const googleMarkdown = dedent`
+      Why do you keep switching voices (from one)[voice:"en-gb-standard-a"] to (the other)[voice:"en-us-neural2-f"]?
+      Why do you keep switching voices (from one)[voice:'en-gb-standard-a'] to (the other)[voice:'en-us-neural2-f']?
+    `;
+    const ssml = speech.toSSML(googleMarkdown, options);
 
     const expected = dedent`
       <speak>
-      Why do you keep switching voices <voice gender="male" variant="1" language="en-GB">from one</voice> to <voice gender="female" variant="3" language="en-US">the other</voice>?
-      Why do you keep switching voices <voice gender="male" variant="1" language="en-GB">from one</voice> to <voice gender="female" variant="3" language="en-US">the other</voice>?
+      Why do you keep switching voices <voice name="en-GB-Standard-A">from one</voice> to <voice name="en-US-Neural2-F">the other</voice>?
+      Why do you keep switching voices <voice name="en-GB-Standard-A">from one</voice> to <voice name="en-US-Neural2-F">the other</voice>?
       </speak>
     `;
 
@@ -204,7 +212,7 @@ describe('voice-standard lowercase name', () => {
   });
 });
 
-describe('voice-standard invalid name', () => {
+describe('voice-standard unknown name', () => {
   const speech = new SpeechMarkdown();
 
   const markdown = dedent`
@@ -220,8 +228,8 @@ describe('voice-standard invalid name', () => {
 
     const expected = dedent`
       <speak>
-      Why do you keep switching voices from one to <voice name="Kendra">the other</voice>?
-      Why do you keep switching voices from one to <voice name="Kendra">the other</voice>?
+      Why do you keep switching voices <voice name="Brianzzzz">from one</voice> to <voice name="Kendra">the other</voice>?
+      Why do you keep switching voices <voice name="Brianzzzz">from one</voice> to <voice name="Kendra">the other</voice>?
       </speak>
     `;
 
@@ -236,8 +244,8 @@ describe('voice-standard invalid name', () => {
 
     const expected = dedent`
       <speak>
-      Why do you keep switching voices from one to <voice gender="female" variant="3" language="en-US">the other</voice>?
-      Why do you keep switching voices from one to <voice gender="female" variant="3" language="en-US">the other</voice>?
+      Why do you keep switching voices from one to the other?
+      Why do you keep switching voices from one to the other?
       </speak>
     `;
 
@@ -321,8 +329,8 @@ describe('voice-standard device name', () => {
 
     const expected = dedent`
       <speak>
-      Why do you keep switching voices from one to <voice gender="female" variant="3" language="en-US">the other</voice>?
-      Why do you keep switching voices from one to <voice gender="female" variant="3" language="en-US">the other</voice>?
+      Why do you keep switching voices from one to the other?
+      Why do you keep switching voices from one to the other?
       </speak>
     `;
 
@@ -371,5 +379,26 @@ describe('voice-standard device name', () => {
     `;
 
     expect(text).toBe(expected);
+  });
+});
+
+describe('voice-standard new Alexa voices', () => {
+  const speech = new SpeechMarkdown();
+
+  test('converts to SSML - Amazon Alexa', () => {
+    const markdown = "Try the new (voice)[voice:'Lupe'].";
+
+    const options = {
+      platform: 'amazon-alexa',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak>
+      Try the new <voice name="Lupe">voice</voice>.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
   });
 });
