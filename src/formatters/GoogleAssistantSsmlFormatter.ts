@@ -223,21 +223,15 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
           return lines;
         }
 
-        const tagsSortedDesc = Object.keys(tmo.tags).sort((a: any, b: any) => {
-          return tmo.tags[b].sortId - tmo.tags[a].sortId;
-        });
-
-        let inner = tmo.text;
-
-        for (let index = 0; index < tagsSortedDesc.length; index++) {
-          const tag = tagsSortedDesc[index];
-          const attrs = tmo.tags[tag].attrs;
-
-          inner = this.getTagWithAttrs(inner, tag, attrs);
-        }
-        lines.push(inner);
-
-        return lines;
+        return this.applyTagsObject(tmo, lines);
+      }
+      case 'shortIpa': {
+        const tmo = this.getShortIpaObject(ast);
+        return this.applyTagsObject(tmo, lines);
+      }
+      case 'shortSub': {
+        const tmo = this.getShortSubObject(ast);
+        return this.applyTagsObject(tmo, lines);
       }
       case 'section': {
         const so = this.getSectionObject(ast);

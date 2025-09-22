@@ -241,6 +241,79 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     return lines;
   }
 
+  protected applyTagsObject(tmo: TagsObject, lines: string[]): string[] {
+    const tagsSortedDesc = Object.keys(tmo.tags).sort(
+      (a: any, b: any) => tmo.tags[b].sortId - tmo.tags[a].sortId,
+    );
+
+    let inner = tmo.text;
+
+    for (const tag of tagsSortedDesc) {
+      const attrs = tmo.tags[tag].attrs;
+      inner = this.getTagWithAttrs(inner, tag, attrs);
+    }
+
+    lines.push(inner);
+    return lines;
+  }
+
+  protected extractParenthesizedText(node: any): string {
+    if (!node || typeof node.allText !== 'string' || node.allText.length < 2) {
+      return '';
+    }
+
+    const content = node.allText.substring(1, node.allText.length - 1);
+    return content.trim();
+  }
+
+  protected getShortIpaObject(ast: any): TagsObject {
+    const tmo = new TagsObject(this);
+    const textNode = ast.children?.find(
+      (child: any) =>
+        child &&
+        (child.name === 'parenthesized' || child.name === 'plainTextModifier'),
+    );
+    tmo.text =
+      textNode && textNode.name === 'parenthesized'
+        ? this.extractParenthesizedText(textNode)
+        : textNode?.allText || '';
+
+    const phonemeNode = ast.children?.find(
+      (child: any) => child && child.name === 'shortIpaValue',
+    );
+    const phoneme = phonemeNode ? phonemeNode.allText : '';
+
+    if (phoneme) {
+      tmo.tag('phoneme', { alphabet: 'ipa', ph: phoneme });
+    }
+
+    return tmo;
+  }
+
+  protected getShortSubObject(ast: any): TagsObject {
+    const tmo = new TagsObject(this);
+    const textNode = ast.children?.find(
+      (child: any) =>
+        child &&
+        (child.name === 'parenthesized' || child.name === 'plainTextModifier'),
+    );
+    tmo.text =
+      textNode && textNode.name === 'parenthesized'
+        ? this.extractParenthesizedText(textNode)
+        : textNode?.allText || '';
+
+    const aliasNode = ast.children?.find(
+      (child: any) => child && child.name === 'shortSubValue',
+    );
+    const alias = aliasNode ? aliasNode.allText.trim() : '';
+
+    if (alias) {
+      tmo.tag('sub', { alias });
+    }
+
+    return tmo;
+  }
+
   protected addSpeakTag(
     ast: any,
     newLine: boolean,

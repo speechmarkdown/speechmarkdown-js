@@ -51,6 +51,23 @@ export class TextFormatter extends FormatterBase {
         return lines;
       }
 
+      case 'shortIpa':
+      case 'shortSub': {
+        const textNode = ast.children?.find(
+          (child: any) =>
+            child &&
+            (child.name === 'parenthesized' || child.name === 'plainTextModifier'),
+        );
+        const text =
+          textNode && textNode.name === 'parenthesized'
+            ? this.extractParenthesizedText(textNode)
+            : textNode?.allText || '';
+        if (text) {
+          lines.push(text);
+        }
+        return lines;
+      }
+
       case 'audio':
         return lines;
 
@@ -59,5 +76,14 @@ export class TextFormatter extends FormatterBase {
         return lines;
       }
     }
+  }
+
+  private extractParenthesizedText(node: any): string {
+    if (!node || typeof node.allText !== 'string' || node.allText.length < 2) {
+      return '';
+    }
+
+    const content = node.allText.substring(1, node.allText.length - 1);
+    return content.trim();
   }
 }
