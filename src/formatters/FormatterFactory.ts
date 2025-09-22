@@ -7,6 +7,11 @@ import { AmazonPollyNeuralSsmlFormatter } from './AmazonPollyNeuralSsmlFormatter
 import { GoogleAssistantSsmlFormatter } from './GoogleAssistantSsmlFormatter';
 import { SamsungBixbySsmlFormatter } from './SamsungBixbySsmlFormatter';
 import { MicrosoftAzureSsmlFormatter } from './MicrosoftAzureSsmlFormatter';
+import { MicrosoftSapiSsmlFormatter } from './MicrosoftSapiSsmlFormatter';
+import { AppleAvSpeechSynthesizerSsmlFormatter } from './AppleAvSpeechSynthesizerSsmlFormatter';
+import { IbmWatsonSsmlFormatter } from './IbmWatsonSsmlFormatter';
+import { ElevenLabsFormatter } from './ElevenLabsFormatter';
+import { W3cSsmlFormatter } from './W3cSsmlFormatter';
 
 export function createFormatter(options: SpeechOptions): Formatter {
   switch (options.platform) {
@@ -22,6 +27,16 @@ export function createFormatter(options: SpeechOptions): Formatter {
       return new SamsungBixbySsmlFormatter(options);
     case 'microsoft-azure':
       return new MicrosoftAzureSsmlFormatter(options);
+    case 'microsoft-sapi':
+      return new MicrosoftSapiSsmlFormatter(options);
+    case 'w3c':
+      return new W3cSsmlFormatter(options);
+    case 'apple-avspeechsynthesizer':
+      return new AppleAvSpeechSynthesizerSsmlFormatter(options);
+    case 'ibm-watson':
+      return new IbmWatsonSsmlFormatter(options);
+    case 'elevenlabs':
+      return new ElevenLabsFormatter(options);
     default:
       return new TextFormatter(options);
   }

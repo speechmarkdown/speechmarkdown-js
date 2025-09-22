@@ -1,22 +1,43 @@
 import { SpeechOptions } from '../SpeechOptions';
 import { SsmlFormatterBase, TagsObject } from './SsmlFormatterBase';
-import { AMAZON_POLLY_ALL_VOICES } from './data/amazonPollyVoices';
 
-export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
-  public validVoices: Record<string, any> = AMAZON_POLLY_ALL_VOICES;
-
-  private validEmotionIntensity: string[] = ['low', 'medium', 'high'];
-
+export class W3cSsmlFormatter extends SsmlFormatterBase {
   constructor(public options: SpeechOptions) {
     super(options);
 
-    this.modifierKeyToSsmlTagMappings.whisper = 'amazon:effect';
+    this.modifierKeyToSsmlTagMappings.emphasis = 'emphasis';
+    this.modifierKeyToSsmlTagMappings.address = 'say-as';
+    this.modifierKeyToSsmlTagMappings.number = 'say-as';
+    this.modifierKeyToSsmlTagMappings.characters = 'say-as';
+    this.modifierKeyToSsmlTagMappings.expletive = 'say-as';
+    this.modifierKeyToSsmlTagMappings.fraction = 'say-as';
+    this.modifierKeyToSsmlTagMappings.interjection = 'say-as';
+    this.modifierKeyToSsmlTagMappings.ordinal = 'say-as';
+    this.modifierKeyToSsmlTagMappings.telephone = 'say-as';
+    this.modifierKeyToSsmlTagMappings.unit = 'say-as';
+    this.modifierKeyToSsmlTagMappings.time = 'say-as';
+    this.modifierKeyToSsmlTagMappings.date = 'say-as';
+    this.modifierKeyToSsmlTagMappings.sub = 'sub';
+    this.modifierKeyToSsmlTagMappings.ipa = 'phoneme';
+    this.modifierKeyToSsmlTagMappings.rate = 'prosody';
+    this.modifierKeyToSsmlTagMappings.pitch = 'prosody';
+    this.modifierKeyToSsmlTagMappings.volume = 'prosody';
     this.modifierKeyToSsmlTagMappings.lang = 'lang';
     this.modifierKeyToSsmlTagMappings.voice = 'voice';
-    this.modifierKeyToSsmlTagMappings.dj = 'amazon:domain';
-    this.modifierKeyToSsmlTagMappings.newscaster = 'amazon:domain';
-    this.modifierKeyToSsmlTagMappings.excited = 'amazon:emotion';
-    this.modifierKeyToSsmlTagMappings.disappointed = 'amazon:emotion';
+
+    this.ssmlTagSortOrder = [
+      'emphasis',
+      'say-as',
+      'prosody',
+      'voice',
+      'lang',
+      'sub',
+      'phoneme',
+    ];
+  }
+
+  protected getFormatterComment(): string | null {
+    return 'Converted from Speech Markdown to W3C SSML';
   }
 
   public getVoiceTagFallback(name: string): Record<string, string> | null {
@@ -27,20 +48,17 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
     return { name };
   }
 
-  // tslint:disable-next-line: max-func-body-length
   private getTextModifierObject(ast: any): any {
-    let textModifierObject = new TagsObject(this);
+    const textModifierObject = new TagsObject(this);
 
-    for (let index = 0; index < ast.children.length; index++) {
-      const child = ast.children[index];
-
+    for (const child of ast.children) {
       switch (child.name) {
         case 'plainText':
         case 'plainTextSpecialChars':
         case 'plainTextEmphasis':
         case 'plainTextPhone':
         case 'plainTextModifier': {
-          textModifierObject['text'] = child.allText;
+          textModifierObject.text = child.allText;
           break;
         }
         case 'textModifierKeyOptionalValue': {
@@ -50,82 +68,68 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
             child.children.length === 2 ? child.children[1].allText : '';
           const ssmlTag = this.modifierKeyToSsmlTagMappings[key];
 
+          if (!ssmlTag) {
+            break;
+          }
+
           switch (key) {
             case 'emphasis':
               textModifierObject.tag(ssmlTag, { level: value || 'moderate' });
               break;
-
             case 'address':
-            case 'characters':
             case 'expletive':
             case 'fraction':
             case 'interjection':
-            case 'number':
             case 'ordinal':
             case 'telephone':
             case 'unit':
               textModifierObject.tag(ssmlTag, { 'interpret-as': key });
               break;
+            case 'number':
+              textModifierObject.tag(ssmlTag, { 'interpret-as': 'cardinal' });
+              break;
+            case 'characters': {
+              let interpretAs = 'digits';
+              if (isNaN(textModifierObject.text as any)) {
+                interpretAs = 'characters';
+              }
 
+              textModifierObject.tag(ssmlTag, { 'interpret-as': interpretAs });
+              break;
+            }
             case 'date':
               textModifierObject.tag(ssmlTag, {
                 'interpret-as': key,
                 format: value || 'ymd',
               });
               break;
-
             case 'time':
               textModifierObject.tag(ssmlTag, {
                 'interpret-as': key,
                 format: value || 'hms12',
               });
               break;
-
-            case 'whisper':
-              textModifierObject.tag(ssmlTag, { name: 'whispered' });
-              break;
-
             case 'ipa':
               textModifierObject.tag(ssmlTag, { alphabet: key, ph: value });
               break;
-
             case 'sub':
               textModifierObject.tag(ssmlTag, { alias: value });
               break;
-
             case 'volume':
             case 'rate':
             case 'pitch': {
-              const attrs = {};
+              const attrs: any = {};
               attrs[key] = value || 'medium';
               textModifierObject.tag(ssmlTag, attrs, true);
               break;
             }
-
             case 'lang':
               textModifierObject.tag(ssmlTag, { 'xml:lang': value });
               break;
-
             case 'voice':
-              textModifierObject.voiceTag(key, value);
+              textModifierObject.voiceTag(ssmlTag, value);
               break;
-
-            case 'excited':
-            case 'disappointed': {
-              const intensity = (value || 'medium').toLowerCase();
-
-              if (this.validEmotionIntensity.includes(intensity)) {
-                textModifierObject.tag(ssmlTag, {
-                  name: key,
-                  intensity: intensity,
-                });
-                break;
-              }
-              break;
-            }
-
-            default: {
-            }
+            default:
           }
           break;
         }
@@ -135,54 +139,31 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
     return textModifierObject;
   }
 
-  // tslint:disable-next-line: max-func-body-length
   private getSectionObject(ast: any): any {
-    let sectionObject = new TagsObject(this);
+    const sectionObject = new TagsObject(this);
 
-    for (let index = 0; index < ast.children.length; index++) {
-      const child = ast.children[index];
+    for (const child of ast.children) {
+      if (child.name !== 'sectionModifierKeyOptionalValue') {
+        continue;
+      }
 
-      if (child.name === 'sectionModifierKeyOptionalValue') {
-        let key = child.children[0].allText;
-        const value =
-          child.children.length === 2 ? child.children[1].allText : '';
-        const ssmlTag = this.modifierKeyToSsmlTagMappings[key];
+      const key = child.children[0].allText;
+      const value =
+        child.children.length === 2 ? child.children[1].allText : '';
+      const ssmlTag = this.modifierKeyToSsmlTagMappings[key];
 
-        switch (key) {
-          case 'lang':
-            sectionObject.tag(ssmlTag, { 'xml:lang': value });
-            break;
+      if (!ssmlTag) {
+        continue;
+      }
 
-          case 'voice':
-            sectionObject.voiceTag(key, value);
-            break;
-
-          case 'dj':
-            sectionObject.tag(ssmlTag, { name: 'music' });
-            break;
-
-          case 'newscaster':
-            sectionObject.tag(ssmlTag, { name: 'news' });
-            break;
-
-          case 'defaults': {
-            break;
-          }
-
-          case 'excited':
-          case 'disappointed': {
-            const intensity = (value || 'medium').toLowerCase();
-
-            if (this.validEmotionIntensity.includes(intensity)) {
-              sectionObject.tag(ssmlTag, { name: key, intensity: intensity });
-              break;
-            }
-            break;
-          }
-
-          default: {
-          }
-        }
+      switch (key) {
+        case 'lang':
+          sectionObject.tag(ssmlTag, { 'xml:lang': value });
+          break;
+        case 'voice':
+          sectionObject.voiceTag(ssmlTag, value);
+          break;
+        default:
       }
     }
 
@@ -194,30 +175,28 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
     switch (ast.name) {
       case 'document': {
         if (this.options.includeFormatterComment) {
-          this.addComment(
-            'Converted from Speech Markdown to SSML for Amazon Alexa',
-            lines,
-          );
+          const comment = this.getFormatterComment();
+          if (comment) {
+            this.addComment(comment, lines);
+          }
         }
 
         if (this.options.includeSpeakTag) {
           return this.addSpeakTag(ast.children, true, false, null, lines);
-        } else {
-          this.processAst(ast.children, lines);
-          return lines;
         }
+        this.processAst(ast.children, lines);
+        return lines;
       }
       case 'paragraph': {
         if (this.options.includeParagraphTag) {
           return this.addTag('p', ast.children, true, false, null, lines);
-        } else {
-          this.processAst(ast.children, lines);
-          return lines;
         }
+        this.processAst(ast.children, lines);
+        return lines;
       }
       case 'shortBreak': {
         const time = ast.children[0].allText;
-        return this.addTagWithAttrs(lines, null, 'break', { time: time });
+        return this.addTagWithAttrs(lines, null, 'break', { time });
       }
       case 'break': {
         const val = ast.children[0].allText;
@@ -232,64 +211,38 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
         }
         return this.addTagWithAttrs(lines, null, 'break', attrs);
       }
-      case 'shortEmphasisModerate': {
-        const text = ast.children[0].allText;
-        return this.addTagWithAttrs(lines, text, 'emphasis', {
-          level: 'moderate',
-        });
-      }
-      case 'shortEmphasisStrong': {
-        const text = ast.children[0].allText;
-        return this.addTagWithAttrs(lines, text, 'emphasis', {
-          level: 'strong',
-        });
-      }
-      case 'shortEmphasisNone': {
-        const text = ast.children[0].allText;
-        return this.addTagWithAttrs(lines, text, 'emphasis', { level: 'none' });
-      }
+      case 'shortEmphasisModerate':
+      case 'shortEmphasisStrong':
+      case 'shortEmphasisNone':
       case 'shortEmphasisReduced': {
         const text = ast.children[0].allText;
-        return this.addTagWithAttrs(lines, text, 'emphasis', {
-          level: 'reduced',
-        });
+        if (text) {
+          lines.push(text);
+        }
+        return lines;
       }
       case 'textModifier': {
         const tmo = this.getTextModifierObject(ast);
-
-        const tagsSortedDesc = Object.keys(tmo.tags).sort((a: any, b: any) => {
-          return tmo.tags[b].sortId - tmo.tags[a].sortId;
-        });
+        const tagsSortedDesc = Object.keys(tmo.tags).sort(
+          (a: any, b: any) => tmo.tags[b].sortId - tmo.tags[a].sortId,
+        );
 
         let inner = tmo.text;
-
-        for (let index = 0; index < tagsSortedDesc.length; index++) {
-          const tag = tagsSortedDesc[index];
+        for (const tag of tagsSortedDesc) {
           const attrs = tmo.tags[tag].attrs;
-
           inner = this.getTagWithAttrs(inner, tag, attrs);
         }
         lines.push(inner);
-
-        return lines;
-      }
-      case 'section': {
-        const so = this.getSectionObject(ast);
-
-        const tagsSortedAsc = Object.keys(so.tags).sort((a: any, b: any) => {
-          return so.tags[a].sortId - so.tags[b].sortId;
-        });
-
-        this.addSectionEndTag(lines);
-        this.addSectionStartTag(tagsSortedAsc, so, lines);
-
         return lines;
       }
       case 'audio': {
-        // Ignore the caption.
         const index = ast.children.length === 2 ? 1 : 0;
         const url = ast.children[index].allText.replace(/&/g, '&amp;');
-        return this.addTagWithAttrs(lines, null, 'audio', { src: url });
+        return this.addTagWithAttrs(lines, null, 'audio', { src: url }, false);
+      }
+      case 'markTag': {
+        const name = ast.children[0].allText;
+        return this.addTagWithAttrs(lines, null, 'mark', { name }, false);
       }
       case 'simpleLine': {
         this.processAst(ast.children, lines);
@@ -303,18 +256,29 @@ export class AmazonAlexaSsmlFormatter extends SsmlFormatterBase {
         if (this.options.preserveEmptyLines) {
           lines.push(ast.allText);
         }
-
         return lines;
       }
       case 'plainText':
-      case 'plainTextSpecialChars': {
-        let text = this.options.escapeXmlSymbols
+      case 'plainTextSpecialChars':
+      case 'plainTextEmphasis':
+      case 'plainTextPhone':
+      case 'plainTextModifier': {
+        const text = this.options.escapeXmlSymbols
           ? this.escapeXmlCharacters(ast.allText)
           : ast.allText;
         lines.push(text);
         return lines;
       }
+      case 'section': {
+        const so = this.getSectionObject(ast);
+        const tagsSortedAsc = Object.keys(so.tags).sort(
+          (a: any, b: any) => so.tags[a].sortId - so.tags[b].sortId,
+        );
 
+        this.addSectionEndTag(lines);
+        this.addSectionStartTag(tagsSortedAsc, so, lines);
+        return lines;
+      }
       default: {
         this.processAst(ast.children, lines);
         return lines;

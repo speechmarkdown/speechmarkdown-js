@@ -99,6 +99,17 @@ describe('break-time', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to ElevenLabs prompt markup', () => {
+    const options = {
+      platform: 'elevenlabs',
+    };
+    const prompt = speech.toSSML(markdown, options);
+
+    const expected = 'Sample <break time="3s"/> speech <break time="250ms"/> markdown';
+
+    expect(prompt).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
     const options = {};
     const text = speech.toText(markdown, options);

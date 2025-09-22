@@ -1,36 +1,9 @@
 import { SpeechOptions } from '../SpeechOptions';
 import { SsmlFormatterBase, TagsObject } from './SsmlFormatterBase';
+import { GOOGLE_CLOUD_TTS_VOICES } from './data/googleCloudVoices';
 
 export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
-  public validVoices: Record<string, any> = {
-    Ivy: { voice: { gender: 'female', variant: 1, language: 'en-US' } },
-    Joanna: { voice: { gender: 'female', variant: 2, language: 'en-US' } },
-    Joey: { voice: { gender: 'male', variant: 1, language: 'en-US' } },
-    Justin: { voice: { gender: 'male', variant: 2, language: 'en-US' } },
-    Kendra: { voice: { gender: 'female', variant: 3, language: 'en-US' } },
-    Kimberly: { voice: { gender: 'female', variant: 4, language: 'en-US' } },
-    Matthew: { voice: { gender: 'male', variant: 3, language: 'en-US' } },
-    Salli: { voice: { gender: 'male', variant: 4, language: 'en-US' } },
-    Nicole: { voice: { gender: 'female', variant: 1, language: 'en-AU' } },
-    Russell: { voice: { gender: 'male', variant: 1, language: 'en-AU' } },
-    Amy: { voice: { gender: 'female', variant: 1, language: 'en-GB' } },
-    Brian: { voice: { gender: 'male', variant: 1, language: 'en-GB' } },
-    Emma: { voice: { gender: 'female', variant: 2, language: 'en-GB' } },
-    Aditi: { voice: { gender: 'female', variant: 1, language: 'en-IN' } },
-    Raveena: { voice: { gender: 'female', variant: 2, language: 'en-IN' } },
-    Hans: { voice: { gender: 'male', variant: 1, language: 'de-DE' } },
-    Marlene: { voice: { gender: 'female', variant: 1, language: 'de-DE' } },
-    Vicki: { voice: { gender: 'female', variant: 2, language: 'de-DE' } },
-    Conchita: { voice: { gender: 'female', variant: 1, language: 'es-ES' } },
-    Enrique: { voice: { gender: 'male', variant: 1, language: 'es-ES' } },
-    Carla: { voice: { gender: 'female', variant: 1, language: 'it-IT' } },
-    Giorgio: { voice: { gender: 'male', variant: 1, language: 'it-IT' } },
-    Mizuki: { voice: { gender: 'female', variant: 1, language: 'ja-JP' } },
-    Takumi: { voice: { gender: 'male', variant: 1, language: 'ja-JP' } },
-    Celine: { voice: { gender: 'female', variant: 1, language: 'fr-FR' } },
-    Lea: { voice: { gender: 'female', variant: 2, language: 'fr-FR' } },
-    Mathieu: { voice: { gender: 'male', variant: 1, language: 'fr-FR' } },
-  };
+  public validVoices: Record<string, any> = GOOGLE_CLOUD_TTS_VOICES;
 
   constructor(public options: SpeechOptions) {
     super(options);
