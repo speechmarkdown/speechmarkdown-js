@@ -105,7 +105,8 @@ describe('ipa-standard', () => {
     };
     const prompt = speech.toSSML(markdown, options);
 
-    const expected = "I say, <phoneme alphabet=\"ipa\" ph=\"'pi.kæn\">pecan</phoneme>.";
+    const expected =
+      'I say, <phoneme alphabet="ipa" ph="\'pi.kæn">pecan</phoneme>.';
 
     expect(prompt).toBe(expected);
   });

@@ -47,7 +47,8 @@ export class ElevenLabsFormatter extends SsmlFormatterBase {
   private mapStrengthToTime(strength: string): string {
     const normalized = (strength || '').toLowerCase();
     return (
-      BREAK_STRENGTH_TO_DURATION[normalized] || BREAK_STRENGTH_TO_DURATION['medium']
+      BREAK_STRENGTH_TO_DURATION[normalized] ||
+      BREAK_STRENGTH_TO_DURATION['medium']
     );
   }
 

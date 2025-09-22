@@ -1,0 +1,7 @@
+node_modules
+coverage
+dist
+dist.browser
+tmp
+npm-debug.log*
+

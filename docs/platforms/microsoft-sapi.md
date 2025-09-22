@@ -2,7 +2,7 @@
 
 ## Official resources
 
-- [SAPI 5 XML reference](https://learn.microsoft.com/previous-versions/windows/desktop/ms720163(v=vs.85))
+- [SAPI 5 XML reference](<https://learn.microsoft.com/previous-versions/windows/desktop/ms720163(v=vs.85)>)
 
 ## Speech Markdown status
 

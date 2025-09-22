@@ -63,7 +63,9 @@ describe('sub-short', () => {
   });
 
   test('converts to SSML - Apple AVSpeechSynthesizer', () => {
-    const ssml = speech.toSSML(markdown, { platform: 'apple-avspeechsynthesizer' });
+    const ssml = speech.toSSML(markdown, {
+      platform: 'apple-avspeechsynthesizer',
+    });
     expect(ssml).toBe(expectedSsml);
   });
 

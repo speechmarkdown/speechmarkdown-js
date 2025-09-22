@@ -58,17 +58,17 @@ export class TagsObject {
       optionCandidates.push(normalizedName);
     }
 
-    if (
-      sentenceCaseName &&
-      !optionCandidates.includes(sentenceCaseName)
-    ) {
+    if (sentenceCaseName && !optionCandidates.includes(sentenceCaseName)) {
       optionCandidates.push(sentenceCaseName);
     }
 
     for (const candidate of optionCandidates) {
       if (
         candidate &&
-        this.voiceTagNamed(this.base.options && this.base.options.voices, candidate)
+        this.voiceTagNamed(
+          this.base.options && this.base.options.voices,
+          candidate,
+        )
       ) {
         return;
       }
@@ -84,10 +84,7 @@ export class TagsObject {
       validCandidates.push(rawName);
     }
 
-    if (
-      sentenceCaseName &&
-      !validCandidates.includes(sentenceCaseName)
-    ) {
+    if (sentenceCaseName && !validCandidates.includes(sentenceCaseName)) {
       validCandidates.push(sentenceCaseName);
     }
 
@@ -120,14 +117,13 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     "'": '&apos;',
   };
 
-  public static readonly XML_UNESCAPE_MAPPING: Dictionary<
-    string
-  > = (function swapJSON(dictionary: Dictionary<string>) {
-    return Object.keys(dictionary).reduce((acc: any, key: string) => {
-      acc[dictionary[key]] = key;
-      return acc;
-    }, {});
-  })(SsmlFormatterBase.XML_ESCAPE_MAPPING);
+  public static readonly XML_UNESCAPE_MAPPING: Dictionary<string> =
+    (function swapJSON(dictionary: Dictionary<string>) {
+      return Object.keys(dictionary).reduce((acc: any, key: string) => {
+        acc[dictionary[key]] = key;
+        return acc;
+      }, {});
+    })(SsmlFormatterBase.XML_ESCAPE_MAPPING);
 
   protected constructor(public options: SpeechOptions) {
     super(options);

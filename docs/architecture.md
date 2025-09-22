@@ -1,11 +1,13 @@
 # Architecture
 
 ## Simple Parser
+
 Instead of a simple parser architecture as shown here:
 
 ![](./assets/simple-parser-diagram.png)
 
 ## Parser-Formatter Architecture
+
 Speech Markdown is first translated into an Abstract Syntax Tree (AST) and a formatter transforms that into the correct format:
 
 ![](./assets/parser-formatter-diagram.png)
