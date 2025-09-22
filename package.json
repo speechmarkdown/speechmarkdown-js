@@ -9,7 +9,7 @@
     "dist.browser"
   ],
   "engines": {
-    "node": ">= 10.13"
+    "node": ">= 22"
   },
   "author": "Mark Tucker <github@speechmarkdown.org>",
   "license": "MIT",
