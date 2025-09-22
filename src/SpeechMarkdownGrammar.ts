@@ -86,6 +86,7 @@ export function speechMarkdownGrammar(myna: any): any {
     this.number = m.seq(m.integer, this.fraction.opt).ast;
     this.time = m.seq(this.number, this.timeUnit).ast;
     this.shortBreak = m.seq('[', this.time, ']').ast;
+
     // this.break = m.seq('[break:', this.time , ']').ast;
 
     // this.string = m.doubleQuoted(this.quoteChar.zeroOrMore).ast;
@@ -206,6 +207,31 @@ export function speechMarkdownGrammar(myna: any): any {
       'ŋ',
       'ɹ',
     ];
+
+    this.shortIpaValue = m.choice(
+      m.digit,
+      m.letter,
+      m.hyphen,
+      m.space,
+      ...ipaChars,
+      "'",
+      '.',
+      ':',
+    ).oneOrMore.ast;
+    this.shortIpa = m.seq(
+      m.parenthesized(this.plainTextModifier),
+      '/',
+      this.shortIpaValue,
+      '/',
+    ).ast;
+
+    this.shortSubValue = m.notChar('}').unless(m.newLine).oneOrMore.ast;
+    this.shortSub = m.seq(
+      m.parenthesized(this.plainTextModifier),
+      '{',
+      this.shortSubValue,
+      '}',
+    ).ast;
 
     const percentChange = ['+', m.hyphen, m.digit, '%'];
 
@@ -332,6 +358,8 @@ export function speechMarkdownGrammar(myna: any): any {
     this.any = m.advance;
     this.inline = m
       .choice(
+        this.shortIpa,
+        this.shortSub,
         this.textModifier,
         this.emphasis,
         this.shortBreak,

@@ -191,8 +191,13 @@ The biggest place we need help right now is with the completion of the grammar a
 - [x] emphasis - moderate
 - [x] emphasis - none
 - [x] emphasis - reduced
-- [ ] ipa
-- [ ] sub
+- [x] ipa
+- [x] sub
+
+Short-form examples:
+
+- `(pecan)/'pi.kæn/` → `<phoneme alphabet="ipa" ph="'pi.kæn">pecan</phoneme>`
+- `(Al){aluminum}` → `<sub alias="aluminum">Al</sub>`
 
 #### Standard Format
 
