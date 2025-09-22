@@ -198,6 +198,7 @@ Short-form examples:
 
 - `(pecan)/'pi.kæn/` → `<phoneme alphabet="ipa" ph="'pi.kæn">pecan</phoneme>`
 - `(Al){aluminum}` → `<sub alias="aluminum">Al</sub>`
+- `/ˈdeɪtə/` → `<phoneme alphabet="ipa" ph="ˈdeɪtə">ipa</phoneme>`
 
 #### Standard Format
 

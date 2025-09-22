@@ -246,6 +246,10 @@ export class IbmWatsonSsmlFormatter extends SsmlFormatterBase {
         const tmo = this.getShortIpaObject(ast);
         return this.applyTagsObject(tmo, lines);
       }
+      case 'bareIpa': {
+        const tmo = this.getShortIpaObject(ast, 'ipa');
+        return this.applyTagsObject(tmo, lines);
+      }
       case 'shortSub': {
         const tmo = this.getShortSubObject(ast);
         return this.applyTagsObject(tmo, lines);

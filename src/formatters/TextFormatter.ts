@@ -68,6 +68,17 @@ export class TextFormatter extends FormatterBase {
         return lines;
       }
 
+      case 'bareIpa': {
+        const phonemeNode = ast.children?.find(
+          (child: any) => child && child.name === 'shortIpaValue',
+        );
+        const phoneme = phonemeNode ? phonemeNode.allText : '';
+        if (phoneme) {
+          lines.push(phoneme);
+        }
+        return lines;
+      }
+
       case 'audio':
         return lines;
 

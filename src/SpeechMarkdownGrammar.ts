@@ -24,7 +24,7 @@ export function speechMarkdownGrammar(myna: any): any {
 
     // Plain text
     const specialCharSet = '[]()';
-    const specialCharSetEmphasis = '[]()*~`@#\\_!+-';
+    const specialCharSetEmphasis = '[]()*~`@#\\_!+-/';
     const ws = m.char(' \t').oneOrMore;
     const optWs = ws.opt;
     const wsOrNewLine = ws.or(m.newLine);
@@ -232,6 +232,7 @@ export function speechMarkdownGrammar(myna: any): any {
       this.shortSubValue,
       '}',
     ).ast;
+    this.bareIpa = m.seq('/', this.shortIpaValue, '/').ast;
 
     const percentChange = ['+', m.hyphen, m.digit, '%'];
 
@@ -358,6 +359,7 @@ export function speechMarkdownGrammar(myna: any): any {
     this.any = m.advance;
     this.inline = m
       .choice(
+        this.bareIpa,
         this.shortIpa,
         this.shortSub,
         this.textModifier,

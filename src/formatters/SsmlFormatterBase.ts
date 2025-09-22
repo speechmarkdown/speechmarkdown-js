@@ -266,17 +266,18 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     return content.trim();
   }
 
-  protected getShortIpaObject(ast: any): TagsObject {
+  protected getShortIpaObject(ast: any, fallbackText?: string): TagsObject {
     const tmo = new TagsObject(this);
     const textNode = ast.children?.find(
       (child: any) =>
         child &&
         (child.name === 'parenthesized' || child.name === 'plainTextModifier'),
     );
-    tmo.text =
+    const extractedText =
       textNode && textNode.name === 'parenthesized'
         ? this.extractParenthesizedText(textNode)
         : textNode?.allText || '';
+    tmo.text = extractedText || fallbackText || '';
 
     const phonemeNode = ast.children?.find(
       (child: any) => child && child.name === 'shortIpaValue',

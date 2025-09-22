@@ -8,12 +8,14 @@ describe('ipa-short', () => {
   const markdown = dedent`
     I say, (pecan)/'pi.kæn/.
     I say, (data)/ˈdeɪtə/.
+    Just /ˈdeɪtə/ here.
   `;
 
   const expectedSsml = dedent`
     <speak>
     I say, <phoneme alphabet="ipa" ph="'pi.kæn">pecan</phoneme>.
     I say, <phoneme alphabet="ipa" ph="ˈdeɪtə">data</phoneme>.
+    Just <phoneme alphabet="ipa" ph="ˈdeɪtə">ipa</phoneme> here.
     </speak>
   `;
 
@@ -67,6 +69,7 @@ describe('ipa-short', () => {
     const expectedText = dedent`
       I say, pecan.
       I say, data.
+      Just ˈdeɪtə here.
     `;
     expect(text).toBe(expectedText);
   });
