@@ -136,7 +136,8 @@ describe('elevenlabs formatter', () => {
     };
     const prompt = speech.toSSML(markdown, options);
 
-    const expected = 'Eleven <phoneme alphabet="ipa" ph="ˈlæbz">Labs</phoneme> <break time="1s"/> ready.';
+    const expected =
+      'Eleven <phoneme alphabet="ipa" ph="ˈlæbz">Labs</phoneme> <break time="1s"/> ready.';
 
     expect(prompt).toBe(expected);
   });

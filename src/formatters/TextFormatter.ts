@@ -56,7 +56,8 @@ export class TextFormatter extends FormatterBase {
         const textNode = ast.children?.find(
           (child: any) =>
             child &&
-            (child.name === 'parenthesized' || child.name === 'plainTextModifier'),
+            (child.name === 'parenthesized' ||
+              child.name === 'plainTextModifier'),
         );
         const text =
           textNode && textNode.name === 'parenthesized'

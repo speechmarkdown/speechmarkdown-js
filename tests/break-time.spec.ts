@@ -105,7 +105,8 @@ describe('break-time', () => {
     };
     const prompt = speech.toSSML(markdown, options);
 
-    const expected = 'Sample <break time="3s"/> speech <break time="250ms"/> markdown';
+    const expected =
+      'Sample <break time="3s"/> speech <break time="250ms"/> markdown';
 
     expect(prompt).toBe(expected);
   });

@@ -10,11 +10,11 @@ When you submit a pull request, our team is notified and will respond as quickly
 
 We look forward to receiving your pull requests for:
 
-* New content you'd like to contribute (such as new code samples or tutorials)
-* Inaccuracies in the content
-* Information gaps in the content that need more detail to be complete
-* Typos or grammatical errors
-* Suggested rewrites that improve clarity and reduce confusion
+- New content you'd like to contribute (such as new code samples or tutorials)
+- Inaccuracies in the content
+- Information gaps in the content that need more detail to be complete
+- Typos or grammatical errors
+- Suggested rewrites that improve clarity and reduce confusion
 
 **Note:** We all write differently, and you might not like how we've written or organized something currently. We want that feedback. But please be sure that your request for a rewrite is supported by the previous criteria. If it isn't, we might decline to merge it.
 
@@ -44,7 +44,6 @@ In addition to written content, we really appreciate new examples and code sampl
 ## Code of conduct
 
 This project has adopted the [Speech Markdown Open Source Code of Conduct](https://github.com/speechmarkdown/speechmarkdown-js/blob/master/CODE-OF-CONDUCT). Contact [opensource-codeofconduct@speechmarkdown.org](mailto:opensource-codeofconduct@speechmarkdown.org) with any additional questions or comments.
-
 
 ## Licensing
 

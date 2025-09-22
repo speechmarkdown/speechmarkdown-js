@@ -11,7 +11,7 @@ export function speechMarkdownGrammar(myna: any): any {
 
   // tslint:disable-next-line: typedef
   // tslint:disable-next-line: max-func-body-length
-  const g: any = new (function() {
+  const g: any = new (function () {
     //         // Allows the "inline" to be referenced before it is defined.
     //         // This enables recursive definitions.
     //         this.inlineDelayed = m.delay(() => this.inline);

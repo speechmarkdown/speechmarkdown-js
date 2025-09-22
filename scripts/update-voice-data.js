@@ -22,7 +22,9 @@ const proxyAgent = (() => {
   try {
     return new HttpsProxyAgent(proxyUrl);
   } catch (error) {
-    console.warn(`[proxy] failed to configure agent for ${proxyUrl}: ${error.message}`);
+    console.warn(
+      `[proxy] failed to configure agent for ${proxyUrl}: ${error.message}`,
+    );
     return null;
   }
 })();
@@ -65,7 +67,7 @@ function writeFormatterVoiceModule(fileName, exports) {
     lines.push(`export const ${exportName}: Record<string, any> = {`);
 
     const keys = Object.keys(map || {}).sort((a, b) =>
-      a.localeCompare(b, undefined, { sensitivity: 'base' })
+      a.localeCompare(b, undefined, { sensitivity: 'base' }),
     );
 
     for (const key of keys) {
@@ -115,15 +117,19 @@ function fetchJson(url, { method = 'GET', headers = {}, body } = {}) {
           } catch (error) {
             reject(
               new Error(
-                `Failed to parse JSON from ${requestUrl.toString()}: ${error.message}`
-              )
+                `Failed to parse JSON from ${requestUrl.toString()}: ${
+                  error.message
+                }`,
+              ),
             );
           }
         } else {
           reject(
             new Error(
-              `HTTP ${res.statusCode} ${res.statusMessage || ''} when calling ${requestUrl.toString()}: ${text}`
-            )
+              `HTTP ${res.statusCode} ${
+                res.statusMessage || ''
+              } when calling ${requestUrl.toString()}: ${text}`,
+            ),
           );
         }
       });
@@ -160,7 +166,7 @@ async function updateAzureVoices() {
   if (!key || !region) {
     logSkip(
       'azure',
-      'set AZURE_SPEECH_KEY/AZURE_SPEECH_REGION or MICROSOFT_TOKEN/MICROSOFT_REGION to refresh the catalogue'
+      'set AZURE_SPEECH_KEY/AZURE_SPEECH_REGION or MICROSOFT_TOKEN/MICROSOFT_REGION to refresh the catalogue',
     );
     return;
   }
@@ -179,7 +185,7 @@ async function updateAzureVoices() {
   const voiceMap = {};
 
   for (const voice of data) {
-    const name = ((voice.ShortName || voice.Name) || '').trim();
+    const name = (voice.ShortName || voice.Name || '').trim();
 
     if (!name) {
       continue;
@@ -248,13 +254,20 @@ async function updateWatsonVoices() {
   const apiKey = process.env.WATSON_TTS_API_KEY;
 
   if (!urlText || !apiKey) {
-    logSkip('watson', 'set WATSON_TTS_URL and WATSON_TTS_API_KEY to refresh the catalogue');
+    logSkip(
+      'watson',
+      'set WATSON_TTS_URL and WATSON_TTS_API_KEY to refresh the catalogue',
+    );
     return;
   }
 
-  const apiUrl = new URL(urlText.endsWith('/') ? `${urlText}v1/voices` : `${urlText}/v1/voices`);
+  const apiUrl = new URL(
+    urlText.endsWith('/') ? `${urlText}v1/voices` : `${urlText}/v1/voices`,
+  );
   const headers = {
-    Authorization: `Basic ${Buffer.from(`apikey:${apiKey}`).toString('base64')}`,
+    Authorization: `Basic ${Buffer.from(`apikey:${apiKey}`).toString(
+      'base64',
+    )}`,
   };
 
   const data = await fetchJson(apiUrl, { headers });
@@ -289,7 +302,15 @@ async function updateWatsonVoices() {
   ]);
 }
 
-function fetchAwsJson({ service, region, path, method = 'GET', headers = {}, body, credentials }) {
+function fetchAwsJson({
+  service,
+  region,
+  path,
+  method = 'GET',
+  headers = {},
+  body,
+  credentials,
+}) {
   const host = `${service}.${region}.amazonaws.com`;
   const request = {
     host,
@@ -337,19 +358,21 @@ function fetchAwsJson({ service, region, path, method = 'GET', headers = {}, bod
             } catch (error) {
               reject(
                 new Error(
-                  `Failed to parse JSON from https://${host}${path}: ${error.message}`
-                )
+                  `Failed to parse JSON from https://${host}${path}: ${error.message}`,
+                ),
               );
             }
           } else {
             reject(
               new Error(
-                `HTTP ${res.statusCode} ${res.statusMessage || ''} when calling https://${host}${path}: ${text}`
-              )
+                `HTTP ${res.statusCode} ${
+                  res.statusMessage || ''
+                } when calling https://${host}${path}: ${text}`,
+              ),
             );
           }
         });
-      }
+      },
     );
 
     req.on('error', reject);
@@ -364,13 +387,16 @@ function fetchAwsJson({ service, region, path, method = 'GET', headers = {}, bod
 
 async function updatePollyVoices() {
   const accessKeyId = pickEnv('AWS_ACCESS_KEY_ID', 'POLLY_AWS_KEY_ID');
-  const secretAccessKey = pickEnv('AWS_SECRET_ACCESS_KEY', 'POLLY_AWS_ACCESS_KEY');
+  const secretAccessKey = pickEnv(
+    'AWS_SECRET_ACCESS_KEY',
+    'POLLY_AWS_ACCESS_KEY',
+  );
   const region = pickEnv('AWS_REGION', 'AWS_DEFAULT_REGION', 'POLLY_REGION');
 
   if (!accessKeyId || !secretAccessKey || !region) {
     logSkip(
       'amazon-polly',
-      'set AWS_ACCESS_KEY_ID/AWS_SECRET_ACCESS_KEY/AWS_REGION (or AWS_DEFAULT_REGION) or the POLLY_* equivalents to refresh the catalogue'
+      'set AWS_ACCESS_KEY_ID/AWS_SECRET_ACCESS_KEY/AWS_REGION (or AWS_DEFAULT_REGION) or the POLLY_* equivalents to refresh the catalogue',
     );
     return;
   }
@@ -388,7 +414,9 @@ async function updatePollyVoices() {
   let nextToken = null;
 
   do {
-    const params = new URLSearchParams({ IncludeAdditionalLanguageCodes: 'true' });
+    const params = new URLSearchParams({
+      IncludeAdditionalLanguageCodes: 'true',
+    });
 
     if (nextToken) {
       params.set('NextToken', nextToken);
@@ -437,7 +465,9 @@ async function updatePollyVoices() {
     allVoices[key] = entry;
 
     const engines = Array.isArray(voice.SupportedEngines)
-      ? voice.SupportedEngines.map((engine) => String(engine || '').toLowerCase())
+      ? voice.SupportedEngines.map((engine) =>
+          String(engine || '').toLowerCase(),
+        )
       : [];
 
     if (engines.includes('standard')) {

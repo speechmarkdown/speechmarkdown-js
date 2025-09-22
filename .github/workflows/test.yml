@@ -26,7 +26,7 @@ jobs:
         run: npm install
 
       - name: Check formatting
-        run: node_modules/.bin/prettier --check  $(find src -type f)
+        run: npm run format:check
 
       - name: Check lint
         run: npm run lint

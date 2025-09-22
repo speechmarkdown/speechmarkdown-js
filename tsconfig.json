@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "lib": [ "es2017" ],
+    "lib": ["es2017"],
     "module": "commonjs",
     "declaration": true,
     "noImplicitAny": false,
@@ -16,9 +16,5 @@
     "moduleResolution": "node",
     "esModuleInterop": true
   },
-  "include": [
-    "index.ts",
-    "src/**/*",
-    "test/**/*"
-  ]
+  "include": ["index.ts", "src/**/*", "test/**/*"]
 }
