@@ -1,7 +1,10 @@
 import { SpeechOptions } from '../SpeechOptions';
+import { IBM_WATSON_TTS_VOICES } from './data/ibmWatsonVoices';
 import { SsmlFormatterBase, TagsObject } from './SsmlFormatterBase';
 
 export class IbmWatsonSsmlFormatter extends SsmlFormatterBase {
+  public validVoices: Record<string, any> = IBM_WATSON_TTS_VOICES;
+
   constructor(public options: SpeechOptions) {
     super(options);
 

@@ -1,7 +1,10 @@
 import { SpeechOptions } from '../SpeechOptions';
+import { MICROSOFT_AZURE_TTS_VOICES } from './data/microsoftAzureVoices';
 import { SsmlFormatterBase, TagsObject } from './SsmlFormatterBase';
 
 export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
+  public validVoices: Record<string, any> = MICROSOFT_AZURE_TTS_VOICES;
+
   constructor(public options: SpeechOptions) {
     super(options);
 

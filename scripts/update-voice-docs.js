@@ -28,48 +28,10 @@ const proxyAgent = (() => {
 })();
 
 const rootDir = path.resolve(__dirname, '..');
-const outputDir = path.join(rootDir, 'docs', 'platforms', 'data');
 const formatterDataDir = path.join(rootDir, 'src', 'formatters', 'data');
-
-function ensureOutputDir() {
-  fs.mkdirSync(outputDir, { recursive: true });
-}
 
 function ensureFormatterDataDir() {
   fs.mkdirSync(formatterDataDir, { recursive: true });
-}
-
-function escapeCell(value) {
-  if (value === undefined || value === null) {
-    return '';
-  }
-
-  return String(value).replace(/\|/g, '\\|').replace(/\r?\n/g, '<br />');
-}
-
-function writeTable(fileName, { title, intro, columns, rows }) {
-  if (!rows || rows.length === 0) {
-    return;
-  }
-
-  ensureOutputDir();
-  const filePath = path.join(outputDir, fileName);
-  const lines = [`# ${title}`, ''];
-
-  if (intro) {
-    lines.push(intro, '');
-  }
-
-  const header = `| ${columns.join(' | ')} |`;
-  const divider = `| ${columns.map(() => '---').join(' | ')} |`;
-  lines.push(header, divider);
-
-  for (const row of rows) {
-    lines.push(`| ${row.map(escapeCell).join(' | ')} |`);
-  }
-
-  fs.writeFileSync(filePath, `${lines.join('\n')}\n`, 'utf8');
-  console.log(`[write] ${path.relative(rootDir, filePath)}`);
 }
 
 function formatObjectLiteral(value, indent) {
@@ -214,32 +176,28 @@ async function updateAzureVoices() {
     throw new Error('Unexpected Azure voice list response');
   }
 
-  const rows = data
-    .slice()
-    .sort((a, b) => {
-      const localeDiff = (a.Locale || '').localeCompare(b.Locale || '');
-      if (localeDiff !== 0) {
-        return localeDiff;
-      }
+  const voiceMap = {};
 
-      return (a.ShortName || a.LocalName || '').localeCompare(b.ShortName || b.LocalName || '');
-    })
-    .map((voice) => [
-      voice.ShortName || voice.Name || '',
-      voice.Locale || '',
-      voice.Gender || '',
-      voice.VoiceType || '',
-      Array.isArray(voice.StyleList) ? voice.StyleList.join(', ') : '',
-      voice.SampleRateHertz || '',
-      voice.Status || '',
-    ]);
+  for (const voice of data) {
+    const name = ((voice.ShortName || voice.Name) || '').trim();
 
-  writeTable('azure-voices.md', {
-    title: 'Azure Speech Service voice catalogue',
-    intro: `Last updated ${new Date().toISOString()}.`,
-    columns: ['Short name', 'Locale', 'Gender', 'Type', 'Styles', 'Sample rate (Hz)', 'Status'],
-    rows,
-  });
+    if (!name) {
+      continue;
+    }
+
+    voiceMap[name.toLowerCase()] = {
+      voice: {
+        name,
+      },
+    };
+  }
+
+  writeFormatterVoiceModule('microsoftAzureVoices.ts', [
+    {
+      exportName: 'MICROSOFT_AZURE_TTS_VOICES',
+      map: voiceMap,
+    },
+  ]);
 }
 
 async function updateGoogleVoices() {
@@ -260,24 +218,6 @@ async function updateGoogleVoices() {
     logSkip('google', 'no voices returned from API');
     return;
   }
-
-  const rows = voices
-    .slice()
-    .sort((a, b) => (a.name || '').localeCompare(b.name || ''))
-    .map((voice) => [
-      voice.name || '',
-      Array.isArray(voice.languageCodes) ? voice.languageCodes.join(', ') : '',
-      voice.ssmlGender || '',
-      voice.naturalSampleRateHertz || '',
-      Array.isArray(voice.supportedEngines) ? voice.supportedEngines.join(', ') : '',
-    ]);
-
-  writeTable('google-cloud-voices.md', {
-    title: 'Google Cloud Text-to-Speech voice catalogue',
-    intro: `Last updated ${new Date().toISOString()}.`,
-    columns: ['Name', 'Languages', 'Gender', 'Sample rate (Hz)', 'Engines'],
-    rows,
-  });
 
   const voiceMap = {};
 
@@ -325,24 +265,28 @@ async function updateWatsonVoices() {
     return;
   }
 
-  const rows = voices
-    .slice()
-    .sort((a, b) => (a.name || '').localeCompare(b.name || ''))
-    .map((voice) => [
-      voice.name || '',
-      voice.language || '',
-      voice.gender || '',
-      voice.description || '',
-      voice.customizable ? 'yes' : 'no',
-      voice.supported_features && voice.supported_features.voice_transformation ? 'yes' : 'no',
-    ]);
+  const voiceMap = {};
 
-  writeTable('ibm-watson-voices.md', {
-    title: 'IBM Watson Text to Speech voice catalogue',
-    intro: `Last updated ${new Date().toISOString()}.`,
-    columns: ['Name', 'Language', 'Gender', 'Description', 'Custom pronunciation', 'Voice transformation'],
-    rows,
-  });
+  for (const voice of voices) {
+    const name = (voice.name || '').trim();
+
+    if (!name) {
+      continue;
+    }
+
+    voiceMap[name.toLowerCase()] = {
+      voice: {
+        name,
+      },
+    };
+  }
+
+  writeFormatterVoiceModule('ibmWatsonVoices.ts', [
+    {
+      exportName: 'IBM_WATSON_TTS_VOICES',
+      map: voiceMap,
+    },
+  ]);
 }
 
 function fetchAwsJson({ service, region, path, method = 'GET', headers = {}, body, credentials }) {
@@ -471,44 +415,6 @@ async function updatePollyVoices() {
     return;
   }
 
-  const rows = voices
-    .slice()
-    .sort((a, b) => {
-      const languageDiff = (a.LanguageCode || '').localeCompare(b.LanguageCode || '');
-
-      if (languageDiff !== 0) {
-        return languageDiff;
-      }
-
-      return (a.Id || '').localeCompare(b.Id || '');
-    })
-    .map((voice) => [
-      voice.Id || '',
-      voice.Name || '',
-      voice.LanguageCode || '',
-      voice.LanguageName || '',
-      voice.Gender || '',
-      Array.isArray(voice.SupportedEngines) ? voice.SupportedEngines.join(', ') : '',
-      Array.isArray(voice.AdditionalLanguageCodes)
-        ? voice.AdditionalLanguageCodes.join(', ')
-        : '',
-    ]);
-
-  writeTable('amazon-polly-voices.md', {
-    title: 'Amazon Polly voice catalogue',
-    intro: `Last updated ${new Date().toISOString()}.`,
-    columns: [
-      'Id',
-      'Name',
-      'Language code',
-      'Language name',
-      'Gender',
-      'Engines',
-      'Additional languages',
-    ],
-    rows,
-  });
-
   const allVoices = {};
   const standardVoices = {};
   const neuralVoices = {};
@@ -567,92 +473,6 @@ async function updatePollyVoices() {
   ]);
 }
 
-function loadJsonFromFile(envVar) {
-  const filePath = process.env[envVar];
-
-  if (!filePath) {
-    return null;
-  }
-
-  const resolved = path.isAbsolute(filePath)
-    ? filePath
-    : path.join(process.cwd(), filePath);
-
-  if (!fs.existsSync(resolved)) {
-    throw new Error(`File specified by ${envVar} not found: ${resolved}`);
-  }
-
-  const raw = fs.readFileSync(resolved, 'utf8');
-
-  try {
-    return JSON.parse(raw);
-  } catch (error) {
-    throw new Error(`Unable to parse JSON from ${resolved}: ${error.message}`);
-  }
-}
-
-function updateSapiVoicesFromFile() {
-  const data = loadJsonFromFile('SAPI_VOICE_EXPORT');
-
-  if (!data) {
-    logSkip('sapi', 'set SAPI_VOICE_EXPORT to a JSON file exported from GetInstalledVoices');
-    return;
-  }
-
-  if (!Array.isArray(data) || data.length === 0) {
-    logSkip('sapi', 'voice export file did not contain any entries');
-    return;
-  }
-
-  const rows = data
-    .slice()
-    .sort((a, b) => (a.Name || '').localeCompare(b.Name || ''))
-    .map((voice) => [
-      voice.Name || voice.DisplayName || '',
-      voice.Id || '',
-      voice.Gender || '',
-      voice.Language || voice.Culture || '',
-    ]);
-
-  writeTable('microsoft-sapi-voices.md', {
-    title: 'Microsoft SAPI voice catalogue',
-    intro: `Last updated ${new Date().toISOString()}.`,
-    columns: ['Name', 'Id', 'Gender', 'Language'],
-    rows,
-  });
-}
-
-function updateAppleVoicesFromFile() {
-  const data = loadJsonFromFile('APPLE_VOICE_EXPORT');
-
-  if (!data) {
-    logSkip('apple', 'set APPLE_VOICE_EXPORT to a JSON file exported from AVSpeechSynthesisVoice');
-    return;
-  }
-
-  if (!Array.isArray(data) || data.length === 0) {
-    logSkip('apple', 'voice export file did not contain any entries');
-    return;
-  }
-
-  const rows = data
-    .slice()
-    .sort((a, b) => (a.identifier || a.name || '').localeCompare(b.identifier || b.name || ''))
-    .map((voice) => [
-      voice.identifier || '',
-      voice.name || '',
-      voice.language || '',
-      voice.quality || '',
-    ]);
-
-  writeTable('apple-avspeechsynthesizer-voices.md', {
-    title: 'Apple AVSpeechSynthesizer voice catalogue',
-    intro: `Last updated ${new Date().toISOString()}.`,
-    columns: ['Identifier', 'Name', 'Language', 'Quality'],
-    rows,
-  });
-}
-
 (async () => {
   try {
     await Promise.all([
@@ -661,9 +481,6 @@ function updateAppleVoicesFromFile() {
       updatePollyVoices(),
       updateWatsonVoices(),
     ]);
-
-    updateSapiVoicesFromFile();
-    updateAppleVoicesFromFile();
   } catch (error) {
     console.error(error.message || error);
     process.exitCode = 1;
