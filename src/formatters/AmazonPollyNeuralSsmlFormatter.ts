@@ -1,7 +1,10 @@
 import { SpeechOptions } from '../SpeechOptions';
 import { SsmlFormatterBase, TagsObject } from './SsmlFormatterBase';
+import { AMAZON_POLLY_NEURAL_VOICES } from './data/amazonPollyVoices';
 
 export class AmazonPollyNeuralSsmlFormatter extends SsmlFormatterBase {
+  public validVoices: Record<string, any> = AMAZON_POLLY_NEURAL_VOICES;
+
   constructor(public options: SpeechOptions) {
     super(options);
 
@@ -95,10 +98,13 @@ export class AmazonPollyNeuralSsmlFormatter extends SsmlFormatterBase {
             case 'disappointed':
             case 'emphasis':
             case 'interjection':
-            case 'voice':
             case 'whisper': {
               break;
             }
+
+            case 'voice':
+              textModifierObject.voiceTag(key, value);
+              break;
 
             default: {
             }
@@ -138,6 +144,8 @@ export class AmazonPollyNeuralSsmlFormatter extends SsmlFormatterBase {
           }
 
           case 'voice':
+            sectionObject.voiceTag(key, value);
+            break;
           case 'dj':
           case 'excited':
           case 'disappointed': {

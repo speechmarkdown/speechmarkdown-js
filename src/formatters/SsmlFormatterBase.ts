@@ -45,11 +45,65 @@ export class TagsObject {
   }
 
   public voiceTag(tag: string, value: string) {
-    const name = this.base.sentenceCase(value || 'device');
+    const rawName = (value || '').trim();
+    const normalizedName = rawName.toLowerCase();
+    const defaultName = rawName || 'device';
+    const sentenceCaseName = this.base.sentenceCase(
+      normalizedName || defaultName,
+    );
 
-    const handled =
-      this.voiceTagNamed(this.base.options && this.base.options.voices, name) ||
-      this.voiceTagNamed(this.base.validVoices, name);
+    const optionCandidates = [rawName];
+
+    if (normalizedName && normalizedName !== rawName) {
+      optionCandidates.push(normalizedName);
+    }
+
+    if (
+      sentenceCaseName &&
+      !optionCandidates.includes(sentenceCaseName)
+    ) {
+      optionCandidates.push(sentenceCaseName);
+    }
+
+    for (const candidate of optionCandidates) {
+      if (
+        candidate &&
+        this.voiceTagNamed(this.base.options && this.base.options.voices, candidate)
+      ) {
+        return;
+      }
+    }
+
+    const validCandidates = [];
+
+    if (normalizedName) {
+      validCandidates.push(normalizedName);
+    }
+
+    if (rawName && rawName !== normalizedName) {
+      validCandidates.push(rawName);
+    }
+
+    if (
+      sentenceCaseName &&
+      !validCandidates.includes(sentenceCaseName)
+    ) {
+      validCandidates.push(sentenceCaseName);
+    }
+
+    for (const candidate of validCandidates) {
+      if (this.voiceTagNamed(this.base.validVoices, candidate)) {
+        return;
+      }
+    }
+
+    const fallback = this.base.getVoiceTagFallback(
+      sentenceCaseName || defaultName,
+    );
+
+    if (fallback) {
+      this.tag('voice', fallback);
+    }
   }
 }
 
@@ -316,6 +370,10 @@ export abstract class SsmlFormatterBase extends FormatterBase {
     // console.log([unescaped, reversed, escaped].join('\n'));
 
     return escaped;
+  }
+
+  public getVoiceTagFallback(name: string): Record<string, string> | null {
+    return null;
   }
 
   protected abstract formatFromAst(ast: any, lines: string[]): string[];
