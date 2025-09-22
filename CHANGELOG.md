@@ -2,6 +2,14 @@
 
 All notable changes to the speechmarkdown-js project will be documented in this file.
 
+## 2.2.0 - (September 22, 2025)
+
+### Added
+
+- Added bare ipa format (`I say, (pecan)/'pi.kæn/`)
+- Added script to update voices from providers
+- restore dedicated Microsoft SAPI formatter
+
 ## 2.1.0 - (December 22, 2022)
 
 ### Added
