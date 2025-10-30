@@ -74,6 +74,32 @@ Sample <break time="3s"/> speech <break time="250ms"/> markdown
 </speak>
 ```
 
+### SSML - Microsoft Azure
+
+Convert Speech Markdown to SSML for Microsoft Azure with automatic MSTTS namespace injection
+
+```js
+const smd = require('speechmarkdown-js');
+
+const markdown = `(This is exciting news!)[excited:"1.5"] The new features are here.`;
+const options = {
+  platform: 'microsoft-azure',
+};
+
+const speech = new smd.SpeechMarkdown();
+const ssml = speech.toSSML(markdown, options);
+```
+
+The resulting SSML is:
+
+```xml
+<speak xmlns:mstts="https://www.w3.org/2001/mstts">
+<mstts:express-as style="excited" styledegree="1.5">This is exciting news!</mstts:express-as> The new features are here.
+</speak>
+```
+
+Azure supports 27 express-as styles including emotional styles (excited, disappointed, friendly, cheerful, sad, angry, etc.) and scenario-specific styles (newscaster, customerservice, chat, etc.). See [Azure platform documentation](./docs/platforms/azure.md) for complete details.
+
 ### Plain Text
 
 Convert Speech Markdown to Plain Text

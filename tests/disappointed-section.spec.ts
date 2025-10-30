@@ -164,6 +164,44 @@ describe('disappointed-section normal to disappointed intensities to normal', ()
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+    const options = {
+      platform: 'microsoft-azure',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+    <speak xmlns:mstts="https://www.w3.org/2001/mstts">
+    Normal speech.
+
+
+    <mstts:express-as style="disappointed">
+    I am disappointed - medium.
+
+    </mstts:express-as>
+
+    <mstts:express-as style="disappointed">
+    I am disappointed - medium.
+
+    </mstts:express-as>
+
+    <mstts:express-as style="disappointed">
+    I am disappointed - low.
+
+    </mstts:express-as>
+
+    <mstts:express-as style="disappointed">
+    I am disappointed - high.
+
+    </mstts:express-as>
+
+    Now back to normal speech.
+    </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
     const options = {};
     const text = speech.toText(markdown, options);
@@ -249,6 +287,24 @@ describe('disappointed-section end speak tag at end', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+    const options = {
+      platform: 'microsoft-azure',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak xmlns:mstts="https://www.w3.org/2001/mstts">
+
+      <mstts:express-as style="disappointed">
+      Section 1</mstts:express-as>
+
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
     const options = {};
     const text = speech.toText(markdown, options);
@@ -308,6 +364,23 @@ describe('disappointed-section section on same line', () => {
     const expected = dedent`
       <speak>
        Hey there, nice to meet you
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Microsoft Azure', () => {
+    const options = {
+      platform: 'microsoft-azure',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak xmlns:mstts="https://www.w3.org/2001/mstts">
+
+      <mstts:express-as style="disappointed"> Hey there, nice to meet you</mstts:express-as>
+
       </speak>
     `;
 
