@@ -5,6 +5,22 @@ import { SsmlFormatterBase, TagsObject } from './SsmlFormatterBase';
 export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
   public validVoices: Record<string, any> = MICROSOFT_AZURE_TTS_VOICES;
 
+  // Valid style degree range for mstts:express-as
+  private minStyleDegree: number = 0.01;
+  private maxStyleDegree: number = 2.0;
+
+  // Valid roles for mstts:express-as
+  private validRoles: string[] = [
+    'Girl',
+    'Boy',
+    'YoungAdultFemale',
+    'YoungAdultMale',
+    'OlderAdultFemale',
+    'OlderAdultMale',
+    'SeniorFemale',
+    'SeniorMale',
+  ];
+
   constructor(public options: SpeechOptions) {
     super(options);
 
@@ -27,7 +43,34 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
     this.modifierKeyToSsmlTagMappings.volume = 'prosody';
     this.modifierKeyToSsmlTagMappings.whisper = 'prosody';
     this.modifierKeyToSsmlTagMappings.voice = 'voice';
+
+    // Azure mstts:express-as styles
     this.modifierKeyToSsmlTagMappings.newscaster = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.excited = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.disappointed = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.friendly = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.cheerful = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.sad = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.angry = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.fearful = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.empathetic = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.calm = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.lyrical = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.hopeful = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.terrified = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.shouting = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.whispering = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.unfriendly = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.gentle = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.serious = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.depressed = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.embarrassed = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.disgruntled = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.envious = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.affectionate = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.assistant = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.chat = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.customerservice = 'mstts:express-as';
   }
 
   /**
@@ -172,6 +215,46 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
               break;
             }
 
+            // Azure mstts:express-as styles
+            case 'excited':
+            case 'disappointed':
+            case 'friendly':
+            case 'cheerful':
+            case 'sad':
+            case 'angry':
+            case 'fearful':
+            case 'empathetic':
+            case 'calm':
+            case 'lyrical':
+            case 'hopeful':
+            case 'terrified':
+            case 'shouting':
+            case 'whispering':
+            case 'unfriendly':
+            case 'gentle':
+            case 'serious':
+            case 'depressed':
+            case 'embarrassed':
+            case 'disgruntled':
+            case 'envious':
+            case 'affectionate':
+            case 'assistant':
+            case 'chat':
+            case 'customerservice': {
+              const attrs: Record<string, string> = { style: key };
+
+              // Handle styledegree if provided (value should be a number between 0.01 and 2.0)
+              if (value) {
+                const styleDegree = parseFloat(value);
+                if (!isNaN(styleDegree) && styleDegree >= this.minStyleDegree && styleDegree <= this.maxStyleDegree) {
+                  attrs['styledegree'] = value;
+                }
+              }
+
+              textModifierObject.tag(ssmlTag, attrs);
+              break;
+            }
+
             default: {
             }
           }
@@ -215,6 +298,46 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
           case 'newscaster':
             sectionObject.tag(ssmlTag, { style: 'newscast' });
             break;
+
+          // Azure mstts:express-as styles
+          case 'excited':
+          case 'disappointed':
+          case 'friendly':
+          case 'cheerful':
+          case 'sad':
+          case 'angry':
+          case 'fearful':
+          case 'empathetic':
+          case 'calm':
+          case 'lyrical':
+          case 'hopeful':
+          case 'terrified':
+          case 'shouting':
+          case 'whispering':
+          case 'unfriendly':
+          case 'gentle':
+          case 'serious':
+          case 'depressed':
+          case 'embarrassed':
+          case 'disgruntled':
+          case 'envious':
+          case 'affectionate':
+          case 'assistant':
+          case 'chat':
+          case 'customerservice': {
+            const attrs: Record<string, string> = { style: key };
+
+            // Handle styledegree if provided (value should be a number between 0.01 and 2.0)
+            if (value) {
+              const styleDegree = parseFloat(value);
+              if (!isNaN(styleDegree) && styleDegree >= this.minStyleDegree && styleDegree <= this.maxStyleDegree) {
+                attrs['styledegree'] = value;
+              }
+            }
+
+            sectionObject.tag(ssmlTag, attrs);
+            break;
+          }
 
           default: {
           }
