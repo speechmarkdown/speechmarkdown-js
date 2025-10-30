@@ -105,6 +105,52 @@ Multiple sentences work too.
 - **mstts:silence** tag for precise silence control requires grammar extension and is not yet supported. Use standard `[break:"time"]` syntax or raw SSML passthrough for now.
 - **mstts:backgroundaudio**, **mstts:viseme**, **mstts:audioduration**, **mstts:ttsembedding**, and **mstts:voiceconversion** are advanced features that can be added via raw SSML passthrough.
 
+## Feature Comparison with Other Platforms
+
+### Azure vs Amazon Alexa
+
+**Azure Advantages:**
+- **27 express-as styles** vs Alexa's 2 emotions (excited, disappointed)
+- **Numeric style intensity control** (0.01-2.0) vs Alexa's 3 levels (low, medium, high)
+- **Automatic namespace injection** - no manual SSML editing required
+- **More emotional variety** - includes fearful, empathetic, hopeful, terrified, gentle, serious, depressed, embarrassed, disgruntled, envious, affectionate
+- **Scenario-specific styles** - assistant, chat, customerservice, poetry-reading, narration-professional
+
+**Alexa Advantages:**
+- `amazon:effect` for whisper (Azure uses prosody approximation)
+- `amazon:domain` for music and news long-form content
+- `amazon:auto-breaths` and `amazon:breath` for natural pauses
+- Speechcons and interjections
+
+**Parity:**
+- Both support standard SSML (say-as, prosody, phoneme, sub, break)
+- Both support voice selection
+- Both support newscaster/news style
+- Both support excited and disappointed emotions
+
+### Azure vs Google Assistant
+
+**Azure Advantages:**
+- **27 express-as styles** vs Google's 0 emotional styles
+- **Automatic namespace injection**
+- **Rich emotional expression** not available in Google Assistant
+- **Scenario-specific styles** for various use cases
+
+**Google Advantages:**
+- Simpler SSML dialect (fewer platform-specific extensions)
+- Better cross-platform compatibility
+
+**Parity:**
+- Both support standard SSML (say-as, prosody, phoneme, sub, break)
+- Both support voice selection
+- Both support language switching
+
+### Summary
+
+Azure's MSTTS extensions provide the **most comprehensive emotional and stylistic control** of any platform supported by Speech Markdown. With 27 express-as styles and numeric intensity control, Azure offers significantly more expressive capabilities than Amazon Alexa (2 emotions) or Google Assistant (0 emotions).
+
+The automatic namespace injection feature makes Azure MSTTS extensions seamless to use - the formatter automatically detects when MSTTS tags are needed and adds the required namespace declaration without manual intervention.
+
 ## Voice catalogue
 
 The generated catalogue `data/azure-voices.md` is produced by `npm run docs:update-voices` when either `AZURE_SPEECH_KEY`/`AZURE_SPEECH_REGION` or `MICROSOFT_TOKEN`/`MICROSOFT_REGION` environment variables are supplied. The file lists every voice name, locale, gender, type, style, and sample rate returned by the Speech Service REST API so that formatter validations can remain current.
