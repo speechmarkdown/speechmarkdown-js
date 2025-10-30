@@ -125,7 +125,7 @@ describe('newscaster-section normal to dj to normal', () => {
     const ssml = speech.toSSML(markdown, options);
 
     const expected = dedent`
-    <speak>
+    <speak xmlns:mstts="https://www.w3.org/2001/mstts">
     Normal speech.
 
 
@@ -224,7 +224,7 @@ describe('newscaster-section end speak tag at end', () => {
     const ssml = speech.toSSML(markdown, options);
 
     const expected = dedent`
-      <speak>
+      <speak xmlns:mstts="https://www.w3.org/2001/mstts">
 
       <mstts:express-as style="newscast">
       Section 1</mstts:express-as>
@@ -307,7 +307,7 @@ describe('newscaster-section section on same line', () => {
     const ssml = speech.toSSML(markdown, options);
 
     const expected = dedent`
-      <speak>
+      <speak xmlns:mstts="https://www.w3.org/2001/mstts">
 
       <mstts:express-as style="newscast"> Hey there, nice to meet you</mstts:express-as>
 

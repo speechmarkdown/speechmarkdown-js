@@ -30,6 +30,54 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
     this.modifierKeyToSsmlTagMappings.newscaster = 'mstts:express-as';
   }
 
+  /**
+   * Checks if the generated SSML contains any MSTTS-specific tags
+   * @param lines Array of SSML lines to check
+   * @returns true if any line contains an mstts: tag
+   */
+  private containsMsttsTag(lines: string[]): boolean {
+    const msttsPrefixRegex = /<\/?mstts:/;
+    return lines.some((line) => msttsPrefixRegex.test(line));
+  }
+
+  /**
+   * Override addSpeakTag to automatically inject xmlns:mstts namespace
+   * when MSTTS-specific tags are detected in the output
+   */
+  protected addSpeakTag(
+    ast: any,
+    newLine: boolean,
+    newLineAfterEnd: boolean,
+    attr: any,
+    lines: string[],
+  ): string[] {
+    // First, process the AST to generate the content
+    const contentLines: string[] = [];
+    this.processAst(ast, contentLines);
+    this.addSectionEndTag(contentLines);
+
+    // Check if MSTTS tags are present in the generated content
+    const hasMsttsTag = this.containsMsttsTag(contentLines);
+
+    // Build attributes for the speak tag
+    let speakAttrs = attr;
+    if (hasMsttsTag) {
+      speakAttrs = speakAttrs || {};
+      speakAttrs['xmlns:mstts'] = 'https://www.w3.org/2001/mstts';
+    }
+
+    // Add the speak tag with appropriate namespace
+    lines.push(this.startTag('speak', speakAttrs, newLine));
+    lines.push(...contentLines);
+    lines.push(this.endTag('speak', newLine));
+
+    if (newLineAfterEnd) {
+      lines.push('\n');
+    }
+
+    return lines;
+  }
+
   // tslint:disable-next-line: max-func-body-length
   private getTextModifierObject(ast: any): any {
     let textModifierObject = new TagsObject(this);
