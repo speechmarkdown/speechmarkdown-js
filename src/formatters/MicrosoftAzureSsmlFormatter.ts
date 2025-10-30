@@ -240,8 +240,12 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
             case 'affectionate':
             case 'assistant':
             case 'chat':
-            case 'customerservice': {
-              const attrs: Record<string, string> = { style: key };
+            case 'customerservice':
+            case 'poetry-reading':
+            case 'narration-professional':
+            case 'newscast-casual':
+            case 'newscaster': {
+              const attrs: Record<string, string> = { style: key === 'newscaster' ? 'newscast' : key };
 
               // Handle styledegree if provided (value should be a number between 0.01 and 2.0)
               if (value) {
@@ -295,10 +299,6 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
             break;
           }
 
-          case 'newscaster':
-            sectionObject.tag(ssmlTag, { style: 'newscast' });
-            break;
-
           // Azure mstts:express-as styles
           case 'excited':
           case 'disappointed':
@@ -324,8 +324,12 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
           case 'affectionate':
           case 'assistant':
           case 'chat':
-          case 'customerservice': {
-            const attrs: Record<string, string> = { style: key };
+          case 'customerservice':
+          case 'poetry-reading':
+          case 'narration-professional':
+          case 'newscast-casual':
+          case 'newscaster': {
+            const attrs: Record<string, string> = { style: key === 'newscaster' ? 'newscast' : key };
 
             // Handle styledegree if provided (value should be a number between 0.01 and 2.0)
             if (value) {
