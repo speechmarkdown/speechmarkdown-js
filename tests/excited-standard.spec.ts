@@ -84,6 +84,21 @@ describe('excited-standard', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+    const options = {
+      platform: 'microsoft-azure',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak xmlns:mstts="https://www.w3.org/2001/mstts">
+      We can switch <mstts:express-as style="excited">from excited</mstts:express-as> to <mstts:express-as style="excited">really excited</mstts:express-as>.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
     const options = {};
     const text = speech.toText(markdown, options);
@@ -148,6 +163,21 @@ describe('excited-standard non-lowercase intensity', () => {
     expect(ssml).toBe(expected);
   });
 
+  test('converts to SSML - Microsoft Azure', () => {
+    const options = {
+      platform: 'microsoft-azure',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak xmlns:mstts="https://www.w3.org/2001/mstts">
+      We can switch <mstts:express-as style="excited">from excited</mstts:express-as> to <mstts:express-as style="excited">really excited</mstts:express-as>.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
   test('converts to Plain Text', () => {
     const options = {};
     const text = speech.toText(markdown, options);
@@ -206,6 +236,21 @@ describe('excited-standard invalid intensity', () => {
     const expected = dedent`
       <speak>
       We can switch from excited to really excited.
+      </speak>
+    `;
+
+    expect(ssml).toBe(expected);
+  });
+
+  test('converts to SSML - Microsoft Azure', () => {
+    const options = {
+      platform: 'microsoft-azure',
+    };
+    const ssml = speech.toSSML(markdown, options);
+
+    const expected = dedent`
+      <speak xmlns:mstts="https://www.w3.org/2001/mstts">
+      We can switch <mstts:express-as style="excited">from excited</mstts:express-as> to <mstts:express-as style="excited">really excited</mstts:express-as>.
       </speak>
     `;
 
