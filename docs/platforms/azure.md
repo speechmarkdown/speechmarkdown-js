@@ -10,6 +10,39 @@
 
 Speech Markdown's `microsoft-azure` formatter provides comprehensive support for Azure's Text-to-Speech features, including automatic MSTTS namespace injection and extensive neural voice style support.
 
+### SSML Element Support Matrix
+
+The following table shows which Azure SSML elements are supported by Speech Markdown:
+
+| SSML Element | Status | Speech Markdown Syntax | Notes |
+|--------------|--------|------------------------|-------|
+| **Core W3C SSML** |
+| `<speak>` | ✅ Full | Automatic | Root element with automatic `xmlns:mstts` injection when needed |
+| `<voice>` | ✅ Full | `(text)[voice:"name"]` or `#[voice:"name"]` | Voice selection and switching |
+| `<lang>` | ✅ Full | `(text)[lang:"locale"]` or `#[lang:"locale"]` | Language/accent switching |
+| `<p>` | ✅ Full | Automatic (optional) | Paragraph tags via `includeParagraphTag` option |
+| `<s>` | ❌ Not supported | N/A | Sentence tags not implemented |
+| `<break>` | ✅ Full | `[break:"time"]` or `[break:"strength"]` | Pauses with time or strength |
+| `<prosody>` | ✅ Full | `(text)[rate:"value"]`, `[pitch:"value"]`, `[volume:"value"]` | Rate, pitch, volume control |
+| `<say-as>` | ✅ Partial | `(text)[address]`, `[number]`, `[ordinal]`, `[telephone]`, `[fraction]`, `[date:"format"]`, `[time:"format"]`, `[characters]` | Interpret-as types supported |
+| `<phoneme>` | ✅ Full | `(text)[ipa:"pronunciation"]` | IPA pronunciation |
+| `<sub>` | ✅ Full | `(text)[sub:"alias"]` | Text substitution |
+| `<emphasis>` | ❌ Disabled | N/A | Explicitly disabled for Azure (use `mstts:express-as` instead) |
+| `<audio>` | ✅ Full | `!audio("url")` | Audio file playback |
+| `<bookmark>` | ❌ Not supported | N/A | Not implemented |
+| `<lexicon>` | ❌ Not supported | N/A | Not implemented |
+| `<math>` | ❌ Not supported | N/A | Not implemented |
+| **Azure MSTTS Extensions** |
+| `<mstts:express-as>` | ✅ Full | `(text)[style]` or `(text)[style:"degree"]` | 33 styles with intensity control (0.01-2.0) |
+| `<mstts:express-as role="">` | ❌ Not supported | N/A | Requires syntax extension for multiple attributes |
+| `<mstts:silence>` | ❌ Not supported | N/A | Use `[break:"time"]` instead |
+| `<mstts:dialog>` / `<mstts:turn>` | ❌ Not supported | N/A | Multi-speaker dialog requires grammar extension |
+| `<mstts:backgroundaudio>` | ❌ Not supported | N/A | Use raw SSML passthrough |
+| `<mstts:viseme>` | ❌ Not supported | N/A | Use raw SSML passthrough |
+| `<mstts:audioduration>` | ❌ Not supported | N/A | Use raw SSML passthrough |
+| `<mstts:ttsembedding>` | ❌ Not supported | N/A | Use raw SSML passthrough |
+| `<mstts:voiceconversion>` | ❌ Not supported | N/A | Use raw SSML passthrough |
+
 ### Core SSML Features
 
 - **Say-as conversions.** Speech Markdown forwards modifiers such as `address`, `fraction`, `ordinal`, `telephone`, `number`, and `characters` to `<say-as>` while automatically choosing `cardinal` or `digits` for numeric text.
@@ -17,6 +50,7 @@ Speech Markdown's `microsoft-azure` formatter provides comprehensive support for
 - **Pronunciation helpers.** `sub` and `ipa` modifiers become `<sub alias="…">` and `<phoneme alphabet="ipa" ph="…">`, letting authors control pronunciation directly from Speech Markdown.
 - **Prosody and whispering.** Rate, pitch, and volume modifiers augment `<prosody>` tags, and the `whisper` modifier approximates whispered delivery with `volume="x-soft"` and `rate="slow"` settings as recommended by Microsoft.
 - **Voice selection.** Inline `voice` modifiers add `<voice name="…">` tags for switching between Azure neural voices.
+- **Audio playback.** The `!audio("url")` syntax generates `<audio src="url">` tags for playing audio files.
 
 ### Azure MSTTS Extensions
 
@@ -127,9 +161,11 @@ This section uses Brian's voice with a British accent.
 #[voice][lang]
 ```
 
-### Unsupported or manual features
+### Unsupported Features and Workarounds
 
-#### Role Attribute (Not Yet Supported)
+The following Azure SSML features are not currently supported by Speech Markdown but can be added via raw SSML passthrough:
+
+#### 1. Role Attribute (Not Yet Supported)
 
 Azure supports role-play attributes on `mstts:express-as` to make voices imitate different personas:
 
@@ -142,7 +178,9 @@ Azure supports role-play attributes on `mstts:express-as` to make voices imitate
 - `role="SeniorFemale"` - Voice imitates a senior female
 - `role="SeniorMale"` - Voice imitates a senior male
 
-**Status:** Requires Speech Markdown syntax extension to support multiple attributes on the same tag (both `style` and `role`). Currently not supported. Use raw SSML passthrough for now.
+**Why not supported:** Requires Speech Markdown syntax extension to support multiple attributes on the same tag (both `style` and `role`).
+
+**Workaround:** Use raw SSML passthrough.
 
 **Example SSML (manual):**
 ```xml
@@ -153,11 +191,13 @@ Azure supports role-play attributes on `mstts:express-as` to make voices imitate
 </speak>
 ```
 
-#### Multi-Speaker Dialog (Not Yet Supported)
+#### 2. Multi-Speaker Dialog (Not Yet Supported)
 
-Azure's multi-talker voices (e.g., `en-US-MultiTalker-Ava-Andrew:DragonHDLatestNeural`) support conversational exchanges using `mstts:dialog` and `mstts:turn` elements:
+Azure's multi-talker voices (e.g., `en-US-MultiTalker-Ava-Andrew:DragonHDLatestNeural`) support conversational exchanges using `mstts:dialog` and `mstts:turn` elements.
 
-**Status:** Requires Speech Markdown grammar extension for dialog syntax. Currently not supported. Use raw SSML passthrough for now.
+**Why not supported:** Requires Speech Markdown grammar extension for dialog syntax.
+
+**Workaround:** Use raw SSML passthrough.
 
 **Example SSML (manual):**
 ```xml
@@ -173,11 +213,51 @@ Azure's multi-talker voices (e.g., `en-US-MultiTalker-Ava-Andrew:DragonHDLatestN
 </speak>
 ```
 
-#### Other Advanced Features
+#### 3. Emphasis Element (Explicitly Disabled)
 
-- The formatter explicitly disables Azure-only constructs such as `emphasis`, `expletive`, `interjection`, and `unit`, so those modifiers currently do not produce SSML output.
-- **mstts:silence** tag for precise silence control requires grammar extension and is not yet supported. Use standard `[break:"time"]` syntax or raw SSML passthrough for now.
-- **mstts:backgroundaudio**, **mstts:viseme**, **mstts:audioduration**, **mstts:ttsembedding**, and **mstts:voiceconversion** are advanced features that can be added via raw SSML passthrough.
+The `<emphasis>` element is explicitly disabled for Azure because Azure's `mstts:express-as` styles provide more expressive control than the standard emphasis levels.
+
+**Workaround:** Use `mstts:express-as` styles like `excited`, `gentle`, `serious`, etc., or use raw SSML passthrough if you specifically need `<emphasis>`.
+
+#### 4. Advanced MSTTS Features (Not Implemented)
+
+The following advanced Azure MSTTS features are not implemented in Speech Markdown:
+
+- **`<mstts:silence>`** - Precise silence control
+  - **Workaround:** Use `[break:"time"]` for pauses, or raw SSML passthrough
+- **`<mstts:backgroundaudio>`** - Background audio with fade in/out
+  - **Workaround:** Use raw SSML passthrough
+- **`<mstts:viseme>`** - Viseme output for lip-sync
+  - **Workaround:** Use raw SSML passthrough
+- **`<mstts:audioduration>`** - Audio duration control
+  - **Workaround:** Use raw SSML passthrough
+- **`<mstts:ttsembedding>`** - Custom voice embedding
+  - **Workaround:** Use raw SSML passthrough
+- **`<mstts:voiceconversion>`** - Voice conversion
+  - **Workaround:** Use raw SSML passthrough
+
+#### 5. Other W3C SSML Elements (Not Implemented)
+
+- **`<bookmark>`** - Bookmark markers for synchronization
+  - **Workaround:** Use raw SSML passthrough
+- **`<lexicon>`** - Custom pronunciation lexicons
+  - **Workaround:** Use raw SSML passthrough or `[ipa:"pronunciation"]` for individual words
+- **`<math>`** - MathML content
+  - **Workaround:** Use raw SSML passthrough
+- **`<s>`** - Sentence boundaries
+  - **Workaround:** Use punctuation or raw SSML passthrough
+
+#### 6. Disabled Say-As Types
+
+The following `say-as` interpret-as types are explicitly disabled for Azure:
+
+- **`expletive`** - Bleep out profanity
+- **`interjection`** - Interjection pronunciation
+- **`unit`** - Unit pronunciation
+
+**Why disabled:** These are not part of Azure's SSML specification.
+
+**Workaround:** Use raw SSML passthrough if needed, though Azure may not support these types.
 
 ## Feature Comparison with Other Platforms
 
