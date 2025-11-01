@@ -78,14 +78,17 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
     this.modifierKeyToSsmlTagMappings.chat = 'mstts:express-as';
     this.modifierKeyToSsmlTagMappings.customerservice = 'mstts:express-as';
     this.modifierKeyToSsmlTagMappings['poetry-reading'] = 'mstts:express-as';
-    this.modifierKeyToSsmlTagMappings['narration-professional'] = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings['narration-professional'] =
+      'mstts:express-as';
     this.modifierKeyToSsmlTagMappings['narration-relaxed'] = 'mstts:express-as';
     this.modifierKeyToSsmlTagMappings['newscast-casual'] = 'mstts:express-as';
     this.modifierKeyToSsmlTagMappings['newscast-formal'] = 'mstts:express-as';
-    this.modifierKeyToSsmlTagMappings['documentary-narration'] = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings['documentary-narration'] =
+      'mstts:express-as';
     this.modifierKeyToSsmlTagMappings.advertisement_upbeat = 'mstts:express-as';
     this.modifierKeyToSsmlTagMappings.sports_commentary = 'mstts:express-as';
-    this.modifierKeyToSsmlTagMappings.sports_commentary_excited = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.sports_commentary_excited =
+      'mstts:express-as';
 
     // Define tag sort order for nested SSML elements
     this.ssmlTagSortOrder = [
@@ -107,7 +110,7 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
    */
   private containsMsttsTag(lines: string[]): boolean {
     const msttsPrefixRegex = /<\/?mstts:/;
-    return lines.some((line) => msttsPrefixRegex.test(line));
+    return lines.some((line: string) => msttsPrefixRegex.test(line));
   }
 
   /**
@@ -301,7 +304,11 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
               // Handle styledegree if provided (value should be a number between 0.01 and 2.0)
               if (value) {
                 const styleDegree = parseFloat(value);
-                if (!isNaN(styleDegree) && styleDegree >= this.minStyleDegree && styleDegree <= this.maxStyleDegree) {
+                if (
+                  !isNaN(styleDegree) &&
+                  styleDegree >= this.minStyleDegree &&
+                  styleDegree <= this.maxStyleDegree
+                ) {
                   expressAsAttrs['styledegree'] = value;
                 }
               }
@@ -398,12 +405,18 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
           case 'advertisement_upbeat':
           case 'sports_commentary':
           case 'sports_commentary_excited': {
-            const attrs: Record<string, string> = { style: key === 'newscaster' ? 'newscast' : key };
+            const attrs: Record<string, string> = {
+              style: key === 'newscaster' ? 'newscast' : key,
+            };
 
             // Handle styledegree if provided (value should be a number between 0.01 and 2.0)
             if (value) {
               const styleDegree = parseFloat(value);
-              if (!isNaN(styleDegree) && styleDegree >= this.minStyleDegree && styleDegree <= this.maxStyleDegree) {
+              if (
+                !isNaN(styleDegree) &&
+                styleDegree >= this.minStyleDegree &&
+                styleDegree <= this.maxStyleDegree
+              ) {
                 attrs['styledegree'] = value;
               }
             }
@@ -474,7 +487,13 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
       }
       case 'markTag': {
         const name = ast.children[0].allText;
-        return this.addTagWithAttrs(lines, null, 'bookmark', { mark: name }, false);
+        return this.addTagWithAttrs(
+          lines,
+          null,
+          'bookmark',
+          { mark: name },
+          false,
+        );
       }
       case 'shortEmphasisModerate': {
         const text = ast.children[0].allText;

@@ -14,34 +14,34 @@ Speech Markdown's `microsoft-azure` formatter provides comprehensive support for
 
 The following table shows which Azure SSML elements are supported by Speech Markdown:
 
-| SSML Element | Status | Speech Markdown Syntax | Notes |
-|--------------|--------|------------------------|-------|
-| **Core W3C SSML** |
-| `<speak>` | ✅ Full | Automatic | Root element with automatic `xmlns:mstts` injection when needed |
-| `<voice>` | ✅ Full | `(text)[voice:"name"]` or `#[voice:"name"]` | Voice selection and switching |
-| `<lang>` | ✅ Full | `(text)[lang:"locale"]` or `#[lang:"locale"]` | Language/accent switching |
-| `<p>` | ✅ Full | Automatic (optional) | Paragraph tags via `includeParagraphTag` option |
-| `<s>` | ❌ Not supported | N/A | Sentence tags not implemented |
-| `<break>` | ✅ Full | `[break:"time"]` or `[break:"strength"]` | Pauses with time or strength |
-| `<prosody>` | ✅ Full | `(text)[rate:"value"]`, `[pitch:"value"]`, `[volume:"value"]` | Rate, pitch, volume control |
-| `<say-as>` | ✅ Partial | `(text)[address]`, `[number]`, `[ordinal]`, `[telephone]`, `[fraction]`, `[date:"format"]`, `[time:"format"]`, `[characters]` | Interpret-as types supported |
-| `<phoneme>` | ✅ Full | `(text)[ipa:"pronunciation"]` | IPA pronunciation |
-| `<sub>` | ✅ Full | `(text)[sub:"alias"]` | Text substitution |
-| `<emphasis>` | ✅ Full | `++text++` (moderate), `+text+` (strong), `--text--` (reduced), `-text-` (none) | Word-level stress with 4 levels |
-| `<audio>` | ✅ Full | `!audio("url")` | Audio file playback |
-| `<bookmark>` | ✅ Full | `[mark:"name"]` | Bookmark markers (generates `<bookmark mark="..."/>` for Azure SDK events) |
-| `<lexicon>` | ❌ Not supported | N/A | Not implemented (but supported by Azure TTS API) |
-| `<math>` | ❌ Not supported | N/A | Not implemented |
-| **Azure MSTTS Extensions** |
-| `<mstts:express-as>` | ✅ Full | `(text)[style]` or `(text)[style:"degree"]` | 33 styles with intensity control (0.01-2.0) |
-| `<mstts:express-as role="">` | ✅ Full | `(text)[style:"name";role:"value"]` or `(text)[excited:"1.5";role:"Girl"]` | Combine style with role attribute using semicolon delimiter |
-| `<mstts:silence>` | ❌ Not supported | N/A | Use `[break:"time"]` instead |
-| `<mstts:dialog>` / `<mstts:turn>` | ❌ Not supported | N/A | Multi-speaker dialog requires grammar extension |
-| `<mstts:backgroundaudio>` | ❌ Not supported | N/A | Use raw SSML passthrough |
-| `<mstts:viseme>` | ❌ Not supported | N/A | Use raw SSML passthrough |
-| `<mstts:audioduration>` | ❌ Not supported | N/A | Use raw SSML passthrough |
-| `<mstts:ttsembedding>` | ❌ Not supported | N/A | Use raw SSML passthrough |
-| `<mstts:voiceconversion>` | ❌ Not supported | N/A | Use raw SSML passthrough |
+| SSML Element                      | Status           | Speech Markdown Syntax                                                                                                        | Notes                                                                      |
+| --------------------------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| **Core W3C SSML**                 |
+| `<speak>`                         | ✅ Full          | Automatic                                                                                                                     | Root element with automatic `xmlns:mstts` injection when needed            |
+| `<voice>`                         | ✅ Full          | `(text)[voice:"name"]` or `#[voice:"name"]`                                                                                   | Voice selection and switching                                              |
+| `<lang>`                          | ✅ Full          | `(text)[lang:"locale"]` or `#[lang:"locale"]`                                                                                 | Language/accent switching                                                  |
+| `<p>`                             | ✅ Full          | Automatic (optional)                                                                                                          | Paragraph tags via `includeParagraphTag` option                            |
+| `<s>`                             | ❌ Not supported | N/A                                                                                                                           | Sentence tags not implemented                                              |
+| `<break>`                         | ✅ Full          | `[break:"time"]` or `[break:"strength"]`                                                                                      | Pauses with time or strength                                               |
+| `<prosody>`                       | ✅ Full          | `(text)[rate:"value"]`, `[pitch:"value"]`, `[volume:"value"]`                                                                 | Rate, pitch, volume control                                                |
+| `<say-as>`                        | ✅ Partial       | `(text)[address]`, `[number]`, `[ordinal]`, `[telephone]`, `[fraction]`, `[date:"format"]`, `[time:"format"]`, `[characters]` | Interpret-as types supported                                               |
+| `<phoneme>`                       | ✅ Full          | `(text)[ipa:"pronunciation"]`                                                                                                 | IPA pronunciation                                                          |
+| `<sub>`                           | ✅ Full          | `(text)[sub:"alias"]`                                                                                                         | Text substitution                                                          |
+| `<emphasis>`                      | ✅ Full          | `++text++` (moderate), `+text+` (strong), `--text--` (reduced), `-text-` (none)                                               | Word-level stress with 4 levels                                            |
+| `<audio>`                         | ✅ Full          | `!audio("url")`                                                                                                               | Audio file playback                                                        |
+| `<bookmark>`                      | ✅ Full          | `[mark:"name"]`                                                                                                               | Bookmark markers (generates `<bookmark mark="..."/>` for Azure SDK events) |
+| `<lexicon>`                       | ❌ Not supported | N/A                                                                                                                           | Not implemented (but supported by Azure TTS API)                           |
+| `<math>`                          | ❌ Not supported | N/A                                                                                                                           | Not implemented                                                            |
+| **Azure MSTTS Extensions**        |
+| `<mstts:express-as>`              | ✅ Full          | `(text)[style]` or `(text)[style:"degree"]`                                                                                   | 33 styles with intensity control (0.01-2.0)                                |
+| `<mstts:express-as role="">`      | ✅ Full          | `(text)[style:"name";role:"value"]` or `(text)[excited:"1.5";role:"Girl"]`                                                    | Combine style with role attribute using semicolon delimiter                |
+| `<mstts:silence>`                 | ❌ Not supported | N/A                                                                                                                           | Use `[break:"time"]` instead                                               |
+| `<mstts:dialog>` / `<mstts:turn>` | ❌ Not supported | N/A                                                                                                                           | Multi-speaker dialog requires grammar extension                            |
+| `<mstts:backgroundaudio>`         | ❌ Not supported | N/A                                                                                                                           | Use raw SSML passthrough                                                   |
+| `<mstts:viseme>`                  | ❌ Not supported | N/A                                                                                                                           | Use raw SSML passthrough                                                   |
+| `<mstts:audioduration>`           | ❌ Not supported | N/A                                                                                                                           | Use raw SSML passthrough                                                   |
+| `<mstts:ttsembedding>`            | ❌ Not supported | N/A                                                                                                                           | Use raw SSML passthrough                                                   |
+| `<mstts:voiceconversion>`         | ❌ Not supported | N/A                                                                                                                           | Use raw SSML passthrough                                                   |
 
 ### Core SSML Features
 
@@ -63,6 +63,7 @@ The formatter automatically detects when Azure-specific MSTTS tags are present i
 Azure neural voices support emotional and scenario-specific speaking styles through the `mstts:express-as` element. Speech Markdown provides full support for all Azure express-as styles:
 
 **Emotional Styles:**
+
 - `(text)[excited]` - Excited, enthusiastic delivery
 - `(text)[disappointed]` - Disappointed, let-down delivery
 - `(text)[friendly]` - Warm, friendly delivery
@@ -84,6 +85,7 @@ Azure neural voices support emotional and scenario-specific speaking styles thro
 - `(text)[affectionate]` - Affectionate, loving delivery
 
 **Scenario-Specific Styles:**
+
 - `(text)[newscaster]` - News broadcast style
 - `(text)[shouting]` - Shouting, loud delivery
 - `(text)[whispering]` - Whispering, quiet delivery
@@ -111,6 +113,7 @@ You can control the intensity of express-as styles using a numeric value between
 ```
 
 Generates:
+
 ```xml
 <speak xmlns:mstts="https://www.w3.org/2001/mstts">
 <mstts:express-as style="excited" styledegree="0.5">This is slightly excited</mstts:express-as>
@@ -129,6 +132,7 @@ Azure supports the `role` attribute on `mstts:express-as` to adjust the voice to
 ```
 
 Generates:
+
 ```xml
 <speak xmlns:mstts="https://www.w3.org/2001/mstts">
 <mstts:express-as style="excited" role="Girl">Hello there!</mstts:express-as>
@@ -138,6 +142,7 @@ Generates:
 ```
 
 **Supported Role Values:**
+
 - `Girl` - Child girl voice
 - `Boy` - Child boy voice
 - `YoungAdultFemale` - Young adult female voice
@@ -160,6 +165,7 @@ Multiple sentences work too.
 ```
 
 Generates:
+
 ```xml
 <speak xmlns:mstts="https://www.w3.org/2001/mstts">
 <mstts:express-as style="excited">
@@ -178,6 +184,7 @@ In Paris, they pronounce it (Paris)[lang:"fr-FR"].
 ```
 
 Generates:
+
 ```xml
 <speak>
 In Paris, they pronounce it <lang xml:lang="fr-FR">Paris</lang>.
@@ -188,8 +195,7 @@ The `lang` modifier can also be used at the section level:
 
 ```markdown
 #[voice:"Brian"][lang:"en-GB"]
-This section uses Brian's voice with a British accent.
-#[voice][lang]
+This section uses Brian's voice with a British accent. #[voice][lang]
 ```
 
 ### Unsupported Features and Workarounds
@@ -214,6 +220,7 @@ Azure supports role-play attributes on `mstts:express-as` to make voices imitate
 **Workaround:** Use raw SSML passthrough.
 
 **Example SSML (manual):**
+
 ```xml
 <speak xmlns:mstts="https://www.w3.org/2001/mstts">
   <mstts:express-as style="cheerful" role="YoungAdultFemale">
@@ -231,6 +238,7 @@ Azure's multi-talker voices (e.g., `en-US-MultiTalker-Ava-Andrew:DragonHDLatestN
 **Workaround:** Use raw SSML passthrough.
 
 **Example SSML (manual):**
+
 ```xml
 <speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis'
        xmlns:mstts='https://www.w3.org/2001/mstts' xml:lang='en-US'>
@@ -287,6 +295,7 @@ The following `say-as` interpret-as types are explicitly disabled for Azure:
 ### Azure vs Amazon Alexa
 
 **Azure Advantages:**
+
 - **33 express-as styles** vs Alexa's 2 emotions (excited, disappointed)
 - **Numeric style intensity control** (0.01-2.0) vs Alexa's 3 levels (low, medium, high)
 - **Automatic namespace injection** - no manual SSML editing required
@@ -296,12 +305,14 @@ The following `say-as` interpret-as types are explicitly disabled for Azure:
 - **Role-play attributes** - 8 role options for voice persona changes (requires raw SSML)
 
 **Alexa Advantages:**
+
 - `amazon:effect` for whisper (Azure uses prosody approximation)
 - `amazon:domain` for music and news long-form content
 - `amazon:auto-breaths` and `amazon:breath` for natural pauses
 - Speechcons and interjections
 
 **Parity:**
+
 - Both support standard SSML (say-as, prosody, phoneme, sub, break)
 - Both support voice selection
 - Both support newscaster/news style
@@ -311,6 +322,7 @@ The following `say-as` interpret-as types are explicitly disabled for Azure:
 ### Azure vs Google Assistant
 
 **Azure Advantages:**
+
 - **33 express-as styles** vs Google's 0 emotional styles
 - **Automatic namespace injection**
 - **Rich emotional expression** not available in Google Assistant
@@ -319,10 +331,12 @@ The following `say-as` interpret-as types are explicitly disabled for Azure:
 - **Role-play attributes** (requires raw SSML)
 
 **Google Advantages:**
+
 - Simpler SSML dialect (fewer platform-specific extensions)
 - Better cross-platform compatibility
 
 **Parity:**
+
 - Both support standard SSML (say-as, prosody, phoneme, sub, break)
 - Both support voice selection
 - Both support language switching
