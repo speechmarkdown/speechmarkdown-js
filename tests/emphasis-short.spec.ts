@@ -92,7 +92,7 @@ describe('emphasis-short-moderate', () => {
 
     const expected = dedent`
       <speak>
-      A moderate level
+      A <emphasis level="moderate">moderate</emphasis> level
       </speak>
     `;
 
@@ -171,7 +171,7 @@ describe('emphasis-short-strong', () => {
 
     const expected = dedent`
       <speak>
-      A strong level
+      A <emphasis level="strong">strong</emphasis> level
       </speak>
     `;
 
@@ -250,7 +250,7 @@ describe('emphasis-short-none', () => {
 
     const expected = dedent`
       <speak>
-      A none level
+      A <emphasis level="none">none</emphasis> level
       </speak>
     `;
 
@@ -329,7 +329,7 @@ describe('emphasis-short-reduced', () => {
 
     const expected = dedent`
       <speak>
-      A reduced level
+      A <emphasis level="reduced">reduced</emphasis> level
       </speak>
     `;
 

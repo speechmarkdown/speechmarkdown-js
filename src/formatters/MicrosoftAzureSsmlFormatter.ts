@@ -24,16 +24,17 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
   constructor(public options: SpeechOptions) {
     super(options);
 
-    this.modifierKeyToSsmlTagMappings.emphasis = null;
+    // Core W3C SSML elements supported by Azure
+    this.modifierKeyToSsmlTagMappings.emphasis = 'emphasis';
     this.modifierKeyToSsmlTagMappings.address = 'say-as';
     this.modifierKeyToSsmlTagMappings.number = 'say-as';
     this.modifierKeyToSsmlTagMappings.characters = 'say-as';
-    this.modifierKeyToSsmlTagMappings.expletive = null;
+    this.modifierKeyToSsmlTagMappings.expletive = null; // Not supported by Azure
     this.modifierKeyToSsmlTagMappings.fraction = 'say-as';
-    this.modifierKeyToSsmlTagMappings.interjection = null;
+    this.modifierKeyToSsmlTagMappings.interjection = null; // Not supported by Azure
     this.modifierKeyToSsmlTagMappings.ordinal = 'say-as';
     this.modifierKeyToSsmlTagMappings.telephone = 'say-as';
-    this.modifierKeyToSsmlTagMappings.unit = null;
+    this.modifierKeyToSsmlTagMappings.unit = null; // Not supported by Azure
     this.modifierKeyToSsmlTagMappings.time = 'say-as';
     this.modifierKeyToSsmlTagMappings.date = 'say-as';
     this.modifierKeyToSsmlTagMappings.sub = 'sub';
@@ -81,6 +82,18 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
     this.modifierKeyToSsmlTagMappings.advertisement_upbeat = 'mstts:express-as';
     this.modifierKeyToSsmlTagMappings.sports_commentary = 'mstts:express-as';
     this.modifierKeyToSsmlTagMappings.sports_commentary_excited = 'mstts:express-as';
+
+    // Define tag sort order for nested SSML elements
+    this.ssmlTagSortOrder = [
+      'emphasis',
+      'mstts:express-as',
+      'say-as',
+      'prosody',
+      'voice',
+      'lang',
+      'sub',
+      'phoneme',
+    ];
   }
 
   /**
@@ -433,15 +446,31 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
         }
         return this.addTagWithAttrs(lines, null, 'break', attrs);
       }
-      case 'shortEmphasisModerate':
-      case 'shortEmphasisStrong':
-      case 'shortEmphasisNone':
+      case 'markTag': {
+        const name = ast.children[0].allText;
+        return this.addTagWithAttrs(lines, null, 'bookmark', { mark: name }, false);
+      }
+      case 'shortEmphasisModerate': {
+        const text = ast.children[0].allText;
+        return this.addTagWithAttrs(lines, text, 'emphasis', {
+          level: 'moderate',
+        });
+      }
+      case 'shortEmphasisStrong': {
+        const text = ast.children[0].allText;
+        return this.addTagWithAttrs(lines, text, 'emphasis', {
+          level: 'strong',
+        });
+      }
+      case 'shortEmphasisNone': {
+        const text = ast.children[0].allText;
+        return this.addTagWithAttrs(lines, text, 'emphasis', { level: 'none' });
+      }
       case 'shortEmphasisReduced': {
         const text = ast.children[0].allText;
-        if (text) {
-          lines.push(text);
-        }
-        return lines;
+        return this.addTagWithAttrs(lines, text, 'emphasis', {
+          level: 'reduced',
+        });
       }
 
       case 'textModifier': {
