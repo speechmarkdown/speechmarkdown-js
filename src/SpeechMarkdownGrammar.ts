@@ -168,6 +168,9 @@ export function speechMarkdownGrammar(myna: any): any {
       'timbre',
       'lang',
       'voice',
+      // Azure MSTTS express-as attributes
+      'style',
+      'role',
       // Azure MSTTS express-as styles
       'excited',
       'disappointed',

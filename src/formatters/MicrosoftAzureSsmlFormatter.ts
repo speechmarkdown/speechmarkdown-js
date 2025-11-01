@@ -46,6 +46,10 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
     this.modifierKeyToSsmlTagMappings.voice = 'voice';
     this.modifierKeyToSsmlTagMappings.lang = 'lang';
 
+    // Azure mstts:express-as attributes
+    this.modifierKeyToSsmlTagMappings.style = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.role = 'mstts:express-as';
+
     // Azure mstts:express-as styles
     this.modifierKeyToSsmlTagMappings.newscaster = 'mstts:express-as';
     this.modifierKeyToSsmlTagMappings.excited = 'mstts:express-as';
@@ -148,6 +152,9 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
   private getTextModifierObject(ast: any): any {
     let textModifierObject = new TagsObject(this);
 
+    // Collect express-as attributes (style, role, styledegree)
+    let expressAsAttrs: Record<string, string> = {};
+
     for (let index = 0; index < ast.children.length; index++) {
       const child = ast.children[index];
 
@@ -238,7 +245,21 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
               break;
             }
 
-            // Azure mstts:express-as styles
+            // Azure mstts:express-as explicit style attribute
+            case 'style': {
+              // Store style value for later use
+              expressAsAttrs['style'] = value;
+              break;
+            }
+
+            // Azure mstts:express-as role attribute
+            case 'role': {
+              // Store role value for later use
+              expressAsAttrs['role'] = value;
+              break;
+            }
+
+            // Azure mstts:express-as styles (shorthand syntax)
             case 'excited':
             case 'disappointed':
             case 'friendly':
@@ -274,17 +295,16 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
             case 'advertisement_upbeat':
             case 'sports_commentary':
             case 'sports_commentary_excited': {
-              const attrs: Record<string, string> = { style: key === 'newscaster' ? 'newscast' : key };
+              // Store style in expressAsAttrs
+              expressAsAttrs['style'] = key === 'newscaster' ? 'newscast' : key;
 
               // Handle styledegree if provided (value should be a number between 0.01 and 2.0)
               if (value) {
                 const styleDegree = parseFloat(value);
                 if (!isNaN(styleDegree) && styleDegree >= this.minStyleDegree && styleDegree <= this.maxStyleDegree) {
-                  attrs['styledegree'] = value;
+                  expressAsAttrs['styledegree'] = value;
                 }
               }
-
-              textModifierObject.tag(ssmlTag, attrs);
               break;
             }
 
@@ -302,6 +322,12 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
           break;
         }
       }
+    }
+
+    // Apply collected express-as attributes if style is present
+    if (expressAsAttrs['style']) {
+      const ssmlTag = this.modifierKeyToSsmlTagMappings['excited']; // Get mstts:express-as tag
+      textModifierObject.tag(ssmlTag, expressAsAttrs);
     }
 
     return textModifierObject;
