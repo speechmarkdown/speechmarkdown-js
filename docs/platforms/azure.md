@@ -24,7 +24,7 @@ Speech Markdown's `microsoft-azure` formatter provides comprehensive support for
 
 The formatter automatically detects when Azure-specific MSTTS tags are present in the generated SSML and injects the required `xmlns:mstts="https://www.w3.org/2001/mstts"` namespace declaration into the `<speak>` tag. This ensures valid SSML without manual intervention.
 
-#### Express-As Styles (27 styles supported)
+#### Express-As Styles (33 styles supported)
 
 Azure neural voices support emotional and scenario-specific speaking styles through the `mstts:express-as` element. Speech Markdown provides full support for all Azure express-as styles:
 
@@ -59,7 +59,13 @@ Azure neural voices support emotional and scenario-specific speaking styles thro
 - `(text)[customerservice]` - Customer service style
 - `(text)[poetry-reading]` - Poetry reading style (section-level only)
 - `(text)[narration-professional]` - Professional narration style (section-level only)
+- `(text)[narration-relaxed]` - Soothing, melodious narration style (section-level only)
 - `(text)[newscast-casual]` - Casual news style (section-level only)
+- `(text)[newscast-formal]` - Formal, confident, authoritative news style (section-level only)
+- `(text)[documentary-narration]` - Relaxed, interested documentary style (section-level only)
+- `(text)[advertisement_upbeat]` - Excited, high-energy advertising style
+- `(text)[sports_commentary]` - Relaxed, interested sports broadcasting style
+- `(text)[sports_commentary_excited]` - Intensive, energetic sports broadcasting style
 
 **Style Degree (Intensity Control):**
 
@@ -98,10 +104,78 @@ Multiple sentences work too.
 </speak>
 ```
 
+### Language Switching
+
+Azure supports switching languages or accents within speech using the `<lang xml:lang="locale">` element. Speech Markdown provides full support through the `lang` modifier:
+
+```markdown
+In Paris, they pronounce it (Paris)[lang:"fr-FR"].
+```
+
+Generates:
+```xml
+<speak>
+In Paris, they pronounce it <lang xml:lang="fr-FR">Paris</lang>.
+</speak>
+```
+
+The `lang` modifier can also be used at the section level:
+
+```markdown
+#[voice:"Brian"][lang:"en-GB"]
+This section uses Brian's voice with a British accent.
+#[voice][lang]
+```
+
 ### Unsupported or manual features
 
+#### Role Attribute (Not Yet Supported)
+
+Azure supports role-play attributes on `mstts:express-as` to make voices imitate different personas:
+
+- `role="Girl"` - Voice imitates a girl
+- `role="Boy"` - Voice imitates a boy
+- `role="YoungAdultFemale"` - Voice imitates a young adult female
+- `role="YoungAdultMale"` - Voice imitates a young adult male
+- `role="OlderAdultFemale"` - Voice imitates an older adult female
+- `role="OlderAdultMale"` - Voice imitates an older adult male
+- `role="SeniorFemale"` - Voice imitates a senior female
+- `role="SeniorMale"` - Voice imitates a senior male
+
+**Status:** Requires Speech Markdown syntax extension to support multiple attributes on the same tag (both `style` and `role`). Currently not supported. Use raw SSML passthrough for now.
+
+**Example SSML (manual):**
+```xml
+<speak xmlns:mstts="https://www.w3.org/2001/mstts">
+  <mstts:express-as style="cheerful" role="YoungAdultFemale">
+    I'm speaking in a cheerful young adult female voice!
+  </mstts:express-as>
+</speak>
+```
+
+#### Multi-Speaker Dialog (Not Yet Supported)
+
+Azure's multi-talker voices (e.g., `en-US-MultiTalker-Ava-Andrew:DragonHDLatestNeural`) support conversational exchanges using `mstts:dialog` and `mstts:turn` elements:
+
+**Status:** Requires Speech Markdown grammar extension for dialog syntax. Currently not supported. Use raw SSML passthrough for now.
+
+**Example SSML (manual):**
+```xml
+<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis'
+       xmlns:mstts='https://www.w3.org/2001/mstts' xml:lang='en-US'>
+  <voice name='en-US-MultiTalker-Ava-Andrew:DragonHDLatestNeural'>
+    <mstts:dialog>
+      <mstts:turn speaker="ava">Hello, Andrew! How's your day going?</mstts:turn>
+      <mstts:turn speaker="andrew">Hey Ava! It's been great, just exploring some AI advancements.</mstts:turn>
+      <mstts:turn speaker="ava">That sounds fascinating! Tell me more.</mstts:turn>
+    </mstts:dialog>
+  </voice>
+</speak>
+```
+
+#### Other Advanced Features
+
 - The formatter explicitly disables Azure-only constructs such as `emphasis`, `expletive`, `interjection`, and `unit`, so those modifiers currently do not produce SSML output.
-- **Role attribute** for express-as (Girl, Boy, YoungAdultFemale, etc.) requires Speech Markdown syntax extension and is not yet supported.
 - **mstts:silence** tag for precise silence control requires grammar extension and is not yet supported. Use standard `[break:"time"]` syntax or raw SSML passthrough for now.
 - **mstts:backgroundaudio**, **mstts:viseme**, **mstts:audioduration**, **mstts:ttsembedding**, and **mstts:voiceconversion** are advanced features that can be added via raw SSML passthrough.
 
@@ -110,11 +184,13 @@ Multiple sentences work too.
 ### Azure vs Amazon Alexa
 
 **Azure Advantages:**
-- **27 express-as styles** vs Alexa's 2 emotions (excited, disappointed)
+- **33 express-as styles** vs Alexa's 2 emotions (excited, disappointed)
 - **Numeric style intensity control** (0.01-2.0) vs Alexa's 3 levels (low, medium, high)
 - **Automatic namespace injection** - no manual SSML editing required
 - **More emotional variety** - includes fearful, empathetic, hopeful, terrified, gentle, serious, depressed, embarrassed, disgruntled, envious, affectionate
-- **Scenario-specific styles** - assistant, chat, customerservice, poetry-reading, narration-professional
+- **Scenario-specific styles** - assistant, chat, customerservice, poetry-reading, narration-professional, narration-relaxed, documentary-narration, advertisement_upbeat, sports_commentary, sports_commentary_excited
+- **Multi-speaker dialog support** - mstts:dialog and mstts:turn for conversational exchanges (requires raw SSML)
+- **Role-play attributes** - 8 role options for voice persona changes (requires raw SSML)
 
 **Alexa Advantages:**
 - `amazon:effect` for whisper (Azure uses prosody approximation)
@@ -127,14 +203,17 @@ Multiple sentences work too.
 - Both support voice selection
 - Both support newscaster/news style
 - Both support excited and disappointed emotions
+- Both support language switching
 
 ### Azure vs Google Assistant
 
 **Azure Advantages:**
-- **27 express-as styles** vs Google's 0 emotional styles
+- **33 express-as styles** vs Google's 0 emotional styles
 - **Automatic namespace injection**
 - **Rich emotional expression** not available in Google Assistant
 - **Scenario-specific styles** for various use cases
+- **Multi-speaker dialog support** (requires raw SSML)
+- **Role-play attributes** (requires raw SSML)
 
 **Google Advantages:**
 - Simpler SSML dialect (fewer platform-specific extensions)
@@ -147,7 +226,7 @@ Multiple sentences work too.
 
 ### Summary
 
-Azure's MSTTS extensions provide the **most comprehensive emotional and stylistic control** of any platform supported by Speech Markdown. With 27 express-as styles and numeric intensity control, Azure offers significantly more expressive capabilities than Amazon Alexa (2 emotions) or Google Assistant (0 emotions).
+Azure's MSTTS extensions provide the **most comprehensive emotional and stylistic control** of any platform supported by Speech Markdown. With 33 express-as styles and numeric intensity control, Azure offers significantly more expressive capabilities than Amazon Alexa (2 emotions) or Google Assistant (0 emotions).
 
 The automatic namespace injection feature makes Azure MSTTS extensions seamless to use - the formatter automatically detects when MSTTS tags are needed and adds the required namespace declaration without manual intervention.
 
