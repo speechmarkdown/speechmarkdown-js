@@ -34,7 +34,7 @@ The following table shows which Azure SSML elements are supported by Speech Mark
 | `<math>` | ❌ Not supported | N/A | Not implemented |
 | **Azure MSTTS Extensions** |
 | `<mstts:express-as>` | ✅ Full | `(text)[style]` or `(text)[style:"degree"]` | 33 styles with intensity control (0.01-2.0) |
-| `<mstts:express-as role="">` | ❌ Not supported | N/A | Requires syntax extension for multiple attributes |
+| `<mstts:express-as role="">` | ✅ Full | `(text)[style:"name";role:"value"]` or `(text)[excited:"1.5";role:"Girl"]` | Combine style with role attribute using semicolon delimiter |
 | `<mstts:silence>` | ❌ Not supported | N/A | Use `[break:"time"]` instead |
 | `<mstts:dialog>` / `<mstts:turn>` | ❌ Not supported | N/A | Multi-speaker dialog requires grammar extension |
 | `<mstts:backgroundaudio>` | ❌ Not supported | N/A | Use raw SSML passthrough |
@@ -117,6 +117,37 @@ Generates:
 <mstts:express-as style="excited" styledegree="1.8">This is very excited</mstts:express-as>
 </speak>
 ```
+
+**Role Attribute (Character Voices):**
+
+Azure supports the `role` attribute on `mstts:express-as` to adjust the voice to sound like different characters. You can combine style with role using semicolon-delimited syntax:
+
+```markdown
+(Hello there!)[excited;role:"Girl"]
+(Hello there!)[excited:"1.5";role:"Girl"]
+(Bonjour!)[style:"friendly";role:"YoungAdultFemale"]
+```
+
+Generates:
+```xml
+<speak xmlns:mstts="https://www.w3.org/2001/mstts">
+<mstts:express-as style="excited" role="Girl">Hello there!</mstts:express-as>
+<mstts:express-as style="excited" styledegree="1.5" role="Girl">Hello there!</mstts:express-as>
+<mstts:express-as style="friendly" role="YoungAdultFemale">Bonjour!</mstts:express-as>
+</speak>
+```
+
+**Supported Role Values:**
+- `Girl` - Child girl voice
+- `Boy` - Child boy voice
+- `YoungAdultFemale` - Young adult female voice
+- `YoungAdultMale` - Young adult male voice
+- `OlderAdultFemale` - Older adult female voice
+- `OlderAdultMale` - Older adult male voice
+- `SeniorFemale` - Senior female voice
+- `SeniorMale` - Senior male voice
+
+**Note:** Role support varies by voice. Check the [Azure voice gallery](https://learn.microsoft.com/azure/ai-services/speech-service/language-support?tabs=tts) for role availability per voice.
 
 **Section-Level Styles:**
 
