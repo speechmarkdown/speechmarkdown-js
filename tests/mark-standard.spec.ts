@@ -92,7 +92,7 @@ describe('mark-standard', () => {
 
     const expected = dedent`
       <speak>
-      Sample  speech  markdown
+      Sample <bookmark mark="here"/> speech <bookmark mark="to-there"/> markdown
       </speak>
     `;
 

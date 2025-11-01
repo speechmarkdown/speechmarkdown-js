@@ -27,10 +27,10 @@ The following table shows which Azure SSML elements are supported by Speech Mark
 | `<say-as>` | ✅ Partial | `(text)[address]`, `[number]`, `[ordinal]`, `[telephone]`, `[fraction]`, `[date:"format"]`, `[time:"format"]`, `[characters]` | Interpret-as types supported |
 | `<phoneme>` | ✅ Full | `(text)[ipa:"pronunciation"]` | IPA pronunciation |
 | `<sub>` | ✅ Full | `(text)[sub:"alias"]` | Text substitution |
-| `<emphasis>` | ❌ Disabled | N/A | Explicitly disabled for Azure (use `mstts:express-as` instead) |
+| `<emphasis>` | ✅ Full | `++text++` (moderate), `+text+` (strong), `--text--` (reduced), `-text-` (none) | Word-level stress with 4 levels |
 | `<audio>` | ✅ Full | `!audio("url")` | Audio file playback |
-| `<bookmark>` | ❌ Not supported | N/A | Not implemented |
-| `<lexicon>` | ❌ Not supported | N/A | Not implemented |
+| `<bookmark>` | ✅ Full | `[mark:"name"]` | Bookmark markers (generates `<bookmark mark="..."/>` for Azure SDK events) |
+| `<lexicon>` | ❌ Not supported | N/A | Not implemented (but supported by Azure TTS API) |
 | `<math>` | ❌ Not supported | N/A | Not implemented |
 | **Azure MSTTS Extensions** |
 | `<mstts:express-as>` | ✅ Full | `(text)[style]` or `(text)[style:"degree"]` | 33 styles with intensity control (0.01-2.0) |
@@ -213,13 +213,7 @@ Azure's multi-talker voices (e.g., `en-US-MultiTalker-Ava-Andrew:DragonHDLatestN
 </speak>
 ```
 
-#### 3. Emphasis Element (Explicitly Disabled)
-
-The `<emphasis>` element is explicitly disabled for Azure because Azure's `mstts:express-as` styles provide more expressive control than the standard emphasis levels.
-
-**Workaround:** Use `mstts:express-as` styles like `excited`, `gentle`, `serious`, etc., or use raw SSML passthrough if you specifically need `<emphasis>`.
-
-#### 4. Advanced MSTTS Features (Not Implemented)
+#### 3. Advanced MSTTS Features (Not Implemented)
 
 The following advanced Azure MSTTS features are not implemented in Speech Markdown:
 
@@ -236,10 +230,8 @@ The following advanced Azure MSTTS features are not implemented in Speech Markdo
 - **`<mstts:voiceconversion>`** - Voice conversion
   - **Workaround:** Use raw SSML passthrough
 
-#### 5. Other W3C SSML Elements (Not Implemented)
+#### 4. Other W3C SSML Elements (Not Implemented)
 
-- **`<bookmark>`** - Bookmark markers for synchronization
-  - **Workaround:** Use raw SSML passthrough
 - **`<lexicon>`** - Custom pronunciation lexicons
   - **Workaround:** Use raw SSML passthrough or `[ipa:"pronunciation"]` for individual words
 - **`<math>`** - MathML content
