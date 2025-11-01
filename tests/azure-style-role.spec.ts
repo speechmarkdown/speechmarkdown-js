@@ -66,4 +66,3 @@ describe('azure-style-role', () => {
     expect(ssml).toBe(expected);
   });
 });
-
