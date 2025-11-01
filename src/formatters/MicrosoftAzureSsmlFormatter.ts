@@ -43,6 +43,7 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
     this.modifierKeyToSsmlTagMappings.volume = 'prosody';
     this.modifierKeyToSsmlTagMappings.whisper = 'prosody';
     this.modifierKeyToSsmlTagMappings.voice = 'voice';
+    this.modifierKeyToSsmlTagMappings.lang = 'lang';
 
     // Azure mstts:express-as styles
     this.modifierKeyToSsmlTagMappings.newscaster = 'mstts:express-as';
@@ -71,6 +72,15 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
     this.modifierKeyToSsmlTagMappings.assistant = 'mstts:express-as';
     this.modifierKeyToSsmlTagMappings.chat = 'mstts:express-as';
     this.modifierKeyToSsmlTagMappings.customerservice = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings['poetry-reading'] = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings['narration-professional'] = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings['narration-relaxed'] = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings['newscast-casual'] = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings['newscast-formal'] = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings['documentary-narration'] = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.advertisement_upbeat = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.sports_commentary = 'mstts:express-as';
+    this.modifierKeyToSsmlTagMappings.sports_commentary_excited = 'mstts:express-as';
   }
 
   /**
@@ -243,8 +253,14 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
             case 'customerservice':
             case 'poetry-reading':
             case 'narration-professional':
+            case 'narration-relaxed':
             case 'newscast-casual':
-            case 'newscaster': {
+            case 'newscast-formal':
+            case 'newscaster':
+            case 'documentary-narration':
+            case 'advertisement_upbeat':
+            case 'sports_commentary':
+            case 'sports_commentary_excited': {
               const attrs: Record<string, string> = { style: key === 'newscaster' ? 'newscast' : key };
 
               // Handle styledegree if provided (value should be a number between 0.01 and 2.0)
@@ -258,6 +274,14 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
               textModifierObject.tag(ssmlTag, attrs);
               break;
             }
+
+            case 'lang':
+              textModifierObject.tag(ssmlTag, { 'xml:lang': value });
+              break;
+
+            case 'voice':
+              textModifierObject.voiceTag(ssmlTag, value);
+              break;
 
             default: {
             }
@@ -327,8 +351,14 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
           case 'customerservice':
           case 'poetry-reading':
           case 'narration-professional':
+          case 'narration-relaxed':
           case 'newscast-casual':
-          case 'newscaster': {
+          case 'newscast-formal':
+          case 'newscaster':
+          case 'documentary-narration':
+          case 'advertisement_upbeat':
+          case 'sports_commentary':
+          case 'sports_commentary_excited': {
             const attrs: Record<string, string> = { style: key === 'newscaster' ? 'newscast' : key };
 
             // Handle styledegree if provided (value should be a number between 0.01 and 2.0)
@@ -342,6 +372,14 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
             sectionObject.tag(ssmlTag, attrs);
             break;
           }
+
+          case 'lang':
+            sectionObject.tag(ssmlTag, { 'xml:lang': value });
+            break;
+
+          case 'voice':
+            sectionObject.voiceTag(ssmlTag, value);
+            break;
 
           default: {
           }

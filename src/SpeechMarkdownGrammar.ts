@@ -196,8 +196,14 @@ export function speechMarkdownGrammar(myna: any): any {
       'assistant',
       'poetry-reading',
       'narration-professional',
+      'narration-relaxed',
       'newscast-casual',
+      'newscast-formal',
       'newscaster',
+      'documentary-narration',
+      'advertisement_upbeat',
+      'sports_commentary',
+      'sports_commentary_excited',
     ).ast;
     // Special characters for <phoneme alphabet="ipa" ph="..."> tag
     // const ipaChars = ['.', "'", 'æ', '͡ʒ', 'ð', 'ʃ', '͡ʃ', 'θ', 'ʒ', 'ə', 'ɚ', 'aɪ', 'aʊ', 'ɑ',
@@ -351,8 +357,14 @@ export function speechMarkdownGrammar(myna: any): any {
       'assistant',
       'poetry-reading',
       'narration-professional',
+      'narration-relaxed',
       'newscast-casual',
+      'newscast-formal',
       'newscaster',
+      'documentary-narration',
+      'advertisement_upbeat',
+      'sports_commentary',
+      'sports_commentary_excited',
     ).ast;
     this.sectionModifierText = m.choice(
       m.digit,

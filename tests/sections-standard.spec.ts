@@ -184,13 +184,17 @@ describe('sections-standard', () => {
 
 
     <voice name="Kendra">
+    <lang xml:lang="en-US">
     Now I am speaking as Kendra from the US with a US accent.
 
+    </lang>
     </voice>
 
     <voice name="Brian">
+    <lang xml:lang="en-US">
     Switching to Brian from the UK with a US accent.
 
+    </lang>
     </voice>
 
     Now back to the device setting.
@@ -319,7 +323,9 @@ describe('sections-standard end speak tag at end', () => {
       </voice>
 
       <voice name="Brian">
-      Section 2</voice>
+      <lang xml:lang="en-GB">
+      Section 2</lang>
+      </voice>
 
       </speak>
     `;

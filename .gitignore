@@ -27,3 +27,6 @@ dist.browser/
 
 # Sample
 .sample
+
+# Environment variables
+.env
