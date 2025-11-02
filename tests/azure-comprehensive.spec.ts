@@ -9,10 +9,10 @@ describe('azure-comprehensive', () => {
   };
 
   test('Simple azure Voice name', () => {
-    // Note: HD voices with colon syntax (e.g., "en-US-Ava:DragonHDLatestNeural") are not supported
-    // Using standard neural voice instead
+    // HD voices use dash syntax in Speech Markdown (e.g., "en-US-Ava-DragonHDLatestNeural")
+    // which is converted to colon syntax in SSML (e.g., "en-US-Ava:DragonHDLatestNeural")
     const markdown = dedent`
-      #[voice:"en-US-AvaNeural"]
+      #[voice:"en-US-Ava-DragonHDLatestNeural"]
       My favorite colors are green & yellow.
     `;
 
@@ -21,7 +21,7 @@ describe('azure-comprehensive', () => {
     const expected = dedent`
       <speak>
 
-      <voice name="en-US-AvaNeural">
+      <voice name="en-US-Ava:DragonHDLatestNeural">
       My favorite colors are green & yellow.</voice>
 
       </speak>
@@ -51,13 +51,13 @@ describe('azure-comprehensive', () => {
   });
 
   test('Multi Voices', () => {
-    // Note: HD voices with colon syntax are not supported
-    // Using standard neural voices instead
+    // HD voices use dash syntax in Speech Markdown (e.g., "en-US-Andrew-DragonHDLatestNeural")
+    // which is converted to colon syntax in SSML (e.g., "en-US-Andrew:DragonHDLatestNeural")
     const markdown = dedent`
-      #[voice:"en-US-AvaNeural"]
+      #[voice:"en-US-Ava-DragonHDLatestNeural"]
       Good morning!
 
-      #[voice:"en-US-AndrewNeural"]
+      #[voice:"en-US-Andrew-DragonHDLatestNeural"]
       Good morning to you too Ava!
     `;
 
@@ -66,12 +66,12 @@ describe('azure-comprehensive', () => {
     const expected = dedent`
       <speak>
 
-      <voice name="en-US-AvaNeural">
+      <voice name="en-US-Ava:DragonHDLatestNeural">
       Good morning!
 
       </voice>
 
-      <voice name="en-US-AndrewNeural">
+      <voice name="en-US-Andrew:DragonHDLatestNeural">
       Good morning to you too Ava!</voice>
 
       </speak>

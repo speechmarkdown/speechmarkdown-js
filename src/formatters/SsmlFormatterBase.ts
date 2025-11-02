@@ -35,7 +35,7 @@ export class TagsObject {
         };
       }
 
-      // Filter out metadata fields (id, displayName, languages, language, locale)
+      // Filter out metadata fields (id, displayName, languages, language, locale, isHD)
       // Only process SSML tag keys (voice, lang, etc.)
       const metadataKeys = [
         'id',
@@ -43,6 +43,7 @@ export class TagsObject {
         'languages',
         'language',
         'locale',
+        'isHD',
       ];
 
       Object.keys(info).forEach((tag: string) => {
