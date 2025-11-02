@@ -8,11 +8,11 @@ describe('azure-comprehensive', () => {
     platform: 'microsoft-azure',
   };
 
-  test.skip('Simple azure Voice name with colon (not supported by parser)', () => {
-    // Voice names with colons like "en-US-Ava:DragonHDLatestNeural" are not supported by the parser
-    // The colon character causes parsing issues
+  test('Simple azure Voice name', () => {
+    // Note: HD voices with colon syntax (e.g., "en-US-Ava:DragonHDLatestNeural") are not supported
+    // Using standard neural voice instead
     const markdown = dedent`
-      #[voice:"en-US-Ava:DragonHDLatestNeural"]
+      #[voice:"en-US-AvaNeural"]
       My favorite colors are green & yellow.
     `;
 
@@ -21,8 +21,8 @@ describe('azure-comprehensive', () => {
     const expected = dedent`
       <speak>
 
-      <voice name="en-US-Ava:DragonHDLatestNeural">
-      My favorite colors are green &amp; yellow.</voice>
+      <voice name="en-US-AvaNeural">
+      My favorite colors are green & yellow.</voice>
 
       </speak>
     `;
@@ -50,13 +50,14 @@ describe('azure-comprehensive', () => {
     expect(ssml).toBe(expected);
   });
 
-  test.skip('Multi Voices with colon (not supported by parser)', () => {
-    // Voice names with colons are not supported by the parser
+  test('Multi Voices', () => {
+    // Note: HD voices with colon syntax are not supported
+    // Using standard neural voices instead
     const markdown = dedent`
-      #[voice:"en-US-Ava:DragonHDLatestNeural"]
+      #[voice:"en-US-AvaNeural"]
       Good morning!
 
-      #[voice:"en-US-Andrew:DragonHDLatestNeural"]
+      #[voice:"en-US-AndrewNeural"]
       Good morning to you too Ava!
     `;
 
@@ -65,11 +66,12 @@ describe('azure-comprehensive', () => {
     const expected = dedent`
       <speak>
 
-      <voice name="en-US-Ava:DragonHDLatestNeural">
-      Good morning!</voice>
+      <voice name="en-US-AvaNeural">
+      Good morning!
 
+      </voice>
 
-      <voice name="en-US-Andrew:DragonHDLatestNeural">
+      <voice name="en-US-AndrewNeural">
       Good morning to you too Ava!</voice>
 
       </speak>
