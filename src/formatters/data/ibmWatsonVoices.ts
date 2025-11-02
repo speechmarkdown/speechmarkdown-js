@@ -6,305 +6,441 @@ export const IBM_WATSON_TTS_VOICES: Record<string, any> = {
     voice: {
       name: 'de-DE_BirgitV2Voice',
     },
+    id: 'de-DE_BirgitV2Voice',
+    language: 'de-DE',
   },
   ['de-de_birgitv3voice']: {
     voice: {
       name: 'de-DE_BirgitV3Voice',
     },
+    id: 'de-DE_BirgitV3Voice',
+    language: 'de-DE',
   },
   ['de-de_birgitvoice']: {
     voice: {
       name: 'de-DE_BirgitVoice',
     },
+    id: 'de-DE_BirgitVoice',
+    language: 'de-DE',
   },
   ['de-de_dieterv2voice']: {
     voice: {
       name: 'de-DE_DieterV2Voice',
     },
+    id: 'de-DE_DieterV2Voice',
+    language: 'de-DE',
   },
   ['de-de_dieterv3voice']: {
     voice: {
       name: 'de-DE_DieterV3Voice',
     },
+    id: 'de-DE_DieterV3Voice',
+    language: 'de-DE',
   },
   ['de-de_dietervoice']: {
     voice: {
       name: 'de-DE_DieterVoice',
     },
+    id: 'de-DE_DieterVoice',
+    language: 'de-DE',
   },
   ['de-de_erikav3voice']: {
     voice: {
       name: 'de-DE_ErikaV3Voice',
     },
+    id: 'de-DE_ErikaV3Voice',
+    language: 'de-DE',
   },
   ['en-au_heidiexpressive']: {
     voice: {
       name: 'en-AU_HeidiExpressive',
     },
+    id: 'en-AU_HeidiExpressive',
+    language: 'en-AU',
   },
   ['en-au_jackexpressive']: {
     voice: {
       name: 'en-AU_JackExpressive',
     },
+    id: 'en-AU_JackExpressive',
+    language: 'en-AU',
   },
   ['en-ca_hannahnatural']: {
     voice: {
       name: 'en-CA_HannahNatural',
     },
+    id: 'en-CA_HannahNatural',
+    language: 'en-CA',
   },
   ['en-gb_charlottev3voice']: {
     voice: {
       name: 'en-GB_CharlotteV3Voice',
     },
+    id: 'en-GB_CharlotteV3Voice',
+    language: 'en-GB',
   },
   ['en-gb_chloenatural']: {
     voice: {
       name: 'en-GB_ChloeNatural',
     },
+    id: 'en-GB_ChloeNatural',
+    language: 'en-GB',
   },
   ['en-gb_georgeexpressive']: {
     voice: {
       name: 'en-GB_GeorgeExpressive',
     },
+    id: 'en-GB_GeorgeExpressive',
+    language: 'en-GB',
   },
   ['en-gb_georgenatural']: {
     voice: {
       name: 'en-GB_GeorgeNatural',
     },
+    id: 'en-GB_GeorgeNatural',
+    language: 'en-GB',
   },
   ['en-gb_katev3voice']: {
     voice: {
       name: 'en-GB_KateV3Voice',
     },
+    id: 'en-GB_KateV3Voice',
+    language: 'en-GB',
   },
   ['en-gb_katevoice']: {
     voice: {
       name: 'en-GB_KateVoice',
     },
+    id: 'en-GB_KateVoice',
+    language: 'en-GB',
   },
   ['en-us_allisonexpressive']: {
     voice: {
       name: 'en-US_AllisonExpressive',
     },
+    id: 'en-US_AllisonExpressive',
+    language: 'en-US',
   },
   ['en-us_allisonv2voice']: {
     voice: {
       name: 'en-US_AllisonV2Voice',
     },
+    id: 'en-US_AllisonV2Voice',
+    language: 'en-US',
   },
   ['en-us_allisonv3voice']: {
     voice: {
       name: 'en-US_AllisonV3Voice',
     },
+    id: 'en-US_AllisonV3Voice',
+    language: 'en-US',
   },
   ['en-us_allisonvoice']: {
     voice: {
       name: 'en-US_AllisonVoice',
     },
+    id: 'en-US_AllisonVoice',
+    language: 'en-US',
   },
   ['en-us_ellienatural']: {
     voice: {
       name: 'en-US_EllieNatural',
     },
+    id: 'en-US_EllieNatural',
+    language: 'en-US',
   },
   ['en-us_emilyv3voice']: {
     voice: {
       name: 'en-US_EmilyV3Voice',
     },
+    id: 'en-US_EmilyV3Voice',
+    language: 'en-US',
   },
   ['en-us_emmaexpressive']: {
     voice: {
       name: 'en-US_EmmaExpressive',
     },
+    id: 'en-US_EmmaExpressive',
+    language: 'en-US',
   },
   ['en-us_emmanatural']: {
     voice: {
       name: 'en-US_EmmaNatural',
     },
+    id: 'en-US_EmmaNatural',
+    language: 'en-US',
   },
   ['en-us_ethannatural']: {
     voice: {
       name: 'en-US_EthanNatural',
     },
+    id: 'en-US_EthanNatural',
+    language: 'en-US',
   },
   ['en-us_henryv3voice']: {
     voice: {
       name: 'en-US_HenryV3Voice',
     },
+    id: 'en-US_HenryV3Voice',
+    language: 'en-US',
   },
   ['en-us_jacksonnatural']: {
     voice: {
       name: 'en-US_JacksonNatural',
     },
+    id: 'en-US_JacksonNatural',
+    language: 'en-US',
   },
   ['en-us_kevinv3voice']: {
     voice: {
       name: 'en-US_KevinV3Voice',
     },
+    id: 'en-US_KevinV3Voice',
+    language: 'en-US',
   },
   ['en-us_lisaexpressive']: {
     voice: {
       name: 'en-US_LisaExpressive',
     },
+    id: 'en-US_LisaExpressive',
+    language: 'en-US',
   },
   ['en-us_lisav2voice']: {
     voice: {
       name: 'en-US_LisaV2Voice',
     },
+    id: 'en-US_LisaV2Voice',
+    language: 'en-US',
   },
   ['en-us_lisav3voice']: {
     voice: {
       name: 'en-US_LisaV3Voice',
     },
+    id: 'en-US_LisaV3Voice',
+    language: 'en-US',
   },
   ['en-us_lisavoice']: {
     voice: {
       name: 'en-US_LisaVoice',
     },
+    id: 'en-US_LisaVoice',
+    language: 'en-US',
   },
   ['en-us_michaelexpressive']: {
     voice: {
       name: 'en-US_MichaelExpressive',
     },
+    id: 'en-US_MichaelExpressive',
+    language: 'en-US',
   },
   ['en-us_michaelv2voice']: {
     voice: {
       name: 'en-US_MichaelV2Voice',
     },
+    id: 'en-US_MichaelV2Voice',
+    language: 'en-US',
   },
   ['en-us_michaelv3voice']: {
     voice: {
       name: 'en-US_MichaelV3Voice',
     },
+    id: 'en-US_MichaelV3Voice',
+    language: 'en-US',
   },
   ['en-us_michaelvoice']: {
     voice: {
       name: 'en-US_MichaelVoice',
     },
+    id: 'en-US_MichaelVoice',
+    language: 'en-US',
   },
   ['en-us_oliviav3voice']: {
     voice: {
       name: 'en-US_OliviaV3Voice',
     },
+    id: 'en-US_OliviaV3Voice',
+    language: 'en-US',
   },
   ['en-us_victorianatural']: {
     voice: {
       name: 'en-US_VictoriaNatural',
     },
+    id: 'en-US_VictoriaNatural',
+    language: 'en-US',
   },
   ['es-es_enriquev3voice']: {
     voice: {
       name: 'es-ES_EnriqueV3Voice',
     },
+    id: 'es-ES_EnriqueV3Voice',
+    language: 'es-ES',
   },
   ['es-es_enriquevoice']: {
     voice: {
       name: 'es-ES_EnriqueVoice',
     },
+    id: 'es-ES_EnriqueVoice',
+    language: 'es-ES',
   },
   ['es-es_laurav3voice']: {
     voice: {
       name: 'es-ES_LauraV3Voice',
     },
+    id: 'es-ES_LauraV3Voice',
+    language: 'es-ES',
   },
   ['es-es_lauravoice']: {
     voice: {
       name: 'es-ES_LauraVoice',
     },
+    id: 'es-ES_LauraVoice',
+    language: 'es-ES',
   },
   ['es-la_danielaexpressive']: {
     voice: {
       name: 'es-LA_DanielaExpressive',
     },
+    id: 'es-LA_DanielaExpressive',
+    language: 'es-LA',
   },
   ['es-la_sofiav3voice']: {
     voice: {
       name: 'es-LA_SofiaV3Voice',
     },
+    id: 'es-LA_SofiaV3Voice',
+    language: 'es-LA',
   },
   ['es-la_sofiavoice']: {
     voice: {
       name: 'es-LA_SofiaVoice',
     },
+    id: 'es-LA_SofiaVoice',
+    language: 'es-LA',
   },
   ['es-us_sofiav3voice']: {
     voice: {
       name: 'es-US_SofiaV3Voice',
     },
+    id: 'es-US_SofiaV3Voice',
+    language: 'es-US',
   },
   ['es-us_sofiavoice']: {
     voice: {
       name: 'es-US_SofiaVoice',
     },
+    id: 'es-US_SofiaVoice',
+    language: 'es-US',
   },
   ['fr-ca_louisev3voice']: {
     voice: {
       name: 'fr-CA_LouiseV3Voice',
     },
+    id: 'fr-CA_LouiseV3Voice',
+    language: 'fr-CA',
   },
   ['fr-fr_nicolasv3voice']: {
     voice: {
       name: 'fr-FR_NicolasV3Voice',
     },
+    id: 'fr-FR_NicolasV3Voice',
+    language: 'fr-FR',
   },
   ['fr-fr_reneev3voice']: {
     voice: {
       name: 'fr-FR_ReneeV3Voice',
     },
+    id: 'fr-FR_ReneeV3Voice',
+    language: 'fr-FR',
   },
   ['fr-fr_reneevoice']: {
     voice: {
       name: 'fr-FR_ReneeVoice',
     },
+    id: 'fr-FR_ReneeVoice',
+    language: 'fr-FR',
   },
   ['it-it_francescav2voice']: {
     voice: {
       name: 'it-IT_FrancescaV2Voice',
     },
+    id: 'it-IT_FrancescaV2Voice',
+    language: 'it-IT',
   },
   ['it-it_francescav3voice']: {
     voice: {
       name: 'it-IT_FrancescaV3Voice',
     },
+    id: 'it-IT_FrancescaV3Voice',
+    language: 'it-IT',
   },
   ['it-it_francescavoice']: {
     voice: {
       name: 'it-IT_FrancescaVoice',
     },
+    id: 'it-IT_FrancescaVoice',
+    language: 'it-IT',
   },
   ['ja-jp_emiv3voice']: {
     voice: {
       name: 'ja-JP_EmiV3Voice',
     },
+    id: 'ja-JP_EmiV3Voice',
+    language: 'ja-JP',
   },
   ['ja-jp_emivoice']: {
     voice: {
       name: 'ja-JP_EmiVoice',
     },
+    id: 'ja-JP_EmiVoice',
+    language: 'ja-JP',
   },
   ['ko-kr_jinv3voice']: {
     voice: {
       name: 'ko-KR_JinV3Voice',
     },
+    id: 'ko-KR_JinV3Voice',
+    language: 'ko-KR',
   },
   ['nl-nl_merelv3voice']: {
     voice: {
       name: 'nl-NL_MerelV3Voice',
     },
+    id: 'nl-NL_MerelV3Voice',
+    language: 'nl-NL',
+  },
+  ['pt-br_camilanatural']: {
+    voice: {
+      name: 'pt-BR_CamilaNatural',
+    },
+    id: 'pt-BR_CamilaNatural',
+    language: 'pt-BR',
   },
   ['pt-br_isabelav3voice']: {
     voice: {
       name: 'pt-BR_IsabelaV3Voice',
     },
+    id: 'pt-BR_IsabelaV3Voice',
+    language: 'pt-BR',
   },
   ['pt-br_isabelavoice']: {
     voice: {
       name: 'pt-BR_IsabelaVoice',
     },
+    id: 'pt-BR_IsabelaVoice',
+    language: 'pt-BR',
   },
   ['pt-br_lucasexpressive']: {
     voice: {
       name: 'pt-BR_LucasExpressive',
     },
+    id: 'pt-BR_LucasExpressive',
+    language: 'pt-BR',
+  },
+  ['pt-br_lucasnatural']: {
+    voice: {
+      name: 'pt-BR_LucasNatural',
+    },
+    id: 'pt-BR_LucasNatural',
+    language: 'pt-BR',
   },
 };

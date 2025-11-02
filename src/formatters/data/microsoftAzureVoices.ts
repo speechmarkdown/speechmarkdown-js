@@ -6,2750 +6,4400 @@ export const MICROSOFT_AZURE_TTS_VOICES: Record<string, any> = {
     voice: {
       name: 'af-ZA-AdriNeural',
     },
+    id: 'af-ZA-AdriNeural',
+    displayName: 'Adri',
+    locale: 'af-ZA',
   },
   ['af-za-willemneural']: {
     voice: {
       name: 'af-ZA-WillemNeural',
     },
+    id: 'af-ZA-WillemNeural',
+    displayName: 'Willem',
+    locale: 'af-ZA',
   },
   ['am-et-amehaneural']: {
     voice: {
       name: 'am-ET-AmehaNeural',
     },
+    id: 'am-ET-AmehaNeural',
+    displayName: 'Ameha',
+    locale: 'am-ET',
   },
   ['am-et-mekdesneural']: {
     voice: {
       name: 'am-ET-MekdesNeural',
     },
+    id: 'am-ET-MekdesNeural',
+    displayName: 'Mekdes',
+    locale: 'am-ET',
   },
   ['ar-ae-fatimaneural']: {
     voice: {
       name: 'ar-AE-FatimaNeural',
     },
+    id: 'ar-AE-FatimaNeural',
+    displayName: 'Fatima',
+    locale: 'ar-AE',
   },
   ['ar-ae-hamdanneural']: {
     voice: {
       name: 'ar-AE-HamdanNeural',
     },
+    id: 'ar-AE-HamdanNeural',
+    displayName: 'Hamdan',
+    locale: 'ar-AE',
   },
   ['ar-bh-alineural']: {
     voice: {
       name: 'ar-BH-AliNeural',
     },
+    id: 'ar-BH-AliNeural',
+    displayName: 'Ali',
+    locale: 'ar-BH',
   },
   ['ar-bh-lailaneural']: {
     voice: {
       name: 'ar-BH-LailaNeural',
     },
+    id: 'ar-BH-LailaNeural',
+    displayName: 'Laila',
+    locale: 'ar-BH',
   },
   ['ar-dz-aminaneural']: {
     voice: {
       name: 'ar-DZ-AminaNeural',
     },
+    id: 'ar-DZ-AminaNeural',
+    displayName: 'Amina',
+    locale: 'ar-DZ',
   },
   ['ar-dz-ismaelneural']: {
     voice: {
       name: 'ar-DZ-IsmaelNeural',
     },
+    id: 'ar-DZ-IsmaelNeural',
+    displayName: 'Ismael',
+    locale: 'ar-DZ',
   },
   ['ar-eg-salmaneural']: {
     voice: {
       name: 'ar-EG-SalmaNeural',
     },
+    id: 'ar-EG-SalmaNeural',
+    displayName: 'Salma',
+    locale: 'ar-EG',
   },
   ['ar-eg-shakirneural']: {
     voice: {
       name: 'ar-EG-ShakirNeural',
     },
+    id: 'ar-EG-ShakirNeural',
+    displayName: 'Shakir',
+    locale: 'ar-EG',
   },
   ['ar-iq-basselneural']: {
     voice: {
       name: 'ar-IQ-BasselNeural',
     },
+    id: 'ar-IQ-BasselNeural',
+    displayName: 'Bassel',
+    locale: 'ar-IQ',
   },
   ['ar-iq-rananeural']: {
     voice: {
       name: 'ar-IQ-RanaNeural',
     },
+    id: 'ar-IQ-RanaNeural',
+    displayName: 'Rana',
+    locale: 'ar-IQ',
   },
   ['ar-jo-sananeural']: {
     voice: {
       name: 'ar-JO-SanaNeural',
     },
+    id: 'ar-JO-SanaNeural',
+    displayName: 'Sana',
+    locale: 'ar-JO',
   },
   ['ar-jo-taimneural']: {
     voice: {
       name: 'ar-JO-TaimNeural',
     },
+    id: 'ar-JO-TaimNeural',
+    displayName: 'Taim',
+    locale: 'ar-JO',
   },
   ['ar-kw-fahedneural']: {
     voice: {
       name: 'ar-KW-FahedNeural',
     },
+    id: 'ar-KW-FahedNeural',
+    displayName: 'Fahed',
+    locale: 'ar-KW',
   },
   ['ar-kw-nouraneural']: {
     voice: {
       name: 'ar-KW-NouraNeural',
     },
+    id: 'ar-KW-NouraNeural',
+    displayName: 'Noura',
+    locale: 'ar-KW',
   },
   ['ar-lb-laylaneural']: {
     voice: {
       name: 'ar-LB-LaylaNeural',
     },
+    id: 'ar-LB-LaylaNeural',
+    displayName: 'Layla',
+    locale: 'ar-LB',
   },
   ['ar-lb-ramineural']: {
     voice: {
       name: 'ar-LB-RamiNeural',
     },
+    id: 'ar-LB-RamiNeural',
+    displayName: 'Rami',
+    locale: 'ar-LB',
   },
   ['ar-ly-imanneural']: {
     voice: {
       name: 'ar-LY-ImanNeural',
     },
+    id: 'ar-LY-ImanNeural',
+    displayName: 'Iman',
+    locale: 'ar-LY',
   },
   ['ar-ly-omarneural']: {
     voice: {
       name: 'ar-LY-OmarNeural',
     },
+    id: 'ar-LY-OmarNeural',
+    displayName: 'Omar',
+    locale: 'ar-LY',
   },
   ['ar-ma-jamalneural']: {
     voice: {
       name: 'ar-MA-JamalNeural',
     },
+    id: 'ar-MA-JamalNeural',
+    displayName: 'Jamal',
+    locale: 'ar-MA',
   },
   ['ar-ma-mounaneural']: {
     voice: {
       name: 'ar-MA-MounaNeural',
     },
+    id: 'ar-MA-MounaNeural',
+    displayName: 'Mouna',
+    locale: 'ar-MA',
   },
   ['ar-om-abdullahneural']: {
     voice: {
       name: 'ar-OM-AbdullahNeural',
     },
+    id: 'ar-OM-AbdullahNeural',
+    displayName: 'Abdullah',
+    locale: 'ar-OM',
   },
   ['ar-om-ayshaneural']: {
     voice: {
       name: 'ar-OM-AyshaNeural',
     },
+    id: 'ar-OM-AyshaNeural',
+    displayName: 'Aysha',
+    locale: 'ar-OM',
   },
   ['ar-qa-amalneural']: {
     voice: {
       name: 'ar-QA-AmalNeural',
     },
+    id: 'ar-QA-AmalNeural',
+    displayName: 'Amal',
+    locale: 'ar-QA',
   },
   ['ar-qa-moazneural']: {
     voice: {
       name: 'ar-QA-MoazNeural',
     },
+    id: 'ar-QA-MoazNeural',
+    displayName: 'Moaz',
+    locale: 'ar-QA',
   },
   ['ar-sa-hamedneural']: {
     voice: {
       name: 'ar-SA-HamedNeural',
     },
+    id: 'ar-SA-HamedNeural',
+    displayName: 'Hamed',
+    locale: 'ar-SA',
   },
   ['ar-sa-zariyahneural']: {
     voice: {
       name: 'ar-SA-ZariyahNeural',
     },
+    id: 'ar-SA-ZariyahNeural',
+    displayName: 'Zariyah',
+    locale: 'ar-SA',
   },
   ['ar-sy-amanyneural']: {
     voice: {
       name: 'ar-SY-AmanyNeural',
     },
+    id: 'ar-SY-AmanyNeural',
+    displayName: 'Amany',
+    locale: 'ar-SY',
   },
   ['ar-sy-laithneural']: {
     voice: {
       name: 'ar-SY-LaithNeural',
     },
+    id: 'ar-SY-LaithNeural',
+    displayName: 'Laith',
+    locale: 'ar-SY',
   },
   ['ar-tn-hedineural']: {
     voice: {
       name: 'ar-TN-HediNeural',
     },
+    id: 'ar-TN-HediNeural',
+    displayName: 'Hedi',
+    locale: 'ar-TN',
   },
   ['ar-tn-reemneural']: {
     voice: {
       name: 'ar-TN-ReemNeural',
     },
+    id: 'ar-TN-ReemNeural',
+    displayName: 'Reem',
+    locale: 'ar-TN',
   },
   ['ar-ye-maryamneural']: {
     voice: {
       name: 'ar-YE-MaryamNeural',
     },
+    id: 'ar-YE-MaryamNeural',
+    displayName: 'Maryam',
+    locale: 'ar-YE',
   },
   ['ar-ye-salehneural']: {
     voice: {
       name: 'ar-YE-SalehNeural',
     },
+    id: 'ar-YE-SalehNeural',
+    displayName: 'Saleh',
+    locale: 'ar-YE',
   },
   ['as-in-priyomneural']: {
     voice: {
       name: 'as-IN-PriyomNeural',
     },
+    id: 'as-IN-PriyomNeural',
+    displayName: 'Priyom',
+    locale: 'as-IN',
   },
   ['as-in-yashicaneural']: {
     voice: {
       name: 'as-IN-YashicaNeural',
     },
+    id: 'as-IN-YashicaNeural',
+    displayName: 'Yashica',
+    locale: 'as-IN',
   },
   ['az-az-babekneural']: {
     voice: {
       name: 'az-AZ-BabekNeural',
     },
+    id: 'az-AZ-BabekNeural',
+    displayName: 'Babek',
+    locale: 'az-AZ',
   },
   ['az-az-banuneural']: {
     voice: {
       name: 'az-AZ-BanuNeural',
     },
+    id: 'az-AZ-BanuNeural',
+    displayName: 'Banu',
+    locale: 'az-AZ',
   },
   ['bg-bg-borislavneural']: {
     voice: {
       name: 'bg-BG-BorislavNeural',
     },
+    id: 'bg-BG-BorislavNeural',
+    displayName: 'Borislav',
+    locale: 'bg-BG',
   },
   ['bg-bg-kalinaneural']: {
     voice: {
       name: 'bg-BG-KalinaNeural',
     },
+    id: 'bg-BG-KalinaNeural',
+    displayName: 'Kalina',
+    locale: 'bg-BG',
   },
   ['bn-bd-nabanitaneural']: {
     voice: {
       name: 'bn-BD-NabanitaNeural',
     },
+    id: 'bn-BD-NabanitaNeural',
+    displayName: 'Nabanita',
+    locale: 'bn-BD',
   },
   ['bn-bd-pradeepneural']: {
     voice: {
       name: 'bn-BD-PradeepNeural',
     },
+    id: 'bn-BD-PradeepNeural',
+    displayName: 'Pradeep',
+    locale: 'bn-BD',
   },
   ['bn-in-bashkarneural']: {
     voice: {
       name: 'bn-IN-BashkarNeural',
     },
+    id: 'bn-IN-BashkarNeural',
+    displayName: 'Bashkar',
+    locale: 'bn-IN',
   },
   ['bn-in-tanishaaneural']: {
     voice: {
       name: 'bn-IN-TanishaaNeural',
     },
+    id: 'bn-IN-TanishaaNeural',
+    displayName: 'Tanishaa',
+    locale: 'bn-IN',
   },
   ['bs-ba-goranneural']: {
     voice: {
       name: 'bs-BA-GoranNeural',
     },
+    id: 'bs-BA-GoranNeural',
+    displayName: 'Goran',
+    locale: 'bs-BA',
   },
   ['bs-ba-vesnaneural']: {
     voice: {
       name: 'bs-BA-VesnaNeural',
     },
+    id: 'bs-BA-VesnaNeural',
+    displayName: 'Vesna',
+    locale: 'bs-BA',
   },
   ['ca-es-albaneural']: {
     voice: {
       name: 'ca-ES-AlbaNeural',
     },
+    id: 'ca-ES-AlbaNeural',
+    displayName: 'Alba',
+    locale: 'ca-ES',
   },
   ['ca-es-enricneural']: {
     voice: {
       name: 'ca-ES-EnricNeural',
     },
+    id: 'ca-ES-EnricNeural',
+    displayName: 'Enric',
+    locale: 'ca-ES',
   },
   ['ca-es-joananeural']: {
     voice: {
       name: 'ca-ES-JoanaNeural',
     },
+    id: 'ca-ES-JoanaNeural',
+    displayName: 'Joana',
+    locale: 'ca-ES',
   },
   ['cs-cz-antoninneural']: {
     voice: {
       name: 'cs-CZ-AntoninNeural',
     },
+    id: 'cs-CZ-AntoninNeural',
+    displayName: 'Antonin',
+    locale: 'cs-CZ',
   },
   ['cs-cz-vlastaneural']: {
     voice: {
       name: 'cs-CZ-VlastaNeural',
     },
+    id: 'cs-CZ-VlastaNeural',
+    displayName: 'Vlasta',
+    locale: 'cs-CZ',
   },
   ['cy-gb-aledneural']: {
     voice: {
       name: 'cy-GB-AledNeural',
     },
+    id: 'cy-GB-AledNeural',
+    displayName: 'Aled',
+    locale: 'cy-GB',
   },
   ['cy-gb-nianeural']: {
     voice: {
       name: 'cy-GB-NiaNeural',
     },
+    id: 'cy-GB-NiaNeural',
+    displayName: 'Nia',
+    locale: 'cy-GB',
   },
   ['da-dk-christelneural']: {
     voice: {
       name: 'da-DK-ChristelNeural',
     },
+    id: 'da-DK-ChristelNeural',
+    displayName: 'Christel',
+    locale: 'da-DK',
   },
   ['da-dk-jeppeneural']: {
     voice: {
       name: 'da-DK-JeppeNeural',
     },
+    id: 'da-DK-JeppeNeural',
+    displayName: 'Jeppe',
+    locale: 'da-DK',
   },
   ['de-at-ingridneural']: {
     voice: {
       name: 'de-AT-IngridNeural',
     },
+    id: 'de-AT-IngridNeural',
+    displayName: 'Ingrid',
+    locale: 'de-AT',
   },
   ['de-at-jonasneural']: {
     voice: {
       name: 'de-AT-JonasNeural',
     },
+    id: 'de-AT-JonasNeural',
+    displayName: 'Jonas',
+    locale: 'de-AT',
   },
   ['de-ch-janneural']: {
     voice: {
       name: 'de-CH-JanNeural',
     },
+    id: 'de-CH-JanNeural',
+    displayName: 'Jan',
+    locale: 'de-CH',
   },
   ['de-ch-lenineural']: {
     voice: {
       name: 'de-CH-LeniNeural',
     },
+    id: 'de-CH-LeniNeural',
+    displayName: 'Leni',
+    locale: 'de-CH',
   },
   ['de-de-amalaneural']: {
     voice: {
       name: 'de-DE-AmalaNeural',
     },
+    id: 'de-DE-AmalaNeural',
+    displayName: 'Amala',
+    locale: 'de-DE',
   },
   ['de-de-berndneural']: {
     voice: {
       name: 'de-DE-BerndNeural',
     },
+    id: 'de-DE-BerndNeural',
+    displayName: 'Bernd',
+    locale: 'de-DE',
   },
   ['de-de-christophneural']: {
     voice: {
       name: 'de-DE-ChristophNeural',
     },
+    id: 'de-DE-ChristophNeural',
+    displayName: 'Christoph',
+    locale: 'de-DE',
   },
   ['de-de-conradneural']: {
     voice: {
       name: 'de-DE-ConradNeural',
     },
+    id: 'de-DE-ConradNeural',
+    displayName: 'Conrad',
+    locale: 'de-DE',
   },
   ['de-de-elkeneural']: {
     voice: {
       name: 'de-DE-ElkeNeural',
     },
+    id: 'de-DE-ElkeNeural',
+    displayName: 'Elke',
+    locale: 'de-DE',
   },
   ['de-de-florianmultilingualneural']: {
     voice: {
       name: 'de-DE-FlorianMultilingualNeural',
     },
+    id: 'de-DE-FlorianMultilingualNeural',
+    displayName: 'Florian Multilingual',
+    locale: 'de-DE',
   },
   ['de-de-giselaneural']: {
     voice: {
       name: 'de-DE-GiselaNeural',
     },
+    id: 'de-DE-GiselaNeural',
+    displayName: 'Gisela',
+    locale: 'de-DE',
   },
   ['de-de-kasperneural']: {
     voice: {
       name: 'de-DE-KasperNeural',
     },
+    id: 'de-DE-KasperNeural',
+    displayName: 'Kasper',
+    locale: 'de-DE',
   },
   ['de-de-katjaneural']: {
     voice: {
       name: 'de-DE-KatjaNeural',
     },
+    id: 'de-DE-KatjaNeural',
+    displayName: 'Katja',
+    locale: 'de-DE',
   },
   ['de-de-killianneural']: {
     voice: {
       name: 'de-DE-KillianNeural',
     },
+    id: 'de-DE-KillianNeural',
+    displayName: 'Killian',
+    locale: 'de-DE',
   },
   ['de-de-klarissaneural']: {
     voice: {
       name: 'de-DE-KlarissaNeural',
     },
+    id: 'de-DE-KlarissaNeural',
+    displayName: 'Klarissa',
+    locale: 'de-DE',
   },
   ['de-de-klausneural']: {
     voice: {
       name: 'de-DE-KlausNeural',
     },
+    id: 'de-DE-KlausNeural',
+    displayName: 'Klaus',
+    locale: 'de-DE',
   },
   ['de-de-louisaneural']: {
     voice: {
       name: 'de-DE-LouisaNeural',
     },
+    id: 'de-DE-LouisaNeural',
+    displayName: 'Louisa',
+    locale: 'de-DE',
   },
   ['de-de-majaneural']: {
     voice: {
       name: 'de-DE-MajaNeural',
     },
+    id: 'de-DE-MajaNeural',
+    displayName: 'Maja',
+    locale: 'de-DE',
   },
   ['de-de-ralfneural']: {
     voice: {
       name: 'de-DE-RalfNeural',
     },
+    id: 'de-DE-RalfNeural',
+    displayName: 'Ralf',
+    locale: 'de-DE',
   },
   ['de-de-seraphinamultilingualneural']: {
     voice: {
       name: 'de-DE-SeraphinaMultilingualNeural',
     },
+    id: 'de-DE-SeraphinaMultilingualNeural',
+    displayName: 'Seraphina Multilingual',
+    locale: 'de-DE',
   },
   ['de-de-tanjaneural']: {
     voice: {
       name: 'de-DE-TanjaNeural',
     },
+    id: 'de-DE-TanjaNeural',
+    displayName: 'Tanja',
+    locale: 'de-DE',
   },
   ['el-gr-athinaneural']: {
     voice: {
       name: 'el-GR-AthinaNeural',
     },
+    id: 'el-GR-AthinaNeural',
+    displayName: 'Athina',
+    locale: 'el-GR',
   },
   ['el-gr-nestorasneural']: {
     voice: {
       name: 'el-GR-NestorasNeural',
     },
+    id: 'el-GR-NestorasNeural',
+    displayName: 'Nestoras',
+    locale: 'el-GR',
   },
   ['en-au-annetteneural']: {
     voice: {
       name: 'en-AU-AnnetteNeural',
     },
+    id: 'en-AU-AnnetteNeural',
+    displayName: 'Annette',
+    locale: 'en-AU',
   },
   ['en-au-carlyneural']: {
     voice: {
       name: 'en-AU-CarlyNeural',
     },
+    id: 'en-AU-CarlyNeural',
+    displayName: 'Carly',
+    locale: 'en-AU',
   },
   ['en-au-darrenneural']: {
     voice: {
       name: 'en-AU-DarrenNeural',
     },
+    id: 'en-AU-DarrenNeural',
+    displayName: 'Darren',
+    locale: 'en-AU',
   },
   ['en-au-duncanneural']: {
     voice: {
       name: 'en-AU-DuncanNeural',
     },
+    id: 'en-AU-DuncanNeural',
+    displayName: 'Duncan',
+    locale: 'en-AU',
   },
   ['en-au-elsieneural']: {
     voice: {
       name: 'en-AU-ElsieNeural',
     },
+    id: 'en-AU-ElsieNeural',
+    displayName: 'Elsie',
+    locale: 'en-AU',
   },
   ['en-au-freyaneural']: {
     voice: {
       name: 'en-AU-FreyaNeural',
     },
+    id: 'en-AU-FreyaNeural',
+    displayName: 'Freya',
+    locale: 'en-AU',
   },
   ['en-au-joanneneural']: {
     voice: {
       name: 'en-AU-JoanneNeural',
     },
+    id: 'en-AU-JoanneNeural',
+    displayName: 'Joanne',
+    locale: 'en-AU',
   },
   ['en-au-kenneural']: {
     voice: {
       name: 'en-AU-KenNeural',
     },
+    id: 'en-AU-KenNeural',
+    displayName: 'Ken',
+    locale: 'en-AU',
   },
   ['en-au-kimneural']: {
     voice: {
       name: 'en-AU-KimNeural',
     },
+    id: 'en-AU-KimNeural',
+    displayName: 'Kim',
+    locale: 'en-AU',
   },
   ['en-au-natashaneural']: {
     voice: {
       name: 'en-AU-NatashaNeural',
     },
+    id: 'en-AU-NatashaNeural',
+    displayName: 'Natasha',
+    locale: 'en-AU',
   },
   ['en-au-neilneural']: {
     voice: {
       name: 'en-AU-NeilNeural',
     },
+    id: 'en-AU-NeilNeural',
+    displayName: 'Neil',
+    locale: 'en-AU',
   },
   ['en-au-timneural']: {
     voice: {
       name: 'en-AU-TimNeural',
     },
+    id: 'en-AU-TimNeural',
+    displayName: 'Tim',
+    locale: 'en-AU',
   },
   ['en-au-tinaneural']: {
     voice: {
       name: 'en-AU-TinaNeural',
     },
+    id: 'en-AU-TinaNeural',
+    displayName: 'Tina',
+    locale: 'en-AU',
   },
   ['en-au-williammultilingualneural']: {
     voice: {
       name: 'en-AU-WilliamMultilingualNeural',
     },
+    id: 'en-AU-WilliamMultilingualNeural',
+    displayName: 'William Multilingual',
+    locale: 'en-AU',
   },
   ['en-au-williamneural']: {
     voice: {
       name: 'en-AU-WilliamNeural',
     },
+    id: 'en-AU-WilliamNeural',
+    displayName: 'William',
+    locale: 'en-AU',
   },
   ['en-ca-claraneural']: {
     voice: {
       name: 'en-CA-ClaraNeural',
     },
+    id: 'en-CA-ClaraNeural',
+    displayName: 'Clara',
+    locale: 'en-CA',
   },
   ['en-ca-liamneural']: {
     voice: {
       name: 'en-CA-LiamNeural',
     },
+    id: 'en-CA-LiamNeural',
+    displayName: 'Liam',
+    locale: 'en-CA',
   },
   ['en-gb-abbineural']: {
     voice: {
       name: 'en-GB-AbbiNeural',
     },
+    id: 'en-GB-AbbiNeural',
+    displayName: 'Abbi',
+    locale: 'en-GB',
   },
   ['en-gb-adamultilingualneural']: {
     voice: {
       name: 'en-GB-AdaMultilingualNeural',
     },
+    id: 'en-GB-AdaMultilingualNeural',
+    displayName: 'Ada Multilingual',
+    locale: 'en-GB',
   },
   ['en-gb-alfieneural']: {
     voice: {
       name: 'en-GB-AlfieNeural',
     },
+    id: 'en-GB-AlfieNeural',
+    displayName: 'Alfie',
+    locale: 'en-GB',
   },
   ['en-gb-bellaneural']: {
     voice: {
       name: 'en-GB-BellaNeural',
     },
+    id: 'en-GB-BellaNeural',
+    displayName: 'Bella',
+    locale: 'en-GB',
   },
   ['en-gb-elliotneural']: {
     voice: {
       name: 'en-GB-ElliotNeural',
     },
+    id: 'en-GB-ElliotNeural',
+    displayName: 'Elliot',
+    locale: 'en-GB',
   },
   ['en-gb-ethanneural']: {
     voice: {
       name: 'en-GB-EthanNeural',
     },
+    id: 'en-GB-EthanNeural',
+    displayName: 'Ethan',
+    locale: 'en-GB',
   },
   ['en-gb-hollieneural']: {
     voice: {
       name: 'en-GB-HollieNeural',
     },
+    id: 'en-GB-HollieNeural',
+    displayName: 'Hollie',
+    locale: 'en-GB',
   },
   ['en-gb-libbyneural']: {
     voice: {
       name: 'en-GB-LibbyNeural',
     },
+    id: 'en-GB-LibbyNeural',
+    displayName: 'Libby',
+    locale: 'en-GB',
   },
   ['en-gb-maisieneural']: {
     voice: {
       name: 'en-GB-MaisieNeural',
     },
+    id: 'en-GB-MaisieNeural',
+    displayName: 'Maisie',
+    locale: 'en-GB',
   },
   ['en-gb-mianeural']: {
     voice: {
       name: 'en-GB-MiaNeural',
     },
+    id: 'en-GB-MiaNeural',
+    displayName: 'Mia',
+    locale: 'en-GB',
   },
   ['en-gb-noahneural']: {
     voice: {
       name: 'en-GB-NoahNeural',
     },
+    id: 'en-GB-NoahNeural',
+    displayName: 'Noah',
+    locale: 'en-GB',
   },
   ['en-gb-oliverneural']: {
     voice: {
       name: 'en-GB-OliverNeural',
     },
+    id: 'en-GB-OliverNeural',
+    displayName: 'Oliver',
+    locale: 'en-GB',
   },
   ['en-gb-olivianeural']: {
     voice: {
       name: 'en-GB-OliviaNeural',
     },
+    id: 'en-GB-OliviaNeural',
+    displayName: 'Olivia',
+    locale: 'en-GB',
   },
   ['en-gb-olliemultilingualneural']: {
     voice: {
       name: 'en-GB-OllieMultilingualNeural',
     },
+    id: 'en-GB-OllieMultilingualNeural',
+    displayName: 'Ollie Multilingual',
+    locale: 'en-GB',
   },
   ['en-gb-ryanneural']: {
     voice: {
       name: 'en-GB-RyanNeural',
     },
+    id: 'en-GB-RyanNeural',
+    displayName: 'Ryan',
+    locale: 'en-GB',
   },
   ['en-gb-sonianeural']: {
     voice: {
       name: 'en-GB-SoniaNeural',
     },
+    id: 'en-GB-SoniaNeural',
+    displayName: 'Sonia',
+    locale: 'en-GB',
   },
   ['en-gb-thomasneural']: {
     voice: {
       name: 'en-GB-ThomasNeural',
     },
+    id: 'en-GB-ThomasNeural',
+    displayName: 'Thomas',
+    locale: 'en-GB',
   },
   ['en-hk-samneural']: {
     voice: {
       name: 'en-HK-SamNeural',
     },
+    id: 'en-HK-SamNeural',
+    displayName: 'Sam',
+    locale: 'en-HK',
   },
   ['en-hk-yanneural']: {
     voice: {
       name: 'en-HK-YanNeural',
     },
+    id: 'en-HK-YanNeural',
+    displayName: 'Yan',
+    locale: 'en-HK',
   },
   ['en-ie-connorneural']: {
     voice: {
       name: 'en-IE-ConnorNeural',
     },
+    id: 'en-IE-ConnorNeural',
+    displayName: 'Connor',
+    locale: 'en-IE',
   },
   ['en-ie-emilyneural']: {
     voice: {
       name: 'en-IE-EmilyNeural',
     },
+    id: 'en-IE-EmilyNeural',
+    displayName: 'Emily',
+    locale: 'en-IE',
   },
   ['en-in-aaravneural']: {
     voice: {
       name: 'en-IN-AaravNeural',
     },
+    id: 'en-IN-AaravNeural',
+    displayName: 'Aarav',
+    locale: 'en-IN',
   },
   ['en-in-aartiindicneural']: {
     voice: {
       name: 'en-IN-AartiIndicNeural',
     },
+    id: 'en-IN-AartiIndicNeural',
+    displayName: 'Aarti Indic',
+    locale: 'en-IN',
   },
   ['en-in-aartineural']: {
     voice: {
       name: 'en-IN-AartiNeural',
     },
+    id: 'en-IN-AartiNeural',
+    displayName: 'Aarti',
+    locale: 'en-IN',
   },
   ['en-in-aashineural']: {
     voice: {
       name: 'en-IN-AashiNeural',
     },
+    id: 'en-IN-AashiNeural',
+    displayName: 'Aashi',
+    locale: 'en-IN',
   },
   ['en-in-ananyaneural']: {
     voice: {
       name: 'en-IN-AnanyaNeural',
     },
+    id: 'en-IN-AnanyaNeural',
+    displayName: 'Ananya',
+    locale: 'en-IN',
   },
   ['en-in-arjunindicneural']: {
     voice: {
       name: 'en-IN-ArjunIndicNeural',
     },
+    id: 'en-IN-ArjunIndicNeural',
+    displayName: 'Arjun Indic',
+    locale: 'en-IN',
   },
   ['en-in-arjunneural']: {
     voice: {
       name: 'en-IN-ArjunNeural',
     },
+    id: 'en-IN-ArjunNeural',
+    displayName: 'Arjun',
+    locale: 'en-IN',
   },
   ['en-in-kavyaneural']: {
     voice: {
       name: 'en-IN-KavyaNeural',
     },
+    id: 'en-IN-KavyaNeural',
+    displayName: 'Kavya',
+    locale: 'en-IN',
   },
   ['en-in-kunalneural']: {
     voice: {
       name: 'en-IN-KunalNeural',
     },
+    id: 'en-IN-KunalNeural',
+    displayName: 'Kunal',
+    locale: 'en-IN',
   },
   ['en-in-neerjaindicneural']: {
     voice: {
       name: 'en-IN-NeerjaIndicNeural',
     },
+    id: 'en-IN-NeerjaIndicNeural',
+    displayName: 'Neerja Indic',
+    locale: 'en-IN',
   },
   ['en-in-neerjaneural']: {
     voice: {
       name: 'en-IN-NeerjaNeural',
     },
+    id: 'en-IN-NeerjaNeural',
+    displayName: 'Neerja',
+    locale: 'en-IN',
   },
   ['en-in-prabhatindicneural']: {
     voice: {
       name: 'en-IN-PrabhatIndicNeural',
     },
+    id: 'en-IN-PrabhatIndicNeural',
+    displayName: 'Prabhat Indic',
+    locale: 'en-IN',
   },
   ['en-in-prabhatneural']: {
     voice: {
       name: 'en-IN-PrabhatNeural',
     },
+    id: 'en-IN-PrabhatNeural',
+    displayName: 'Prabhat',
+    locale: 'en-IN',
   },
   ['en-in-rehaanneural']: {
     voice: {
       name: 'en-IN-RehaanNeural',
     },
+    id: 'en-IN-RehaanNeural',
+    displayName: 'Rehaan',
+    locale: 'en-IN',
   },
   ['en-ke-asilianeural']: {
     voice: {
       name: 'en-KE-AsiliaNeural',
     },
+    id: 'en-KE-AsiliaNeural',
+    displayName: 'Asilia',
+    locale: 'en-KE',
   },
   ['en-ke-chilembaneural']: {
     voice: {
       name: 'en-KE-ChilembaNeural',
     },
+    id: 'en-KE-ChilembaNeural',
+    displayName: 'Chilemba',
+    locale: 'en-KE',
   },
   ['en-ng-abeoneural']: {
     voice: {
       name: 'en-NG-AbeoNeural',
     },
+    id: 'en-NG-AbeoNeural',
+    displayName: 'Abeo',
+    locale: 'en-NG',
   },
   ['en-ng-ezinneneural']: {
     voice: {
       name: 'en-NG-EzinneNeural',
     },
+    id: 'en-NG-EzinneNeural',
+    displayName: 'Ezinne',
+    locale: 'en-NG',
   },
   ['en-nz-mitchellneural']: {
     voice: {
       name: 'en-NZ-MitchellNeural',
     },
+    id: 'en-NZ-MitchellNeural',
+    displayName: 'Mitchell',
+    locale: 'en-NZ',
   },
   ['en-nz-mollyneural']: {
     voice: {
       name: 'en-NZ-MollyNeural',
     },
+    id: 'en-NZ-MollyNeural',
+    displayName: 'Molly',
+    locale: 'en-NZ',
   },
   ['en-ph-jamesneural']: {
     voice: {
       name: 'en-PH-JamesNeural',
     },
+    id: 'en-PH-JamesNeural',
+    displayName: 'James',
+    locale: 'en-PH',
   },
   ['en-ph-rosaneural']: {
     voice: {
       name: 'en-PH-RosaNeural',
     },
+    id: 'en-PH-RosaNeural',
+    displayName: 'Rosa',
+    locale: 'en-PH',
   },
   ['en-sg-lunaneural']: {
     voice: {
       name: 'en-SG-LunaNeural',
     },
+    id: 'en-SG-LunaNeural',
+    displayName: 'Luna',
+    locale: 'en-SG',
   },
   ['en-sg-wayneneural']: {
     voice: {
       name: 'en-SG-WayneNeural',
     },
+    id: 'en-SG-WayneNeural',
+    displayName: 'Wayne',
+    locale: 'en-SG',
   },
   ['en-tz-elimuneural']: {
     voice: {
       name: 'en-TZ-ElimuNeural',
     },
+    id: 'en-TZ-ElimuNeural',
+    displayName: 'Elimu',
+    locale: 'en-TZ',
   },
   ['en-tz-imanineural']: {
     voice: {
       name: 'en-TZ-ImaniNeural',
     },
+    id: 'en-TZ-ImaniNeural',
+    displayName: 'Imani',
+    locale: 'en-TZ',
   },
   ['en-us-adammultilingualneural']: {
     voice: {
       name: 'en-US-AdamMultilingualNeural',
     },
+    id: 'en-US-AdamMultilingualNeural',
+    displayName: 'Adam Multilingual',
+    locale: 'en-US',
   },
   ['en-us-alloyturbomultilingualneural']: {
     voice: {
       name: 'en-US-AlloyTurboMultilingualNeural',
     },
+    id: 'en-US-AlloyTurboMultilingualNeural',
+    displayName: 'Alloy Turbo Multilingual',
+    locale: 'en-US',
   },
   ['en-us-amandamultilingualneural']: {
     voice: {
       name: 'en-US-AmandaMultilingualNeural',
     },
+    id: 'en-US-AmandaMultilingualNeural',
+    displayName: 'Amanda Multilingual',
+    locale: 'en-US',
   },
   ['en-us-amberneural']: {
     voice: {
       name: 'en-US-AmberNeural',
     },
+    id: 'en-US-AmberNeural',
+    displayName: 'Amber',
+    locale: 'en-US',
   },
   ['en-us-ananeural']: {
     voice: {
       name: 'en-US-AnaNeural',
     },
+    id: 'en-US-AnaNeural',
+    displayName: 'Ana',
+    locale: 'en-US',
   },
   ['en-us-andrewmultilingualneural']: {
     voice: {
       name: 'en-US-AndrewMultilingualNeural',
     },
+    id: 'en-US-AndrewMultilingualNeural',
+    displayName: 'Andrew Multilingual',
+    locale: 'en-US',
   },
   ['en-us-andrewneural']: {
     voice: {
       name: 'en-US-AndrewNeural',
     },
+    id: 'en-US-AndrewNeural',
+    displayName: 'Andrew',
+    locale: 'en-US',
   },
   ['en-us-arianeural']: {
     voice: {
       name: 'en-US-AriaNeural',
     },
+    id: 'en-US-AriaNeural',
+    displayName: 'Aria',
+    locale: 'en-US',
   },
   ['en-us-ashleyneural']: {
     voice: {
       name: 'en-US-AshleyNeural',
     },
+    id: 'en-US-AshleyNeural',
+    displayName: 'Ashley',
+    locale: 'en-US',
   },
   ['en-us-avamultilingualneural']: {
     voice: {
       name: 'en-US-AvaMultilingualNeural',
     },
+    id: 'en-US-AvaMultilingualNeural',
+    displayName: 'Ava Multilingual',
+    locale: 'en-US',
   },
   ['en-us-avaneural']: {
     voice: {
       name: 'en-US-AvaNeural',
     },
+    id: 'en-US-AvaNeural',
+    displayName: 'Ava',
+    locale: 'en-US',
   },
   ['en-us-brandonmultilingualneural']: {
     voice: {
       name: 'en-US-BrandonMultilingualNeural',
     },
+    id: 'en-US-BrandonMultilingualNeural',
+    displayName: 'Brandon Multilingual',
+    locale: 'en-US',
   },
   ['en-us-brandonneural']: {
     voice: {
       name: 'en-US-BrandonNeural',
     },
+    id: 'en-US-BrandonNeural',
+    displayName: 'Brandon',
+    locale: 'en-US',
   },
   ['en-us-brianmultilingualneural']: {
     voice: {
       name: 'en-US-BrianMultilingualNeural',
     },
+    id: 'en-US-BrianMultilingualNeural',
+    displayName: 'Brian Multilingual',
+    locale: 'en-US',
   },
   ['en-us-brianneural']: {
     voice: {
       name: 'en-US-BrianNeural',
     },
+    id: 'en-US-BrianNeural',
+    displayName: 'Brian',
+    locale: 'en-US',
   },
   ['en-us-christophermultilingualneural']: {
     voice: {
       name: 'en-US-ChristopherMultilingualNeural',
     },
+    id: 'en-US-ChristopherMultilingualNeural',
+    displayName: 'Christopher Multilingual',
+    locale: 'en-US',
   },
   ['en-us-christopherneural']: {
     voice: {
       name: 'en-US-ChristopherNeural',
     },
+    id: 'en-US-ChristopherNeural',
+    displayName: 'Christopher',
+    locale: 'en-US',
   },
   ['en-us-coramultilingualneural']: {
     voice: {
       name: 'en-US-CoraMultilingualNeural',
     },
+    id: 'en-US-CoraMultilingualNeural',
+    displayName: 'Cora Multilingual',
+    locale: 'en-US',
   },
   ['en-us-coraneural']: {
     voice: {
       name: 'en-US-CoraNeural',
     },
+    id: 'en-US-CoraNeural',
+    displayName: 'Cora',
+    locale: 'en-US',
   },
   ['en-us-davismultilingualneural']: {
     voice: {
       name: 'en-US-DavisMultilingualNeural',
     },
+    id: 'en-US-DavisMultilingualNeural',
+    displayName: 'Davis Multilingual',
+    locale: 'en-US',
   },
   ['en-us-davisneural']: {
     voice: {
       name: 'en-US-DavisNeural',
     },
+    id: 'en-US-DavisNeural',
+    displayName: 'Davis',
+    locale: 'en-US',
   },
   ['en-us-derekmultilingualneural']: {
     voice: {
       name: 'en-US-DerekMultilingualNeural',
     },
+    id: 'en-US-DerekMultilingualNeural',
+    displayName: 'Derek Multilingual',
+    locale: 'en-US',
   },
   ['en-us-dustinmultilingualneural']: {
     voice: {
       name: 'en-US-DustinMultilingualNeural',
     },
+    id: 'en-US-DustinMultilingualNeural',
+    displayName: 'Dustin Multilingual',
+    locale: 'en-US',
   },
   ['en-us-echoturbomultilingualneural']: {
     voice: {
       name: 'en-US-EchoTurboMultilingualNeural',
     },
+    id: 'en-US-EchoTurboMultilingualNeural',
+    displayName: 'Echo Turbo Multilingual',
+    locale: 'en-US',
   },
   ['en-us-elizabethneural']: {
     voice: {
       name: 'en-US-ElizabethNeural',
     },
+    id: 'en-US-ElizabethNeural',
+    displayName: 'Elizabeth',
+    locale: 'en-US',
   },
   ['en-us-emmamultilingualneural']: {
     voice: {
       name: 'en-US-EmmaMultilingualNeural',
     },
+    id: 'en-US-EmmaMultilingualNeural',
+    displayName: 'Emma Multilingual',
+    locale: 'en-US',
   },
   ['en-us-emmaneural']: {
     voice: {
       name: 'en-US-EmmaNeural',
     },
+    id: 'en-US-EmmaNeural',
+    displayName: 'Emma',
+    locale: 'en-US',
   },
   ['en-us-ericneural']: {
     voice: {
       name: 'en-US-EricNeural',
     },
+    id: 'en-US-EricNeural',
+    displayName: 'Eric',
+    locale: 'en-US',
   },
   ['en-us-fableturbomultilingualneural']: {
     voice: {
       name: 'en-US-FableTurboMultilingualNeural',
     },
+    id: 'en-US-FableTurboMultilingualNeural',
+    displayName: 'Fable Turbo Multilingual',
+    locale: 'en-US',
   },
   ['en-us-guyneural']: {
     voice: {
       name: 'en-US-GuyNeural',
     },
+    id: 'en-US-GuyNeural',
+    displayName: 'Guy',
+    locale: 'en-US',
   },
   ['en-us-jacobneural']: {
     voice: {
       name: 'en-US-JacobNeural',
     },
+    id: 'en-US-JacobNeural',
+    displayName: 'Jacob',
+    locale: 'en-US',
   },
   ['en-us-janeneural']: {
     voice: {
       name: 'en-US-JaneNeural',
     },
+    id: 'en-US-JaneNeural',
+    displayName: 'Jane',
+    locale: 'en-US',
   },
   ['en-us-jasonneural']: {
     voice: {
       name: 'en-US-JasonNeural',
     },
+    id: 'en-US-JasonNeural',
+    displayName: 'Jason',
+    locale: 'en-US',
   },
   ['en-us-jennymultilingualneural']: {
     voice: {
       name: 'en-US-JennyMultilingualNeural',
     },
+    id: 'en-US-JennyMultilingualNeural',
+    displayName: 'Jenny Multilingual',
+    locale: 'en-US',
   },
   ['en-us-jennyneural']: {
     voice: {
       name: 'en-US-JennyNeural',
     },
+    id: 'en-US-JennyNeural',
+    displayName: 'Jenny',
+    locale: 'en-US',
   },
   ['en-us-kaineural']: {
     voice: {
       name: 'en-US-KaiNeural',
     },
+    id: 'en-US-KaiNeural',
+    displayName: 'Kai',
+    locale: 'en-US',
   },
   ['en-us-lewismultilingualneural']: {
     voice: {
       name: 'en-US-LewisMultilingualNeural',
     },
+    id: 'en-US-LewisMultilingualNeural',
+    displayName: 'Lewis Multilingual',
+    locale: 'en-US',
   },
   ['en-us-lolamultilingualneural']: {
     voice: {
       name: 'en-US-LolaMultilingualNeural',
     },
+    id: 'en-US-LolaMultilingualNeural',
+    displayName: 'Lola Multilingual',
+    locale: 'en-US',
   },
   ['en-us-lunaneural']: {
     voice: {
       name: 'en-US-LunaNeural',
     },
+    id: 'en-US-LunaNeural',
+    displayName: 'Luna',
+    locale: 'en-US',
   },
   ['en-us-michelleneural']: {
     voice: {
       name: 'en-US-MichelleNeural',
     },
+    id: 'en-US-MichelleNeural',
+    displayName: 'Michelle',
+    locale: 'en-US',
   },
   ['en-us-monicaneural']: {
     voice: {
       name: 'en-US-MonicaNeural',
     },
+    id: 'en-US-MonicaNeural',
+    displayName: 'Monica',
+    locale: 'en-US',
   },
   ['en-us-nancymultilingualneural']: {
     voice: {
       name: 'en-US-NancyMultilingualNeural',
     },
+    id: 'en-US-NancyMultilingualNeural',
+    displayName: 'Nancy Multilingual',
+    locale: 'en-US',
   },
   ['en-us-nancyneural']: {
     voice: {
       name: 'en-US-NancyNeural',
     },
+    id: 'en-US-NancyNeural',
+    displayName: 'Nancy',
+    locale: 'en-US',
   },
   ['en-us-novaturbomultilingualneural']: {
     voice: {
       name: 'en-US-NovaTurboMultilingualNeural',
     },
+    id: 'en-US-NovaTurboMultilingualNeural',
+    displayName: 'Nova Turbo Multilingual',
+    locale: 'en-US',
   },
   ['en-us-onyxturbomultilingualneural']: {
     voice: {
       name: 'en-US-OnyxTurboMultilingualNeural',
     },
+    id: 'en-US-OnyxTurboMultilingualNeural',
+    displayName: 'Onyx Turbo Multilingual',
+    locale: 'en-US',
   },
   ['en-us-phoebemultilingualneural']: {
     voice: {
       name: 'en-US-PhoebeMultilingualNeural',
     },
+    id: 'en-US-PhoebeMultilingualNeural',
+    displayName: 'Phoebe Multilingual',
+    locale: 'en-US',
   },
   ['en-us-rogerneural']: {
     voice: {
       name: 'en-US-RogerNeural',
     },
+    id: 'en-US-RogerNeural',
+    displayName: 'Roger',
+    locale: 'en-US',
   },
   ['en-us-ryanmultilingualneural']: {
     voice: {
       name: 'en-US-RyanMultilingualNeural',
     },
+    id: 'en-US-RyanMultilingualNeural',
+    displayName: 'Ryan Multilingual',
+    locale: 'en-US',
   },
   ['en-us-samuelmultilingualneural']: {
     voice: {
       name: 'en-US-SamuelMultilingualNeural',
     },
+    id: 'en-US-SamuelMultilingualNeural',
+    displayName: 'Samuel Multilingual',
+    locale: 'en-US',
   },
   ['en-us-saraneural']: {
     voice: {
       name: 'en-US-SaraNeural',
     },
+    id: 'en-US-SaraNeural',
+    displayName: 'Sara',
+    locale: 'en-US',
   },
   ['en-us-serenamultilingualneural']: {
     voice: {
       name: 'en-US-SerenaMultilingualNeural',
     },
+    id: 'en-US-SerenaMultilingualNeural',
+    displayName: 'Serena Multilingual',
+    locale: 'en-US',
   },
   ['en-us-shimmerturbomultilingualneural']: {
     voice: {
       name: 'en-US-ShimmerTurboMultilingualNeural',
     },
+    id: 'en-US-ShimmerTurboMultilingualNeural',
+    displayName: 'Shimmer Turbo Multilingual',
+    locale: 'en-US',
   },
   ['en-us-steffanmultilingualneural']: {
     voice: {
       name: 'en-US-SteffanMultilingualNeural',
     },
+    id: 'en-US-SteffanMultilingualNeural',
+    displayName: 'Steffan Multilingual',
+    locale: 'en-US',
   },
   ['en-us-steffanneural']: {
     voice: {
       name: 'en-US-SteffanNeural',
     },
+    id: 'en-US-SteffanNeural',
+    displayName: 'Steffan',
+    locale: 'en-US',
   },
   ['en-us-tonyneural']: {
     voice: {
       name: 'en-US-TonyNeural',
     },
+    id: 'en-US-TonyNeural',
+    displayName: 'Tony',
+    locale: 'en-US',
   },
   ['en-za-leahneural']: {
     voice: {
       name: 'en-ZA-LeahNeural',
     },
+    id: 'en-ZA-LeahNeural',
+    displayName: 'Leah',
+    locale: 'en-ZA',
   },
   ['en-za-lukeneural']: {
     voice: {
       name: 'en-ZA-LukeNeural',
     },
+    id: 'en-ZA-LukeNeural',
+    displayName: 'Luke',
+    locale: 'en-ZA',
   },
   ['es-ar-elenaneural']: {
     voice: {
       name: 'es-AR-ElenaNeural',
     },
+    id: 'es-AR-ElenaNeural',
+    displayName: 'Elena',
+    locale: 'es-AR',
   },
   ['es-ar-tomasneural']: {
     voice: {
       name: 'es-AR-TomasNeural',
     },
+    id: 'es-AR-TomasNeural',
+    displayName: 'Tomas',
+    locale: 'es-AR',
   },
   ['es-bo-marceloneural']: {
     voice: {
       name: 'es-BO-MarceloNeural',
     },
+    id: 'es-BO-MarceloNeural',
+    displayName: 'Marcelo',
+    locale: 'es-BO',
   },
   ['es-bo-sofianeural']: {
     voice: {
       name: 'es-BO-SofiaNeural',
     },
+    id: 'es-BO-SofiaNeural',
+    displayName: 'Sofia',
+    locale: 'es-BO',
   },
   ['es-cl-catalinaneural']: {
     voice: {
       name: 'es-CL-CatalinaNeural',
     },
+    id: 'es-CL-CatalinaNeural',
+    displayName: 'Catalina',
+    locale: 'es-CL',
   },
   ['es-cl-lorenzoneural']: {
     voice: {
       name: 'es-CL-LorenzoNeural',
     },
+    id: 'es-CL-LorenzoNeural',
+    displayName: 'Lorenzo',
+    locale: 'es-CL',
   },
   ['es-co-gonzaloneural']: {
     voice: {
       name: 'es-CO-GonzaloNeural',
     },
+    id: 'es-CO-GonzaloNeural',
+    displayName: 'Gonzalo',
+    locale: 'es-CO',
   },
   ['es-co-salomeneural']: {
     voice: {
       name: 'es-CO-SalomeNeural',
     },
+    id: 'es-CO-SalomeNeural',
+    displayName: 'Salome',
+    locale: 'es-CO',
   },
   ['es-cr-juanneural']: {
     voice: {
       name: 'es-CR-JuanNeural',
     },
+    id: 'es-CR-JuanNeural',
+    displayName: 'Juan',
+    locale: 'es-CR',
   },
   ['es-cr-marianeural']: {
     voice: {
       name: 'es-CR-MariaNeural',
     },
+    id: 'es-CR-MariaNeural',
+    displayName: 'Maria',
+    locale: 'es-CR',
   },
   ['es-cu-belkysneural']: {
     voice: {
       name: 'es-CU-BelkysNeural',
     },
+    id: 'es-CU-BelkysNeural',
+    displayName: 'Belkys',
+    locale: 'es-CU',
   },
   ['es-cu-manuelneural']: {
     voice: {
       name: 'es-CU-ManuelNeural',
     },
+    id: 'es-CU-ManuelNeural',
+    displayName: 'Manuel',
+    locale: 'es-CU',
   },
   ['es-do-emilioneural']: {
     voice: {
       name: 'es-DO-EmilioNeural',
     },
+    id: 'es-DO-EmilioNeural',
+    displayName: 'Emilio',
+    locale: 'es-DO',
   },
   ['es-do-ramonaneural']: {
     voice: {
       name: 'es-DO-RamonaNeural',
     },
+    id: 'es-DO-RamonaNeural',
+    displayName: 'Ramona',
+    locale: 'es-DO',
   },
   ['es-ec-andreaneural']: {
     voice: {
       name: 'es-EC-AndreaNeural',
     },
+    id: 'es-EC-AndreaNeural',
+    displayName: 'Andrea',
+    locale: 'es-EC',
   },
   ['es-ec-luisneural']: {
     voice: {
       name: 'es-EC-LuisNeural',
     },
+    id: 'es-EC-LuisNeural',
+    displayName: 'Luis',
+    locale: 'es-EC',
   },
   ['es-es-abrilneural']: {
     voice: {
       name: 'es-ES-AbrilNeural',
     },
+    id: 'es-ES-AbrilNeural',
+    displayName: 'Abril',
+    locale: 'es-ES',
   },
   ['es-es-alvaroneural']: {
     voice: {
       name: 'es-ES-AlvaroNeural',
     },
+    id: 'es-ES-AlvaroNeural',
+    displayName: 'Alvaro',
+    locale: 'es-ES',
   },
   ['es-es-arabellamultilingualneural']: {
     voice: {
       name: 'es-ES-ArabellaMultilingualNeural',
     },
+    id: 'es-ES-ArabellaMultilingualNeural',
+    displayName: 'Arabella Multilingual',
+    locale: 'es-ES',
   },
   ['es-es-arnauneural']: {
     voice: {
       name: 'es-ES-ArnauNeural',
     },
+    id: 'es-ES-ArnauNeural',
+    displayName: 'Arnau',
+    locale: 'es-ES',
   },
   ['es-es-darioneural']: {
     voice: {
       name: 'es-ES-DarioNeural',
     },
+    id: 'es-ES-DarioNeural',
+    displayName: 'Dario',
+    locale: 'es-ES',
   },
   ['es-es-eliasneural']: {
     voice: {
       name: 'es-ES-EliasNeural',
     },
+    id: 'es-ES-EliasNeural',
+    displayName: 'Elias',
+    locale: 'es-ES',
   },
   ['es-es-elviraneural']: {
     voice: {
       name: 'es-ES-ElviraNeural',
     },
+    id: 'es-ES-ElviraNeural',
+    displayName: 'Elvira',
+    locale: 'es-ES',
   },
   ['es-es-estrellaneural']: {
     voice: {
       name: 'es-ES-EstrellaNeural',
     },
+    id: 'es-ES-EstrellaNeural',
+    displayName: 'Estrella',
+    locale: 'es-ES',
   },
   ['es-es-ireneneural']: {
     voice: {
       name: 'es-ES-IreneNeural',
     },
+    id: 'es-ES-IreneNeural',
+    displayName: 'Irene',
+    locale: 'es-ES',
   },
   ['es-es-isidoramultilingualneural']: {
     voice: {
       name: 'es-ES-IsidoraMultilingualNeural',
     },
+    id: 'es-ES-IsidoraMultilingualNeural',
+    displayName: 'Isidora Multilingual',
+    locale: 'es-ES',
   },
   ['es-es-laianeural']: {
     voice: {
       name: 'es-ES-LaiaNeural',
     },
+    id: 'es-ES-LaiaNeural',
+    displayName: 'Laia',
+    locale: 'es-ES',
   },
   ['es-es-lianeural']: {
     voice: {
       name: 'es-ES-LiaNeural',
     },
+    id: 'es-ES-LiaNeural',
+    displayName: 'Lia',
+    locale: 'es-ES',
   },
   ['es-es-nilneural']: {
     voice: {
       name: 'es-ES-NilNeural',
     },
+    id: 'es-ES-NilNeural',
+    displayName: 'Nil',
+    locale: 'es-ES',
   },
   ['es-es-saulneural']: {
     voice: {
       name: 'es-ES-SaulNeural',
     },
+    id: 'es-ES-SaulNeural',
+    displayName: 'Saul',
+    locale: 'es-ES',
   },
   ['es-es-teoneural']: {
     voice: {
       name: 'es-ES-TeoNeural',
     },
+    id: 'es-ES-TeoNeural',
+    displayName: 'Teo',
+    locale: 'es-ES',
   },
   ['es-es-triananeural']: {
     voice: {
       name: 'es-ES-TrianaNeural',
     },
+    id: 'es-ES-TrianaNeural',
+    displayName: 'Triana',
+    locale: 'es-ES',
   },
   ['es-es-tristanmultilingualneural']: {
     voice: {
       name: 'es-ES-TristanMultilingualNeural',
     },
+    id: 'es-ES-TristanMultilingualNeural',
+    displayName: 'Tristan Multilingual',
+    locale: 'es-ES',
   },
   ['es-es-veraneural']: {
     voice: {
       name: 'es-ES-VeraNeural',
     },
+    id: 'es-ES-VeraNeural',
+    displayName: 'Vera',
+    locale: 'es-ES',
   },
   ['es-es-ximenamultilingualneural']: {
     voice: {
       name: 'es-ES-XimenaMultilingualNeural',
     },
+    id: 'es-ES-XimenaMultilingualNeural',
+    displayName: 'Ximena Multilingual',
+    locale: 'es-ES',
   },
   ['es-es-ximenaneural']: {
     voice: {
       name: 'es-ES-XimenaNeural',
     },
+    id: 'es-ES-XimenaNeural',
+    displayName: 'Ximena',
+    locale: 'es-ES',
   },
   ['es-gq-javierneural']: {
     voice: {
       name: 'es-GQ-JavierNeural',
     },
+    id: 'es-GQ-JavierNeural',
+    displayName: 'Javier',
+    locale: 'es-GQ',
   },
   ['es-gq-teresaneural']: {
     voice: {
       name: 'es-GQ-TeresaNeural',
     },
+    id: 'es-GQ-TeresaNeural',
+    displayName: 'Teresa',
+    locale: 'es-GQ',
   },
   ['es-gt-andresneural']: {
     voice: {
       name: 'es-GT-AndresNeural',
     },
+    id: 'es-GT-AndresNeural',
+    displayName: 'Andres',
+    locale: 'es-GT',
   },
   ['es-gt-martaneural']: {
     voice: {
       name: 'es-GT-MartaNeural',
     },
+    id: 'es-GT-MartaNeural',
+    displayName: 'Marta',
+    locale: 'es-GT',
   },
   ['es-hn-carlosneural']: {
     voice: {
       name: 'es-HN-CarlosNeural',
     },
+    id: 'es-HN-CarlosNeural',
+    displayName: 'Carlos',
+    locale: 'es-HN',
   },
   ['es-hn-karlaneural']: {
     voice: {
       name: 'es-HN-KarlaNeural',
     },
+    id: 'es-HN-KarlaNeural',
+    displayName: 'Karla',
+    locale: 'es-HN',
   },
   ['es-mx-beatrizneural']: {
     voice: {
       name: 'es-MX-BeatrizNeural',
     },
+    id: 'es-MX-BeatrizNeural',
+    displayName: 'Beatriz',
+    locale: 'es-MX',
   },
   ['es-mx-candelaneural']: {
     voice: {
       name: 'es-MX-CandelaNeural',
     },
+    id: 'es-MX-CandelaNeural',
+    displayName: 'Candela',
+    locale: 'es-MX',
   },
   ['es-mx-carlotaneural']: {
     voice: {
       name: 'es-MX-CarlotaNeural',
     },
+    id: 'es-MX-CarlotaNeural',
+    displayName: 'Carlota',
+    locale: 'es-MX',
   },
   ['es-mx-cecilioneural']: {
     voice: {
       name: 'es-MX-CecilioNeural',
     },
+    id: 'es-MX-CecilioNeural',
+    displayName: 'Cecilio',
+    locale: 'es-MX',
   },
   ['es-mx-daliamultilingualneural']: {
     voice: {
       name: 'es-MX-DaliaMultilingualNeural',
     },
+    id: 'es-MX-DaliaMultilingualNeural',
+    displayName: 'Dalia Multilingual',
+    locale: 'es-MX',
   },
   ['es-mx-dalianeural']: {
     voice: {
       name: 'es-MX-DaliaNeural',
     },
+    id: 'es-MX-DaliaNeural',
+    displayName: 'Dalia',
+    locale: 'es-MX',
   },
   ['es-mx-gerardoneural']: {
     voice: {
       name: 'es-MX-GerardoNeural',
     },
+    id: 'es-MX-GerardoNeural',
+    displayName: 'Gerardo',
+    locale: 'es-MX',
   },
   ['es-mx-jorgemultilingualneural']: {
     voice: {
       name: 'es-MX-JorgeMultilingualNeural',
     },
+    id: 'es-MX-JorgeMultilingualNeural',
+    displayName: 'Jorge Multilingual',
+    locale: 'es-MX',
   },
   ['es-mx-jorgeneural']: {
     voice: {
       name: 'es-MX-JorgeNeural',
     },
+    id: 'es-MX-JorgeNeural',
+    displayName: 'Jorge',
+    locale: 'es-MX',
   },
   ['es-mx-larissaneural']: {
     voice: {
       name: 'es-MX-LarissaNeural',
     },
+    id: 'es-MX-LarissaNeural',
+    displayName: 'Larissa',
+    locale: 'es-MX',
   },
   ['es-mx-libertoneural']: {
     voice: {
       name: 'es-MX-LibertoNeural',
     },
+    id: 'es-MX-LibertoNeural',
+    displayName: 'Liberto',
+    locale: 'es-MX',
   },
   ['es-mx-lucianoneural']: {
     voice: {
       name: 'es-MX-LucianoNeural',
     },
+    id: 'es-MX-LucianoNeural',
+    displayName: 'Luciano',
+    locale: 'es-MX',
   },
   ['es-mx-marinaneural']: {
     voice: {
       name: 'es-MX-MarinaNeural',
     },
+    id: 'es-MX-MarinaNeural',
+    displayName: 'Marina',
+    locale: 'es-MX',
   },
   ['es-mx-nurianeural']: {
     voice: {
       name: 'es-MX-NuriaNeural',
     },
+    id: 'es-MX-NuriaNeural',
+    displayName: 'Nuria',
+    locale: 'es-MX',
   },
   ['es-mx-pelayoneural']: {
     voice: {
       name: 'es-MX-PelayoNeural',
     },
+    id: 'es-MX-PelayoNeural',
+    displayName: 'Pelayo',
+    locale: 'es-MX',
   },
   ['es-mx-renataneural']: {
     voice: {
       name: 'es-MX-RenataNeural',
     },
+    id: 'es-MX-RenataNeural',
+    displayName: 'Renata',
+    locale: 'es-MX',
   },
   ['es-mx-yagoneural']: {
     voice: {
       name: 'es-MX-YagoNeural',
     },
+    id: 'es-MX-YagoNeural',
+    displayName: 'Yago',
+    locale: 'es-MX',
   },
   ['es-ni-federiconeural']: {
     voice: {
       name: 'es-NI-FedericoNeural',
     },
+    id: 'es-NI-FedericoNeural',
+    displayName: 'Federico',
+    locale: 'es-NI',
   },
   ['es-ni-yolandaneural']: {
     voice: {
       name: 'es-NI-YolandaNeural',
     },
+    id: 'es-NI-YolandaNeural',
+    displayName: 'Yolanda',
+    locale: 'es-NI',
   },
   ['es-pa-margaritaneural']: {
     voice: {
       name: 'es-PA-MargaritaNeural',
     },
+    id: 'es-PA-MargaritaNeural',
+    displayName: 'Margarita',
+    locale: 'es-PA',
   },
   ['es-pa-robertoneural']: {
     voice: {
       name: 'es-PA-RobertoNeural',
     },
+    id: 'es-PA-RobertoNeural',
+    displayName: 'Roberto',
+    locale: 'es-PA',
   },
   ['es-pe-alexneural']: {
     voice: {
       name: 'es-PE-AlexNeural',
     },
+    id: 'es-PE-AlexNeural',
+    displayName: 'Alex',
+    locale: 'es-PE',
   },
   ['es-pe-camilaneural']: {
     voice: {
       name: 'es-PE-CamilaNeural',
     },
+    id: 'es-PE-CamilaNeural',
+    displayName: 'Camila',
+    locale: 'es-PE',
   },
   ['es-pr-karinaneural']: {
     voice: {
       name: 'es-PR-KarinaNeural',
     },
+    id: 'es-PR-KarinaNeural',
+    displayName: 'Karina',
+    locale: 'es-PR',
   },
   ['es-pr-victorneural']: {
     voice: {
       name: 'es-PR-VictorNeural',
     },
+    id: 'es-PR-VictorNeural',
+    displayName: 'Victor',
+    locale: 'es-PR',
   },
   ['es-py-marioneural']: {
     voice: {
       name: 'es-PY-MarioNeural',
     },
+    id: 'es-PY-MarioNeural',
+    displayName: 'Mario',
+    locale: 'es-PY',
   },
   ['es-py-tanianeural']: {
     voice: {
       name: 'es-PY-TaniaNeural',
     },
+    id: 'es-PY-TaniaNeural',
+    displayName: 'Tania',
+    locale: 'es-PY',
   },
   ['es-sv-lorenaneural']: {
     voice: {
       name: 'es-SV-LorenaNeural',
     },
+    id: 'es-SV-LorenaNeural',
+    displayName: 'Lorena',
+    locale: 'es-SV',
   },
   ['es-sv-rodrigoneural']: {
     voice: {
       name: 'es-SV-RodrigoNeural',
     },
+    id: 'es-SV-RodrigoNeural',
+    displayName: 'Rodrigo',
+    locale: 'es-SV',
   },
   ['es-us-alonsoneural']: {
     voice: {
       name: 'es-US-AlonsoNeural',
     },
+    id: 'es-US-AlonsoNeural',
+    displayName: 'Alonso',
+    locale: 'es-US',
   },
   ['es-us-palomaneural']: {
     voice: {
       name: 'es-US-PalomaNeural',
     },
+    id: 'es-US-PalomaNeural',
+    displayName: 'Paloma',
+    locale: 'es-US',
   },
   ['es-uy-mateoneural']: {
     voice: {
       name: 'es-UY-MateoNeural',
     },
+    id: 'es-UY-MateoNeural',
+    displayName: 'Mateo',
+    locale: 'es-UY',
   },
   ['es-uy-valentinaneural']: {
     voice: {
       name: 'es-UY-ValentinaNeural',
     },
+    id: 'es-UY-ValentinaNeural',
+    displayName: 'Valentina',
+    locale: 'es-UY',
   },
   ['es-ve-paolaneural']: {
     voice: {
       name: 'es-VE-PaolaNeural',
     },
+    id: 'es-VE-PaolaNeural',
+    displayName: 'Paola',
+    locale: 'es-VE',
   },
   ['es-ve-sebastianneural']: {
     voice: {
       name: 'es-VE-SebastianNeural',
     },
+    id: 'es-VE-SebastianNeural',
+    displayName: 'Sebastian',
+    locale: 'es-VE',
   },
   ['et-ee-anuneural']: {
     voice: {
       name: 'et-EE-AnuNeural',
     },
+    id: 'et-EE-AnuNeural',
+    displayName: 'Anu',
+    locale: 'et-EE',
   },
   ['et-ee-kertneural']: {
     voice: {
       name: 'et-EE-KertNeural',
     },
+    id: 'et-EE-KertNeural',
+    displayName: 'Kert',
+    locale: 'et-EE',
   },
   ['eu-es-ainhoaneural']: {
     voice: {
       name: 'eu-ES-AinhoaNeural',
     },
+    id: 'eu-ES-AinhoaNeural',
+    displayName: 'Ainhoa',
+    locale: 'eu-ES',
   },
   ['eu-es-anderneural']: {
     voice: {
       name: 'eu-ES-AnderNeural',
     },
+    id: 'eu-ES-AnderNeural',
+    displayName: 'Ander',
+    locale: 'eu-ES',
   },
   ['fa-ir-dilaraneural']: {
     voice: {
       name: 'fa-IR-DilaraNeural',
     },
+    id: 'fa-IR-DilaraNeural',
+    displayName: 'Dilara',
+    locale: 'fa-IR',
   },
   ['fa-ir-faridneural']: {
     voice: {
       name: 'fa-IR-FaridNeural',
     },
+    id: 'fa-IR-FaridNeural',
+    displayName: 'Farid',
+    locale: 'fa-IR',
   },
   ['fi-fi-harrineural']: {
     voice: {
       name: 'fi-FI-HarriNeural',
     },
+    id: 'fi-FI-HarriNeural',
+    displayName: 'Harri',
+    locale: 'fi-FI',
   },
   ['fi-fi-nooraneural']: {
     voice: {
       name: 'fi-FI-NooraNeural',
     },
+    id: 'fi-FI-NooraNeural',
+    displayName: 'Noora',
+    locale: 'fi-FI',
   },
   ['fi-fi-selmaneural']: {
     voice: {
       name: 'fi-FI-SelmaNeural',
     },
+    id: 'fi-FI-SelmaNeural',
+    displayName: 'Selma',
+    locale: 'fi-FI',
   },
   ['fil-ph-angeloneural']: {
     voice: {
       name: 'fil-PH-AngeloNeural',
     },
+    id: 'fil-PH-AngeloNeural',
+    displayName: 'Angelo',
+    locale: 'fil-PH',
   },
   ['fil-ph-blessicaneural']: {
     voice: {
       name: 'fil-PH-BlessicaNeural',
     },
+    id: 'fil-PH-BlessicaNeural',
+    displayName: 'Blessica',
+    locale: 'fil-PH',
   },
   ['fr-be-charlineneural']: {
     voice: {
       name: 'fr-BE-CharlineNeural',
     },
+    id: 'fr-BE-CharlineNeural',
+    displayName: 'Charline',
+    locale: 'fr-BE',
   },
   ['fr-be-gerardneural']: {
     voice: {
       name: 'fr-BE-GerardNeural',
     },
+    id: 'fr-BE-GerardNeural',
+    displayName: 'Gerard',
+    locale: 'fr-BE',
   },
   ['fr-ca-antoineneural']: {
     voice: {
       name: 'fr-CA-AntoineNeural',
     },
+    id: 'fr-CA-AntoineNeural',
+    displayName: 'Antoine',
+    locale: 'fr-CA',
   },
   ['fr-ca-jeanneural']: {
     voice: {
       name: 'fr-CA-JeanNeural',
     },
+    id: 'fr-CA-JeanNeural',
+    displayName: 'Jean',
+    locale: 'fr-CA',
   },
   ['fr-ca-sylvieneural']: {
     voice: {
       name: 'fr-CA-SylvieNeural',
     },
+    id: 'fr-CA-SylvieNeural',
+    displayName: 'Sylvie',
+    locale: 'fr-CA',
   },
   ['fr-ca-thierryneural']: {
     voice: {
       name: 'fr-CA-ThierryNeural',
     },
+    id: 'fr-CA-ThierryNeural',
+    displayName: 'Thierry',
+    locale: 'fr-CA',
   },
   ['fr-ch-arianeneural']: {
     voice: {
       name: 'fr-CH-ArianeNeural',
     },
+    id: 'fr-CH-ArianeNeural',
+    displayName: 'Ariane',
+    locale: 'fr-CH',
   },
   ['fr-ch-fabriceneural']: {
     voice: {
       name: 'fr-CH-FabriceNeural',
     },
+    id: 'fr-CH-FabriceNeural',
+    displayName: 'Fabrice',
+    locale: 'fr-CH',
   },
   ['fr-fr-alainneural']: {
     voice: {
       name: 'fr-FR-AlainNeural',
     },
+    id: 'fr-FR-AlainNeural',
+    displayName: 'Alain',
+    locale: 'fr-FR',
   },
   ['fr-fr-brigitteneural']: {
     voice: {
       name: 'fr-FR-BrigitteNeural',
     },
+    id: 'fr-FR-BrigitteNeural',
+    displayName: 'Brigitte',
+    locale: 'fr-FR',
   },
   ['fr-fr-celesteneural']: {
     voice: {
       name: 'fr-FR-CelesteNeural',
     },
+    id: 'fr-FR-CelesteNeural',
+    displayName: 'Celeste',
+    locale: 'fr-FR',
   },
   ['fr-fr-claudeneural']: {
     voice: {
       name: 'fr-FR-ClaudeNeural',
     },
+    id: 'fr-FR-ClaudeNeural',
+    displayName: 'Claude',
+    locale: 'fr-FR',
   },
   ['fr-fr-coralieneural']: {
     voice: {
       name: 'fr-FR-CoralieNeural',
     },
+    id: 'fr-FR-CoralieNeural',
+    displayName: 'Coralie',
+    locale: 'fr-FR',
   },
   ['fr-fr-deniseneural']: {
     voice: {
       name: 'fr-FR-DeniseNeural',
     },
+    id: 'fr-FR-DeniseNeural',
+    displayName: 'Denise',
+    locale: 'fr-FR',
   },
   ['fr-fr-eloiseneural']: {
     voice: {
       name: 'fr-FR-EloiseNeural',
     },
+    id: 'fr-FR-EloiseNeural',
+    displayName: 'Eloise',
+    locale: 'fr-FR',
   },
   ['fr-fr-henrineural']: {
     voice: {
       name: 'fr-FR-HenriNeural',
     },
+    id: 'fr-FR-HenriNeural',
+    displayName: 'Henri',
+    locale: 'fr-FR',
   },
   ['fr-fr-jacquelineneural']: {
     voice: {
       name: 'fr-FR-JacquelineNeural',
     },
+    id: 'fr-FR-JacquelineNeural',
+    displayName: 'Jacqueline',
+    locale: 'fr-FR',
   },
   ['fr-fr-jeromeneural']: {
     voice: {
       name: 'fr-FR-JeromeNeural',
     },
+    id: 'fr-FR-JeromeNeural',
+    displayName: 'Jerome',
+    locale: 'fr-FR',
   },
   ['fr-fr-josephineneural']: {
     voice: {
       name: 'fr-FR-JosephineNeural',
     },
+    id: 'fr-FR-JosephineNeural',
+    displayName: 'Josephine',
+    locale: 'fr-FR',
   },
   ['fr-fr-lucienmultilingualneural']: {
     voice: {
       name: 'fr-FR-LucienMultilingualNeural',
     },
+    id: 'fr-FR-LucienMultilingualNeural',
+    displayName: 'Lucien Multilingual',
+    locale: 'fr-FR',
   },
   ['fr-fr-mauriceneural']: {
     voice: {
       name: 'fr-FR-MauriceNeural',
     },
+    id: 'fr-FR-MauriceNeural',
+    displayName: 'Maurice',
+    locale: 'fr-FR',
   },
   ['fr-fr-remymultilingualneural']: {
     voice: {
       name: 'fr-FR-RemyMultilingualNeural',
     },
+    id: 'fr-FR-RemyMultilingualNeural',
+    displayName: 'Remy Multilingual',
+    locale: 'fr-FR',
   },
   ['fr-fr-viviennemultilingualneural']: {
     voice: {
       name: 'fr-FR-VivienneMultilingualNeural',
     },
+    id: 'fr-FR-VivienneMultilingualNeural',
+    displayName: 'Vivienne Multilingual',
+    locale: 'fr-FR',
   },
   ['fr-fr-yvesneural']: {
     voice: {
       name: 'fr-FR-YvesNeural',
     },
+    id: 'fr-FR-YvesNeural',
+    displayName: 'Yves',
+    locale: 'fr-FR',
   },
   ['fr-fr-yvetteneural']: {
     voice: {
       name: 'fr-FR-YvetteNeural',
     },
+    id: 'fr-FR-YvetteNeural',
+    displayName: 'Yvette',
+    locale: 'fr-FR',
   },
   ['ga-ie-colmneural']: {
     voice: {
       name: 'ga-IE-ColmNeural',
     },
+    id: 'ga-IE-ColmNeural',
+    displayName: 'Colm',
+    locale: 'ga-IE',
   },
   ['ga-ie-orlaneural']: {
     voice: {
       name: 'ga-IE-OrlaNeural',
     },
+    id: 'ga-IE-OrlaNeural',
+    displayName: 'Orla',
+    locale: 'ga-IE',
   },
   ['gl-es-roineural']: {
     voice: {
       name: 'gl-ES-RoiNeural',
     },
+    id: 'gl-ES-RoiNeural',
+    displayName: 'Roi',
+    locale: 'gl-ES',
   },
   ['gl-es-sabelaneural']: {
     voice: {
       name: 'gl-ES-SabelaNeural',
     },
+    id: 'gl-ES-SabelaNeural',
+    displayName: 'Sabela',
+    locale: 'gl-ES',
   },
   ['gu-in-dhwanineural']: {
     voice: {
       name: 'gu-IN-DhwaniNeural',
     },
+    id: 'gu-IN-DhwaniNeural',
+    displayName: 'Dhwani',
+    locale: 'gu-IN',
   },
   ['gu-in-niranjanneural']: {
     voice: {
       name: 'gu-IN-NiranjanNeural',
     },
+    id: 'gu-IN-NiranjanNeural',
+    displayName: 'Niranjan',
+    locale: 'gu-IN',
   },
   ['he-il-avrineural']: {
     voice: {
       name: 'he-IL-AvriNeural',
     },
+    id: 'he-IL-AvriNeural',
+    displayName: 'Avri',
+    locale: 'he-IL',
   },
   ['he-il-hilaneural']: {
     voice: {
       name: 'he-IL-HilaNeural',
     },
+    id: 'he-IL-HilaNeural',
+    displayName: 'Hila',
+    locale: 'he-IL',
   },
   ['hi-in-aaravneural']: {
     voice: {
       name: 'hi-IN-AaravNeural',
     },
+    id: 'hi-IN-AaravNeural',
+    displayName: 'Aarav',
+    locale: 'hi-IN',
   },
   ['hi-in-aartineural']: {
     voice: {
       name: 'hi-IN-AartiNeural',
     },
+    id: 'hi-IN-AartiNeural',
+    displayName: 'Aarti',
+    locale: 'hi-IN',
   },
   ['hi-in-ananyaneural']: {
     voice: {
       name: 'hi-IN-AnanyaNeural',
     },
+    id: 'hi-IN-AnanyaNeural',
+    displayName: 'Ananya',
+    locale: 'hi-IN',
   },
   ['hi-in-arjunneural']: {
     voice: {
       name: 'hi-IN-ArjunNeural',
     },
+    id: 'hi-IN-ArjunNeural',
+    displayName: 'Arjun',
+    locale: 'hi-IN',
   },
   ['hi-in-kavyaneural']: {
     voice: {
       name: 'hi-IN-KavyaNeural',
     },
+    id: 'hi-IN-KavyaNeural',
+    displayName: 'Kavya',
+    locale: 'hi-IN',
   },
   ['hi-in-kunalneural']: {
     voice: {
       name: 'hi-IN-KunalNeural',
     },
+    id: 'hi-IN-KunalNeural',
+    displayName: 'Kunal',
+    locale: 'hi-IN',
   },
   ['hi-in-madhurneural']: {
     voice: {
       name: 'hi-IN-MadhurNeural',
     },
+    id: 'hi-IN-MadhurNeural',
+    displayName: 'Madhur',
+    locale: 'hi-IN',
   },
   ['hi-in-rehaanneural']: {
     voice: {
       name: 'hi-IN-RehaanNeural',
     },
+    id: 'hi-IN-RehaanNeural',
+    displayName: 'Rehaan',
+    locale: 'hi-IN',
   },
   ['hi-in-swaraneural']: {
     voice: {
       name: 'hi-IN-SwaraNeural',
     },
+    id: 'hi-IN-SwaraNeural',
+    displayName: 'Swara',
+    locale: 'hi-IN',
   },
   ['hr-hr-gabrijelaneural']: {
     voice: {
       name: 'hr-HR-GabrijelaNeural',
     },
+    id: 'hr-HR-GabrijelaNeural',
+    displayName: 'Gabrijela',
+    locale: 'hr-HR',
   },
   ['hr-hr-sreckoneural']: {
     voice: {
       name: 'hr-HR-SreckoNeural',
     },
+    id: 'hr-HR-SreckoNeural',
+    displayName: 'Srecko',
+    locale: 'hr-HR',
   },
   ['hu-hu-noemineural']: {
     voice: {
       name: 'hu-HU-NoemiNeural',
     },
+    id: 'hu-HU-NoemiNeural',
+    displayName: 'Noemi',
+    locale: 'hu-HU',
   },
   ['hu-hu-tamasneural']: {
     voice: {
       name: 'hu-HU-TamasNeural',
     },
+    id: 'hu-HU-TamasNeural',
+    displayName: 'Tamas',
+    locale: 'hu-HU',
   },
   ['hy-am-anahitneural']: {
     voice: {
       name: 'hy-AM-AnahitNeural',
     },
+    id: 'hy-AM-AnahitNeural',
+    displayName: 'Anahit',
+    locale: 'hy-AM',
   },
   ['hy-am-haykneural']: {
     voice: {
       name: 'hy-AM-HaykNeural',
     },
+    id: 'hy-AM-HaykNeural',
+    displayName: 'Hayk',
+    locale: 'hy-AM',
   },
   ['id-id-ardineural']: {
     voice: {
       name: 'id-ID-ArdiNeural',
     },
+    id: 'id-ID-ArdiNeural',
+    displayName: 'Ardi',
+    locale: 'id-ID',
   },
   ['id-id-gadisneural']: {
     voice: {
       name: 'id-ID-GadisNeural',
     },
+    id: 'id-ID-GadisNeural',
+    displayName: 'Gadis',
+    locale: 'id-ID',
   },
   ['is-is-gudrunneural']: {
     voice: {
       name: 'is-IS-GudrunNeural',
     },
+    id: 'is-IS-GudrunNeural',
+    displayName: 'Gudrun',
+    locale: 'is-IS',
   },
   ['is-is-gunnarneural']: {
     voice: {
       name: 'is-IS-GunnarNeural',
     },
+    id: 'is-IS-GunnarNeural',
+    displayName: 'Gunnar',
+    locale: 'is-IS',
   },
   ['it-it-alessiomultilingualneural']: {
     voice: {
       name: 'it-IT-AlessioMultilingualNeural',
     },
+    id: 'it-IT-AlessioMultilingualNeural',
+    displayName: 'Alessio Multilingual',
+    locale: 'it-IT',
   },
   ['it-it-benignoneural']: {
     voice: {
       name: 'it-IT-BenignoNeural',
     },
+    id: 'it-IT-BenignoNeural',
+    displayName: 'Benigno',
+    locale: 'it-IT',
   },
   ['it-it-calimeroneural']: {
     voice: {
       name: 'it-IT-CalimeroNeural',
     },
+    id: 'it-IT-CalimeroNeural',
+    displayName: 'Calimero',
+    locale: 'it-IT',
   },
   ['it-it-cataldoneural']: {
     voice: {
       name: 'it-IT-CataldoNeural',
     },
+    id: 'it-IT-CataldoNeural',
+    displayName: 'Cataldo',
+    locale: 'it-IT',
   },
   ['it-it-diegoneural']: {
     voice: {
       name: 'it-IT-DiegoNeural',
     },
+    id: 'it-IT-DiegoNeural',
+    displayName: 'Diego',
+    locale: 'it-IT',
   },
   ['it-it-elsaneural']: {
     voice: {
       name: 'it-IT-ElsaNeural',
     },
+    id: 'it-IT-ElsaNeural',
+    displayName: 'Elsa',
+    locale: 'it-IT',
   },
   ['it-it-fabiolaneural']: {
     voice: {
       name: 'it-IT-FabiolaNeural',
     },
+    id: 'it-IT-FabiolaNeural',
+    displayName: 'Fabiola',
+    locale: 'it-IT',
   },
   ['it-it-fiammaneural']: {
     voice: {
       name: 'it-IT-FiammaNeural',
     },
+    id: 'it-IT-FiammaNeural',
+    displayName: 'Fiamma',
+    locale: 'it-IT',
   },
   ['it-it-giannineural']: {
     voice: {
       name: 'it-IT-GianniNeural',
     },
+    id: 'it-IT-GianniNeural',
+    displayName: 'Gianni',
+    locale: 'it-IT',
   },
   ['it-it-giuseppemultilingualneural']: {
     voice: {
       name: 'it-IT-GiuseppeMultilingualNeural',
     },
+    id: 'it-IT-GiuseppeMultilingualNeural',
+    displayName: 'Giuseppe Multilingual',
+    locale: 'it-IT',
   },
   ['it-it-giuseppeneural']: {
     voice: {
       name: 'it-IT-GiuseppeNeural',
     },
+    id: 'it-IT-GiuseppeNeural',
+    displayName: 'Giuseppe',
+    locale: 'it-IT',
   },
   ['it-it-imeldaneural']: {
     voice: {
       name: 'it-IT-ImeldaNeural',
     },
+    id: 'it-IT-ImeldaNeural',
+    displayName: 'Imelda',
+    locale: 'it-IT',
   },
   ['it-it-irmaneural']: {
     voice: {
       name: 'it-IT-IrmaNeural',
     },
+    id: 'it-IT-IrmaNeural',
+    displayName: 'Irma',
+    locale: 'it-IT',
   },
   ['it-it-isabellamultilingualneural']: {
     voice: {
       name: 'it-IT-IsabellaMultilingualNeural',
     },
+    id: 'it-IT-IsabellaMultilingualNeural',
+    displayName: 'Isabella Multilingual',
+    locale: 'it-IT',
   },
   ['it-it-isabellaneural']: {
     voice: {
       name: 'it-IT-IsabellaNeural',
     },
+    id: 'it-IT-IsabellaNeural',
+    displayName: 'Isabella',
+    locale: 'it-IT',
   },
   ['it-it-lisandroneural']: {
     voice: {
       name: 'it-IT-LisandroNeural',
     },
+    id: 'it-IT-LisandroNeural',
+    displayName: 'Lisandro',
+    locale: 'it-IT',
   },
   ['it-it-marcellomultilingualneural']: {
     voice: {
       name: 'it-IT-MarcelloMultilingualNeural',
     },
+    id: 'it-IT-MarcelloMultilingualNeural',
+    displayName: 'Marcello Multilingual',
+    locale: 'it-IT',
   },
   ['it-it-palmiraneural']: {
     voice: {
       name: 'it-IT-PalmiraNeural',
     },
+    id: 'it-IT-PalmiraNeural',
+    displayName: 'Palmira',
+    locale: 'it-IT',
   },
   ['it-it-pierinaneural']: {
     voice: {
       name: 'it-IT-PierinaNeural',
     },
+    id: 'it-IT-PierinaNeural',
+    displayName: 'Pierina',
+    locale: 'it-IT',
   },
   ['it-it-rinaldoneural']: {
     voice: {
       name: 'it-IT-RinaldoNeural',
     },
+    id: 'it-IT-RinaldoNeural',
+    displayName: 'Rinaldo',
+    locale: 'it-IT',
   },
   ['iu-cans-ca-siqiniqneural']: {
     voice: {
       name: 'iu-Cans-CA-SiqiniqNeural',
     },
+    id: 'iu-Cans-CA-SiqiniqNeural',
+    displayName: 'Siqiniq',
+    locale: 'iu-Cans-CA',
   },
   ['iu-cans-ca-taqqiqneural']: {
     voice: {
       name: 'iu-Cans-CA-TaqqiqNeural',
     },
+    id: 'iu-Cans-CA-TaqqiqNeural',
+    displayName: 'Taqqiq',
+    locale: 'iu-Cans-CA',
   },
   ['iu-latn-ca-siqiniqneural']: {
     voice: {
       name: 'iu-Latn-CA-SiqiniqNeural',
     },
+    id: 'iu-Latn-CA-SiqiniqNeural',
+    displayName: 'Siqiniq',
+    locale: 'iu-Latn-CA',
   },
   ['iu-latn-ca-taqqiqneural']: {
     voice: {
       name: 'iu-Latn-CA-TaqqiqNeural',
     },
+    id: 'iu-Latn-CA-TaqqiqNeural',
+    displayName: 'Taqqiq',
+    locale: 'iu-Latn-CA',
   },
   ['ja-jp-aoineural']: {
     voice: {
       name: 'ja-JP-AoiNeural',
     },
+    id: 'ja-JP-AoiNeural',
+    displayName: 'Aoi',
+    locale: 'ja-JP',
   },
   ['ja-jp-daichineural']: {
     voice: {
       name: 'ja-JP-DaichiNeural',
     },
+    id: 'ja-JP-DaichiNeural',
+    displayName: 'Daichi',
+    locale: 'ja-JP',
   },
   ['ja-jp-keitaneural']: {
     voice: {
       name: 'ja-JP-KeitaNeural',
     },
+    id: 'ja-JP-KeitaNeural',
+    displayName: 'Keita',
+    locale: 'ja-JP',
   },
   ['ja-jp-mayuneural']: {
     voice: {
       name: 'ja-JP-MayuNeural',
     },
+    id: 'ja-JP-MayuNeural',
+    displayName: 'Mayu',
+    locale: 'ja-JP',
   },
   ['ja-jp-nanamineural']: {
     voice: {
       name: 'ja-JP-NanamiNeural',
     },
+    id: 'ja-JP-NanamiNeural',
+    displayName: 'Nanami',
+    locale: 'ja-JP',
   },
   ['ja-jp-naokineural']: {
     voice: {
       name: 'ja-JP-NaokiNeural',
     },
+    id: 'ja-JP-NaokiNeural',
+    displayName: 'Naoki',
+    locale: 'ja-JP',
   },
   ['ja-jp-shiorineural']: {
     voice: {
       name: 'ja-JP-ShioriNeural',
     },
+    id: 'ja-JP-ShioriNeural',
+    displayName: 'Shiori',
+    locale: 'ja-JP',
   },
   ['jv-id-dimasneural']: {
     voice: {
       name: 'jv-ID-DimasNeural',
     },
+    id: 'jv-ID-DimasNeural',
+    displayName: 'Dimas',
+    locale: 'jv-ID',
   },
   ['jv-id-sitineural']: {
     voice: {
       name: 'jv-ID-SitiNeural',
     },
+    id: 'jv-ID-SitiNeural',
+    displayName: 'Siti',
+    locale: 'jv-ID',
   },
   ['ka-ge-ekaneural']: {
     voice: {
       name: 'ka-GE-EkaNeural',
     },
+    id: 'ka-GE-EkaNeural',
+    displayName: 'Eka',
+    locale: 'ka-GE',
   },
   ['ka-ge-giorgineural']: {
     voice: {
       name: 'ka-GE-GiorgiNeural',
     },
+    id: 'ka-GE-GiorgiNeural',
+    displayName: 'Giorgi',
+    locale: 'ka-GE',
   },
   ['kk-kz-aigulneural']: {
     voice: {
       name: 'kk-KZ-AigulNeural',
     },
+    id: 'kk-KZ-AigulNeural',
+    displayName: 'Aigul',
+    locale: 'kk-KZ',
   },
   ['kk-kz-dauletneural']: {
     voice: {
       name: 'kk-KZ-DauletNeural',
     },
+    id: 'kk-KZ-DauletNeural',
+    displayName: 'Daulet',
+    locale: 'kk-KZ',
   },
   ['km-kh-pisethneural']: {
     voice: {
       name: 'km-KH-PisethNeural',
     },
+    id: 'km-KH-PisethNeural',
+    displayName: 'Piseth',
+    locale: 'km-KH',
   },
   ['km-kh-sreymomneural']: {
     voice: {
       name: 'km-KH-SreymomNeural',
     },
+    id: 'km-KH-SreymomNeural',
+    displayName: 'Sreymom',
+    locale: 'km-KH',
   },
   ['kn-in-gaganneural']: {
     voice: {
       name: 'kn-IN-GaganNeural',
     },
+    id: 'kn-IN-GaganNeural',
+    displayName: 'Gagan',
+    locale: 'kn-IN',
   },
   ['kn-in-sapnaneural']: {
     voice: {
       name: 'kn-IN-SapnaNeural',
     },
+    id: 'kn-IN-SapnaNeural',
+    displayName: 'Sapna',
+    locale: 'kn-IN',
   },
   ['ko-kr-bongjinneural']: {
     voice: {
       name: 'ko-KR-BongJinNeural',
     },
+    id: 'ko-KR-BongJinNeural',
+    displayName: 'BongJin',
+    locale: 'ko-KR',
   },
   ['ko-kr-gookminneural']: {
     voice: {
       name: 'ko-KR-GookMinNeural',
     },
+    id: 'ko-KR-GookMinNeural',
+    displayName: 'GookMin',
+    locale: 'ko-KR',
   },
   ['ko-kr-hyunsumultilingualneural']: {
     voice: {
       name: 'ko-KR-HyunsuMultilingualNeural',
     },
+    id: 'ko-KR-HyunsuMultilingualNeural',
+    displayName: 'Hyunsu Multilingual',
+    locale: 'ko-KR',
   },
   ['ko-kr-hyunsuneural']: {
     voice: {
       name: 'ko-KR-HyunsuNeural',
     },
+    id: 'ko-KR-HyunsuNeural',
+    displayName: 'Hyunsu',
+    locale: 'ko-KR',
   },
   ['ko-kr-injoonneural']: {
     voice: {
       name: 'ko-KR-InJoonNeural',
     },
+    id: 'ko-KR-InJoonNeural',
+    displayName: 'InJoon',
+    locale: 'ko-KR',
   },
   ['ko-kr-jiminneural']: {
     voice: {
       name: 'ko-KR-JiMinNeural',
     },
+    id: 'ko-KR-JiMinNeural',
+    displayName: 'JiMin',
+    locale: 'ko-KR',
   },
   ['ko-kr-seohyeonneural']: {
     voice: {
       name: 'ko-KR-SeoHyeonNeural',
     },
+    id: 'ko-KR-SeoHyeonNeural',
+    displayName: 'SeoHyeon',
+    locale: 'ko-KR',
   },
   ['ko-kr-soonbokneural']: {
     voice: {
       name: 'ko-KR-SoonBokNeural',
     },
+    id: 'ko-KR-SoonBokNeural',
+    displayName: 'SoonBok',
+    locale: 'ko-KR',
   },
   ['ko-kr-sunhineural']: {
     voice: {
       name: 'ko-KR-SunHiNeural',
     },
+    id: 'ko-KR-SunHiNeural',
+    displayName: 'Sun-Hi',
+    locale: 'ko-KR',
   },
   ['ko-kr-yujinneural']: {
     voice: {
       name: 'ko-KR-YuJinNeural',
     },
+    id: 'ko-KR-YuJinNeural',
+    displayName: 'YuJin',
+    locale: 'ko-KR',
   },
   ['lo-la-chanthavongneural']: {
     voice: {
       name: 'lo-LA-ChanthavongNeural',
     },
+    id: 'lo-LA-ChanthavongNeural',
+    displayName: 'Chanthavong',
+    locale: 'lo-LA',
   },
   ['lo-la-keomanyneural']: {
     voice: {
       name: 'lo-LA-KeomanyNeural',
     },
+    id: 'lo-LA-KeomanyNeural',
+    displayName: 'Keomany',
+    locale: 'lo-LA',
   },
   ['lt-lt-leonasneural']: {
     voice: {
       name: 'lt-LT-LeonasNeural',
     },
+    id: 'lt-LT-LeonasNeural',
+    displayName: 'Leonas',
+    locale: 'lt-LT',
   },
   ['lt-lt-onaneural']: {
     voice: {
       name: 'lt-LT-OnaNeural',
     },
+    id: 'lt-LT-OnaNeural',
+    displayName: 'Ona',
+    locale: 'lt-LT',
   },
   ['lv-lv-everitaneural']: {
     voice: {
       name: 'lv-LV-EveritaNeural',
     },
+    id: 'lv-LV-EveritaNeural',
+    displayName: 'Everita',
+    locale: 'lv-LV',
   },
   ['lv-lv-nilsneural']: {
     voice: {
       name: 'lv-LV-NilsNeural',
     },
+    id: 'lv-LV-NilsNeural',
+    displayName: 'Nils',
+    locale: 'lv-LV',
   },
   ['mk-mk-aleksandarneural']: {
     voice: {
       name: 'mk-MK-AleksandarNeural',
     },
+    id: 'mk-MK-AleksandarNeural',
+    displayName: 'Aleksandar',
+    locale: 'mk-MK',
   },
   ['mk-mk-marijaneural']: {
     voice: {
       name: 'mk-MK-MarijaNeural',
     },
+    id: 'mk-MK-MarijaNeural',
+    displayName: 'Marija',
+    locale: 'mk-MK',
   },
   ['ml-in-midhunneural']: {
     voice: {
       name: 'ml-IN-MidhunNeural',
     },
+    id: 'ml-IN-MidhunNeural',
+    displayName: 'Midhun',
+    locale: 'ml-IN',
   },
   ['ml-in-sobhananeural']: {
     voice: {
       name: 'ml-IN-SobhanaNeural',
     },
+    id: 'ml-IN-SobhanaNeural',
+    displayName: 'Sobhana',
+    locale: 'ml-IN',
   },
   ['mn-mn-bataaneural']: {
     voice: {
       name: 'mn-MN-BataaNeural',
     },
+    id: 'mn-MN-BataaNeural',
+    displayName: 'Bataa',
+    locale: 'mn-MN',
   },
   ['mn-mn-yesuineural']: {
     voice: {
       name: 'mn-MN-YesuiNeural',
     },
+    id: 'mn-MN-YesuiNeural',
+    displayName: 'Yesui',
+    locale: 'mn-MN',
   },
   ['mr-in-aarohineural']: {
     voice: {
       name: 'mr-IN-AarohiNeural',
     },
+    id: 'mr-IN-AarohiNeural',
+    displayName: 'Aarohi',
+    locale: 'mr-IN',
   },
   ['mr-in-manoharneural']: {
     voice: {
       name: 'mr-IN-ManoharNeural',
     },
+    id: 'mr-IN-ManoharNeural',
+    displayName: 'Manohar',
+    locale: 'mr-IN',
   },
   ['ms-my-osmanneural']: {
     voice: {
       name: 'ms-MY-OsmanNeural',
     },
+    id: 'ms-MY-OsmanNeural',
+    displayName: 'Osman',
+    locale: 'ms-MY',
   },
   ['ms-my-yasminneural']: {
     voice: {
       name: 'ms-MY-YasminNeural',
     },
+    id: 'ms-MY-YasminNeural',
+    displayName: 'Yasmin',
+    locale: 'ms-MY',
   },
   ['mt-mt-graceneural']: {
     voice: {
       name: 'mt-MT-GraceNeural',
     },
+    id: 'mt-MT-GraceNeural',
+    displayName: 'Grace',
+    locale: 'mt-MT',
   },
   ['mt-mt-josephneural']: {
     voice: {
       name: 'mt-MT-JosephNeural',
     },
+    id: 'mt-MT-JosephNeural',
+    displayName: 'Joseph',
+    locale: 'mt-MT',
   },
   ['my-mm-nilarneural']: {
     voice: {
       name: 'my-MM-NilarNeural',
     },
+    id: 'my-MM-NilarNeural',
+    displayName: 'Nilar',
+    locale: 'my-MM',
   },
   ['my-mm-thihaneural']: {
     voice: {
       name: 'my-MM-ThihaNeural',
     },
+    id: 'my-MM-ThihaNeural',
+    displayName: 'Thiha',
+    locale: 'my-MM',
   },
   ['nb-no-finnneural']: {
     voice: {
       name: 'nb-NO-FinnNeural',
     },
+    id: 'nb-NO-FinnNeural',
+    displayName: 'Finn',
+    locale: 'nb-NO',
   },
   ['nb-no-iselinneural']: {
     voice: {
       name: 'nb-NO-IselinNeural',
     },
+    id: 'nb-NO-IselinNeural',
+    displayName: 'Iselin',
+    locale: 'nb-NO',
   },
   ['nb-no-pernilleneural']: {
     voice: {
       name: 'nb-NO-PernilleNeural',
     },
+    id: 'nb-NO-PernilleNeural',
+    displayName: 'Pernille',
+    locale: 'nb-NO',
   },
   ['ne-np-hemkalaneural']: {
     voice: {
       name: 'ne-NP-HemkalaNeural',
     },
+    id: 'ne-NP-HemkalaNeural',
+    displayName: 'Hemkala',
+    locale: 'ne-NP',
   },
   ['ne-np-sagarneural']: {
     voice: {
       name: 'ne-NP-SagarNeural',
     },
+    id: 'ne-NP-SagarNeural',
+    displayName: 'Sagar',
+    locale: 'ne-NP',
   },
   ['nl-be-arnaudneural']: {
     voice: {
       name: 'nl-BE-ArnaudNeural',
     },
+    id: 'nl-BE-ArnaudNeural',
+    displayName: 'Arnaud',
+    locale: 'nl-BE',
   },
   ['nl-be-denaneural']: {
     voice: {
       name: 'nl-BE-DenaNeural',
     },
+    id: 'nl-BE-DenaNeural',
+    displayName: 'Dena',
+    locale: 'nl-BE',
   },
   ['nl-nl-coletteneural']: {
     voice: {
       name: 'nl-NL-ColetteNeural',
     },
+    id: 'nl-NL-ColetteNeural',
+    displayName: 'Colette',
+    locale: 'nl-NL',
   },
   ['nl-nl-fennaneural']: {
     voice: {
       name: 'nl-NL-FennaNeural',
     },
+    id: 'nl-NL-FennaNeural',
+    displayName: 'Fenna',
+    locale: 'nl-NL',
   },
   ['nl-nl-maartenneural']: {
     voice: {
       name: 'nl-NL-MaartenNeural',
     },
+    id: 'nl-NL-MaartenNeural',
+    displayName: 'Maarten',
+    locale: 'nl-NL',
   },
   ['or-in-subhasinineural']: {
     voice: {
       name: 'or-IN-SubhasiniNeural',
     },
+    id: 'or-IN-SubhasiniNeural',
+    displayName: 'Subhasini',
+    locale: 'or-IN',
   },
   ['or-in-sukantneural']: {
     voice: {
       name: 'or-IN-SukantNeural',
     },
+    id: 'or-IN-SukantNeural',
+    displayName: 'Sukant',
+    locale: 'or-IN',
   },
   ['pa-in-ojasneural']: {
     voice: {
       name: 'pa-IN-OjasNeural',
     },
+    id: 'pa-IN-OjasNeural',
+    displayName: 'Ojas',
+    locale: 'pa-IN',
   },
   ['pa-in-vaanineural']: {
     voice: {
       name: 'pa-IN-VaaniNeural',
     },
+    id: 'pa-IN-VaaniNeural',
+    displayName: 'Vaani',
+    locale: 'pa-IN',
   },
   ['pl-pl-agnieszkaneural']: {
     voice: {
       name: 'pl-PL-AgnieszkaNeural',
     },
+    id: 'pl-PL-AgnieszkaNeural',
+    displayName: 'Agnieszka',
+    locale: 'pl-PL',
   },
   ['pl-pl-marekneural']: {
     voice: {
       name: 'pl-PL-MarekNeural',
     },
+    id: 'pl-PL-MarekNeural',
+    displayName: 'Marek',
+    locale: 'pl-PL',
   },
   ['pl-pl-zofianeural']: {
     voice: {
       name: 'pl-PL-ZofiaNeural',
     },
+    id: 'pl-PL-ZofiaNeural',
+    displayName: 'Zofia',
+    locale: 'pl-PL',
   },
   ['ps-af-gulnawazneural']: {
     voice: {
       name: 'ps-AF-GulNawazNeural',
     },
+    id: 'ps-AF-GulNawazNeural',
+    displayName: 'Gul Nawaz',
+    locale: 'ps-AF',
   },
   ['ps-af-latifaneural']: {
     voice: {
       name: 'ps-AF-LatifaNeural',
     },
+    id: 'ps-AF-LatifaNeural',
+    displayName: 'Latifa',
+    locale: 'ps-AF',
   },
   ['pt-br-antonioneural']: {
     voice: {
       name: 'pt-BR-AntonioNeural',
     },
+    id: 'pt-BR-AntonioNeural',
+    displayName: 'Antonio',
+    locale: 'pt-BR',
   },
   ['pt-br-brendaneural']: {
     voice: {
       name: 'pt-BR-BrendaNeural',
     },
+    id: 'pt-BR-BrendaNeural',
+    displayName: 'Brenda',
+    locale: 'pt-BR',
   },
   ['pt-br-donatoneural']: {
     voice: {
       name: 'pt-BR-DonatoNeural',
     },
+    id: 'pt-BR-DonatoNeural',
+    displayName: 'Donato',
+    locale: 'pt-BR',
   },
   ['pt-br-elzaneural']: {
     voice: {
       name: 'pt-BR-ElzaNeural',
     },
+    id: 'pt-BR-ElzaNeural',
+    displayName: 'Elza',
+    locale: 'pt-BR',
   },
   ['pt-br-fabioneural']: {
     voice: {
       name: 'pt-BR-FabioNeural',
     },
+    id: 'pt-BR-FabioNeural',
+    displayName: 'Fabio',
+    locale: 'pt-BR',
   },
   ['pt-br-franciscaneural']: {
     voice: {
       name: 'pt-BR-FranciscaNeural',
     },
+    id: 'pt-BR-FranciscaNeural',
+    displayName: 'Francisca',
+    locale: 'pt-BR',
   },
   ['pt-br-giovannaneural']: {
     voice: {
       name: 'pt-BR-GiovannaNeural',
     },
+    id: 'pt-BR-GiovannaNeural',
+    displayName: 'Giovanna',
+    locale: 'pt-BR',
   },
   ['pt-br-humbertoneural']: {
     voice: {
       name: 'pt-BR-HumbertoNeural',
     },
+    id: 'pt-BR-HumbertoNeural',
+    displayName: 'Humberto',
+    locale: 'pt-BR',
   },
   ['pt-br-julioneural']: {
     voice: {
       name: 'pt-BR-JulioNeural',
     },
+    id: 'pt-BR-JulioNeural',
+    displayName: 'Julio',
+    locale: 'pt-BR',
   },
   ['pt-br-leilaneural']: {
     voice: {
       name: 'pt-BR-LeilaNeural',
     },
+    id: 'pt-BR-LeilaNeural',
+    displayName: 'Leila',
+    locale: 'pt-BR',
   },
   ['pt-br-leticianeural']: {
     voice: {
       name: 'pt-BR-LeticiaNeural',
     },
+    id: 'pt-BR-LeticiaNeural',
+    displayName: 'Leticia',
+    locale: 'pt-BR',
   },
   ['pt-br-maceriomultilingualneural']: {
     voice: {
       name: 'pt-BR-MacerioMultilingualNeural',
     },
+    id: 'pt-BR-MacerioMultilingualNeural',
+    displayName: 'Macerio Multilingual',
+    locale: 'pt-BR',
   },
   ['pt-br-manuelaneural']: {
     voice: {
       name: 'pt-BR-ManuelaNeural',
     },
+    id: 'pt-BR-ManuelaNeural',
+    displayName: 'Manuela',
+    locale: 'pt-BR',
   },
   ['pt-br-nicolauneural']: {
     voice: {
       name: 'pt-BR-NicolauNeural',
     },
+    id: 'pt-BR-NicolauNeural',
+    displayName: 'Nicolau',
+    locale: 'pt-BR',
   },
   ['pt-br-thalitamultilingualneural']: {
     voice: {
       name: 'pt-BR-ThalitaMultilingualNeural',
     },
+    id: 'pt-BR-ThalitaMultilingualNeural',
+    displayName: 'Thalita Multilingual',
+    locale: 'pt-BR',
   },
   ['pt-br-thalitaneural']: {
     voice: {
       name: 'pt-BR-ThalitaNeural',
     },
+    id: 'pt-BR-ThalitaNeural',
+    displayName: 'Thalita',
+    locale: 'pt-BR',
   },
   ['pt-br-valerioneural']: {
     voice: {
       name: 'pt-BR-ValerioNeural',
     },
+    id: 'pt-BR-ValerioNeural',
+    displayName: 'Valerio',
+    locale: 'pt-BR',
   },
   ['pt-br-yaraneural']: {
     voice: {
       name: 'pt-BR-YaraNeural',
     },
+    id: 'pt-BR-YaraNeural',
+    displayName: 'Yara',
+    locale: 'pt-BR',
   },
   ['pt-pt-duarteneural']: {
     voice: {
       name: 'pt-PT-DuarteNeural',
     },
+    id: 'pt-PT-DuarteNeural',
+    displayName: 'Duarte',
+    locale: 'pt-PT',
   },
   ['pt-pt-fernandaneural']: {
     voice: {
       name: 'pt-PT-FernandaNeural',
     },
+    id: 'pt-PT-FernandaNeural',
+    displayName: 'Fernanda',
+    locale: 'pt-PT',
   },
   ['pt-pt-raquelneural']: {
     voice: {
       name: 'pt-PT-RaquelNeural',
     },
+    id: 'pt-PT-RaquelNeural',
+    displayName: 'Raquel',
+    locale: 'pt-PT',
   },
   ['ro-ro-alinaneural']: {
     voice: {
       name: 'ro-RO-AlinaNeural',
     },
+    id: 'ro-RO-AlinaNeural',
+    displayName: 'Alina',
+    locale: 'ro-RO',
   },
   ['ro-ro-emilneural']: {
     voice: {
       name: 'ro-RO-EmilNeural',
     },
+    id: 'ro-RO-EmilNeural',
+    displayName: 'Emil',
+    locale: 'ro-RO',
   },
   ['ru-ru-dariyaneural']: {
     voice: {
       name: 'ru-RU-DariyaNeural',
     },
+    id: 'ru-RU-DariyaNeural',
+    displayName: 'Dariya',
+    locale: 'ru-RU',
   },
   ['ru-ru-dmitryneural']: {
     voice: {
       name: 'ru-RU-DmitryNeural',
     },
+    id: 'ru-RU-DmitryNeural',
+    displayName: 'Dmitry',
+    locale: 'ru-RU',
   },
   ['ru-ru-svetlananeural']: {
     voice: {
       name: 'ru-RU-SvetlanaNeural',
     },
+    id: 'ru-RU-SvetlanaNeural',
+    displayName: 'Svetlana',
+    locale: 'ru-RU',
   },
   ['si-lk-sameeraneural']: {
     voice: {
       name: 'si-LK-SameeraNeural',
     },
+    id: 'si-LK-SameeraNeural',
+    displayName: 'Sameera',
+    locale: 'si-LK',
   },
   ['si-lk-thilinineural']: {
     voice: {
       name: 'si-LK-ThiliniNeural',
     },
+    id: 'si-LK-ThiliniNeural',
+    displayName: 'Thilini',
+    locale: 'si-LK',
   },
   ['sk-sk-lukasneural']: {
     voice: {
       name: 'sk-SK-LukasNeural',
     },
+    id: 'sk-SK-LukasNeural',
+    displayName: 'Lukas',
+    locale: 'sk-SK',
   },
   ['sk-sk-viktorianeural']: {
     voice: {
       name: 'sk-SK-ViktoriaNeural',
     },
+    id: 'sk-SK-ViktoriaNeural',
+    displayName: 'Viktoria',
+    locale: 'sk-SK',
   },
   ['sl-si-petraneural']: {
     voice: {
       name: 'sl-SI-PetraNeural',
     },
+    id: 'sl-SI-PetraNeural',
+    displayName: 'Petra',
+    locale: 'sl-SI',
   },
   ['sl-si-rokneural']: {
     voice: {
       name: 'sl-SI-RokNeural',
     },
+    id: 'sl-SI-RokNeural',
+    displayName: 'Rok',
+    locale: 'sl-SI',
   },
   ['so-so-muuseneural']: {
     voice: {
       name: 'so-SO-MuuseNeural',
     },
+    id: 'so-SO-MuuseNeural',
+    displayName: 'Muuse',
+    locale: 'so-SO',
   },
   ['so-so-ubaxneural']: {
     voice: {
       name: 'so-SO-UbaxNeural',
     },
+    id: 'so-SO-UbaxNeural',
+    displayName: 'Ubax',
+    locale: 'so-SO',
   },
   ['sq-al-anilaneural']: {
     voice: {
       name: 'sq-AL-AnilaNeural',
     },
+    id: 'sq-AL-AnilaNeural',
+    displayName: 'Anila',
+    locale: 'sq-AL',
   },
   ['sq-al-ilirneural']: {
     voice: {
       name: 'sq-AL-IlirNeural',
     },
+    id: 'sq-AL-IlirNeural',
+    displayName: 'Ilir',
+    locale: 'sq-AL',
   },
   ['sr-latn-rs-nicholasneural']: {
     voice: {
       name: 'sr-Latn-RS-NicholasNeural',
     },
+    id: 'sr-Latn-RS-NicholasNeural',
+    displayName: 'Nicholas',
+    locale: 'sr-Latn-RS',
   },
   ['sr-latn-rs-sophieneural']: {
     voice: {
       name: 'sr-Latn-RS-SophieNeural',
     },
+    id: 'sr-Latn-RS-SophieNeural',
+    displayName: 'Sophie',
+    locale: 'sr-Latn-RS',
   },
   ['sr-rs-nicholasneural']: {
     voice: {
       name: 'sr-RS-NicholasNeural',
     },
+    id: 'sr-RS-NicholasNeural',
+    displayName: 'Nicholas',
+    locale: 'sr-RS',
   },
   ['sr-rs-sophieneural']: {
     voice: {
       name: 'sr-RS-SophieNeural',
     },
+    id: 'sr-RS-SophieNeural',
+    displayName: 'Sophie',
+    locale: 'sr-RS',
   },
   ['su-id-jajangneural']: {
     voice: {
       name: 'su-ID-JajangNeural',
     },
+    id: 'su-ID-JajangNeural',
+    displayName: 'Jajang',
+    locale: 'su-ID',
   },
   ['su-id-tutineural']: {
     voice: {
       name: 'su-ID-TutiNeural',
     },
+    id: 'su-ID-TutiNeural',
+    displayName: 'Tuti',
+    locale: 'su-ID',
   },
   ['sv-se-hillevineural']: {
     voice: {
       name: 'sv-SE-HilleviNeural',
     },
+    id: 'sv-SE-HilleviNeural',
+    displayName: 'Hillevi',
+    locale: 'sv-SE',
   },
   ['sv-se-mattiasneural']: {
     voice: {
       name: 'sv-SE-MattiasNeural',
     },
+    id: 'sv-SE-MattiasNeural',
+    displayName: 'Mattias',
+    locale: 'sv-SE',
   },
   ['sv-se-sofieneural']: {
     voice: {
       name: 'sv-SE-SofieNeural',
     },
+    id: 'sv-SE-SofieNeural',
+    displayName: 'Sofie',
+    locale: 'sv-SE',
   },
   ['sw-ke-rafikineural']: {
     voice: {
       name: 'sw-KE-RafikiNeural',
     },
+    id: 'sw-KE-RafikiNeural',
+    displayName: 'Rafiki',
+    locale: 'sw-KE',
   },
   ['sw-ke-zurineural']: {
     voice: {
       name: 'sw-KE-ZuriNeural',
     },
+    id: 'sw-KE-ZuriNeural',
+    displayName: 'Zuri',
+    locale: 'sw-KE',
   },
   ['sw-tz-daudineural']: {
     voice: {
       name: 'sw-TZ-DaudiNeural',
     },
+    id: 'sw-TZ-DaudiNeural',
+    displayName: 'Daudi',
+    locale: 'sw-TZ',
   },
   ['sw-tz-rehemaneural']: {
     voice: {
       name: 'sw-TZ-RehemaNeural',
     },
+    id: 'sw-TZ-RehemaNeural',
+    displayName: 'Rehema',
+    locale: 'sw-TZ',
   },
   ['ta-in-pallavineural']: {
     voice: {
       name: 'ta-IN-PallaviNeural',
     },
+    id: 'ta-IN-PallaviNeural',
+    displayName: 'Pallavi',
+    locale: 'ta-IN',
   },
   ['ta-in-valluvarneural']: {
     voice: {
       name: 'ta-IN-ValluvarNeural',
     },
+    id: 'ta-IN-ValluvarNeural',
+    displayName: 'Valluvar',
+    locale: 'ta-IN',
   },
   ['ta-lk-kumarneural']: {
     voice: {
       name: 'ta-LK-KumarNeural',
     },
+    id: 'ta-LK-KumarNeural',
+    displayName: 'Kumar',
+    locale: 'ta-LK',
   },
   ['ta-lk-saranyaneural']: {
     voice: {
       name: 'ta-LK-SaranyaNeural',
     },
+    id: 'ta-LK-SaranyaNeural',
+    displayName: 'Saranya',
+    locale: 'ta-LK',
   },
   ['ta-my-kanineural']: {
     voice: {
       name: 'ta-MY-KaniNeural',
     },
+    id: 'ta-MY-KaniNeural',
+    displayName: 'Kani',
+    locale: 'ta-MY',
   },
   ['ta-my-suryaneural']: {
     voice: {
       name: 'ta-MY-SuryaNeural',
     },
+    id: 'ta-MY-SuryaNeural',
+    displayName: 'Surya',
+    locale: 'ta-MY',
   },
   ['ta-sg-anbuneural']: {
     voice: {
       name: 'ta-SG-AnbuNeural',
     },
+    id: 'ta-SG-AnbuNeural',
+    displayName: 'Anbu',
+    locale: 'ta-SG',
   },
   ['ta-sg-venbaneural']: {
     voice: {
       name: 'ta-SG-VenbaNeural',
     },
+    id: 'ta-SG-VenbaNeural',
+    displayName: 'Venba',
+    locale: 'ta-SG',
   },
   ['te-in-mohanneural']: {
     voice: {
       name: 'te-IN-MohanNeural',
     },
+    id: 'te-IN-MohanNeural',
+    displayName: 'Mohan',
+    locale: 'te-IN',
   },
   ['te-in-shrutineural']: {
     voice: {
       name: 'te-IN-ShrutiNeural',
     },
+    id: 'te-IN-ShrutiNeural',
+    displayName: 'Shruti',
+    locale: 'te-IN',
   },
   ['th-th-acharaneural']: {
     voice: {
       name: 'th-TH-AcharaNeural',
     },
+    id: 'th-TH-AcharaNeural',
+    displayName: 'Achara',
+    locale: 'th-TH',
   },
   ['th-th-niwatneural']: {
     voice: {
       name: 'th-TH-NiwatNeural',
     },
+    id: 'th-TH-NiwatNeural',
+    displayName: 'Niwat',
+    locale: 'th-TH',
   },
   ['th-th-premwadeeneural']: {
     voice: {
       name: 'th-TH-PremwadeeNeural',
     },
+    id: 'th-TH-PremwadeeNeural',
+    displayName: 'Premwadee',
+    locale: 'th-TH',
   },
   ['tr-tr-ahmetneural']: {
     voice: {
       name: 'tr-TR-AhmetNeural',
     },
+    id: 'tr-TR-AhmetNeural',
+    displayName: 'Ahmet',
+    locale: 'tr-TR',
   },
   ['tr-tr-emelneural']: {
     voice: {
       name: 'tr-TR-EmelNeural',
     },
+    id: 'tr-TR-EmelNeural',
+    displayName: 'Emel',
+    locale: 'tr-TR',
   },
   ['uk-ua-ostapneural']: {
     voice: {
       name: 'uk-UA-OstapNeural',
     },
+    id: 'uk-UA-OstapNeural',
+    displayName: 'Ostap',
+    locale: 'uk-UA',
   },
   ['uk-ua-polinaneural']: {
     voice: {
       name: 'uk-UA-PolinaNeural',
     },
+    id: 'uk-UA-PolinaNeural',
+    displayName: 'Polina',
+    locale: 'uk-UA',
   },
   ['ur-in-gulneural']: {
     voice: {
       name: 'ur-IN-GulNeural',
     },
+    id: 'ur-IN-GulNeural',
+    displayName: 'Gul',
+    locale: 'ur-IN',
   },
   ['ur-in-salmanneural']: {
     voice: {
       name: 'ur-IN-SalmanNeural',
     },
+    id: 'ur-IN-SalmanNeural',
+    displayName: 'Salman',
+    locale: 'ur-IN',
   },
   ['ur-pk-asadneural']: {
     voice: {
       name: 'ur-PK-AsadNeural',
     },
+    id: 'ur-PK-AsadNeural',
+    displayName: 'Asad',
+    locale: 'ur-PK',
   },
   ['ur-pk-uzmaneural']: {
     voice: {
       name: 'ur-PK-UzmaNeural',
     },
+    id: 'ur-PK-UzmaNeural',
+    displayName: 'Uzma',
+    locale: 'ur-PK',
   },
   ['uz-uz-madinaneural']: {
     voice: {
       name: 'uz-UZ-MadinaNeural',
     },
+    id: 'uz-UZ-MadinaNeural',
+    displayName: 'Madina',
+    locale: 'uz-UZ',
   },
   ['uz-uz-sardorneural']: {
     voice: {
       name: 'uz-UZ-SardorNeural',
     },
+    id: 'uz-UZ-SardorNeural',
+    displayName: 'Sardor',
+    locale: 'uz-UZ',
   },
   ['vi-vn-hoaimyneural']: {
     voice: {
       name: 'vi-VN-HoaiMyNeural',
     },
+    id: 'vi-VN-HoaiMyNeural',
+    displayName: 'HoaiMy',
+    locale: 'vi-VN',
   },
   ['vi-vn-namminhneural']: {
     voice: {
       name: 'vi-VN-NamMinhNeural',
     },
+    id: 'vi-VN-NamMinhNeural',
+    displayName: 'NamMinh',
+    locale: 'vi-VN',
   },
   ['wuu-cn-xiaotongneural']: {
     voice: {
       name: 'wuu-CN-XiaotongNeural',
     },
+    id: 'wuu-CN-XiaotongNeural',
+    displayName: 'Xiaotong',
+    locale: 'wuu-CN',
   },
   ['wuu-cn-yunzheneural']: {
     voice: {
       name: 'wuu-CN-YunzheNeural',
     },
+    id: 'wuu-CN-YunzheNeural',
+    displayName: 'Yunzhe',
+    locale: 'wuu-CN',
   },
   ['yue-cn-xiaominneural']: {
     voice: {
       name: 'yue-CN-XiaoMinNeural',
     },
+    id: 'yue-CN-XiaoMinNeural',
+    displayName: 'XiaoMin',
+    locale: 'yue-CN',
   },
   ['yue-cn-yunsongneural']: {
     voice: {
       name: 'yue-CN-YunSongNeural',
     },
+    id: 'yue-CN-YunSongNeural',
+    displayName: 'YunSong',
+    locale: 'yue-CN',
   },
   ['zh-cn-henan-yundengneural']: {
     voice: {
       name: 'zh-CN-henan-YundengNeural',
     },
+    id: 'zh-CN-henan-YundengNeural',
+    displayName: 'Yundeng',
+    locale: 'zh-CN-henan',
   },
   ['zh-cn-liaoning-xiaobeineural']: {
     voice: {
       name: 'zh-CN-liaoning-XiaobeiNeural',
     },
+    id: 'zh-CN-liaoning-XiaobeiNeural',
+    displayName: 'Xiaobei',
+    locale: 'zh-CN-liaoning',
   },
   ['zh-cn-shaanxi-xiaonineural']: {
     voice: {
       name: 'zh-CN-shaanxi-XiaoniNeural',
     },
+    id: 'zh-CN-shaanxi-XiaoniNeural',
+    displayName: 'Xiaoni',
+    locale: 'zh-CN-shaanxi',
   },
   ['zh-cn-shandong-yunxiangneural']: {
     voice: {
       name: 'zh-CN-shandong-YunxiangNeural',
     },
+    id: 'zh-CN-shandong-YunxiangNeural',
+    displayName: 'Yunxiang',
+    locale: 'zh-CN-shandong',
   },
   ['zh-cn-sichuan-yunxineural']: {
     voice: {
       name: 'zh-CN-sichuan-YunxiNeural',
     },
+    id: 'zh-CN-sichuan-YunxiNeural',
+    displayName: 'YunxiSichuan',
+    locale: 'zh-CN-sichuan',
   },
   ['zh-cn-xiaochenmultilingualneural']: {
     voice: {
       name: 'zh-CN-XiaochenMultilingualNeural',
     },
+    id: 'zh-CN-XiaochenMultilingualNeural',
+    displayName: 'Xiaochen Multilingual',
+    locale: 'zh-CN',
   },
   ['zh-cn-xiaochenneural']: {
     voice: {
       name: 'zh-CN-XiaochenNeural',
     },
+    id: 'zh-CN-XiaochenNeural',
+    displayName: 'Xiaochen',
+    locale: 'zh-CN',
   },
   ['zh-cn-xiaohanneural']: {
     voice: {
       name: 'zh-CN-XiaohanNeural',
     },
+    id: 'zh-CN-XiaohanNeural',
+    displayName: 'Xiaohan',
+    locale: 'zh-CN',
   },
   ['zh-cn-xiaomengneural']: {
     voice: {
       name: 'zh-CN-XiaomengNeural',
     },
+    id: 'zh-CN-XiaomengNeural',
+    displayName: 'Xiaomeng',
+    locale: 'zh-CN',
   },
   ['zh-cn-xiaomoneural']: {
     voice: {
       name: 'zh-CN-XiaomoNeural',
     },
+    id: 'zh-CN-XiaomoNeural',
+    displayName: 'Xiaomo',
+    locale: 'zh-CN',
   },
   ['zh-cn-xiaoqiuneural']: {
     voice: {
       name: 'zh-CN-XiaoqiuNeural',
     },
+    id: 'zh-CN-XiaoqiuNeural',
+    displayName: 'Xiaoqiu',
+    locale: 'zh-CN',
   },
   ['zh-cn-xiaorouneural']: {
     voice: {
       name: 'zh-CN-XiaorouNeural',
     },
+    id: 'zh-CN-XiaorouNeural',
+    displayName: 'Xiaorou',
+    locale: 'zh-CN',
   },
   ['zh-cn-xiaoruineural']: {
     voice: {
       name: 'zh-CN-XiaoruiNeural',
     },
+    id: 'zh-CN-XiaoruiNeural',
+    displayName: 'Xiaorui',
+    locale: 'zh-CN',
   },
   ['zh-cn-xiaoshuangneural']: {
     voice: {
       name: 'zh-CN-XiaoshuangNeural',
     },
+    id: 'zh-CN-XiaoshuangNeural',
+    displayName: 'Xiaoshuang',
+    locale: 'zh-CN',
   },
   ['zh-cn-xiaoxiaodialectsneural']: {
     voice: {
       name: 'zh-CN-XiaoxiaoDialectsNeural',
     },
+    id: 'zh-CN-XiaoxiaoDialectsNeural',
+    displayName: 'Xiaoxiao Dialects',
+    locale: 'zh-CN',
   },
   ['zh-cn-xiaoxiaomultilingualneural']: {
     voice: {
       name: 'zh-CN-XiaoxiaoMultilingualNeural',
     },
+    id: 'zh-CN-XiaoxiaoMultilingualNeural',
+    displayName: 'Xiaoxiao Multilingual',
+    locale: 'zh-CN',
   },
   ['zh-cn-xiaoxiaoneural']: {
     voice: {
       name: 'zh-CN-XiaoxiaoNeural',
     },
+    id: 'zh-CN-XiaoxiaoNeural',
+    displayName: 'Xiaoxiao',
+    locale: 'zh-CN',
   },
   ['zh-cn-xiaoyanneural']: {
     voice: {
       name: 'zh-CN-XiaoyanNeural',
     },
+    id: 'zh-CN-XiaoyanNeural',
+    displayName: 'Xiaoyan',
+    locale: 'zh-CN',
   },
   ['zh-cn-xiaoyineural']: {
     voice: {
       name: 'zh-CN-XiaoyiNeural',
     },
+    id: 'zh-CN-XiaoyiNeural',
+    displayName: 'Xiaoyi',
+    locale: 'zh-CN',
   },
   ['zh-cn-xiaoyouneural']: {
     voice: {
       name: 'zh-CN-XiaoyouNeural',
     },
+    id: 'zh-CN-XiaoyouNeural',
+    displayName: 'Xiaoyou',
+    locale: 'zh-CN',
   },
   ['zh-cn-xiaoyumultilingualneural']: {
     voice: {
       name: 'zh-CN-XiaoyuMultilingualNeural',
     },
+    id: 'zh-CN-XiaoyuMultilingualNeural',
+    displayName: 'Xiaoyu Multilingual',
+    locale: 'zh-CN',
   },
   ['zh-cn-xiaozhenneural']: {
     voice: {
       name: 'zh-CN-XiaozhenNeural',
     },
+    id: 'zh-CN-XiaozhenNeural',
+    displayName: 'Xiaozhen',
+    locale: 'zh-CN',
   },
   ['zh-cn-yunfengneural']: {
     voice: {
       name: 'zh-CN-YunfengNeural',
     },
+    id: 'zh-CN-YunfengNeural',
+    displayName: 'Yunfeng',
+    locale: 'zh-CN',
   },
   ['zh-cn-yunhaoneural']: {
     voice: {
       name: 'zh-CN-YunhaoNeural',
     },
+    id: 'zh-CN-YunhaoNeural',
+    displayName: 'Yunhao',
+    locale: 'zh-CN',
   },
   ['zh-cn-yunjianneural']: {
     voice: {
       name: 'zh-CN-YunjianNeural',
     },
+    id: 'zh-CN-YunjianNeural',
+    displayName: 'Yunjian',
+    locale: 'zh-CN',
   },
   ['zh-cn-yunjieneural']: {
     voice: {
       name: 'zh-CN-YunjieNeural',
     },
+    id: 'zh-CN-YunjieNeural',
+    displayName: 'Yunjie',
+    locale: 'zh-CN',
   },
   ['zh-cn-yunxianeural']: {
     voice: {
       name: 'zh-CN-YunxiaNeural',
     },
+    id: 'zh-CN-YunxiaNeural',
+    displayName: 'Yunxia',
+    locale: 'zh-CN',
   },
   ['zh-cn-yunxiaomultilingualneural']: {
     voice: {
       name: 'zh-CN-YunxiaoMultilingualNeural',
     },
+    id: 'zh-CN-YunxiaoMultilingualNeural',
+    displayName: 'Yunxiao Multilingual',
+    locale: 'zh-CN',
   },
   ['zh-cn-yunxineural']: {
     voice: {
       name: 'zh-CN-YunxiNeural',
     },
+    id: 'zh-CN-YunxiNeural',
+    displayName: 'Yunxi',
+    locale: 'zh-CN',
   },
   ['zh-cn-yunyangneural']: {
     voice: {
       name: 'zh-CN-YunyangNeural',
     },
+    id: 'zh-CN-YunyangNeural',
+    displayName: 'Yunyang',
+    locale: 'zh-CN',
   },
   ['zh-cn-yunyeneural']: {
     voice: {
       name: 'zh-CN-YunyeNeural',
     },
+    id: 'zh-CN-YunyeNeural',
+    displayName: 'Yunye',
+    locale: 'zh-CN',
   },
   ['zh-cn-yunyimultilingualneural']: {
     voice: {
       name: 'zh-CN-YunyiMultilingualNeural',
     },
+    id: 'zh-CN-YunyiMultilingualNeural',
+    displayName: 'Yunyi Multilingual',
+    locale: 'zh-CN',
   },
   ['zh-cn-yunzeneural']: {
     voice: {
       name: 'zh-CN-YunzeNeural',
     },
+    id: 'zh-CN-YunzeNeural',
+    displayName: 'Yunze',
+    locale: 'zh-CN',
   },
   ['zh-hk-hiugaaineural']: {
     voice: {
       name: 'zh-HK-HiuGaaiNeural',
     },
+    id: 'zh-HK-HiuGaaiNeural',
+    displayName: 'HiuGaai',
+    locale: 'zh-HK',
   },
   ['zh-hk-hiumaanneural']: {
     voice: {
       name: 'zh-HK-HiuMaanNeural',
     },
+    id: 'zh-HK-HiuMaanNeural',
+    displayName: 'HiuMaan',
+    locale: 'zh-HK',
   },
   ['zh-hk-wanlungneural']: {
     voice: {
       name: 'zh-HK-WanLungNeural',
     },
+    id: 'zh-HK-WanLungNeural',
+    displayName: 'WanLung',
+    locale: 'zh-HK',
   },
   ['zh-tw-hsiaochenneural']: {
     voice: {
       name: 'zh-TW-HsiaoChenNeural',
     },
+    id: 'zh-TW-HsiaoChenNeural',
+    displayName: 'HsiaoChen',
+    locale: 'zh-TW',
   },
   ['zh-tw-hsiaoyuneural']: {
     voice: {
       name: 'zh-TW-HsiaoYuNeural',
     },
+    id: 'zh-TW-HsiaoYuNeural',
+    displayName: 'HsiaoYu',
+    locale: 'zh-TW',
   },
   ['zh-tw-yunjheneural']: {
     voice: {
       name: 'zh-TW-YunJheNeural',
     },
+    id: 'zh-TW-YunJheNeural',
+    displayName: 'YunJhe',
+    locale: 'zh-TW',
   },
   ['zu-za-thandoneural']: {
     voice: {
       name: 'zu-ZA-ThandoNeural',
     },
+    id: 'zu-ZA-ThandoNeural',
+    displayName: 'Thando',
+    locale: 'zu-ZA',
   },
   ['zu-za-thembaneural']: {
     voice: {
       name: 'zu-ZA-ThembaNeural',
     },
+    id: 'zu-ZA-ThembaNeural',
+    displayName: 'Themba',
+    locale: 'zu-ZA',
   },
 };
