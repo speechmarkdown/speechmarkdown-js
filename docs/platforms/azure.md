@@ -8,7 +8,7 @@
 
 ## Speech Markdown formatter coverage
 
-Speech Markdown's `microsoft-azure` formatter provides comprehensive support for Azure's Text-to-Speech features, including automatic MSTTS namespace injection and extensive neural voice style support.
+The `microsoft-azure` formatter supports Azure Text-to-Speech features including automatic MSTTS namespace injection and neural voice styles.
 
 ### SSML Element Support Matrix
 
@@ -45,12 +45,12 @@ The following table shows which Azure SSML elements are supported by Speech Mark
 
 ### Core SSML Features
 
-- **Say-as conversions.** Speech Markdown forwards modifiers such as `address`, `fraction`, `ordinal`, `telephone`, `number`, and `characters` to `<say-as>` while automatically choosing `cardinal` or `digits` for numeric text.
-- **Dates and times.** The formatter emits `<say-as interpret-as="date">` and `<say-as interpret-as="time">` with Azure's default `ymd` and `hms12` formats when no explicit format is supplied.
-- **Pronunciation helpers.** `sub` and `ipa` modifiers become `<sub alias="…">` and `<phoneme alphabet="ipa" ph="…">`, letting authors control pronunciation directly from Speech Markdown.
-- **Prosody and whispering.** Rate, pitch, and volume modifiers augment `<prosody>` tags, and the `whisper` modifier approximates whispered delivery with `volume="x-soft"` and `rate="slow"` settings as recommended by Microsoft.
-- **Voice selection.** Inline `voice` modifiers add `<voice name="…">` tags for switching between Azure neural voices.
-- **Audio playback.** The `!audio("url")` syntax generates `<audio src="url">` tags for playing audio files.
+- **Say-as conversions:** `address`, `fraction`, `ordinal`, `telephone`, `number`, `characters` map to `<say-as>` with automatic `cardinal` or `digits` selection for numeric text
+- **Dates and times:** Default formats are `ymd` for dates and `hms12` for times
+- **Pronunciation:** `sub` and `ipa` modifiers generate `<sub alias="...">` and `<phoneme alphabet="ipa" ph="...">` tags
+- **Prosody:** Rate, pitch, and volume modifiers control `<prosody>` attributes
+- **Voice selection:** `voice` modifier generates `<voice name="...">` tags for switching between Azure neural voices
+- **Audio playback:** `!audio("url")` generates `<audio src="url">` tags
 
 ### Azure MSTTS Extensions
 
@@ -58,9 +58,9 @@ The following table shows which Azure SSML elements are supported by Speech Mark
 
 The formatter automatically detects when Azure-specific MSTTS tags are present in the generated SSML and injects the required `xmlns:mstts="https://www.w3.org/2001/mstts"` namespace declaration into the `<speak>` tag. This ensures valid SSML without manual intervention.
 
-#### Express-As Styles (33 styles supported)
+#### Express-As Styles
 
-Azure neural voices support emotional and scenario-specific speaking styles through the `mstts:express-as` element. Speech Markdown provides full support for all Azure express-as styles:
+Azure neural voices support 33 emotional and scenario-specific speaking styles through the `mstts:express-as` element.
 
 **Emotional Styles:**
 
@@ -103,27 +103,18 @@ Azure neural voices support emotional and scenario-specific speaking styles thro
 - `(text)[sports_commentary]` - Relaxed, interested sports broadcasting style
 - `(text)[sports_commentary_excited]` - Intensive, energetic sports broadcasting style
 
-**Style Degree (Intensity Control):**
+**Style Degree:**
 
-You can control the intensity of express-as styles using a numeric value between 0.01 and 2.0 (default is 1.0):
+Control style intensity with numeric values between 0.01 and 2.0 (default 1.0):
 
 ```markdown
 (This is slightly excited)[excited:"0.5"]
 (This is very excited)[excited:"1.8"]
 ```
 
-Generates:
+**Role Attribute:**
 
-```xml
-<speak xmlns:mstts="https://www.w3.org/2001/mstts">
-<mstts:express-as style="excited" styledegree="0.5">This is slightly excited</mstts:express-as>
-<mstts:express-as style="excited" styledegree="1.8">This is very excited</mstts:express-as>
-</speak>
-```
-
-**Role Attribute (Character Voices):**
-
-Azure supports the `role` attribute on `mstts:express-as` to adjust the voice to sound like different characters. You can combine style with role using semicolon-delimited syntax:
+Combine style with character voice roles using semicolon-delimited syntax:
 
 ```markdown
 (Hello there!)[excited;role:"Girl"]
@@ -131,32 +122,13 @@ Azure supports the `role` attribute on `mstts:express-as` to adjust the voice to
 (Bonjour!)[style:"friendly";role:"YoungAdultFemale"]
 ```
 
-Generates:
+Supported roles: `Girl`, `Boy`, `YoungAdultFemale`, `YoungAdultMale`, `OlderAdultFemale`, `OlderAdultMale`, `SeniorFemale`, `SeniorMale`
 
-```xml
-<speak xmlns:mstts="https://www.w3.org/2001/mstts">
-<mstts:express-as style="excited" role="Girl">Hello there!</mstts:express-as>
-<mstts:express-as style="excited" styledegree="1.5" role="Girl">Hello there!</mstts:express-as>
-<mstts:express-as style="friendly" role="YoungAdultFemale">Bonjour!</mstts:express-as>
-</speak>
-```
-
-**Supported Role Values:**
-
-- `Girl` - Child girl voice
-- `Boy` - Child boy voice
-- `YoungAdultFemale` - Young adult female voice
-- `YoungAdultMale` - Young adult male voice
-- `OlderAdultFemale` - Older adult female voice
-- `OlderAdultMale` - Older adult male voice
-- `SeniorFemale` - Senior female voice
-- `SeniorMale` - Senior male voice
-
-**Note:** Role support varies by voice. Check the [Azure voice gallery](https://learn.microsoft.com/azure/ai-services/speech-service/language-support?tabs=tts) for role availability per voice.
+Note: Role support varies by voice. Check the [Azure voice gallery](https://learn.microsoft.com/azure/ai-services/speech-service/language-support?tabs=tts) for availability.
 
 **Section-Level Styles:**
 
-Express-as styles can also be applied at the section level:
+Apply styles to entire sections:
 
 ```markdown
 #[excited]
@@ -164,189 +136,107 @@ This entire section is excited!
 Multiple sentences work too.
 ```
 
-Generates:
-
-```xml
-<speak xmlns:mstts="https://www.w3.org/2001/mstts">
-<mstts:express-as style="excited">
-This entire section is excited!
-Multiple sentences work too.
-</mstts:express-as>
-</speak>
-```
-
 ### Language Switching
 
-Azure supports switching languages or accents within speech using the `<lang xml:lang="locale">` element. Speech Markdown provides full support through the `lang` modifier:
+Switch languages or accents using the `lang` modifier:
 
 ```markdown
-In Paris, they pronounce it (Paris)[lang:"fr-FR"].
-```
-
-Generates:
-
-```xml
-<speak>
-In Paris, they pronounce it <lang xml:lang="fr-FR">Paris</lang>.
-</speak>
-```
-
-The `lang` modifier can also be used at the section level:
-
-```markdown
-#[voice:"Brian"][lang:"en-GB"]
+In Paris, they pronounce it (Paris)[lang:"fr-FR"]. #[voice:"Brian"][lang:"en-GB"]
 This section uses Brian's voice with a British accent. #[voice][lang]
 ```
 
-### Unsupported Features and Workarounds
+### Unsupported Features
 
-The following Azure SSML features are not currently supported by Speech Markdown but can be added via raw SSML passthrough:
+The following Azure SSML features are not supported by Speech Markdown. Use raw SSML passthrough for these features.
 
-#### 1. Role Attribute (Not Yet Supported)
+#### Multi-Speaker Dialog
 
-Azure supports role-play attributes on `mstts:express-as` to make voices imitate different personas:
+Azure multi-talker voices (e.g., `en-US-MultiTalker-Ava-Andrew:DragonHDLatestNeural`) support `mstts:dialog` and `mstts:turn` elements for conversational exchanges. Requires grammar extension.
 
-- `role="Girl"` - Voice imitates a girl
-- `role="Boy"` - Voice imitates a boy
-- `role="YoungAdultFemale"` - Voice imitates a young adult female
-- `role="YoungAdultMale"` - Voice imitates a young adult male
-- `role="OlderAdultFemale"` - Voice imitates an older adult female
-- `role="OlderAdultMale"` - Voice imitates an older adult male
-- `role="SeniorFemale"` - Voice imitates a senior female
-- `role="SeniorMale"` - Voice imitates a senior male
-
-**Why not supported:** Requires Speech Markdown syntax extension to support multiple attributes on the same tag (both `style` and `role`).
-
-**Workaround:** Use raw SSML passthrough.
-
-**Example SSML (manual):**
+Example:
 
 ```xml
-<speak xmlns:mstts="https://www.w3.org/2001/mstts">
-  <mstts:express-as style="cheerful" role="YoungAdultFemale">
-    I'm speaking in a cheerful young adult female voice!
-  </mstts:express-as>
-</speak>
-```
-
-#### 2. Multi-Speaker Dialog (Not Yet Supported)
-
-Azure's multi-talker voices (e.g., `en-US-MultiTalker-Ava-Andrew:DragonHDLatestNeural`) support conversational exchanges using `mstts:dialog` and `mstts:turn` elements.
-
-**Why not supported:** Requires Speech Markdown grammar extension for dialog syntax.
-
-**Workaround:** Use raw SSML passthrough.
-
-**Example SSML (manual):**
-
-```xml
-<speak version='1.0' xmlns='http://www.w3.org/2001/10/synthesis'
-       xmlns:mstts='https://www.w3.org/2001/mstts' xml:lang='en-US'>
+<speak xmlns:mstts='https://www.w3.org/2001/mstts'>
   <voice name='en-US-MultiTalker-Ava-Andrew:DragonHDLatestNeural'>
     <mstts:dialog>
-      <mstts:turn speaker="ava">Hello, Andrew! How's your day going?</mstts:turn>
-      <mstts:turn speaker="andrew">Hey Ava! It's been great, just exploring some AI advancements.</mstts:turn>
-      <mstts:turn speaker="ava">That sounds fascinating! Tell me more.</mstts:turn>
+      <mstts:turn speaker="ava">Hello, Andrew!</mstts:turn>
+      <mstts:turn speaker="andrew">Hey Ava!</mstts:turn>
     </mstts:dialog>
   </voice>
 </speak>
 ```
 
-#### 3. Advanced MSTTS Features (Not Implemented)
+#### Advanced MSTTS Features
 
-The following advanced Azure MSTTS features are not implemented in Speech Markdown:
+Not implemented. Use raw SSML passthrough:
 
-- **`<mstts:silence>`** - Precise silence control
-  - **Workaround:** Use `[break:"time"]` for pauses, or raw SSML passthrough
-- **`<mstts:backgroundaudio>`** - Background audio with fade in/out
-  - **Workaround:** Use raw SSML passthrough
-- **`<mstts:viseme>`** - Viseme output for lip-sync
-  - **Workaround:** Use raw SSML passthrough
-- **`<mstts:audioduration>`** - Audio duration control
-  - **Workaround:** Use raw SSML passthrough
-- **`<mstts:ttsembedding>`** - Custom voice embedding
-  - **Workaround:** Use raw SSML passthrough
-- **`<mstts:voiceconversion>`** - Voice conversion
-  - **Workaround:** Use raw SSML passthrough
+- `<mstts:silence>` - Precise silence control (use `[break:"time"]` as alternative)
+- `<mstts:backgroundaudio>` - Background audio with fade in/out
+- `<mstts:viseme>` - Viseme output for lip-sync
+- `<mstts:audioduration>` - Audio duration control
+- `<mstts:ttsembedding>` - Custom voice embedding
+- `<mstts:voiceconversion>` - Voice conversion
 
-#### 4. Other W3C SSML Elements (Not Implemented)
+#### Other W3C SSML Elements
 
-- **`<lexicon>`** - Custom pronunciation lexicons
-  - **Workaround:** Use raw SSML passthrough or `[ipa:"pronunciation"]` for individual words
-- **`<math>`** - MathML content
-  - **Workaround:** Use raw SSML passthrough
-- **`<s>`** - Sentence boundaries
-  - **Workaround:** Use punctuation or raw SSML passthrough
+Not implemented. Use raw SSML passthrough:
 
-#### 6. Disabled Say-As Types
+- `<lexicon>` - Custom pronunciation lexicons (use `[ipa:"pronunciation"]` for individual words)
+- `<math>` - MathML content
+- `<s>` - Sentence boundaries (use punctuation)
 
-The following `say-as` interpret-as types are explicitly disabled for Azure:
+#### Disabled Say-As Types
 
-- **`expletive`** - Bleep out profanity
-- **`interjection`** - Interjection pronunciation
-- **`unit`** - Unit pronunciation
+The following `say-as` types are disabled because Azure does not support them:
 
-**Why disabled:** These are not part of Azure's SSML specification.
+- `expletive` - Bleep out profanity
+- `interjection` - Interjection pronunciation
+- `unit` - Unit pronunciation
 
-**Workaround:** Use raw SSML passthrough if needed, though Azure may not support these types.
-
-## Feature Comparison with Other Platforms
+## Platform Comparison
 
 ### Azure vs Amazon Alexa
 
-**Azure Advantages:**
+**Azure:**
 
-- **33 express-as styles** vs Alexa's 2 emotions (excited, disappointed)
-- **Numeric style intensity control** (0.01-2.0) vs Alexa's 3 levels (low, medium, high)
-- **Automatic namespace injection** - no manual SSML editing required
-- **More emotional variety** - includes fearful, empathetic, hopeful, terrified, gentle, serious, depressed, embarrassed, disgruntled, envious, affectionate
-- **Scenario-specific styles** - assistant, chat, customerservice, poetry-reading, narration-professional, narration-relaxed, documentary-narration, advertisement_upbeat, sports_commentary, sports_commentary_excited
-- **Multi-speaker dialog support** - mstts:dialog and mstts:turn for conversational exchanges (requires raw SSML)
-- **Role-play attributes** - 8 role options for voice persona changes (requires raw SSML)
+- 33 express-as styles vs Alexa's 2 emotions (excited, disappointed)
+- Numeric style intensity (0.01-2.0) vs Alexa's 3 levels (low, medium, high)
+- 8 role attributes for character voices
+- Multi-speaker dialog support (mstts:dialog)
+- Automatic namespace injection
 
-**Alexa Advantages:**
+**Alexa:**
 
-- `amazon:effect` for whisper (Azure uses prosody approximation)
+- `amazon:effect` for whisper
 - `amazon:domain` for music and news long-form content
 - `amazon:auto-breaths` and `amazon:breath` for natural pauses
 - Speechcons and interjections
 
-**Parity:**
+**Both:**
 
-- Both support standard SSML (say-as, prosody, phoneme, sub, break)
-- Both support voice selection
-- Both support newscaster/news style
-- Both support excited and disappointed emotions
-- Both support language switching
+- Standard SSML (say-as, prosody, phoneme, sub, break)
+- Voice selection and language switching
+- Newscaster/news style
 
 ### Azure vs Google Assistant
 
-**Azure Advantages:**
+**Azure:**
 
-- **33 express-as styles** vs Google's 0 emotional styles
-- **Automatic namespace injection**
-- **Rich emotional expression** not available in Google Assistant
-- **Scenario-specific styles** for various use cases
-- **Multi-speaker dialog support** (requires raw SSML)
-- **Role-play attributes** (requires raw SSML)
+- 33 express-as styles vs Google's 0 emotional styles
+- 8 role attributes for character voices
+- Multi-speaker dialog support
+- Automatic namespace injection
 
-**Google Advantages:**
+**Google:**
 
-- Simpler SSML dialect (fewer platform-specific extensions)
+- Simpler SSML dialect
 - Better cross-platform compatibility
 
-**Parity:**
+**Both:**
 
-- Both support standard SSML (say-as, prosody, phoneme, sub, break)
-- Both support voice selection
-- Both support language switching
+- Standard SSML (say-as, prosody, phoneme, sub, break)
+- Voice selection and language switching
 
-### Summary
+## Voice Catalogue
 
-Azure's MSTTS extensions provide the **most comprehensive emotional and stylistic control** of any platform supported by Speech Markdown. With 33 express-as styles and numeric intensity control, Azure offers significantly more expressive capabilities than Amazon Alexa (2 emotions) or Google Assistant (0 emotions).
-
-The automatic namespace injection feature makes Azure MSTTS extensions seamless to use - the formatter automatically detects when MSTTS tags are needed and adds the required namespace declaration without manual intervention.
-
-## Voice catalogue
-
-The generated catalogue `data/azure-voices.md` is produced by `npm run docs:update-voices` when either `AZURE_SPEECH_KEY`/`AZURE_SPEECH_REGION` or `MICROSOFT_TOKEN`/`MICROSOFT_REGION` environment variables are supplied. The file lists every voice name, locale, gender, type, style, and sample rate returned by the Speech Service REST API so that formatter validations can remain current.
+Run `npm run docs:update-voices` with `AZURE_SPEECH_KEY`/`AZURE_SPEECH_REGION` or `MICROSOFT_TOKEN`/`MICROSOFT_REGION` environment variables to generate `data/azure-voices.md`. This file lists voice names, locales, genders, types, styles, and sample rates from the Speech Service REST API.
