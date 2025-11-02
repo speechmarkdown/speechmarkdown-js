@@ -11,6 +11,8 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
     this.modifierKeyToSsmlTagMappings.interjection = null;
     this.modifierKeyToSsmlTagMappings.whisper = 'prosody';
     this.modifierKeyToSsmlTagMappings.lang = 'lang';
+    // Map style modifier to google:style tag
+    this.modifierKeyToSsmlTagMappings.style = 'google:style';
   }
 
   // tslint:disable-next-line: max-func-body-length
@@ -96,6 +98,10 @@ export class GoogleAssistantSsmlFormatter extends SsmlFormatterBase {
 
             case 'voice':
               textModifierObject.voiceTag(key, value);
+              break;
+
+            case 'style':
+              textModifierObject.tag(ssmlTag, { name: value });
               break;
 
             default: {

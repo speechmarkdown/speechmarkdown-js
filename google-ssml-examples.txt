@@ -1,0 +1,74 @@
+Full
+
+<speak>
+  Here are <say-as interpret-as="characters">SSML</say-as> samples.
+  I can pause <break time="3s"/>.
+  I can play a sound
+  <audio src="https://www.example.com/MY_MP3_FILE.mp3">didn't get your MP3 audio file</audio>.
+  I can speak in cardinals. Your number is <say-as interpret-as="cardinal">10</say-as>.
+  Or I can speak in ordinals. You are <say-as interpret-as="ordinal">10</say-as> in line.
+  Or I can even speak in digits. The digits for ten are <say-as interpret-as="characters">10</say-as>.
+  I can also substitute phrases, like the <sub alias="World Wide Web Consortium">W3C</sub>.
+  Finally, I can speak a paragraph with two sentences.
+</speak>
+
+
+dates
+
+<speak>
+  <say-as interpret-as="date" format="yyyymmdd" detail="1">
+    1960-09-10
+  </say-as>
+</speak>
+
+expletive
+
+<speak>
+  <say-as interpret-as="expletive">censor this</say-as>
+</speak>
+
+Audio attachment
+
+<speak>
+  <audio src="cat_purr_close.ogg">
+    <desc>a cat purring</desc>
+    PURR (sound didn't load)
+  </audio>
+</speak>
+
+Marks
+
+<speak>
+Go from <mark name="here"/> here, to <mark name="there"/> there!
+</speak>
+
+
+Prosody
+
+<prosody rate="slow" pitch="-2st">Can you hear me now?</prosody>
+
+Emphasis
+
+<emphasis level="moderate">This is an important announcement</emphasis>
+
+
+IPA
+
+  <phoneme alphabet="ipa" ph="ˌmænɪˈtoʊbə">manitoba</phoneme>
+  <phoneme alphabet="x-sampa" ph='m@"hA:g@%ni:'>mahogany</phoneme>
+  
+
+Voice tags
+
+<speak>And then she asked, <voice language="fr-FR" gender="female">qu'est-ce qui
+t'amène ici</voice><break time="250ms"/> in her sweet and gentle voice.</speak>
+
+Langs in a speak
+
+
+<speak>The french word for cat is <lang xml:lang="fr-FR">chat</lang></speak>
+
+
+Style
+
+<speak><google:style name="lively">Hello I'm so happy today!</google:style></speak>
