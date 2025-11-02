@@ -8706,4 +8706,259 @@ export const MICROSOFT_AZURE_TTS_VOICES: Record<string, any> = {
     displayName: 'Zuri',
     locale: 'sw-KE',
   },
+  // HD (High Definition) voices - manually added
+  // Users write with dashes (e.g., en-US-Ava-DragonHDLatestNeural)
+  // Formatter converts to colon syntax for SSML (e.g., en-US-Ava:DragonHDLatestNeural)
+  ['de-de-florian-dragonhdlatestneural']: {
+    voice: {
+      name: 'de-DE-Florian:DragonHDLatestNeural',
+    },
+    id: 'de-DE-Florian-DragonHDLatestNeural',
+    displayName: 'Florian HD',
+    locale: 'de-DE',
+    isHD: true,
+  },
+  ['de-de-seraphina-dragonhdlatestneural']: {
+    voice: {
+      name: 'de-DE-Seraphina:DragonHDLatestNeural',
+    },
+    id: 'de-DE-Seraphina-DragonHDLatestNeural',
+    displayName: 'Seraphina HD',
+    locale: 'de-DE',
+    isHD: true,
+  },
+  ['en-us-adam-dragonhdlatestneural']: {
+    voice: {
+      name: 'en-US-Adam:DragonHDLatestNeural',
+    },
+    id: 'en-US-Adam-DragonHDLatestNeural',
+    displayName: 'Adam HD',
+    locale: 'en-US',
+    isHD: true,
+  },
+  ['en-us-alloy-dragonhdlatestneural']: {
+    voice: {
+      name: 'en-US-Alloy:DragonHDLatestNeural',
+    },
+    id: 'en-US-Alloy-DragonHDLatestNeural',
+    displayName: 'Alloy HD',
+    locale: 'en-US',
+    isHD: true,
+  },
+  ['en-us-andrew-dragonhdlatestneural']: {
+    voice: {
+      name: 'en-US-Andrew:DragonHDLatestNeural',
+    },
+    id: 'en-US-Andrew-DragonHDLatestNeural',
+    displayName: 'Andrew HD',
+    locale: 'en-US',
+    isHD: true,
+  },
+  ['en-us-andrew2-dragonhdlatestneural']: {
+    voice: {
+      name: 'en-US-Andrew2:DragonHDLatestNeural',
+    },
+    id: 'en-US-Andrew2-DragonHDLatestNeural',
+    displayName: 'Andrew2 HD',
+    locale: 'en-US',
+    isHD: true,
+  },
+  ['en-us-andrew3-dragonhdlatestneural']: {
+    voice: {
+      name: 'en-US-Andrew3:DragonHDLatestNeural',
+    },
+    id: 'en-US-Andrew3-DragonHDLatestNeural',
+    displayName: 'Andrew3 HD',
+    locale: 'en-US',
+    isHD: true,
+  },
+  ['en-us-aria-dragonhdlatestneural']: {
+    voice: {
+      name: 'en-US-Aria:DragonHDLatestNeural',
+    },
+    id: 'en-US-Aria-DragonHDLatestNeural',
+    displayName: 'Aria HD',
+    locale: 'en-US',
+    isHD: true,
+  },
+  ['en-us-ava-dragonhdlatestneural']: {
+    voice: {
+      name: 'en-US-Ava:DragonHDLatestNeural',
+    },
+    id: 'en-US-Ava-DragonHDLatestNeural',
+    displayName: 'Ava HD',
+    locale: 'en-US',
+    isHD: true,
+  },
+  ['en-us-ava3-dragonhdlatestneural']: {
+    voice: {
+      name: 'en-US-Ava3:DragonHDLatestNeural',
+    },
+    id: 'en-US-Ava3-DragonHDLatestNeural',
+    displayName: 'Ava3 HD',
+    locale: 'en-US',
+    isHD: true,
+  },
+  ['en-us-brian-dragonhdlatestneural']: {
+    voice: {
+      name: 'en-US-Brian:DragonHDLatestNeural',
+    },
+    id: 'en-US-Brian-DragonHDLatestNeural',
+    displayName: 'Brian HD',
+    locale: 'en-US',
+    isHD: true,
+  },
+  ['en-us-davis-dragonhdlatestneural']: {
+    voice: {
+      name: 'en-US-Davis:DragonHDLatestNeural',
+    },
+    id: 'en-US-Davis-DragonHDLatestNeural',
+    displayName: 'Davis HD',
+    locale: 'en-US',
+    isHD: true,
+  },
+  ['en-us-emma-dragonhdlatestneural']: {
+    voice: {
+      name: 'en-US-Emma:DragonHDLatestNeural',
+    },
+    id: 'en-US-Emma-DragonHDLatestNeural',
+    displayName: 'Emma HD',
+    locale: 'en-US',
+    isHD: true,
+  },
+  ['en-us-emma2-dragonhdlatestneural']: {
+    voice: {
+      name: 'en-US-Emma2:DragonHDLatestNeural',
+    },
+    id: 'en-US-Emma2-DragonHDLatestNeural',
+    displayName: 'Emma2 HD',
+    locale: 'en-US',
+    isHD: true,
+  },
+  ['en-us-jenny-dragonhdlatestneural']: {
+    voice: {
+      name: 'en-US-Jenny:DragonHDLatestNeural',
+    },
+    id: 'en-US-Jenny-DragonHDLatestNeural',
+    displayName: 'Jenny HD',
+    locale: 'en-US',
+    isHD: true,
+  },
+  ['en-us-multitalker-ava-andrew-dragonhdlatestneural']: {
+    voice: {
+      name: 'en-US-MultiTalker-Ava-Andrew:DragonHDLatestNeural',
+    },
+    id: 'en-US-MultiTalker-Ava-Andrew-DragonHDLatestNeural',
+    displayName: 'MultiTalker Ava Andrew HD',
+    locale: 'en-US',
+    isHD: true,
+  },
+  ['en-us-nova-dragonhdlatestneural']: {
+    voice: {
+      name: 'en-US-Nova:DragonHDLatestNeural',
+    },
+    id: 'en-US-Nova-DragonHDLatestNeural',
+    displayName: 'Nova HD',
+    locale: 'en-US',
+    isHD: true,
+  },
+  ['en-us-phoebe-dragonhdlatestneural']: {
+    voice: {
+      name: 'en-US-Phoebe:DragonHDLatestNeural',
+    },
+    id: 'en-US-Phoebe-DragonHDLatestNeural',
+    displayName: 'Phoebe HD',
+    locale: 'en-US',
+    isHD: true,
+  },
+  ['en-us-serena-dragonhdlatestneural']: {
+    voice: {
+      name: 'en-US-Serena:DragonHDLatestNeural',
+    },
+    id: 'en-US-Serena-DragonHDLatestNeural',
+    displayName: 'Serena HD',
+    locale: 'en-US',
+    isHD: true,
+  },
+  ['en-us-steffan-dragonhdlatestneural']: {
+    voice: {
+      name: 'en-US-Steffan:DragonHDLatestNeural',
+    },
+    id: 'en-US-Steffan-DragonHDLatestNeural',
+    displayName: 'Steffan HD',
+    locale: 'en-US',
+    isHD: true,
+  },
+  ['es-es-tristan-dragonhdlatestneural']: {
+    voice: {
+      name: 'es-ES-Tristan:DragonHDLatestNeural',
+    },
+    id: 'es-ES-Tristan-DragonHDLatestNeural',
+    displayName: 'Tristan HD',
+    locale: 'es-ES',
+    isHD: true,
+  },
+  ['es-es-ximena-dragonhdlatestneural']: {
+    voice: {
+      name: 'es-ES-Ximena:DragonHDLatestNeural',
+    },
+    id: 'es-ES-Ximena-DragonHDLatestNeural',
+    displayName: 'Ximena HD',
+    locale: 'es-ES',
+    isHD: true,
+  },
+  ['fr-fr-remy-dragonhdlatestneural']: {
+    voice: {
+      name: 'fr-FR-Remy:DragonHDLatestNeural',
+    },
+    id: 'fr-FR-Remy-DragonHDLatestNeural',
+    displayName: 'Remy HD',
+    locale: 'fr-FR',
+    isHD: true,
+  },
+  ['fr-fr-vivienne-dragonhdlatestneural']: {
+    voice: {
+      name: 'fr-FR-Vivienne:DragonHDLatestNeural',
+    },
+    id: 'fr-FR-Vivienne-DragonHDLatestNeural',
+    displayName: 'Vivienne HD',
+    locale: 'fr-FR',
+    isHD: true,
+  },
+  ['ja-jp-masaru-dragonhdlatestneural']: {
+    voice: {
+      name: 'ja-JP-Masaru:DragonHDLatestNeural',
+    },
+    id: 'ja-JP-Masaru-DragonHDLatestNeural',
+    displayName: 'Masaru HD',
+    locale: 'ja-JP',
+    isHD: true,
+  },
+  ['ja-jp-nanami-dragonhdlatestneural']: {
+    voice: {
+      name: 'ja-JP-Nanami:DragonHDLatestNeural',
+    },
+    id: 'ja-JP-Nanami-DragonHDLatestNeural',
+    displayName: 'Nanami HD',
+    locale: 'ja-JP',
+    isHD: true,
+  },
+  ['zh-cn-xiaochen-dragonhdlatestneural']: {
+    voice: {
+      name: 'zh-CN-Xiaochen:DragonHDLatestNeural',
+    },
+    id: 'zh-CN-Xiaochen-DragonHDLatestNeural',
+    displayName: 'Xiaochen HD',
+    locale: 'zh-CN',
+    isHD: true,
+  },
+  ['zh-cn-yunfan-dragonhdlatestneural']: {
+    voice: {
+      name: 'zh-CN-Yunfan:DragonHDLatestNeural',
+    },
+    id: 'zh-CN-Yunfan-DragonHDLatestNeural',
+    displayName: 'Yunfan HD',
+    locale: 'zh-CN',
+    isHD: true,
+  },
 };
