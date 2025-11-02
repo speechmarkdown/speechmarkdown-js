@@ -186,6 +186,7 @@ async function updateAzureVoices() {
 
   for (const voice of data) {
     const name = (voice.ShortName || voice.Name || '').trim();
+    const locale = (voice.Locale || '').trim();
 
     if (!name) {
       continue;
@@ -195,6 +196,9 @@ async function updateAzureVoices() {
       voice: {
         name,
       },
+      id: name,
+      displayName: voice.DisplayName || voice.LocalName || name,
+      locale,
     };
   }
 
@@ -229,6 +233,10 @@ async function updateGoogleVoices() {
 
   for (const voice of voices) {
     const name = (voice.name || '').trim();
+    const languageCodes =
+      voice.languageCodes && Array.isArray(voice.languageCodes)
+        ? voice.languageCodes
+        : [];
 
     if (!name) {
       continue;
@@ -238,6 +246,8 @@ async function updateGoogleVoices() {
       voice: {
         name,
       },
+      id: name,
+      languages: languageCodes,
     };
   }
 
@@ -282,6 +292,7 @@ async function updateWatsonVoices() {
 
   for (const voice of voices) {
     const name = (voice.name || '').trim();
+    const language = (voice.language || '').trim();
 
     if (!name) {
       continue;
@@ -291,6 +302,8 @@ async function updateWatsonVoices() {
       voice: {
         name,
       },
+      id: name,
+      language,
     };
   }
 
@@ -456,10 +469,26 @@ async function updatePollyVoices() {
     }
 
     const key = id.toLowerCase();
+    const languageCodes = [];
+
+    if (voice.LanguageCode) {
+      languageCodes.push(voice.LanguageCode);
+    }
+
+    if (
+      voice.AdditionalLanguageCodes &&
+      Array.isArray(voice.AdditionalLanguageCodes)
+    ) {
+      languageCodes.push(...voice.AdditionalLanguageCodes);
+    }
+
     const entry = {
       voice: {
         name: id,
       },
+      id,
+      displayName: voice.Name || id,
+      languages: languageCodes,
     };
 
     allVoices[key] = entry;

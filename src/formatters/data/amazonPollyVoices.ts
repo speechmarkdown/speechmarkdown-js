@@ -6,516 +6,825 @@ export const AMAZON_POLLY_ALL_VOICES: Record<string, any> = {
     voice: {
       name: 'Aditi',
     },
+    id: 'Aditi',
+    displayName: 'Aditi',
+    languages: ['en-IN', 'hi-IN'],
   },
   ['adriano']: {
     voice: {
       name: 'Adriano',
     },
+    id: 'Adriano',
+    displayName: 'Adriano',
+    languages: ['it-IT'],
   },
   ['alba']: {
     voice: {
       name: 'Alba',
     },
+    id: 'Alba',
+    displayName: 'Alba',
+    languages: ['es-ES'],
   },
   ['amy']: {
     voice: {
       name: 'Amy',
     },
+    id: 'Amy',
+    displayName: 'Amy',
+    languages: ['en-GB'],
   },
   ['andres']: {
     voice: {
       name: 'Andres',
     },
+    id: 'Andres',
+    displayName: 'Andrés',
+    languages: ['es-MX'],
   },
   ['aria']: {
     voice: {
       name: 'Aria',
     },
+    id: 'Aria',
+    displayName: 'Aria',
+    languages: ['en-NZ'],
   },
   ['arlet']: {
     voice: {
       name: 'Arlet',
     },
+    id: 'Arlet',
+    displayName: 'Arlet',
+    languages: ['ca-ES'],
   },
   ['arthur']: {
     voice: {
       name: 'Arthur',
     },
+    id: 'Arthur',
+    displayName: 'Arthur',
+    languages: ['en-GB'],
   },
   ['astrid']: {
     voice: {
       name: 'Astrid',
     },
+    id: 'Astrid',
+    displayName: 'Astrid',
+    languages: ['sv-SE'],
   },
   ['ayanda']: {
     voice: {
       name: 'Ayanda',
     },
+    id: 'Ayanda',
+    displayName: 'Ayanda',
+    languages: ['en-ZA'],
   },
   ['bianca']: {
     voice: {
       name: 'Bianca',
     },
+    id: 'Bianca',
+    displayName: 'Bianca',
+    languages: ['it-IT'],
   },
   ['brian']: {
     voice: {
       name: 'Brian',
     },
+    id: 'Brian',
+    displayName: 'Brian',
+    languages: ['en-GB'],
   },
   ['burcu']: {
     voice: {
       name: 'Burcu',
     },
+    id: 'Burcu',
+    displayName: 'Burcu',
+    languages: ['tr-TR'],
   },
   ['camila']: {
     voice: {
       name: 'Camila',
     },
+    id: 'Camila',
+    displayName: 'Camila',
+    languages: ['pt-BR'],
   },
   ['carla']: {
     voice: {
       name: 'Carla',
     },
+    id: 'Carla',
+    displayName: 'Carla',
+    languages: ['it-IT'],
   },
   ['carmen']: {
     voice: {
       name: 'Carmen',
     },
+    id: 'Carmen',
+    displayName: 'Carmen',
+    languages: ['ro-RO'],
   },
   ['celine']: {
     voice: {
       name: 'Celine',
     },
+    id: 'Celine',
+    displayName: 'Céline',
+    languages: ['fr-FR'],
   },
   ['chantal']: {
     voice: {
       name: 'Chantal',
     },
+    id: 'Chantal',
+    displayName: 'Chantal',
+    languages: ['fr-CA'],
   },
   ['conchita']: {
     voice: {
       name: 'Conchita',
     },
+    id: 'Conchita',
+    displayName: 'Conchita',
+    languages: ['es-ES'],
   },
   ['cristiano']: {
     voice: {
       name: 'Cristiano',
     },
+    id: 'Cristiano',
+    displayName: 'Cristiano',
+    languages: ['pt-PT'],
   },
   ['daniel']: {
     voice: {
       name: 'Daniel',
     },
+    id: 'Daniel',
+    displayName: 'Daniel',
+    languages: ['de-DE'],
   },
   ['danielle']: {
     voice: {
       name: 'Danielle',
     },
+    id: 'Danielle',
+    displayName: 'Danielle',
+    languages: ['en-US'],
   },
   ['dora']: {
     voice: {
       name: 'Dora',
     },
+    id: 'Dora',
+    displayName: 'Dóra',
+    languages: ['is-IS'],
   },
   ['elin']: {
     voice: {
       name: 'Elin',
     },
+    id: 'Elin',
+    displayName: 'Elin',
+    languages: ['sv-SE'],
   },
   ['emma']: {
     voice: {
       name: 'Emma',
     },
+    id: 'Emma',
+    displayName: 'Emma',
+    languages: ['en-GB'],
   },
   ['enrique']: {
     voice: {
       name: 'Enrique',
     },
+    id: 'Enrique',
+    displayName: 'Enrique',
+    languages: ['es-ES'],
   },
   ['ewa']: {
     voice: {
       name: 'Ewa',
     },
+    id: 'Ewa',
+    displayName: 'Ewa',
+    languages: ['pl-PL'],
   },
   ['filiz']: {
     voice: {
       name: 'Filiz',
     },
+    id: 'Filiz',
+    displayName: 'Filiz',
+    languages: ['tr-TR'],
   },
   ['gabrielle']: {
     voice: {
       name: 'Gabrielle',
     },
+    id: 'Gabrielle',
+    displayName: 'Gabrielle',
+    languages: ['fr-CA'],
   },
   ['geraint']: {
     voice: {
       name: 'Geraint',
     },
+    id: 'Geraint',
+    displayName: 'Geraint',
+    languages: ['en-GB-WLS'],
   },
   ['giorgio']: {
     voice: {
       name: 'Giorgio',
     },
+    id: 'Giorgio',
+    displayName: 'Giorgio',
+    languages: ['it-IT'],
   },
   ['gregory']: {
     voice: {
       name: 'Gregory',
     },
+    id: 'Gregory',
+    displayName: 'Gregory',
+    languages: ['en-US'],
   },
   ['gwyneth']: {
     voice: {
       name: 'Gwyneth',
     },
+    id: 'Gwyneth',
+    displayName: 'Gwyneth',
+    languages: ['cy-GB'],
   },
   ['hala']: {
     voice: {
       name: 'Hala',
     },
+    id: 'Hala',
+    displayName: 'Hala',
+    languages: ['ar-AE', 'arb'],
   },
   ['hannah']: {
     voice: {
       name: 'Hannah',
     },
+    id: 'Hannah',
+    displayName: 'Hannah',
+    languages: ['de-AT'],
   },
   ['hans']: {
     voice: {
       name: 'Hans',
     },
+    id: 'Hans',
+    displayName: 'Hans',
+    languages: ['de-DE'],
   },
   ['hiujin']: {
     voice: {
       name: 'Hiujin',
     },
+    id: 'Hiujin',
+    displayName: 'Hiujin',
+    languages: ['yue-CN'],
   },
   ['ida']: {
     voice: {
       name: 'Ida',
     },
+    id: 'Ida',
+    displayName: 'Ida',
+    languages: ['nb-NO'],
   },
   ['ines']: {
     voice: {
       name: 'Ines',
     },
+    id: 'Ines',
+    displayName: 'Inês',
+    languages: ['pt-PT'],
   },
   ['isabelle']: {
     voice: {
       name: 'Isabelle',
     },
+    id: 'Isabelle',
+    displayName: 'Isabelle',
+    languages: ['fr-BE'],
   },
   ['ivy']: {
     voice: {
       name: 'Ivy',
     },
+    id: 'Ivy',
+    displayName: 'Ivy',
+    languages: ['en-US'],
   },
   ['jacek']: {
     voice: {
       name: 'Jacek',
     },
+    id: 'Jacek',
+    displayName: 'Jacek',
+    languages: ['pl-PL'],
   },
   ['jan']: {
     voice: {
       name: 'Jan',
     },
+    id: 'Jan',
+    displayName: 'Jan',
+    languages: ['pl-PL'],
   },
   ['jasmine']: {
     voice: {
       name: 'Jasmine',
     },
+    id: 'Jasmine',
+    displayName: 'Jasmine',
+    languages: ['en-SG'],
   },
   ['jihye']: {
     voice: {
       name: 'Jihye',
     },
+    id: 'Jihye',
+    displayName: 'Jihye',
+    languages: ['ko-KR'],
   },
   ['jitka']: {
     voice: {
       name: 'Jitka',
     },
+    id: 'Jitka',
+    displayName: 'Jitka',
+    languages: ['cs-CZ'],
   },
   ['joanna']: {
     voice: {
       name: 'Joanna',
     },
+    id: 'Joanna',
+    displayName: 'Joanna',
+    languages: ['en-US'],
   },
   ['joey']: {
     voice: {
       name: 'Joey',
     },
+    id: 'Joey',
+    displayName: 'Joey',
+    languages: ['en-US'],
   },
   ['justin']: {
     voice: {
       name: 'Justin',
     },
+    id: 'Justin',
+    displayName: 'Justin',
+    languages: ['en-US'],
   },
   ['kajal']: {
     voice: {
       name: 'Kajal',
     },
+    id: 'Kajal',
+    displayName: 'Kajal',
+    languages: ['en-IN', 'hi-IN'],
   },
   ['karl']: {
     voice: {
       name: 'Karl',
     },
+    id: 'Karl',
+    displayName: 'Karl',
+    languages: ['is-IS'],
   },
   ['kazuha']: {
     voice: {
       name: 'Kazuha',
     },
+    id: 'Kazuha',
+    displayName: 'Kazuha',
+    languages: ['ja-JP'],
   },
   ['kendra']: {
     voice: {
       name: 'Kendra',
     },
+    id: 'Kendra',
+    displayName: 'Kendra',
+    languages: ['en-US'],
   },
   ['kevin']: {
     voice: {
       name: 'Kevin',
     },
+    id: 'Kevin',
+    displayName: 'Kevin',
+    languages: ['en-US'],
   },
   ['kimberly']: {
     voice: {
       name: 'Kimberly',
     },
+    id: 'Kimberly',
+    displayName: 'Kimberly',
+    languages: ['en-US'],
   },
   ['laura']: {
     voice: {
       name: 'Laura',
     },
+    id: 'Laura',
+    displayName: 'Laura',
+    languages: ['nl-NL'],
   },
   ['lea']: {
     voice: {
       name: 'Lea',
     },
+    id: 'Lea',
+    displayName: 'Léa',
+    languages: ['fr-FR'],
   },
   ['liam']: {
     voice: {
       name: 'Liam',
     },
+    id: 'Liam',
+    displayName: 'Liam',
+    languages: ['fr-CA'],
   },
   ['lisa']: {
     voice: {
       name: 'Lisa',
     },
+    id: 'Lisa',
+    displayName: 'Lisa',
+    languages: ['nl-BE'],
   },
   ['liv']: {
     voice: {
       name: 'Liv',
     },
+    id: 'Liv',
+    displayName: 'Liv',
+    languages: ['nb-NO'],
   },
   ['lotte']: {
     voice: {
       name: 'Lotte',
     },
+    id: 'Lotte',
+    displayName: 'Lotte',
+    languages: ['nl-NL'],
   },
   ['lucia']: {
     voice: {
       name: 'Lucia',
     },
+    id: 'Lucia',
+    displayName: 'Lucia',
+    languages: ['es-ES'],
   },
   ['lupe']: {
     voice: {
       name: 'Lupe',
     },
+    id: 'Lupe',
+    displayName: 'Lupe',
+    languages: ['es-US'],
   },
   ['mads']: {
     voice: {
       name: 'Mads',
     },
+    id: 'Mads',
+    displayName: 'Mads',
+    languages: ['da-DK'],
   },
   ['maja']: {
     voice: {
       name: 'Maja',
     },
+    id: 'Maja',
+    displayName: 'Maja',
+    languages: ['pl-PL'],
   },
   ['marlene']: {
     voice: {
       name: 'Marlene',
     },
+    id: 'Marlene',
+    displayName: 'Marlene',
+    languages: ['de-DE'],
   },
   ['mathieu']: {
     voice: {
       name: 'Mathieu',
     },
+    id: 'Mathieu',
+    displayName: 'Mathieu',
+    languages: ['fr-FR'],
   },
   ['matthew']: {
     voice: {
       name: 'Matthew',
     },
+    id: 'Matthew',
+    displayName: 'Matthew',
+    languages: ['en-US'],
   },
   ['maxim']: {
     voice: {
       name: 'Maxim',
     },
+    id: 'Maxim',
+    displayName: 'Maxim',
+    languages: ['ru-RU'],
   },
   ['mia']: {
     voice: {
       name: 'Mia',
     },
+    id: 'Mia',
+    displayName: 'Mia',
+    languages: ['es-MX'],
   },
   ['miguel']: {
     voice: {
       name: 'Miguel',
     },
+    id: 'Miguel',
+    displayName: 'Miguel',
+    languages: ['es-US'],
   },
   ['mizuki']: {
     voice: {
       name: 'Mizuki',
     },
+    id: 'Mizuki',
+    displayName: 'Mizuki',
+    languages: ['ja-JP'],
   },
   ['naja']: {
     voice: {
       name: 'Naja',
     },
+    id: 'Naja',
+    displayName: 'Naja',
+    languages: ['da-DK'],
   },
   ['niamh']: {
     voice: {
       name: 'Niamh',
     },
+    id: 'Niamh',
+    displayName: 'Niamh',
+    languages: ['en-IE'],
   },
   ['nicole']: {
     voice: {
       name: 'Nicole',
     },
+    id: 'Nicole',
+    displayName: 'Nicole',
+    languages: ['en-AU'],
   },
   ['ola']: {
     voice: {
       name: 'Ola',
     },
+    id: 'Ola',
+    displayName: 'Ola',
+    languages: ['pl-PL'],
   },
   ['olivia']: {
     voice: {
       name: 'Olivia',
     },
+    id: 'Olivia',
+    displayName: 'Olivia',
+    languages: ['en-AU'],
   },
   ['patrick']: {
     voice: {
       name: 'Patrick',
     },
+    id: 'Patrick',
+    displayName: 'Patrick',
+    languages: ['en-US'],
   },
   ['pedro']: {
     voice: {
       name: 'Pedro',
     },
+    id: 'Pedro',
+    displayName: 'Pedro',
+    languages: ['es-US'],
   },
   ['penelope']: {
     voice: {
       name: 'Penelope',
     },
+    id: 'Penelope',
+    displayName: 'Penélope',
+    languages: ['es-US'],
   },
   ['raul']: {
     voice: {
       name: 'Raul',
     },
+    id: 'Raul',
+    displayName: 'Raul',
+    languages: ['es-ES'],
   },
   ['raveena']: {
     voice: {
       name: 'Raveena',
     },
+    id: 'Raveena',
+    displayName: 'Raveena',
+    languages: ['en-IN'],
   },
   ['remi']: {
     voice: {
       name: 'Remi',
     },
+    id: 'Remi',
+    displayName: 'Rémi',
+    languages: ['fr-FR'],
   },
   ['ricardo']: {
     voice: {
       name: 'Ricardo',
     },
+    id: 'Ricardo',
+    displayName: 'Ricardo',
+    languages: ['pt-BR'],
   },
   ['ruben']: {
     voice: {
       name: 'Ruben',
     },
+    id: 'Ruben',
+    displayName: 'Ruben',
+    languages: ['nl-NL'],
   },
   ['russell']: {
     voice: {
       name: 'Russell',
     },
+    id: 'Russell',
+    displayName: 'Russell',
+    languages: ['en-AU'],
   },
   ['ruth']: {
     voice: {
       name: 'Ruth',
     },
+    id: 'Ruth',
+    displayName: 'Ruth',
+    languages: ['en-US'],
   },
   ['sabrina']: {
     voice: {
       name: 'Sabrina',
     },
+    id: 'Sabrina',
+    displayName: 'Sabrina',
+    languages: ['de-CH'],
   },
   ['salli']: {
     voice: {
       name: 'Salli',
     },
+    id: 'Salli',
+    displayName: 'Salli',
+    languages: ['en-US'],
   },
   ['seoyeon']: {
     voice: {
       name: 'Seoyeon',
     },
+    id: 'Seoyeon',
+    displayName: 'Seoyeon',
+    languages: ['ko-KR'],
   },
   ['sergio']: {
     voice: {
       name: 'Sergio',
     },
+    id: 'Sergio',
+    displayName: 'Sergio',
+    languages: ['es-ES'],
   },
   ['sofie']: {
     voice: {
       name: 'Sofie',
     },
+    id: 'Sofie',
+    displayName: 'Sofie',
+    languages: ['da-DK'],
   },
   ['stephen']: {
     voice: {
       name: 'Stephen',
     },
+    id: 'Stephen',
+    displayName: 'Stephen',
+    languages: ['en-US'],
   },
   ['suvi']: {
     voice: {
       name: 'Suvi',
     },
+    id: 'Suvi',
+    displayName: 'Suvi',
+    languages: ['fi-FI'],
   },
   ['takumi']: {
     voice: {
       name: 'Takumi',
     },
+    id: 'Takumi',
+    displayName: 'Takumi',
+    languages: ['ja-JP'],
   },
   ['tatyana']: {
     voice: {
       name: 'Tatyana',
     },
+    id: 'Tatyana',
+    displayName: 'Tatyana',
+    languages: ['ru-RU'],
   },
   ['thiago']: {
     voice: {
       name: 'Thiago',
     },
+    id: 'Thiago',
+    displayName: 'Thiago',
+    languages: ['pt-BR'],
   },
   ['tomoko']: {
     voice: {
       name: 'Tomoko',
     },
+    id: 'Tomoko',
+    displayName: 'Tomoko',
+    languages: ['ja-JP'],
   },
   ['vicki']: {
     voice: {
       name: 'Vicki',
     },
+    id: 'Vicki',
+    displayName: 'Vicki',
+    languages: ['de-DE'],
   },
   ['vitoria']: {
     voice: {
       name: 'Vitoria',
     },
+    id: 'Vitoria',
+    displayName: 'Vitória',
+    languages: ['pt-BR'],
   },
   ['zayd']: {
     voice: {
       name: 'Zayd',
     },
+    id: 'Zayd',
+    displayName: 'Zayd',
+    languages: ['ar-AE', 'arb'],
   },
   ['zeina']: {
     voice: {
       name: 'Zeina',
     },
+    id: 'Zeina',
+    displayName: 'Zeina',
+    languages: ['arb'],
   },
   ['zhiyu']: {
     voice: {
       name: 'Zhiyu',
     },
+    id: 'Zhiyu',
+    displayName: 'Zhiyu',
+    languages: ['cmn-CN'],
   },
 };
 
@@ -524,301 +833,481 @@ export const AMAZON_POLLY_STANDARD_VOICES: Record<string, any> = {
     voice: {
       name: 'Aditi',
     },
+    id: 'Aditi',
+    displayName: 'Aditi',
+    languages: ['en-IN', 'hi-IN'],
   },
   ['amy']: {
     voice: {
       name: 'Amy',
     },
+    id: 'Amy',
+    displayName: 'Amy',
+    languages: ['en-GB'],
   },
   ['astrid']: {
     voice: {
       name: 'Astrid',
     },
+    id: 'Astrid',
+    displayName: 'Astrid',
+    languages: ['sv-SE'],
   },
   ['bianca']: {
     voice: {
       name: 'Bianca',
     },
+    id: 'Bianca',
+    displayName: 'Bianca',
+    languages: ['it-IT'],
   },
   ['brian']: {
     voice: {
       name: 'Brian',
     },
+    id: 'Brian',
+    displayName: 'Brian',
+    languages: ['en-GB'],
   },
   ['camila']: {
     voice: {
       name: 'Camila',
     },
+    id: 'Camila',
+    displayName: 'Camila',
+    languages: ['pt-BR'],
   },
   ['carla']: {
     voice: {
       name: 'Carla',
     },
+    id: 'Carla',
+    displayName: 'Carla',
+    languages: ['it-IT'],
   },
   ['carmen']: {
     voice: {
       name: 'Carmen',
     },
+    id: 'Carmen',
+    displayName: 'Carmen',
+    languages: ['ro-RO'],
   },
   ['celine']: {
     voice: {
       name: 'Celine',
     },
+    id: 'Celine',
+    displayName: 'Céline',
+    languages: ['fr-FR'],
   },
   ['chantal']: {
     voice: {
       name: 'Chantal',
     },
+    id: 'Chantal',
+    displayName: 'Chantal',
+    languages: ['fr-CA'],
   },
   ['conchita']: {
     voice: {
       name: 'Conchita',
     },
+    id: 'Conchita',
+    displayName: 'Conchita',
+    languages: ['es-ES'],
   },
   ['cristiano']: {
     voice: {
       name: 'Cristiano',
     },
+    id: 'Cristiano',
+    displayName: 'Cristiano',
+    languages: ['pt-PT'],
   },
   ['dora']: {
     voice: {
       name: 'Dora',
     },
+    id: 'Dora',
+    displayName: 'Dóra',
+    languages: ['is-IS'],
   },
   ['emma']: {
     voice: {
       name: 'Emma',
     },
+    id: 'Emma',
+    displayName: 'Emma',
+    languages: ['en-GB'],
   },
   ['enrique']: {
     voice: {
       name: 'Enrique',
     },
+    id: 'Enrique',
+    displayName: 'Enrique',
+    languages: ['es-ES'],
   },
   ['ewa']: {
     voice: {
       name: 'Ewa',
     },
+    id: 'Ewa',
+    displayName: 'Ewa',
+    languages: ['pl-PL'],
   },
   ['filiz']: {
     voice: {
       name: 'Filiz',
     },
+    id: 'Filiz',
+    displayName: 'Filiz',
+    languages: ['tr-TR'],
   },
   ['geraint']: {
     voice: {
       name: 'Geraint',
     },
+    id: 'Geraint',
+    displayName: 'Geraint',
+    languages: ['en-GB-WLS'],
   },
   ['giorgio']: {
     voice: {
       name: 'Giorgio',
     },
+    id: 'Giorgio',
+    displayName: 'Giorgio',
+    languages: ['it-IT'],
   },
   ['gwyneth']: {
     voice: {
       name: 'Gwyneth',
     },
+    id: 'Gwyneth',
+    displayName: 'Gwyneth',
+    languages: ['cy-GB'],
   },
   ['hans']: {
     voice: {
       name: 'Hans',
     },
+    id: 'Hans',
+    displayName: 'Hans',
+    languages: ['de-DE'],
   },
   ['ines']: {
     voice: {
       name: 'Ines',
     },
+    id: 'Ines',
+    displayName: 'Inês',
+    languages: ['pt-PT'],
   },
   ['ivy']: {
     voice: {
       name: 'Ivy',
     },
+    id: 'Ivy',
+    displayName: 'Ivy',
+    languages: ['en-US'],
   },
   ['jacek']: {
     voice: {
       name: 'Jacek',
     },
+    id: 'Jacek',
+    displayName: 'Jacek',
+    languages: ['pl-PL'],
   },
   ['jan']: {
     voice: {
       name: 'Jan',
     },
+    id: 'Jan',
+    displayName: 'Jan',
+    languages: ['pl-PL'],
   },
   ['joanna']: {
     voice: {
       name: 'Joanna',
     },
+    id: 'Joanna',
+    displayName: 'Joanna',
+    languages: ['en-US'],
   },
   ['joey']: {
     voice: {
       name: 'Joey',
     },
+    id: 'Joey',
+    displayName: 'Joey',
+    languages: ['en-US'],
   },
   ['justin']: {
     voice: {
       name: 'Justin',
     },
+    id: 'Justin',
+    displayName: 'Justin',
+    languages: ['en-US'],
   },
   ['karl']: {
     voice: {
       name: 'Karl',
     },
+    id: 'Karl',
+    displayName: 'Karl',
+    languages: ['is-IS'],
   },
   ['kendra']: {
     voice: {
       name: 'Kendra',
     },
+    id: 'Kendra',
+    displayName: 'Kendra',
+    languages: ['en-US'],
   },
   ['kimberly']: {
     voice: {
       name: 'Kimberly',
     },
+    id: 'Kimberly',
+    displayName: 'Kimberly',
+    languages: ['en-US'],
   },
   ['lea']: {
     voice: {
       name: 'Lea',
     },
+    id: 'Lea',
+    displayName: 'Léa',
+    languages: ['fr-FR'],
   },
   ['liv']: {
     voice: {
       name: 'Liv',
     },
+    id: 'Liv',
+    displayName: 'Liv',
+    languages: ['nb-NO'],
   },
   ['lotte']: {
     voice: {
       name: 'Lotte',
     },
+    id: 'Lotte',
+    displayName: 'Lotte',
+    languages: ['nl-NL'],
   },
   ['lucia']: {
     voice: {
       name: 'Lucia',
     },
+    id: 'Lucia',
+    displayName: 'Lucia',
+    languages: ['es-ES'],
   },
   ['lupe']: {
     voice: {
       name: 'Lupe',
     },
+    id: 'Lupe',
+    displayName: 'Lupe',
+    languages: ['es-US'],
   },
   ['mads']: {
     voice: {
       name: 'Mads',
     },
+    id: 'Mads',
+    displayName: 'Mads',
+    languages: ['da-DK'],
   },
   ['maja']: {
     voice: {
       name: 'Maja',
     },
+    id: 'Maja',
+    displayName: 'Maja',
+    languages: ['pl-PL'],
   },
   ['marlene']: {
     voice: {
       name: 'Marlene',
     },
+    id: 'Marlene',
+    displayName: 'Marlene',
+    languages: ['de-DE'],
   },
   ['mathieu']: {
     voice: {
       name: 'Mathieu',
     },
+    id: 'Mathieu',
+    displayName: 'Mathieu',
+    languages: ['fr-FR'],
   },
   ['matthew']: {
     voice: {
       name: 'Matthew',
     },
+    id: 'Matthew',
+    displayName: 'Matthew',
+    languages: ['en-US'],
   },
   ['maxim']: {
     voice: {
       name: 'Maxim',
     },
+    id: 'Maxim',
+    displayName: 'Maxim',
+    languages: ['ru-RU'],
   },
   ['mia']: {
     voice: {
       name: 'Mia',
     },
+    id: 'Mia',
+    displayName: 'Mia',
+    languages: ['es-MX'],
   },
   ['miguel']: {
     voice: {
       name: 'Miguel',
     },
+    id: 'Miguel',
+    displayName: 'Miguel',
+    languages: ['es-US'],
   },
   ['mizuki']: {
     voice: {
       name: 'Mizuki',
     },
+    id: 'Mizuki',
+    displayName: 'Mizuki',
+    languages: ['ja-JP'],
   },
   ['naja']: {
     voice: {
       name: 'Naja',
     },
+    id: 'Naja',
+    displayName: 'Naja',
+    languages: ['da-DK'],
   },
   ['nicole']: {
     voice: {
       name: 'Nicole',
     },
+    id: 'Nicole',
+    displayName: 'Nicole',
+    languages: ['en-AU'],
   },
   ['penelope']: {
     voice: {
       name: 'Penelope',
     },
+    id: 'Penelope',
+    displayName: 'Penélope',
+    languages: ['es-US'],
   },
   ['raveena']: {
     voice: {
       name: 'Raveena',
     },
+    id: 'Raveena',
+    displayName: 'Raveena',
+    languages: ['en-IN'],
   },
   ['ricardo']: {
     voice: {
       name: 'Ricardo',
     },
+    id: 'Ricardo',
+    displayName: 'Ricardo',
+    languages: ['pt-BR'],
   },
   ['ruben']: {
     voice: {
       name: 'Ruben',
     },
+    id: 'Ruben',
+    displayName: 'Ruben',
+    languages: ['nl-NL'],
   },
   ['russell']: {
     voice: {
       name: 'Russell',
     },
+    id: 'Russell',
+    displayName: 'Russell',
+    languages: ['en-AU'],
   },
   ['salli']: {
     voice: {
       name: 'Salli',
     },
+    id: 'Salli',
+    displayName: 'Salli',
+    languages: ['en-US'],
   },
   ['seoyeon']: {
     voice: {
       name: 'Seoyeon',
     },
+    id: 'Seoyeon',
+    displayName: 'Seoyeon',
+    languages: ['ko-KR'],
   },
   ['takumi']: {
     voice: {
       name: 'Takumi',
     },
+    id: 'Takumi',
+    displayName: 'Takumi',
+    languages: ['ja-JP'],
   },
   ['tatyana']: {
     voice: {
       name: 'Tatyana',
     },
+    id: 'Tatyana',
+    displayName: 'Tatyana',
+    languages: ['ru-RU'],
   },
   ['vicki']: {
     voice: {
       name: 'Vicki',
     },
+    id: 'Vicki',
+    displayName: 'Vicki',
+    languages: ['de-DE'],
   },
   ['vitoria']: {
     voice: {
       name: 'Vitoria',
     },
+    id: 'Vitoria',
+    displayName: 'Vitória',
+    languages: ['pt-BR'],
   },
   ['zeina']: {
     voice: {
       name: 'Zeina',
     },
+    id: 'Zeina',
+    displayName: 'Zeina',
+    languages: ['arb'],
   },
   ['zhiyu']: {
     voice: {
       name: 'Zhiyu',
     },
+    id: 'Zhiyu',
+    displayName: 'Zhiyu',
+    languages: ['cmn-CN'],
   },
 };
 
@@ -827,316 +1316,505 @@ export const AMAZON_POLLY_NEURAL_VOICES: Record<string, any> = {
     voice: {
       name: 'Adriano',
     },
+    id: 'Adriano',
+    displayName: 'Adriano',
+    languages: ['it-IT'],
   },
   ['amy']: {
     voice: {
       name: 'Amy',
     },
+    id: 'Amy',
+    displayName: 'Amy',
+    languages: ['en-GB'],
   },
   ['andres']: {
     voice: {
       name: 'Andres',
     },
+    id: 'Andres',
+    displayName: 'Andrés',
+    languages: ['es-MX'],
   },
   ['aria']: {
     voice: {
       name: 'Aria',
     },
+    id: 'Aria',
+    displayName: 'Aria',
+    languages: ['en-NZ'],
   },
   ['arlet']: {
     voice: {
       name: 'Arlet',
     },
+    id: 'Arlet',
+    displayName: 'Arlet',
+    languages: ['ca-ES'],
   },
   ['arthur']: {
     voice: {
       name: 'Arthur',
     },
+    id: 'Arthur',
+    displayName: 'Arthur',
+    languages: ['en-GB'],
   },
   ['ayanda']: {
     voice: {
       name: 'Ayanda',
     },
+    id: 'Ayanda',
+    displayName: 'Ayanda',
+    languages: ['en-ZA'],
   },
   ['bianca']: {
     voice: {
       name: 'Bianca',
     },
+    id: 'Bianca',
+    displayName: 'Bianca',
+    languages: ['it-IT'],
   },
   ['brian']: {
     voice: {
       name: 'Brian',
     },
+    id: 'Brian',
+    displayName: 'Brian',
+    languages: ['en-GB'],
   },
   ['burcu']: {
     voice: {
       name: 'Burcu',
     },
+    id: 'Burcu',
+    displayName: 'Burcu',
+    languages: ['tr-TR'],
   },
   ['camila']: {
     voice: {
       name: 'Camila',
     },
+    id: 'Camila',
+    displayName: 'Camila',
+    languages: ['pt-BR'],
   },
   ['daniel']: {
     voice: {
       name: 'Daniel',
     },
+    id: 'Daniel',
+    displayName: 'Daniel',
+    languages: ['de-DE'],
   },
   ['danielle']: {
     voice: {
       name: 'Danielle',
     },
+    id: 'Danielle',
+    displayName: 'Danielle',
+    languages: ['en-US'],
   },
   ['elin']: {
     voice: {
       name: 'Elin',
     },
+    id: 'Elin',
+    displayName: 'Elin',
+    languages: ['sv-SE'],
   },
   ['emma']: {
     voice: {
       name: 'Emma',
     },
+    id: 'Emma',
+    displayName: 'Emma',
+    languages: ['en-GB'],
   },
   ['gabrielle']: {
     voice: {
       name: 'Gabrielle',
     },
+    id: 'Gabrielle',
+    displayName: 'Gabrielle',
+    languages: ['fr-CA'],
   },
   ['gregory']: {
     voice: {
       name: 'Gregory',
     },
+    id: 'Gregory',
+    displayName: 'Gregory',
+    languages: ['en-US'],
   },
   ['hala']: {
     voice: {
       name: 'Hala',
     },
+    id: 'Hala',
+    displayName: 'Hala',
+    languages: ['ar-AE', 'arb'],
   },
   ['hannah']: {
     voice: {
       name: 'Hannah',
     },
+    id: 'Hannah',
+    displayName: 'Hannah',
+    languages: ['de-AT'],
   },
   ['hiujin']: {
     voice: {
       name: 'Hiujin',
     },
+    id: 'Hiujin',
+    displayName: 'Hiujin',
+    languages: ['yue-CN'],
   },
   ['ida']: {
     voice: {
       name: 'Ida',
     },
+    id: 'Ida',
+    displayName: 'Ida',
+    languages: ['nb-NO'],
   },
   ['ines']: {
     voice: {
       name: 'Ines',
     },
+    id: 'Ines',
+    displayName: 'Inês',
+    languages: ['pt-PT'],
   },
   ['isabelle']: {
     voice: {
       name: 'Isabelle',
     },
+    id: 'Isabelle',
+    displayName: 'Isabelle',
+    languages: ['fr-BE'],
   },
   ['ivy']: {
     voice: {
       name: 'Ivy',
     },
+    id: 'Ivy',
+    displayName: 'Ivy',
+    languages: ['en-US'],
   },
   ['jasmine']: {
     voice: {
       name: 'Jasmine',
     },
+    id: 'Jasmine',
+    displayName: 'Jasmine',
+    languages: ['en-SG'],
   },
   ['jihye']: {
     voice: {
       name: 'Jihye',
     },
+    id: 'Jihye',
+    displayName: 'Jihye',
+    languages: ['ko-KR'],
   },
   ['jitka']: {
     voice: {
       name: 'Jitka',
     },
+    id: 'Jitka',
+    displayName: 'Jitka',
+    languages: ['cs-CZ'],
   },
   ['joanna']: {
     voice: {
       name: 'Joanna',
     },
+    id: 'Joanna',
+    displayName: 'Joanna',
+    languages: ['en-US'],
   },
   ['joey']: {
     voice: {
       name: 'Joey',
     },
+    id: 'Joey',
+    displayName: 'Joey',
+    languages: ['en-US'],
   },
   ['justin']: {
     voice: {
       name: 'Justin',
     },
+    id: 'Justin',
+    displayName: 'Justin',
+    languages: ['en-US'],
   },
   ['kajal']: {
     voice: {
       name: 'Kajal',
     },
+    id: 'Kajal',
+    displayName: 'Kajal',
+    languages: ['en-IN', 'hi-IN'],
   },
   ['kazuha']: {
     voice: {
       name: 'Kazuha',
     },
+    id: 'Kazuha',
+    displayName: 'Kazuha',
+    languages: ['ja-JP'],
   },
   ['kendra']: {
     voice: {
       name: 'Kendra',
     },
+    id: 'Kendra',
+    displayName: 'Kendra',
+    languages: ['en-US'],
   },
   ['kevin']: {
     voice: {
       name: 'Kevin',
     },
+    id: 'Kevin',
+    displayName: 'Kevin',
+    languages: ['en-US'],
   },
   ['kimberly']: {
     voice: {
       name: 'Kimberly',
     },
+    id: 'Kimberly',
+    displayName: 'Kimberly',
+    languages: ['en-US'],
   },
   ['laura']: {
     voice: {
       name: 'Laura',
     },
+    id: 'Laura',
+    displayName: 'Laura',
+    languages: ['nl-NL'],
   },
   ['lea']: {
     voice: {
       name: 'Lea',
     },
+    id: 'Lea',
+    displayName: 'Léa',
+    languages: ['fr-FR'],
   },
   ['liam']: {
     voice: {
       name: 'Liam',
     },
+    id: 'Liam',
+    displayName: 'Liam',
+    languages: ['fr-CA'],
   },
   ['lisa']: {
     voice: {
       name: 'Lisa',
     },
+    id: 'Lisa',
+    displayName: 'Lisa',
+    languages: ['nl-BE'],
   },
   ['lucia']: {
     voice: {
       name: 'Lucia',
     },
+    id: 'Lucia',
+    displayName: 'Lucia',
+    languages: ['es-ES'],
   },
   ['lupe']: {
     voice: {
       name: 'Lupe',
     },
+    id: 'Lupe',
+    displayName: 'Lupe',
+    languages: ['es-US'],
   },
   ['matthew']: {
     voice: {
       name: 'Matthew',
     },
+    id: 'Matthew',
+    displayName: 'Matthew',
+    languages: ['en-US'],
   },
   ['mia']: {
     voice: {
       name: 'Mia',
     },
+    id: 'Mia',
+    displayName: 'Mia',
+    languages: ['es-MX'],
   },
   ['niamh']: {
     voice: {
       name: 'Niamh',
     },
+    id: 'Niamh',
+    displayName: 'Niamh',
+    languages: ['en-IE'],
   },
   ['ola']: {
     voice: {
       name: 'Ola',
     },
+    id: 'Ola',
+    displayName: 'Ola',
+    languages: ['pl-PL'],
   },
   ['olivia']: {
     voice: {
       name: 'Olivia',
     },
+    id: 'Olivia',
+    displayName: 'Olivia',
+    languages: ['en-AU'],
   },
   ['pedro']: {
     voice: {
       name: 'Pedro',
     },
+    id: 'Pedro',
+    displayName: 'Pedro',
+    languages: ['es-US'],
   },
   ['remi']: {
     voice: {
       name: 'Remi',
     },
+    id: 'Remi',
+    displayName: 'Rémi',
+    languages: ['fr-FR'],
   },
   ['ruth']: {
     voice: {
       name: 'Ruth',
     },
+    id: 'Ruth',
+    displayName: 'Ruth',
+    languages: ['en-US'],
   },
   ['sabrina']: {
     voice: {
       name: 'Sabrina',
     },
+    id: 'Sabrina',
+    displayName: 'Sabrina',
+    languages: ['de-CH'],
   },
   ['salli']: {
     voice: {
       name: 'Salli',
     },
+    id: 'Salli',
+    displayName: 'Salli',
+    languages: ['en-US'],
   },
   ['seoyeon']: {
     voice: {
       name: 'Seoyeon',
     },
+    id: 'Seoyeon',
+    displayName: 'Seoyeon',
+    languages: ['ko-KR'],
   },
   ['sergio']: {
     voice: {
       name: 'Sergio',
     },
+    id: 'Sergio',
+    displayName: 'Sergio',
+    languages: ['es-ES'],
   },
   ['sofie']: {
     voice: {
       name: 'Sofie',
     },
+    id: 'Sofie',
+    displayName: 'Sofie',
+    languages: ['da-DK'],
   },
   ['stephen']: {
     voice: {
       name: 'Stephen',
     },
+    id: 'Stephen',
+    displayName: 'Stephen',
+    languages: ['en-US'],
   },
   ['suvi']: {
     voice: {
       name: 'Suvi',
     },
+    id: 'Suvi',
+    displayName: 'Suvi',
+    languages: ['fi-FI'],
   },
   ['takumi']: {
     voice: {
       name: 'Takumi',
     },
+    id: 'Takumi',
+    displayName: 'Takumi',
+    languages: ['ja-JP'],
   },
   ['thiago']: {
     voice: {
       name: 'Thiago',
     },
+    id: 'Thiago',
+    displayName: 'Thiago',
+    languages: ['pt-BR'],
   },
   ['tomoko']: {
     voice: {
       name: 'Tomoko',
     },
+    id: 'Tomoko',
+    displayName: 'Tomoko',
+    languages: ['ja-JP'],
   },
   ['vicki']: {
     voice: {
       name: 'Vicki',
     },
+    id: 'Vicki',
+    displayName: 'Vicki',
+    languages: ['de-DE'],
   },
   ['vitoria']: {
     voice: {
       name: 'Vitoria',
     },
+    id: 'Vitoria',
+    displayName: 'Vitória',
+    languages: ['pt-BR'],
   },
   ['zayd']: {
     voice: {
       name: 'Zayd',
     },
+    id: 'Zayd',
+    displayName: 'Zayd',
+    languages: ['ar-AE', 'arb'],
   },
   ['zhiyu']: {
     voice: {
       name: 'Zhiyu',
     },
+    id: 'Zhiyu',
+    displayName: 'Zhiyu',
+    languages: ['cmn-CN'],
   },
 };
 
@@ -1145,135 +1823,232 @@ export const AMAZON_POLLY_GENERATIVE_VOICES: Record<string, any> = {
     voice: {
       name: 'Amy',
     },
+    id: 'Amy',
+    displayName: 'Amy',
+    languages: ['en-GB'],
   },
   ['andres']: {
     voice: {
       name: 'Andres',
     },
+    id: 'Andres',
+    displayName: 'Andrés',
+    languages: ['es-MX'],
   },
   ['ayanda']: {
     voice: {
       name: 'Ayanda',
     },
+    id: 'Ayanda',
+    displayName: 'Ayanda',
+    languages: ['en-ZA'],
   },
   ['bianca']: {
     voice: {
       name: 'Bianca',
     },
+    id: 'Bianca',
+    displayName: 'Bianca',
+    languages: ['it-IT'],
   },
   ['celine']: {
     voice: {
       name: 'Celine',
     },
+    id: 'Celine',
+    displayName: 'Céline',
+    languages: ['fr-FR'],
   },
   ['daniel']: {
     voice: {
       name: 'Daniel',
     },
+    id: 'Daniel',
+    displayName: 'Daniel',
+    languages: ['de-DE'],
   },
   ['danielle']: {
     voice: {
       name: 'Danielle',
     },
+    id: 'Danielle',
+    displayName: 'Danielle',
+    languages: ['en-US'],
   },
   ['ewa']: {
     voice: {
       name: 'Ewa',
     },
+    id: 'Ewa',
+    displayName: 'Ewa',
+    languages: ['pl-PL'],
   },
   ['gabrielle']: {
     voice: {
       name: 'Gabrielle',
     },
+    id: 'Gabrielle',
+    displayName: 'Gabrielle',
+    languages: ['fr-CA'],
   },
   ['isabelle']: {
     voice: {
       name: 'Isabelle',
     },
+    id: 'Isabelle',
+    displayName: 'Isabelle',
+    languages: ['fr-BE'],
   },
   ['joanna']: {
     voice: {
       name: 'Joanna',
     },
+    id: 'Joanna',
+    displayName: 'Joanna',
+    languages: ['en-US'],
   },
   ['kajal']: {
     voice: {
       name: 'Kajal',
     },
+    id: 'Kajal',
+    displayName: 'Kajal',
+    languages: ['en-IN', 'hi-IN'],
+  },
+  ['laura']: {
+    voice: {
+      name: 'Laura',
+    },
+    id: 'Laura',
+    displayName: 'Laura',
+    languages: ['nl-NL'],
   },
   ['lea']: {
     voice: {
       name: 'Lea',
     },
+    id: 'Lea',
+    displayName: 'Léa',
+    languages: ['fr-FR'],
   },
   ['liam']: {
     voice: {
       name: 'Liam',
     },
+    id: 'Liam',
+    displayName: 'Liam',
+    languages: ['fr-CA'],
+  },
+  ['lisa']: {
+    voice: {
+      name: 'Lisa',
+    },
+    id: 'Lisa',
+    displayName: 'Lisa',
+    languages: ['nl-BE'],
   },
   ['lucia']: {
     voice: {
       name: 'Lucia',
     },
+    id: 'Lucia',
+    displayName: 'Lucia',
+    languages: ['es-ES'],
   },
   ['lupe']: {
     voice: {
       name: 'Lupe',
     },
+    id: 'Lupe',
+    displayName: 'Lupe',
+    languages: ['es-US'],
   },
   ['matthew']: {
     voice: {
       name: 'Matthew',
     },
+    id: 'Matthew',
+    displayName: 'Matthew',
+    languages: ['en-US'],
   },
   ['mia']: {
     voice: {
       name: 'Mia',
     },
+    id: 'Mia',
+    displayName: 'Mia',
+    languages: ['es-MX'],
   },
   ['ola']: {
     voice: {
       name: 'Ola',
     },
+    id: 'Ola',
+    displayName: 'Ola',
+    languages: ['pl-PL'],
   },
   ['olivia']: {
     voice: {
       name: 'Olivia',
     },
+    id: 'Olivia',
+    displayName: 'Olivia',
+    languages: ['en-AU'],
   },
   ['pedro']: {
     voice: {
       name: 'Pedro',
     },
+    id: 'Pedro',
+    displayName: 'Pedro',
+    languages: ['es-US'],
   },
   ['remi']: {
     voice: {
       name: 'Remi',
     },
+    id: 'Remi',
+    displayName: 'Rémi',
+    languages: ['fr-FR'],
   },
   ['ruth']: {
     voice: {
       name: 'Ruth',
     },
+    id: 'Ruth',
+    displayName: 'Ruth',
+    languages: ['en-US'],
   },
   ['salli']: {
     voice: {
       name: 'Salli',
     },
+    id: 'Salli',
+    displayName: 'Salli',
+    languages: ['en-US'],
   },
   ['sergio']: {
     voice: {
       name: 'Sergio',
     },
+    id: 'Sergio',
+    displayName: 'Sergio',
+    languages: ['es-ES'],
   },
   ['stephen']: {
     voice: {
       name: 'Stephen',
     },
+    id: 'Stephen',
+    displayName: 'Stephen',
+    languages: ['en-US'],
   },
   ['vicki']: {
     voice: {
       name: 'Vicki',
     },
+    id: 'Vicki',
+    displayName: 'Vicki',
+    languages: ['de-DE'],
   },
 };

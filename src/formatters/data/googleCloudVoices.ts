@@ -6,8080 +6,13202 @@ export const GOOGLE_CLOUD_TTS_VOICES: Record<string, any> = {
     voice: {
       name: 'Achernar',
     },
+    id: 'Achernar',
+    languages: ['en-US'],
   },
   ['achird']: {
     voice: {
       name: 'Achird',
     },
+    id: 'Achird',
+    languages: ['en-US'],
   },
   ['af-za-standard-a']: {
     voice: {
       name: 'af-ZA-Standard-A',
     },
+    id: 'af-ZA-Standard-A',
+    languages: ['af-ZA'],
   },
   ['algenib']: {
     voice: {
       name: 'Algenib',
     },
+    id: 'Algenib',
+    languages: ['en-US'],
   },
   ['algieba']: {
     voice: {
       name: 'Algieba',
     },
+    id: 'Algieba',
+    languages: ['en-US'],
   },
   ['alnilam']: {
     voice: {
       name: 'Alnilam',
     },
+    id: 'Alnilam',
+    languages: ['en-US'],
   },
   ['am-et-standard-a']: {
     voice: {
       name: 'am-ET-Standard-A',
     },
+    id: 'am-ET-Standard-A',
+    languages: ['am-ET'],
   },
   ['am-et-standard-b']: {
     voice: {
       name: 'am-ET-Standard-B',
     },
+    id: 'am-ET-Standard-B',
+    languages: ['am-ET'],
   },
   ['am-et-wavenet-a']: {
     voice: {
       name: 'am-ET-Wavenet-A',
     },
+    id: 'am-ET-Wavenet-A',
+    languages: ['am-ET'],
   },
   ['am-et-wavenet-b']: {
     voice: {
       name: 'am-ET-Wavenet-B',
     },
+    id: 'am-ET-Wavenet-B',
+    languages: ['am-ET'],
   },
   ['aoede']: {
     voice: {
       name: 'Aoede',
     },
+    id: 'Aoede',
+    languages: ['en-US'],
   },
   ['ar-xa-chirp3-hd-achernar']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Achernar',
     },
+    id: 'ar-XA-Chirp3-HD-Achernar',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-achird']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Achird',
     },
+    id: 'ar-XA-Chirp3-HD-Achird',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-algenib']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Algenib',
     },
+    id: 'ar-XA-Chirp3-HD-Algenib',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-algieba']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Algieba',
     },
+    id: 'ar-XA-Chirp3-HD-Algieba',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-alnilam']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Alnilam',
     },
+    id: 'ar-XA-Chirp3-HD-Alnilam',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-aoede']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Aoede',
     },
+    id: 'ar-XA-Chirp3-HD-Aoede',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-autonoe']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Autonoe',
     },
+    id: 'ar-XA-Chirp3-HD-Autonoe',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Callirrhoe',
     },
+    id: 'ar-XA-Chirp3-HD-Callirrhoe',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-charon']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Charon',
     },
+    id: 'ar-XA-Chirp3-HD-Charon',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-despina']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Despina',
     },
+    id: 'ar-XA-Chirp3-HD-Despina',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-enceladus']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Enceladus',
     },
+    id: 'ar-XA-Chirp3-HD-Enceladus',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-erinome']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Erinome',
     },
+    id: 'ar-XA-Chirp3-HD-Erinome',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-fenrir']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Fenrir',
     },
+    id: 'ar-XA-Chirp3-HD-Fenrir',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-gacrux']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Gacrux',
     },
+    id: 'ar-XA-Chirp3-HD-Gacrux',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-iapetus']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Iapetus',
     },
+    id: 'ar-XA-Chirp3-HD-Iapetus',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-kore']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Kore',
     },
+    id: 'ar-XA-Chirp3-HD-Kore',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-laomedeia']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Laomedeia',
     },
+    id: 'ar-XA-Chirp3-HD-Laomedeia',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-leda']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Leda',
     },
+    id: 'ar-XA-Chirp3-HD-Leda',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-orus']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Orus',
     },
+    id: 'ar-XA-Chirp3-HD-Orus',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-puck']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Puck',
     },
+    id: 'ar-XA-Chirp3-HD-Puck',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Pulcherrima',
     },
+    id: 'ar-XA-Chirp3-HD-Pulcherrima',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Rasalgethi',
     },
+    id: 'ar-XA-Chirp3-HD-Rasalgethi',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-sadachbia']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Sadachbia',
     },
+    id: 'ar-XA-Chirp3-HD-Sadachbia',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-sadaltager']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Sadaltager',
     },
+    id: 'ar-XA-Chirp3-HD-Sadaltager',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-schedar']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Schedar',
     },
+    id: 'ar-XA-Chirp3-HD-Schedar',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-sulafat']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Sulafat',
     },
+    id: 'ar-XA-Chirp3-HD-Sulafat',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-umbriel']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Umbriel',
     },
+    id: 'ar-XA-Chirp3-HD-Umbriel',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Vindemiatrix',
     },
+    id: 'ar-XA-Chirp3-HD-Vindemiatrix',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-zephyr']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Zephyr',
     },
+    id: 'ar-XA-Chirp3-HD-Zephyr',
+    languages: ['ar-XA'],
   },
   ['ar-xa-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'ar-XA-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'ar-XA-Chirp3-HD-Zubenelgenubi',
+    languages: ['ar-XA'],
   },
   ['ar-xa-standard-a']: {
     voice: {
       name: 'ar-XA-Standard-A',
     },
+    id: 'ar-XA-Standard-A',
+    languages: ['ar-XA'],
   },
   ['ar-xa-standard-b']: {
     voice: {
       name: 'ar-XA-Standard-B',
     },
+    id: 'ar-XA-Standard-B',
+    languages: ['ar-XA'],
   },
   ['ar-xa-standard-c']: {
     voice: {
       name: 'ar-XA-Standard-C',
     },
+    id: 'ar-XA-Standard-C',
+    languages: ['ar-XA'],
   },
   ['ar-xa-standard-d']: {
     voice: {
       name: 'ar-XA-Standard-D',
     },
+    id: 'ar-XA-Standard-D',
+    languages: ['ar-XA'],
   },
   ['ar-xa-wavenet-a']: {
     voice: {
       name: 'ar-XA-Wavenet-A',
     },
+    id: 'ar-XA-Wavenet-A',
+    languages: ['ar-XA'],
   },
   ['ar-xa-wavenet-b']: {
     voice: {
       name: 'ar-XA-Wavenet-B',
     },
+    id: 'ar-XA-Wavenet-B',
+    languages: ['ar-XA'],
   },
   ['ar-xa-wavenet-c']: {
     voice: {
       name: 'ar-XA-Wavenet-C',
     },
+    id: 'ar-XA-Wavenet-C',
+    languages: ['ar-XA'],
   },
   ['ar-xa-wavenet-d']: {
     voice: {
       name: 'ar-XA-Wavenet-D',
     },
+    id: 'ar-XA-Wavenet-D',
+    languages: ['ar-XA'],
   },
   ['autonoe']: {
     voice: {
       name: 'Autonoe',
     },
+    id: 'Autonoe',
+    languages: ['en-US'],
+  },
+  ['bg-bg-chirp3-hd-achernar']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Achernar',
+    },
+    id: 'bg-BG-Chirp3-HD-Achernar',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-achird']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Achird',
+    },
+    id: 'bg-BG-Chirp3-HD-Achird',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-algenib']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Algenib',
+    },
+    id: 'bg-BG-Chirp3-HD-Algenib',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-algieba']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Algieba',
+    },
+    id: 'bg-BG-Chirp3-HD-Algieba',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-alnilam']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Alnilam',
+    },
+    id: 'bg-BG-Chirp3-HD-Alnilam',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-aoede']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Aoede',
+    },
+    id: 'bg-BG-Chirp3-HD-Aoede',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-autonoe']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Autonoe',
+    },
+    id: 'bg-BG-Chirp3-HD-Autonoe',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-callirrhoe']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Callirrhoe',
+    },
+    id: 'bg-BG-Chirp3-HD-Callirrhoe',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-charon']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Charon',
+    },
+    id: 'bg-BG-Chirp3-HD-Charon',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-despina']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Despina',
+    },
+    id: 'bg-BG-Chirp3-HD-Despina',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-enceladus']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Enceladus',
+    },
+    id: 'bg-BG-Chirp3-HD-Enceladus',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-erinome']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Erinome',
+    },
+    id: 'bg-BG-Chirp3-HD-Erinome',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-fenrir']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Fenrir',
+    },
+    id: 'bg-BG-Chirp3-HD-Fenrir',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-gacrux']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Gacrux',
+    },
+    id: 'bg-BG-Chirp3-HD-Gacrux',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-iapetus']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Iapetus',
+    },
+    id: 'bg-BG-Chirp3-HD-Iapetus',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-kore']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Kore',
+    },
+    id: 'bg-BG-Chirp3-HD-Kore',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-laomedeia']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Laomedeia',
+    },
+    id: 'bg-BG-Chirp3-HD-Laomedeia',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-leda']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Leda',
+    },
+    id: 'bg-BG-Chirp3-HD-Leda',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-orus']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Orus',
+    },
+    id: 'bg-BG-Chirp3-HD-Orus',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-puck']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Puck',
+    },
+    id: 'bg-BG-Chirp3-HD-Puck',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-pulcherrima']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Pulcherrima',
+    },
+    id: 'bg-BG-Chirp3-HD-Pulcherrima',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-rasalgethi']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Rasalgethi',
+    },
+    id: 'bg-BG-Chirp3-HD-Rasalgethi',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-sadachbia']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Sadachbia',
+    },
+    id: 'bg-BG-Chirp3-HD-Sadachbia',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-sadaltager']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Sadaltager',
+    },
+    id: 'bg-BG-Chirp3-HD-Sadaltager',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-schedar']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Schedar',
+    },
+    id: 'bg-BG-Chirp3-HD-Schedar',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-sulafat']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Sulafat',
+    },
+    id: 'bg-BG-Chirp3-HD-Sulafat',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-umbriel']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Umbriel',
+    },
+    id: 'bg-BG-Chirp3-HD-Umbriel',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-vindemiatrix']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Vindemiatrix',
+    },
+    id: 'bg-BG-Chirp3-HD-Vindemiatrix',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-zephyr']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Zephyr',
+    },
+    id: 'bg-BG-Chirp3-HD-Zephyr',
+    languages: ['bg-BG'],
+  },
+  ['bg-bg-chirp3-hd-zubenelgenubi']: {
+    voice: {
+      name: 'bg-BG-Chirp3-HD-Zubenelgenubi',
+    },
+    id: 'bg-BG-Chirp3-HD-Zubenelgenubi',
+    languages: ['bg-BG'],
   },
   ['bg-bg-standard-b']: {
     voice: {
       name: 'bg-BG-Standard-B',
     },
+    id: 'bg-BG-Standard-B',
+    languages: ['bg-BG'],
   },
   ['bn-in-chirp3-hd-achernar']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Achernar',
     },
+    id: 'bn-IN-Chirp3-HD-Achernar',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-achird']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Achird',
     },
+    id: 'bn-IN-Chirp3-HD-Achird',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-algenib']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Algenib',
     },
+    id: 'bn-IN-Chirp3-HD-Algenib',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-algieba']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Algieba',
     },
+    id: 'bn-IN-Chirp3-HD-Algieba',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-alnilam']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Alnilam',
     },
+    id: 'bn-IN-Chirp3-HD-Alnilam',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-aoede']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Aoede',
     },
+    id: 'bn-IN-Chirp3-HD-Aoede',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-autonoe']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Autonoe',
     },
+    id: 'bn-IN-Chirp3-HD-Autonoe',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Callirrhoe',
     },
+    id: 'bn-IN-Chirp3-HD-Callirrhoe',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-charon']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Charon',
     },
+    id: 'bn-IN-Chirp3-HD-Charon',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-despina']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Despina',
     },
+    id: 'bn-IN-Chirp3-HD-Despina',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-enceladus']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Enceladus',
     },
+    id: 'bn-IN-Chirp3-HD-Enceladus',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-erinome']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Erinome',
     },
+    id: 'bn-IN-Chirp3-HD-Erinome',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-fenrir']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Fenrir',
     },
+    id: 'bn-IN-Chirp3-HD-Fenrir',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-gacrux']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Gacrux',
     },
+    id: 'bn-IN-Chirp3-HD-Gacrux',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-iapetus']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Iapetus',
     },
+    id: 'bn-IN-Chirp3-HD-Iapetus',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-kore']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Kore',
     },
+    id: 'bn-IN-Chirp3-HD-Kore',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-laomedeia']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Laomedeia',
     },
+    id: 'bn-IN-Chirp3-HD-Laomedeia',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-leda']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Leda',
     },
+    id: 'bn-IN-Chirp3-HD-Leda',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-orus']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Orus',
     },
+    id: 'bn-IN-Chirp3-HD-Orus',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-puck']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Puck',
     },
+    id: 'bn-IN-Chirp3-HD-Puck',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Pulcherrima',
     },
+    id: 'bn-IN-Chirp3-HD-Pulcherrima',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Rasalgethi',
     },
+    id: 'bn-IN-Chirp3-HD-Rasalgethi',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-sadachbia']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Sadachbia',
     },
+    id: 'bn-IN-Chirp3-HD-Sadachbia',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-sadaltager']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Sadaltager',
     },
+    id: 'bn-IN-Chirp3-HD-Sadaltager',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-schedar']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Schedar',
     },
+    id: 'bn-IN-Chirp3-HD-Schedar',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-sulafat']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Sulafat',
     },
+    id: 'bn-IN-Chirp3-HD-Sulafat',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-umbriel']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Umbriel',
     },
+    id: 'bn-IN-Chirp3-HD-Umbriel',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Vindemiatrix',
     },
+    id: 'bn-IN-Chirp3-HD-Vindemiatrix',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-zephyr']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Zephyr',
     },
+    id: 'bn-IN-Chirp3-HD-Zephyr',
+    languages: ['bn-IN'],
   },
   ['bn-in-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'bn-IN-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'bn-IN-Chirp3-HD-Zubenelgenubi',
+    languages: ['bn-IN'],
   },
   ['bn-in-standard-a']: {
     voice: {
       name: 'bn-IN-Standard-A',
     },
+    id: 'bn-IN-Standard-A',
+    languages: ['bn-IN'],
   },
   ['bn-in-standard-b']: {
     voice: {
       name: 'bn-IN-Standard-B',
     },
+    id: 'bn-IN-Standard-B',
+    languages: ['bn-IN'],
   },
   ['bn-in-standard-c']: {
     voice: {
       name: 'bn-IN-Standard-C',
     },
+    id: 'bn-IN-Standard-C',
+    languages: ['bn-IN'],
   },
   ['bn-in-standard-d']: {
     voice: {
       name: 'bn-IN-Standard-D',
     },
+    id: 'bn-IN-Standard-D',
+    languages: ['bn-IN'],
   },
   ['bn-in-wavenet-a']: {
     voice: {
       name: 'bn-IN-Wavenet-A',
     },
+    id: 'bn-IN-Wavenet-A',
+    languages: ['bn-IN'],
   },
   ['bn-in-wavenet-b']: {
     voice: {
       name: 'bn-IN-Wavenet-B',
     },
+    id: 'bn-IN-Wavenet-B',
+    languages: ['bn-IN'],
   },
   ['bn-in-wavenet-c']: {
     voice: {
       name: 'bn-IN-Wavenet-C',
     },
+    id: 'bn-IN-Wavenet-C',
+    languages: ['bn-IN'],
   },
   ['bn-in-wavenet-d']: {
     voice: {
       name: 'bn-IN-Wavenet-D',
     },
+    id: 'bn-IN-Wavenet-D',
+    languages: ['bn-IN'],
   },
   ['ca-es-standard-b']: {
     voice: {
       name: 'ca-ES-Standard-B',
     },
+    id: 'ca-ES-Standard-B',
+    languages: ['ca-ES'],
   },
   ['callirrhoe']: {
     voice: {
       name: 'Callirrhoe',
     },
+    id: 'Callirrhoe',
+    languages: ['en-US'],
   },
   ['charon']: {
     voice: {
       name: 'Charon',
     },
+    id: 'Charon',
+    languages: ['en-US'],
   },
   ['cmn-cn-chirp3-hd-achernar']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Achernar',
     },
+    id: 'cmn-CN-Chirp3-HD-Achernar',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-achird']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Achird',
     },
+    id: 'cmn-CN-Chirp3-HD-Achird',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-algenib']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Algenib',
     },
+    id: 'cmn-CN-Chirp3-HD-Algenib',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-algieba']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Algieba',
     },
+    id: 'cmn-CN-Chirp3-HD-Algieba',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-alnilam']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Alnilam',
     },
+    id: 'cmn-CN-Chirp3-HD-Alnilam',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-aoede']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Aoede',
     },
+    id: 'cmn-CN-Chirp3-HD-Aoede',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-autonoe']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Autonoe',
     },
+    id: 'cmn-CN-Chirp3-HD-Autonoe',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Callirrhoe',
     },
+    id: 'cmn-CN-Chirp3-HD-Callirrhoe',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-charon']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Charon',
     },
+    id: 'cmn-CN-Chirp3-HD-Charon',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-despina']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Despina',
     },
+    id: 'cmn-CN-Chirp3-HD-Despina',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-enceladus']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Enceladus',
     },
+    id: 'cmn-CN-Chirp3-HD-Enceladus',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-erinome']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Erinome',
     },
+    id: 'cmn-CN-Chirp3-HD-Erinome',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-fenrir']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Fenrir',
     },
+    id: 'cmn-CN-Chirp3-HD-Fenrir',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-gacrux']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Gacrux',
     },
+    id: 'cmn-CN-Chirp3-HD-Gacrux',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-iapetus']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Iapetus',
     },
+    id: 'cmn-CN-Chirp3-HD-Iapetus',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-kore']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Kore',
     },
+    id: 'cmn-CN-Chirp3-HD-Kore',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-laomedeia']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Laomedeia',
     },
+    id: 'cmn-CN-Chirp3-HD-Laomedeia',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-leda']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Leda',
     },
+    id: 'cmn-CN-Chirp3-HD-Leda',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-orus']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Orus',
     },
+    id: 'cmn-CN-Chirp3-HD-Orus',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-puck']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Puck',
     },
+    id: 'cmn-CN-Chirp3-HD-Puck',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Pulcherrima',
     },
+    id: 'cmn-CN-Chirp3-HD-Pulcherrima',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Rasalgethi',
     },
+    id: 'cmn-CN-Chirp3-HD-Rasalgethi',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-sadachbia']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Sadachbia',
     },
+    id: 'cmn-CN-Chirp3-HD-Sadachbia',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-sadaltager']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Sadaltager',
     },
+    id: 'cmn-CN-Chirp3-HD-Sadaltager',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-schedar']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Schedar',
     },
+    id: 'cmn-CN-Chirp3-HD-Schedar',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-sulafat']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Sulafat',
     },
+    id: 'cmn-CN-Chirp3-HD-Sulafat',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-umbriel']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Umbriel',
     },
+    id: 'cmn-CN-Chirp3-HD-Umbriel',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Vindemiatrix',
     },
+    id: 'cmn-CN-Chirp3-HD-Vindemiatrix',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-zephyr']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Zephyr',
     },
+    id: 'cmn-CN-Chirp3-HD-Zephyr',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'cmn-CN-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'cmn-CN-Chirp3-HD-Zubenelgenubi',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-standard-a']: {
     voice: {
       name: 'cmn-CN-Standard-A',
     },
+    id: 'cmn-CN-Standard-A',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-standard-b']: {
     voice: {
       name: 'cmn-CN-Standard-B',
     },
+    id: 'cmn-CN-Standard-B',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-standard-c']: {
     voice: {
       name: 'cmn-CN-Standard-C',
     },
+    id: 'cmn-CN-Standard-C',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-standard-d']: {
     voice: {
       name: 'cmn-CN-Standard-D',
     },
+    id: 'cmn-CN-Standard-D',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-wavenet-a']: {
     voice: {
       name: 'cmn-CN-Wavenet-A',
     },
+    id: 'cmn-CN-Wavenet-A',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-wavenet-b']: {
     voice: {
       name: 'cmn-CN-Wavenet-B',
     },
+    id: 'cmn-CN-Wavenet-B',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-wavenet-c']: {
     voice: {
       name: 'cmn-CN-Wavenet-C',
     },
+    id: 'cmn-CN-Wavenet-C',
+    languages: ['cmn-CN'],
   },
   ['cmn-cn-wavenet-d']: {
     voice: {
       name: 'cmn-CN-Wavenet-D',
     },
+    id: 'cmn-CN-Wavenet-D',
+    languages: ['cmn-CN'],
   },
   ['cmn-tw-standard-a']: {
     voice: {
       name: 'cmn-TW-Standard-A',
     },
+    id: 'cmn-TW-Standard-A',
+    languages: ['cmn-TW'],
   },
   ['cmn-tw-standard-b']: {
     voice: {
       name: 'cmn-TW-Standard-B',
     },
+    id: 'cmn-TW-Standard-B',
+    languages: ['cmn-TW'],
   },
   ['cmn-tw-standard-c']: {
     voice: {
       name: 'cmn-TW-Standard-C',
     },
+    id: 'cmn-TW-Standard-C',
+    languages: ['cmn-TW'],
   },
   ['cmn-tw-wavenet-a']: {
     voice: {
       name: 'cmn-TW-Wavenet-A',
     },
+    id: 'cmn-TW-Wavenet-A',
+    languages: ['cmn-TW'],
   },
   ['cmn-tw-wavenet-b']: {
     voice: {
       name: 'cmn-TW-Wavenet-B',
     },
+    id: 'cmn-TW-Wavenet-B',
+    languages: ['cmn-TW'],
   },
   ['cmn-tw-wavenet-c']: {
     voice: {
       name: 'cmn-TW-Wavenet-C',
     },
+    id: 'cmn-TW-Wavenet-C',
+    languages: ['cmn-TW'],
+  },
+  ['cs-cz-chirp3-hd-achernar']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Achernar',
+    },
+    id: 'cs-CZ-Chirp3-HD-Achernar',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-achird']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Achird',
+    },
+    id: 'cs-CZ-Chirp3-HD-Achird',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-algenib']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Algenib',
+    },
+    id: 'cs-CZ-Chirp3-HD-Algenib',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-algieba']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Algieba',
+    },
+    id: 'cs-CZ-Chirp3-HD-Algieba',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-alnilam']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Alnilam',
+    },
+    id: 'cs-CZ-Chirp3-HD-Alnilam',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-aoede']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Aoede',
+    },
+    id: 'cs-CZ-Chirp3-HD-Aoede',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-autonoe']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Autonoe',
+    },
+    id: 'cs-CZ-Chirp3-HD-Autonoe',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-callirrhoe']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Callirrhoe',
+    },
+    id: 'cs-CZ-Chirp3-HD-Callirrhoe',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-charon']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Charon',
+    },
+    id: 'cs-CZ-Chirp3-HD-Charon',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-despina']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Despina',
+    },
+    id: 'cs-CZ-Chirp3-HD-Despina',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-enceladus']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Enceladus',
+    },
+    id: 'cs-CZ-Chirp3-HD-Enceladus',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-erinome']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Erinome',
+    },
+    id: 'cs-CZ-Chirp3-HD-Erinome',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-fenrir']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Fenrir',
+    },
+    id: 'cs-CZ-Chirp3-HD-Fenrir',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-gacrux']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Gacrux',
+    },
+    id: 'cs-CZ-Chirp3-HD-Gacrux',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-iapetus']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Iapetus',
+    },
+    id: 'cs-CZ-Chirp3-HD-Iapetus',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-kore']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Kore',
+    },
+    id: 'cs-CZ-Chirp3-HD-Kore',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-laomedeia']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Laomedeia',
+    },
+    id: 'cs-CZ-Chirp3-HD-Laomedeia',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-leda']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Leda',
+    },
+    id: 'cs-CZ-Chirp3-HD-Leda',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-orus']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Orus',
+    },
+    id: 'cs-CZ-Chirp3-HD-Orus',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-puck']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Puck',
+    },
+    id: 'cs-CZ-Chirp3-HD-Puck',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-pulcherrima']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Pulcherrima',
+    },
+    id: 'cs-CZ-Chirp3-HD-Pulcherrima',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-rasalgethi']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Rasalgethi',
+    },
+    id: 'cs-CZ-Chirp3-HD-Rasalgethi',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-sadachbia']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Sadachbia',
+    },
+    id: 'cs-CZ-Chirp3-HD-Sadachbia',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-sadaltager']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Sadaltager',
+    },
+    id: 'cs-CZ-Chirp3-HD-Sadaltager',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-schedar']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Schedar',
+    },
+    id: 'cs-CZ-Chirp3-HD-Schedar',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-sulafat']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Sulafat',
+    },
+    id: 'cs-CZ-Chirp3-HD-Sulafat',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-umbriel']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Umbriel',
+    },
+    id: 'cs-CZ-Chirp3-HD-Umbriel',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-vindemiatrix']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Vindemiatrix',
+    },
+    id: 'cs-CZ-Chirp3-HD-Vindemiatrix',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-zephyr']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Zephyr',
+    },
+    id: 'cs-CZ-Chirp3-HD-Zephyr',
+    languages: ['cs-CZ'],
+  },
+  ['cs-cz-chirp3-hd-zubenelgenubi']: {
+    voice: {
+      name: 'cs-CZ-Chirp3-HD-Zubenelgenubi',
+    },
+    id: 'cs-CZ-Chirp3-HD-Zubenelgenubi',
+    languages: ['cs-CZ'],
   },
   ['cs-cz-standard-b']: {
     voice: {
       name: 'cs-CZ-Standard-B',
     },
+    id: 'cs-CZ-Standard-B',
+    languages: ['cs-CZ'],
   },
   ['cs-cz-wavenet-b']: {
     voice: {
       name: 'cs-CZ-Wavenet-B',
     },
+    id: 'cs-CZ-Wavenet-B',
+    languages: ['cs-CZ'],
   },
   ['da-dk-chirp3-hd-achernar']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Achernar',
     },
+    id: 'da-DK-Chirp3-HD-Achernar',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-achird']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Achird',
     },
+    id: 'da-DK-Chirp3-HD-Achird',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-algenib']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Algenib',
     },
+    id: 'da-DK-Chirp3-HD-Algenib',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-algieba']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Algieba',
     },
+    id: 'da-DK-Chirp3-HD-Algieba',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-alnilam']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Alnilam',
     },
+    id: 'da-DK-Chirp3-HD-Alnilam',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-aoede']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Aoede',
     },
+    id: 'da-DK-Chirp3-HD-Aoede',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-autonoe']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Autonoe',
     },
+    id: 'da-DK-Chirp3-HD-Autonoe',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Callirrhoe',
     },
+    id: 'da-DK-Chirp3-HD-Callirrhoe',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-charon']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Charon',
     },
+    id: 'da-DK-Chirp3-HD-Charon',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-despina']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Despina',
     },
+    id: 'da-DK-Chirp3-HD-Despina',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-enceladus']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Enceladus',
     },
+    id: 'da-DK-Chirp3-HD-Enceladus',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-erinome']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Erinome',
     },
+    id: 'da-DK-Chirp3-HD-Erinome',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-fenrir']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Fenrir',
     },
+    id: 'da-DK-Chirp3-HD-Fenrir',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-gacrux']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Gacrux',
     },
+    id: 'da-DK-Chirp3-HD-Gacrux',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-iapetus']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Iapetus',
     },
+    id: 'da-DK-Chirp3-HD-Iapetus',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-kore']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Kore',
     },
+    id: 'da-DK-Chirp3-HD-Kore',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-laomedeia']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Laomedeia',
     },
+    id: 'da-DK-Chirp3-HD-Laomedeia',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-leda']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Leda',
     },
+    id: 'da-DK-Chirp3-HD-Leda',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-orus']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Orus',
     },
+    id: 'da-DK-Chirp3-HD-Orus',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-puck']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Puck',
     },
+    id: 'da-DK-Chirp3-HD-Puck',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Pulcherrima',
     },
+    id: 'da-DK-Chirp3-HD-Pulcherrima',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Rasalgethi',
     },
+    id: 'da-DK-Chirp3-HD-Rasalgethi',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-sadachbia']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Sadachbia',
     },
+    id: 'da-DK-Chirp3-HD-Sadachbia',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-sadaltager']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Sadaltager',
     },
+    id: 'da-DK-Chirp3-HD-Sadaltager',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-schedar']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Schedar',
     },
+    id: 'da-DK-Chirp3-HD-Schedar',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-sulafat']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Sulafat',
     },
+    id: 'da-DK-Chirp3-HD-Sulafat',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-umbriel']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Umbriel',
     },
+    id: 'da-DK-Chirp3-HD-Umbriel',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Vindemiatrix',
     },
+    id: 'da-DK-Chirp3-HD-Vindemiatrix',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-zephyr']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Zephyr',
     },
+    id: 'da-DK-Chirp3-HD-Zephyr',
+    languages: ['da-DK'],
   },
   ['da-dk-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'da-DK-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'da-DK-Chirp3-HD-Zubenelgenubi',
+    languages: ['da-DK'],
   },
   ['da-dk-neural2-f']: {
     voice: {
       name: 'da-DK-Neural2-F',
     },
+    id: 'da-DK-Neural2-F',
+    languages: ['da-DK'],
   },
   ['da-dk-standard-f']: {
     voice: {
       name: 'da-DK-Standard-F',
     },
+    id: 'da-DK-Standard-F',
+    languages: ['da-DK'],
   },
   ['da-dk-standard-g']: {
     voice: {
       name: 'da-DK-Standard-G',
     },
+    id: 'da-DK-Standard-G',
+    languages: ['da-DK'],
   },
   ['da-dk-wavenet-f']: {
     voice: {
       name: 'da-DK-Wavenet-F',
     },
+    id: 'da-DK-Wavenet-F',
+    languages: ['da-DK'],
   },
   ['da-dk-wavenet-g']: {
     voice: {
       name: 'da-DK-Wavenet-G',
     },
+    id: 'da-DK-Wavenet-G',
+    languages: ['da-DK'],
   },
   ['de-de-chirp-hd-d']: {
     voice: {
       name: 'de-DE-Chirp-HD-D',
     },
+    id: 'de-DE-Chirp-HD-D',
+    languages: ['de-DE'],
   },
   ['de-de-chirp-hd-f']: {
     voice: {
       name: 'de-DE-Chirp-HD-F',
     },
+    id: 'de-DE-Chirp-HD-F',
+    languages: ['de-DE'],
   },
   ['de-de-chirp-hd-o']: {
     voice: {
       name: 'de-DE-Chirp-HD-O',
     },
+    id: 'de-DE-Chirp-HD-O',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-achernar']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Achernar',
     },
+    id: 'de-DE-Chirp3-HD-Achernar',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-achird']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Achird',
     },
+    id: 'de-DE-Chirp3-HD-Achird',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-algenib']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Algenib',
     },
+    id: 'de-DE-Chirp3-HD-Algenib',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-algieba']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Algieba',
     },
+    id: 'de-DE-Chirp3-HD-Algieba',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-alnilam']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Alnilam',
     },
+    id: 'de-DE-Chirp3-HD-Alnilam',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-aoede']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Aoede',
     },
+    id: 'de-DE-Chirp3-HD-Aoede',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-autonoe']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Autonoe',
     },
+    id: 'de-DE-Chirp3-HD-Autonoe',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Callirrhoe',
     },
+    id: 'de-DE-Chirp3-HD-Callirrhoe',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-charon']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Charon',
     },
+    id: 'de-DE-Chirp3-HD-Charon',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-despina']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Despina',
     },
+    id: 'de-DE-Chirp3-HD-Despina',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-enceladus']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Enceladus',
     },
+    id: 'de-DE-Chirp3-HD-Enceladus',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-erinome']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Erinome',
     },
+    id: 'de-DE-Chirp3-HD-Erinome',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-fenrir']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Fenrir',
     },
+    id: 'de-DE-Chirp3-HD-Fenrir',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-gacrux']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Gacrux',
     },
+    id: 'de-DE-Chirp3-HD-Gacrux',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-iapetus']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Iapetus',
     },
+    id: 'de-DE-Chirp3-HD-Iapetus',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-kore']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Kore',
     },
+    id: 'de-DE-Chirp3-HD-Kore',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-laomedeia']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Laomedeia',
     },
+    id: 'de-DE-Chirp3-HD-Laomedeia',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-leda']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Leda',
     },
+    id: 'de-DE-Chirp3-HD-Leda',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-orus']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Orus',
     },
+    id: 'de-DE-Chirp3-HD-Orus',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-puck']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Puck',
     },
+    id: 'de-DE-Chirp3-HD-Puck',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Pulcherrima',
     },
+    id: 'de-DE-Chirp3-HD-Pulcherrima',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Rasalgethi',
     },
+    id: 'de-DE-Chirp3-HD-Rasalgethi',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-sadachbia']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Sadachbia',
     },
+    id: 'de-DE-Chirp3-HD-Sadachbia',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-sadaltager']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Sadaltager',
     },
+    id: 'de-DE-Chirp3-HD-Sadaltager',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-schedar']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Schedar',
     },
+    id: 'de-DE-Chirp3-HD-Schedar',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-sulafat']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Sulafat',
     },
+    id: 'de-DE-Chirp3-HD-Sulafat',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-umbriel']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Umbriel',
     },
+    id: 'de-DE-Chirp3-HD-Umbriel',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Vindemiatrix',
     },
+    id: 'de-DE-Chirp3-HD-Vindemiatrix',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-zephyr']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Zephyr',
     },
+    id: 'de-DE-Chirp3-HD-Zephyr',
+    languages: ['de-DE'],
   },
   ['de-de-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'de-DE-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'de-DE-Chirp3-HD-Zubenelgenubi',
+    languages: ['de-DE'],
   },
   ['de-de-neural2-g']: {
     voice: {
       name: 'de-DE-Neural2-G',
     },
+    id: 'de-DE-Neural2-G',
+    languages: ['de-DE'],
   },
   ['de-de-neural2-h']: {
     voice: {
       name: 'de-DE-Neural2-H',
     },
+    id: 'de-DE-Neural2-H',
+    languages: ['de-DE'],
   },
   ['de-de-polyglot-1']: {
     voice: {
       name: 'de-DE-Polyglot-1',
     },
+    id: 'de-DE-Polyglot-1',
+    languages: ['de-DE'],
   },
   ['de-de-standard-g']: {
     voice: {
       name: 'de-DE-Standard-G',
     },
+    id: 'de-DE-Standard-G',
+    languages: ['de-DE'],
   },
   ['de-de-standard-h']: {
     voice: {
       name: 'de-DE-Standard-H',
     },
+    id: 'de-DE-Standard-H',
+    languages: ['de-DE'],
   },
   ['de-de-studio-b']: {
     voice: {
       name: 'de-DE-Studio-B',
     },
+    id: 'de-DE-Studio-B',
+    languages: ['de-DE'],
   },
   ['de-de-studio-c']: {
     voice: {
       name: 'de-DE-Studio-C',
     },
+    id: 'de-DE-Studio-C',
+    languages: ['de-DE'],
   },
   ['de-de-wavenet-g']: {
     voice: {
       name: 'de-DE-Wavenet-G',
     },
+    id: 'de-DE-Wavenet-G',
+    languages: ['de-DE'],
   },
   ['de-de-wavenet-h']: {
     voice: {
       name: 'de-DE-Wavenet-H',
     },
+    id: 'de-DE-Wavenet-H',
+    languages: ['de-DE'],
   },
   ['despina']: {
     voice: {
       name: 'Despina',
     },
+    id: 'Despina',
+    languages: ['en-US'],
+  },
+  ['el-gr-chirp3-hd-achernar']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Achernar',
+    },
+    id: 'el-GR-Chirp3-HD-Achernar',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-achird']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Achird',
+    },
+    id: 'el-GR-Chirp3-HD-Achird',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-algenib']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Algenib',
+    },
+    id: 'el-GR-Chirp3-HD-Algenib',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-algieba']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Algieba',
+    },
+    id: 'el-GR-Chirp3-HD-Algieba',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-alnilam']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Alnilam',
+    },
+    id: 'el-GR-Chirp3-HD-Alnilam',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-aoede']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Aoede',
+    },
+    id: 'el-GR-Chirp3-HD-Aoede',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-autonoe']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Autonoe',
+    },
+    id: 'el-GR-Chirp3-HD-Autonoe',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-callirrhoe']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Callirrhoe',
+    },
+    id: 'el-GR-Chirp3-HD-Callirrhoe',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-charon']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Charon',
+    },
+    id: 'el-GR-Chirp3-HD-Charon',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-despina']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Despina',
+    },
+    id: 'el-GR-Chirp3-HD-Despina',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-enceladus']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Enceladus',
+    },
+    id: 'el-GR-Chirp3-HD-Enceladus',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-erinome']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Erinome',
+    },
+    id: 'el-GR-Chirp3-HD-Erinome',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-fenrir']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Fenrir',
+    },
+    id: 'el-GR-Chirp3-HD-Fenrir',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-gacrux']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Gacrux',
+    },
+    id: 'el-GR-Chirp3-HD-Gacrux',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-iapetus']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Iapetus',
+    },
+    id: 'el-GR-Chirp3-HD-Iapetus',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-kore']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Kore',
+    },
+    id: 'el-GR-Chirp3-HD-Kore',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-laomedeia']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Laomedeia',
+    },
+    id: 'el-GR-Chirp3-HD-Laomedeia',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-leda']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Leda',
+    },
+    id: 'el-GR-Chirp3-HD-Leda',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-orus']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Orus',
+    },
+    id: 'el-GR-Chirp3-HD-Orus',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-puck']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Puck',
+    },
+    id: 'el-GR-Chirp3-HD-Puck',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-pulcherrima']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Pulcherrima',
+    },
+    id: 'el-GR-Chirp3-HD-Pulcherrima',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-rasalgethi']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Rasalgethi',
+    },
+    id: 'el-GR-Chirp3-HD-Rasalgethi',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-sadachbia']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Sadachbia',
+    },
+    id: 'el-GR-Chirp3-HD-Sadachbia',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-sadaltager']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Sadaltager',
+    },
+    id: 'el-GR-Chirp3-HD-Sadaltager',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-schedar']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Schedar',
+    },
+    id: 'el-GR-Chirp3-HD-Schedar',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-sulafat']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Sulafat',
+    },
+    id: 'el-GR-Chirp3-HD-Sulafat',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-umbriel']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Umbriel',
+    },
+    id: 'el-GR-Chirp3-HD-Umbriel',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-vindemiatrix']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Vindemiatrix',
+    },
+    id: 'el-GR-Chirp3-HD-Vindemiatrix',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-zephyr']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Zephyr',
+    },
+    id: 'el-GR-Chirp3-HD-Zephyr',
+    languages: ['el-GR'],
+  },
+  ['el-gr-chirp3-hd-zubenelgenubi']: {
+    voice: {
+      name: 'el-GR-Chirp3-HD-Zubenelgenubi',
+    },
+    id: 'el-GR-Chirp3-HD-Zubenelgenubi',
+    languages: ['el-GR'],
   },
   ['el-gr-standard-b']: {
     voice: {
       name: 'el-GR-Standard-B',
     },
+    id: 'el-GR-Standard-B',
+    languages: ['el-GR'],
   },
   ['el-gr-wavenet-b']: {
     voice: {
       name: 'el-GR-Wavenet-B',
     },
+    id: 'el-GR-Wavenet-B',
+    languages: ['el-GR'],
   },
   ['en-au-chirp-hd-d']: {
     voice: {
       name: 'en-AU-Chirp-HD-D',
     },
+    id: 'en-AU-Chirp-HD-D',
+    languages: ['en-AU'],
   },
   ['en-au-chirp-hd-f']: {
     voice: {
       name: 'en-AU-Chirp-HD-F',
     },
+    id: 'en-AU-Chirp-HD-F',
+    languages: ['en-AU'],
   },
   ['en-au-chirp-hd-o']: {
     voice: {
       name: 'en-AU-Chirp-HD-O',
     },
+    id: 'en-AU-Chirp-HD-O',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-achernar']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Achernar',
     },
+    id: 'en-AU-Chirp3-HD-Achernar',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-achird']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Achird',
     },
+    id: 'en-AU-Chirp3-HD-Achird',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-algenib']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Algenib',
     },
+    id: 'en-AU-Chirp3-HD-Algenib',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-algieba']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Algieba',
     },
+    id: 'en-AU-Chirp3-HD-Algieba',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-alnilam']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Alnilam',
     },
+    id: 'en-AU-Chirp3-HD-Alnilam',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-aoede']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Aoede',
     },
+    id: 'en-AU-Chirp3-HD-Aoede',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-autonoe']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Autonoe',
     },
+    id: 'en-AU-Chirp3-HD-Autonoe',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Callirrhoe',
     },
+    id: 'en-AU-Chirp3-HD-Callirrhoe',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-charon']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Charon',
     },
+    id: 'en-AU-Chirp3-HD-Charon',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-despina']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Despina',
     },
+    id: 'en-AU-Chirp3-HD-Despina',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-enceladus']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Enceladus',
     },
+    id: 'en-AU-Chirp3-HD-Enceladus',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-erinome']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Erinome',
     },
+    id: 'en-AU-Chirp3-HD-Erinome',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-fenrir']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Fenrir',
     },
+    id: 'en-AU-Chirp3-HD-Fenrir',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-gacrux']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Gacrux',
     },
+    id: 'en-AU-Chirp3-HD-Gacrux',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-iapetus']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Iapetus',
     },
+    id: 'en-AU-Chirp3-HD-Iapetus',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-kore']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Kore',
     },
+    id: 'en-AU-Chirp3-HD-Kore',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-laomedeia']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Laomedeia',
     },
+    id: 'en-AU-Chirp3-HD-Laomedeia',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-leda']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Leda',
     },
+    id: 'en-AU-Chirp3-HD-Leda',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-orus']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Orus',
     },
+    id: 'en-AU-Chirp3-HD-Orus',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-puck']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Puck',
     },
+    id: 'en-AU-Chirp3-HD-Puck',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Pulcherrima',
     },
+    id: 'en-AU-Chirp3-HD-Pulcherrima',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Rasalgethi',
     },
+    id: 'en-AU-Chirp3-HD-Rasalgethi',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-sadachbia']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Sadachbia',
     },
+    id: 'en-AU-Chirp3-HD-Sadachbia',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-sadaltager']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Sadaltager',
     },
+    id: 'en-AU-Chirp3-HD-Sadaltager',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-schedar']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Schedar',
     },
+    id: 'en-AU-Chirp3-HD-Schedar',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-sulafat']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Sulafat',
     },
+    id: 'en-AU-Chirp3-HD-Sulafat',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-umbriel']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Umbriel',
     },
+    id: 'en-AU-Chirp3-HD-Umbriel',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Vindemiatrix',
     },
+    id: 'en-AU-Chirp3-HD-Vindemiatrix',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-zephyr']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Zephyr',
     },
+    id: 'en-AU-Chirp3-HD-Zephyr',
+    languages: ['en-AU'],
   },
   ['en-au-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'en-AU-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'en-AU-Chirp3-HD-Zubenelgenubi',
+    languages: ['en-AU'],
   },
   ['en-au-neural2-a']: {
     voice: {
       name: 'en-AU-Neural2-A',
     },
+    id: 'en-AU-Neural2-A',
+    languages: ['en-AU'],
   },
   ['en-au-neural2-b']: {
     voice: {
       name: 'en-AU-Neural2-B',
     },
+    id: 'en-AU-Neural2-B',
+    languages: ['en-AU'],
   },
   ['en-au-neural2-c']: {
     voice: {
       name: 'en-AU-Neural2-C',
     },
+    id: 'en-AU-Neural2-C',
+    languages: ['en-AU'],
   },
   ['en-au-neural2-d']: {
     voice: {
       name: 'en-AU-Neural2-D',
     },
+    id: 'en-AU-Neural2-D',
+    languages: ['en-AU'],
   },
   ['en-au-news-e']: {
     voice: {
       name: 'en-AU-News-E',
     },
+    id: 'en-AU-News-E',
+    languages: ['en-AU'],
   },
   ['en-au-news-f']: {
     voice: {
       name: 'en-AU-News-F',
     },
+    id: 'en-AU-News-F',
+    languages: ['en-AU'],
   },
   ['en-au-news-g']: {
     voice: {
       name: 'en-AU-News-G',
     },
+    id: 'en-AU-News-G',
+    languages: ['en-AU'],
   },
   ['en-au-polyglot-1']: {
     voice: {
       name: 'en-AU-Polyglot-1',
     },
+    id: 'en-AU-Polyglot-1',
+    languages: ['en-AU'],
   },
   ['en-au-standard-a']: {
     voice: {
       name: 'en-AU-Standard-A',
     },
+    id: 'en-AU-Standard-A',
+    languages: ['en-AU'],
   },
   ['en-au-standard-b']: {
     voice: {
       name: 'en-AU-Standard-B',
     },
+    id: 'en-AU-Standard-B',
+    languages: ['en-AU'],
   },
   ['en-au-standard-c']: {
     voice: {
       name: 'en-AU-Standard-C',
     },
+    id: 'en-AU-Standard-C',
+    languages: ['en-AU'],
   },
   ['en-au-standard-d']: {
     voice: {
       name: 'en-AU-Standard-D',
     },
+    id: 'en-AU-Standard-D',
+    languages: ['en-AU'],
   },
   ['en-au-wavenet-a']: {
     voice: {
       name: 'en-AU-Wavenet-A',
     },
+    id: 'en-AU-Wavenet-A',
+    languages: ['en-AU'],
   },
   ['en-au-wavenet-b']: {
     voice: {
       name: 'en-AU-Wavenet-B',
     },
+    id: 'en-AU-Wavenet-B',
+    languages: ['en-AU'],
   },
   ['en-au-wavenet-c']: {
     voice: {
       name: 'en-AU-Wavenet-C',
     },
+    id: 'en-AU-Wavenet-C',
+    languages: ['en-AU'],
   },
   ['en-au-wavenet-d']: {
     voice: {
       name: 'en-AU-Wavenet-D',
     },
+    id: 'en-AU-Wavenet-D',
+    languages: ['en-AU'],
   },
   ['en-gb-chirp-hd-d']: {
     voice: {
       name: 'en-GB-Chirp-HD-D',
     },
+    id: 'en-GB-Chirp-HD-D',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp-hd-f']: {
     voice: {
       name: 'en-GB-Chirp-HD-F',
     },
+    id: 'en-GB-Chirp-HD-F',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp-hd-o']: {
     voice: {
       name: 'en-GB-Chirp-HD-O',
     },
+    id: 'en-GB-Chirp-HD-O',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-achernar']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Achernar',
     },
+    id: 'en-GB-Chirp3-HD-Achernar',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-achird']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Achird',
     },
+    id: 'en-GB-Chirp3-HD-Achird',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-algenib']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Algenib',
     },
+    id: 'en-GB-Chirp3-HD-Algenib',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-algieba']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Algieba',
     },
+    id: 'en-GB-Chirp3-HD-Algieba',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-alnilam']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Alnilam',
     },
+    id: 'en-GB-Chirp3-HD-Alnilam',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-aoede']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Aoede',
     },
+    id: 'en-GB-Chirp3-HD-Aoede',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-autonoe']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Autonoe',
     },
+    id: 'en-GB-Chirp3-HD-Autonoe',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Callirrhoe',
     },
+    id: 'en-GB-Chirp3-HD-Callirrhoe',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-charon']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Charon',
     },
+    id: 'en-GB-Chirp3-HD-Charon',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-despina']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Despina',
     },
+    id: 'en-GB-Chirp3-HD-Despina',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-enceladus']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Enceladus',
     },
+    id: 'en-GB-Chirp3-HD-Enceladus',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-erinome']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Erinome',
     },
+    id: 'en-GB-Chirp3-HD-Erinome',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-fenrir']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Fenrir',
     },
+    id: 'en-GB-Chirp3-HD-Fenrir',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-gacrux']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Gacrux',
     },
+    id: 'en-GB-Chirp3-HD-Gacrux',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-iapetus']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Iapetus',
     },
+    id: 'en-GB-Chirp3-HD-Iapetus',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-kore']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Kore',
     },
+    id: 'en-GB-Chirp3-HD-Kore',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-laomedeia']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Laomedeia',
     },
+    id: 'en-GB-Chirp3-HD-Laomedeia',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-leda']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Leda',
     },
+    id: 'en-GB-Chirp3-HD-Leda',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-orus']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Orus',
     },
+    id: 'en-GB-Chirp3-HD-Orus',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-puck']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Puck',
     },
+    id: 'en-GB-Chirp3-HD-Puck',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Pulcherrima',
     },
+    id: 'en-GB-Chirp3-HD-Pulcherrima',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Rasalgethi',
     },
+    id: 'en-GB-Chirp3-HD-Rasalgethi',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-sadachbia']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Sadachbia',
     },
+    id: 'en-GB-Chirp3-HD-Sadachbia',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-sadaltager']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Sadaltager',
     },
+    id: 'en-GB-Chirp3-HD-Sadaltager',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-schedar']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Schedar',
     },
+    id: 'en-GB-Chirp3-HD-Schedar',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-sulafat']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Sulafat',
     },
+    id: 'en-GB-Chirp3-HD-Sulafat',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-umbriel']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Umbriel',
     },
+    id: 'en-GB-Chirp3-HD-Umbriel',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Vindemiatrix',
     },
+    id: 'en-GB-Chirp3-HD-Vindemiatrix',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-zephyr']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Zephyr',
     },
+    id: 'en-GB-Chirp3-HD-Zephyr',
+    languages: ['en-GB'],
   },
   ['en-gb-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'en-GB-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'en-GB-Chirp3-HD-Zubenelgenubi',
+    languages: ['en-GB'],
   },
   ['en-gb-neural2-a']: {
     voice: {
       name: 'en-GB-Neural2-A',
     },
+    id: 'en-GB-Neural2-A',
+    languages: ['en-GB'],
   },
   ['en-gb-neural2-b']: {
     voice: {
       name: 'en-GB-Neural2-B',
     },
+    id: 'en-GB-Neural2-B',
+    languages: ['en-GB'],
   },
   ['en-gb-neural2-c']: {
     voice: {
       name: 'en-GB-Neural2-C',
     },
+    id: 'en-GB-Neural2-C',
+    languages: ['en-GB'],
   },
   ['en-gb-neural2-d']: {
     voice: {
       name: 'en-GB-Neural2-D',
     },
+    id: 'en-GB-Neural2-D',
+    languages: ['en-GB'],
   },
   ['en-gb-neural2-f']: {
     voice: {
       name: 'en-GB-Neural2-F',
     },
+    id: 'en-GB-Neural2-F',
+    languages: ['en-GB'],
   },
   ['en-gb-neural2-n']: {
     voice: {
       name: 'en-GB-Neural2-N',
     },
+    id: 'en-GB-Neural2-N',
+    languages: ['en-GB'],
   },
   ['en-gb-neural2-o']: {
     voice: {
       name: 'en-GB-Neural2-O',
     },
+    id: 'en-GB-Neural2-O',
+    languages: ['en-GB'],
   },
   ['en-gb-news-g']: {
     voice: {
       name: 'en-GB-News-G',
     },
+    id: 'en-GB-News-G',
+    languages: ['en-GB'],
   },
   ['en-gb-news-h']: {
     voice: {
       name: 'en-GB-News-H',
     },
+    id: 'en-GB-News-H',
+    languages: ['en-GB'],
   },
   ['en-gb-news-i']: {
     voice: {
       name: 'en-GB-News-I',
     },
+    id: 'en-GB-News-I',
+    languages: ['en-GB'],
   },
   ['en-gb-news-j']: {
     voice: {
       name: 'en-GB-News-J',
     },
+    id: 'en-GB-News-J',
+    languages: ['en-GB'],
   },
   ['en-gb-news-k']: {
     voice: {
       name: 'en-GB-News-K',
     },
+    id: 'en-GB-News-K',
+    languages: ['en-GB'],
   },
   ['en-gb-news-l']: {
     voice: {
       name: 'en-GB-News-L',
     },
+    id: 'en-GB-News-L',
+    languages: ['en-GB'],
   },
   ['en-gb-news-m']: {
     voice: {
       name: 'en-GB-News-M',
     },
+    id: 'en-GB-News-M',
+    languages: ['en-GB'],
   },
   ['en-gb-standard-a']: {
     voice: {
       name: 'en-GB-Standard-A',
     },
+    id: 'en-GB-Standard-A',
+    languages: ['en-GB'],
   },
   ['en-gb-standard-b']: {
     voice: {
       name: 'en-GB-Standard-B',
     },
+    id: 'en-GB-Standard-B',
+    languages: ['en-GB'],
   },
   ['en-gb-standard-c']: {
     voice: {
       name: 'en-GB-Standard-C',
     },
+    id: 'en-GB-Standard-C',
+    languages: ['en-GB'],
   },
   ['en-gb-standard-d']: {
     voice: {
       name: 'en-GB-Standard-D',
     },
+    id: 'en-GB-Standard-D',
+    languages: ['en-GB'],
   },
   ['en-gb-standard-f']: {
     voice: {
       name: 'en-GB-Standard-F',
     },
+    id: 'en-GB-Standard-F',
+    languages: ['en-GB'],
   },
   ['en-gb-standard-n']: {
     voice: {
       name: 'en-GB-Standard-N',
     },
+    id: 'en-GB-Standard-N',
+    languages: ['en-GB'],
   },
   ['en-gb-standard-o']: {
     voice: {
       name: 'en-GB-Standard-O',
     },
+    id: 'en-GB-Standard-O',
+    languages: ['en-GB'],
   },
   ['en-gb-studio-b']: {
     voice: {
       name: 'en-GB-Studio-B',
     },
+    id: 'en-GB-Studio-B',
+    languages: ['en-GB'],
   },
   ['en-gb-studio-c']: {
     voice: {
       name: 'en-GB-Studio-C',
     },
+    id: 'en-GB-Studio-C',
+    languages: ['en-GB'],
   },
   ['en-gb-wavenet-a']: {
     voice: {
       name: 'en-GB-Wavenet-A',
     },
+    id: 'en-GB-Wavenet-A',
+    languages: ['en-GB'],
   },
   ['en-gb-wavenet-b']: {
     voice: {
       name: 'en-GB-Wavenet-B',
     },
+    id: 'en-GB-Wavenet-B',
+    languages: ['en-GB'],
   },
   ['en-gb-wavenet-c']: {
     voice: {
       name: 'en-GB-Wavenet-C',
     },
+    id: 'en-GB-Wavenet-C',
+    languages: ['en-GB'],
   },
   ['en-gb-wavenet-d']: {
     voice: {
       name: 'en-GB-Wavenet-D',
     },
+    id: 'en-GB-Wavenet-D',
+    languages: ['en-GB'],
   },
   ['en-gb-wavenet-f']: {
     voice: {
       name: 'en-GB-Wavenet-F',
     },
+    id: 'en-GB-Wavenet-F',
+    languages: ['en-GB'],
   },
   ['en-gb-wavenet-n']: {
     voice: {
       name: 'en-GB-Wavenet-N',
     },
+    id: 'en-GB-Wavenet-N',
+    languages: ['en-GB'],
   },
   ['en-gb-wavenet-o']: {
     voice: {
       name: 'en-GB-Wavenet-O',
     },
+    id: 'en-GB-Wavenet-O',
+    languages: ['en-GB'],
   },
   ['en-in-chirp-hd-d']: {
     voice: {
       name: 'en-IN-Chirp-HD-D',
     },
+    id: 'en-IN-Chirp-HD-D',
+    languages: ['en-IN'],
   },
   ['en-in-chirp-hd-f']: {
     voice: {
       name: 'en-IN-Chirp-HD-F',
     },
+    id: 'en-IN-Chirp-HD-F',
+    languages: ['en-IN'],
   },
   ['en-in-chirp-hd-o']: {
     voice: {
       name: 'en-IN-Chirp-HD-O',
     },
+    id: 'en-IN-Chirp-HD-O',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-achernar']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Achernar',
     },
+    id: 'en-IN-Chirp3-HD-Achernar',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-achird']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Achird',
     },
+    id: 'en-IN-Chirp3-HD-Achird',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-algenib']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Algenib',
     },
+    id: 'en-IN-Chirp3-HD-Algenib',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-algieba']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Algieba',
     },
+    id: 'en-IN-Chirp3-HD-Algieba',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-alnilam']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Alnilam',
     },
+    id: 'en-IN-Chirp3-HD-Alnilam',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-aoede']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Aoede',
     },
+    id: 'en-IN-Chirp3-HD-Aoede',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-autonoe']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Autonoe',
     },
+    id: 'en-IN-Chirp3-HD-Autonoe',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Callirrhoe',
     },
+    id: 'en-IN-Chirp3-HD-Callirrhoe',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-charon']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Charon',
     },
+    id: 'en-IN-Chirp3-HD-Charon',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-despina']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Despina',
     },
+    id: 'en-IN-Chirp3-HD-Despina',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-enceladus']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Enceladus',
     },
+    id: 'en-IN-Chirp3-HD-Enceladus',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-erinome']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Erinome',
     },
+    id: 'en-IN-Chirp3-HD-Erinome',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-fenrir']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Fenrir',
     },
+    id: 'en-IN-Chirp3-HD-Fenrir',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-gacrux']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Gacrux',
     },
+    id: 'en-IN-Chirp3-HD-Gacrux',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-iapetus']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Iapetus',
     },
+    id: 'en-IN-Chirp3-HD-Iapetus',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-kore']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Kore',
     },
+    id: 'en-IN-Chirp3-HD-Kore',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-laomedeia']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Laomedeia',
     },
+    id: 'en-IN-Chirp3-HD-Laomedeia',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-leda']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Leda',
     },
+    id: 'en-IN-Chirp3-HD-Leda',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-orus']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Orus',
     },
+    id: 'en-IN-Chirp3-HD-Orus',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-puck']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Puck',
     },
+    id: 'en-IN-Chirp3-HD-Puck',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Pulcherrima',
     },
+    id: 'en-IN-Chirp3-HD-Pulcherrima',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Rasalgethi',
     },
+    id: 'en-IN-Chirp3-HD-Rasalgethi',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-sadachbia']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Sadachbia',
     },
+    id: 'en-IN-Chirp3-HD-Sadachbia',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-sadaltager']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Sadaltager',
     },
+    id: 'en-IN-Chirp3-HD-Sadaltager',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-schedar']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Schedar',
     },
+    id: 'en-IN-Chirp3-HD-Schedar',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-sulafat']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Sulafat',
     },
+    id: 'en-IN-Chirp3-HD-Sulafat',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-umbriel']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Umbriel',
     },
+    id: 'en-IN-Chirp3-HD-Umbriel',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Vindemiatrix',
     },
+    id: 'en-IN-Chirp3-HD-Vindemiatrix',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-zephyr']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Zephyr',
     },
+    id: 'en-IN-Chirp3-HD-Zephyr',
+    languages: ['en-IN'],
   },
   ['en-in-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'en-IN-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'en-IN-Chirp3-HD-Zubenelgenubi',
+    languages: ['en-IN'],
   },
   ['en-in-neural2-a']: {
     voice: {
       name: 'en-IN-Neural2-A',
     },
+    id: 'en-IN-Neural2-A',
+    languages: ['en-IN'],
   },
   ['en-in-neural2-b']: {
     voice: {
       name: 'en-IN-Neural2-B',
     },
+    id: 'en-IN-Neural2-B',
+    languages: ['en-IN'],
   },
   ['en-in-neural2-c']: {
     voice: {
       name: 'en-IN-Neural2-C',
     },
+    id: 'en-IN-Neural2-C',
+    languages: ['en-IN'],
   },
   ['en-in-neural2-d']: {
     voice: {
       name: 'en-IN-Neural2-D',
     },
+    id: 'en-IN-Neural2-D',
+    languages: ['en-IN'],
   },
   ['en-in-standard-a']: {
     voice: {
       name: 'en-IN-Standard-A',
     },
+    id: 'en-IN-Standard-A',
+    languages: ['en-IN'],
   },
   ['en-in-standard-b']: {
     voice: {
       name: 'en-IN-Standard-B',
     },
+    id: 'en-IN-Standard-B',
+    languages: ['en-IN'],
   },
   ['en-in-standard-c']: {
     voice: {
       name: 'en-IN-Standard-C',
     },
+    id: 'en-IN-Standard-C',
+    languages: ['en-IN'],
   },
   ['en-in-standard-d']: {
     voice: {
       name: 'en-IN-Standard-D',
     },
+    id: 'en-IN-Standard-D',
+    languages: ['en-IN'],
   },
   ['en-in-standard-e']: {
     voice: {
       name: 'en-IN-Standard-E',
     },
+    id: 'en-IN-Standard-E',
+    languages: ['en-IN'],
   },
   ['en-in-standard-f']: {
     voice: {
       name: 'en-IN-Standard-F',
     },
+    id: 'en-IN-Standard-F',
+    languages: ['en-IN'],
   },
   ['en-in-wavenet-a']: {
     voice: {
       name: 'en-IN-Wavenet-A',
     },
+    id: 'en-IN-Wavenet-A',
+    languages: ['en-IN'],
   },
   ['en-in-wavenet-b']: {
     voice: {
       name: 'en-IN-Wavenet-B',
     },
+    id: 'en-IN-Wavenet-B',
+    languages: ['en-IN'],
   },
   ['en-in-wavenet-c']: {
     voice: {
       name: 'en-IN-Wavenet-C',
     },
+    id: 'en-IN-Wavenet-C',
+    languages: ['en-IN'],
   },
   ['en-in-wavenet-d']: {
     voice: {
       name: 'en-IN-Wavenet-D',
     },
+    id: 'en-IN-Wavenet-D',
+    languages: ['en-IN'],
   },
   ['en-in-wavenet-e']: {
     voice: {
       name: 'en-IN-Wavenet-E',
     },
+    id: 'en-IN-Wavenet-E',
+    languages: ['en-IN'],
   },
   ['en-in-wavenet-f']: {
     voice: {
       name: 'en-IN-Wavenet-F',
     },
+    id: 'en-IN-Wavenet-F',
+    languages: ['en-IN'],
   },
   ['en-us-casual-k']: {
     voice: {
       name: 'en-US-Casual-K',
     },
+    id: 'en-US-Casual-K',
+    languages: ['en-US'],
   },
   ['en-us-chirp-hd-d']: {
     voice: {
       name: 'en-US-Chirp-HD-D',
     },
+    id: 'en-US-Chirp-HD-D',
+    languages: ['en-US'],
   },
   ['en-us-chirp-hd-f']: {
     voice: {
       name: 'en-US-Chirp-HD-F',
     },
+    id: 'en-US-Chirp-HD-F',
+    languages: ['en-US'],
   },
   ['en-us-chirp-hd-o']: {
     voice: {
       name: 'en-US-Chirp-HD-O',
     },
+    id: 'en-US-Chirp-HD-O',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-achernar']: {
     voice: {
       name: 'en-US-Chirp3-HD-Achernar',
     },
+    id: 'en-US-Chirp3-HD-Achernar',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-achird']: {
     voice: {
       name: 'en-US-Chirp3-HD-Achird',
     },
+    id: 'en-US-Chirp3-HD-Achird',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-algenib']: {
     voice: {
       name: 'en-US-Chirp3-HD-Algenib',
     },
+    id: 'en-US-Chirp3-HD-Algenib',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-algieba']: {
     voice: {
       name: 'en-US-Chirp3-HD-Algieba',
     },
+    id: 'en-US-Chirp3-HD-Algieba',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-alnilam']: {
     voice: {
       name: 'en-US-Chirp3-HD-Alnilam',
     },
+    id: 'en-US-Chirp3-HD-Alnilam',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-aoede']: {
     voice: {
       name: 'en-US-Chirp3-HD-Aoede',
     },
+    id: 'en-US-Chirp3-HD-Aoede',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-autonoe']: {
     voice: {
       name: 'en-US-Chirp3-HD-Autonoe',
     },
+    id: 'en-US-Chirp3-HD-Autonoe',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'en-US-Chirp3-HD-Callirrhoe',
     },
+    id: 'en-US-Chirp3-HD-Callirrhoe',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-charon']: {
     voice: {
       name: 'en-US-Chirp3-HD-Charon',
     },
+    id: 'en-US-Chirp3-HD-Charon',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-despina']: {
     voice: {
       name: 'en-US-Chirp3-HD-Despina',
     },
+    id: 'en-US-Chirp3-HD-Despina',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-enceladus']: {
     voice: {
       name: 'en-US-Chirp3-HD-Enceladus',
     },
+    id: 'en-US-Chirp3-HD-Enceladus',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-erinome']: {
     voice: {
       name: 'en-US-Chirp3-HD-Erinome',
     },
+    id: 'en-US-Chirp3-HD-Erinome',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-fenrir']: {
     voice: {
       name: 'en-US-Chirp3-HD-Fenrir',
     },
+    id: 'en-US-Chirp3-HD-Fenrir',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-gacrux']: {
     voice: {
       name: 'en-US-Chirp3-HD-Gacrux',
     },
+    id: 'en-US-Chirp3-HD-Gacrux',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-iapetus']: {
     voice: {
       name: 'en-US-Chirp3-HD-Iapetus',
     },
+    id: 'en-US-Chirp3-HD-Iapetus',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-kore']: {
     voice: {
       name: 'en-US-Chirp3-HD-Kore',
     },
+    id: 'en-US-Chirp3-HD-Kore',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-laomedeia']: {
     voice: {
       name: 'en-US-Chirp3-HD-Laomedeia',
     },
+    id: 'en-US-Chirp3-HD-Laomedeia',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-leda']: {
     voice: {
       name: 'en-US-Chirp3-HD-Leda',
     },
+    id: 'en-US-Chirp3-HD-Leda',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-orus']: {
     voice: {
       name: 'en-US-Chirp3-HD-Orus',
     },
+    id: 'en-US-Chirp3-HD-Orus',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-puck']: {
     voice: {
       name: 'en-US-Chirp3-HD-Puck',
     },
+    id: 'en-US-Chirp3-HD-Puck',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'en-US-Chirp3-HD-Pulcherrima',
     },
+    id: 'en-US-Chirp3-HD-Pulcherrima',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'en-US-Chirp3-HD-Rasalgethi',
     },
+    id: 'en-US-Chirp3-HD-Rasalgethi',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-sadachbia']: {
     voice: {
       name: 'en-US-Chirp3-HD-Sadachbia',
     },
+    id: 'en-US-Chirp3-HD-Sadachbia',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-sadaltager']: {
     voice: {
       name: 'en-US-Chirp3-HD-Sadaltager',
     },
+    id: 'en-US-Chirp3-HD-Sadaltager',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-schedar']: {
     voice: {
       name: 'en-US-Chirp3-HD-Schedar',
     },
+    id: 'en-US-Chirp3-HD-Schedar',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-sulafat']: {
     voice: {
       name: 'en-US-Chirp3-HD-Sulafat',
     },
+    id: 'en-US-Chirp3-HD-Sulafat',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-umbriel']: {
     voice: {
       name: 'en-US-Chirp3-HD-Umbriel',
     },
+    id: 'en-US-Chirp3-HD-Umbriel',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'en-US-Chirp3-HD-Vindemiatrix',
     },
+    id: 'en-US-Chirp3-HD-Vindemiatrix',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-zephyr']: {
     voice: {
       name: 'en-US-Chirp3-HD-Zephyr',
     },
+    id: 'en-US-Chirp3-HD-Zephyr',
+    languages: ['en-US'],
   },
   ['en-us-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'en-US-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'en-US-Chirp3-HD-Zubenelgenubi',
+    languages: ['en-US'],
   },
   ['en-us-neural2-a']: {
     voice: {
       name: 'en-US-Neural2-A',
     },
+    id: 'en-US-Neural2-A',
+    languages: ['en-US'],
   },
   ['en-us-neural2-c']: {
     voice: {
       name: 'en-US-Neural2-C',
     },
+    id: 'en-US-Neural2-C',
+    languages: ['en-US'],
   },
   ['en-us-neural2-d']: {
     voice: {
       name: 'en-US-Neural2-D',
     },
+    id: 'en-US-Neural2-D',
+    languages: ['en-US'],
   },
   ['en-us-neural2-e']: {
     voice: {
       name: 'en-US-Neural2-E',
     },
+    id: 'en-US-Neural2-E',
+    languages: ['en-US'],
   },
   ['en-us-neural2-f']: {
     voice: {
       name: 'en-US-Neural2-F',
     },
+    id: 'en-US-Neural2-F',
+    languages: ['en-US'],
   },
   ['en-us-neural2-g']: {
     voice: {
       name: 'en-US-Neural2-G',
     },
+    id: 'en-US-Neural2-G',
+    languages: ['en-US'],
   },
   ['en-us-neural2-h']: {
     voice: {
       name: 'en-US-Neural2-H',
     },
+    id: 'en-US-Neural2-H',
+    languages: ['en-US'],
   },
   ['en-us-neural2-i']: {
     voice: {
       name: 'en-US-Neural2-I',
     },
+    id: 'en-US-Neural2-I',
+    languages: ['en-US'],
   },
   ['en-us-neural2-j']: {
     voice: {
       name: 'en-US-Neural2-J',
     },
+    id: 'en-US-Neural2-J',
+    languages: ['en-US'],
   },
   ['en-us-news-k']: {
     voice: {
       name: 'en-US-News-K',
     },
+    id: 'en-US-News-K',
+    languages: ['en-US'],
   },
   ['en-us-news-l']: {
     voice: {
       name: 'en-US-News-L',
     },
+    id: 'en-US-News-L',
+    languages: ['en-US'],
   },
   ['en-us-news-n']: {
     voice: {
       name: 'en-US-News-N',
     },
+    id: 'en-US-News-N',
+    languages: ['en-US'],
   },
   ['en-us-polyglot-1']: {
     voice: {
       name: 'en-US-Polyglot-1',
     },
+    id: 'en-US-Polyglot-1',
+    languages: ['en-US'],
   },
   ['en-us-standard-a']: {
     voice: {
       name: 'en-US-Standard-A',
     },
+    id: 'en-US-Standard-A',
+    languages: ['en-US'],
   },
   ['en-us-standard-b']: {
     voice: {
       name: 'en-US-Standard-B',
     },
+    id: 'en-US-Standard-B',
+    languages: ['en-US'],
   },
   ['en-us-standard-c']: {
     voice: {
       name: 'en-US-Standard-C',
     },
+    id: 'en-US-Standard-C',
+    languages: ['en-US'],
   },
   ['en-us-standard-d']: {
     voice: {
       name: 'en-US-Standard-D',
     },
+    id: 'en-US-Standard-D',
+    languages: ['en-US'],
   },
   ['en-us-standard-e']: {
     voice: {
       name: 'en-US-Standard-E',
     },
+    id: 'en-US-Standard-E',
+    languages: ['en-US'],
   },
   ['en-us-standard-f']: {
     voice: {
       name: 'en-US-Standard-F',
     },
+    id: 'en-US-Standard-F',
+    languages: ['en-US'],
   },
   ['en-us-standard-g']: {
     voice: {
       name: 'en-US-Standard-G',
     },
+    id: 'en-US-Standard-G',
+    languages: ['en-US'],
   },
   ['en-us-standard-h']: {
     voice: {
       name: 'en-US-Standard-H',
     },
+    id: 'en-US-Standard-H',
+    languages: ['en-US'],
   },
   ['en-us-standard-i']: {
     voice: {
       name: 'en-US-Standard-I',
     },
+    id: 'en-US-Standard-I',
+    languages: ['en-US'],
   },
   ['en-us-standard-j']: {
     voice: {
       name: 'en-US-Standard-J',
     },
+    id: 'en-US-Standard-J',
+    languages: ['en-US'],
   },
   ['en-us-studio-o']: {
     voice: {
       name: 'en-US-Studio-O',
     },
+    id: 'en-US-Studio-O',
+    languages: ['en-US'],
   },
   ['en-us-studio-q']: {
     voice: {
       name: 'en-US-Studio-Q',
     },
+    id: 'en-US-Studio-Q',
+    languages: ['en-US'],
   },
   ['en-us-wavenet-a']: {
     voice: {
       name: 'en-US-Wavenet-A',
     },
+    id: 'en-US-Wavenet-A',
+    languages: ['en-US'],
   },
   ['en-us-wavenet-b']: {
     voice: {
       name: 'en-US-Wavenet-B',
     },
+    id: 'en-US-Wavenet-B',
+    languages: ['en-US'],
   },
   ['en-us-wavenet-c']: {
     voice: {
       name: 'en-US-Wavenet-C',
     },
+    id: 'en-US-Wavenet-C',
+    languages: ['en-US'],
   },
   ['en-us-wavenet-d']: {
     voice: {
       name: 'en-US-Wavenet-D',
     },
+    id: 'en-US-Wavenet-D',
+    languages: ['en-US'],
   },
   ['en-us-wavenet-e']: {
     voice: {
       name: 'en-US-Wavenet-E',
     },
+    id: 'en-US-Wavenet-E',
+    languages: ['en-US'],
   },
   ['en-us-wavenet-f']: {
     voice: {
       name: 'en-US-Wavenet-F',
     },
+    id: 'en-US-Wavenet-F',
+    languages: ['en-US'],
   },
   ['en-us-wavenet-g']: {
     voice: {
       name: 'en-US-Wavenet-G',
     },
+    id: 'en-US-Wavenet-G',
+    languages: ['en-US'],
   },
   ['en-us-wavenet-h']: {
     voice: {
       name: 'en-US-Wavenet-H',
     },
+    id: 'en-US-Wavenet-H',
+    languages: ['en-US'],
   },
   ['en-us-wavenet-i']: {
     voice: {
       name: 'en-US-Wavenet-I',
     },
+    id: 'en-US-Wavenet-I',
+    languages: ['en-US'],
   },
   ['en-us-wavenet-j']: {
     voice: {
       name: 'en-US-Wavenet-J',
     },
+    id: 'en-US-Wavenet-J',
+    languages: ['en-US'],
   },
   ['enceladus']: {
     voice: {
       name: 'Enceladus',
     },
+    id: 'Enceladus',
+    languages: ['en-US'],
   },
   ['erinome']: {
     voice: {
       name: 'Erinome',
     },
+    id: 'Erinome',
+    languages: ['en-US'],
   },
   ['es-es-chirp-hd-d']: {
     voice: {
       name: 'es-ES-Chirp-HD-D',
     },
+    id: 'es-ES-Chirp-HD-D',
+    languages: ['es-ES'],
   },
   ['es-es-chirp-hd-f']: {
     voice: {
       name: 'es-ES-Chirp-HD-F',
     },
+    id: 'es-ES-Chirp-HD-F',
+    languages: ['es-ES'],
   },
   ['es-es-chirp-hd-o']: {
     voice: {
       name: 'es-ES-Chirp-HD-O',
     },
+    id: 'es-ES-Chirp-HD-O',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-achernar']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Achernar',
     },
+    id: 'es-ES-Chirp3-HD-Achernar',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-achird']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Achird',
     },
+    id: 'es-ES-Chirp3-HD-Achird',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-algenib']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Algenib',
     },
+    id: 'es-ES-Chirp3-HD-Algenib',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-algieba']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Algieba',
     },
+    id: 'es-ES-Chirp3-HD-Algieba',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-alnilam']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Alnilam',
     },
+    id: 'es-ES-Chirp3-HD-Alnilam',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-aoede']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Aoede',
     },
+    id: 'es-ES-Chirp3-HD-Aoede',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-autonoe']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Autonoe',
     },
+    id: 'es-ES-Chirp3-HD-Autonoe',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Callirrhoe',
     },
+    id: 'es-ES-Chirp3-HD-Callirrhoe',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-charon']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Charon',
     },
+    id: 'es-ES-Chirp3-HD-Charon',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-despina']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Despina',
     },
+    id: 'es-ES-Chirp3-HD-Despina',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-enceladus']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Enceladus',
     },
+    id: 'es-ES-Chirp3-HD-Enceladus',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-erinome']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Erinome',
     },
+    id: 'es-ES-Chirp3-HD-Erinome',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-fenrir']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Fenrir',
     },
+    id: 'es-ES-Chirp3-HD-Fenrir',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-gacrux']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Gacrux',
     },
+    id: 'es-ES-Chirp3-HD-Gacrux',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-iapetus']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Iapetus',
     },
+    id: 'es-ES-Chirp3-HD-Iapetus',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-kore']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Kore',
     },
+    id: 'es-ES-Chirp3-HD-Kore',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-laomedeia']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Laomedeia',
     },
+    id: 'es-ES-Chirp3-HD-Laomedeia',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-leda']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Leda',
     },
+    id: 'es-ES-Chirp3-HD-Leda',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-orus']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Orus',
     },
+    id: 'es-ES-Chirp3-HD-Orus',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-puck']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Puck',
     },
+    id: 'es-ES-Chirp3-HD-Puck',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Pulcherrima',
     },
+    id: 'es-ES-Chirp3-HD-Pulcherrima',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Rasalgethi',
     },
+    id: 'es-ES-Chirp3-HD-Rasalgethi',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-sadachbia']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Sadachbia',
     },
+    id: 'es-ES-Chirp3-HD-Sadachbia',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-sadaltager']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Sadaltager',
     },
+    id: 'es-ES-Chirp3-HD-Sadaltager',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-schedar']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Schedar',
     },
+    id: 'es-ES-Chirp3-HD-Schedar',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-sulafat']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Sulafat',
     },
+    id: 'es-ES-Chirp3-HD-Sulafat',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-umbriel']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Umbriel',
     },
+    id: 'es-ES-Chirp3-HD-Umbriel',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Vindemiatrix',
     },
+    id: 'es-ES-Chirp3-HD-Vindemiatrix',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-zephyr']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Zephyr',
     },
+    id: 'es-ES-Chirp3-HD-Zephyr',
+    languages: ['es-ES'],
   },
   ['es-es-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'es-ES-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'es-ES-Chirp3-HD-Zubenelgenubi',
+    languages: ['es-ES'],
   },
   ['es-es-neural2-a']: {
     voice: {
       name: 'es-ES-Neural2-A',
     },
+    id: 'es-ES-Neural2-A',
+    languages: ['es-ES'],
   },
   ['es-es-neural2-e']: {
     voice: {
       name: 'es-ES-Neural2-E',
     },
+    id: 'es-ES-Neural2-E',
+    languages: ['es-ES'],
   },
   ['es-es-neural2-f']: {
     voice: {
       name: 'es-ES-Neural2-F',
     },
+    id: 'es-ES-Neural2-F',
+    languages: ['es-ES'],
   },
   ['es-es-neural2-g']: {
     voice: {
       name: 'es-ES-Neural2-G',
     },
+    id: 'es-ES-Neural2-G',
+    languages: ['es-ES'],
   },
   ['es-es-neural2-h']: {
     voice: {
       name: 'es-ES-Neural2-H',
     },
+    id: 'es-ES-Neural2-H',
+    languages: ['es-ES'],
   },
   ['es-es-polyglot-1']: {
     voice: {
       name: 'es-ES-Polyglot-1',
     },
+    id: 'es-ES-Polyglot-1',
+    languages: ['es-ES'],
   },
   ['es-es-standard-e']: {
     voice: {
       name: 'es-ES-Standard-E',
     },
+    id: 'es-ES-Standard-E',
+    languages: ['es-ES'],
   },
   ['es-es-standard-f']: {
     voice: {
       name: 'es-ES-Standard-F',
     },
+    id: 'es-ES-Standard-F',
+    languages: ['es-ES'],
   },
   ['es-es-standard-g']: {
     voice: {
       name: 'es-ES-Standard-G',
     },
+    id: 'es-ES-Standard-G',
+    languages: ['es-ES'],
   },
   ['es-es-standard-h']: {
     voice: {
       name: 'es-ES-Standard-H',
     },
+    id: 'es-ES-Standard-H',
+    languages: ['es-ES'],
   },
   ['es-es-studio-c']: {
     voice: {
       name: 'es-ES-Studio-C',
     },
+    id: 'es-ES-Studio-C',
+    languages: ['es-ES'],
   },
   ['es-es-studio-f']: {
     voice: {
       name: 'es-ES-Studio-F',
     },
+    id: 'es-ES-Studio-F',
+    languages: ['es-ES'],
   },
   ['es-es-wavenet-e']: {
     voice: {
       name: 'es-ES-Wavenet-E',
     },
+    id: 'es-ES-Wavenet-E',
+    languages: ['es-ES'],
   },
   ['es-es-wavenet-f']: {
     voice: {
       name: 'es-ES-Wavenet-F',
     },
+    id: 'es-ES-Wavenet-F',
+    languages: ['es-ES'],
   },
   ['es-es-wavenet-g']: {
     voice: {
       name: 'es-ES-Wavenet-G',
     },
+    id: 'es-ES-Wavenet-G',
+    languages: ['es-ES'],
   },
   ['es-es-wavenet-h']: {
     voice: {
       name: 'es-ES-Wavenet-H',
     },
+    id: 'es-ES-Wavenet-H',
+    languages: ['es-ES'],
   },
   ['es-us-chirp-hd-d']: {
     voice: {
       name: 'es-US-Chirp-HD-D',
     },
+    id: 'es-US-Chirp-HD-D',
+    languages: ['es-US'],
   },
   ['es-us-chirp-hd-f']: {
     voice: {
       name: 'es-US-Chirp-HD-F',
     },
+    id: 'es-US-Chirp-HD-F',
+    languages: ['es-US'],
   },
   ['es-us-chirp-hd-o']: {
     voice: {
       name: 'es-US-Chirp-HD-O',
     },
+    id: 'es-US-Chirp-HD-O',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-achernar']: {
     voice: {
       name: 'es-US-Chirp3-HD-Achernar',
     },
+    id: 'es-US-Chirp3-HD-Achernar',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-achird']: {
     voice: {
       name: 'es-US-Chirp3-HD-Achird',
     },
+    id: 'es-US-Chirp3-HD-Achird',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-algenib']: {
     voice: {
       name: 'es-US-Chirp3-HD-Algenib',
     },
+    id: 'es-US-Chirp3-HD-Algenib',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-algieba']: {
     voice: {
       name: 'es-US-Chirp3-HD-Algieba',
     },
+    id: 'es-US-Chirp3-HD-Algieba',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-alnilam']: {
     voice: {
       name: 'es-US-Chirp3-HD-Alnilam',
     },
+    id: 'es-US-Chirp3-HD-Alnilam',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-aoede']: {
     voice: {
       name: 'es-US-Chirp3-HD-Aoede',
     },
+    id: 'es-US-Chirp3-HD-Aoede',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-autonoe']: {
     voice: {
       name: 'es-US-Chirp3-HD-Autonoe',
     },
+    id: 'es-US-Chirp3-HD-Autonoe',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'es-US-Chirp3-HD-Callirrhoe',
     },
+    id: 'es-US-Chirp3-HD-Callirrhoe',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-charon']: {
     voice: {
       name: 'es-US-Chirp3-HD-Charon',
     },
+    id: 'es-US-Chirp3-HD-Charon',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-despina']: {
     voice: {
       name: 'es-US-Chirp3-HD-Despina',
     },
+    id: 'es-US-Chirp3-HD-Despina',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-enceladus']: {
     voice: {
       name: 'es-US-Chirp3-HD-Enceladus',
     },
+    id: 'es-US-Chirp3-HD-Enceladus',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-erinome']: {
     voice: {
       name: 'es-US-Chirp3-HD-Erinome',
     },
+    id: 'es-US-Chirp3-HD-Erinome',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-fenrir']: {
     voice: {
       name: 'es-US-Chirp3-HD-Fenrir',
     },
+    id: 'es-US-Chirp3-HD-Fenrir',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-gacrux']: {
     voice: {
       name: 'es-US-Chirp3-HD-Gacrux',
     },
+    id: 'es-US-Chirp3-HD-Gacrux',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-iapetus']: {
     voice: {
       name: 'es-US-Chirp3-HD-Iapetus',
     },
+    id: 'es-US-Chirp3-HD-Iapetus',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-kore']: {
     voice: {
       name: 'es-US-Chirp3-HD-Kore',
     },
+    id: 'es-US-Chirp3-HD-Kore',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-laomedeia']: {
     voice: {
       name: 'es-US-Chirp3-HD-Laomedeia',
     },
+    id: 'es-US-Chirp3-HD-Laomedeia',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-leda']: {
     voice: {
       name: 'es-US-Chirp3-HD-Leda',
     },
+    id: 'es-US-Chirp3-HD-Leda',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-orus']: {
     voice: {
       name: 'es-US-Chirp3-HD-Orus',
     },
+    id: 'es-US-Chirp3-HD-Orus',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-puck']: {
     voice: {
       name: 'es-US-Chirp3-HD-Puck',
     },
+    id: 'es-US-Chirp3-HD-Puck',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'es-US-Chirp3-HD-Pulcherrima',
     },
+    id: 'es-US-Chirp3-HD-Pulcherrima',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'es-US-Chirp3-HD-Rasalgethi',
     },
+    id: 'es-US-Chirp3-HD-Rasalgethi',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-sadachbia']: {
     voice: {
       name: 'es-US-Chirp3-HD-Sadachbia',
     },
+    id: 'es-US-Chirp3-HD-Sadachbia',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-sadaltager']: {
     voice: {
       name: 'es-US-Chirp3-HD-Sadaltager',
     },
+    id: 'es-US-Chirp3-HD-Sadaltager',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-schedar']: {
     voice: {
       name: 'es-US-Chirp3-HD-Schedar',
     },
+    id: 'es-US-Chirp3-HD-Schedar',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-sulafat']: {
     voice: {
       name: 'es-US-Chirp3-HD-Sulafat',
     },
+    id: 'es-US-Chirp3-HD-Sulafat',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-umbriel']: {
     voice: {
       name: 'es-US-Chirp3-HD-Umbriel',
     },
+    id: 'es-US-Chirp3-HD-Umbriel',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'es-US-Chirp3-HD-Vindemiatrix',
     },
+    id: 'es-US-Chirp3-HD-Vindemiatrix',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-zephyr']: {
     voice: {
       name: 'es-US-Chirp3-HD-Zephyr',
     },
+    id: 'es-US-Chirp3-HD-Zephyr',
+    languages: ['es-US'],
   },
   ['es-us-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'es-US-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'es-US-Chirp3-HD-Zubenelgenubi',
+    languages: ['es-US'],
   },
   ['es-us-neural2-a']: {
     voice: {
       name: 'es-US-Neural2-A',
     },
+    id: 'es-US-Neural2-A',
+    languages: ['es-US'],
   },
   ['es-us-neural2-b']: {
     voice: {
       name: 'es-US-Neural2-B',
     },
+    id: 'es-US-Neural2-B',
+    languages: ['es-US'],
   },
   ['es-us-neural2-c']: {
     voice: {
       name: 'es-US-Neural2-C',
     },
+    id: 'es-US-Neural2-C',
+    languages: ['es-US'],
   },
   ['es-us-news-d']: {
     voice: {
       name: 'es-US-News-D',
     },
+    id: 'es-US-News-D',
+    languages: ['es-US'],
   },
   ['es-us-news-e']: {
     voice: {
       name: 'es-US-News-E',
     },
+    id: 'es-US-News-E',
+    languages: ['es-US'],
   },
   ['es-us-news-f']: {
     voice: {
       name: 'es-US-News-F',
     },
+    id: 'es-US-News-F',
+    languages: ['es-US'],
   },
   ['es-us-news-g']: {
     voice: {
       name: 'es-US-News-G',
     },
+    id: 'es-US-News-G',
+    languages: ['es-US'],
   },
   ['es-us-polyglot-1']: {
     voice: {
       name: 'es-US-Polyglot-1',
     },
+    id: 'es-US-Polyglot-1',
+    languages: ['es-US'],
   },
   ['es-us-standard-a']: {
     voice: {
       name: 'es-US-Standard-A',
     },
+    id: 'es-US-Standard-A',
+    languages: ['es-US'],
   },
   ['es-us-standard-b']: {
     voice: {
       name: 'es-US-Standard-B',
     },
+    id: 'es-US-Standard-B',
+    languages: ['es-US'],
   },
   ['es-us-standard-c']: {
     voice: {
       name: 'es-US-Standard-C',
     },
+    id: 'es-US-Standard-C',
+    languages: ['es-US'],
   },
   ['es-us-studio-b']: {
     voice: {
       name: 'es-US-Studio-B',
     },
+    id: 'es-US-Studio-B',
+    languages: ['es-US'],
   },
   ['es-us-wavenet-a']: {
     voice: {
       name: 'es-US-Wavenet-A',
     },
+    id: 'es-US-Wavenet-A',
+    languages: ['es-US'],
   },
   ['es-us-wavenet-b']: {
     voice: {
       name: 'es-US-Wavenet-B',
     },
+    id: 'es-US-Wavenet-B',
+    languages: ['es-US'],
   },
   ['es-us-wavenet-c']: {
     voice: {
       name: 'es-US-Wavenet-C',
     },
+    id: 'es-US-Wavenet-C',
+    languages: ['es-US'],
   },
   ['et-ee-standard-a']: {
     voice: {
       name: 'et-EE-Standard-A',
     },
+    id: 'et-EE-Standard-A',
+    languages: ['et-EE'],
   },
   ['eu-es-standard-b']: {
     voice: {
       name: 'eu-ES-Standard-B',
     },
+    id: 'eu-ES-Standard-B',
+    languages: ['eu-ES'],
   },
   ['fenrir']: {
     voice: {
       name: 'Fenrir',
     },
+    id: 'Fenrir',
+    languages: ['en-US'],
   },
   ['fi-fi-chirp3-hd-achernar']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Achernar',
     },
+    id: 'fi-FI-Chirp3-HD-Achernar',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-achird']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Achird',
     },
+    id: 'fi-FI-Chirp3-HD-Achird',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-algenib']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Algenib',
     },
+    id: 'fi-FI-Chirp3-HD-Algenib',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-algieba']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Algieba',
     },
+    id: 'fi-FI-Chirp3-HD-Algieba',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-alnilam']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Alnilam',
     },
+    id: 'fi-FI-Chirp3-HD-Alnilam',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-aoede']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Aoede',
     },
+    id: 'fi-FI-Chirp3-HD-Aoede',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-autonoe']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Autonoe',
     },
+    id: 'fi-FI-Chirp3-HD-Autonoe',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Callirrhoe',
     },
+    id: 'fi-FI-Chirp3-HD-Callirrhoe',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-charon']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Charon',
     },
+    id: 'fi-FI-Chirp3-HD-Charon',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-despina']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Despina',
     },
+    id: 'fi-FI-Chirp3-HD-Despina',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-enceladus']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Enceladus',
     },
+    id: 'fi-FI-Chirp3-HD-Enceladus',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-erinome']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Erinome',
     },
+    id: 'fi-FI-Chirp3-HD-Erinome',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-fenrir']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Fenrir',
     },
+    id: 'fi-FI-Chirp3-HD-Fenrir',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-gacrux']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Gacrux',
     },
+    id: 'fi-FI-Chirp3-HD-Gacrux',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-iapetus']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Iapetus',
     },
+    id: 'fi-FI-Chirp3-HD-Iapetus',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-kore']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Kore',
     },
+    id: 'fi-FI-Chirp3-HD-Kore',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-laomedeia']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Laomedeia',
     },
+    id: 'fi-FI-Chirp3-HD-Laomedeia',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-leda']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Leda',
     },
+    id: 'fi-FI-Chirp3-HD-Leda',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-orus']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Orus',
     },
+    id: 'fi-FI-Chirp3-HD-Orus',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-puck']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Puck',
     },
+    id: 'fi-FI-Chirp3-HD-Puck',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Pulcherrima',
     },
+    id: 'fi-FI-Chirp3-HD-Pulcherrima',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Rasalgethi',
     },
+    id: 'fi-FI-Chirp3-HD-Rasalgethi',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-sadachbia']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Sadachbia',
     },
+    id: 'fi-FI-Chirp3-HD-Sadachbia',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-sadaltager']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Sadaltager',
     },
+    id: 'fi-FI-Chirp3-HD-Sadaltager',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-schedar']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Schedar',
     },
+    id: 'fi-FI-Chirp3-HD-Schedar',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-sulafat']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Sulafat',
     },
+    id: 'fi-FI-Chirp3-HD-Sulafat',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-umbriel']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Umbriel',
     },
+    id: 'fi-FI-Chirp3-HD-Umbriel',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Vindemiatrix',
     },
+    id: 'fi-FI-Chirp3-HD-Vindemiatrix',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-zephyr']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Zephyr',
     },
+    id: 'fi-FI-Chirp3-HD-Zephyr',
+    languages: ['fi-FI'],
   },
   ['fi-fi-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'fi-FI-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'fi-FI-Chirp3-HD-Zubenelgenubi',
+    languages: ['fi-FI'],
   },
   ['fi-fi-standard-b']: {
     voice: {
       name: 'fi-FI-Standard-B',
     },
+    id: 'fi-FI-Standard-B',
+    languages: ['fi-FI'],
   },
   ['fi-fi-wavenet-b']: {
     voice: {
       name: 'fi-FI-Wavenet-B',
     },
+    id: 'fi-FI-Wavenet-B',
+    languages: ['fi-FI'],
   },
   ['fil-ph-neural2-a']: {
     voice: {
       name: 'fil-ph-Neural2-A',
     },
+    id: 'fil-ph-Neural2-A',
+    languages: ['fil-PH'],
   },
   ['fil-ph-neural2-d']: {
     voice: {
       name: 'fil-ph-Neural2-D',
     },
+    id: 'fil-ph-Neural2-D',
+    languages: ['fil-PH'],
   },
   ['fil-ph-standard-a']: {
     voice: {
       name: 'fil-PH-Standard-A',
     },
+    id: 'fil-PH-Standard-A',
+    languages: ['fil-PH'],
   },
   ['fil-ph-standard-b']: {
     voice: {
       name: 'fil-PH-Standard-B',
     },
+    id: 'fil-PH-Standard-B',
+    languages: ['fil-PH'],
   },
   ['fil-ph-standard-c']: {
     voice: {
       name: 'fil-PH-Standard-C',
     },
+    id: 'fil-PH-Standard-C',
+    languages: ['fil-PH'],
   },
   ['fil-ph-standard-d']: {
     voice: {
       name: 'fil-PH-Standard-D',
     },
+    id: 'fil-PH-Standard-D',
+    languages: ['fil-PH'],
   },
   ['fil-ph-wavenet-a']: {
     voice: {
       name: 'fil-PH-Wavenet-A',
     },
+    id: 'fil-PH-Wavenet-A',
+    languages: ['fil-PH'],
   },
   ['fil-ph-wavenet-b']: {
     voice: {
       name: 'fil-PH-Wavenet-B',
     },
+    id: 'fil-PH-Wavenet-B',
+    languages: ['fil-PH'],
   },
   ['fil-ph-wavenet-c']: {
     voice: {
       name: 'fil-PH-Wavenet-C',
     },
+    id: 'fil-PH-Wavenet-C',
+    languages: ['fil-PH'],
   },
   ['fil-ph-wavenet-d']: {
     voice: {
       name: 'fil-PH-Wavenet-D',
     },
+    id: 'fil-PH-Wavenet-D',
+    languages: ['fil-PH'],
   },
   ['fr-ca-chirp-hd-d']: {
     voice: {
       name: 'fr-CA-Chirp-HD-D',
     },
+    id: 'fr-CA-Chirp-HD-D',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp-hd-f']: {
     voice: {
       name: 'fr-CA-Chirp-HD-F',
     },
+    id: 'fr-CA-Chirp-HD-F',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp-hd-o']: {
     voice: {
       name: 'fr-CA-Chirp-HD-O',
     },
+    id: 'fr-CA-Chirp-HD-O',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-achernar']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Achernar',
     },
+    id: 'fr-CA-Chirp3-HD-Achernar',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-achird']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Achird',
     },
+    id: 'fr-CA-Chirp3-HD-Achird',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-algenib']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Algenib',
     },
+    id: 'fr-CA-Chirp3-HD-Algenib',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-algieba']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Algieba',
     },
+    id: 'fr-CA-Chirp3-HD-Algieba',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-alnilam']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Alnilam',
     },
+    id: 'fr-CA-Chirp3-HD-Alnilam',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-aoede']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Aoede',
     },
+    id: 'fr-CA-Chirp3-HD-Aoede',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-autonoe']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Autonoe',
     },
+    id: 'fr-CA-Chirp3-HD-Autonoe',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Callirrhoe',
     },
+    id: 'fr-CA-Chirp3-HD-Callirrhoe',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-charon']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Charon',
     },
+    id: 'fr-CA-Chirp3-HD-Charon',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-despina']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Despina',
     },
+    id: 'fr-CA-Chirp3-HD-Despina',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-enceladus']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Enceladus',
     },
+    id: 'fr-CA-Chirp3-HD-Enceladus',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-erinome']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Erinome',
     },
+    id: 'fr-CA-Chirp3-HD-Erinome',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-fenrir']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Fenrir',
     },
+    id: 'fr-CA-Chirp3-HD-Fenrir',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-gacrux']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Gacrux',
     },
+    id: 'fr-CA-Chirp3-HD-Gacrux',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-iapetus']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Iapetus',
     },
+    id: 'fr-CA-Chirp3-HD-Iapetus',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-kore']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Kore',
     },
+    id: 'fr-CA-Chirp3-HD-Kore',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-laomedeia']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Laomedeia',
     },
+    id: 'fr-CA-Chirp3-HD-Laomedeia',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-leda']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Leda',
     },
+    id: 'fr-CA-Chirp3-HD-Leda',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-orus']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Orus',
     },
+    id: 'fr-CA-Chirp3-HD-Orus',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-puck']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Puck',
     },
+    id: 'fr-CA-Chirp3-HD-Puck',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Pulcherrima',
     },
+    id: 'fr-CA-Chirp3-HD-Pulcherrima',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Rasalgethi',
     },
+    id: 'fr-CA-Chirp3-HD-Rasalgethi',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-sadachbia']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Sadachbia',
     },
+    id: 'fr-CA-Chirp3-HD-Sadachbia',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-sadaltager']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Sadaltager',
     },
+    id: 'fr-CA-Chirp3-HD-Sadaltager',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-schedar']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Schedar',
     },
+    id: 'fr-CA-Chirp3-HD-Schedar',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-sulafat']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Sulafat',
     },
+    id: 'fr-CA-Chirp3-HD-Sulafat',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-umbriel']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Umbriel',
     },
+    id: 'fr-CA-Chirp3-HD-Umbriel',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Vindemiatrix',
     },
+    id: 'fr-CA-Chirp3-HD-Vindemiatrix',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-zephyr']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Zephyr',
     },
+    id: 'fr-CA-Chirp3-HD-Zephyr',
+    languages: ['fr-CA'],
   },
   ['fr-ca-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'fr-CA-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'fr-CA-Chirp3-HD-Zubenelgenubi',
+    languages: ['fr-CA'],
   },
   ['fr-ca-neural2-a']: {
     voice: {
       name: 'fr-CA-Neural2-A',
     },
+    id: 'fr-CA-Neural2-A',
+    languages: ['fr-CA'],
   },
   ['fr-ca-neural2-b']: {
     voice: {
       name: 'fr-CA-Neural2-B',
     },
+    id: 'fr-CA-Neural2-B',
+    languages: ['fr-CA'],
   },
   ['fr-ca-neural2-c']: {
     voice: {
       name: 'fr-CA-Neural2-C',
     },
+    id: 'fr-CA-Neural2-C',
+    languages: ['fr-CA'],
   },
   ['fr-ca-neural2-d']: {
     voice: {
       name: 'fr-CA-Neural2-D',
     },
+    id: 'fr-CA-Neural2-D',
+    languages: ['fr-CA'],
   },
   ['fr-ca-standard-a']: {
     voice: {
       name: 'fr-CA-Standard-A',
     },
+    id: 'fr-CA-Standard-A',
+    languages: ['fr-CA'],
   },
   ['fr-ca-standard-b']: {
     voice: {
       name: 'fr-CA-Standard-B',
     },
+    id: 'fr-CA-Standard-B',
+    languages: ['fr-CA'],
   },
   ['fr-ca-standard-c']: {
     voice: {
       name: 'fr-CA-Standard-C',
     },
+    id: 'fr-CA-Standard-C',
+    languages: ['fr-CA'],
   },
   ['fr-ca-standard-d']: {
     voice: {
       name: 'fr-CA-Standard-D',
     },
+    id: 'fr-CA-Standard-D',
+    languages: ['fr-CA'],
   },
   ['fr-ca-wavenet-a']: {
     voice: {
       name: 'fr-CA-Wavenet-A',
     },
+    id: 'fr-CA-Wavenet-A',
+    languages: ['fr-CA'],
   },
   ['fr-ca-wavenet-b']: {
     voice: {
       name: 'fr-CA-Wavenet-B',
     },
+    id: 'fr-CA-Wavenet-B',
+    languages: ['fr-CA'],
   },
   ['fr-ca-wavenet-c']: {
     voice: {
       name: 'fr-CA-Wavenet-C',
     },
+    id: 'fr-CA-Wavenet-C',
+    languages: ['fr-CA'],
   },
   ['fr-ca-wavenet-d']: {
     voice: {
       name: 'fr-CA-Wavenet-D',
     },
+    id: 'fr-CA-Wavenet-D',
+    languages: ['fr-CA'],
   },
   ['fr-fr-chirp-hd-d']: {
     voice: {
       name: 'fr-FR-Chirp-HD-D',
     },
+    id: 'fr-FR-Chirp-HD-D',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp-hd-f']: {
     voice: {
       name: 'fr-FR-Chirp-HD-F',
     },
+    id: 'fr-FR-Chirp-HD-F',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp-hd-o']: {
     voice: {
       name: 'fr-FR-Chirp-HD-O',
     },
+    id: 'fr-FR-Chirp-HD-O',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-achernar']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Achernar',
     },
+    id: 'fr-FR-Chirp3-HD-Achernar',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-achird']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Achird',
     },
+    id: 'fr-FR-Chirp3-HD-Achird',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-algenib']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Algenib',
     },
+    id: 'fr-FR-Chirp3-HD-Algenib',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-algieba']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Algieba',
     },
+    id: 'fr-FR-Chirp3-HD-Algieba',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-alnilam']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Alnilam',
     },
+    id: 'fr-FR-Chirp3-HD-Alnilam',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-aoede']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Aoede',
     },
+    id: 'fr-FR-Chirp3-HD-Aoede',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-autonoe']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Autonoe',
     },
+    id: 'fr-FR-Chirp3-HD-Autonoe',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Callirrhoe',
     },
+    id: 'fr-FR-Chirp3-HD-Callirrhoe',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-charon']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Charon',
     },
+    id: 'fr-FR-Chirp3-HD-Charon',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-despina']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Despina',
     },
+    id: 'fr-FR-Chirp3-HD-Despina',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-enceladus']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Enceladus',
     },
+    id: 'fr-FR-Chirp3-HD-Enceladus',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-erinome']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Erinome',
     },
+    id: 'fr-FR-Chirp3-HD-Erinome',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-fenrir']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Fenrir',
     },
+    id: 'fr-FR-Chirp3-HD-Fenrir',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-gacrux']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Gacrux',
     },
+    id: 'fr-FR-Chirp3-HD-Gacrux',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-iapetus']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Iapetus',
     },
+    id: 'fr-FR-Chirp3-HD-Iapetus',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-kore']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Kore',
     },
+    id: 'fr-FR-Chirp3-HD-Kore',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-laomedeia']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Laomedeia',
     },
+    id: 'fr-FR-Chirp3-HD-Laomedeia',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-leda']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Leda',
     },
+    id: 'fr-FR-Chirp3-HD-Leda',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-orus']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Orus',
     },
+    id: 'fr-FR-Chirp3-HD-Orus',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-puck']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Puck',
     },
+    id: 'fr-FR-Chirp3-HD-Puck',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Pulcherrima',
     },
+    id: 'fr-FR-Chirp3-HD-Pulcherrima',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Rasalgethi',
     },
+    id: 'fr-FR-Chirp3-HD-Rasalgethi',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-sadachbia']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Sadachbia',
     },
+    id: 'fr-FR-Chirp3-HD-Sadachbia',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-sadaltager']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Sadaltager',
     },
+    id: 'fr-FR-Chirp3-HD-Sadaltager',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-schedar']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Schedar',
     },
+    id: 'fr-FR-Chirp3-HD-Schedar',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-sulafat']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Sulafat',
     },
+    id: 'fr-FR-Chirp3-HD-Sulafat',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-umbriel']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Umbriel',
     },
+    id: 'fr-FR-Chirp3-HD-Umbriel',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Vindemiatrix',
     },
+    id: 'fr-FR-Chirp3-HD-Vindemiatrix',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-zephyr']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Zephyr',
     },
+    id: 'fr-FR-Chirp3-HD-Zephyr',
+    languages: ['fr-FR'],
   },
   ['fr-fr-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'fr-FR-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'fr-FR-Chirp3-HD-Zubenelgenubi',
+    languages: ['fr-FR'],
   },
   ['fr-fr-neural2-f']: {
     voice: {
       name: 'fr-FR-Neural2-F',
     },
+    id: 'fr-FR-Neural2-F',
+    languages: ['fr-FR'],
   },
   ['fr-fr-neural2-g']: {
     voice: {
       name: 'fr-FR-Neural2-G',
     },
+    id: 'fr-FR-Neural2-G',
+    languages: ['fr-FR'],
   },
   ['fr-fr-polyglot-1']: {
     voice: {
       name: 'fr-FR-Polyglot-1',
     },
+    id: 'fr-FR-Polyglot-1',
+    languages: ['fr-FR'],
   },
   ['fr-fr-standard-f']: {
     voice: {
       name: 'fr-FR-Standard-F',
     },
+    id: 'fr-FR-Standard-F',
+    languages: ['fr-FR'],
   },
   ['fr-fr-standard-g']: {
     voice: {
       name: 'fr-FR-Standard-G',
     },
+    id: 'fr-FR-Standard-G',
+    languages: ['fr-FR'],
   },
   ['fr-fr-studio-a']: {
     voice: {
       name: 'fr-FR-Studio-A',
     },
+    id: 'fr-FR-Studio-A',
+    languages: ['fr-FR'],
   },
   ['fr-fr-studio-d']: {
     voice: {
       name: 'fr-FR-Studio-D',
     },
+    id: 'fr-FR-Studio-D',
+    languages: ['fr-FR'],
   },
   ['fr-fr-wavenet-f']: {
     voice: {
       name: 'fr-FR-Wavenet-F',
     },
+    id: 'fr-FR-Wavenet-F',
+    languages: ['fr-FR'],
   },
   ['fr-fr-wavenet-g']: {
     voice: {
       name: 'fr-FR-Wavenet-G',
     },
+    id: 'fr-FR-Wavenet-G',
+    languages: ['fr-FR'],
   },
   ['gacrux']: {
     voice: {
       name: 'Gacrux',
     },
+    id: 'Gacrux',
+    languages: ['en-US'],
   },
   ['gl-es-standard-b']: {
     voice: {
       name: 'gl-ES-Standard-B',
     },
+    id: 'gl-ES-Standard-B',
+    languages: ['gl-ES'],
   },
   ['gu-in-chirp3-hd-achernar']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Achernar',
     },
+    id: 'gu-IN-Chirp3-HD-Achernar',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-achird']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Achird',
     },
+    id: 'gu-IN-Chirp3-HD-Achird',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-algenib']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Algenib',
     },
+    id: 'gu-IN-Chirp3-HD-Algenib',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-algieba']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Algieba',
     },
+    id: 'gu-IN-Chirp3-HD-Algieba',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-alnilam']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Alnilam',
     },
+    id: 'gu-IN-Chirp3-HD-Alnilam',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-aoede']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Aoede',
     },
+    id: 'gu-IN-Chirp3-HD-Aoede',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-autonoe']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Autonoe',
     },
+    id: 'gu-IN-Chirp3-HD-Autonoe',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Callirrhoe',
     },
+    id: 'gu-IN-Chirp3-HD-Callirrhoe',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-charon']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Charon',
     },
+    id: 'gu-IN-Chirp3-HD-Charon',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-despina']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Despina',
     },
+    id: 'gu-IN-Chirp3-HD-Despina',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-enceladus']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Enceladus',
     },
+    id: 'gu-IN-Chirp3-HD-Enceladus',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-erinome']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Erinome',
     },
+    id: 'gu-IN-Chirp3-HD-Erinome',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-fenrir']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Fenrir',
     },
+    id: 'gu-IN-Chirp3-HD-Fenrir',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-gacrux']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Gacrux',
     },
+    id: 'gu-IN-Chirp3-HD-Gacrux',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-iapetus']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Iapetus',
     },
+    id: 'gu-IN-Chirp3-HD-Iapetus',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-kore']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Kore',
     },
+    id: 'gu-IN-Chirp3-HD-Kore',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-laomedeia']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Laomedeia',
     },
+    id: 'gu-IN-Chirp3-HD-Laomedeia',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-leda']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Leda',
     },
+    id: 'gu-IN-Chirp3-HD-Leda',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-orus']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Orus',
     },
+    id: 'gu-IN-Chirp3-HD-Orus',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-puck']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Puck',
     },
+    id: 'gu-IN-Chirp3-HD-Puck',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Pulcherrima',
     },
+    id: 'gu-IN-Chirp3-HD-Pulcherrima',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Rasalgethi',
     },
+    id: 'gu-IN-Chirp3-HD-Rasalgethi',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-sadachbia']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Sadachbia',
     },
+    id: 'gu-IN-Chirp3-HD-Sadachbia',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-sadaltager']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Sadaltager',
     },
+    id: 'gu-IN-Chirp3-HD-Sadaltager',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-schedar']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Schedar',
     },
+    id: 'gu-IN-Chirp3-HD-Schedar',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-sulafat']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Sulafat',
     },
+    id: 'gu-IN-Chirp3-HD-Sulafat',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-umbriel']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Umbriel',
     },
+    id: 'gu-IN-Chirp3-HD-Umbriel',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Vindemiatrix',
     },
+    id: 'gu-IN-Chirp3-HD-Vindemiatrix',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-zephyr']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Zephyr',
     },
+    id: 'gu-IN-Chirp3-HD-Zephyr',
+    languages: ['gu-IN'],
   },
   ['gu-in-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'gu-IN-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'gu-IN-Chirp3-HD-Zubenelgenubi',
+    languages: ['gu-IN'],
   },
   ['gu-in-standard-a']: {
     voice: {
       name: 'gu-IN-Standard-A',
     },
+    id: 'gu-IN-Standard-A',
+    languages: ['gu-IN'],
   },
   ['gu-in-standard-b']: {
     voice: {
       name: 'gu-IN-Standard-B',
     },
+    id: 'gu-IN-Standard-B',
+    languages: ['gu-IN'],
   },
   ['gu-in-standard-c']: {
     voice: {
       name: 'gu-IN-Standard-C',
     },
+    id: 'gu-IN-Standard-C',
+    languages: ['gu-IN'],
   },
   ['gu-in-standard-d']: {
     voice: {
       name: 'gu-IN-Standard-D',
     },
+    id: 'gu-IN-Standard-D',
+    languages: ['gu-IN'],
   },
   ['gu-in-wavenet-a']: {
     voice: {
       name: 'gu-IN-Wavenet-A',
     },
+    id: 'gu-IN-Wavenet-A',
+    languages: ['gu-IN'],
   },
   ['gu-in-wavenet-b']: {
     voice: {
       name: 'gu-IN-Wavenet-B',
     },
+    id: 'gu-IN-Wavenet-B',
+    languages: ['gu-IN'],
   },
   ['gu-in-wavenet-c']: {
     voice: {
       name: 'gu-IN-Wavenet-C',
     },
+    id: 'gu-IN-Wavenet-C',
+    languages: ['gu-IN'],
   },
   ['gu-in-wavenet-d']: {
     voice: {
       name: 'gu-IN-Wavenet-D',
     },
+    id: 'gu-IN-Wavenet-D',
+    languages: ['gu-IN'],
   },
   ['he-il-standard-a']: {
     voice: {
       name: 'he-IL-Standard-A',
     },
+    id: 'he-IL-Standard-A',
+    languages: ['he-IL'],
   },
   ['he-il-standard-b']: {
     voice: {
       name: 'he-IL-Standard-B',
     },
+    id: 'he-IL-Standard-B',
+    languages: ['he-IL'],
   },
   ['he-il-standard-c']: {
     voice: {
       name: 'he-IL-Standard-C',
     },
+    id: 'he-IL-Standard-C',
+    languages: ['he-IL'],
   },
   ['he-il-standard-d']: {
     voice: {
       name: 'he-IL-Standard-D',
     },
+    id: 'he-IL-Standard-D',
+    languages: ['he-IL'],
   },
   ['he-il-wavenet-a']: {
     voice: {
       name: 'he-IL-Wavenet-A',
     },
+    id: 'he-IL-Wavenet-A',
+    languages: ['he-IL'],
   },
   ['he-il-wavenet-b']: {
     voice: {
       name: 'he-IL-Wavenet-B',
     },
+    id: 'he-IL-Wavenet-B',
+    languages: ['he-IL'],
   },
   ['he-il-wavenet-c']: {
     voice: {
       name: 'he-IL-Wavenet-C',
     },
+    id: 'he-IL-Wavenet-C',
+    languages: ['he-IL'],
   },
   ['he-il-wavenet-d']: {
     voice: {
       name: 'he-IL-Wavenet-D',
     },
+    id: 'he-IL-Wavenet-D',
+    languages: ['he-IL'],
   },
   ['hi-in-chirp3-hd-achernar']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Achernar',
     },
+    id: 'hi-IN-Chirp3-HD-Achernar',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-achird']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Achird',
     },
+    id: 'hi-IN-Chirp3-HD-Achird',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-algenib']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Algenib',
     },
+    id: 'hi-IN-Chirp3-HD-Algenib',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-algieba']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Algieba',
     },
+    id: 'hi-IN-Chirp3-HD-Algieba',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-alnilam']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Alnilam',
     },
+    id: 'hi-IN-Chirp3-HD-Alnilam',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-aoede']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Aoede',
     },
+    id: 'hi-IN-Chirp3-HD-Aoede',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-autonoe']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Autonoe',
     },
+    id: 'hi-IN-Chirp3-HD-Autonoe',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Callirrhoe',
     },
+    id: 'hi-IN-Chirp3-HD-Callirrhoe',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-charon']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Charon',
     },
+    id: 'hi-IN-Chirp3-HD-Charon',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-despina']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Despina',
     },
+    id: 'hi-IN-Chirp3-HD-Despina',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-enceladus']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Enceladus',
     },
+    id: 'hi-IN-Chirp3-HD-Enceladus',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-erinome']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Erinome',
     },
+    id: 'hi-IN-Chirp3-HD-Erinome',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-fenrir']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Fenrir',
     },
+    id: 'hi-IN-Chirp3-HD-Fenrir',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-gacrux']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Gacrux',
     },
+    id: 'hi-IN-Chirp3-HD-Gacrux',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-iapetus']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Iapetus',
     },
+    id: 'hi-IN-Chirp3-HD-Iapetus',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-kore']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Kore',
     },
+    id: 'hi-IN-Chirp3-HD-Kore',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-laomedeia']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Laomedeia',
     },
+    id: 'hi-IN-Chirp3-HD-Laomedeia',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-leda']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Leda',
     },
+    id: 'hi-IN-Chirp3-HD-Leda',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-orus']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Orus',
     },
+    id: 'hi-IN-Chirp3-HD-Orus',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-puck']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Puck',
     },
+    id: 'hi-IN-Chirp3-HD-Puck',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Pulcherrima',
     },
+    id: 'hi-IN-Chirp3-HD-Pulcherrima',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Rasalgethi',
     },
+    id: 'hi-IN-Chirp3-HD-Rasalgethi',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-sadachbia']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Sadachbia',
     },
+    id: 'hi-IN-Chirp3-HD-Sadachbia',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-sadaltager']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Sadaltager',
     },
+    id: 'hi-IN-Chirp3-HD-Sadaltager',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-schedar']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Schedar',
     },
+    id: 'hi-IN-Chirp3-HD-Schedar',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-sulafat']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Sulafat',
     },
+    id: 'hi-IN-Chirp3-HD-Sulafat',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-umbriel']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Umbriel',
     },
+    id: 'hi-IN-Chirp3-HD-Umbriel',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Vindemiatrix',
     },
+    id: 'hi-IN-Chirp3-HD-Vindemiatrix',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-zephyr']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Zephyr',
     },
+    id: 'hi-IN-Chirp3-HD-Zephyr',
+    languages: ['hi-IN'],
   },
   ['hi-in-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'hi-IN-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'hi-IN-Chirp3-HD-Zubenelgenubi',
+    languages: ['hi-IN'],
   },
   ['hi-in-neural2-a']: {
     voice: {
       name: 'hi-IN-Neural2-A',
     },
+    id: 'hi-IN-Neural2-A',
+    languages: ['hi-IN'],
   },
   ['hi-in-neural2-b']: {
     voice: {
       name: 'hi-IN-Neural2-B',
     },
+    id: 'hi-IN-Neural2-B',
+    languages: ['hi-IN'],
   },
   ['hi-in-neural2-c']: {
     voice: {
       name: 'hi-IN-Neural2-C',
     },
+    id: 'hi-IN-Neural2-C',
+    languages: ['hi-IN'],
   },
   ['hi-in-neural2-d']: {
     voice: {
       name: 'hi-IN-Neural2-D',
     },
+    id: 'hi-IN-Neural2-D',
+    languages: ['hi-IN'],
   },
   ['hi-in-standard-a']: {
     voice: {
       name: 'hi-IN-Standard-A',
     },
+    id: 'hi-IN-Standard-A',
+    languages: ['hi-IN'],
   },
   ['hi-in-standard-b']: {
     voice: {
       name: 'hi-IN-Standard-B',
     },
+    id: 'hi-IN-Standard-B',
+    languages: ['hi-IN'],
   },
   ['hi-in-standard-c']: {
     voice: {
       name: 'hi-IN-Standard-C',
     },
+    id: 'hi-IN-Standard-C',
+    languages: ['hi-IN'],
   },
   ['hi-in-standard-d']: {
     voice: {
       name: 'hi-IN-Standard-D',
     },
+    id: 'hi-IN-Standard-D',
+    languages: ['hi-IN'],
   },
   ['hi-in-standard-e']: {
     voice: {
       name: 'hi-IN-Standard-E',
     },
+    id: 'hi-IN-Standard-E',
+    languages: ['hi-IN'],
   },
   ['hi-in-standard-f']: {
     voice: {
       name: 'hi-IN-Standard-F',
     },
+    id: 'hi-IN-Standard-F',
+    languages: ['hi-IN'],
   },
   ['hi-in-wavenet-a']: {
     voice: {
       name: 'hi-IN-Wavenet-A',
     },
+    id: 'hi-IN-Wavenet-A',
+    languages: ['hi-IN'],
   },
   ['hi-in-wavenet-b']: {
     voice: {
       name: 'hi-IN-Wavenet-B',
     },
+    id: 'hi-IN-Wavenet-B',
+    languages: ['hi-IN'],
   },
   ['hi-in-wavenet-c']: {
     voice: {
       name: 'hi-IN-Wavenet-C',
     },
+    id: 'hi-IN-Wavenet-C',
+    languages: ['hi-IN'],
   },
   ['hi-in-wavenet-d']: {
     voice: {
       name: 'hi-IN-Wavenet-D',
     },
+    id: 'hi-IN-Wavenet-D',
+    languages: ['hi-IN'],
   },
   ['hi-in-wavenet-e']: {
     voice: {
       name: 'hi-IN-Wavenet-E',
     },
+    id: 'hi-IN-Wavenet-E',
+    languages: ['hi-IN'],
   },
   ['hi-in-wavenet-f']: {
     voice: {
       name: 'hi-IN-Wavenet-F',
     },
+    id: 'hi-IN-Wavenet-F',
+    languages: ['hi-IN'],
+  },
+  ['hu-hu-chirp3-hd-achernar']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Achernar',
+    },
+    id: 'hu-HU-Chirp3-HD-Achernar',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-achird']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Achird',
+    },
+    id: 'hu-HU-Chirp3-HD-Achird',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-algenib']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Algenib',
+    },
+    id: 'hu-HU-Chirp3-HD-Algenib',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-algieba']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Algieba',
+    },
+    id: 'hu-HU-Chirp3-HD-Algieba',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-alnilam']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Alnilam',
+    },
+    id: 'hu-HU-Chirp3-HD-Alnilam',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-aoede']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Aoede',
+    },
+    id: 'hu-HU-Chirp3-HD-Aoede',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-autonoe']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Autonoe',
+    },
+    id: 'hu-HU-Chirp3-HD-Autonoe',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-callirrhoe']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Callirrhoe',
+    },
+    id: 'hu-HU-Chirp3-HD-Callirrhoe',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-charon']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Charon',
+    },
+    id: 'hu-HU-Chirp3-HD-Charon',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-despina']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Despina',
+    },
+    id: 'hu-HU-Chirp3-HD-Despina',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-enceladus']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Enceladus',
+    },
+    id: 'hu-HU-Chirp3-HD-Enceladus',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-erinome']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Erinome',
+    },
+    id: 'hu-HU-Chirp3-HD-Erinome',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-fenrir']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Fenrir',
+    },
+    id: 'hu-HU-Chirp3-HD-Fenrir',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-gacrux']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Gacrux',
+    },
+    id: 'hu-HU-Chirp3-HD-Gacrux',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-iapetus']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Iapetus',
+    },
+    id: 'hu-HU-Chirp3-HD-Iapetus',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-kore']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Kore',
+    },
+    id: 'hu-HU-Chirp3-HD-Kore',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-laomedeia']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Laomedeia',
+    },
+    id: 'hu-HU-Chirp3-HD-Laomedeia',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-leda']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Leda',
+    },
+    id: 'hu-HU-Chirp3-HD-Leda',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-orus']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Orus',
+    },
+    id: 'hu-HU-Chirp3-HD-Orus',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-puck']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Puck',
+    },
+    id: 'hu-HU-Chirp3-HD-Puck',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-pulcherrima']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Pulcherrima',
+    },
+    id: 'hu-HU-Chirp3-HD-Pulcherrima',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-rasalgethi']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Rasalgethi',
+    },
+    id: 'hu-HU-Chirp3-HD-Rasalgethi',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-sadachbia']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Sadachbia',
+    },
+    id: 'hu-HU-Chirp3-HD-Sadachbia',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-sadaltager']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Sadaltager',
+    },
+    id: 'hu-HU-Chirp3-HD-Sadaltager',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-schedar']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Schedar',
+    },
+    id: 'hu-HU-Chirp3-HD-Schedar',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-sulafat']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Sulafat',
+    },
+    id: 'hu-HU-Chirp3-HD-Sulafat',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-umbriel']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Umbriel',
+    },
+    id: 'hu-HU-Chirp3-HD-Umbriel',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-vindemiatrix']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Vindemiatrix',
+    },
+    id: 'hu-HU-Chirp3-HD-Vindemiatrix',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-zephyr']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Zephyr',
+    },
+    id: 'hu-HU-Chirp3-HD-Zephyr',
+    languages: ['hu-HU'],
+  },
+  ['hu-hu-chirp3-hd-zubenelgenubi']: {
+    voice: {
+      name: 'hu-HU-Chirp3-HD-Zubenelgenubi',
+    },
+    id: 'hu-HU-Chirp3-HD-Zubenelgenubi',
+    languages: ['hu-HU'],
   },
   ['hu-hu-standard-b']: {
     voice: {
       name: 'hu-HU-Standard-B',
     },
+    id: 'hu-HU-Standard-B',
+    languages: ['hu-HU'],
   },
   ['hu-hu-wavenet-b']: {
     voice: {
       name: 'hu-HU-Wavenet-B',
     },
+    id: 'hu-HU-Wavenet-B',
+    languages: ['hu-HU'],
   },
   ['iapetus']: {
     voice: {
       name: 'Iapetus',
     },
+    id: 'Iapetus',
+    languages: ['en-US'],
   },
   ['id-id-chirp3-hd-achernar']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Achernar',
     },
+    id: 'id-ID-Chirp3-HD-Achernar',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-achird']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Achird',
     },
+    id: 'id-ID-Chirp3-HD-Achird',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-algenib']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Algenib',
     },
+    id: 'id-ID-Chirp3-HD-Algenib',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-algieba']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Algieba',
     },
+    id: 'id-ID-Chirp3-HD-Algieba',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-alnilam']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Alnilam',
     },
+    id: 'id-ID-Chirp3-HD-Alnilam',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-aoede']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Aoede',
     },
+    id: 'id-ID-Chirp3-HD-Aoede',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-autonoe']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Autonoe',
     },
+    id: 'id-ID-Chirp3-HD-Autonoe',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Callirrhoe',
     },
+    id: 'id-ID-Chirp3-HD-Callirrhoe',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-charon']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Charon',
     },
+    id: 'id-ID-Chirp3-HD-Charon',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-despina']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Despina',
     },
+    id: 'id-ID-Chirp3-HD-Despina',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-enceladus']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Enceladus',
     },
+    id: 'id-ID-Chirp3-HD-Enceladus',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-erinome']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Erinome',
     },
+    id: 'id-ID-Chirp3-HD-Erinome',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-fenrir']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Fenrir',
     },
+    id: 'id-ID-Chirp3-HD-Fenrir',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-gacrux']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Gacrux',
     },
+    id: 'id-ID-Chirp3-HD-Gacrux',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-iapetus']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Iapetus',
     },
+    id: 'id-ID-Chirp3-HD-Iapetus',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-kore']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Kore',
     },
+    id: 'id-ID-Chirp3-HD-Kore',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-laomedeia']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Laomedeia',
     },
+    id: 'id-ID-Chirp3-HD-Laomedeia',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-leda']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Leda',
     },
+    id: 'id-ID-Chirp3-HD-Leda',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-orus']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Orus',
     },
+    id: 'id-ID-Chirp3-HD-Orus',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-puck']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Puck',
     },
+    id: 'id-ID-Chirp3-HD-Puck',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Pulcherrima',
     },
+    id: 'id-ID-Chirp3-HD-Pulcherrima',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Rasalgethi',
     },
+    id: 'id-ID-Chirp3-HD-Rasalgethi',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-sadachbia']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Sadachbia',
     },
+    id: 'id-ID-Chirp3-HD-Sadachbia',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-sadaltager']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Sadaltager',
     },
+    id: 'id-ID-Chirp3-HD-Sadaltager',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-schedar']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Schedar',
     },
+    id: 'id-ID-Chirp3-HD-Schedar',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-sulafat']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Sulafat',
     },
+    id: 'id-ID-Chirp3-HD-Sulafat',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-umbriel']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Umbriel',
     },
+    id: 'id-ID-Chirp3-HD-Umbriel',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Vindemiatrix',
     },
+    id: 'id-ID-Chirp3-HD-Vindemiatrix',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-zephyr']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Zephyr',
     },
+    id: 'id-ID-Chirp3-HD-Zephyr',
+    languages: ['id-ID'],
   },
   ['id-id-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'id-ID-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'id-ID-Chirp3-HD-Zubenelgenubi',
+    languages: ['id-ID'],
   },
   ['id-id-standard-a']: {
     voice: {
       name: 'id-ID-Standard-A',
     },
+    id: 'id-ID-Standard-A',
+    languages: ['id-ID'],
   },
   ['id-id-standard-b']: {
     voice: {
       name: 'id-ID-Standard-B',
     },
+    id: 'id-ID-Standard-B',
+    languages: ['id-ID'],
   },
   ['id-id-standard-c']: {
     voice: {
       name: 'id-ID-Standard-C',
     },
+    id: 'id-ID-Standard-C',
+    languages: ['id-ID'],
   },
   ['id-id-standard-d']: {
     voice: {
       name: 'id-ID-Standard-D',
     },
+    id: 'id-ID-Standard-D',
+    languages: ['id-ID'],
   },
   ['id-id-wavenet-a']: {
     voice: {
       name: 'id-ID-Wavenet-A',
     },
+    id: 'id-ID-Wavenet-A',
+    languages: ['id-ID'],
   },
   ['id-id-wavenet-b']: {
     voice: {
       name: 'id-ID-Wavenet-B',
     },
+    id: 'id-ID-Wavenet-B',
+    languages: ['id-ID'],
   },
   ['id-id-wavenet-c']: {
     voice: {
       name: 'id-ID-Wavenet-C',
     },
+    id: 'id-ID-Wavenet-C',
+    languages: ['id-ID'],
   },
   ['id-id-wavenet-d']: {
     voice: {
       name: 'id-ID-Wavenet-D',
     },
+    id: 'id-ID-Wavenet-D',
+    languages: ['id-ID'],
   },
   ['is-is-standard-b']: {
     voice: {
       name: 'is-IS-Standard-B',
     },
+    id: 'is-IS-Standard-B',
+    languages: ['is-IS'],
   },
   ['it-it-chirp-hd-d']: {
     voice: {
       name: 'it-IT-Chirp-HD-D',
     },
+    id: 'it-IT-Chirp-HD-D',
+    languages: ['it-IT'],
   },
   ['it-it-chirp-hd-f']: {
     voice: {
       name: 'it-IT-Chirp-HD-F',
     },
+    id: 'it-IT-Chirp-HD-F',
+    languages: ['it-IT'],
   },
   ['it-it-chirp-hd-o']: {
     voice: {
       name: 'it-IT-Chirp-HD-O',
     },
+    id: 'it-IT-Chirp-HD-O',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-achernar']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Achernar',
     },
+    id: 'it-IT-Chirp3-HD-Achernar',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-achird']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Achird',
     },
+    id: 'it-IT-Chirp3-HD-Achird',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-algenib']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Algenib',
     },
+    id: 'it-IT-Chirp3-HD-Algenib',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-algieba']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Algieba',
     },
+    id: 'it-IT-Chirp3-HD-Algieba',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-alnilam']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Alnilam',
     },
+    id: 'it-IT-Chirp3-HD-Alnilam',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-aoede']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Aoede',
     },
+    id: 'it-IT-Chirp3-HD-Aoede',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-autonoe']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Autonoe',
     },
+    id: 'it-IT-Chirp3-HD-Autonoe',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Callirrhoe',
     },
+    id: 'it-IT-Chirp3-HD-Callirrhoe',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-charon']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Charon',
     },
+    id: 'it-IT-Chirp3-HD-Charon',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-despina']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Despina',
     },
+    id: 'it-IT-Chirp3-HD-Despina',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-enceladus']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Enceladus',
     },
+    id: 'it-IT-Chirp3-HD-Enceladus',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-erinome']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Erinome',
     },
+    id: 'it-IT-Chirp3-HD-Erinome',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-fenrir']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Fenrir',
     },
+    id: 'it-IT-Chirp3-HD-Fenrir',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-gacrux']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Gacrux',
     },
+    id: 'it-IT-Chirp3-HD-Gacrux',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-iapetus']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Iapetus',
     },
+    id: 'it-IT-Chirp3-HD-Iapetus',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-kore']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Kore',
     },
+    id: 'it-IT-Chirp3-HD-Kore',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-laomedeia']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Laomedeia',
     },
+    id: 'it-IT-Chirp3-HD-Laomedeia',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-leda']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Leda',
     },
+    id: 'it-IT-Chirp3-HD-Leda',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-orus']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Orus',
     },
+    id: 'it-IT-Chirp3-HD-Orus',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-puck']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Puck',
     },
+    id: 'it-IT-Chirp3-HD-Puck',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Pulcherrima',
     },
+    id: 'it-IT-Chirp3-HD-Pulcherrima',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Rasalgethi',
     },
+    id: 'it-IT-Chirp3-HD-Rasalgethi',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-sadachbia']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Sadachbia',
     },
+    id: 'it-IT-Chirp3-HD-Sadachbia',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-sadaltager']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Sadaltager',
     },
+    id: 'it-IT-Chirp3-HD-Sadaltager',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-schedar']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Schedar',
     },
+    id: 'it-IT-Chirp3-HD-Schedar',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-sulafat']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Sulafat',
     },
+    id: 'it-IT-Chirp3-HD-Sulafat',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-umbriel']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Umbriel',
     },
+    id: 'it-IT-Chirp3-HD-Umbriel',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Vindemiatrix',
     },
+    id: 'it-IT-Chirp3-HD-Vindemiatrix',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-zephyr']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Zephyr',
     },
+    id: 'it-IT-Chirp3-HD-Zephyr',
+    languages: ['it-IT'],
   },
   ['it-it-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'it-IT-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'it-IT-Chirp3-HD-Zubenelgenubi',
+    languages: ['it-IT'],
   },
   ['it-it-neural2-a']: {
     voice: {
       name: 'it-IT-Neural2-A',
     },
+    id: 'it-IT-Neural2-A',
+    languages: ['it-IT'],
   },
   ['it-it-neural2-e']: {
     voice: {
       name: 'it-IT-Neural2-E',
     },
+    id: 'it-IT-Neural2-E',
+    languages: ['it-IT'],
   },
   ['it-it-neural2-f']: {
     voice: {
       name: 'it-IT-Neural2-F',
     },
+    id: 'it-IT-Neural2-F',
+    languages: ['it-IT'],
   },
   ['it-it-standard-e']: {
     voice: {
       name: 'it-IT-Standard-E',
     },
+    id: 'it-IT-Standard-E',
+    languages: ['it-IT'],
   },
   ['it-it-standard-f']: {
     voice: {
       name: 'it-IT-Standard-F',
     },
+    id: 'it-IT-Standard-F',
+    languages: ['it-IT'],
   },
   ['it-it-wavenet-e']: {
     voice: {
       name: 'it-IT-Wavenet-E',
     },
+    id: 'it-IT-Wavenet-E',
+    languages: ['it-IT'],
   },
   ['it-it-wavenet-f']: {
     voice: {
       name: 'it-IT-Wavenet-F',
     },
+    id: 'it-IT-Wavenet-F',
+    languages: ['it-IT'],
   },
   ['ja-jp-chirp3-hd-achernar']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Achernar',
     },
+    id: 'ja-JP-Chirp3-HD-Achernar',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-achird']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Achird',
     },
+    id: 'ja-JP-Chirp3-HD-Achird',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-algenib']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Algenib',
     },
+    id: 'ja-JP-Chirp3-HD-Algenib',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-algieba']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Algieba',
     },
+    id: 'ja-JP-Chirp3-HD-Algieba',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-alnilam']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Alnilam',
     },
+    id: 'ja-JP-Chirp3-HD-Alnilam',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-aoede']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Aoede',
     },
+    id: 'ja-JP-Chirp3-HD-Aoede',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-autonoe']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Autonoe',
     },
+    id: 'ja-JP-Chirp3-HD-Autonoe',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Callirrhoe',
     },
+    id: 'ja-JP-Chirp3-HD-Callirrhoe',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-charon']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Charon',
     },
+    id: 'ja-JP-Chirp3-HD-Charon',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-despina']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Despina',
     },
+    id: 'ja-JP-Chirp3-HD-Despina',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-enceladus']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Enceladus',
     },
+    id: 'ja-JP-Chirp3-HD-Enceladus',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-erinome']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Erinome',
     },
+    id: 'ja-JP-Chirp3-HD-Erinome',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-fenrir']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Fenrir',
     },
+    id: 'ja-JP-Chirp3-HD-Fenrir',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-gacrux']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Gacrux',
     },
+    id: 'ja-JP-Chirp3-HD-Gacrux',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-iapetus']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Iapetus',
     },
+    id: 'ja-JP-Chirp3-HD-Iapetus',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-kore']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Kore',
     },
+    id: 'ja-JP-Chirp3-HD-Kore',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-laomedeia']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Laomedeia',
     },
+    id: 'ja-JP-Chirp3-HD-Laomedeia',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-leda']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Leda',
     },
+    id: 'ja-JP-Chirp3-HD-Leda',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-orus']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Orus',
     },
+    id: 'ja-JP-Chirp3-HD-Orus',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-puck']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Puck',
     },
+    id: 'ja-JP-Chirp3-HD-Puck',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Pulcherrima',
     },
+    id: 'ja-JP-Chirp3-HD-Pulcherrima',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Rasalgethi',
     },
+    id: 'ja-JP-Chirp3-HD-Rasalgethi',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-sadachbia']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Sadachbia',
     },
+    id: 'ja-JP-Chirp3-HD-Sadachbia',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-sadaltager']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Sadaltager',
     },
+    id: 'ja-JP-Chirp3-HD-Sadaltager',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-schedar']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Schedar',
     },
+    id: 'ja-JP-Chirp3-HD-Schedar',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-sulafat']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Sulafat',
     },
+    id: 'ja-JP-Chirp3-HD-Sulafat',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-umbriel']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Umbriel',
     },
+    id: 'ja-JP-Chirp3-HD-Umbriel',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Vindemiatrix',
     },
+    id: 'ja-JP-Chirp3-HD-Vindemiatrix',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-zephyr']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Zephyr',
     },
+    id: 'ja-JP-Chirp3-HD-Zephyr',
+    languages: ['ja-JP'],
   },
   ['ja-jp-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'ja-JP-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'ja-JP-Chirp3-HD-Zubenelgenubi',
+    languages: ['ja-JP'],
   },
   ['ja-jp-neural2-b']: {
     voice: {
       name: 'ja-JP-Neural2-B',
     },
+    id: 'ja-JP-Neural2-B',
+    languages: ['ja-JP'],
   },
   ['ja-jp-neural2-c']: {
     voice: {
       name: 'ja-JP-Neural2-C',
     },
+    id: 'ja-JP-Neural2-C',
+    languages: ['ja-JP'],
   },
   ['ja-jp-neural2-d']: {
     voice: {
       name: 'ja-JP-Neural2-D',
     },
+    id: 'ja-JP-Neural2-D',
+    languages: ['ja-JP'],
   },
   ['ja-jp-standard-a']: {
     voice: {
       name: 'ja-JP-Standard-A',
     },
+    id: 'ja-JP-Standard-A',
+    languages: ['ja-JP'],
   },
   ['ja-jp-standard-b']: {
     voice: {
       name: 'ja-JP-Standard-B',
     },
+    id: 'ja-JP-Standard-B',
+    languages: ['ja-JP'],
   },
   ['ja-jp-standard-c']: {
     voice: {
       name: 'ja-JP-Standard-C',
     },
+    id: 'ja-JP-Standard-C',
+    languages: ['ja-JP'],
   },
   ['ja-jp-standard-d']: {
     voice: {
       name: 'ja-JP-Standard-D',
     },
+    id: 'ja-JP-Standard-D',
+    languages: ['ja-JP'],
   },
   ['ja-jp-wavenet-a']: {
     voice: {
       name: 'ja-JP-Wavenet-A',
     },
+    id: 'ja-JP-Wavenet-A',
+    languages: ['ja-JP'],
   },
   ['ja-jp-wavenet-b']: {
     voice: {
       name: 'ja-JP-Wavenet-B',
     },
+    id: 'ja-JP-Wavenet-B',
+    languages: ['ja-JP'],
   },
   ['ja-jp-wavenet-c']: {
     voice: {
       name: 'ja-JP-Wavenet-C',
     },
+    id: 'ja-JP-Wavenet-C',
+    languages: ['ja-JP'],
   },
   ['ja-jp-wavenet-d']: {
     voice: {
       name: 'ja-JP-Wavenet-D',
     },
+    id: 'ja-JP-Wavenet-D',
+    languages: ['ja-JP'],
   },
   ['kn-in-chirp3-hd-achernar']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Achernar',
     },
+    id: 'kn-IN-Chirp3-HD-Achernar',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-achird']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Achird',
     },
+    id: 'kn-IN-Chirp3-HD-Achird',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-algenib']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Algenib',
     },
+    id: 'kn-IN-Chirp3-HD-Algenib',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-algieba']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Algieba',
     },
+    id: 'kn-IN-Chirp3-HD-Algieba',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-alnilam']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Alnilam',
     },
+    id: 'kn-IN-Chirp3-HD-Alnilam',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-aoede']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Aoede',
     },
+    id: 'kn-IN-Chirp3-HD-Aoede',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-autonoe']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Autonoe',
     },
+    id: 'kn-IN-Chirp3-HD-Autonoe',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Callirrhoe',
     },
+    id: 'kn-IN-Chirp3-HD-Callirrhoe',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-charon']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Charon',
     },
+    id: 'kn-IN-Chirp3-HD-Charon',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-despina']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Despina',
     },
+    id: 'kn-IN-Chirp3-HD-Despina',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-enceladus']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Enceladus',
     },
+    id: 'kn-IN-Chirp3-HD-Enceladus',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-erinome']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Erinome',
     },
+    id: 'kn-IN-Chirp3-HD-Erinome',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-fenrir']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Fenrir',
     },
+    id: 'kn-IN-Chirp3-HD-Fenrir',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-gacrux']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Gacrux',
     },
+    id: 'kn-IN-Chirp3-HD-Gacrux',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-iapetus']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Iapetus',
     },
+    id: 'kn-IN-Chirp3-HD-Iapetus',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-kore']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Kore',
     },
+    id: 'kn-IN-Chirp3-HD-Kore',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-laomedeia']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Laomedeia',
     },
+    id: 'kn-IN-Chirp3-HD-Laomedeia',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-leda']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Leda',
     },
+    id: 'kn-IN-Chirp3-HD-Leda',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-orus']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Orus',
     },
+    id: 'kn-IN-Chirp3-HD-Orus',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-puck']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Puck',
     },
+    id: 'kn-IN-Chirp3-HD-Puck',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Pulcherrima',
     },
+    id: 'kn-IN-Chirp3-HD-Pulcherrima',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Rasalgethi',
     },
+    id: 'kn-IN-Chirp3-HD-Rasalgethi',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-sadachbia']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Sadachbia',
     },
+    id: 'kn-IN-Chirp3-HD-Sadachbia',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-sadaltager']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Sadaltager',
     },
+    id: 'kn-IN-Chirp3-HD-Sadaltager',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-schedar']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Schedar',
     },
+    id: 'kn-IN-Chirp3-HD-Schedar',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-sulafat']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Sulafat',
     },
+    id: 'kn-IN-Chirp3-HD-Sulafat',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-umbriel']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Umbriel',
     },
+    id: 'kn-IN-Chirp3-HD-Umbriel',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Vindemiatrix',
     },
+    id: 'kn-IN-Chirp3-HD-Vindemiatrix',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-zephyr']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Zephyr',
     },
+    id: 'kn-IN-Chirp3-HD-Zephyr',
+    languages: ['kn-IN'],
   },
   ['kn-in-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'kn-IN-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'kn-IN-Chirp3-HD-Zubenelgenubi',
+    languages: ['kn-IN'],
   },
   ['kn-in-standard-a']: {
     voice: {
       name: 'kn-IN-Standard-A',
     },
+    id: 'kn-IN-Standard-A',
+    languages: ['kn-IN'],
   },
   ['kn-in-standard-b']: {
     voice: {
       name: 'kn-IN-Standard-B',
     },
+    id: 'kn-IN-Standard-B',
+    languages: ['kn-IN'],
   },
   ['kn-in-standard-c']: {
     voice: {
       name: 'kn-IN-Standard-C',
     },
+    id: 'kn-IN-Standard-C',
+    languages: ['kn-IN'],
   },
   ['kn-in-standard-d']: {
     voice: {
       name: 'kn-IN-Standard-D',
     },
+    id: 'kn-IN-Standard-D',
+    languages: ['kn-IN'],
   },
   ['kn-in-wavenet-a']: {
     voice: {
       name: 'kn-IN-Wavenet-A',
     },
+    id: 'kn-IN-Wavenet-A',
+    languages: ['kn-IN'],
   },
   ['kn-in-wavenet-b']: {
     voice: {
       name: 'kn-IN-Wavenet-B',
     },
+    id: 'kn-IN-Wavenet-B',
+    languages: ['kn-IN'],
   },
   ['kn-in-wavenet-c']: {
     voice: {
       name: 'kn-IN-Wavenet-C',
     },
+    id: 'kn-IN-Wavenet-C',
+    languages: ['kn-IN'],
   },
   ['kn-in-wavenet-d']: {
     voice: {
       name: 'kn-IN-Wavenet-D',
     },
+    id: 'kn-IN-Wavenet-D',
+    languages: ['kn-IN'],
   },
   ['ko-kr-chirp3-hd-achernar']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Achernar',
     },
+    id: 'ko-KR-Chirp3-HD-Achernar',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-achird']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Achird',
     },
+    id: 'ko-KR-Chirp3-HD-Achird',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-algenib']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Algenib',
     },
+    id: 'ko-KR-Chirp3-HD-Algenib',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-algieba']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Algieba',
     },
+    id: 'ko-KR-Chirp3-HD-Algieba',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-alnilam']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Alnilam',
     },
+    id: 'ko-KR-Chirp3-HD-Alnilam',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-aoede']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Aoede',
     },
+    id: 'ko-KR-Chirp3-HD-Aoede',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-autonoe']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Autonoe',
     },
+    id: 'ko-KR-Chirp3-HD-Autonoe',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Callirrhoe',
     },
+    id: 'ko-KR-Chirp3-HD-Callirrhoe',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-charon']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Charon',
     },
+    id: 'ko-KR-Chirp3-HD-Charon',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-despina']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Despina',
     },
+    id: 'ko-KR-Chirp3-HD-Despina',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-enceladus']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Enceladus',
     },
+    id: 'ko-KR-Chirp3-HD-Enceladus',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-erinome']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Erinome',
     },
+    id: 'ko-KR-Chirp3-HD-Erinome',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-fenrir']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Fenrir',
     },
+    id: 'ko-KR-Chirp3-HD-Fenrir',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-gacrux']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Gacrux',
     },
+    id: 'ko-KR-Chirp3-HD-Gacrux',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-iapetus']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Iapetus',
     },
+    id: 'ko-KR-Chirp3-HD-Iapetus',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-kore']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Kore',
     },
+    id: 'ko-KR-Chirp3-HD-Kore',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-laomedeia']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Laomedeia',
     },
+    id: 'ko-KR-Chirp3-HD-Laomedeia',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-leda']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Leda',
     },
+    id: 'ko-KR-Chirp3-HD-Leda',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-orus']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Orus',
     },
+    id: 'ko-KR-Chirp3-HD-Orus',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-puck']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Puck',
     },
+    id: 'ko-KR-Chirp3-HD-Puck',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Pulcherrima',
     },
+    id: 'ko-KR-Chirp3-HD-Pulcherrima',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Rasalgethi',
     },
+    id: 'ko-KR-Chirp3-HD-Rasalgethi',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-sadachbia']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Sadachbia',
     },
+    id: 'ko-KR-Chirp3-HD-Sadachbia',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-sadaltager']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Sadaltager',
     },
+    id: 'ko-KR-Chirp3-HD-Sadaltager',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-schedar']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Schedar',
     },
+    id: 'ko-KR-Chirp3-HD-Schedar',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-sulafat']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Sulafat',
     },
+    id: 'ko-KR-Chirp3-HD-Sulafat',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-umbriel']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Umbriel',
     },
+    id: 'ko-KR-Chirp3-HD-Umbriel',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Vindemiatrix',
     },
+    id: 'ko-KR-Chirp3-HD-Vindemiatrix',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-zephyr']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Zephyr',
     },
+    id: 'ko-KR-Chirp3-HD-Zephyr',
+    languages: ['ko-KR'],
   },
   ['ko-kr-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'ko-KR-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'ko-KR-Chirp3-HD-Zubenelgenubi',
+    languages: ['ko-KR'],
   },
   ['ko-kr-neural2-a']: {
     voice: {
       name: 'ko-KR-Neural2-A',
     },
+    id: 'ko-KR-Neural2-A',
+    languages: ['ko-KR'],
   },
   ['ko-kr-neural2-b']: {
     voice: {
       name: 'ko-KR-Neural2-B',
     },
+    id: 'ko-KR-Neural2-B',
+    languages: ['ko-KR'],
   },
   ['ko-kr-neural2-c']: {
     voice: {
       name: 'ko-KR-Neural2-C',
     },
+    id: 'ko-KR-Neural2-C',
+    languages: ['ko-KR'],
   },
   ['ko-kr-standard-a']: {
     voice: {
       name: 'ko-KR-Standard-A',
     },
+    id: 'ko-KR-Standard-A',
+    languages: ['ko-KR'],
   },
   ['ko-kr-standard-b']: {
     voice: {
       name: 'ko-KR-Standard-B',
     },
+    id: 'ko-KR-Standard-B',
+    languages: ['ko-KR'],
   },
   ['ko-kr-standard-c']: {
     voice: {
       name: 'ko-KR-Standard-C',
     },
+    id: 'ko-KR-Standard-C',
+    languages: ['ko-KR'],
   },
   ['ko-kr-standard-d']: {
     voice: {
       name: 'ko-KR-Standard-D',
     },
+    id: 'ko-KR-Standard-D',
+    languages: ['ko-KR'],
   },
   ['ko-kr-wavenet-a']: {
     voice: {
       name: 'ko-KR-Wavenet-A',
     },
+    id: 'ko-KR-Wavenet-A',
+    languages: ['ko-KR'],
   },
   ['ko-kr-wavenet-b']: {
     voice: {
       name: 'ko-KR-Wavenet-B',
     },
+    id: 'ko-KR-Wavenet-B',
+    languages: ['ko-KR'],
   },
   ['ko-kr-wavenet-c']: {
     voice: {
       name: 'ko-KR-Wavenet-C',
     },
+    id: 'ko-KR-Wavenet-C',
+    languages: ['ko-KR'],
   },
   ['ko-kr-wavenet-d']: {
     voice: {
       name: 'ko-KR-Wavenet-D',
     },
+    id: 'ko-KR-Wavenet-D',
+    languages: ['ko-KR'],
   },
   ['kore']: {
     voice: {
       name: 'Kore',
     },
+    id: 'Kore',
+    languages: ['en-US'],
   },
   ['laomedeia']: {
     voice: {
       name: 'Laomedeia',
     },
+    id: 'Laomedeia',
+    languages: ['en-US'],
   },
   ['leda']: {
     voice: {
       name: 'Leda',
     },
+    id: 'Leda',
+    languages: ['en-US'],
+  },
+  ['lt-lt-chirp3-hd-achernar']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Achernar',
+    },
+    id: 'lt-LT-Chirp3-HD-Achernar',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-achird']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Achird',
+    },
+    id: 'lt-LT-Chirp3-HD-Achird',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-algenib']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Algenib',
+    },
+    id: 'lt-LT-Chirp3-HD-Algenib',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-algieba']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Algieba',
+    },
+    id: 'lt-LT-Chirp3-HD-Algieba',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-alnilam']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Alnilam',
+    },
+    id: 'lt-LT-Chirp3-HD-Alnilam',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-aoede']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Aoede',
+    },
+    id: 'lt-LT-Chirp3-HD-Aoede',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-autonoe']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Autonoe',
+    },
+    id: 'lt-LT-Chirp3-HD-Autonoe',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-callirrhoe']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Callirrhoe',
+    },
+    id: 'lt-LT-Chirp3-HD-Callirrhoe',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-charon']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Charon',
+    },
+    id: 'lt-LT-Chirp3-HD-Charon',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-despina']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Despina',
+    },
+    id: 'lt-LT-Chirp3-HD-Despina',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-enceladus']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Enceladus',
+    },
+    id: 'lt-LT-Chirp3-HD-Enceladus',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-erinome']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Erinome',
+    },
+    id: 'lt-LT-Chirp3-HD-Erinome',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-fenrir']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Fenrir',
+    },
+    id: 'lt-LT-Chirp3-HD-Fenrir',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-gacrux']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Gacrux',
+    },
+    id: 'lt-LT-Chirp3-HD-Gacrux',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-iapetus']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Iapetus',
+    },
+    id: 'lt-LT-Chirp3-HD-Iapetus',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-kore']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Kore',
+    },
+    id: 'lt-LT-Chirp3-HD-Kore',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-laomedeia']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Laomedeia',
+    },
+    id: 'lt-LT-Chirp3-HD-Laomedeia',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-leda']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Leda',
+    },
+    id: 'lt-LT-Chirp3-HD-Leda',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-orus']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Orus',
+    },
+    id: 'lt-LT-Chirp3-HD-Orus',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-puck']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Puck',
+    },
+    id: 'lt-LT-Chirp3-HD-Puck',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-pulcherrima']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Pulcherrima',
+    },
+    id: 'lt-LT-Chirp3-HD-Pulcherrima',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-rasalgethi']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Rasalgethi',
+    },
+    id: 'lt-LT-Chirp3-HD-Rasalgethi',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-sadachbia']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Sadachbia',
+    },
+    id: 'lt-LT-Chirp3-HD-Sadachbia',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-sadaltager']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Sadaltager',
+    },
+    id: 'lt-LT-Chirp3-HD-Sadaltager',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-schedar']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Schedar',
+    },
+    id: 'lt-LT-Chirp3-HD-Schedar',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-sulafat']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Sulafat',
+    },
+    id: 'lt-LT-Chirp3-HD-Sulafat',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-umbriel']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Umbriel',
+    },
+    id: 'lt-LT-Chirp3-HD-Umbriel',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-vindemiatrix']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Vindemiatrix',
+    },
+    id: 'lt-LT-Chirp3-HD-Vindemiatrix',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-zephyr']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Zephyr',
+    },
+    id: 'lt-LT-Chirp3-HD-Zephyr',
+    languages: ['lt-LT'],
+  },
+  ['lt-lt-chirp3-hd-zubenelgenubi']: {
+    voice: {
+      name: 'lt-LT-Chirp3-HD-Zubenelgenubi',
+    },
+    id: 'lt-LT-Chirp3-HD-Zubenelgenubi',
+    languages: ['lt-LT'],
   },
   ['lt-lt-standard-b']: {
     voice: {
       name: 'lt-LT-Standard-B',
     },
+    id: 'lt-LT-Standard-B',
+    languages: ['lt-LT'],
+  },
+  ['lv-lv-chirp3-hd-achernar']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Achernar',
+    },
+    id: 'lv-LV-Chirp3-HD-Achernar',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-achird']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Achird',
+    },
+    id: 'lv-LV-Chirp3-HD-Achird',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-algenib']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Algenib',
+    },
+    id: 'lv-LV-Chirp3-HD-Algenib',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-algieba']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Algieba',
+    },
+    id: 'lv-LV-Chirp3-HD-Algieba',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-alnilam']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Alnilam',
+    },
+    id: 'lv-LV-Chirp3-HD-Alnilam',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-aoede']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Aoede',
+    },
+    id: 'lv-LV-Chirp3-HD-Aoede',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-autonoe']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Autonoe',
+    },
+    id: 'lv-LV-Chirp3-HD-Autonoe',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-callirrhoe']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Callirrhoe',
+    },
+    id: 'lv-LV-Chirp3-HD-Callirrhoe',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-charon']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Charon',
+    },
+    id: 'lv-LV-Chirp3-HD-Charon',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-despina']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Despina',
+    },
+    id: 'lv-LV-Chirp3-HD-Despina',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-enceladus']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Enceladus',
+    },
+    id: 'lv-LV-Chirp3-HD-Enceladus',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-erinome']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Erinome',
+    },
+    id: 'lv-LV-Chirp3-HD-Erinome',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-fenrir']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Fenrir',
+    },
+    id: 'lv-LV-Chirp3-HD-Fenrir',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-gacrux']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Gacrux',
+    },
+    id: 'lv-LV-Chirp3-HD-Gacrux',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-iapetus']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Iapetus',
+    },
+    id: 'lv-LV-Chirp3-HD-Iapetus',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-kore']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Kore',
+    },
+    id: 'lv-LV-Chirp3-HD-Kore',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-laomedeia']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Laomedeia',
+    },
+    id: 'lv-LV-Chirp3-HD-Laomedeia',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-leda']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Leda',
+    },
+    id: 'lv-LV-Chirp3-HD-Leda',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-orus']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Orus',
+    },
+    id: 'lv-LV-Chirp3-HD-Orus',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-puck']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Puck',
+    },
+    id: 'lv-LV-Chirp3-HD-Puck',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-pulcherrima']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Pulcherrima',
+    },
+    id: 'lv-LV-Chirp3-HD-Pulcherrima',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-rasalgethi']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Rasalgethi',
+    },
+    id: 'lv-LV-Chirp3-HD-Rasalgethi',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-sadachbia']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Sadachbia',
+    },
+    id: 'lv-LV-Chirp3-HD-Sadachbia',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-sadaltager']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Sadaltager',
+    },
+    id: 'lv-LV-Chirp3-HD-Sadaltager',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-schedar']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Schedar',
+    },
+    id: 'lv-LV-Chirp3-HD-Schedar',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-sulafat']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Sulafat',
+    },
+    id: 'lv-LV-Chirp3-HD-Sulafat',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-umbriel']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Umbriel',
+    },
+    id: 'lv-LV-Chirp3-HD-Umbriel',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-vindemiatrix']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Vindemiatrix',
+    },
+    id: 'lv-LV-Chirp3-HD-Vindemiatrix',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-zephyr']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Zephyr',
+    },
+    id: 'lv-LV-Chirp3-HD-Zephyr',
+    languages: ['lv-LV'],
+  },
+  ['lv-lv-chirp3-hd-zubenelgenubi']: {
+    voice: {
+      name: 'lv-LV-Chirp3-HD-Zubenelgenubi',
+    },
+    id: 'lv-LV-Chirp3-HD-Zubenelgenubi',
+    languages: ['lv-LV'],
   },
   ['lv-lv-standard-b']: {
     voice: {
       name: 'lv-LV-Standard-B',
     },
+    id: 'lv-LV-Standard-B',
+    languages: ['lv-LV'],
   },
   ['ml-in-chirp3-hd-achernar']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Achernar',
     },
+    id: 'ml-IN-Chirp3-HD-Achernar',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-achird']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Achird',
     },
+    id: 'ml-IN-Chirp3-HD-Achird',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-algenib']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Algenib',
     },
+    id: 'ml-IN-Chirp3-HD-Algenib',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-algieba']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Algieba',
     },
+    id: 'ml-IN-Chirp3-HD-Algieba',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-alnilam']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Alnilam',
     },
+    id: 'ml-IN-Chirp3-HD-Alnilam',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-aoede']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Aoede',
     },
+    id: 'ml-IN-Chirp3-HD-Aoede',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-autonoe']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Autonoe',
     },
+    id: 'ml-IN-Chirp3-HD-Autonoe',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Callirrhoe',
     },
+    id: 'ml-IN-Chirp3-HD-Callirrhoe',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-charon']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Charon',
     },
+    id: 'ml-IN-Chirp3-HD-Charon',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-despina']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Despina',
     },
+    id: 'ml-IN-Chirp3-HD-Despina',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-enceladus']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Enceladus',
     },
+    id: 'ml-IN-Chirp3-HD-Enceladus',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-erinome']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Erinome',
     },
+    id: 'ml-IN-Chirp3-HD-Erinome',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-fenrir']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Fenrir',
     },
+    id: 'ml-IN-Chirp3-HD-Fenrir',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-gacrux']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Gacrux',
     },
+    id: 'ml-IN-Chirp3-HD-Gacrux',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-iapetus']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Iapetus',
     },
+    id: 'ml-IN-Chirp3-HD-Iapetus',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-kore']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Kore',
     },
+    id: 'ml-IN-Chirp3-HD-Kore',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-laomedeia']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Laomedeia',
     },
+    id: 'ml-IN-Chirp3-HD-Laomedeia',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-leda']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Leda',
     },
+    id: 'ml-IN-Chirp3-HD-Leda',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-orus']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Orus',
     },
+    id: 'ml-IN-Chirp3-HD-Orus',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-puck']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Puck',
     },
+    id: 'ml-IN-Chirp3-HD-Puck',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Pulcherrima',
     },
+    id: 'ml-IN-Chirp3-HD-Pulcherrima',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Rasalgethi',
     },
+    id: 'ml-IN-Chirp3-HD-Rasalgethi',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-sadachbia']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Sadachbia',
     },
+    id: 'ml-IN-Chirp3-HD-Sadachbia',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-sadaltager']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Sadaltager',
     },
+    id: 'ml-IN-Chirp3-HD-Sadaltager',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-schedar']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Schedar',
     },
+    id: 'ml-IN-Chirp3-HD-Schedar',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-sulafat']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Sulafat',
     },
+    id: 'ml-IN-Chirp3-HD-Sulafat',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-umbriel']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Umbriel',
     },
+    id: 'ml-IN-Chirp3-HD-Umbriel',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Vindemiatrix',
     },
+    id: 'ml-IN-Chirp3-HD-Vindemiatrix',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-zephyr']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Zephyr',
     },
+    id: 'ml-IN-Chirp3-HD-Zephyr',
+    languages: ['ml-IN'],
   },
   ['ml-in-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'ml-IN-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'ml-IN-Chirp3-HD-Zubenelgenubi',
+    languages: ['ml-IN'],
   },
   ['ml-in-standard-a']: {
     voice: {
       name: 'ml-IN-Standard-A',
     },
+    id: 'ml-IN-Standard-A',
+    languages: ['ml-IN'],
   },
   ['ml-in-standard-b']: {
     voice: {
       name: 'ml-IN-Standard-B',
     },
+    id: 'ml-IN-Standard-B',
+    languages: ['ml-IN'],
   },
   ['ml-in-standard-c']: {
     voice: {
       name: 'ml-IN-Standard-C',
     },
+    id: 'ml-IN-Standard-C',
+    languages: ['ml-IN'],
   },
   ['ml-in-standard-d']: {
     voice: {
       name: 'ml-IN-Standard-D',
     },
+    id: 'ml-IN-Standard-D',
+    languages: ['ml-IN'],
   },
   ['ml-in-wavenet-a']: {
     voice: {
       name: 'ml-IN-Wavenet-A',
     },
+    id: 'ml-IN-Wavenet-A',
+    languages: ['ml-IN'],
   },
   ['ml-in-wavenet-b']: {
     voice: {
       name: 'ml-IN-Wavenet-B',
     },
+    id: 'ml-IN-Wavenet-B',
+    languages: ['ml-IN'],
   },
   ['ml-in-wavenet-c']: {
     voice: {
       name: 'ml-IN-Wavenet-C',
     },
+    id: 'ml-IN-Wavenet-C',
+    languages: ['ml-IN'],
   },
   ['ml-in-wavenet-d']: {
     voice: {
       name: 'ml-IN-Wavenet-D',
     },
+    id: 'ml-IN-Wavenet-D',
+    languages: ['ml-IN'],
   },
   ['mr-in-chirp3-hd-achernar']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Achernar',
     },
+    id: 'mr-IN-Chirp3-HD-Achernar',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-achird']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Achird',
     },
+    id: 'mr-IN-Chirp3-HD-Achird',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-algenib']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Algenib',
     },
+    id: 'mr-IN-Chirp3-HD-Algenib',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-algieba']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Algieba',
     },
+    id: 'mr-IN-Chirp3-HD-Algieba',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-alnilam']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Alnilam',
     },
+    id: 'mr-IN-Chirp3-HD-Alnilam',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-aoede']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Aoede',
     },
+    id: 'mr-IN-Chirp3-HD-Aoede',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-autonoe']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Autonoe',
     },
+    id: 'mr-IN-Chirp3-HD-Autonoe',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Callirrhoe',
     },
+    id: 'mr-IN-Chirp3-HD-Callirrhoe',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-charon']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Charon',
     },
+    id: 'mr-IN-Chirp3-HD-Charon',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-despina']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Despina',
     },
+    id: 'mr-IN-Chirp3-HD-Despina',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-enceladus']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Enceladus',
     },
+    id: 'mr-IN-Chirp3-HD-Enceladus',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-erinome']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Erinome',
     },
+    id: 'mr-IN-Chirp3-HD-Erinome',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-fenrir']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Fenrir',
     },
+    id: 'mr-IN-Chirp3-HD-Fenrir',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-gacrux']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Gacrux',
     },
+    id: 'mr-IN-Chirp3-HD-Gacrux',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-iapetus']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Iapetus',
     },
+    id: 'mr-IN-Chirp3-HD-Iapetus',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-kore']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Kore',
     },
+    id: 'mr-IN-Chirp3-HD-Kore',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-laomedeia']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Laomedeia',
     },
+    id: 'mr-IN-Chirp3-HD-Laomedeia',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-leda']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Leda',
     },
+    id: 'mr-IN-Chirp3-HD-Leda',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-orus']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Orus',
     },
+    id: 'mr-IN-Chirp3-HD-Orus',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-puck']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Puck',
     },
+    id: 'mr-IN-Chirp3-HD-Puck',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Pulcherrima',
     },
+    id: 'mr-IN-Chirp3-HD-Pulcherrima',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Rasalgethi',
     },
+    id: 'mr-IN-Chirp3-HD-Rasalgethi',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-sadachbia']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Sadachbia',
     },
+    id: 'mr-IN-Chirp3-HD-Sadachbia',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-sadaltager']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Sadaltager',
     },
+    id: 'mr-IN-Chirp3-HD-Sadaltager',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-schedar']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Schedar',
     },
+    id: 'mr-IN-Chirp3-HD-Schedar',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-sulafat']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Sulafat',
     },
+    id: 'mr-IN-Chirp3-HD-Sulafat',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-umbriel']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Umbriel',
     },
+    id: 'mr-IN-Chirp3-HD-Umbriel',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Vindemiatrix',
     },
+    id: 'mr-IN-Chirp3-HD-Vindemiatrix',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-zephyr']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Zephyr',
     },
+    id: 'mr-IN-Chirp3-HD-Zephyr',
+    languages: ['mr-IN'],
   },
   ['mr-in-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'mr-IN-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'mr-IN-Chirp3-HD-Zubenelgenubi',
+    languages: ['mr-IN'],
   },
   ['mr-in-standard-a']: {
     voice: {
       name: 'mr-IN-Standard-A',
     },
+    id: 'mr-IN-Standard-A',
+    languages: ['mr-IN'],
   },
   ['mr-in-standard-b']: {
     voice: {
       name: 'mr-IN-Standard-B',
     },
+    id: 'mr-IN-Standard-B',
+    languages: ['mr-IN'],
   },
   ['mr-in-standard-c']: {
     voice: {
       name: 'mr-IN-Standard-C',
     },
+    id: 'mr-IN-Standard-C',
+    languages: ['mr-IN'],
   },
   ['mr-in-wavenet-a']: {
     voice: {
       name: 'mr-IN-Wavenet-A',
     },
+    id: 'mr-IN-Wavenet-A',
+    languages: ['mr-IN'],
   },
   ['mr-in-wavenet-b']: {
     voice: {
       name: 'mr-IN-Wavenet-B',
     },
+    id: 'mr-IN-Wavenet-B',
+    languages: ['mr-IN'],
   },
   ['mr-in-wavenet-c']: {
     voice: {
       name: 'mr-IN-Wavenet-C',
     },
+    id: 'mr-IN-Wavenet-C',
+    languages: ['mr-IN'],
   },
   ['ms-my-standard-a']: {
     voice: {
       name: 'ms-MY-Standard-A',
     },
+    id: 'ms-MY-Standard-A',
+    languages: ['ms-MY'],
   },
   ['ms-my-standard-b']: {
     voice: {
       name: 'ms-MY-Standard-B',
     },
+    id: 'ms-MY-Standard-B',
+    languages: ['ms-MY'],
   },
   ['ms-my-standard-c']: {
     voice: {
       name: 'ms-MY-Standard-C',
     },
+    id: 'ms-MY-Standard-C',
+    languages: ['ms-MY'],
   },
   ['ms-my-standard-d']: {
     voice: {
       name: 'ms-MY-Standard-D',
     },
+    id: 'ms-MY-Standard-D',
+    languages: ['ms-MY'],
   },
   ['ms-my-wavenet-a']: {
     voice: {
       name: 'ms-MY-Wavenet-A',
     },
+    id: 'ms-MY-Wavenet-A',
+    languages: ['ms-MY'],
   },
   ['ms-my-wavenet-b']: {
     voice: {
       name: 'ms-MY-Wavenet-B',
     },
+    id: 'ms-MY-Wavenet-B',
+    languages: ['ms-MY'],
   },
   ['ms-my-wavenet-c']: {
     voice: {
       name: 'ms-MY-Wavenet-C',
     },
+    id: 'ms-MY-Wavenet-C',
+    languages: ['ms-MY'],
   },
   ['ms-my-wavenet-d']: {
     voice: {
       name: 'ms-MY-Wavenet-D',
     },
+    id: 'ms-MY-Wavenet-D',
+    languages: ['ms-MY'],
   },
   ['nb-no-chirp3-hd-achernar']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Achernar',
     },
+    id: 'nb-NO-Chirp3-HD-Achernar',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-achird']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Achird',
     },
+    id: 'nb-NO-Chirp3-HD-Achird',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-algenib']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Algenib',
     },
+    id: 'nb-NO-Chirp3-HD-Algenib',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-algieba']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Algieba',
     },
+    id: 'nb-NO-Chirp3-HD-Algieba',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-alnilam']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Alnilam',
     },
+    id: 'nb-NO-Chirp3-HD-Alnilam',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-aoede']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Aoede',
     },
+    id: 'nb-NO-Chirp3-HD-Aoede',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-autonoe']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Autonoe',
     },
+    id: 'nb-NO-Chirp3-HD-Autonoe',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Callirrhoe',
     },
+    id: 'nb-NO-Chirp3-HD-Callirrhoe',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-charon']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Charon',
     },
+    id: 'nb-NO-Chirp3-HD-Charon',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-despina']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Despina',
     },
+    id: 'nb-NO-Chirp3-HD-Despina',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-enceladus']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Enceladus',
     },
+    id: 'nb-NO-Chirp3-HD-Enceladus',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-erinome']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Erinome',
     },
+    id: 'nb-NO-Chirp3-HD-Erinome',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-fenrir']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Fenrir',
     },
+    id: 'nb-NO-Chirp3-HD-Fenrir',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-gacrux']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Gacrux',
     },
+    id: 'nb-NO-Chirp3-HD-Gacrux',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-iapetus']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Iapetus',
     },
+    id: 'nb-NO-Chirp3-HD-Iapetus',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-kore']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Kore',
     },
+    id: 'nb-NO-Chirp3-HD-Kore',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-laomedeia']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Laomedeia',
     },
+    id: 'nb-NO-Chirp3-HD-Laomedeia',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-leda']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Leda',
     },
+    id: 'nb-NO-Chirp3-HD-Leda',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-orus']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Orus',
     },
+    id: 'nb-NO-Chirp3-HD-Orus',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-puck']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Puck',
     },
+    id: 'nb-NO-Chirp3-HD-Puck',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Pulcherrima',
     },
+    id: 'nb-NO-Chirp3-HD-Pulcherrima',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Rasalgethi',
     },
+    id: 'nb-NO-Chirp3-HD-Rasalgethi',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-sadachbia']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Sadachbia',
     },
+    id: 'nb-NO-Chirp3-HD-Sadachbia',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-sadaltager']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Sadaltager',
     },
+    id: 'nb-NO-Chirp3-HD-Sadaltager',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-schedar']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Schedar',
     },
+    id: 'nb-NO-Chirp3-HD-Schedar',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-sulafat']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Sulafat',
     },
+    id: 'nb-NO-Chirp3-HD-Sulafat',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-umbriel']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Umbriel',
     },
+    id: 'nb-NO-Chirp3-HD-Umbriel',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Vindemiatrix',
     },
+    id: 'nb-NO-Chirp3-HD-Vindemiatrix',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-zephyr']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Zephyr',
     },
+    id: 'nb-NO-Chirp3-HD-Zephyr',
+    languages: ['nb-NO'],
   },
   ['nb-no-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'nb-NO-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'nb-NO-Chirp3-HD-Zubenelgenubi',
+    languages: ['nb-NO'],
   },
   ['nb-no-standard-f']: {
     voice: {
       name: 'nb-NO-Standard-F',
     },
+    id: 'nb-NO-Standard-F',
+    languages: ['nb-NO'],
   },
   ['nb-no-standard-g']: {
     voice: {
       name: 'nb-NO-Standard-G',
     },
+    id: 'nb-NO-Standard-G',
+    languages: ['nb-NO'],
   },
   ['nb-no-wavenet-f']: {
     voice: {
       name: 'nb-NO-Wavenet-F',
     },
+    id: 'nb-NO-Wavenet-F',
+    languages: ['nb-NO'],
   },
   ['nb-no-wavenet-g']: {
     voice: {
       name: 'nb-NO-Wavenet-G',
     },
+    id: 'nb-NO-Wavenet-G',
+    languages: ['nb-NO'],
   },
   ['nl-be-chirp3-hd-achernar']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Achernar',
     },
+    id: 'nl-BE-Chirp3-HD-Achernar',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-achird']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Achird',
     },
+    id: 'nl-BE-Chirp3-HD-Achird',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-algenib']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Algenib',
     },
+    id: 'nl-BE-Chirp3-HD-Algenib',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-algieba']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Algieba',
     },
+    id: 'nl-BE-Chirp3-HD-Algieba',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-alnilam']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Alnilam',
     },
+    id: 'nl-BE-Chirp3-HD-Alnilam',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-aoede']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Aoede',
     },
+    id: 'nl-BE-Chirp3-HD-Aoede',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-autonoe']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Autonoe',
     },
+    id: 'nl-BE-Chirp3-HD-Autonoe',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Callirrhoe',
     },
+    id: 'nl-BE-Chirp3-HD-Callirrhoe',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-charon']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Charon',
     },
+    id: 'nl-BE-Chirp3-HD-Charon',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-despina']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Despina',
     },
+    id: 'nl-BE-Chirp3-HD-Despina',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-enceladus']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Enceladus',
     },
+    id: 'nl-BE-Chirp3-HD-Enceladus',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-erinome']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Erinome',
     },
+    id: 'nl-BE-Chirp3-HD-Erinome',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-fenrir']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Fenrir',
     },
+    id: 'nl-BE-Chirp3-HD-Fenrir',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-gacrux']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Gacrux',
     },
+    id: 'nl-BE-Chirp3-HD-Gacrux',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-iapetus']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Iapetus',
     },
+    id: 'nl-BE-Chirp3-HD-Iapetus',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-kore']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Kore',
     },
+    id: 'nl-BE-Chirp3-HD-Kore',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-laomedeia']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Laomedeia',
     },
+    id: 'nl-BE-Chirp3-HD-Laomedeia',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-leda']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Leda',
     },
+    id: 'nl-BE-Chirp3-HD-Leda',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-orus']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Orus',
     },
+    id: 'nl-BE-Chirp3-HD-Orus',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-puck']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Puck',
     },
+    id: 'nl-BE-Chirp3-HD-Puck',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Pulcherrima',
     },
+    id: 'nl-BE-Chirp3-HD-Pulcherrima',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Rasalgethi',
     },
+    id: 'nl-BE-Chirp3-HD-Rasalgethi',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-sadachbia']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Sadachbia',
     },
+    id: 'nl-BE-Chirp3-HD-Sadachbia',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-sadaltager']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Sadaltager',
     },
+    id: 'nl-BE-Chirp3-HD-Sadaltager',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-schedar']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Schedar',
     },
+    id: 'nl-BE-Chirp3-HD-Schedar',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-sulafat']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Sulafat',
     },
+    id: 'nl-BE-Chirp3-HD-Sulafat',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-umbriel']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Umbriel',
     },
+    id: 'nl-BE-Chirp3-HD-Umbriel',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Vindemiatrix',
     },
+    id: 'nl-BE-Chirp3-HD-Vindemiatrix',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-zephyr']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Zephyr',
     },
+    id: 'nl-BE-Chirp3-HD-Zephyr',
+    languages: ['nl-BE'],
   },
   ['nl-be-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'nl-BE-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'nl-BE-Chirp3-HD-Zubenelgenubi',
+    languages: ['nl-BE'],
   },
   ['nl-be-standard-c']: {
     voice: {
       name: 'nl-BE-Standard-C',
     },
+    id: 'nl-BE-Standard-C',
+    languages: ['nl-BE'],
   },
   ['nl-be-standard-d']: {
     voice: {
       name: 'nl-BE-Standard-D',
     },
+    id: 'nl-BE-Standard-D',
+    languages: ['nl-BE'],
   },
   ['nl-be-wavenet-c']: {
     voice: {
       name: 'nl-BE-Wavenet-C',
     },
+    id: 'nl-BE-Wavenet-C',
+    languages: ['nl-BE'],
   },
   ['nl-be-wavenet-d']: {
     voice: {
       name: 'nl-BE-Wavenet-D',
     },
+    id: 'nl-BE-Wavenet-D',
+    languages: ['nl-BE'],
   },
   ['nl-nl-chirp3-hd-achernar']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Achernar',
     },
+    id: 'nl-NL-Chirp3-HD-Achernar',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-achird']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Achird',
     },
+    id: 'nl-NL-Chirp3-HD-Achird',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-algenib']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Algenib',
     },
+    id: 'nl-NL-Chirp3-HD-Algenib',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-algieba']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Algieba',
     },
+    id: 'nl-NL-Chirp3-HD-Algieba',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-alnilam']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Alnilam',
     },
+    id: 'nl-NL-Chirp3-HD-Alnilam',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-aoede']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Aoede',
     },
+    id: 'nl-NL-Chirp3-HD-Aoede',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-autonoe']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Autonoe',
     },
+    id: 'nl-NL-Chirp3-HD-Autonoe',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Callirrhoe',
     },
+    id: 'nl-NL-Chirp3-HD-Callirrhoe',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-charon']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Charon',
     },
+    id: 'nl-NL-Chirp3-HD-Charon',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-despina']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Despina',
     },
+    id: 'nl-NL-Chirp3-HD-Despina',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-enceladus']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Enceladus',
     },
+    id: 'nl-NL-Chirp3-HD-Enceladus',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-erinome']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Erinome',
     },
+    id: 'nl-NL-Chirp3-HD-Erinome',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-fenrir']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Fenrir',
     },
+    id: 'nl-NL-Chirp3-HD-Fenrir',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-gacrux']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Gacrux',
     },
+    id: 'nl-NL-Chirp3-HD-Gacrux',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-iapetus']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Iapetus',
     },
+    id: 'nl-NL-Chirp3-HD-Iapetus',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-kore']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Kore',
     },
+    id: 'nl-NL-Chirp3-HD-Kore',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-laomedeia']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Laomedeia',
     },
+    id: 'nl-NL-Chirp3-HD-Laomedeia',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-leda']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Leda',
     },
+    id: 'nl-NL-Chirp3-HD-Leda',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-orus']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Orus',
     },
+    id: 'nl-NL-Chirp3-HD-Orus',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-puck']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Puck',
     },
+    id: 'nl-NL-Chirp3-HD-Puck',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Pulcherrima',
     },
+    id: 'nl-NL-Chirp3-HD-Pulcherrima',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Rasalgethi',
     },
+    id: 'nl-NL-Chirp3-HD-Rasalgethi',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-sadachbia']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Sadachbia',
     },
+    id: 'nl-NL-Chirp3-HD-Sadachbia',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-sadaltager']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Sadaltager',
     },
+    id: 'nl-NL-Chirp3-HD-Sadaltager',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-schedar']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Schedar',
     },
+    id: 'nl-NL-Chirp3-HD-Schedar',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-sulafat']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Sulafat',
     },
+    id: 'nl-NL-Chirp3-HD-Sulafat',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-umbriel']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Umbriel',
     },
+    id: 'nl-NL-Chirp3-HD-Umbriel',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Vindemiatrix',
     },
+    id: 'nl-NL-Chirp3-HD-Vindemiatrix',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-zephyr']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Zephyr',
     },
+    id: 'nl-NL-Chirp3-HD-Zephyr',
+    languages: ['nl-NL'],
   },
   ['nl-nl-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'nl-NL-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'nl-NL-Chirp3-HD-Zubenelgenubi',
+    languages: ['nl-NL'],
   },
   ['nl-nl-standard-f']: {
     voice: {
       name: 'nl-NL-Standard-F',
     },
+    id: 'nl-NL-Standard-F',
+    languages: ['nl-NL'],
   },
   ['nl-nl-standard-g']: {
     voice: {
       name: 'nl-NL-Standard-G',
     },
+    id: 'nl-NL-Standard-G',
+    languages: ['nl-NL'],
   },
   ['nl-nl-wavenet-f']: {
     voice: {
       name: 'nl-NL-Wavenet-F',
     },
+    id: 'nl-NL-Wavenet-F',
+    languages: ['nl-NL'],
   },
   ['nl-nl-wavenet-g']: {
     voice: {
       name: 'nl-NL-Wavenet-G',
     },
+    id: 'nl-NL-Wavenet-G',
+    languages: ['nl-NL'],
   },
   ['orus']: {
     voice: {
       name: 'Orus',
     },
+    id: 'Orus',
+    languages: ['en-US'],
   },
   ['pa-in-standard-a']: {
     voice: {
       name: 'pa-IN-Standard-A',
     },
+    id: 'pa-IN-Standard-A',
+    languages: ['pa-IN'],
   },
   ['pa-in-standard-b']: {
     voice: {
       name: 'pa-IN-Standard-B',
     },
+    id: 'pa-IN-Standard-B',
+    languages: ['pa-IN'],
   },
   ['pa-in-standard-c']: {
     voice: {
       name: 'pa-IN-Standard-C',
     },
+    id: 'pa-IN-Standard-C',
+    languages: ['pa-IN'],
   },
   ['pa-in-standard-d']: {
     voice: {
       name: 'pa-IN-Standard-D',
     },
+    id: 'pa-IN-Standard-D',
+    languages: ['pa-IN'],
   },
   ['pa-in-wavenet-a']: {
     voice: {
       name: 'pa-IN-Wavenet-A',
     },
+    id: 'pa-IN-Wavenet-A',
+    languages: ['pa-IN'],
   },
   ['pa-in-wavenet-b']: {
     voice: {
       name: 'pa-IN-Wavenet-B',
     },
+    id: 'pa-IN-Wavenet-B',
+    languages: ['pa-IN'],
   },
   ['pa-in-wavenet-c']: {
     voice: {
       name: 'pa-IN-Wavenet-C',
     },
+    id: 'pa-IN-Wavenet-C',
+    languages: ['pa-IN'],
   },
   ['pa-in-wavenet-d']: {
     voice: {
       name: 'pa-IN-Wavenet-D',
     },
+    id: 'pa-IN-Wavenet-D',
+    languages: ['pa-IN'],
   },
   ['pl-pl-chirp3-hd-achernar']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Achernar',
     },
+    id: 'pl-PL-Chirp3-HD-Achernar',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-achird']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Achird',
     },
+    id: 'pl-PL-Chirp3-HD-Achird',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-algenib']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Algenib',
     },
+    id: 'pl-PL-Chirp3-HD-Algenib',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-algieba']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Algieba',
     },
+    id: 'pl-PL-Chirp3-HD-Algieba',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-alnilam']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Alnilam',
     },
+    id: 'pl-PL-Chirp3-HD-Alnilam',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-aoede']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Aoede',
     },
+    id: 'pl-PL-Chirp3-HD-Aoede',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-autonoe']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Autonoe',
     },
+    id: 'pl-PL-Chirp3-HD-Autonoe',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Callirrhoe',
     },
+    id: 'pl-PL-Chirp3-HD-Callirrhoe',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-charon']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Charon',
     },
+    id: 'pl-PL-Chirp3-HD-Charon',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-despina']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Despina',
     },
+    id: 'pl-PL-Chirp3-HD-Despina',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-enceladus']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Enceladus',
     },
+    id: 'pl-PL-Chirp3-HD-Enceladus',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-erinome']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Erinome',
     },
+    id: 'pl-PL-Chirp3-HD-Erinome',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-fenrir']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Fenrir',
     },
+    id: 'pl-PL-Chirp3-HD-Fenrir',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-gacrux']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Gacrux',
     },
+    id: 'pl-PL-Chirp3-HD-Gacrux',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-iapetus']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Iapetus',
     },
+    id: 'pl-PL-Chirp3-HD-Iapetus',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-kore']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Kore',
     },
+    id: 'pl-PL-Chirp3-HD-Kore',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-laomedeia']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Laomedeia',
     },
+    id: 'pl-PL-Chirp3-HD-Laomedeia',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-leda']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Leda',
     },
+    id: 'pl-PL-Chirp3-HD-Leda',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-orus']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Orus',
     },
+    id: 'pl-PL-Chirp3-HD-Orus',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-puck']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Puck',
     },
+    id: 'pl-PL-Chirp3-HD-Puck',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Pulcherrima',
     },
+    id: 'pl-PL-Chirp3-HD-Pulcherrima',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Rasalgethi',
     },
+    id: 'pl-PL-Chirp3-HD-Rasalgethi',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-sadachbia']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Sadachbia',
     },
+    id: 'pl-PL-Chirp3-HD-Sadachbia',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-sadaltager']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Sadaltager',
     },
+    id: 'pl-PL-Chirp3-HD-Sadaltager',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-schedar']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Schedar',
     },
+    id: 'pl-PL-Chirp3-HD-Schedar',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-sulafat']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Sulafat',
     },
+    id: 'pl-PL-Chirp3-HD-Sulafat',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-umbriel']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Umbriel',
     },
+    id: 'pl-PL-Chirp3-HD-Umbriel',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Vindemiatrix',
     },
+    id: 'pl-PL-Chirp3-HD-Vindemiatrix',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-zephyr']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Zephyr',
     },
+    id: 'pl-PL-Chirp3-HD-Zephyr',
+    languages: ['pl-PL'],
   },
   ['pl-pl-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'pl-PL-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'pl-PL-Chirp3-HD-Zubenelgenubi',
+    languages: ['pl-PL'],
   },
   ['pl-pl-standard-f']: {
     voice: {
       name: 'pl-PL-Standard-F',
     },
+    id: 'pl-PL-Standard-F',
+    languages: ['pl-PL'],
   },
   ['pl-pl-standard-g']: {
     voice: {
       name: 'pl-PL-Standard-G',
     },
+    id: 'pl-PL-Standard-G',
+    languages: ['pl-PL'],
   },
   ['pl-pl-wavenet-f']: {
     voice: {
       name: 'pl-PL-Wavenet-F',
     },
+    id: 'pl-PL-Wavenet-F',
+    languages: ['pl-PL'],
   },
   ['pl-pl-wavenet-g']: {
     voice: {
       name: 'pl-PL-Wavenet-G',
     },
+    id: 'pl-PL-Wavenet-G',
+    languages: ['pl-PL'],
   },
   ['pt-br-chirp3-hd-achernar']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Achernar',
     },
+    id: 'pt-BR-Chirp3-HD-Achernar',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-achird']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Achird',
     },
+    id: 'pt-BR-Chirp3-HD-Achird',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-algenib']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Algenib',
     },
+    id: 'pt-BR-Chirp3-HD-Algenib',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-algieba']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Algieba',
     },
+    id: 'pt-BR-Chirp3-HD-Algieba',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-alnilam']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Alnilam',
     },
+    id: 'pt-BR-Chirp3-HD-Alnilam',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-aoede']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Aoede',
     },
+    id: 'pt-BR-Chirp3-HD-Aoede',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-autonoe']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Autonoe',
     },
+    id: 'pt-BR-Chirp3-HD-Autonoe',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Callirrhoe',
     },
+    id: 'pt-BR-Chirp3-HD-Callirrhoe',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-charon']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Charon',
     },
+    id: 'pt-BR-Chirp3-HD-Charon',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-despina']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Despina',
     },
+    id: 'pt-BR-Chirp3-HD-Despina',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-enceladus']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Enceladus',
     },
+    id: 'pt-BR-Chirp3-HD-Enceladus',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-erinome']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Erinome',
     },
+    id: 'pt-BR-Chirp3-HD-Erinome',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-fenrir']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Fenrir',
     },
+    id: 'pt-BR-Chirp3-HD-Fenrir',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-gacrux']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Gacrux',
     },
+    id: 'pt-BR-Chirp3-HD-Gacrux',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-iapetus']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Iapetus',
     },
+    id: 'pt-BR-Chirp3-HD-Iapetus',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-kore']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Kore',
     },
+    id: 'pt-BR-Chirp3-HD-Kore',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-laomedeia']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Laomedeia',
     },
+    id: 'pt-BR-Chirp3-HD-Laomedeia',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-leda']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Leda',
     },
+    id: 'pt-BR-Chirp3-HD-Leda',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-orus']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Orus',
     },
+    id: 'pt-BR-Chirp3-HD-Orus',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-puck']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Puck',
     },
+    id: 'pt-BR-Chirp3-HD-Puck',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Pulcherrima',
     },
+    id: 'pt-BR-Chirp3-HD-Pulcherrima',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Rasalgethi',
     },
+    id: 'pt-BR-Chirp3-HD-Rasalgethi',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-sadachbia']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Sadachbia',
     },
+    id: 'pt-BR-Chirp3-HD-Sadachbia',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-sadaltager']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Sadaltager',
     },
+    id: 'pt-BR-Chirp3-HD-Sadaltager',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-schedar']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Schedar',
     },
+    id: 'pt-BR-Chirp3-HD-Schedar',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-sulafat']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Sulafat',
     },
+    id: 'pt-BR-Chirp3-HD-Sulafat',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-umbriel']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Umbriel',
     },
+    id: 'pt-BR-Chirp3-HD-Umbriel',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Vindemiatrix',
     },
+    id: 'pt-BR-Chirp3-HD-Vindemiatrix',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-zephyr']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Zephyr',
     },
+    id: 'pt-BR-Chirp3-HD-Zephyr',
+    languages: ['pt-BR'],
   },
   ['pt-br-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'pt-BR-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'pt-BR-Chirp3-HD-Zubenelgenubi',
+    languages: ['pt-BR'],
   },
   ['pt-br-neural2-a']: {
     voice: {
       name: 'pt-BR-Neural2-A',
     },
+    id: 'pt-BR-Neural2-A',
+    languages: ['pt-BR'],
   },
   ['pt-br-neural2-b']: {
     voice: {
       name: 'pt-BR-Neural2-B',
     },
+    id: 'pt-BR-Neural2-B',
+    languages: ['pt-BR'],
   },
   ['pt-br-neural2-c']: {
     voice: {
       name: 'pt-BR-Neural2-C',
     },
+    id: 'pt-BR-Neural2-C',
+    languages: ['pt-BR'],
   },
   ['pt-br-standard-a']: {
     voice: {
       name: 'pt-BR-Standard-A',
     },
+    id: 'pt-BR-Standard-A',
+    languages: ['pt-BR'],
   },
   ['pt-br-standard-b']: {
     voice: {
       name: 'pt-BR-Standard-B',
     },
+    id: 'pt-BR-Standard-B',
+    languages: ['pt-BR'],
   },
   ['pt-br-standard-c']: {
     voice: {
       name: 'pt-BR-Standard-C',
     },
+    id: 'pt-BR-Standard-C',
+    languages: ['pt-BR'],
   },
   ['pt-br-standard-d']: {
     voice: {
       name: 'pt-BR-Standard-D',
     },
+    id: 'pt-BR-Standard-D',
+    languages: ['pt-BR'],
   },
   ['pt-br-standard-e']: {
     voice: {
       name: 'pt-BR-Standard-E',
     },
+    id: 'pt-BR-Standard-E',
+    languages: ['pt-BR'],
   },
   ['pt-br-wavenet-a']: {
     voice: {
       name: 'pt-BR-Wavenet-A',
     },
+    id: 'pt-BR-Wavenet-A',
+    languages: ['pt-BR'],
   },
   ['pt-br-wavenet-b']: {
     voice: {
       name: 'pt-BR-Wavenet-B',
     },
+    id: 'pt-BR-Wavenet-B',
+    languages: ['pt-BR'],
   },
   ['pt-br-wavenet-c']: {
     voice: {
       name: 'pt-BR-Wavenet-C',
     },
+    id: 'pt-BR-Wavenet-C',
+    languages: ['pt-BR'],
   },
   ['pt-br-wavenet-d']: {
     voice: {
       name: 'pt-BR-Wavenet-D',
     },
+    id: 'pt-BR-Wavenet-D',
+    languages: ['pt-BR'],
   },
   ['pt-br-wavenet-e']: {
     voice: {
       name: 'pt-BR-Wavenet-E',
     },
+    id: 'pt-BR-Wavenet-E',
+    languages: ['pt-BR'],
   },
   ['pt-pt-standard-e']: {
     voice: {
       name: 'pt-PT-Standard-E',
     },
+    id: 'pt-PT-Standard-E',
+    languages: ['pt-PT'],
   },
   ['pt-pt-standard-f']: {
     voice: {
       name: 'pt-PT-Standard-F',
     },
+    id: 'pt-PT-Standard-F',
+    languages: ['pt-PT'],
   },
   ['pt-pt-wavenet-e']: {
     voice: {
       name: 'pt-PT-Wavenet-E',
     },
+    id: 'pt-PT-Wavenet-E',
+    languages: ['pt-PT'],
   },
   ['pt-pt-wavenet-f']: {
     voice: {
       name: 'pt-PT-Wavenet-F',
     },
+    id: 'pt-PT-Wavenet-F',
+    languages: ['pt-PT'],
   },
   ['puck']: {
     voice: {
       name: 'Puck',
     },
+    id: 'Puck',
+    languages: ['en-US'],
   },
   ['pulcherrima']: {
     voice: {
       name: 'Pulcherrima',
     },
+    id: 'Pulcherrima',
+    languages: ['en-US'],
   },
   ['rasalgethi']: {
     voice: {
       name: 'Rasalgethi',
     },
+    id: 'Rasalgethi',
+    languages: ['en-US'],
+  },
+  ['ro-ro-chirp3-hd-achernar']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Achernar',
+    },
+    id: 'ro-RO-Chirp3-HD-Achernar',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-achird']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Achird',
+    },
+    id: 'ro-RO-Chirp3-HD-Achird',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-algenib']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Algenib',
+    },
+    id: 'ro-RO-Chirp3-HD-Algenib',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-algieba']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Algieba',
+    },
+    id: 'ro-RO-Chirp3-HD-Algieba',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-alnilam']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Alnilam',
+    },
+    id: 'ro-RO-Chirp3-HD-Alnilam',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-aoede']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Aoede',
+    },
+    id: 'ro-RO-Chirp3-HD-Aoede',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-autonoe']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Autonoe',
+    },
+    id: 'ro-RO-Chirp3-HD-Autonoe',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-callirrhoe']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Callirrhoe',
+    },
+    id: 'ro-RO-Chirp3-HD-Callirrhoe',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-charon']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Charon',
+    },
+    id: 'ro-RO-Chirp3-HD-Charon',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-despina']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Despina',
+    },
+    id: 'ro-RO-Chirp3-HD-Despina',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-enceladus']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Enceladus',
+    },
+    id: 'ro-RO-Chirp3-HD-Enceladus',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-erinome']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Erinome',
+    },
+    id: 'ro-RO-Chirp3-HD-Erinome',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-fenrir']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Fenrir',
+    },
+    id: 'ro-RO-Chirp3-HD-Fenrir',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-gacrux']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Gacrux',
+    },
+    id: 'ro-RO-Chirp3-HD-Gacrux',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-iapetus']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Iapetus',
+    },
+    id: 'ro-RO-Chirp3-HD-Iapetus',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-kore']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Kore',
+    },
+    id: 'ro-RO-Chirp3-HD-Kore',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-laomedeia']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Laomedeia',
+    },
+    id: 'ro-RO-Chirp3-HD-Laomedeia',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-leda']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Leda',
+    },
+    id: 'ro-RO-Chirp3-HD-Leda',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-orus']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Orus',
+    },
+    id: 'ro-RO-Chirp3-HD-Orus',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-puck']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Puck',
+    },
+    id: 'ro-RO-Chirp3-HD-Puck',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-pulcherrima']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Pulcherrima',
+    },
+    id: 'ro-RO-Chirp3-HD-Pulcherrima',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-rasalgethi']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Rasalgethi',
+    },
+    id: 'ro-RO-Chirp3-HD-Rasalgethi',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-sadachbia']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Sadachbia',
+    },
+    id: 'ro-RO-Chirp3-HD-Sadachbia',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-sadaltager']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Sadaltager',
+    },
+    id: 'ro-RO-Chirp3-HD-Sadaltager',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-schedar']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Schedar',
+    },
+    id: 'ro-RO-Chirp3-HD-Schedar',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-sulafat']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Sulafat',
+    },
+    id: 'ro-RO-Chirp3-HD-Sulafat',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-umbriel']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Umbriel',
+    },
+    id: 'ro-RO-Chirp3-HD-Umbriel',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-vindemiatrix']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Vindemiatrix',
+    },
+    id: 'ro-RO-Chirp3-HD-Vindemiatrix',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-zephyr']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Zephyr',
+    },
+    id: 'ro-RO-Chirp3-HD-Zephyr',
+    languages: ['ro-RO'],
+  },
+  ['ro-ro-chirp3-hd-zubenelgenubi']: {
+    voice: {
+      name: 'ro-RO-Chirp3-HD-Zubenelgenubi',
+    },
+    id: 'ro-RO-Chirp3-HD-Zubenelgenubi',
+    languages: ['ro-RO'],
   },
   ['ro-ro-standard-b']: {
     voice: {
       name: 'ro-RO-Standard-B',
     },
+    id: 'ro-RO-Standard-B',
+    languages: ['ro-RO'],
   },
   ['ro-ro-wavenet-b']: {
     voice: {
       name: 'ro-RO-Wavenet-B',
     },
+    id: 'ro-RO-Wavenet-B',
+    languages: ['ro-RO'],
   },
   ['ru-ru-chirp3-hd-aoede']: {
     voice: {
       name: 'ru-RU-Chirp3-HD-Aoede',
     },
+    id: 'ru-RU-Chirp3-HD-Aoede',
+    languages: ['ru-RU'],
   },
   ['ru-ru-chirp3-hd-charon']: {
     voice: {
       name: 'ru-RU-Chirp3-HD-Charon',
     },
+    id: 'ru-RU-Chirp3-HD-Charon',
+    languages: ['ru-RU'],
   },
   ['ru-ru-chirp3-hd-fenrir']: {
     voice: {
       name: 'ru-RU-Chirp3-HD-Fenrir',
     },
+    id: 'ru-RU-Chirp3-HD-Fenrir',
+    languages: ['ru-RU'],
   },
   ['ru-ru-chirp3-hd-kore']: {
     voice: {
       name: 'ru-RU-Chirp3-HD-Kore',
     },
+    id: 'ru-RU-Chirp3-HD-Kore',
+    languages: ['ru-RU'],
   },
   ['ru-ru-chirp3-hd-leda']: {
     voice: {
       name: 'ru-RU-Chirp3-HD-Leda',
     },
+    id: 'ru-RU-Chirp3-HD-Leda',
+    languages: ['ru-RU'],
   },
   ['ru-ru-chirp3-hd-orus']: {
     voice: {
       name: 'ru-RU-Chirp3-HD-Orus',
     },
+    id: 'ru-RU-Chirp3-HD-Orus',
+    languages: ['ru-RU'],
   },
   ['ru-ru-chirp3-hd-puck']: {
     voice: {
       name: 'ru-RU-Chirp3-HD-Puck',
     },
+    id: 'ru-RU-Chirp3-HD-Puck',
+    languages: ['ru-RU'],
   },
   ['ru-ru-chirp3-hd-zephyr']: {
     voice: {
       name: 'ru-RU-Chirp3-HD-Zephyr',
     },
+    id: 'ru-RU-Chirp3-HD-Zephyr',
+    languages: ['ru-RU'],
   },
   ['ru-ru-standard-a']: {
     voice: {
       name: 'ru-RU-Standard-A',
     },
+    id: 'ru-RU-Standard-A',
+    languages: ['ru-RU'],
   },
   ['ru-ru-standard-b']: {
     voice: {
       name: 'ru-RU-Standard-B',
     },
+    id: 'ru-RU-Standard-B',
+    languages: ['ru-RU'],
   },
   ['ru-ru-standard-c']: {
     voice: {
       name: 'ru-RU-Standard-C',
     },
+    id: 'ru-RU-Standard-C',
+    languages: ['ru-RU'],
   },
   ['ru-ru-standard-d']: {
     voice: {
       name: 'ru-RU-Standard-D',
     },
+    id: 'ru-RU-Standard-D',
+    languages: ['ru-RU'],
   },
   ['ru-ru-standard-e']: {
     voice: {
       name: 'ru-RU-Standard-E',
     },
+    id: 'ru-RU-Standard-E',
+    languages: ['ru-RU'],
   },
   ['ru-ru-wavenet-a']: {
     voice: {
       name: 'ru-RU-Wavenet-A',
     },
+    id: 'ru-RU-Wavenet-A',
+    languages: ['ru-RU'],
   },
   ['ru-ru-wavenet-b']: {
     voice: {
       name: 'ru-RU-Wavenet-B',
     },
+    id: 'ru-RU-Wavenet-B',
+    languages: ['ru-RU'],
   },
   ['ru-ru-wavenet-c']: {
     voice: {
       name: 'ru-RU-Wavenet-C',
     },
+    id: 'ru-RU-Wavenet-C',
+    languages: ['ru-RU'],
   },
   ['ru-ru-wavenet-d']: {
     voice: {
       name: 'ru-RU-Wavenet-D',
     },
+    id: 'ru-RU-Wavenet-D',
+    languages: ['ru-RU'],
   },
   ['ru-ru-wavenet-e']: {
     voice: {
       name: 'ru-RU-Wavenet-E',
     },
+    id: 'ru-RU-Wavenet-E',
+    languages: ['ru-RU'],
   },
   ['sadachbia']: {
     voice: {
       name: 'Sadachbia',
     },
+    id: 'Sadachbia',
+    languages: ['en-US'],
   },
   ['sadaltager']: {
     voice: {
       name: 'Sadaltager',
     },
+    id: 'Sadaltager',
+    languages: ['en-US'],
   },
   ['schedar']: {
     voice: {
       name: 'Schedar',
     },
+    id: 'Schedar',
+    languages: ['en-US'],
+  },
+  ['sk-sk-chirp3-hd-achernar']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Achernar',
+    },
+    id: 'sk-SK-Chirp3-HD-Achernar',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-achird']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Achird',
+    },
+    id: 'sk-SK-Chirp3-HD-Achird',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-algenib']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Algenib',
+    },
+    id: 'sk-SK-Chirp3-HD-Algenib',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-algieba']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Algieba',
+    },
+    id: 'sk-SK-Chirp3-HD-Algieba',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-alnilam']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Alnilam',
+    },
+    id: 'sk-SK-Chirp3-HD-Alnilam',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-aoede']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Aoede',
+    },
+    id: 'sk-SK-Chirp3-HD-Aoede',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-autonoe']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Autonoe',
+    },
+    id: 'sk-SK-Chirp3-HD-Autonoe',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-callirrhoe']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Callirrhoe',
+    },
+    id: 'sk-SK-Chirp3-HD-Callirrhoe',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-charon']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Charon',
+    },
+    id: 'sk-SK-Chirp3-HD-Charon',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-despina']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Despina',
+    },
+    id: 'sk-SK-Chirp3-HD-Despina',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-enceladus']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Enceladus',
+    },
+    id: 'sk-SK-Chirp3-HD-Enceladus',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-erinome']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Erinome',
+    },
+    id: 'sk-SK-Chirp3-HD-Erinome',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-fenrir']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Fenrir',
+    },
+    id: 'sk-SK-Chirp3-HD-Fenrir',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-gacrux']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Gacrux',
+    },
+    id: 'sk-SK-Chirp3-HD-Gacrux',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-iapetus']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Iapetus',
+    },
+    id: 'sk-SK-Chirp3-HD-Iapetus',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-kore']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Kore',
+    },
+    id: 'sk-SK-Chirp3-HD-Kore',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-laomedeia']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Laomedeia',
+    },
+    id: 'sk-SK-Chirp3-HD-Laomedeia',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-leda']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Leda',
+    },
+    id: 'sk-SK-Chirp3-HD-Leda',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-orus']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Orus',
+    },
+    id: 'sk-SK-Chirp3-HD-Orus',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-puck']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Puck',
+    },
+    id: 'sk-SK-Chirp3-HD-Puck',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-pulcherrima']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Pulcherrima',
+    },
+    id: 'sk-SK-Chirp3-HD-Pulcherrima',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-rasalgethi']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Rasalgethi',
+    },
+    id: 'sk-SK-Chirp3-HD-Rasalgethi',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-sadachbia']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Sadachbia',
+    },
+    id: 'sk-SK-Chirp3-HD-Sadachbia',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-sadaltager']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Sadaltager',
+    },
+    id: 'sk-SK-Chirp3-HD-Sadaltager',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-schedar']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Schedar',
+    },
+    id: 'sk-SK-Chirp3-HD-Schedar',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-sulafat']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Sulafat',
+    },
+    id: 'sk-SK-Chirp3-HD-Sulafat',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-umbriel']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Umbriel',
+    },
+    id: 'sk-SK-Chirp3-HD-Umbriel',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-vindemiatrix']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Vindemiatrix',
+    },
+    id: 'sk-SK-Chirp3-HD-Vindemiatrix',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-zephyr']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Zephyr',
+    },
+    id: 'sk-SK-Chirp3-HD-Zephyr',
+    languages: ['sk-SK'],
+  },
+  ['sk-sk-chirp3-hd-zubenelgenubi']: {
+    voice: {
+      name: 'sk-SK-Chirp3-HD-Zubenelgenubi',
+    },
+    id: 'sk-SK-Chirp3-HD-Zubenelgenubi',
+    languages: ['sk-SK'],
   },
   ['sk-sk-standard-b']: {
     voice: {
       name: 'sk-SK-Standard-B',
     },
+    id: 'sk-SK-Standard-B',
+    languages: ['sk-SK'],
   },
   ['sk-sk-wavenet-b']: {
     voice: {
       name: 'sk-SK-Wavenet-B',
     },
+    id: 'sk-SK-Wavenet-B',
+    languages: ['sk-SK'],
+  },
+  ['sr-rs-chirp3-hd-achernar']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Achernar',
+    },
+    id: 'sr-RS-Chirp3-HD-Achernar',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-achird']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Achird',
+    },
+    id: 'sr-RS-Chirp3-HD-Achird',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-algenib']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Algenib',
+    },
+    id: 'sr-RS-Chirp3-HD-Algenib',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-algieba']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Algieba',
+    },
+    id: 'sr-RS-Chirp3-HD-Algieba',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-alnilam']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Alnilam',
+    },
+    id: 'sr-RS-Chirp3-HD-Alnilam',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-aoede']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Aoede',
+    },
+    id: 'sr-RS-Chirp3-HD-Aoede',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-autonoe']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Autonoe',
+    },
+    id: 'sr-RS-Chirp3-HD-Autonoe',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-callirrhoe']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Callirrhoe',
+    },
+    id: 'sr-RS-Chirp3-HD-Callirrhoe',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-charon']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Charon',
+    },
+    id: 'sr-RS-Chirp3-HD-Charon',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-despina']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Despina',
+    },
+    id: 'sr-RS-Chirp3-HD-Despina',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-enceladus']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Enceladus',
+    },
+    id: 'sr-RS-Chirp3-HD-Enceladus',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-erinome']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Erinome',
+    },
+    id: 'sr-RS-Chirp3-HD-Erinome',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-fenrir']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Fenrir',
+    },
+    id: 'sr-RS-Chirp3-HD-Fenrir',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-gacrux']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Gacrux',
+    },
+    id: 'sr-RS-Chirp3-HD-Gacrux',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-iapetus']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Iapetus',
+    },
+    id: 'sr-RS-Chirp3-HD-Iapetus',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-kore']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Kore',
+    },
+    id: 'sr-RS-Chirp3-HD-Kore',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-laomedeia']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Laomedeia',
+    },
+    id: 'sr-RS-Chirp3-HD-Laomedeia',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-leda']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Leda',
+    },
+    id: 'sr-RS-Chirp3-HD-Leda',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-orus']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Orus',
+    },
+    id: 'sr-RS-Chirp3-HD-Orus',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-puck']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Puck',
+    },
+    id: 'sr-RS-Chirp3-HD-Puck',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-pulcherrima']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Pulcherrima',
+    },
+    id: 'sr-RS-Chirp3-HD-Pulcherrima',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-rasalgethi']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Rasalgethi',
+    },
+    id: 'sr-RS-Chirp3-HD-Rasalgethi',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-sadachbia']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Sadachbia',
+    },
+    id: 'sr-RS-Chirp3-HD-Sadachbia',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-sadaltager']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Sadaltager',
+    },
+    id: 'sr-RS-Chirp3-HD-Sadaltager',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-schedar']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Schedar',
+    },
+    id: 'sr-RS-Chirp3-HD-Schedar',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-sulafat']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Sulafat',
+    },
+    id: 'sr-RS-Chirp3-HD-Sulafat',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-umbriel']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Umbriel',
+    },
+    id: 'sr-RS-Chirp3-HD-Umbriel',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-vindemiatrix']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Vindemiatrix',
+    },
+    id: 'sr-RS-Chirp3-HD-Vindemiatrix',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-zephyr']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Zephyr',
+    },
+    id: 'sr-RS-Chirp3-HD-Zephyr',
+    languages: ['sr-RS'],
+  },
+  ['sr-rs-chirp3-hd-zubenelgenubi']: {
+    voice: {
+      name: 'sr-RS-Chirp3-HD-Zubenelgenubi',
+    },
+    id: 'sr-RS-Chirp3-HD-Zubenelgenubi',
+    languages: ['sr-RS'],
   },
   ['sr-rs-standard-b']: {
     voice: {
       name: 'sr-RS-Standard-B',
     },
+    id: 'sr-RS-Standard-B',
+    languages: ['sr-RS'],
   },
   ['sulafat']: {
     voice: {
       name: 'Sulafat',
     },
+    id: 'Sulafat',
+    languages: ['en-US'],
   },
   ['sv-se-chirp3-hd-achernar']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Achernar',
     },
+    id: 'sv-SE-Chirp3-HD-Achernar',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-achird']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Achird',
     },
+    id: 'sv-SE-Chirp3-HD-Achird',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-algenib']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Algenib',
     },
+    id: 'sv-SE-Chirp3-HD-Algenib',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-algieba']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Algieba',
     },
+    id: 'sv-SE-Chirp3-HD-Algieba',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-alnilam']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Alnilam',
     },
+    id: 'sv-SE-Chirp3-HD-Alnilam',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-aoede']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Aoede',
     },
+    id: 'sv-SE-Chirp3-HD-Aoede',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-autonoe']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Autonoe',
     },
+    id: 'sv-SE-Chirp3-HD-Autonoe',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Callirrhoe',
     },
+    id: 'sv-SE-Chirp3-HD-Callirrhoe',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-charon']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Charon',
     },
+    id: 'sv-SE-Chirp3-HD-Charon',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-despina']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Despina',
     },
+    id: 'sv-SE-Chirp3-HD-Despina',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-enceladus']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Enceladus',
     },
+    id: 'sv-SE-Chirp3-HD-Enceladus',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-erinome']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Erinome',
     },
+    id: 'sv-SE-Chirp3-HD-Erinome',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-fenrir']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Fenrir',
     },
+    id: 'sv-SE-Chirp3-HD-Fenrir',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-gacrux']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Gacrux',
     },
+    id: 'sv-SE-Chirp3-HD-Gacrux',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-iapetus']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Iapetus',
     },
+    id: 'sv-SE-Chirp3-HD-Iapetus',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-kore']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Kore',
     },
+    id: 'sv-SE-Chirp3-HD-Kore',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-laomedeia']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Laomedeia',
     },
+    id: 'sv-SE-Chirp3-HD-Laomedeia',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-leda']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Leda',
     },
+    id: 'sv-SE-Chirp3-HD-Leda',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-orus']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Orus',
     },
+    id: 'sv-SE-Chirp3-HD-Orus',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-puck']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Puck',
     },
+    id: 'sv-SE-Chirp3-HD-Puck',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Pulcherrima',
     },
+    id: 'sv-SE-Chirp3-HD-Pulcherrima',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Rasalgethi',
     },
+    id: 'sv-SE-Chirp3-HD-Rasalgethi',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-sadachbia']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Sadachbia',
     },
+    id: 'sv-SE-Chirp3-HD-Sadachbia',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-sadaltager']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Sadaltager',
     },
+    id: 'sv-SE-Chirp3-HD-Sadaltager',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-schedar']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Schedar',
     },
+    id: 'sv-SE-Chirp3-HD-Schedar',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-sulafat']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Sulafat',
     },
+    id: 'sv-SE-Chirp3-HD-Sulafat',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-umbriel']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Umbriel',
     },
+    id: 'sv-SE-Chirp3-HD-Umbriel',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Vindemiatrix',
     },
+    id: 'sv-SE-Chirp3-HD-Vindemiatrix',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-zephyr']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Zephyr',
     },
+    id: 'sv-SE-Chirp3-HD-Zephyr',
+    languages: ['sv-SE'],
   },
   ['sv-se-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'sv-SE-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'sv-SE-Chirp3-HD-Zubenelgenubi',
+    languages: ['sv-SE'],
   },
   ['sv-se-standard-a']: {
     voice: {
       name: 'sv-SE-Standard-A',
     },
+    id: 'sv-SE-Standard-A',
+    languages: ['sv-SE'],
   },
   ['sv-se-standard-b']: {
     voice: {
       name: 'sv-SE-Standard-B',
     },
+    id: 'sv-SE-Standard-B',
+    languages: ['sv-SE'],
   },
   ['sv-se-standard-c']: {
     voice: {
       name: 'sv-SE-Standard-C',
     },
+    id: 'sv-SE-Standard-C',
+    languages: ['sv-SE'],
   },
   ['sv-se-standard-d']: {
     voice: {
       name: 'sv-SE-Standard-D',
     },
+    id: 'sv-SE-Standard-D',
+    languages: ['sv-SE'],
   },
   ['sv-se-standard-e']: {
     voice: {
       name: 'sv-SE-Standard-E',
     },
+    id: 'sv-SE-Standard-E',
+    languages: ['sv-SE'],
   },
   ['sv-se-standard-f']: {
     voice: {
       name: 'sv-SE-Standard-F',
     },
+    id: 'sv-SE-Standard-F',
+    languages: ['sv-SE'],
   },
   ['sv-se-standard-g']: {
     voice: {
       name: 'sv-SE-Standard-G',
     },
+    id: 'sv-SE-Standard-G',
+    languages: ['sv-SE'],
   },
   ['sv-se-wavenet-a']: {
     voice: {
       name: 'sv-SE-Wavenet-A',
     },
+    id: 'sv-SE-Wavenet-A',
+    languages: ['sv-SE'],
   },
   ['sv-se-wavenet-b']: {
     voice: {
       name: 'sv-SE-Wavenet-B',
     },
+    id: 'sv-SE-Wavenet-B',
+    languages: ['sv-SE'],
   },
   ['sv-se-wavenet-c']: {
     voice: {
       name: 'sv-SE-Wavenet-C',
     },
+    id: 'sv-SE-Wavenet-C',
+    languages: ['sv-SE'],
   },
   ['sv-se-wavenet-d']: {
     voice: {
       name: 'sv-SE-Wavenet-D',
     },
+    id: 'sv-SE-Wavenet-D',
+    languages: ['sv-SE'],
   },
   ['sv-se-wavenet-e']: {
     voice: {
       name: 'sv-SE-Wavenet-E',
     },
+    id: 'sv-SE-Wavenet-E',
+    languages: ['sv-SE'],
   },
   ['sv-se-wavenet-f']: {
     voice: {
       name: 'sv-SE-Wavenet-F',
     },
+    id: 'sv-SE-Wavenet-F',
+    languages: ['sv-SE'],
   },
   ['sv-se-wavenet-g']: {
     voice: {
       name: 'sv-SE-Wavenet-G',
     },
+    id: 'sv-SE-Wavenet-G',
+    languages: ['sv-SE'],
   },
   ['sw-ke-chirp3-hd-achernar']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Achernar',
     },
+    id: 'sw-KE-Chirp3-HD-Achernar',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-achird']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Achird',
     },
+    id: 'sw-KE-Chirp3-HD-Achird',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-algenib']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Algenib',
     },
+    id: 'sw-KE-Chirp3-HD-Algenib',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-algieba']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Algieba',
     },
+    id: 'sw-KE-Chirp3-HD-Algieba',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-alnilam']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Alnilam',
     },
+    id: 'sw-KE-Chirp3-HD-Alnilam',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-aoede']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Aoede',
     },
+    id: 'sw-KE-Chirp3-HD-Aoede',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-autonoe']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Autonoe',
     },
+    id: 'sw-KE-Chirp3-HD-Autonoe',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Callirrhoe',
     },
+    id: 'sw-KE-Chirp3-HD-Callirrhoe',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-charon']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Charon',
     },
+    id: 'sw-KE-Chirp3-HD-Charon',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-despina']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Despina',
     },
+    id: 'sw-KE-Chirp3-HD-Despina',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-enceladus']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Enceladus',
     },
+    id: 'sw-KE-Chirp3-HD-Enceladus',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-erinome']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Erinome',
     },
+    id: 'sw-KE-Chirp3-HD-Erinome',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-fenrir']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Fenrir',
     },
+    id: 'sw-KE-Chirp3-HD-Fenrir',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-gacrux']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Gacrux',
     },
+    id: 'sw-KE-Chirp3-HD-Gacrux',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-iapetus']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Iapetus',
     },
+    id: 'sw-KE-Chirp3-HD-Iapetus',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-kore']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Kore',
     },
+    id: 'sw-KE-Chirp3-HD-Kore',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-laomedeia']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Laomedeia',
     },
+    id: 'sw-KE-Chirp3-HD-Laomedeia',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-leda']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Leda',
     },
+    id: 'sw-KE-Chirp3-HD-Leda',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-orus']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Orus',
     },
+    id: 'sw-KE-Chirp3-HD-Orus',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-puck']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Puck',
     },
+    id: 'sw-KE-Chirp3-HD-Puck',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Pulcherrima',
     },
+    id: 'sw-KE-Chirp3-HD-Pulcherrima',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Rasalgethi',
     },
+    id: 'sw-KE-Chirp3-HD-Rasalgethi',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-sadachbia']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Sadachbia',
     },
+    id: 'sw-KE-Chirp3-HD-Sadachbia',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-sadaltager']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Sadaltager',
     },
+    id: 'sw-KE-Chirp3-HD-Sadaltager',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-schedar']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Schedar',
     },
+    id: 'sw-KE-Chirp3-HD-Schedar',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-sulafat']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Sulafat',
     },
+    id: 'sw-KE-Chirp3-HD-Sulafat',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-umbriel']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Umbriel',
     },
+    id: 'sw-KE-Chirp3-HD-Umbriel',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Vindemiatrix',
     },
+    id: 'sw-KE-Chirp3-HD-Vindemiatrix',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-zephyr']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Zephyr',
     },
+    id: 'sw-KE-Chirp3-HD-Zephyr',
+    languages: ['sw-KE'],
   },
   ['sw-ke-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'sw-KE-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'sw-KE-Chirp3-HD-Zubenelgenubi',
+    languages: ['sw-KE'],
   },
   ['ta-in-chirp3-hd-achernar']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Achernar',
     },
+    id: 'ta-IN-Chirp3-HD-Achernar',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-achird']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Achird',
     },
+    id: 'ta-IN-Chirp3-HD-Achird',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-algenib']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Algenib',
     },
+    id: 'ta-IN-Chirp3-HD-Algenib',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-algieba']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Algieba',
     },
+    id: 'ta-IN-Chirp3-HD-Algieba',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-alnilam']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Alnilam',
     },
+    id: 'ta-IN-Chirp3-HD-Alnilam',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-aoede']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Aoede',
     },
+    id: 'ta-IN-Chirp3-HD-Aoede',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-autonoe']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Autonoe',
     },
+    id: 'ta-IN-Chirp3-HD-Autonoe',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Callirrhoe',
     },
+    id: 'ta-IN-Chirp3-HD-Callirrhoe',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-charon']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Charon',
     },
+    id: 'ta-IN-Chirp3-HD-Charon',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-despina']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Despina',
     },
+    id: 'ta-IN-Chirp3-HD-Despina',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-enceladus']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Enceladus',
     },
+    id: 'ta-IN-Chirp3-HD-Enceladus',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-erinome']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Erinome',
     },
+    id: 'ta-IN-Chirp3-HD-Erinome',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-fenrir']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Fenrir',
     },
+    id: 'ta-IN-Chirp3-HD-Fenrir',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-gacrux']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Gacrux',
     },
+    id: 'ta-IN-Chirp3-HD-Gacrux',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-iapetus']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Iapetus',
     },
+    id: 'ta-IN-Chirp3-HD-Iapetus',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-kore']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Kore',
     },
+    id: 'ta-IN-Chirp3-HD-Kore',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-laomedeia']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Laomedeia',
     },
+    id: 'ta-IN-Chirp3-HD-Laomedeia',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-leda']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Leda',
     },
+    id: 'ta-IN-Chirp3-HD-Leda',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-orus']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Orus',
     },
+    id: 'ta-IN-Chirp3-HD-Orus',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-puck']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Puck',
     },
+    id: 'ta-IN-Chirp3-HD-Puck',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Pulcherrima',
     },
+    id: 'ta-IN-Chirp3-HD-Pulcherrima',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Rasalgethi',
     },
+    id: 'ta-IN-Chirp3-HD-Rasalgethi',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-sadachbia']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Sadachbia',
     },
+    id: 'ta-IN-Chirp3-HD-Sadachbia',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-sadaltager']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Sadaltager',
     },
+    id: 'ta-IN-Chirp3-HD-Sadaltager',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-schedar']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Schedar',
     },
+    id: 'ta-IN-Chirp3-HD-Schedar',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-sulafat']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Sulafat',
     },
+    id: 'ta-IN-Chirp3-HD-Sulafat',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-umbriel']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Umbriel',
     },
+    id: 'ta-IN-Chirp3-HD-Umbriel',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Vindemiatrix',
     },
+    id: 'ta-IN-Chirp3-HD-Vindemiatrix',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-zephyr']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Zephyr',
     },
+    id: 'ta-IN-Chirp3-HD-Zephyr',
+    languages: ['ta-IN'],
   },
   ['ta-in-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'ta-IN-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'ta-IN-Chirp3-HD-Zubenelgenubi',
+    languages: ['ta-IN'],
   },
   ['ta-in-standard-a']: {
     voice: {
       name: 'ta-IN-Standard-A',
     },
+    id: 'ta-IN-Standard-A',
+    languages: ['ta-IN'],
   },
   ['ta-in-standard-b']: {
     voice: {
       name: 'ta-IN-Standard-B',
     },
+    id: 'ta-IN-Standard-B',
+    languages: ['ta-IN'],
   },
   ['ta-in-standard-c']: {
     voice: {
       name: 'ta-IN-Standard-C',
     },
+    id: 'ta-IN-Standard-C',
+    languages: ['ta-IN'],
   },
   ['ta-in-standard-d']: {
     voice: {
       name: 'ta-IN-Standard-D',
     },
+    id: 'ta-IN-Standard-D',
+    languages: ['ta-IN'],
   },
   ['ta-in-wavenet-a']: {
     voice: {
       name: 'ta-IN-Wavenet-A',
     },
+    id: 'ta-IN-Wavenet-A',
+    languages: ['ta-IN'],
   },
   ['ta-in-wavenet-b']: {
     voice: {
       name: 'ta-IN-Wavenet-B',
     },
+    id: 'ta-IN-Wavenet-B',
+    languages: ['ta-IN'],
   },
   ['ta-in-wavenet-c']: {
     voice: {
       name: 'ta-IN-Wavenet-C',
     },
+    id: 'ta-IN-Wavenet-C',
+    languages: ['ta-IN'],
   },
   ['ta-in-wavenet-d']: {
     voice: {
       name: 'ta-IN-Wavenet-D',
     },
+    id: 'ta-IN-Wavenet-D',
+    languages: ['ta-IN'],
   },
   ['te-in-chirp3-hd-achernar']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Achernar',
     },
+    id: 'te-IN-Chirp3-HD-Achernar',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-achird']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Achird',
     },
+    id: 'te-IN-Chirp3-HD-Achird',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-algenib']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Algenib',
     },
+    id: 'te-IN-Chirp3-HD-Algenib',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-algieba']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Algieba',
     },
+    id: 'te-IN-Chirp3-HD-Algieba',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-alnilam']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Alnilam',
     },
+    id: 'te-IN-Chirp3-HD-Alnilam',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-aoede']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Aoede',
     },
+    id: 'te-IN-Chirp3-HD-Aoede',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-autonoe']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Autonoe',
     },
+    id: 'te-IN-Chirp3-HD-Autonoe',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Callirrhoe',
     },
+    id: 'te-IN-Chirp3-HD-Callirrhoe',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-charon']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Charon',
     },
+    id: 'te-IN-Chirp3-HD-Charon',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-despina']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Despina',
     },
+    id: 'te-IN-Chirp3-HD-Despina',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-enceladus']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Enceladus',
     },
+    id: 'te-IN-Chirp3-HD-Enceladus',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-erinome']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Erinome',
     },
+    id: 'te-IN-Chirp3-HD-Erinome',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-fenrir']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Fenrir',
     },
+    id: 'te-IN-Chirp3-HD-Fenrir',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-gacrux']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Gacrux',
     },
+    id: 'te-IN-Chirp3-HD-Gacrux',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-iapetus']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Iapetus',
     },
+    id: 'te-IN-Chirp3-HD-Iapetus',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-kore']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Kore',
     },
+    id: 'te-IN-Chirp3-HD-Kore',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-laomedeia']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Laomedeia',
     },
+    id: 'te-IN-Chirp3-HD-Laomedeia',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-leda']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Leda',
     },
+    id: 'te-IN-Chirp3-HD-Leda',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-orus']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Orus',
     },
+    id: 'te-IN-Chirp3-HD-Orus',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-puck']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Puck',
     },
+    id: 'te-IN-Chirp3-HD-Puck',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Pulcherrima',
     },
+    id: 'te-IN-Chirp3-HD-Pulcherrima',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Rasalgethi',
     },
+    id: 'te-IN-Chirp3-HD-Rasalgethi',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-sadachbia']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Sadachbia',
     },
+    id: 'te-IN-Chirp3-HD-Sadachbia',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-sadaltager']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Sadaltager',
     },
+    id: 'te-IN-Chirp3-HD-Sadaltager',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-schedar']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Schedar',
     },
+    id: 'te-IN-Chirp3-HD-Schedar',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-sulafat']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Sulafat',
     },
+    id: 'te-IN-Chirp3-HD-Sulafat',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-umbriel']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Umbriel',
     },
+    id: 'te-IN-Chirp3-HD-Umbriel',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Vindemiatrix',
     },
+    id: 'te-IN-Chirp3-HD-Vindemiatrix',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-zephyr']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Zephyr',
     },
+    id: 'te-IN-Chirp3-HD-Zephyr',
+    languages: ['te-IN'],
   },
   ['te-in-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'te-IN-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'te-IN-Chirp3-HD-Zubenelgenubi',
+    languages: ['te-IN'],
   },
   ['te-in-standard-a']: {
     voice: {
       name: 'te-IN-Standard-A',
     },
+    id: 'te-IN-Standard-A',
+    languages: ['te-IN'],
   },
   ['te-in-standard-b']: {
     voice: {
       name: 'te-IN-Standard-B',
     },
+    id: 'te-IN-Standard-B',
+    languages: ['te-IN'],
   },
   ['te-in-standard-c']: {
     voice: {
       name: 'te-IN-Standard-C',
     },
+    id: 'te-IN-Standard-C',
+    languages: ['te-IN'],
   },
   ['te-in-standard-d']: {
     voice: {
       name: 'te-IN-Standard-D',
     },
+    id: 'te-IN-Standard-D',
+    languages: ['te-IN'],
   },
   ['th-th-chirp3-hd-achernar']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Achernar',
     },
+    id: 'th-TH-Chirp3-HD-Achernar',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-achird']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Achird',
     },
+    id: 'th-TH-Chirp3-HD-Achird',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-algenib']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Algenib',
     },
+    id: 'th-TH-Chirp3-HD-Algenib',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-algieba']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Algieba',
     },
+    id: 'th-TH-Chirp3-HD-Algieba',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-alnilam']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Alnilam',
     },
+    id: 'th-TH-Chirp3-HD-Alnilam',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-aoede']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Aoede',
     },
+    id: 'th-TH-Chirp3-HD-Aoede',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-autonoe']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Autonoe',
     },
+    id: 'th-TH-Chirp3-HD-Autonoe',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Callirrhoe',
     },
+    id: 'th-TH-Chirp3-HD-Callirrhoe',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-charon']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Charon',
     },
+    id: 'th-TH-Chirp3-HD-Charon',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-despina']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Despina',
     },
+    id: 'th-TH-Chirp3-HD-Despina',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-enceladus']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Enceladus',
     },
+    id: 'th-TH-Chirp3-HD-Enceladus',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-erinome']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Erinome',
     },
+    id: 'th-TH-Chirp3-HD-Erinome',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-fenrir']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Fenrir',
     },
+    id: 'th-TH-Chirp3-HD-Fenrir',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-gacrux']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Gacrux',
     },
+    id: 'th-TH-Chirp3-HD-Gacrux',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-iapetus']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Iapetus',
     },
+    id: 'th-TH-Chirp3-HD-Iapetus',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-kore']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Kore',
     },
+    id: 'th-TH-Chirp3-HD-Kore',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-laomedeia']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Laomedeia',
     },
+    id: 'th-TH-Chirp3-HD-Laomedeia',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-leda']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Leda',
     },
+    id: 'th-TH-Chirp3-HD-Leda',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-orus']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Orus',
     },
+    id: 'th-TH-Chirp3-HD-Orus',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-puck']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Puck',
     },
+    id: 'th-TH-Chirp3-HD-Puck',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Pulcherrima',
     },
+    id: 'th-TH-Chirp3-HD-Pulcherrima',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Rasalgethi',
     },
+    id: 'th-TH-Chirp3-HD-Rasalgethi',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-sadachbia']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Sadachbia',
     },
+    id: 'th-TH-Chirp3-HD-Sadachbia',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-sadaltager']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Sadaltager',
     },
+    id: 'th-TH-Chirp3-HD-Sadaltager',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-schedar']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Schedar',
     },
+    id: 'th-TH-Chirp3-HD-Schedar',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-sulafat']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Sulafat',
     },
+    id: 'th-TH-Chirp3-HD-Sulafat',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-umbriel']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Umbriel',
     },
+    id: 'th-TH-Chirp3-HD-Umbriel',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Vindemiatrix',
     },
+    id: 'th-TH-Chirp3-HD-Vindemiatrix',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-zephyr']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Zephyr',
     },
+    id: 'th-TH-Chirp3-HD-Zephyr',
+    languages: ['th-TH'],
   },
   ['th-th-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'th-TH-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'th-TH-Chirp3-HD-Zubenelgenubi',
+    languages: ['th-TH'],
   },
   ['th-th-neural2-c']: {
     voice: {
       name: 'th-TH-Neural2-C',
     },
+    id: 'th-TH-Neural2-C',
+    languages: ['th-TH'],
   },
   ['th-th-standard-a']: {
     voice: {
       name: 'th-TH-Standard-A',
     },
+    id: 'th-TH-Standard-A',
+    languages: ['th-TH'],
   },
   ['tr-tr-chirp3-hd-achernar']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Achernar',
     },
+    id: 'tr-TR-Chirp3-HD-Achernar',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-achird']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Achird',
     },
+    id: 'tr-TR-Chirp3-HD-Achird',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-algenib']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Algenib',
     },
+    id: 'tr-TR-Chirp3-HD-Algenib',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-algieba']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Algieba',
     },
+    id: 'tr-TR-Chirp3-HD-Algieba',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-alnilam']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Alnilam',
     },
+    id: 'tr-TR-Chirp3-HD-Alnilam',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-aoede']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Aoede',
     },
+    id: 'tr-TR-Chirp3-HD-Aoede',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-autonoe']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Autonoe',
     },
+    id: 'tr-TR-Chirp3-HD-Autonoe',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Callirrhoe',
     },
+    id: 'tr-TR-Chirp3-HD-Callirrhoe',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-charon']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Charon',
     },
+    id: 'tr-TR-Chirp3-HD-Charon',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-despina']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Despina',
     },
+    id: 'tr-TR-Chirp3-HD-Despina',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-enceladus']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Enceladus',
     },
+    id: 'tr-TR-Chirp3-HD-Enceladus',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-erinome']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Erinome',
     },
+    id: 'tr-TR-Chirp3-HD-Erinome',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-fenrir']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Fenrir',
     },
+    id: 'tr-TR-Chirp3-HD-Fenrir',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-gacrux']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Gacrux',
     },
+    id: 'tr-TR-Chirp3-HD-Gacrux',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-iapetus']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Iapetus',
     },
+    id: 'tr-TR-Chirp3-HD-Iapetus',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-kore']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Kore',
     },
+    id: 'tr-TR-Chirp3-HD-Kore',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-laomedeia']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Laomedeia',
     },
+    id: 'tr-TR-Chirp3-HD-Laomedeia',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-leda']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Leda',
     },
+    id: 'tr-TR-Chirp3-HD-Leda',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-orus']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Orus',
     },
+    id: 'tr-TR-Chirp3-HD-Orus',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-puck']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Puck',
     },
+    id: 'tr-TR-Chirp3-HD-Puck',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Pulcherrima',
     },
+    id: 'tr-TR-Chirp3-HD-Pulcherrima',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Rasalgethi',
     },
+    id: 'tr-TR-Chirp3-HD-Rasalgethi',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-sadachbia']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Sadachbia',
     },
+    id: 'tr-TR-Chirp3-HD-Sadachbia',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-sadaltager']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Sadaltager',
     },
+    id: 'tr-TR-Chirp3-HD-Sadaltager',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-schedar']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Schedar',
     },
+    id: 'tr-TR-Chirp3-HD-Schedar',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-sulafat']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Sulafat',
     },
+    id: 'tr-TR-Chirp3-HD-Sulafat',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-umbriel']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Umbriel',
     },
+    id: 'tr-TR-Chirp3-HD-Umbriel',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Vindemiatrix',
     },
+    id: 'tr-TR-Chirp3-HD-Vindemiatrix',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-zephyr']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Zephyr',
     },
+    id: 'tr-TR-Chirp3-HD-Zephyr',
+    languages: ['tr-TR'],
   },
   ['tr-tr-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'tr-TR-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'tr-TR-Chirp3-HD-Zubenelgenubi',
+    languages: ['tr-TR'],
   },
   ['tr-tr-standard-a']: {
     voice: {
       name: 'tr-TR-Standard-A',
     },
+    id: 'tr-TR-Standard-A',
+    languages: ['tr-TR'],
   },
   ['tr-tr-standard-b']: {
     voice: {
       name: 'tr-TR-Standard-B',
     },
+    id: 'tr-TR-Standard-B',
+    languages: ['tr-TR'],
   },
   ['tr-tr-standard-c']: {
     voice: {
       name: 'tr-TR-Standard-C',
     },
+    id: 'tr-TR-Standard-C',
+    languages: ['tr-TR'],
   },
   ['tr-tr-standard-d']: {
     voice: {
       name: 'tr-TR-Standard-D',
     },
+    id: 'tr-TR-Standard-D',
+    languages: ['tr-TR'],
   },
   ['tr-tr-standard-e']: {
     voice: {
       name: 'tr-TR-Standard-E',
     },
+    id: 'tr-TR-Standard-E',
+    languages: ['tr-TR'],
   },
   ['tr-tr-wavenet-a']: {
     voice: {
       name: 'tr-TR-Wavenet-A',
     },
+    id: 'tr-TR-Wavenet-A',
+    languages: ['tr-TR'],
   },
   ['tr-tr-wavenet-b']: {
     voice: {
       name: 'tr-TR-Wavenet-B',
     },
+    id: 'tr-TR-Wavenet-B',
+    languages: ['tr-TR'],
   },
   ['tr-tr-wavenet-c']: {
     voice: {
       name: 'tr-TR-Wavenet-C',
     },
+    id: 'tr-TR-Wavenet-C',
+    languages: ['tr-TR'],
   },
   ['tr-tr-wavenet-d']: {
     voice: {
       name: 'tr-TR-Wavenet-D',
     },
+    id: 'tr-TR-Wavenet-D',
+    languages: ['tr-TR'],
   },
   ['tr-tr-wavenet-e']: {
     voice: {
       name: 'tr-TR-Wavenet-E',
     },
+    id: 'tr-TR-Wavenet-E',
+    languages: ['tr-TR'],
   },
   ['uk-ua-chirp3-hd-achernar']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Achernar',
     },
+    id: 'uk-UA-Chirp3-HD-Achernar',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-achird']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Achird',
     },
+    id: 'uk-UA-Chirp3-HD-Achird',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-algenib']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Algenib',
     },
+    id: 'uk-UA-Chirp3-HD-Algenib',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-algieba']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Algieba',
     },
+    id: 'uk-UA-Chirp3-HD-Algieba',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-alnilam']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Alnilam',
     },
+    id: 'uk-UA-Chirp3-HD-Alnilam',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-aoede']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Aoede',
     },
+    id: 'uk-UA-Chirp3-HD-Aoede',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-autonoe']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Autonoe',
     },
+    id: 'uk-UA-Chirp3-HD-Autonoe',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Callirrhoe',
     },
+    id: 'uk-UA-Chirp3-HD-Callirrhoe',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-charon']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Charon',
     },
+    id: 'uk-UA-Chirp3-HD-Charon',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-despina']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Despina',
     },
+    id: 'uk-UA-Chirp3-HD-Despina',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-enceladus']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Enceladus',
     },
+    id: 'uk-UA-Chirp3-HD-Enceladus',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-erinome']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Erinome',
     },
+    id: 'uk-UA-Chirp3-HD-Erinome',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-fenrir']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Fenrir',
     },
+    id: 'uk-UA-Chirp3-HD-Fenrir',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-gacrux']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Gacrux',
     },
+    id: 'uk-UA-Chirp3-HD-Gacrux',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-iapetus']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Iapetus',
     },
+    id: 'uk-UA-Chirp3-HD-Iapetus',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-kore']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Kore',
     },
+    id: 'uk-UA-Chirp3-HD-Kore',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-laomedeia']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Laomedeia',
     },
+    id: 'uk-UA-Chirp3-HD-Laomedeia',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-leda']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Leda',
     },
+    id: 'uk-UA-Chirp3-HD-Leda',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-orus']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Orus',
     },
+    id: 'uk-UA-Chirp3-HD-Orus',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-puck']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Puck',
     },
+    id: 'uk-UA-Chirp3-HD-Puck',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Pulcherrima',
     },
+    id: 'uk-UA-Chirp3-HD-Pulcherrima',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Rasalgethi',
     },
+    id: 'uk-UA-Chirp3-HD-Rasalgethi',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-sadachbia']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Sadachbia',
     },
+    id: 'uk-UA-Chirp3-HD-Sadachbia',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-sadaltager']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Sadaltager',
     },
+    id: 'uk-UA-Chirp3-HD-Sadaltager',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-schedar']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Schedar',
     },
+    id: 'uk-UA-Chirp3-HD-Schedar',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-sulafat']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Sulafat',
     },
+    id: 'uk-UA-Chirp3-HD-Sulafat',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-umbriel']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Umbriel',
     },
+    id: 'uk-UA-Chirp3-HD-Umbriel',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Vindemiatrix',
     },
+    id: 'uk-UA-Chirp3-HD-Vindemiatrix',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-zephyr']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Zephyr',
     },
+    id: 'uk-UA-Chirp3-HD-Zephyr',
+    languages: ['uk-UA'],
   },
   ['uk-ua-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'uk-UA-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'uk-UA-Chirp3-HD-Zubenelgenubi',
+    languages: ['uk-UA'],
   },
   ['uk-ua-standard-b']: {
     voice: {
       name: 'uk-UA-Standard-B',
     },
+    id: 'uk-UA-Standard-B',
+    languages: ['uk-UA'],
   },
   ['uk-ua-wavenet-b']: {
     voice: {
       name: 'uk-UA-Wavenet-B',
     },
+    id: 'uk-UA-Wavenet-B',
+    languages: ['uk-UA'],
   },
   ['umbriel']: {
     voice: {
       name: 'Umbriel',
     },
+    id: 'Umbriel',
+    languages: ['en-US'],
   },
   ['ur-in-chirp3-hd-achernar']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Achernar',
     },
+    id: 'ur-IN-Chirp3-HD-Achernar',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-achird']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Achird',
     },
+    id: 'ur-IN-Chirp3-HD-Achird',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-algenib']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Algenib',
     },
+    id: 'ur-IN-Chirp3-HD-Algenib',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-algieba']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Algieba',
     },
+    id: 'ur-IN-Chirp3-HD-Algieba',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-alnilam']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Alnilam',
     },
+    id: 'ur-IN-Chirp3-HD-Alnilam',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-aoede']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Aoede',
     },
+    id: 'ur-IN-Chirp3-HD-Aoede',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-autonoe']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Autonoe',
     },
+    id: 'ur-IN-Chirp3-HD-Autonoe',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Callirrhoe',
     },
+    id: 'ur-IN-Chirp3-HD-Callirrhoe',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-charon']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Charon',
     },
+    id: 'ur-IN-Chirp3-HD-Charon',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-despina']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Despina',
     },
+    id: 'ur-IN-Chirp3-HD-Despina',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-enceladus']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Enceladus',
     },
+    id: 'ur-IN-Chirp3-HD-Enceladus',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-erinome']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Erinome',
     },
+    id: 'ur-IN-Chirp3-HD-Erinome',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-fenrir']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Fenrir',
     },
+    id: 'ur-IN-Chirp3-HD-Fenrir',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-gacrux']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Gacrux',
     },
+    id: 'ur-IN-Chirp3-HD-Gacrux',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-iapetus']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Iapetus',
     },
+    id: 'ur-IN-Chirp3-HD-Iapetus',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-kore']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Kore',
     },
+    id: 'ur-IN-Chirp3-HD-Kore',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-laomedeia']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Laomedeia',
     },
+    id: 'ur-IN-Chirp3-HD-Laomedeia',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-leda']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Leda',
     },
+    id: 'ur-IN-Chirp3-HD-Leda',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-orus']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Orus',
     },
+    id: 'ur-IN-Chirp3-HD-Orus',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-puck']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Puck',
     },
+    id: 'ur-IN-Chirp3-HD-Puck',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Pulcherrima',
     },
+    id: 'ur-IN-Chirp3-HD-Pulcherrima',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Rasalgethi',
     },
+    id: 'ur-IN-Chirp3-HD-Rasalgethi',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-sadachbia']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Sadachbia',
     },
+    id: 'ur-IN-Chirp3-HD-Sadachbia',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-sadaltager']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Sadaltager',
     },
+    id: 'ur-IN-Chirp3-HD-Sadaltager',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-schedar']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Schedar',
     },
+    id: 'ur-IN-Chirp3-HD-Schedar',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-sulafat']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Sulafat',
     },
+    id: 'ur-IN-Chirp3-HD-Sulafat',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-umbriel']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Umbriel',
     },
+    id: 'ur-IN-Chirp3-HD-Umbriel',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Vindemiatrix',
     },
+    id: 'ur-IN-Chirp3-HD-Vindemiatrix',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-zephyr']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Zephyr',
     },
+    id: 'ur-IN-Chirp3-HD-Zephyr',
+    languages: ['ur-IN'],
   },
   ['ur-in-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'ur-IN-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'ur-IN-Chirp3-HD-Zubenelgenubi',
+    languages: ['ur-IN'],
   },
   ['ur-in-standard-a']: {
     voice: {
       name: 'ur-IN-Standard-A',
     },
+    id: 'ur-IN-Standard-A',
+    languages: ['ur-IN'],
   },
   ['ur-in-standard-b']: {
     voice: {
       name: 'ur-IN-Standard-B',
     },
+    id: 'ur-IN-Standard-B',
+    languages: ['ur-IN'],
   },
   ['ur-in-wavenet-a']: {
     voice: {
       name: 'ur-IN-Wavenet-A',
     },
+    id: 'ur-IN-Wavenet-A',
+    languages: ['ur-IN'],
   },
   ['ur-in-wavenet-b']: {
     voice: {
       name: 'ur-IN-Wavenet-B',
     },
+    id: 'ur-IN-Wavenet-B',
+    languages: ['ur-IN'],
   },
   ['vi-vn-chirp3-hd-achernar']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Achernar',
     },
+    id: 'vi-VN-Chirp3-HD-Achernar',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-achird']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Achird',
     },
+    id: 'vi-VN-Chirp3-HD-Achird',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-algenib']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Algenib',
     },
+    id: 'vi-VN-Chirp3-HD-Algenib',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-algieba']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Algieba',
     },
+    id: 'vi-VN-Chirp3-HD-Algieba',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-alnilam']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Alnilam',
     },
+    id: 'vi-VN-Chirp3-HD-Alnilam',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-aoede']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Aoede',
     },
+    id: 'vi-VN-Chirp3-HD-Aoede',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-autonoe']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Autonoe',
     },
+    id: 'vi-VN-Chirp3-HD-Autonoe',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-callirrhoe']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Callirrhoe',
     },
+    id: 'vi-VN-Chirp3-HD-Callirrhoe',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-charon']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Charon',
     },
+    id: 'vi-VN-Chirp3-HD-Charon',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-despina']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Despina',
     },
+    id: 'vi-VN-Chirp3-HD-Despina',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-enceladus']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Enceladus',
     },
+    id: 'vi-VN-Chirp3-HD-Enceladus',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-erinome']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Erinome',
     },
+    id: 'vi-VN-Chirp3-HD-Erinome',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-fenrir']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Fenrir',
     },
+    id: 'vi-VN-Chirp3-HD-Fenrir',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-gacrux']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Gacrux',
     },
+    id: 'vi-VN-Chirp3-HD-Gacrux',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-iapetus']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Iapetus',
     },
+    id: 'vi-VN-Chirp3-HD-Iapetus',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-kore']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Kore',
     },
+    id: 'vi-VN-Chirp3-HD-Kore',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-laomedeia']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Laomedeia',
     },
+    id: 'vi-VN-Chirp3-HD-Laomedeia',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-leda']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Leda',
     },
+    id: 'vi-VN-Chirp3-HD-Leda',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-orus']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Orus',
     },
+    id: 'vi-VN-Chirp3-HD-Orus',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-puck']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Puck',
     },
+    id: 'vi-VN-Chirp3-HD-Puck',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-pulcherrima']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Pulcherrima',
     },
+    id: 'vi-VN-Chirp3-HD-Pulcherrima',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-rasalgethi']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Rasalgethi',
     },
+    id: 'vi-VN-Chirp3-HD-Rasalgethi',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-sadachbia']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Sadachbia',
     },
+    id: 'vi-VN-Chirp3-HD-Sadachbia',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-sadaltager']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Sadaltager',
     },
+    id: 'vi-VN-Chirp3-HD-Sadaltager',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-schedar']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Schedar',
     },
+    id: 'vi-VN-Chirp3-HD-Schedar',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-sulafat']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Sulafat',
     },
+    id: 'vi-VN-Chirp3-HD-Sulafat',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-umbriel']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Umbriel',
     },
+    id: 'vi-VN-Chirp3-HD-Umbriel',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-vindemiatrix']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Vindemiatrix',
     },
+    id: 'vi-VN-Chirp3-HD-Vindemiatrix',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-zephyr']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Zephyr',
     },
+    id: 'vi-VN-Chirp3-HD-Zephyr',
+    languages: ['vi-VN'],
   },
   ['vi-vn-chirp3-hd-zubenelgenubi']: {
     voice: {
       name: 'vi-VN-Chirp3-HD-Zubenelgenubi',
     },
+    id: 'vi-VN-Chirp3-HD-Zubenelgenubi',
+    languages: ['vi-VN'],
   },
   ['vi-vn-neural2-a']: {
     voice: {
       name: 'vi-VN-Neural2-A',
     },
+    id: 'vi-VN-Neural2-A',
+    languages: ['vi-VN'],
   },
   ['vi-vn-neural2-d']: {
     voice: {
       name: 'vi-VN-Neural2-D',
     },
+    id: 'vi-VN-Neural2-D',
+    languages: ['vi-VN'],
   },
   ['vi-vn-standard-a']: {
     voice: {
       name: 'vi-VN-Standard-A',
     },
+    id: 'vi-VN-Standard-A',
+    languages: ['vi-VN'],
   },
   ['vi-vn-standard-b']: {
     voice: {
       name: 'vi-VN-Standard-B',
     },
+    id: 'vi-VN-Standard-B',
+    languages: ['vi-VN'],
   },
   ['vi-vn-standard-c']: {
     voice: {
       name: 'vi-VN-Standard-C',
     },
+    id: 'vi-VN-Standard-C',
+    languages: ['vi-VN'],
   },
   ['vi-vn-standard-d']: {
     voice: {
       name: 'vi-VN-Standard-D',
     },
+    id: 'vi-VN-Standard-D',
+    languages: ['vi-VN'],
   },
   ['vi-vn-wavenet-a']: {
     voice: {
       name: 'vi-VN-Wavenet-A',
     },
+    id: 'vi-VN-Wavenet-A',
+    languages: ['vi-VN'],
   },
   ['vi-vn-wavenet-b']: {
     voice: {
       name: 'vi-VN-Wavenet-B',
     },
+    id: 'vi-VN-Wavenet-B',
+    languages: ['vi-VN'],
   },
   ['vi-vn-wavenet-c']: {
     voice: {
       name: 'vi-VN-Wavenet-C',
     },
+    id: 'vi-VN-Wavenet-C',
+    languages: ['vi-VN'],
   },
   ['vi-vn-wavenet-d']: {
     voice: {
       name: 'vi-VN-Wavenet-D',
     },
+    id: 'vi-VN-Wavenet-D',
+    languages: ['vi-VN'],
   },
   ['vindemiatrix']: {
     voice: {
       name: 'Vindemiatrix',
     },
+    id: 'Vindemiatrix',
+    languages: ['en-US'],
   },
   ['yue-hk-standard-a']: {
     voice: {
       name: 'yue-HK-Standard-A',
     },
+    id: 'yue-HK-Standard-A',
+    languages: ['yue-HK'],
   },
   ['yue-hk-standard-b']: {
     voice: {
       name: 'yue-HK-Standard-B',
     },
+    id: 'yue-HK-Standard-B',
+    languages: ['yue-HK'],
   },
   ['yue-hk-standard-c']: {
     voice: {
       name: 'yue-HK-Standard-C',
     },
+    id: 'yue-HK-Standard-C',
+    languages: ['yue-HK'],
   },
   ['yue-hk-standard-d']: {
     voice: {
       name: 'yue-HK-Standard-D',
     },
+    id: 'yue-HK-Standard-D',
+    languages: ['yue-HK'],
   },
   ['zephyr']: {
     voice: {
       name: 'Zephyr',
     },
+    id: 'Zephyr',
+    languages: ['en-US'],
   },
   ['zubenelgenubi']: {
     voice: {
       name: 'Zubenelgenubi',
     },
+    id: 'Zubenelgenubi',
+    languages: ['en-US'],
   },
 };
