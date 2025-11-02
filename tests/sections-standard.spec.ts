@@ -190,7 +190,7 @@ describe('sections-standard', () => {
     </lang>
     </voice>
 
-    <voice name="Brian">
+    <voice name="en-US-BrianNeural">
     <lang xml:lang="en-US">
     Switching to Brian from the UK with a US accent.
 
@@ -322,7 +322,7 @@ describe('sections-standard end speak tag at end', () => {
 
       </voice>
 
-      <voice name="Brian">
+      <voice name="en-US-BrianNeural">
       <lang xml:lang="en-GB">
       Section 2</lang>
       </voice>
@@ -416,7 +416,7 @@ describe('sections-standard voice section on same line', () => {
     const expected = dedent`
       <speak>
 
-      <voice name="Brian"> Hey there, nice to meet you</voice>
+      <voice name="en-US-BrianNeural"> Hey there, nice to meet you</voice>
 
       </speak>
     `;

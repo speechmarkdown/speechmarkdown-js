@@ -103,6 +103,14 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
     ];
   }
 
+  public getVoiceTagFallback(name: string): Record<string, string> | null {
+    if (name.toLowerCase() === 'device') {
+      return null;
+    }
+
+    return { name };
+  }
+
   /**
    * Checks if the generated SSML contains any MSTTS-specific tags
    * @param lines Array of SSML lines to check
@@ -238,13 +246,7 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
             }
 
             case 'voice': {
-              const name = this.sentenceCase(value || 'device');
-
-              // TODO: valid voices list may not be useful when there're custom voices.
-              // TODO: convert to use the TagsObject.voiceTagNamed()
-              if (name != 'Device') {
-                textModifierObject.tag(ssmlTag, { name: name });
-              }
+              textModifierObject.voiceTag(ssmlTag, value);
               break;
             }
 
@@ -354,14 +356,8 @@ export class MicrosoftAzureSsmlFormatter extends SsmlFormatterBase {
         const ssmlTag = this.modifierKeyToSsmlTagMappings[key];
 
         switch (key) {
-          // TODO: valid voices list may not be useful when there're custom voices.
-          // TODO: convert to use the TagsObject.voiceTagNamed()
           case 'voice': {
-            const name = this.sentenceCase(value || 'device');
-
-            if (name != 'Device') {
-              sectionObject.tag(ssmlTag, { name: name });
-            }
+            sectionObject.voiceTag(ssmlTag, value);
             break;
           }
 

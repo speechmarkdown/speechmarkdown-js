@@ -102,8 +102,8 @@ describe('voice-standard', () => {
 
     const expected = dedent`
       <speak>
-      Why do you keep switching voices <voice name="Brian">from one</voice> to <voice name="Kendra">the other</voice>?
-      Why do you keep switching voices <voice name="Brian">from one</voice> to <voice name="Kendra">the other</voice>?
+      Why do you keep switching voices <voice name="en-US-BrianNeural">from one</voice> to <voice name="Kendra">the other</voice>?
+      Why do you keep switching voices <voice name="en-US-BrianNeural">from one</voice> to <voice name="Kendra">the other</voice>?
       </speak>
     `;
 
@@ -191,8 +191,8 @@ describe('voice-standard lowercase name', () => {
 
     const expected = dedent`
       <speak>
-      Why do you keep switching voices <voice name="Brian">from one</voice> to <voice name="Kendra">the other</voice>?
-      Why do you keep switching voices <voice name="Brian">from one</voice> to <voice name="Kendra">the other</voice>?
+      Why do you keep switching voices <voice name="en-US-BrianNeural">from one</voice> to <voice name="Kendra">the other</voice>?
+      Why do you keep switching voices <voice name="en-US-BrianNeural">from one</voice> to <voice name="Kendra">the other</voice>?
       </speak>
     `;
 
