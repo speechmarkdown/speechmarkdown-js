@@ -2,6 +2,19 @@
 
 All notable changes to the speechmarkdown-js project will be documented in this file.
 
+## 2.3.0 - (November 9, 2025)
+
+- Google comprehensive test suite and google:style tag support.
+- Support for Azure HD voices with dash-to-colon conversion.
+- Voice lookup by display name or ID with automatic ID resolution.
+- Updated voice data structure with ID, displayName, and languages metadata.
+- Support for Azure express-as role attribute with multiple attributes.
+- Emphasis and bookmark support for Azure.
+- 6 missing Azure MSTTS styles and language support.
+- Grammar support for all 27 Azure MSTTS express-as styles.
+- Support for 26 additional Azure MSTTS express-as styles.
+- Automatic Azure SSML namespace injection for MSTTS tags.
+
 ## 2.2.0 - (September 22, 2025)
 
 ### Added
