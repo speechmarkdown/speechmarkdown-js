@@ -75,4 +75,25 @@ describe('ipa-short', () => {
     `;
     expect(text).toBe(expectedText);
   });
+ 
+  test('plain text keeps URL path slashes (does not treat as bare IPA)', () => {
+    const input = 'see https://example.com/foo/bar';
+    expect(speech.toText(input, {})).toBe(input);
+    expect(speech.toText('https://a.com/x/y', {})).toBe('https://a.com/x/y');
+    expect(speech.toText('see example.com/foo/bar', {})).toBe(
+      'see example.com/foo/bar',
+    );
+    // '+' and other unquoted URL specials before '/' must not open bare IPA.
+    expect(speech.toText('https://x.com/seg+/y', {})).toBe(
+      'https://x.com/seg+/y',
+    );
+  });
+
+  test('SSML keeps URL path slashes (does not treat as bare IPA)', () => {
+    const ssml = speech.toSSML('see https://example.com/foo/bar', {
+      platform: 'amazon-alexa',
+    });
+    expect(ssml).toContain('https://example.com/foo/bar');
+    expect(ssml).not.toContain('<phoneme');
+  });
 });

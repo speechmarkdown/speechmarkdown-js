@@ -269,7 +269,22 @@ export function speechMarkdownGrammar(myna: any): any {
       this.shortSubValue,
       '}',
     ).ast;
-    this.bareIpa = m.seq('/', this.shortIpaValue, '/').ast;
+    // Same characters as this.url / audio unquoted URLs (keep in sync with urlSpecialChar).
+    const urlUnquotedSpecials = ':/.-_~?#[]@!+,;%=()&';
+    // Bare IPA uses /phoneme/. The same delimiter appears in URL paths; only
+    // treat /.../ as IPA when '/' is not immediately after a host/path character
+    // (same set as letters, digits, and unquoted URL specials), e.g. after "foo+"
+    // or "https://example.com".
+    const bareIpaMayOpenHere = m.predicate((p: any) => {
+      if (p.index === 0) {
+        return true;
+      }
+      const prev = p.input.charAt(p.index - 1);
+      const urlInterior =
+        /[A-Za-z0-9]/.test(prev) || urlUnquotedSpecials.includes(prev);
+      return !urlInterior;
+    });
+    this.bareIpa = m.seq(bareIpaMayOpenHere, '/', this.shortIpaValue, '/').ast;
 
     const percentChange = ['+', m.hyphen, m.digit, '%'];
 
@@ -315,7 +330,7 @@ export function speechMarkdownGrammar(myna: any): any {
     ).ast;
 
     // Audio
-    this.urlSpecialChar = m.char(':/.-_~?#[]@!+,;%=()&');
+    this.urlSpecialChar = m.char(urlUnquotedSpecials);
     this.url = m.choice(m.digit, m.letter, this.urlSpecialChar).oneOrMore.ast;
     this.audio = m.seq(
       '!',
