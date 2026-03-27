@@ -75,7 +75,7 @@ describe('ipa-short', () => {
     `;
     expect(text).toBe(expectedText);
   });
- 
+
   test('plain text keeps URL path slashes (does not treat as bare IPA)', () => {
     const input = 'see https://example.com/foo/bar';
     expect(speech.toText(input, {})).toBe(input);
