@@ -83,6 +83,12 @@ export class TextFormatter extends FormatterBase {
       case 'audio':
         return lines;
 
+      case 'expressive': {
+        const value = ast.children[0].allText;
+        lines.push(`[${value}]`);
+        return lines;
+      }
+
       default: {
         this.processAst(ast.children, lines);
         return lines;

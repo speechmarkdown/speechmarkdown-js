@@ -198,6 +198,11 @@ export class W3cSsmlFormatter extends SsmlFormatterBase {
         const time = ast.children[0].allText;
         return this.addTagWithAttrs(lines, null, 'break', { time });
       }
+      case 'expressive': {
+        const value = ast.children[0].allText;
+        lines.push(`[${value}]`);
+        return lines;
+      }
       case 'break': {
         const val = ast.children[0].allText;
         let attrs = {};
